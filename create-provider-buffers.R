@@ -1,5 +1,7 @@
-# Create buffers for ~300 providers in Excel sheet, make access proxy var by
-# zip code based on how many buffers intersect with that zip code
+# Create buffers for ~300 providers in Excel sheet
+# Create buffers for bup physicians in Excel sheet
+# Make access proxy vars by zip code based on how many buffers intersect 
+# with that zip code
 
 library(tidyverse)
 library(readxl)
@@ -67,6 +69,8 @@ il_msas <- msas %>%
   select(name) %>% 
   add_column(urban = TRUE)
 
+save(il_msas, file = "data-output/il_msas.rda")
+
 # Spatial join to add column with urban to providers_sf (0 if not, 1 if so)
 providers_type <- st_join(providers_sf, il_msas) %>% 
   mutate(urban = replace_na(urban, 0))
@@ -90,30 +94,156 @@ plot(providers_urban_buffer["geometry"])
 # Make maps based on provider type ----------------------------------------
 
 ## Map places with substance treatment 
-substance_treatment_centers <- filter(corrected_providers, substance_treatment)
+substance_treatment_centers_all10 <- filter(providers_buffer, substance_treatment)
+substance_treatment_centers_urban <- filter(providers_urban_buffer, substance_treatment)
 
 plot(substance_treatment_centers["geometry"])
 
 
 ## Map places with testing
-testing_centers <- filter(corrected_providers, testing)
+testing_centers_all10 <- filter(providers_buffer, testing)
+testing_centers_urban <- filter(providers_urban_buffer, testing)
 
 plot(testing_centers["geometry"])
 
 
+# Read bup physicians in and buffer ---------------------------------------
+
+bup_phys <- read_excel("data/IL Waivered Physicians 5.7.19 geocoded.xlsx")
+
+bup_sf <- bup_phys %>% 
+  st_as_sf(coords = c("Longitude", "Latitude")) %>% 
+  st_set_crs(4269) %>% 
+  st_transform(32616)
+
+bup_buffer <- st_buffer(bup_sf, 16093)
+
+plot(bup_buffer["geometry"])
+
+# Split by urban/rural bup providers
+
+bup_type <- st_join(bup_sf, il_msas) %>% 
+  mutate(urban = replace_na(urban, 0))
+
+# st_write(bup_type, "data-output/bup_with_type.shp")
+# bup_type <- st_read("data-output/bup_with_type.shp")
+
+urban_bup <- filter(bup_type, urban == 1)
+rural_bup <- filter(bup_type, urban == 0)
+
+# Buffer separately, then combine with rbind()
+urban_bup_buffer <- st_buffer(urban_bup, 1609) # 1 mile ~ 1609 meters
+rural_bup_buffer <- st_buffer(rural_bup, 16093) # 10 miles ~ 16093 meters
+
+bup_urban_buffer <- rbind(urban_bup_buffer, rural_bup_buffer)
+
+# Plot to check work
+plot(bup_urban_buffer["geometry"])
+
+
 # Get counts of buffers by zip code ---------------------------------------
 
-# zips <- tigris::zctas(state = "Illinois") # takes like 1 min
-# zips_sf <- st_as_sf(zips, coords = c("INTPTLAT10", "INTPTLON10")) %>% 
+# zips <- tigris::zctas(state = "Illinois") # takes like 5 min
+# zips_sf <- st_as_sf(zips, coords = c("INTPTLAT10", "INTPTLON10")) %>%
 #   st_transform(32616) # takes like 20 seconds
-# 
-# intersection <- st_intersects(zips_sf, corrected_providers) # takes like 20 seconds
-# 
-# counts_by_zip <- mutate(zips_sf, number_buffers = lengths(intersection))
-# 
-# # look at counts of buffers by zip
-# arrange(counts_by_zip, desc(number_buffers))
-# hist(log(counts_by_zip$number_buffers))
+# save(zips, file = "data-output/zips.rda")
+st_write(zips_sf, "data-output/zips.shp")
+
+# zips <- load("data-output/zips.rda")
+# zips_sf <- load(file = "data-output/zips_sf.rda") # take 15 seconds
+
+providers_intersect_all10 <- st_intersects(zips_sf, providers_buffer) # takes like 20 seconds
+providers_intersect_urban <- st_intersects(zips_sf, providers_urban_buffer) # takes like 20 seconds
+bup_intersect_all10 <- st_intersects(zips_sf, bup_buffer)
+bup_intersect_urban <- st_intersects(zips_sf, bup_urban_buffer)
+providers_substance_intersect_all10 <- st_intersects(zips_sf, substance_treatment_centers_all10)
+providers_substance_intersect_urban <- st_intersects(zips_sf, substance_treatment_centers_urban)
+providers_testing_intersect_all10 <- st_intersects(zips_sf, testing_centers_all10)
+providers_testing_intersect_urban <- st_intersects(zips_sf, testing_centers_urban)
+
+counts_by_zip <- mutate(zips_sf, 
+                        providers_all10 = lengths(providers_intersect_all10),
+                        providers_urban = lengths(providers_intersect_urban),
+                        providers_substance_all10 = lengths(providers_substance_intersect_all10),
+                        providers_substance_urban = lengths(providers_substance_intersect_urban),
+                        providers_testing_all10 = lengths(providers_testing_intersect_all10),
+                        providers_testing_urban = lengths(providers_testing_intersect_urban),
+                        bup_all10 = lengths(bup_intersect_all10),
+                        bup_urban = lengths(bup_intersect_urban))
+
+st_write(counts_by_zip, "data-output/buffer_counts_by_zip.gpkg")
+
+head(counts_by_zip)
+
+# look at counts of buffers by zip
+arrange(counts_by_zip, desc(number_buffers))
+arrange(counts_by_zip, desc(number_buffers))
+
+hist(log(counts_by_zip$number_buffers))
+hist(log(counts_by_zip$number_buffers))
+
+ggplot(data = counts_by_zip, aes(x = bup_all10)) + 
+  geom_histogram()
+
+
+# Make some maps! ---------------------------------------------------------
+
+states <- tigris::states(cb = TRUE) %>% 
+  st_as_sf()
+
+illinois <- filter(states, NAME == "Illinois") %>% 
+  st_transform(32616)
+
+il_msas_crop <- st_intersection(il_msas, illinois) %>% 
+  st_cast("GEOMETRYCOLLECTION")
+
+tm_shape(illinois) +
+  tm_polygons() +
+  tm_shape(il_msas) + 
+  tm_polygons(col = "green", alpha = 0.1) +
+  tm_text("name") +
+  tm_shape(providers_buffer) + 
+  tm_polygons(alpha = 0) +
+  tm_shape(providers_sf) + 
+  tm_dots() +
+  tm_layout(title = "All Providers, 10-Mile Buffer",
+            inner.margins = c(0.1, 0.1, .1, 0.1))
+
+tm_shape(illinois) +
+  tm_polygons() +
+  tm_shape(il_msas) + 
+  tm_text("name") +
+  tm_polygons(col = "green", alpha = 0.1) +
+  tm_shape(providers_urban_buffer) + 
+  tm_polygons(alpha = 0) +
+  tm_shape(providers_sf) + 
+  tm_dots() +
+  tm_layout(title = "All Providers, 10-Mile Buffer Rural, 1-Mile Buffer Urban",
+            inner.margins = c(0.1, 0.1, .1, 0.1))
+
+tm_shape(illinois) +
+  tm_polygons() +
+  tm_shape(il_msas) + 
+  tm_text("name") +
+  tm_polygons(col = "green", alpha = 0.1) +
+  tm_shape(bup_buffer) + 
+  tm_polygons(alpha = 0) +
+  tm_shape(bup_sf) + 
+  tm_dots() +
+  tm_layout(title = "Buprenorphine Physicians, 10-Mile Buffer",
+            inner.margins = c(0.1, 0.1, .1, 0.1))
+
+tm_shape(illinois) +
+  tm_polygons() +
+  tm_shape(il_msas) + 
+  tm_text("name") +
+  tm_polygons(col = "green", alpha = 0.1) +
+  tm_shape(bup_urban_buffer) + 
+  tm_polygons(alpha = 0) +
+  tm_shape(bup_sf) + 
+  tm_dots() +
+  tm_layout(title = "Buprenorphine Physicians, 10-Mile Buffer Rural, 1-Mile Buffer Urban",
+            inner.margins = c(0.1, 0.1, .1, 0.1))
 
 
 ## Q: Are the places with FALSE coded for both sub abuse and testing just missing data?
