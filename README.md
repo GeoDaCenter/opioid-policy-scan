@@ -1,2 +1,2 @@
-# opiod-work
-Store scripts for opiod project
+# opioid-work
+Store scripts for opioid project
