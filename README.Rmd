@@ -1,0 +1,26 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE,
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# Opioid Work
+
+This repository stores R scripts used to clean, join, and visualize data for Marynia's opioid research project. Raw data/output is not stored in here for confidentiality, but are included in the Google Drive/Box associated with this project.
+
+| Input                         | Script                        | Output                        | Purpose                       |
+|-------------------------------|-------------------------------|-------------------------------|-------------------------------|
+| data/*                        | R/01_*                        | data-output/01_*              | Clean original data and get each into 3-column format with `name`, `category_service`, and `geometry` |
+| data-output/01_*              | R/02_*                        | data-output/02_*              | Combine datasets together to get combined point dataset (needed for map overlays) |
+| data-output/02_*              | R/03_*                        | data-output/03_*              | Create various buffers on point dataset |
+| data-output/03_*              | R/04_*                        | data-output/04_*              | Get counts by zip code of buffered resources |
+
