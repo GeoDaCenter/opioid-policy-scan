@@ -1,4 +1,4 @@
-# Join access proxy variable and buprenorphene capacity spreadsheet by zip
+# Clean bup capacity (by zip code)
 
 library(tidyverse)
 library(readxl)
