@@ -4,8 +4,6 @@ library(tidyverse)
 library(readxl)
 library(sf)
 
-# Read naloxone providers in and buffer ---------------------------------------
-
 nalox <- read_excel("data/Naloxone Registrants_Updated_Oct2019.xlsx") %>% 
   mutate(longitude = na_if(longitude, "."),
          Latitude = na_if(Latitude, "."),
@@ -39,8 +37,9 @@ write_csv(nalox_to_geocode, "data-output/nalox_to_geocode.csv")
 # Some things aren't entered right *at all* - some test data in there, hmm :/
 # There's also formatting data in the spreadsheet that's super hard to process, yikes
 
-nalox_newly_geocoded <- read_csv("data-output/nalox_to_geocode_1570482642_geocoded.csv")
+nalox_newly_geocoded <- read_csv("data-output/geocoded/nalox_to_geocode_1570482642_geocoded.csv")
 
+# Check on geocoded facilities
 arrange(nalox_newly_geocoded, `Match Score`)
 
 nalox_missing_geocoded <- select(nalox_newly_geocoded, ID, Longitude, Latitude) %>% 
@@ -62,8 +61,14 @@ nalox_sf <- rbind(nalox_geocoded_sf, nalox_missing_geocoded_sf) %>%
   arrange(id)
 
 nalox_sf_final <- nalox_sf %>% 
-  mutate(category_service = "naloxone_rx") %>% 
-  select(name = Pharmacy,
-         category_service)
+  mutate(Category = "Naloxone RX") %>% 
+  select(Name = Pharmacy,
+         City = City_1,
+         Category)
 
-st_write(nalox_sf_final, "data-output/01_nalox.geojson")
+# Save cleaned version (shp and csv) to Google Drive
+st_write(nalox_sf_final, "data-output/nalox_cleaned.gpkg", delete_dsn = TRUE)
+st_write(nalox_sf_final, "data-output/nalox_cleaned.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)
+
+# Save slim version to combine into point dataset
+st_write(nalox_sf_final, "data-output/01_nalox.gpkg", delete_dsn = TRUE)

@@ -1,4 +1,5 @@
 # Map provider buffers
+# Outputs images to output folder
 
 library(sf)
 library(tmap)

@@ -36,16 +36,25 @@ filter(providers, `Organization Name` == "American Association of Sexuality Educ
 
 providers_sf <- st_as_sf(providers, coords = c("lon", "lat")) %>% 
   st_set_crs(4269) %>% 
-  st_transform(32616)
+  st_transform(32616) 
 
 
 # Save final version ------------------------------------------------------
 
 providers_sf_final <- providers_sf %>% 
-  mutate(category_service = "hiv_testing") %>% 
-  select(name = `Organization Name`,
-         category_service)
+  filter(testing) %>% 
+  mutate(Category = "HIV Testing") %>% 
+  select(Name = `Organization Name`,
+         City = `City Name`,
+         Category)
 
-st_write(providers_sf_final, "data-output/01_hiv_testing.geojson")
+# Save cleaned version (shp and csv) to Google Drive
+st_write(providers_sf_final, "data-output/providers_cleaned.gpkg", delete_dsn = TRUE)
+st_write(providers_sf_final, "data-output/providers_cleaned.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)
+
+# Save slim version to combine into point dataset
+st_write(providers_sf_final, "data-output/01_hiv_testing.gpkg", delete_dsn = TRUE)
+
 
 ## Q: Are the places with FALSE coded for both sub abuse and testing just missing data?
+## What's the warning about?
