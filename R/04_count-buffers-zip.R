@@ -3,16 +3,7 @@
 # Make access proxy vars by zip code based on how many buffers intersect 
 # with that zip code
 
-# zips <- tigris::zctas(state = "Illinois") # takes like 5 min
-# zips_sf <- st_as_sf(zips, coords = c("INTPTLAT10", "INTPTLON10")) %>%
-#   st_transform(32616) # takes like 20 seconds
-# save(zips, file = "data-output/zips.rda")
-st_write(zips_sf, "data-output/zips.shp")
-
-zips_sf <- st_read("data-output/zips.shp")
-
-# zips <- load("data-output/zips.rda")
-# zips_sf <- load(file = "data-output/zips_sf.rda") # take 15 seconds
+zips_sf <- st_read("data-output/zips.gpkg")
 
 providers_intersect_all10 <- st_intersects(zips_sf, providers_buffer) # takes like 20 seconds
 providers_intersect_urban <- st_intersects(zips_sf, providers_urban_buffer) # takes like 20 seconds
