@@ -2,17 +2,21 @@ library(tidyverse)
 library(readxl)
 library(sf)
 
-methadone <- read_csv("data/Behavioral_Health_Treament_Facility_listing_2019_10_18_131733.csv")
+# Old dataset - 29 observations
+# methadone_old <- read_csv("data/Behavioral_Health_Treament_Facility_listing_2019_10_18_131733.csv")
+
+# New data from Kris - 81 observations
+methadone <- read_csv("data/IL MAT Clinics_geocoded.csv")
 
 meth_sf <- methadone %>% 
-  st_as_sf(coords = c("longitude", "latitude")) %>% 
+  st_as_sf(coords = c("Longitude", "Latitude")) %>% 
   st_set_crs(4269) %>% 
   st_transform(32616)
 
 meth_sf_final <- meth_sf %>% 
   mutate(Category = "MOUD - Methadone") %>% 
-  select(Name = name1,
-         City = city,
+  select(Name,
+         City,
          Category)
 
 # Save final versions ------------------------------------------------------
