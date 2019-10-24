@@ -66,9 +66,9 @@ nalox_sf_final <- nalox_sf %>%
          City = City_1,
          Category)
 
-# Save cleaned version (shp and csv) to Google Drive
+# Save final versions ------------------------------------------------------
+
 st_write(nalox_sf_final, "data-output/nalox_cleaned.gpkg", delete_dsn = TRUE)
 st_write(nalox_sf_final, "data-output/nalox_cleaned.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)
 
-# Save slim version to combine into point dataset
 st_write(nalox_sf_final, "data-output/01_nalox.gpkg", delete_dsn = TRUE)
