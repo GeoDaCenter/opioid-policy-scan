@@ -12,7 +12,7 @@ bup_sf <- bup_phys %>%
   st_transform(32616)
 
 bup_sf_final <- bup_sf %>% 
-  mutate(Category = "MOUD - Bupernoprhine") %>% 
+  mutate(Category = "MOUD - Buprenorphine") %>% 
   select(Name = `Name Full`,
          City,
          Category)
