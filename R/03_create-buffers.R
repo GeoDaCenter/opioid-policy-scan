@@ -17,22 +17,6 @@ st_write(pts_buffer, "data-output/03_pts_buffer.gpkg", delete_dsn = TRUE)
 
 # Buffer differently based on urban vs. rural -----------------------------
 
-# Get Census outlines for MSAs 
-msas <- core_based_statistical_areas() %>% # from year 2017
-  st_as_sf(coords = c("INTPTLAT", "INTPTLON"))
-
-# Pull out Illinois MSAs from all Census outlines and code as "urban"
-
-# il_msas <- msas %>%
-#   separate(NAME, sep = ", ", into = c("name", "state")) %>%
-#   filter(str_detect(state, "IL")) %>%
-#   filter(LSAD == "M1") %>%  # only metropolitan, not micropolitan
-#   st_transform(32616) %>%
-#   select(name) %>%
-#   add_column(urban = TRUE)
-# 
-# st_write(il_msas, "data-output/il-msas.gpkg", delete_dsn = TRUE)
-
 il_msas <- st_read("data-output/il-msas.gpkg")
 
 # Spatial join to add column with urban to providers_sf (0 if not, 1 if so)

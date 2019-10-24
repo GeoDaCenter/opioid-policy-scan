@@ -5,15 +5,7 @@ library(sf)
 library(tmap)
 library(tigris)
 
-# states <- tigris::states(cb = TRUE) %>% 
-#   st_as_sf()
-# 
-# illinois <- filter(states, NAME == "Illinois") %>% 
-#   st_transform(32616)
-# 
-# st_write(illinois, "data-output/illinois.shp")
-
-illinois <- st_read("data-output/illinois.shp")
+illinois <- st_read("data-output/illinois.gpkg")
 il_msas <- st_read("data-output/il-msas.shp")
 
 bup_buffer <- st_read("data-output/bup_buffer.geojson")
