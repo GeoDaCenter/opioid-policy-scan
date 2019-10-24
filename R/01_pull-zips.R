@@ -6,5 +6,7 @@ zips <- tigris::zctas(starts_with = c("60", "61", "62")) # takes like 5 min, 138
 zips_sf <- st_as_sf(zips, coords = c("INTPTLAT10", "INTPTLON10")) %>%
   st_transform(32616) # takes like 20 seconds
 
+# Save final versions ------------------------------------------------------
+
 st_write(zips_sf, "data-output/zips.gpkg", delete_dsn = TRUE)
 saveRDS(zips_sf, "data-output/zips.rds")

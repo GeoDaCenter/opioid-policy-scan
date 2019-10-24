@@ -38,4 +38,7 @@ min_dists <- cbind(Zip = zips_sf$ZCTA5CE10,
                    `Naloxone RX - Nearest Distance to Centroid (m)` = get_min_dist(nalox)) %>% 
   as.data.frame(stringsAsFactors = FALSE)
 
+
+# Save final version -------------------------------------------------------
+
 write_csv(min_dists, "data-output/min-dists-to-centroid.csv")
