@@ -41,4 +41,4 @@ min_dists <- cbind(Zip = zips_sf$ZCTA5CE10,
 
 # Save final version -------------------------------------------------------
 
-write_csv(min_dists, "data-output/min-dists-to-centroid.csv")
+write_csv(min_dists, "data-output/min-dists-to-zip-centroid.csv")
