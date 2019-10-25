@@ -1,6 +1,7 @@
 # Calculate distance to zip centroids for closest resources
 
 library(sf)
+library(units)
 library(readr)
 
 # zips_sf <- st_read("data-output/zips.gpkg") # takes 15 seconds
@@ -18,24 +19,26 @@ meth <- st_read("data-output/01_meth.gpkg")
 nalox <- st_read("data-output/01_nalox.gpkg")
 naltrex <- st_read("data-output/01_naltrex.gpkg")
 
-get_min_dist <- function(resource_pts, centroid_pts = zips_centroids) {
+get_min_dist <- function(resource_pts, centroid_pts = zips_centroids, convert = TRUE) {
   distance_matrix <- st_distance(resource_pts, centroid_pts)
-  min_dists <- apply(distance_matrix, 2, min)
+  if (convert) {
+    distance_matrix <- set_units(distance_matrix, mi)
+  }
+  
+  min_dists <- round(apply(distance_matrix, 2, min), digits = 4)
   
   min_dists
 }
 
-class(get_min_dist(ers))
-
 # takes 8 seconds to run
 min_dists <- cbind(Zip = zips_sf$ZCTA5CE10, 
-                   `ER Trauma Centers - Nearest Distance to Centroid (m)` = get_min_dist(ers),
-                   `FQHC Facility - Nearest Distance to Centroid (m)` = get_min_dist(fqhc),
-                   `HIV Testing - Nearest Distance to Centroid (m)` = get_min_dist(hiv),
-                   `MOUD - Buprenorphine - Nearest Distance to Centroid (m)` = get_min_dist(bup),
-                   `MOUD - Methadone - Nearest Distance to Centroid (m)` = get_min_dist(meth),
-                   `MOUD - Naltrexone - Nearest Distance to Centroid (m)` = get_min_dist(naltrex),
-                   `Naloxone RX - Nearest Distance to Centroid (m)` = get_min_dist(nalox)) %>% 
+                   `ER Trauma Centers - Nearest Distance to Centroid (mi)` = get_min_dist(ers),
+                   `FQHC Facility - Nearest Distance to Centroid (mi)` = get_min_dist(fqhc),
+                   `HIV Testing - Nearest Distance to Centroid (mi)` = get_min_dist(hiv),
+                   `MOUD - Buprenorphine - Nearest Distance to Centroid (mi)` = get_min_dist(bup),
+                   `MOUD - Methadone - Nearest Distance to Centroid (mi)` = get_min_dist(meth),
+                   `MOUD - Naltrexone - Nearest Distance to Centroid (mi)` = get_min_dist(naltrex),
+                   `Naloxone RX - Nearest Distance to Centroid (mi)` = get_min_dist(nalox)) %>% 
   as.data.frame(stringsAsFactors = FALSE)
 
 
