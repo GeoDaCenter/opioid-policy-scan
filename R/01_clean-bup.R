@@ -14,6 +14,8 @@ bup_sf <- bup_phys %>%
 bup_sf_final <- bup_sf %>% 
   mutate(Category = "MOUD - Buprenorphine") %>% 
   select(Name = `Name Full`,
+         Address = `Address 1`,
+         Zip,
          City,
          Category)
 

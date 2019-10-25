@@ -13,10 +13,18 @@ meth_sf <- methadone %>%
   st_set_crs(4269) %>% 
   st_transform(32616)
 
+# Some are missing names!
+missing_names <- which(meth_sf$Name == "*")
+meth_sf$Name[missing_names] <- c("Mathers Clinic, LLC", 
+                                 "The Women's Treatment Center",
+                                 "Drexel Counseling Services Inc.")
+
 meth_sf_final <- meth_sf %>% 
   mutate(Category = "MOUD - Methadone") %>% 
   select(Name,
+         Address,
          City,
+         Zip,
          Category)
 
 # Save final versions ------------------------------------------------------

@@ -60,10 +60,16 @@ nalox_missing_geocoded_sf <- nalox_missing_geocoded %>%
 nalox_sf <- rbind(nalox_geocoded_sf, nalox_missing_geocoded_sf) %>% 
   arrange(id)
 
+# Remove nalox out of state
+nalox_sf <- arrange(nalox_sf, Zip_1) %>% 
+  slice(-c(1:4))
+
 nalox_sf_final <- nalox_sf %>% 
   mutate(Category = "Naloxone RX") %>% 
   select(Name = Pharmacy,
+         Address,
          City = City_1,
+         Zip = Zip_1,
          Category)
 
 # Save final versions ------------------------------------------------------

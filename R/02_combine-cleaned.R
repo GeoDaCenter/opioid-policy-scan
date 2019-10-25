@@ -13,7 +13,7 @@ meth <- read_sf("data-output/01_meth.gpkg")
 
 pt_master <- rbind(nalox, hiv_testing, bup, ers_trauma, naltrex, fqhc, meth) %>% 
   mutate(ID = row_number()) %>% 
-  select(ID, Name, City, Category)
+  select(ID, everything())
 
 pt_summary <- pt_master %>% 
   group_by(Category) %>% 

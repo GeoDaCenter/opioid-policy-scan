@@ -9,9 +9,11 @@ fqhc3 <- read_excel("data/Health-Centers-10-17-2019 (2).xlsx")
 
 allfqhc <- rbind(fqhc1, fqhc2, fqhc3)
 
-fqhc <- distinct(allfqhc)
-fqhc_to_geocode <- fqhc %>% 
+fqhc <- distinct(allfqhc) %>% 
   mutate(ID = row_number()) %>% 
+  select(ID, everything())
+
+fqhc_to_geocode <- fqhc %>% 
   select(ID,
          ADDRESS = `Street Address`,
          CITY = City,
@@ -24,17 +26,32 @@ write_csv(fqhc_to_geocode, "data-output/fqhc_to_geocode.csv")
 fqhc_geocoded <- read_csv("data-output/geocoded/fqhc_to_geocode_1571429078_geocoded.csv")
 
 fqhc_final <- select(fqhc_geocoded, ID, Longitude, Latitude) %>% 
-  left_join(fqhc_to_geocode, fqhc_geocoded, by = "ID")
+  left_join(fqhc, fqhc_geocoded, by = "ID")
 
 fqhc_sf <- fqhc_final %>% 
   st_as_sf(coords = c("Longitude", "Latitude")) %>% 
   st_set_crs(4269) %>% 
   st_transform(32616)
 
-fqhc_sf_final <- fqhc_sf %>% 
-  mutate(Category = "FQHC Facility") %>% 
-  select(Name = `ADDRESS`,
-         City = CITY,
+# # Check if in Illinois
+# illinois <- st_read("data-output/illinois.gpkg")
+
+# tm_shape(illinois) +
+#   tm_polygons() +
+#   tm_shape(fqhc_sf_final) + 
+#   tm_dots(size = 0.1)
+
+# Clip to Illinois
+fqhc_sf <- fqhc_sf %>%
+  st_intersection(illinois)
+
+fqhc_sf_final <- fqhc_sf %>% # or fqhc_sf_clipped
+  mutate(Category = "FQHC Facility",
+         Zip = as.numeric(str_sub(ZIP.Code, 1, 5))) %>% 
+  select(Name = Health.Center.Name,
+         Address = Street.Address,
+         City,
+         Zip,
          Category)
 
 # Save final versions ------------------------------------------------------

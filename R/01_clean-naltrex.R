@@ -13,7 +13,9 @@ naltrex_sf <- naltrex %>%
 naltrex_sf_final <- naltrex_sf %>% 
   mutate(Category = "MOUD - Naltrexone") %>% 
   select(Name = name1,
+         Address = street1,
          City = city,
+         Zip = zip,
          Category)
 
 # Save final versions ------------------------------------------------------
