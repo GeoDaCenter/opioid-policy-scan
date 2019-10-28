@@ -11,9 +11,24 @@ naltrex <- read_sf("data-output/01_naltrex.gpkg")
 fqhc <- read_sf("data-output/01_fqhc.gpkg")
 meth <- read_sf("data-output/01_meth.gpkg")
 
-pt_master <- rbind(nalox, hiv_testing, bup, ers_trauma, naltrex, fqhc, meth) %>% 
-  mutate(ID = row_number()) %>% 
-  select(ID, everything())
+pt_master <- rbind(nalox, hiv_testing, bup, ers_trauma, naltrex, fqhc, meth)
+
+# Join county names to final point dataset
+
+il_counties <- st_read("data-output/il_counties.gpkg", stringsAsFactors = FALSE)
+il_counties <- st_transform(il_counties, 32616) %>% 
+  select(County = NAME)
+
+pt_master <- st_join(pt_master, il_counties)
+
+# # Check counts by county
+# pt_master %>% count(County) %>% arrange(desc(n))
+
+# Clean up
+pt_master <- pt_master %>% 
+  mutate(ID = row_number(),
+         City = str_to_title(City)) %>% 
+  select(ID, Name, Address, City, County, Zip, Category, geom)
 
 pt_summary <- pt_master %>% 
   group_by(Category) %>% 
