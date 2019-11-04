@@ -30,7 +30,7 @@ ers_sf <- ers_final %>%
   st_transform(32616)
 
 # # Check if in Illinois
-# illinois <- st_read("data-output/illinois.gpkg")
+illinois <- st_read("data-output/illinois.gpkg")
 
 # tm_shape(illinois) +
 #   tm_polygons() +
@@ -41,14 +41,22 @@ ers_sf <- ers_final %>%
 ers_sf <- ers_sf %>%
   st_intersection(illinois)
 
+# # Reverse geocode
+# # Add reverse geocoded addresses
+# ers_sf_addresses <- st_read("data-output/geocoded/ers_revgeocoded/ers_revgeocoded.shp")
+# st_write(ers_sf_addresses, "data-output/ers_revgeocoded.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)
+
+ers_sf_addresses_updated <- read_csv("data-output/ers_revgeocoded_edited.csv")
+ers_sf_addresses_updated <- ers_sf_addresses_updated %>% 
+  select(Name, REV_Addres, REV_Postal)
+
 ers_sf_final <- ers_sf %>% 
-  mutate(Category = "ER Trauma Centers",
-         Address = "",
-         Zip = "") %>% 
+  left_join(ers_sf_addresses_updated, by = c("ADDRESS" = "Name")) %>% 
+  mutate(Category = "ER Trauma Centers") %>% 
   select(Name = `ADDRESS`,
-         Address,
+         Address = `REV_Addres`,
          City = CITY,
-         Zip,
+         Zip = `REV_Postal`,
          Category)
 
 # Save final versions ------------------------------------------------------
