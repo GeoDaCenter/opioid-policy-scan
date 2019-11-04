@@ -1,0 +1,58 @@
+---
+title: 'Calculating Access: Distance to Nearest Centroid'
+author: "Angela Li"
+date: "11/4/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Purpose of this tutorial (split into multiple tutorials?)
+
+Goal is to showcase a use case that you might find meaningful
+Intended for someone with no experience with R to go through
+Audience: Kris, Cara, JCOIN folks, etc
+
+## Packages used
+
+- sf
+- dplyr (part of the tidyverse)
+
+## Acquire data on point locations of services
+
+- we'll just do one type of service
+- geocoding explanation 
+
+## Upload access datasets
+
+- convert to spatial data
+- make sure is in appropriate projection
+
+## Pull zip code level data
+
+- use tigris
+- do the following
+- alternatively, download data from census site and work with
+
+## Convert zip geometries into centroids
+
+- st_centroid
+
+## Calculate distance to nearest zip code centroid
+
+- st_distance
+- may need to write a function
+- again, need to make sure geometries are in the same projection
+- otherwise can't calculate distance
+
+## Save as zip-code level dataset
+
+- join to original zip code data
+- select columns
+- st_write
+
+## Visualize with CARTO (separate tutorial - maybe not in R Markdown?)
+
+## Make into Shiny app (separate tutorial)
