@@ -5,13 +5,14 @@ library(tidyverse)
 
 nalox <- read_sf("data-output/01_nalox.gpkg")
 hiv_testing <- read_sf("data-output/01_hiv_testing.gpkg")
+hcv_testing <- read_sf("data-output/01_hcv_testing.gpkg")
 bup <- read_sf("data-output/01_bup.gpkg")
 ers_trauma <- read_sf("data-output/01_ers_trauma.gpkg")
 naltrex <- read_sf("data-output/01_naltrex.gpkg")
 fqhc <- read_sf("data-output/01_fqhc.gpkg")
 meth <- read_sf("data-output/01_meth.gpkg")
 
-pt_master <- rbind(nalox, hiv_testing, bup, ers_trauma, naltrex, fqhc, meth)
+pt_master <- rbind(nalox, hiv_testing, hcv_testing, bup, ers_trauma, naltrex, fqhc, meth)
 
 # Join county names to final point dataset
 
