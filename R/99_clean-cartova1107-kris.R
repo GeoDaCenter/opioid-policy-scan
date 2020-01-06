@@ -16,7 +16,7 @@ names(cartova)
 il_msas <- st_read("data-output/il-msas.gpkg")
 counties <- st_read("data-output/il_counties.gpkg")
 cook_county <- filter(counties, County == "Cook")
-
+# st_write(cook_county, "data-output/cook.gpkg")
 
 # First do urban
 area_in_msa <- st_intersection(cartova, il_msas) %>% 

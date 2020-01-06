@@ -11,6 +11,7 @@ pop_centroid <- st_as_sf(pop_centroid,
                    coords = c("LONGITUDE", "LATITUDE"),
                    crs = 4326) %>% 
   st_transform(32616)
+# Could also consider calculating weighted mean center on own, having data from Census 2010 works though!
 
 counties <- st_read("data-output/il_counties.gpkg")
 geo_centroid <- st_centroid(counties)

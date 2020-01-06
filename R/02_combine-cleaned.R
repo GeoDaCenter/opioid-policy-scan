@@ -36,9 +36,13 @@ pt_summary <- pt_master %>%
   count() %>% 
   arrange(Category)
 
+# Add MOUD -All dataset
+
+moud_all <- filter(pt_master, Category == "MOUD - Buprenorphine" | Category == "MOUD - Methadone" | Category == "MOUD - Naltrexone")
 
 # Save final versions ------------------------------------------------------
 
+st_write(moud_all, "data-output/02_moud-all.gpkg", delete_dsn = TRUE)
 st_write(pt_master, "data-output/02_point-master.gpkg", delete_dsn = TRUE)
 st_write(pt_master, "data-output/point-master.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)
 st_write(pt_summary, "data-output/point-summary.csv", layer_options = "GEOMETRY=AS_XY", delete_dsn = TRUE)

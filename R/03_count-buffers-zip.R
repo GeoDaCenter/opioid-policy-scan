@@ -3,7 +3,8 @@
 # Make access proxy vars by zip code based on how many buffers intersect 
 # with that zip code
 
-zips_sf <- st_read("data-output/zips.gpkg")
+zips_sf <- st_read("data-output/zips.gpkg") # takes 15 seconds
+zips_sf <- readRDS("data-output/zips.rds")
 
 providers_intersect_all10 <- st_intersects(zips_sf, providers_buffer) # takes like 20 seconds
 providers_intersect_urban <- st_intersects(zips_sf, providers_urban_buffer) # takes like 20 seconds
