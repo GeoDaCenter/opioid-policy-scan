@@ -3,16 +3,16 @@ library(sf)
 
 dists <- read_csv("data-output/min-dists-to-zip-centroid.csv")
 
-names(dists) <- c("zip", "er", "fqhc", "hiv", "hcv", "moud_bup", "moud_met", "moud_naltrex", "moud_nalox") # better to do this with rename...
+names(dists) <- c("zip", "er", "fqhc", "hiv", "hcv", "moud_bup", "moud_met", "moud_naltrex", "nalox") # better to do this with rename...
 
 zscores <- dists %>% 
   mutate(zip = as.character(zip)) %>% 
   mutate_if(is.numeric, scale)
 
 sum_zscores <- zscores %>% 
-  mutate(opiod_z = er + fqhc + hiv + hcv + moud_bup + moud_met + moud_naltrex + moud_nalox,
+  mutate(opiod_z = er + fqhc + hiv + hcv + moud_bup + moud_met + moud_naltrex + nalox,
          hcv_z = fqhc + hcv + moud_bup + moud_met + moud_naltrex,
-         hiv_z = fqhc + hiv
+         hiv_z = fqhc + hiv + nalox,
          # + moud_bup + moud_met + moud_naltrex + moud_nalox
          )
 
