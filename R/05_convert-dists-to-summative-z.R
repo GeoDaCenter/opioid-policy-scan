@@ -10,7 +10,7 @@ zscores <- dists %>%
   mutate_if(is.numeric, scale)
 
 sum_zscores <- zscores %>% 
-  mutate(opiod_z = er + fqhc + hiv + hcv + moud_bup + moud_met + moud_naltrex + nalox,
+  mutate(opiod_z = er + fqhc + moud_bup + moud_met + moud_naltrex + nalox,
          hcv_z = fqhc + hcv + moud_bup + moud_met + moud_naltrex,
          hiv_z = fqhc + hiv + nalox,
          # + moud_bup + moud_met + moud_naltrex + moud_nalox
