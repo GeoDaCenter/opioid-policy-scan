@@ -13,7 +13,6 @@ prison_links <- html_nodes(prison_url, "a") %>%
   html_attr("href") %>% 
   .[93:120]
 
-
 get_address <- function(url) {
   read_html(url) %>% 
     html_nodes("#ctl00_PlaceHolderMain_ctl07__ControlWrapper_RichHtmlField p:nth-child(1)") %>% 
@@ -28,3 +27,17 @@ prison_address_df <- prison_df %>%
   mutate(address = as.character(address))
 
 write_csv(prison_address_df, "data-output/il_prisons.csv")
+
+##### Geocoding
+
+tmaptools::geocode_OSM("Big Muddy River Correctional Center")$coords[1]
+
+prison_coords_df <- prison_names %>% 
+  as_tibble() %>% 
+  mutate(
+    lon = map(prison_names, ~tmaptools::geocode_OSM(.)$coords[1]),
+    lat = map(prison_names, ~tmaptools::geocode_OSM(.)$coords[2]))
+
+lon <- map(prison_names, ~tmaptools::geocode_OSM(.)$coords[1])
+
+## issue with geocoding Sheridan Correctional Center
