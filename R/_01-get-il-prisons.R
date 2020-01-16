@@ -1,9 +1,8 @@
+install.packages("rvest")
 library(rvest)
 library(dplyr)
 library(purrr)
 library(readr)
-
-# test 
 
 prison_url <- read_html("https://www2.illinois.gov/idoc/facilities/Pages/correctionalfacilities.aspx")
 
@@ -41,5 +40,17 @@ prison_coords_df <- prison_names %>%
     lat = map(prison_names, ~tmaptools::geocode_OSM(.)$coords[2]))
 
 lon <- map(prison_names, ~tmaptools::geocode_OSM(.)$coords[1])
+lat <- map(prison_names, ~tmaptools::geocode_OSM(.)$coords[2])
 
-## issue with geocoding Sheridan Correctional Center
+### issues with geocoding four centers
+ ## Menard Medium Security Unit 
+ ## Shawnee Correctional Center 
+ ## Taylorville Correctional Center
+ ## Vandalia Correctional Center
+
+prison_address_df[prison_address_df$prison_names=="Menard Medium Security Unit",]$address
+  ## missing , after Street and Menard
+lon[[16]] <- tmaptools::geocode_OSM("711 Kaskaskia Street,Menard, IL")$coords[1]
+lat[[16]]<- tmaptools::geocode_OSM("711 Kaskaskia Street,Menard, IL")$coords[2]
+
+
