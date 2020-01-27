@@ -24,4 +24,7 @@ head(marks(CSRpoint))
 head(marks(CSRptrlabel))
 summary(marks(CSRptrlabel))
 
-# need to write the CSRptrlabel as a shape file 
+CSRptrlabelshape <- as.SpatialPointsDataFrame.ppp(CSRptrlabel)
+writeOGR(CSRptrlabelshape, dsn=".", layer="output/CSRptrlabel",driver="ESRI Shapefile")
+
+
