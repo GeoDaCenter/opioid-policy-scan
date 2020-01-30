@@ -3,6 +3,7 @@ library(spatstat)
 library(maptools)
 library(rgdal)
 library(dplyr)
+library(tmap)
 
 point_master <- read.csv("data/point-master.csv")
 dim(point_master)
@@ -73,9 +74,27 @@ head(marks(CSRptrlabel))
 summary(marks(CSRptrlabel))
 
 plot(abm_zips_sp, main = "Reshuffled MOUD locations in study area")
-plot(CSRptrlabel, pch=1, cex=0.5, col=marks(CSRptrlabel), add=T)
+plot(CSRptrlabel[CSRptrlabel$marks=="MOUD - Methadone",], pch=1, cex=0.5, col=marks(CSRptrlabel), add=T)
 
+plot(abm_zips_sp, main = "Reshuffled MOUD Methadone in study area")
+plot(CSRptrlabel[CSRptrlabel$marks=="MOUD - Methadone",], pch=1, cex=0.5, col="red", add=T)
+
+plot(abm_zips_sp, main = "Real MOUD Methadone in study area")
+plot(point_MOUD_abm_sp[point_MOUD_abm_sp$Category=="MOUD - Methadone",], pch=1, cex=0.5, col="red", add=T)
+
+plot(abm_zips_sp, main = "Reshuffled MOUD Buprenorphine in study area")
+plot(CSRptrlabel[CSRptrlabel$marks=="MOUD - Buprenorphine",], pch=1, cex=0.5, col="blue", add=T)
+
+plot(abm_zips_sp, main = "Real MOUD Buprenorphine in study area")
+plot(point_MOUD_abm_sp[point_MOUD_abm_sp$Category=="MOUD - Buprenorphine",], pch=1, cex=0.5, col="blue", add=T)
+
+plot(abm_zips_sp, main = "Reshuffled MOUD Naltrexone in study area")
+plot(CSRptrlabel[CSRptrlabel$marks=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
+
+plot(abm_zips_sp, main = "Real MOUD Naltrexone in study area")
+plot(point_MOUD_abm_sp[point_MOUD_abm_sp$Category=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
 
 CSRptrlabelshape <- as.SpatialPointsDataFrame.ppp(CSRptrlabel)
 writeOGR(CSRptrlabelshape, dsn=".", layer="output/CSRptrlabel",driver="ESRI Shapefile")
+
 
