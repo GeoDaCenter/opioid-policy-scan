@@ -2,29 +2,80 @@ library(sp)
 library(spatstat)
 library(maptools)
 library(rgdal)
+library(dplyr)
 
 point_master <- read.csv("data/point-master.csv")
-allpoint <- SpatialPointsDataFrame(point_master[,1:2], point_master, proj4string =  CRS("+init=EPSG:32616"))
-class(allpoint)
+dim(point_master)
+ #2805 by 9
+point_MOUD <- filter(point_master, Category == "MOUD - Buprenorphine" | Category == "MOUD - Methadone" |
+                       Category == "MOUD - Naltrexone")
+dim(point_MOUD)
+ #669 by 9 
+ # we have in total 669 MOUD locations
+summary(point_MOUD$Category)
+ # 447 B, 81 M. 141 N
 
-allpoint1 <- as.ppp(allpoint)
+allpoint_sp <- SpatialPointsDataFrame(point_master[,1:2], point_master, proj4string =  CRS("+init=EPSG:32616"))
+class(allpoint_sp)
+allpoint_ppp <- as.ppp(allpoint_sp)
+
+point_MOUD_sp <- SpatialPointsDataFrame(point_MOUD[,1:2], point_MOUD, proj4string =  CRS("+init=EPSG:32616"))
+class(point_MOUD_sp)
+summary(point_MOUD_sp)
+point_MOUD_ppp <- as.ppp(point_MOUD_sp)
 
 abm_zips <- readOGR("data/abm_zips.gpkg")
-CSRpoint <- runifpoint(npoints(allpoint1), win=abm_zips)
+writeOGR(abm_zips, dsn=".", layer="output/abm_zips",driver="ESRI Shapefile")
+abm_zips_df <- as.data.frame(abm_zips)
+
+point_MOUD$Zipcode <- substr(as.character(point_MOUD_sp$Zip),1,5)
+point_MOUD_abm <- point_MOUD[point_MOUD$Zipcode %in% as.character(abm_zips_df$ZCTA5CE10),]
+dim(point_MOUD_abm)
+ #495 by 10 
+point_MOUD_abm_sp <- SpatialPointsDataFrame(point_MOUD_abm[,1:2], point_MOUD_abm, proj4string =  CRS("+init=EPSG:32616"))
+point_MOUD_abm_ppp <- as.ppp(point_MOUD_abm_sp)
+
+abm_zips_sp <- readShapeSpatial("output/abm_zips.shp")
+class(abm_zips_sp)
+summary(abm_zips_sp)
+names(abm_zips_sp)
+unique(abm_zips_sp$ZCTA5CE)
+
+summary(test[!(test %in% as.character(abm_zips_sp$GEOID10))])
+# there are 90 zipcodes from point_MOUD_sp that are not included abm_zips
+
+plot(abm_zips_sp, main = "All MOUD locations in IL")
+plot(point_MOUD_sp, pch=1, cex=0.5, col="blue", add=T)
+# there are blue dots that not in the area covered by abm_zips_sp
+
+plot(abm_zips_sp, main = "MOUD locations in study area")
+plot(point_MOUD_abm_sp, pch=1, cex=0.5, col="blue", add=T)
+ # Now all blue dots (MOUD locations) are within our study area 
+
+summary(point_MOUD_abm$Category)
+ # B 333; M 62; N 100
+
+plot(abm_zips_sp, main = "MOUD locations in study area")
+plot(point_MOUD_abm_sp, pch=1, cex=0.5, col=point_MOUD_abm$Category, add=T)
+
+
+# now reshuffling
+CSRpoint <- runifpoint(npoints(point_MOUD_abm_ppp), win=abm_zips)
 plot(CSRpoint)
 
-writeOGR(abm_zips, dsn=".", layer="output/abm_zips",driver="ESRI Shapefile")
-
-marks(CSRpoint) <- point_master$Category
+marks(CSRpoint) <- point_MOUD_abm_sp$Category
 summary(marks(CSRpoint))
-summary(point_master$Category)
+summary(point_MOUD_abm_sp$Category)
 
 CSRptrlabel <- rlabel(CSRpoint, labels = marks(CSRpoint), permute=T, nsim=1, drop=T)
 head(marks(CSRpoint))
 head(marks(CSRptrlabel))
 summary(marks(CSRptrlabel))
 
+plot(abm_zips_sp, main = "Reshuffled MOUD locations in study area")
+plot(CSRptrlabel, pch=1, cex=0.5, col=marks(CSRptrlabel), add=T)
+
+
 CSRptrlabelshape <- as.SpatialPointsDataFrame.ppp(CSRptrlabel)
 writeOGR(CSRptrlabelshape, dsn=".", layer="output/CSRptrlabel",driver="ESRI Shapefile")
-
 
