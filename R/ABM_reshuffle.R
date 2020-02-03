@@ -4,6 +4,7 @@ library(maptools)
 library(rgdal)
 library(dplyr)
 library(tmap)
+library(sf)
 
 point_master <- read.csv("data/point-master.csv")
 dim(point_master)
@@ -95,6 +96,8 @@ plot(abm_zips_sp, main = "Real MOUD Naltrexone in study area")
 plot(point_MOUD_abm_sp[point_MOUD_abm_sp$Category=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
 
 CSRptrlabelshape <- as.SpatialPointsDataFrame.ppp(CSRptrlabel)
+
 writeOGR(CSRptrlabelshape, dsn=".", layer="output/CSRptrlabel",driver="ESRI Shapefile")
+writeOGR(CSRptrlabelshape, dsn="output/CSRptrlabel.gpkg", layer="", driver="GPKG")
 
 
