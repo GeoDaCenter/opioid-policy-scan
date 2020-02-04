@@ -1,0 +1,20 @@
+library(tidycensus)
+library(dplyr)
+
+# Before this code works, you need to set up a Census API key, see info here: https://walkerke.github.io/tidycensus/articles/basic-usage.html
+
+# Look at variables
+vars <- load_variables(2018, "acs5", cache = TRUE)
+View(vars)
+
+sample <- get_acs(geography = "zcta", variables = c("B01001_007", #insert more vars here 
+"B01001_013", "B01001_031", # insert more here
+"B01001_037"), cache_table = TRUE)
+
+sample %>% 
+  group_by(GEOID) %>% 
+  summarize(total_18_39 = sum(estimate))
+
+# population 16-40
+# zip code level
+# dp02/dp03
