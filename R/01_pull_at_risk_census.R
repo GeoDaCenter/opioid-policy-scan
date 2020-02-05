@@ -18,3 +18,5 @@ atrisk <- sample %>%
 # population 16-40
 # zip code level
 # dp02/dp03
+
+atrisk <- write.csv(atrisk, file = "atrisk.csv")
