@@ -89,3 +89,17 @@ atrisk_IL <- atrisk_IL %>%
          MOUD_N_assign = MOUD_N_remainder + MOUD_N_int)
 sum(atrisk_IL$MOUD_N_assign)
 
+i <- 1
+n_B <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_B_assign
+n_M <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_M_assign
+n_N <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_N_assign
+n_total <- n_B + n_M + n_N
+CSR1 <- runifpoint(n_total, win=as.owin(zips_sp[i,]))
+medication <- as.factor(c(rep("MOUD - Buprenorphine", n_B), 
+                rep("MOUD - Methadone", n_M),
+                rep("MOUD - Naltrexone", n_N)))
+CSR1$marks <- medication
+CSRlabel1 <- rlabel(CSR1, labels = marks(CSR1), permute=T, nsim=1, drop=T)
+CSRlabel1_sp <- as.SpatialPointsDataFrame.ppp(CSRlabel1)
+
+
