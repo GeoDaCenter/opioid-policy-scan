@@ -141,3 +141,6 @@ plot(reshuffle2_sp[reshuffle2_sp$marks=="MOUD - Naltrexone",], pch=1, cex=0.5, c
 
 plot(st_geometry(illinois), main = "Real MOUD Naltrexone in IL")
 plot(point_MOUD_sp[point_MOUD_sp$Category=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
+
+write.csv(reshuffle2, file="output/reshuffle2.csv")
+writeOGR(reshuffle2_sp, dsn="output/reshuffle2.gpkg", layer="", driver="GPKG")
