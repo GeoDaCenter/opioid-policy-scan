@@ -100,6 +100,23 @@ medication <- as.factor(c(rep("MOUD - Buprenorphine", n_B),
                 rep("MOUD - Naltrexone", n_N)))
 CSR1$marks <- medication
 CSRlabel1 <- rlabel(CSR1, labels = marks(CSR1), permute=T, nsim=1, drop=T)
-CSRlabel1_sp <- as.SpatialPointsDataFrame.ppp(CSRlabel1)
+reshuffle2 <- as.data.frame(CSRlabel1)
 
+for (i in 2:1383) {
+  n_B <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_B_assign
+  n_M <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_M_assign
+  n_N <- atrisk_IL[atrisk_IL$GEOID==zips_sp[i,]$GEOID10,]$MOUD_N_assign
+  n_total <- n_B + n_M + n_N
+  CSRi <- runifpoint(n_total, win=as.owin(zips_sp[i,]))
+  medication <- as.factor(c(rep("MOUD - Buprenorphine", n_B), 
+                            rep("MOUD - Methadone", n_M),
+                            rep("MOUD - Naltrexone", n_N)))
+  CSRi$marks <- medication
+  CSRlabeli <- rlabel(CSRi, labels = marks(CSRi), permute=T, nsim=1, drop=T)
+  reshufflei <- as.data.frame(CSRlabeli)
+  reshuffle2 <- rbind(reshuffle2, reshufflei)
+}
 
+head(reshuffle2)
+table(reshuffle2$marks)
+reshuffle2_sp <- SpatialPointsDataFrame(reshuffle2[,1:2], reshuffle2, proj4string =  CRS("+init=EPSG:32616"))
