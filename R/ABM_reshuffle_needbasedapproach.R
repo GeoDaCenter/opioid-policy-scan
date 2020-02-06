@@ -120,3 +120,24 @@ for (i in 2:1383) {
 head(reshuffle2)
 table(reshuffle2$marks)
 reshuffle2_sp <- SpatialPointsDataFrame(reshuffle2[,1:2], reshuffle2, proj4string =  CRS("+init=EPSG:32616"))
+
+## check MOUD locations after reshuffling - Methadone
+plot(st_geometry(illinois), main = "Reshuffled MOUD Methadone in IL")
+plot(reshuffle2_sp[reshuffle2_sp$marks=="MOUD - Methadone",], pch=1, cex=0.5, col="red", add=T)
+
+plot(st_geometry(illinois), main = "Real MOUD Methadone in IL")
+plot(point_MOUD_sp[point_MOUD_sp$Category=="MOUD - Methadone",], pch=1, cex=0.5, col="red", add=T)
+
+## check MOUD locations after reshuffling - Buprenorphine
+plot(st_geometry(illinois), main = "Reshuffled MOUD Buprenorphine in IL")
+plot(reshuffle2_sp[reshuffle2_sp$marks=="MOUD - Buprenorphine",], pch=1, cex=0.5, col="blue", add=T)
+
+plot(st_geometry(illinois), main = "Real MOUD Buprenorphine in IL")
+plot(point_MOUD_sp[point_MOUD_sp$Category=="MOUD - Buprenorphine",], pch=1, cex=0.5, col="blue", add=T)
+
+## check MOUD locations after reshuffling (within study area) - Naltrexone
+plot(st_geometry(illinois), main = "Reshuffled MOUD Naltrexone in IL")
+plot(reshuffle2_sp[reshuffle2_sp$marks=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
+
+plot(st_geometry(illinois), main = "Real MOUD Naltrexone in IL")
+plot(point_MOUD_sp[point_MOUD_sp$Category=="MOUD - Naltrexone",], pch=1, cex=0.5, col="green", add=T)
