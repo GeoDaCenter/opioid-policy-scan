@@ -144,3 +144,14 @@ plot(point_MOUD_sp[point_MOUD_sp$Category=="MOUD - Naltrexone",], pch=1, cex=0.5
 
 write.csv(reshuffle2, file="output/reshuffle2.csv")
 writeOGR(reshuffle2_sp, dsn="output/reshuffle2.gpkg", layer="", driver="GPKG")
+
+# may need to plot the atrisk population to double check the reshuffle result 
+zips_IL <- right_join(atrisk_IL, zips_sf, by = c("GEOID" = "GEOID10")) %>% 
+  st_as_sf() %>%
+  st_set_crs(32616)
+tmap_mode(mode = "view")
+  # tmap mode set to interactive viewing 
+tm_shape(zips_IL) + tm_polygons("ratio")
+
+
+
