@@ -19,4 +19,4 @@ atrisk <- sample %>%
 # zip code level
 # dp02/dp03
 
-atrisk <- write.csv(atrisk, file = "atrisk.csv")
+atrisk <- write.csv(atrisk, file = "data-output/atrisk.csv")
