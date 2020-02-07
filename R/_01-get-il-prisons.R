@@ -1,3 +1,4 @@
+install.packages("rvest")
 library(rvest)
 library(dplyr)
 library(purrr)
@@ -39,5 +40,27 @@ prison_coords_df <- prison_names %>%
     lat = map(prison_names, ~tmaptools::geocode_OSM(.)$coords[2]))
 
 lon <- map(prison_names, ~tmaptools::geocode_OSM(.)$coords[1])
+lat <- map(prison_names, ~tmaptools::geocode_OSM(.)$coords[2])
 
-## issue with geocoding Sheridan Correctional Center
+### issues with geocoding four centers
+ ## Menard Medium Security Unit 
+ ## Shawnee Correctional Center 
+ ## Taylorville Correctional Center
+ ## Vandalia Correctional Center
+
+prison_address_df[prison_address_df$prison_names=="Menard Medium Security Unit",]$address
+  ## missing , after Street and Menard
+lon[[16]] <- tmaptools::geocode_OSM("711 Kaskaskia Street,Menard, IL")$coords[1]
+lat[[16]]<- tmaptools::geocode_OSM("711 Kaskaskia Street,Menard, IL")$coords[2]
+
+prison_address_df[prison_address_df$prison_names=="Taylorville Correctional Center",]$address
+## cannot recognize the road name, rewrite the road name
+tmaptools::geocode_OSM("1144 IL-29, Taylorville, IL 62568")
+lon[[25]] <- tmaptools::geocode_OSM("1144 IL-29, Taylorville, IL 62568")$coords[1]
+lat[[25]]<- tmaptools::geocode_OSM("1144 IL-29, Taylorville, IL 62568")$coords[2]
+
+prison_address_df[prison_address_df$prison_names=="Vandalia Correctional Center",]$address
+tmaptools::geocode_OSM("US-51, Vandalia, IL 62471")
+lon[[26]] <- tmaptools::geocode_OSM("US-51, Vandalia, IL 62471")$coords[1]
+lat[[26]]<- tmaptools::geocode_OSM("US-51, Vandalia, IL 62471")$coords[2]
+
