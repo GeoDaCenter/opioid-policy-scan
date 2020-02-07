@@ -26,6 +26,12 @@ zips_sf <- st_read("data-output/zips.gpkg")
 
 sum_zscores_sf <- right_join(sum_zscores, zips_sf, by = c("zip" = "ZCTA5CE10"))
 
+# Join population by zip to summative z
+atrisk <- read_csv("data-output/atrisk.csv") %>% 
+  select(-X1) %>% 
+  rename(at_risk_pop = total_18_39)
+sum_zscores_sf <- right_join(atrisk, sum_zscores_sf, by = c("GEOID" = "GEOID10")) 
 # Write out
 st_write(sum_zscores_sf, "data-output/sum_zscores.gpkg", delete_dsn = TRUE)
 st_write(sum_zscores_sf, "data-output/sum_zscores.shp", delete_dsn = TRUE)
+write_sf(sum_zscores_sf, "data-output/sum_zscores.csv")
