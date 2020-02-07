@@ -152,6 +152,7 @@ zips_IL <- right_join(atrisk_IL, zips_sf, by = c("GEOID" = "GEOID10")) %>%
 tmap_mode(mode = "view")
   # tmap mode set to interactive viewing 
 tm_shape(zips_IL) + tm_polygons("ratio")
-
+tmap_mode(mode = "plot")
+tm_shape(zips_IL) + tm_polygons("ratio", style = "quantile")
 
 
