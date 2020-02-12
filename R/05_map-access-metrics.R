@@ -25,7 +25,7 @@ access_sf <- right_join(zips, access, by = c("GEOID10" = "zip")) %>%
          nal_avg_drive_min = `MOUD - Naltrexone - avg_drive_minutes`,
          nal_avg_dist_km = `MOUD - Naltrexone - avg_distance_km`)
 
-
+write_sf(access_sf, "data-output/access_sf.gpkg")
 
 # Make maps
 illinois <- read_sf("data-output/illinois.gpkg")
