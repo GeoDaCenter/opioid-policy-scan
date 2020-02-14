@@ -81,6 +81,6 @@ head(min_dists_all_sf)
 
 
 # Save as csv and geo object
-write_csv(min_dists_all, "data-output/min_dist_real_reshuffled.csv")
+write_csv(min_dists_all, "data-shared/min_dist_real_reshuffled.csv")
 
-write_sf(min_dists_all_sf, "data-output/min_dist_real_reshuffled.shp")
+write_sf(min_dists_all_sf, "data-shared/min_dist_real_reshuffled.shp")
