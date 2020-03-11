@@ -76,9 +76,13 @@ il_zips <- zctas(state = "IL", year = 2017)
 
 Alternatively, you can download zip code boundary data from the census (or other relevant site), and load them into R with the `st_read` command:
 
+## MK note -- Mention here that "shapefiles" are considered standard spatial formats, that have both a spatial and flat-file data information. For spatial newbies.
+
 ```{r read zips}
 il_zips <- st_read("il_zips.shp")
 ```
+
+## MK note -- show that zip codes have data attached them, too; would add head() to see that info. This is what they'll want in the end -- a CSV file with zip code and minimum distance value. 
 
 We can check that we pulled the zip code data properly by plotting it. We use the `st_geometry()` function to just get the outline of the geometries. This will take a while to run:
 
@@ -172,6 +176,11 @@ We can now write out this data to a shapefile format:
 st_write(min_dist_sf, "min_dists_sf.shp")
 ```
 
+## Mk Note -- You may also want to save as CSV file here, for those who are just trying to get it back into that format. That's usually the top request; give me a variable to link back to my CSV file.
+
+
 ## Visualize with CARTO (separate tutorial - maybe not in R Markdown?)
+## MK note -- I would visualize using tmap in R. We may show the data ourselves using CARTO links, but tutorial may not be necessary just yet.
 
 ## Make into Shiny app (separate tutorial)
+## MK note -- May not be necessary for this crowd.
