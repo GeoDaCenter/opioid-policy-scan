@@ -1,12 +1,13 @@
 ---
 title: 'Calculating Access: Distance to Nearest Centroid'
 author: "Angela Li"
-date: "11/4/2019"
+date: "3/11/2020"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+options(tigris_use_cache = TRUE)
 ```
 
 ## Purpose of this tutorial (split into multiple tutorials?)
@@ -17,41 +18,159 @@ Audience: Kris, Cara, JCOIN folks, etc
 
 ## Packages used
 
-- sf
-- dplyr (part of the tidyverse)
+First, install the `sf` R package with the following commands:
+
+```{r install, eval=FALSE}
+install.packages("sf")
+```
+
+Then load the libraries for use.
+
+```{r load}
+library(sf)
+```
 
 ## Acquire data on point locations of services
 
-- we'll just do one type of service
-- geocoding explanation 
+Load in your data.
 
-## Upload access datasets
+We will use methadone clinics in Illinois as a sample for resource locations.
 
-- convert to spatial data
-- make sure is in appropriate projection
+```{r read}
+methadone_clinics <- read.csv("il_methadone_clinics.csv")
+```
+
+Take a look at the first few rows of your data.
+
+Our data has been geocoded, which means that it has latitude and longitude columns associated with the address. If you do not have this information, see the Appendix for how to **geocode** your data.
+
+```{r glimpse}
+head(methadone_clinics)
+```
+
+Convert to spatial data frame using the `st_as_sf()` function. The `coords` argument specifies which two columns are the X and Y for your data. The `crs` argument is set equal to 4326 because this data is in latitude and longitude (or "unprojected").
+
+```{r convert}
+meth_sf <- st_as_sf(methadone_clinics, 
+                    coords = c("Longitude", "Latitude"),
+                    crs = 4326)
+
+meth_sf
+```
+
+Note that this is a data frame, but that it has a final column called "geometry" that stores the spatial information.
 
 ## Pull zip code level data
 
-- use tigris
-- do the following
-- alternatively, download data from census site and work with
+We will now use an R package called `tigris` to pull zip code boundaries.
 
-## Convert zip geometries into centroids
+```{r tigris}
+library(tigris)
+```
 
-- st_centroid
+The `zctas()` function will pull the last published year of zip code boundaries, which defaults to 2018. You can change the year with the `year` argument. This will take a while to run.
+
+```{r eval=FALSE}
+il_zips <- zctas(state = "IL", year = 2017)
+```
+
+Alternatively, you can download zip code boundary data from the census (or other relevant site), and load them into R with the `st_read` command:
+
+```{r read zips}
+il_zips <- st_read("il_zips.shp")
+```
+
+We can check that we pulled the zip code data properly by plotting it. We use the `st_geometry()` function to just get the outline of the geometries. This will take a while to run:
+
+```{r plot zips}
+plot(st_geometry(il_zips))
+```
+
+## Calculate centroids of zip code boundaries
+
+Now, we will calculate the centroids of the zip code boundaries.
+
+We will first need to project our data, which means change it from latitude and longitude to local coordinates. We'll use the Illinois State Plane projection. Notice how the values in `geometry` go from being relatively small (unprojected, lat/long) to very large (projected, in US feet).
+
+```{r project zips}
+il_zips <- st_transform(il_zips, crs = 3435)
+
+il_zips
+```
+
+Then, we will calculate the centroids:
+
+```{r calc centroids}
+il_centroids <- st_centroid(il_zips)
+
+il_centroids
+```
+
+For each zip code, this will calculate the centroid, and the output will be a point dataset.
+
+Plot to double check that everything is ok. The `st_geometry()` function will once again just return the outline:
+
+```{r plot both}
+plot(st_geometry(il_zips))
+plot(st_geometry(il_centroids), add = TRUE, col = "red")
+```
 
 ## Calculate distance to nearest zip code centroid
 
-- st_distance
-- may need to write a function
-- again, need to make sure geometries are in the same projection
-- otherwise can't calculate distance
+Now that we have the zip code centroids, we can calculate the distance between the zip centroids and the locations of the resources, but we'll get an error:
+
+```{r eval=FALSE}
+st_distance(il_centroids, meth_sf, by_element = TRUE)
+```
+
+Why is there an error? Because the projection of the centroids and the resource locations don't match up. Let's project the resource locations so that they match the projection of the centroids.
+
+```{r check crs}
+st_crs(il_centroids)
+st_crs(meth_sf)
+```
+
+```{r project resources}
+new_crs <- st_crs(il_centroids)
+meth_sf <- st_transform(meth_sf, new_crs)
+```
+
+# Find the nearest resource to a centroid
+
+First, we'll get the resource that is the closest to a zip centroid:
+
+```{r find nearest resource}
+nearest_clinic_indexes <- st_nearest_feature(il_centroids, meth_sf)
+
+nearest_clinic <- meth_sf[nearest_clinic_indexes,]
+```
+
+Then, we will calculate the distance between the nearest resource and the zip code centroid.
+
+```{r calc min dists}
+min_dists <- st_distance(il_centroids, nearest_clinic, by_element = TRUE)
+```
+
+This is in US feet. To change to a more meaningful unit, we can use the `set_units()` function:
+
+```{r convert units}
+library(units)
+min_dists_mi <- set_units(min_dists, "mi")
+```
+
+# Rejoin to zip code data
+
+```{r rejoin}
+min_dist_sf <- cbind(il_zips, min_dists_mi)
+```
 
 ## Save as zip-code level dataset
 
-- join to original zip code data
-- select columns
-- st_write
+We can now write out this data to a shapefile format:
+
+```{r write}
+st_write(min_dist_sf, "min_dists_sf.shp")
+```
 
 ## Visualize with CARTO (separate tutorial - maybe not in R Markdown?)
 
