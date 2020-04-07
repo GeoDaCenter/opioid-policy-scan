@@ -1,8 +1,12 @@
 ---
-title: 'Calculating Access: Distance to Nearest Centroid'
+title: 'Calculating Zip-Level Access Metrics: Minimum Distance from Zip Centroid to Resource'
 author: "Angela Li"
-date: "3/11/2020"
-output: html_document
+date: "4/7/2020"
+output: 
+  pdf_document: default
+  html_document:
+    theme: flatly
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -10,45 +14,60 @@ knitr::opts_chunk$set(echo = TRUE)
 options(tigris_use_cache = TRUE)
 ```
 
-## Purpose of this tutorial (split into multiple tutorials?)
+## Tutorial objectives
 
-Goal is to showcase a use case that you might find meaningful
-Intended for someone with no experience with R to go through
-Audience: Kris, Cara, JCOIN folks, etc
+This tutorial demonstrates how to calculate a minimum distance value from a zip code centroid to a set of resources, such as locations of methadone clinics. Each zip code will be assigned a "minimum distance access metric" as a value that indicates access to resources from that zip code. This tutorial assumes some familiarity with the R programming language, but introduces spatial concepts to those who have not previously worked with spatial data in R. Please contact Angela Li at ali6@uchicago.edu with any questions about this content.
+
+Our inputs are:
+
+- a CSV file with the locations of our resources ("chicago_methadone.csv"), and 
+- a zip code boundary file ("chicago_zips.shp"). 
+
+We will calculate the minimum distance between the resources and the centroids of the zip codes, then save the results as a shapefile and as a CSV.
+
+Our final result will be a shapefile/CSV with the minimum distance value for each zip. 
 
 ## Packages used
 
-First, install the `sf` R package with the following commands:
+We will use the following packages in this tutorial:
+
+- `sf`: to manipulate spatial data
+- `tmap`: to visualize and create maps
+- `units`: to convert units within spatial data
+
+First, install the relevant R packages with the following commands:
 
 ```{r install, eval=FALSE}
 install.packages("sf")
+install.packages("tmap")
+install.packages("units")
 ```
 
-Then load the libraries for use.
+Then load the libraries for use. (The message you see about GEOS, GDAL, and PROJ refer to the software libraries that allow you to work with spatial data.)
 
 ```{r load}
 library(sf)
+library(tmap)
+library(units)
 ```
 
-## Acquire data on point locations of services
+## Read in resource data
 
-Load in your data.
-
-We will use methadone clinics in Illinois as a sample for resource locations.
+We will use a CSV of methadone clinic addresses in Chicago as an example. This file represents point locations of clinics.
 
 ```{r read}
-methadone_clinics <- read.csv("il_methadone_clinics.csv")
+methadone_clinics <- read.csv("chicago_methadone.csv")
 ```
 
 Take a look at the first few rows of your data.
-
-Our data has been geocoded, which means that it has latitude and longitude columns associated with the address. If you do not have this information, see the Appendix for how to **geocode** your data.
 
 ```{r glimpse}
 head(methadone_clinics)
 ```
 
-Convert to spatial data frame using the `st_as_sf()` function. The `coords` argument specifies which two columns are the X and Y for your data. The `crs` argument is set equal to 4326 because this data is in latitude and longitude (or "unprojected").
+Our data has been geocoded, which means that it has latitude and longitude as columns associated with the address in the data. If you do not have this information, see the Appendix for how to geocode your data.
+
+Convert to a spatial data frame using the `st_as_sf()` function. The `coords` argument specifies which two columns are the X and Y for your data. We set the `crs` argument equal to 4326 because this data is in latitude and longitude (otherwise known as "unprojected", which means it is not in feet or meters).
 
 ```{r convert}
 meth_sf <- st_as_sf(methadone_clinics, 
@@ -60,127 +79,257 @@ meth_sf
 
 Note that this is a data frame, but that it has a final column called "geometry" that stores the spatial information.
 
-## Pull zip code level data
+We can now plot the location of the methadone clinics with base R. We use the `st_geometry()` function to just get a single point map from the geographies.
 
-We will now use an R package called `tigris` to pull zip code boundaries.
-
-```{r tigris}
-library(tigris)
+```{r}
+plot(st_geometry(meth_sf))
 ```
 
-The `zctas()` function will pull the last published year of zip code boundaries, which defaults to 2018. You can change the year with the `year` argument. This will take a while to run.
+To make a slightly more interesting map, you can add an interactive basemap with tmap, using the `tmap_mode` function to change to "view" mode:
 
-```{r eval=FALSE}
-il_zips <- zctas(state = "IL", year = 2017)
+```{r}
+tmap_mode("view")
+
+tm_shape(meth_sf) +
+  tm_dots()
 ```
 
-Alternatively, you can download zip code boundary data from the census (or other relevant site), and load them into R with the `st_read` command:
 
-## MK note -- Mention here that "shapefiles" are considered standard spatial formats, that have both a spatial and flat-file data information. For spatial newbies.
+## Read in zip code data
+
+If you have zip code boundary data from the Census (or other relevant site), you can load them into R with the `read_sf` command. Boundary data is commonly in the **shapefile** format, which has both a spatial (.shp, .shx, .prj) and a flat-file (.dbf) component. Shapefiles are made of four files (.shp, .shx, .prj, .dbf), all which needed to be in the same folder for the file to be read.
 
 ```{r read zips}
-il_zips <- st_read("il_zips.shp")
+chicago_zips <- read_sf("chicago_zips.shp")
 ```
 
-## MK note -- show that zip codes have data attached them, too; would add head() to see that info. This is what they'll want in the end -- a CSV file with zip code and minimum distance value. 
+If we take a look at the top of the data, we can see that the zip codes have data attached to them. The last column is the "geometry" column, which stores the spatial data. 
 
-We can check that we pulled the zip code data properly by plotting it. We use the `st_geometry()` function to just get the outline of the geometries. This will take a while to run:
+Additionally, there is a header with some spatial metadata about the data frame, including the type of geometry ("MULTIPOLYGON"), the bounding box (the square that surrounds your data), and the geographic projection (4326 is the shortcode reference for the string that starts "+proj=longlat +datum=WGS84 +no_defs"). Otherwise, this is just like your normal R tabular data frame.
 
-```{r plot zips}
-plot(st_geometry(il_zips))
+```{r}
+head(chicago_zips)
 ```
 
-## Calculate centroids of zip code boundaries
+We can check that we pulled the zip code data properly by plotting it. Again, we use the `st_geometry()` function to just get the outline of the geometries.
+
+```{r plot-zips}
+plot(st_geometry(chicago_zips))
+```
+
+We can add a second layer in blue with the access locations:
+
+```{r plot-zips-resources}
+plot(st_geometry(chicago_zips))
+plot(st_geometry(meth_sf), col = "blue", add = TRUE)
+```
+
+With multiple layers, it can be easier to use tmap to plot:
+
+```{r}
+tmap_mode("plot")
+
+tm_shape(chicago_zips) +
+  tm_borders() +
+tm_shape(meth_sf) +
+  tm_dots(col = "blue", size = 0.1)
+```
+
+
+Again, we can create an interactive map with tmap:
+
+```{r plot-interactive-zips-resources}
+tmap_mode("view")
+
+tm_shape(chicago_zips) +
+  tm_borders() +
+tm_shape(meth_sf) +
+  tm_dots()
+```
+
+
+# Calculate centroids of zip code boundaries
 
 Now, we will calculate the centroids of the zip code boundaries.
 
-We will first need to project our data, which means change it from latitude and longitude to local coordinates. We'll use the Illinois State Plane projection. Notice how the values in `geometry` go from being relatively small (unprojected, lat/long) to very large (projected, in US feet).
+We will first need to project our data, which means change it from latitude and longitude to meaningful units, like ft or meters, so we can calculate distance properly. We'll use the Illinois State Plane projection, with an EPSG code of 3435.
 
-```{r project zips}
-il_zips <- st_transform(il_zips, crs = 3435)
+**Aside**: To find the most appropriate projection for your data, do a Google Search for which projection works well - for state level data, each state has a State Plane projection with a specific code, known as the EPSG. I use epsg.io to check projections - here's the [New York State Plane](https://epsg.io/2263) page.
 
-il_zips
+Use the `st_transform` function to change the projection of the data. Notice how the values in `geometry` go from being relatively small (unprojected, lat/long) to very large (projected, in US feet).
+
+```{r project-zips}
+chicago_zips <- st_transform(chicago_zips, 3435)
+
+chicago_zips
 ```
 
 Then, we will calculate the centroids:
 
-```{r calc centroids}
-il_centroids <- st_centroid(il_zips)
+```{r calc-centroids}
+chicago_centroids <- st_centroid(chicago_zips)
 
-il_centroids
+chicago_centroids
 ```
 
 For each zip code, this will calculate the centroid, and the output will be a point dataset.
 
 Plot to double check that everything is ok. The `st_geometry()` function will once again just return the outline:
 
-```{r plot both}
-plot(st_geometry(il_zips))
-plot(st_geometry(il_centroids), add = TRUE, col = "red")
+```{r plot-zips-centroids}
+plot(st_geometry(chicago_zips))
+plot(st_geometry(chicago_centroids), add = TRUE, col = "red")
 ```
 
-## Calculate distance to nearest zip code centroid
+Once again, we can create an interactive map:
 
-Now that we have the zip code centroids, we can calculate the distance between the zip centroids and the locations of the resources, but we'll get an error:
+```{r plot-interactive-zips-centroids}
+tm_shape(chicago_zips) +
+  tm_borders() +
+tm_shape(chicago_centroids) +
+  tm_dots()
+```
+
+
+# Ensure that centroid and resource projections match
+
+If we immediately try to calculate the distance between the zip centroids and the locations of the resources using the `st_distance` function, we'll get an error:
 
 ```{r eval=FALSE}
-st_distance(il_centroids, meth_sf, by_element = TRUE)
+st_distance(chicago_centroids, meth_sf, by_element = TRUE)
 ```
 
+```
+Error in st_distance(chicago_centroids, meth_sf, by_element = TRUE) : st_crs(x) == st_crs(y) is not TRUE
+```
 Why is there an error? Because the projection of the centroids and the resource locations don't match up. Let's project the resource locations so that they match the projection of the centroids.
 
-```{r check crs}
-st_crs(il_centroids)
+First, use the `st_crs` function to check that the coordinate reference system (or projection) is the same. They're not, so we have to fix it.
+
+```{r check-crs-1}
+st_crs(chicago_centroids)
 st_crs(meth_sf)
 ```
 
+We'll take the CRS from the zip code centroids data, and use it as input to `st_transform` applied to the methadone clinics data.
+
 ```{r project resources}
-new_crs <- st_crs(il_centroids)
+new_crs <- st_crs(chicago_centroids)
+new_crs
+
 meth_sf <- st_transform(meth_sf, new_crs)
+```
+
+If we check the CRS again, we now see that they match. **Mismatched projections are a commonly made mistake in geospatial data processing.**
+
+```{r check-crs-2}
+st_crs(chicago_centroids)
+st_crs(meth_sf)
+```
+
+Now we have the zip boundaries, the centroids of the zips, and the resource locations, as shown below. Next, we will calculate the distance to the nearest resource from each zip code centroid.
+
+```{r plot-zips-centroids-resources}
+plot(st_geometry(chicago_zips))
+plot(st_geometry(chicago_centroids), col = "red", add = TRUE)
+plot(st_geometry(meth_sf), col = "blue", add = TRUE)
 ```
 
 # Find the nearest resource to a centroid
 
-First, we'll get the resource that is the closest to a zip centroid:
+First, we'll identify the resource that is the closest to a zip centroid using the `st_nearest_feature` function. (It will return the index of the object that is nearest, so we will subset the resources by the index to get the nearest object.)
 
 ```{r find nearest resource}
-nearest_clinic_indexes <- st_nearest_feature(il_centroids, meth_sf)
+nearest_clinic_indexes <- st_nearest_feature(chicago_centroids, meth_sf)
 
 nearest_clinic <- meth_sf[nearest_clinic_indexes,]
+
+nearest_clinic
 ```
 
-Then, we will calculate the distance between the nearest resource and the zip code centroid.
+Then, we will calculate the distance between the nearest resource and the zip code centroid with the `st_distance` function. As shown above, make sure both of your datasets are projected, and in the same projection, before you run `st_distance`.
 
 ```{r calc min dists}
-min_dists <- st_distance(il_centroids, nearest_clinic, by_element = TRUE)
+min_dists <- st_distance(chicago_centroids, nearest_clinic, by_element = TRUE)
+
+min_dists
 ```
 
-This is in US feet. To change to a more meaningful unit, we can use the `set_units()` function:
+This is in US feet. To change to a more meaningful unit, such as miles, we can use the `set_units()` function:
 
 ```{r convert units}
-library(units)
 min_dists_mi <- set_units(min_dists, "mi")
+
+min_dists_mi
 ```
 
-# Rejoin to zip code data
+We then rejoin the minimum distances to the zip code data, by column binding `min_dists_mi` to the original `chicago_zips` data.
 
 ```{r rejoin}
-min_dist_sf <- cbind(il_zips, min_dists_mi)
+min_dist_sf <- cbind(chicago_zips, min_dists_mi)
+min_dist_sf
 ```
 
-## Save as zip-code level dataset
+# Save as zip-code level dataset
 
-We can now write out this data to a shapefile format:
+To save our final result to a CSV, use the `layer_options = "GEOMETRY=AS_XY"` command. Note that this option only works when you are working with point data.
 
-```{r write}
-st_write(min_dist_sf, "min_dists_sf.shp")
+```{r, eval=FALSE, write-csv}
+write_sf(min_dist_sf, "min_dist.csv", layer_options = "GEOMETRY=AS_XY")
 ```
 
-## Mk Note -- You may also want to save as CSV file here, for those who are just trying to get it back into that format. That's usually the top request; give me a variable to link back to my CSV file.
+We can also write out this data to a shapefile format:
 
+```{r, eval=FALSE, write-shp}
+write_sf(min_dist_sf, "min_dists_sf.shp")
+```
 
-## Visualize with CARTO (separate tutorial - maybe not in R Markdown?)
-## MK note -- I would visualize using tmap in R. We may show the data ourselves using CARTO links, but tutorial may not be necessary just yet.
+# Appendix
 
-## Make into Shiny app (separate tutorial)
-## MK note -- May not be necessary for this crowd.
+## Geocode addresses
+
+If you have the addresses for your resources, but no latitude and longitude associated, you will need to geocode your resources.
+
+To do so, there are a number of options in R. I like the OpenCage geocoder in the `tmaptools` packaage. This caps you at around 2000 addresses at once, and may require some data manipulation, so you may wish to use a proprietary software instead (i.e. Esri Geocoder, which is included in Esri software like ArcGIS).
+
+Here's an example of geocoding a single address:
+
+```{r}
+# install.packages(tmaptools)
+library(tmaptools)
+
+geocode_OSM("4545 North Broadway St., Chicago, IL", 
+            as.data.frame = TRUE)
+```
+
+To apply the function to multiple addresses, you can try the following:
+
+First ensure that you have a *character vector* of full addresses:
+
+```{r}
+full_addresses <- paste(meth_sf$Address, meth_sf$City, meth_sf$State, meth_sf$Zip)
+
+full_addresses
+class(full_addresses)
+```
+
+Then geocode the addresses. This can now be transformed into an `sf` object and be used in the rest of analysis.
+
+```{r}
+geocode_OSM(full_addresses, as.data.frame = TRUE)
+```
+
+## Pull zip code boundaries directly from Census
+
+If you do not have zip code boundaries on hand, you can use an R package called `tigris` to pull them directly from the website.
+
+```{r tigris}
+# install.packages(tigris)
+library(tigris)
+```
+
+The `zctas()` function will pull the last published year of zip code boundaries, which defaults to 2018. You can change the year with the `year` argument. **Note: this will take a while to run.**
+
+```{r eval=FALSE}
+il_zips <- zctas(state = "IL", year = 2017)
+```
