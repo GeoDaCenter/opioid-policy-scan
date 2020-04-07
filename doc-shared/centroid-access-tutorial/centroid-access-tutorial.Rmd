@@ -132,7 +132,7 @@ tmap_mode("plot")
 tm_shape(chicago_zips) +
   tm_borders() +
 tm_shape(meth_sf) +
-  tm_dots(col = "blue", size = 0.1)
+  tm_dots(col = "blue", size = 0.2)
 ```
 
 
@@ -269,6 +269,33 @@ We then rejoin the minimum distances to the zip code data, by column binding `mi
 min_dist_sf <- cbind(chicago_zips, min_dists_mi)
 min_dist_sf
 ```
+
+We can now visualize the zip-level access to methadone clinics using our new access metric, using the `tmap` package.
+
+```{r}
+tmap_mode("plot")
+
+tm_shape(min_dist_sf) +
+  tm_polygons("min_dists_mi", 
+              title = "Minimum Distance (mi)") +
+  tm_layout(main.title = "Minimum Distance from Zip Centroid\n to Methadone Clinic",
+            main.title.position = "center",
+            main.title.size = 1)
+```
+
+Access by zip code can also be combined with locations of resources:
+
+```{r}
+tm_shape(min_dist_sf) +
+  tm_polygons("min_dists_mi", 
+              title = "Minimum Distance (mi)") +
+  tm_shape(meth_sf) +
+  tm_dots(size = 0.2) +
+  tm_layout(main.title = "Minimum Distance from Zip Centroid\n to Methadone Clinic",
+            main.title.position = "center",
+            main.title.size = 1)
+```
+
 
 # Save as zip-code level dataset
 
