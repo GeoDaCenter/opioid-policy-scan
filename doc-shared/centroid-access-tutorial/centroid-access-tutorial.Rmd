@@ -7,6 +7,7 @@ output:
   html_document:
     theme: flatly
     toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 options(tigris_use_cache = TRUE)
 ```
 
-## Tutorial objectives
+# Tutorial objectives
 
 This tutorial demonstrates how to calculate a minimum distance value from a zip code centroid to a set of resources, such as locations of methadone clinics. Each zip code will be assigned a "minimum distance access metric" as a value that indicates access to resources from that zip code. This tutorial assumes some familiarity with the R programming language, but introduces spatial concepts to those who have not previously worked with spatial data in R. Please contact Angela Li at ali6@uchicago.edu with any questions about this content.
 
@@ -27,7 +28,7 @@ We will calculate the minimum distance between the resources and the centroids o
 
 Our final result will be a shapefile/CSV with the minimum distance value for each zip. 
 
-## Packages used
+# Packages used
 
 We will use the following packages in this tutorial:
 
@@ -51,7 +52,7 @@ library(tmap)
 library(units)
 ```
 
-## Read in resource data
+# Read in resource data
 
 We will use a CSV of methadone clinic addresses in Chicago as an example. This file represents point locations of clinics.
 
@@ -95,7 +96,7 @@ tm_shape(meth_sf) +
 ```
 
 
-## Read in zip code data
+# Read in zip code data
 
 If you have zip code boundary data from the Census (or other relevant site), you can load them into R with the `read_sf` command. Boundary data is commonly in the **shapefile** format, which has both a spatial (.shp, .shx, .prj) and a flat-file (.dbf) component. Shapefiles are made of four files (.shp, .shx, .prj, .dbf), all which needed to be in the same folder for the file to be read.
 
@@ -140,7 +141,6 @@ Again, we can create an interactive map with tmap:
 
 ```{r plot-interactive-zips-resources}
 tmap_mode("view")
-
 tm_shape(chicago_zips) +
   tm_borders() +
 tm_shape(meth_sf) +
@@ -235,7 +235,7 @@ plot(st_geometry(chicago_centroids), col = "red", add = TRUE)
 plot(st_geometry(meth_sf), col = "blue", add = TRUE)
 ```
 
-# Find the nearest resource to a centroid
+# Calculate distance from centroid to nearest resource
 
 First, we'll identify the resource that is the closest to a zip centroid using the `st_nearest_feature` function. (It will return the index of the object that is nearest, so we will subset the resources by the index to get the nearest object.)
 
