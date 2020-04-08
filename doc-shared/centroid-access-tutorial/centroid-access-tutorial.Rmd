@@ -52,7 +52,7 @@ library(tmap)
 library(units)
 ```
 
-# Read in resource data
+# Read in resource data {#read-resources}
 
 We will use a CSV of methadone clinic addresses in Chicago as an example. This file represents point locations of clinics.
 
@@ -66,7 +66,7 @@ Take a look at the first few rows of your data.
 head(methadone_clinics)
 ```
 
-Our data has been geocoded, which means that it has latitude and longitude as columns associated with the address in the data. If you do not have this information, see the Appendix for how to geocode your data.
+Our data has been geocoded, which means that it has latitude and longitude as columns associated with the address in the data. If you do not have this information, see the [Appendix] for how to geocode your data.
 
 Convert to a spatial data frame using the `st_as_sf()` function. The `coords` argument specifies which two columns are the X and Y for your data. We set the `crs` argument equal to 4326 because this data is in latitude and longitude (otherwise known as "unprojected", which means it is not in feet or meters).
 
@@ -96,13 +96,15 @@ tm_shape(meth_sf) +
 ```
 
 
-# Read in zip code data
+# Read in zip code data {#read-zips}
 
 If you have zip code boundary data from the Census (or other relevant site), you can load them into R with the `read_sf` command. Boundary data is commonly in the **shapefile** format, which has both a spatial (.shp, .shx, .prj) and a flat-file (.dbf) component. Shapefiles are made of four files (.shp, .shx, .prj, .dbf), all which needed to be in the same folder for the file to be read.
 
 ```{r read zips}
 chicago_zips <- read_sf("chicago_zips.shp")
 ```
+
+**Note:** If you do not have the zip boundary data, please see the [Appendix] for instructions on how to pull them directly from the Census website into R.
 
 If we take a look at the top of the data, we can see that the zip codes have data attached to them. The last column is the "geometry" column, which stores the spatial data. 
 
@@ -148,7 +150,7 @@ tm_shape(meth_sf) +
 ```
 
 
-# Calculate centroids of zip code boundaries
+# Calculate centroids of zip code boundaries {#calculate-centroids}
 
 Now, we will calculate the centroids of the zip code boundaries.
 
@@ -340,7 +342,7 @@ full_addresses
 class(full_addresses)
 ```
 
-Then geocode the addresses. This can now be transformed into an `sf` object and be used in the rest of analysis.
+Then geocode the addresses. This can now be transformed into an `sf` object and be used in the [rest of analysis](#read-resources).
 
 ```{r}
 geocode_OSM(full_addresses, as.data.frame = TRUE)
@@ -348,15 +350,17 @@ geocode_OSM(full_addresses, as.data.frame = TRUE)
 
 ## Pull zip code boundaries directly from Census
 
-If you do not have zip code boundaries on hand, you can use an R package called `tigris` to pull them directly from the website.
+If you do not have zip code boundaries on hand, you can use an R package called `tigris` to pull them directly from the Census website.
 
 ```{r tigris}
 # install.packages(tigris)
 library(tigris)
 ```
 
-The `zctas()` function will pull the last published year of zip code boundaries, which defaults to 2018. You can change the year with the `year` argument. **Note: this will take a while to run.**
+The `zctas()` function will pull the last published year of zip code boundaries, which defaults to 2018. Additional functions to pull states, counties, tracts, blocks, and more can be found in the [`tigris` documentation](https://github.com/walkerke/tigris). You can change the year with the `year` argument. **Note: this will take a while to run.**
 
 ```{r eval=FALSE}
 il_zips <- zctas(state = "IL", year = 2017)
 ```
+
+Once you pull the boundaries, you can [plot your data](#read-zips) and [calculate the centroids](#calculate-centroids). 
