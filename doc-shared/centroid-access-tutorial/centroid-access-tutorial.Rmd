@@ -1,7 +1,7 @@
 ---
 title: 'Calculating Zip-Level Access Metrics: Minimum Distance from Zip Centroid to Resource'
 author: "Angela Li"
-date: "4/7/2020"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
 output: 
   pdf_document: default
   html_document:
