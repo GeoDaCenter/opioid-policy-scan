@@ -26,6 +26,6 @@ project.
     documentation
   - [Trello](https://trello.com/b/r8b41gb0/ethic-opioid-environment-program):
     tasklist and status of project
-  - [ETHIC Access Google
+  - [Access Google
     Sheet](https://docs.google.com/spreadsheets/d/1GEZZcFkQd-944-DKvqG6Wh_aJ60FG0Y9GuNS8EtFLY8/edit#gid=0):
     tracks access variables used in calculations
