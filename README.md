@@ -1,10 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ETHIC Opioid Environment Program
+# Opioid Environment Program
 
 This repository stores R scripts used to clean, join, and visualize data
-for the ETHIC opioid environment program. Raw data/output is not stored
+for the CSDS opioid environment program. Raw data/output is not stored
 in here for confidentiality, but are included in the Google Drive/Box
 associated with this
 project.
