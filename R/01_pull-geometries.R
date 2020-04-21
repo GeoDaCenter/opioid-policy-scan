@@ -1,7 +1,7 @@
 # Get ZCTAs, MSAs, and Illinois geometries from Census API
 
 library(sf)
-library(tigris) # all geometries from year 2017
+library(tigris) # all geometries from year 2018
 
 # Illinois boundary
 illinois <- tigris::states(cb = TRUE) %>%
@@ -52,6 +52,11 @@ wisc_border_counties <- st_intersection(in_wisc, wisconsin["geometry"])
 border_counties <- rbind(wisc_border_counties, not_in_wisc)
 # plot(border_counties["geometry"])
 
+# US States
+states <- states(cb = TRUE) %>% 
+  st_as_sf
+
+
 # Save final versions ------------------------------------------------------
 
 st_write(zips_sf, "data-output/zips.gpkg", delete_dsn = TRUE)
@@ -65,3 +70,5 @@ st_write(il_msas, "data-output/il-msas.gpkg", delete_dsn = TRUE)
 st_write(illinois, "data-output/illinois.gpkg", delete_dsn = TRUE)
 
 st_write(border_counties, "data-output/il_border_counties.gpkg", delete_dsn = TRUE)
+
+st_write(states, "data-output/states.gpkg", delete_dsn = TRUE)
