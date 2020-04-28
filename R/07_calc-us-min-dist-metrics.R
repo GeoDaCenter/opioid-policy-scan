@@ -69,6 +69,8 @@ meth_min_dists_mi <- get_min_dists(us_centroids, meth_sites_sf)
 nal_min_dists_mi <- get_min_dists(us_centroids, nal_sites_sf)
 
 zip_access <- cbind(us_zips_sf, bup_min_dists_mi, meth_min_dists_mi, nal_min_dists_mi)
+# Note: includes American Samoa, Aleutian Islands (crosses int'l date line), Alaska - leads to some crazy outliers
+
 
 
 # Write out data ----------------------------------------------------------
