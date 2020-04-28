@@ -6,23 +6,9 @@ library(tidyverse)
 
 # get service codes to filter SAMHSA Locator Substance Abuse data by
 
-service_codes <- read_excel("data/2020-04-09-12.47_samhsa-data-download/service-codes.xlsx")
+service_codes <- read_excel("data/2020-04-09-12.47_samhsa-data-download/service-codes.xlsx", sheet = 2)
 
-bup_codes <- filter(service_codes, 
-                            str_detect(service_description, "[Bb]up") | 
-                              str_detect(service_name, "[Bb]up"))
-
-meth_codes <- filter(service_codes, 
-                            str_detect(service_description, "[Mm]eth") | 
-                              str_detect(service_name, "[Mm]eth"))
-
-nal_codes <- filter(service_codes,
-                    str_detect(service_description, "[Nn]altrex") |
-                    str_detect(service_name, "[Nn]altrex"))
-
-all_codes_df <- rbind(bup_codes, meth_codes, nal_codes) 
-
-all_codes <- all_codes_df %>% 
+all_codes <- service_codes %>% 
   pull(service_code) %>% 
   tolower()
 
@@ -52,45 +38,50 @@ counts_per_service_code <- all_sa %>%
 
 # Buprenorphine
 bup_plot <- 
-  filter(counts_per_service_code, med_type == "bup", service_code != "OMB", service_code != "NSC") %>% 
-  mutate(service_name = fct_reorder(service_name, n)) %>% 
-  ggplot(aes(x = service_name, y = n, label = n, fill = category_name)) +
+  filter(counts_per_service_code, med_type == "bup", service_code != "OMB") %>% 
+  distinct() %>% 
+  ggplot(aes(x = fct_reorder(stringr::str_wrap(service_name, 40), n), y = n, fill = category_name)) +
     geom_col() +
-  geom_label() +
+  geom_label(aes(label = n), fill = "white") +
   # facet_wrap(~category_name) +
-    coord_flip() +
+  coord_flip() +
+  labs(fill = "Category") +
   xlab("") +
   ylab("Number of Sites") +
+  ylim(0, 6500) +
   theme_minimal() +
-  theme(axis.text.y = element_text(size = 15))  
+  theme(axis.text.y = element_text(size = 15),
+        legend.text = element_text(size = 10))  
   
 # Methadone
 meth_plot <-
-  filter(counts_per_service_code, med_type == "meth", service_code != "OMB", service_code != "CMI", service_code != "MDTX") %>% 
-  mutate(service_name = fct_reorder(service_name, n)) %>% 
-  ggplot(aes(x = service_name, y = n, label = n, fill = category_name)) +
-  geom_col() +
-  geom_label() +
+  filter(counts_per_service_code, med_type == "meth") %>% 
+  ggplot(aes(x = fct_reorder(stringr::str_wrap(service_name, 30), n), y = n, fill = category_name)) +  geom_col() +
+  geom_label(aes(label = n), fill = "white") +
   coord_flip() +
+  labs(fill = "Category") +
   xlab("") +
   ylab("Number of Sites") +
+  ylim(0, 1800) +
   theme_minimal() +
-  theme(axis.text.y = element_text(size = 15))
+  theme(axis.text.y = element_text(size = 15),
+        legend.text = element_text(size = 10))
 
 # Naltrexone
 naltrex_plot <- 
 filter(counts_per_service_code, med_type == "nal") %>% 
-  mutate(service_name = fct_reorder(service_name, n)) %>% 
-  ggplot(aes(x = service_name, y = n, label = n, fill = category_name)) +
-  geom_col() +
-  geom_label() +
+  ggplot(aes(x = fct_reorder(stringr::str_wrap(service_name, 40), n), y = n, fill = category_name)) +  geom_col() +
+  geom_label(aes(label = n), fill = "white") +
   coord_flip() +
+  labs(fill = "Category") +
   xlab("") +
   ylab("Number of Sites") +
+  ylim(0, 6000) +
   theme_minimal() +
-  theme(axis.text.y = element_text(size = 15)) +
+  theme(axis.text.y = element_text(size = 15), 
+        legend.text = element_text(size = 10)) +
   scale_fill_manual(values=c("#7CAE00", "#00BFC4", "#C77CFF"))
 
-ggsave("output/bup_site_codes.png", plot = bup_plot)
-ggsave("output/meth_site_codes.png", plot = meth_plot)
-ggsave("output/nal_site_codes.png", plot = naltrex_plot)
+ggsave("output/bup_site_codes2.png", plot = bup_plot, width = 9) #not great, need to adjust fig width
+ggsave("output/meth_site_codes2.png", plot = meth_plot, width = 9)
+ggsave("output/nal_site_codes2.png", plot = naltrex_plot, width = 9)
