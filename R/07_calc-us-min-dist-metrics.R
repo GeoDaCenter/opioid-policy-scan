@@ -8,18 +8,47 @@ library(units)
 
 substance_abuse <- read_excel("data/2020-04-09-12.47_samhsa-data-download/substance-abuse/Behavioral_Health_Treament_Facility_listing_2020_04_09_135006.xlsx")
 
-bup_sites <- substance_abuse %>% 
-  filter(!is.na(bu)) %>% 
-  select(1:17)
+service_codes_df <- read_excel("data/2020-04-09-12.47_samhsa-data-download/service-codes.xlsx", sheet = 2)
 
-meth_sites <- substance_abuse %>% 
-  filter(!is.na(mu)) %>% 
-           # Methadone used in Treatment
-  select(1:17)
+service_codes <- service_codes_df %>% 
+  pull(service_code) %>% 
+  tolower()
 
-nal_sites <- substance_abuse %>% 
-  filter(!is.na(nu)) %>% 
-  select(1:17)
+all_sites <- substance_abuse %>% 
+  select(1:17, service_codes)
+
+# # Take a look at Meth Detox vs. Meth Maintenance
+# meth_type <- all_sites %>% 
+#   filter(!is.na(mm) | !is.na(dm)) %>% 
+#   mutate(meth_type = case_when(!is.na(mm) & is.na(dm) ~ "maintenance_only",
+#                                !is.na(mm) & !is.na(dm) ~ "both",
+#                                is.na(mm) & !is.na(dm) ~ "detox_only")) %>% 
+#   st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+# 
+# filter(all_sites, is.na(dm) & is.na(mm) & is.na(mmw) & !is.na(meth)) %>% 
+#   st_as_sf(coords = c("longitude", "latitude"), crs = 4326) %>% 
+#   tm_shape() +
+#   tm_dots(size = 0.1)
+# 
+# 
+# # write_sf(meth_type, "data-output/meth_type.gpkg")
+# 
+# tmap_mode("view")
+# 
+# meth_type %>% 
+#   st_as_sf(coords = c("longitude", "latitude"), crs = 4326) %>% 
+#   tm_shape() +
+#   tm_dots(size = 0.1, col = "meth_type")
+
+
+bup_sites <- all_sites %>% 
+  filter(!is.na(bum)) # Buprenorphine Maintenance
+
+meth_sites <- all_sites %>% 
+  filter(!is.na(mm)) # Methadone Maintenance
+
+nal_sites <- all_sites %>% 
+  filter(!is.na(vtrl)) # Naltrexone (extended-release, injectable naltrexone (Vivitrol®))
 
 
 # Convert to spatial
