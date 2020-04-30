@@ -1,16 +1,16 @@
-# Visualize IL-wide access metrics Vidal generated for 3 medications, round two
-# Last updated: April 28, 2020
+# Visualize IL-wide access metrics Vidal generated for 3 medications, round three
+# Last updated: April 30, 2020
 
 library(tidyverse)
 library(sf)
 library(tmap)
 
-access <- read_csv("data/results_using_logans_package/access_mouds_all_illinois.csv")
+access <- read_csv("data/results_using_osrm/access_mouds_all_illinois_osrm.csv")
 access <- mutate_all(access, round, 2)
 # Need to round scores to 2 degrees otherwise won't plot
 
-count <- read_csv("data/results_using_logans_package/count_within_60min_mouds_all_il.csv")
-time <- read_csv("data/results_using_logans_package/shortest_time_mouds_all_il.csv")
+count <- read_csv("data/results_using_osrm/count_within_60min_mouds_all_il_osrm.csv")
+time <- read_csv("data/results_using_osrm/shortest_time_mouds_all_il_osrm.csv")
 
 summary(access)
 summary(count)
@@ -34,9 +34,8 @@ zips <- readRDS("data-output/zips.rds") %>%
   select(zcta = ZCTA5CE10)
 class(zips)
 
-# zips_simp <- rmapshaper::ms_simplify(zips)
+zips_simp <- rmapshaper::ms_simplify(zips)
 # takes around 2 minutes
-# write_sf(zips_simp, "data-output/zips_simp.gpkg")
 
 all_metrics_sf <- full_join(zips_simp, all_metrics)
 all_metrics_long_sf <- full_join(zips_simp, all_metrics_long)
@@ -71,7 +70,7 @@ b <- tm_shape(illinois) +
   tm_layout(panel.labels = c("Access Score", "Count Within 60 Min", "Time to Nearest (min)"),
             main.title = "Buprenorphine Access Metrics")
 
-tmap_save(b, "output/bup_logan.png", width = 6, height = 4)
+tmap_save(b, "output/bup_osrm.png", width = 6, height = 4)
 
 m <- tm_shape(illinois) +
   tm_fill("grey") +
@@ -84,7 +83,7 @@ m <- tm_shape(illinois) +
   tm_layout(panel.labels = c("Access Score", "Count Within 60 Min", "Time to Nearest (min)"),
             main.title = "Methadone Access Metrics")
 
-tmap_save(m, "output/meth_logan.png", width = 6, height = 4)
+tmap_save(m, "output/meth_osrm.png", width = 6, height = 4)
 
 n <- tm_shape(illinois) +
   tm_fill("grey") +
@@ -97,4 +96,6 @@ n <- tm_shape(illinois) +
   tm_layout(panel.labels = c("Access Score", "Count Within 60 Min", "Time to Nearest (min)"),
             main.title = "Naltrexone Access Metrics")
 
-tmap_save(n, "output/nal_logan.png", width = 6, height = 4)
+tmap_save(n, "output/nal_osrm.png", width = 6, height = 4)
+
+beepr::beep()
