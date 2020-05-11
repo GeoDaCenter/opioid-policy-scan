@@ -1,5 +1,5 @@
-# Visualize IL-wide access metrics Vidal generated for 3 medications, round three
-# Last updated: April 30, 2020
+# Visualize IL-wide access metrics Vidal generated for 3 medications with OSRM, round three
+# Last updated: May 11, 2020
 
 library(tidyverse)
 library(sf)
