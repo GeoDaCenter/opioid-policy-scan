@@ -29,13 +29,15 @@ all_metrics_long <- all_metrics %>%
   pivot_longer(-zcta, names_to = "type")
 
 
-# Join to spatial zip boundary file
-zips <- readRDS("data-output/zips.rds") %>% 
-  select(zcta = ZCTA5CE10)
-class(zips)
+# # Join to spatial zip boundary file
+# zips <- readRDS("data-output/zips.rds") %>% 
+#   select(zcta = ZCTA5CE10)
+# class(zips)
+# 
+# zips_simp <- rmapshaper::ms_simplify(zips)
+# # takes around 2 minutes
 
-zips_simp <- rmapshaper::ms_simplify(zips)
-# takes around 2 minutes
+zips_simp <- read_sf("data-output/zips_simp.gpkg")
 
 all_metrics_sf <- full_join(zips_simp, all_metrics)
 all_metrics_long_sf <- full_join(zips_simp, all_metrics_long)
@@ -52,10 +54,14 @@ bup_long_sf <- filter(all_metrics_long_sf,
                       str_detect(type, "Bup"))
 
 meth_long_sf <- filter(all_metrics_long_sf,
-                       str_detect(type, "Meth"))
+                       str_detect(type, "Meth")) %>% 
+  mutate(type = case_when(type == "Methadone_score" ~ "access_score",
+                          TRUE ~ type))
 
 naltrex_long_sf <- filter(all_metrics_long_sf,
-                          str_detect(type, "Naltrex"))
+                          str_detect(type, "Naltrex")) %>% 
+  mutate(type = case_when(type == "Naltrexone_score" ~ "access_score",
+                          TRUE ~ type))
 
 illinois <- read_sf("data-output/illinois.gpkg")
 
@@ -63,7 +69,9 @@ b <- tm_shape(illinois) +
   tm_fill("grey") +
   tm_shape(bup_long_sf) +
   tm_fill("value",
-          style = "jenks",
+          style = c("jenks", "fixed", "fixed"),
+          breaks = list(NULL, c(0, 1, 5, 10, 50, 320), c(0, 15, 30, 45, 60, 107)),
+          labels = list(NULL, c("None", "1 to 4", "5 to 9", "10 to 49", "50 to 320"), NULL),
           title = c("Score", "Count", "Time (min)"),
           palette = list("-YlOrBr", "-YlOrBr", "YlOrBr")) +
   tm_facets(by = "type", free.scales = TRUE) +
@@ -76,7 +84,9 @@ m <- tm_shape(illinois) +
   tm_fill("grey") +
   tm_shape(meth_long_sf) +
   tm_fill("value",
-          style = "jenks",
+          style = c("jenks", "fixed", "fixed"),
+          breaks = list(NULL, c(0, 1, 2, 3, 5, 10, 61), c(0, 30, 45, 60, 120, 240)),
+          labels = list(NULL, c("0", "1", "2", "3 to 4", "5 to 9", "10 to 61"), NULL),
           title = c("Score", "Count", "Time (min)"),
           palette = list("-YlOrBr", "-YlOrBr", "YlOrBr")) +
   tm_facets(by = "type", free.scales = TRUE) +
@@ -89,7 +99,9 @@ n <- tm_shape(illinois) +
   tm_fill("grey") +
   tm_shape(naltrex_long_sf) +
   tm_fill("value",
-          style = "jenks",
+          style = c("jenks", "fixed", "fixed"),
+          breaks = list(NULL, c(0, 1, 2, 3, 5, 10, 96), c(0, 30, 45, 60, 143)),
+          labels = list(NULL, c("0", "1", "2", "3 to 4", "5 to 9", "10 to 96"), c("0 to 30", "30 to 45", "45 to 60", "60 to 143")),
           title = c("Score", "Count", "Time (min)"),
           palette = list("-YlOrBr", "-YlOrBr", "YlOrBr")) +
   tm_facets(by = "type", free.scales = TRUE) +
