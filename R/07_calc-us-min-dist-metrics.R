@@ -74,13 +74,6 @@ us_zips_sf <- readRDS("data-output/us_zips.rds")
 
 us_centroids <- st_centroid(us_zips_sf)
 
-# nearest_meth_indexes <- st_nearest_feature(us_centroids, meth_sites_sf)
-# 
-# nearest_meth <- meth_sites_sf[nearest_meth_indexes, ]
-# 
-# meth_min_dists <- st_distance(us_centroids, nearest_meth, by_element = TRUE) # takes 2 minutes to run
-# 
-# meth_min_dists_mi <- set_units(meth_min_dists, "mi")
 
 # Each of these takes around 3-4 minutes to finish up
 bup_min_dists_mi <- get_min_dists(us_centroids, bup_sites_sf)
