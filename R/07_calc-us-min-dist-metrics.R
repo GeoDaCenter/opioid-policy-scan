@@ -6,6 +6,8 @@ library(sf)
 library(tigris)
 library(units)
 
+source("R/00_functions-included.R") #for get_min_dists function
+
 substance_abuse <- read_excel("data/2020-04-09-12.47_samhsa-data-download/substance-abuse/Behavioral_Health_Treament_Facility_listing_2020_04_09_135006.xlsx")
 
 service_codes_df <- read_excel("data/2020-04-09-12.47_samhsa-data-download/service-codes.xlsx", sheet = 2)
@@ -71,18 +73,6 @@ nal_sites_sf <- nal_sites %>%
 us_zips_sf <- readRDS("data-output/us_zips.rds")
 
 us_centroids <- st_centroid(us_zips_sf)
-
-get_min_dists <- function(centroids_sf, resources_sf) {
-  nearest_resource_indexes <- st_nearest_feature(centroids_sf, resources_sf)
-  
-  nearest_resource <- resources_sf[nearest_resource_indexes, ]
-  
-  min_dists <- st_distance(centroids_sf, nearest_resource, by_element = TRUE) # takes 2 minutes to run
-  
-  min_dists_mi <- set_units(min_dists, "mi")
-  
-  min_dists_mi
-}
 
 # nearest_meth_indexes <- st_nearest_feature(us_centroids, meth_sites_sf)
 # 

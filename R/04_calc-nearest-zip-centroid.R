@@ -20,16 +20,7 @@ meth <- st_read("data-output/01_meth.gpkg")
 nalox <- st_read("data-output/01_nalox.gpkg")
 naltrex <- st_read("data-output/01_naltrex.gpkg")
 
-get_min_dist <- function(resource_pts, centroid_pts = zips_centroids, convert = TRUE) {
-  distance_matrix <- st_distance(resource_pts, centroid_pts)
-  if (convert) {
-    distance_matrix <- set_units(distance_matrix, mi)
-  }
-  
-  min_dists <- round(apply(distance_matrix, 2, min), digits = 4)
-  
-  min_dists
-}
+source("R/00_functions-included.R") # for get_min_dist function
 
 # takes 8 seconds to run
 min_dists <- cbind(Zip = zips_sf$ZCTA5CE10, 
