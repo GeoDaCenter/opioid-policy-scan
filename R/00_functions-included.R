@@ -23,3 +23,49 @@ get_min_dists <- function(centroids_sf, resources_sf) {
   
   min_dists_mi
 }
+
+
+## From 08_map-us-min-dist-metrics.R
+
+#' Clip geographies to continental US
+#'
+#' @param sf sf object representing geographical units to clip to continental US
+#'
+#' @return
+#' @export
+#'
+#' @examples
+clip_to_continental_us <- function(sf) {
+  
+  continental_bbox <- st_as_sfc("POLYGON((-126.3 50.6, -66.0 50.6, -66.0 20.1, -126.3 20.1, -126.3 50.6))") %>% 
+    st_as_sf(crs = 4326) %>% 
+    st_transform(st_crs(sf))
+  
+  continental_sf <- st_intersection(continental_bbox, sf)
+  
+}
+
+
+#' Calculate hinge breaks (this is right skewed data so only need upfence)
+#'
+#' @param df 
+#' @param variable 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+get_hinge_breaks <- function(df, variable) {
+  
+  values <- dplyr::pull(df, variable)
+  
+  qv <- unname(quantile(values))
+  iqr <- qv[4] - qv[2]
+  upfence <- qv[4] + 1.5 * iqr
+  
+  breaks <- unname(quantile(values))
+  breaks[5] <- upfence
+  breaks[6] <- max(values)
+  
+  breaks
+}
