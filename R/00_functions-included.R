@@ -1,27 +1,25 @@
 # Functions used in various scripts
 
-## From 04_calc-nearest-zip-centroid.R
+## From 07_calc-us-min-dist-metrics.R
 
 #' Get minimum distance from resources to centroids of zips
 #'
-#' @param resource_pts sf POINT object representing locations of resources (e.g 
-#' methadone clinimcs)
-#' @param centroid_pts sf POINT object representing centroids of unit of interest 
+#' @param centroids_sf sf POINT object representing centroids of unit of interest 
 #' (e.g. zip code centroids)
-#' @param convert if FALSE, will return distance in meters (default is TRUE, 
-#' will return distance in miles)
+#' @param resources_sf sf POINT object representing locations of resources (e.g methadone clinics)
 #'
 #' @return
 #' @export
 #'
 #' @examples
-get_min_dist <- function(resource_pts, centroid_pts = zips_centroids, convert = TRUE) {
-  distance_matrix <- st_distance(resource_pts, centroid_pts)
-  if (convert) {
-    distance_matrix <- set_units(distance_matrix, mi)
-  }
+get_min_dists <- function(centroids_sf, resources_sf) {
+  nearest_resource_indexes <- st_nearest_feature(centroids_sf, resources_sf)
   
-  min_dists <- round(apply(distance_matrix, 2, min), digits = 4)
+  nearest_resource <- resources_sf[nearest_resource_indexes, ]
   
-  min_dists
+  min_dists <- st_distance(centroids_sf, nearest_resource, by_element = TRUE) # takes 2 minutes to run
+  
+  min_dists_mi <- set_units(min_dists, "mi")
+  
+  min_dists_mi
 }
