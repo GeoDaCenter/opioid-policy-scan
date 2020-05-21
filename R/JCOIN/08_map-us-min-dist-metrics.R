@@ -3,6 +3,9 @@ library(sf)
 library(tmap)
 library(tidyverse)
 
+source("R/00_functions-included.R") #for get_hinge_breaks and clip_to_continental_us function
+
+
 zip_access <- read_sf("data-output/us_min_dists.gpkg")
 zip_access <- zip_access %>% 
   st_transform(102003)
@@ -14,35 +17,19 @@ states <- states %>%
 
 
 # Only visualize continental US
-continental_bbox <- st_as_sfc("POLYGON((-126.3 50.6, -66.0 50.6, -66.0 20.1, -126.3 20.1, -126.3 50.6))") %>% 
-  st_as_sf(crs = 4326) %>% 
+continental_bbox <- st_as_sfc("POLYGON((-126.3 50.6, -66.0 50.6, -66.0 20.1, -126.3 20.1, -126.3 50.6))") %>%
+  st_as_sf(crs = 4326) %>%
   st_transform(102003)
 
 continental_zips <- st_intersection(continental_bbox, zip_access)
-
-# write_sf(continental_zips, "data-output/continental_zips.gpkg")
+write_sf(continental_zips, "data-output/continental_zips.gpkg")
 
 continental_zips <- read_sf("data-output/continental_zips.gpkg")
 
-continental_states <- st_intersection(states, continental_bbox)
+# continental_states <- st_intersection(states, continental_bbox)
+# write_sf(continental_states, "data-output/continental_states.gpkg")
 
-
-# Calculate hinge breaks (this is right skewed data so only need upfence)
-
-get_hinge_breaks <- function(df, variable) {
-  
-  values <- dplyr::pull(df, variable)
-  
-  qv <- unname(quantile(values))
-  iqr <- qv[4] - qv[2]
-  upfence <- qv[4] + 1.5 * iqr
-  
-  breaks <- unname(quantile(values))
-  breaks[5] <- upfence
-  breaks[6] <- max(values)
-  
-  breaks
-}
+continental_states <- read_sf("data-output/continental_states.gpkg")
 
 bup_breaks <- get_hinge_breaks(continental_zips, "bup_min_dists_mi")
 meth_breaks <- get_hinge_breaks(continental_zips, "meth_min_dists_mi")
@@ -104,6 +91,21 @@ mm <- tm_shape(continental_zips) +
 tmap_save(mm, "output/meth_us_min_dist.png")
 beepr::beep()
 
+
+mm_fixed <- tm_shape(continental_zips) +
+  tm_fill("meth_min_dists_mi", 
+          breaks = c(0, 5, 10, 15, 30, 150),
+          title = "Minimum Distance from \nZip to Resource (mi)",
+          palette = c("#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020")) +
+  tm_shape(continental_states) +
+  tm_borders() +
+  tm_layout(main.title = "Methadone Access Metrics")
+
+# takes 5 minutes to run
+tmap_save(mm_fixed, "output/meth_us_min_dist_fixed.png")
+beepr::beep()
+
+
 mm_fisher <- tm_shape(continental_zips) +
   tm_fill("meth_min_dists_mi", 
           n = 5,
@@ -151,6 +153,20 @@ mn <- tm_shape(continental_zips) +
 tmap_save(mn, "output/nal_us_min_dist.png")
 beepr::beep()
 
+mn_fixed <- tm_shape(continental_zips) +
+  tm_fill("nal_min_dists_mi", 
+          breaks = c(0, 5, 10, 15, 30, 150),
+          title = "Minimum Distance from \nZip to Resource (mi)",
+          palette = c("#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020")) +
+  tm_shape(continental_states) +
+  tm_borders() +
+  tm_layout(main.title = "Naltrexone Access Metrics")
+
+# takes 5 minutes to run
+tmap_save(mn_fixed, "output/nal_us_min_dist_fixed.png")
+beepr::beep()
+
+
 
 mn_fisher <- tm_shape(continental_zips) +
   tm_fill("nal_min_dists_mi", 
@@ -188,7 +204,7 @@ ggplot(aes(x = medication, y = min_dist)) +
   theme_minimal() +
   labs(title = "Min Distance to Nearest by Medication", x = "Medication", y = "Mininum Distance to Nearest (mi)")
 
-ggsave("output/min_dist_boxplots.png", bps, width = 6, height = 4)
+ggsave("output/min_dist_boxplots_right.png", bps, width = 6, height = 4)
 
 
 # Histograms
@@ -198,7 +214,7 @@ h <- ggplot(continental_zips_long, aes(x = min_dist)) +
   theme_minimal() +
   labs(title = "Distribution of Minimum Distances by Medication", x = "Minimum Distance to Resource (mi)", y = "Count")
 
-ggsave("output/min_dist_hists.png", h, width = 6, height = 4)
+ggsave("output/min_dist_hists_right.png", h, width = 6, height = 4)
 
 
 # Summary stats (really hacky way to do this...)
@@ -210,8 +226,8 @@ ss <- cbind(
   as.data.frame() %>% 
   rownames_to_column()
 
-write.csv(ss, "output/us_metric_summary_stats.csv")
-
+write.csv(ss, "output/us_metric_summary_stats_right.csv")
+beepr::beep()
 
 # Explore outliers --------------------------------------------------------
 

@@ -7,7 +7,7 @@ library(tmap)
 library(sf)
 library(raster)
 
-point_master <- read.csv("data/point-master.csv")
+point_master <- read.csv("data-output/point-master.csv")
 dim(point_master)
  # 2805 by 9
 point_MOUD <- filter(point_master, Category == "MOUD - Buprenorphine" | Category == "MOUD - Methadone" |
@@ -27,7 +27,7 @@ class(point_MOUD_sp)
 summary(point_MOUD_sp)
 point_MOUD_ppp <- as.ppp(point_MOUD_sp)
 
-abm_zips <- readOGR("data/abm_zips.gpkg")
+abm_zips <- readOGR("data-shared/abm_zips.gpkg")
 writeOGR(abm_zips, dsn=".", layer="output/abm_zips",driver="ESRI Shapefile")
 abm_zips_df <- as.data.frame(abm_zips)
 

@@ -4,7 +4,7 @@ library(dplyr)
 library(readr)
 library(tigris)
 
-atrisk <- read.csv("output/atrisk.csv", colClasses = c(NA, "character",NA))
+atrisk <- read.csv("data-output/atrisk.csv", colClasses = c(NA, "character",NA))
 head(atrisk)
 
 # Illinois boundary

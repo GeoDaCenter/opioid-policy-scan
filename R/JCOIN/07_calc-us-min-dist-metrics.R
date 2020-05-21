@@ -8,6 +8,9 @@ library(units)
 
 source("R/00_functions-included.R") #for get_min_dists function
 
+
+# Clean sites -------------------------------------------------------------
+
 substance_abuse <- read_excel("data/2020-04-09-12.47_samhsa-data-download/substance-abuse/Behavioral_Health_Treament_Facility_listing_2020_04_09_135006.xlsx")
 
 service_codes_df <- read_excel("data/2020-04-09-12.47_samhsa-data-download/service-codes.xlsx", sheet = 2)
@@ -64,6 +67,8 @@ nal_sites_sf <- nal_sites %>%
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
 
 
+# Calculate access metrics ------------------------------------------------
+
 # Get ZCTAs (~33000 in the US)
 # us_zips <- zctas(cb = TRUE)
 # us_zips_sf <- st_as_sf(us_zips) %>% 
@@ -89,4 +94,5 @@ zip_access <- cbind(us_zips_sf, bup_min_dists_mi, meth_min_dists_mi, nal_min_dis
 write_sf(zip_access, "data-output/us_min_dists.csv", layer_options = "GEOMETRY=AS_XY")
 
 write_sf(zip_access, "data-output/us_min_dists.shp")
+write_sf(zip_access, "data-output/us_min_dists.gpkg")
 write_sf(zip_access, "data-output/us_min_dists.geojson")

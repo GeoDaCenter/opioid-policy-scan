@@ -54,7 +54,7 @@ border_counties <- rbind(wisc_border_counties, not_in_wisc)
 
 # US States
 states <- states(cb = TRUE) %>% 
-  st_as_sf
+  st_as_sf()
 
 
 # Save final versions ------------------------------------------------------

@@ -31,6 +31,8 @@ joined_moud_tidy <- joined_moud %>%
 labels <- joined_moud_tidy$zip[seq(1, length(joined_moud_tidy$zip), by = 100)]
 # https://stackoverflow.com/questions/55033695/x-axis-labels-illegible-display-every-other-label-on-x-axis-ggplot2
 
+# mutate(joined_moud_tidy, zip = fct_reorder(zip, miles)) %>% 
+
 ggplot(joined_moud_tidy, aes(x = zip, y = miles, col = access_dist_type)) +
   geom_point() +
   # geom_segment(aes(x = zip, xend = zip, y = 0, yend = miles)) +
