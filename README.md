@@ -6,8 +6,19 @@
 This repository stores R scripts used to clean, join, and visualize data
 for the CSDS opioid environment program. Raw data/output is not stored
 in here for confidentiality, but are included in the Google Drive/Box
-associated with this
-project.
+associated with this project.
+
+The data wrangled in this analysis will be further developed as a data and visualization product (Policy Scan) to characterize the multi-dimensional Risk Evironment impacting the opioid crisis in the United States.
+
+## Data Overview
+
+++ to add grid of all datasets and scales included
+
+## Data Wrangling
+
+++ to add chart of data wrangling and cleaning scripts for data
+
+## Access Calculations
 
 | Input                                     | Script   | Output                                    | Purpose                                                                                                                                          |
 | ----------------------------------------- | -------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -18,14 +29,3 @@ project.
 | data-output/min-dists-to-zip-centroid.csv | R/05\_\* | data-output/sum\_zscores.gpkg/.shp        | Convert centroid distances to summative z-scores                                                                                                 |
 | data/carto….                              | R/99\_\* | data-output/carto…                        | One-off cleaning/joining scripts for manipulating CARTO datasets for collaborators                                                               |
 
-## Relevant Links
-
-  - [Google
-    Drive](https://drive.google.com/drive/folders/1WOEZU8e56SiuENpqYbU1-Tf4HFa4aIeD):
-    inlcudes raw data, cleaned data, and
-    documentation
-  - [Trello](https://trello.com/b/r8b41gb0/ethic-opioid-environment-program):
-    tasklist and status of project
-  - [Access Google
-    Sheet](https://docs.google.com/spreadsheets/d/1GEZZcFkQd-944-DKvqG6Wh_aJ60FG0Y9GuNS8EtFLY8/edit#gid=0):
-    tracks access variables used in calculations
