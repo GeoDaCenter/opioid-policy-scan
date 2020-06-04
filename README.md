@@ -4,9 +4,7 @@
 # Opioid Environment Program
 
 This repository stores R scripts used to clean, join, and visualize data
-for the CSDS opioid environment program. Raw data/output is not stored
-in here for confidentiality, but are included in the Google Drive/Box
-associated with this project.
+for the CSDS opioid environment program. 
 
 The data wrangled in this analysis will be further developed as a data and visualization product (Policy Scan) to characterize the multi-dimensional Risk Evironment impacting the opioid crisis in the United States.
 
