@@ -27,3 +27,7 @@ The data wrangled in this analysis will be further developed as a data and visua
 | data-output/min-dists-to-zip-centroid.csv | R/05\_\* | data-output/sum\_zscores.gpkg/.shp        | Convert centroid distances to summative z-scores                                                                                                 |
 | data/carto….                              | R/99\_\* | data-output/carto…                        | One-off cleaning/joining scripts for manipulating CARTO datasets for collaborators                                                               |
 
+
+## Team
+
+Marynia Kolak (Lead), Angela Li (Analyst), Qinyun Lin (Postdoc), Moksha Menghaney (Analyst)
