@@ -14,8 +14,7 @@ dialysis_access <- st_read("data-output/dialysis_min_dists.shp") %>%
   select(ZCTA5CE, dialysis = dlyss_d) %>% 
   st_drop_geometry()
 
-pop_by_zip <- read_csv("data-output/pop_by_zip18_64_2014_2018.csv") %>% 
-  rename(pop_est = popest)
+pop_by_zip <- read_csv("data-output/pop_by_zip.csv")
 
 all_access <- full_join(bup_prac_access, meth_nal_access) %>% 
   full_join(dialysis_access, by = c("ZCTA5CE10" = "ZCTA5CE")) %>%
