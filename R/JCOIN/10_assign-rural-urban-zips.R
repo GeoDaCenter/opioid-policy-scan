@@ -3,8 +3,15 @@
 
 library(tidyverse)
 
+# Min dist metrics
 all_access_us <- read_csv("data-output/min_dists_all.csv")
 str(all_access_us)
+
+# Whole country metrics - still in progress
+# read in travel times, join to urban_rural_zips
+
+# read in access scores, join to urban_rural_zip
+
 
 ## Assign rurality by population density
 urban_rural <- mutate(all_access_us, 
@@ -19,6 +26,9 @@ urban_rural <- mutate(all_access_us,
                         popdensity < 1000 ~ "rural",
                         popdensity >= 1000 & popdensity <= 3000 ~ "suburban",
                         popdensity > 3000 ~ "urban"))
+
+urban_rural_zips <- urban_rural %>% 
+  select(ZCTA5CE10, rurality)
 
 r <- tm_shape(urban_rural) +
   tm_fill("rurality")
@@ -75,7 +85,9 @@ p <- summary_stats %>%
   theme_minimal() +
   facet_wrap(~name, ncol = 1) +
   labs(title = "Median Distance to Nearest Resource (mi)",
-       y = "Distance to Nearest Resource (mi)")
+       y = "Distance to Nearest Resource (mi)") +
+  ylim(0, 40)
+
 
 ggsave("output/median-dist-compare.png", width = 5, height = 4)
 
