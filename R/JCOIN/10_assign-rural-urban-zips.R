@@ -7,12 +7,6 @@ library(tidyverse)
 all_access_us <- read_csv("data-output/min_dists_all.csv")
 str(all_access_us)
 
-# Whole country metrics - still in progress
-# read in travel times, join to urban_rural_zips
-
-# read in access scores, join to urban_rural_zip
-
-
 ## Assign rurality by population density
 urban_rural <- mutate(all_access_us, 
                       ALAND10 = 
@@ -36,6 +30,56 @@ r <- tm_shape(urban_rural) +
 tmap_save(r, "output/rurality.png")
 beepr::beep()
 
+
+
+# Travel Times Metrics ----------------------------------------------------
+
+travel_times <- read_csv("data-output/access_results_combined/access_times.csv") %>% 
+  mutate(X = as.character(X))
+
+travel_rurality <- full_join(travel_times, urban_rural_zips, by = c("X" = "ZCTA5CE10")) %>% 
+  drop_na(rurality) %>% 
+  rename(bup = time_to_nearest_buprenorphine,
+         meth = time_to_nearest_methadone,
+         nal = time_to_nearest_naltrexone)
+
+travel_rurality %>% 
+  group_by(rurality) %>%
+  summarize(bup_dist = mean(bup, na.rm = TRUE),
+            bup_sd = sd(bup, na.rm = TRUE),
+            meth_dist = mean(meth, na.rm = TRUE),
+            meth_sd = sd(meth, na.rm = TRUE),
+            nal_dist = mean(nal, na.rm = TRUE),
+            nal_sd = sd(nal, na.rm = TRUE)) %>% 
+  mutate_if(is.numeric, round, 2) %>% 
+  gt::gt()
+
+
+
+# Access Model Metrics ----------------------------------------------------
+
+access_model_30 <- read_csv("data-output/access_results_combined/access_model_30.csv") %>% 
+  mutate(X = as.character(X))
+
+access_rurality <- full_join(access_model_30, urban_rural_zips, by = c("X" = "ZCTA5CE10")) %>% 
+  drop_na(rurality) %>% 
+  rename(bup = buprenorphine_score,
+         meth = methadone_score,
+         nal = naltrexone_score)
+
+access_rurality %>% 
+  group_by(rurality) %>%
+  summarize(bup_dist = mean(bup, na.rm = TRUE),
+            bup_sd = sd(bup, na.rm = TRUE),
+            meth_dist = mean(meth, na.rm = TRUE),
+            meth_sd = sd(meth, na.rm = TRUE),
+            nal_dist = mean(nal, na.rm = TRUE),
+            nal_sd = sd(nal, na.rm = TRUE)) %>% 
+  mutate_if(is.numeric, round, 2) %>% 
+  gt::gt()
+
+
+# Minimum Distance Metrics ------------------------------------------------
 
 urban_rural %>% 
   group_by(rurality) %>%
@@ -108,6 +152,13 @@ ggplot(summary_stats, aes(x = resource, y = urban_avg_dist)) +
   geom_errorbar(aes(ymax = urban_avg_dist + urban_sd, ymin = urban_avg_dist - urban_sd)) +
   coord_flip() +
   theme_minimal()
+
+
+
+
+
+
+# Sandbox -----------------------------------------------------------------
 
 ## Unsuccessful attempts at using micro/metropolitan areas to assign 
 
