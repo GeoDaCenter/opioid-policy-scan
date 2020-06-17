@@ -1,4 +1,4 @@
-# Get pop by zip code
+# Get pop (18-64 and total) by zip code
 
 library(tidycensus)
 library(tidyverse)
@@ -9,12 +9,16 @@ pop18_64vars <- c(v18$name[9:21], v18$name[33:45])
 
 pop18_64 <- get_acs(geography = "zcta",
                     variables = pop18_64vars)
+poptotal <- get_acs(geography = "zcta",
+                    variables = "B01001_001") %>% 
+  select(GEOID, poptotal = estimate)
 
 head(pop18_64)
 
 # 2014-2018 ACS, ages 18-64 (could also do 15-64?)
 pop_by_zip <- pop18_64 %>% 
   group_by(GEOID) %>% 
-  summarize(popest = sum(estimate))
+  summarize(pop18_64 = sum(estimate)) %>% 
+  full_join(poptotal)
 
-write_csv(pop_by_zip, "data-output/pop_by_zip18_64_2014_2018.csv")
+write_csv(pop_by_zip, "data-output/pop_by_zip.csv")

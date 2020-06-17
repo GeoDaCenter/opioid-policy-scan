@@ -2,6 +2,7 @@
 
 library(sf)
 library(dplyr)
+library(readr)
 
 source("R/00_functions-included.R") #for get_min_dists function
 
@@ -14,8 +15,7 @@ dialysis_access <- st_read("data-output/dialysis_min_dists.shp") %>%
   select(ZCTA5CE, dialysis = dlyss_d) %>% 
   st_drop_geometry()
 
-pop_by_zip <- read_csv("data-output/pop_by_zip18_64_2014_2018.csv") %>% 
-  rename(pop_est = popest)
+pop_by_zip <- read_csv("data-output/pop_by_zip.csv")
 
 all_access <- full_join(bup_prac_access, meth_nal_access) %>% 
   full_join(dialysis_access, by = c("ZCTA5CE10" = "ZCTA5CE")) %>%
@@ -24,4 +24,7 @@ all_access <- full_join(bup_prac_access, meth_nal_access) %>%
 all_access_us <- clip_to_continental_us(all_access) %>% 
   st_transform(102003)
 
-st_write(all_access_us, "data-output/min_dists_all.csv")
+
+# Save all access metrics for later mapping / summary stats
+st_write(all_access_us, "data-output/min_dists_all.shp", delete_dsn = TRUE)
+st_write(all_access_us, "data-output/min_dists_all.csv", delete_dsn = TRUE)
