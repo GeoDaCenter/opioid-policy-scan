@@ -38,6 +38,7 @@ travel_times <- read_csv("data-output/access_results_combined/access_times.csv")
   mutate(X = as.character(X))
 
 travel_rurality <- full_join(travel_times, urban_rural_zips, by = c("X" = "ZCTA5CE10")) %>% 
+  # why so many NAs? not continental?
   drop_na(rurality) %>% 
   rename(bup = time_to_nearest_buprenorphine,
          meth = time_to_nearest_methadone,
@@ -45,6 +46,7 @@ travel_rurality <- full_join(travel_times, urban_rural_zips, by = c("X" = "ZCTA5
 
 travel_rurality %>% 
   group_by(rurality) %>%
+  # vaguely concerning there are so many NAs
   summarize(bup_dist = mean(bup, na.rm = TRUE),
             bup_sd = sd(bup, na.rm = TRUE),
             meth_dist = mean(meth, na.rm = TRUE),
