@@ -9319,7 +9319,7 @@ Year,Page,Center_name,Street_address,City,State,Postal_code,Phone,Keys
 2007,602,Toxicology Associates Inc,5233 IH 37 Suite C-17,Corpus Christi,TX,78408,(361) 882-2064Methadone Clients Only,SA TX MM OP SF SP F28
 2007,602,Helping Open Peoples Eyes Inc (HOPE),101 North Beaton Street Suite 200,Corsicana,TX,75110,(903) 872-8101Intake: (817) 558-8807,SA TX OP SF
 2007,602,Anti-Aging and Longevity Center of Texas PA,8021 E R L ˝ornton Freeway Suite A,Dallas,TX,75228,(214) 328-4848Intake: (214) 727-6390,SA TX DT MM BU OP SF
-2007,602,4Baylor University Medical Center Baylor Center for Addictive Diseases,3500 Gaston Avenue Truett Hospital,Dallas,TX,75246,(214) 820-7676Intake: (800) 828-8880 Hotlines: (214) 820-7676 (800) 828-8880,MH-SA TX DT HI OP PH SF MC PI
+2007,602,Baylor University Medical Center Baylor Center for Addictive Diseases,3500 Gaston Avenue Truett Hospital,Dallas,TX,75246,(214) 820-7676Intake: (800) 828-8880 Hotlines: (214) 820-7676 (800) 828-8880,MH-SA TX DT HI OP PH SF MC PI
 2007,603,Metro Treatment of Texas LP Dallas County Treatment Center,123 East Colorado Boulevard,Dallas,TX,75203,(214) 946-5540Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF
 2007,603,New Day Counseling Inc,10500 Steppington Drive Suite 270,Dallas,TX,75230,(214) 265-7474Intake: (972) 436-4565,SA TX OP AD SF MD SI PI AR AH SP
 2007,603,Nexus Recovery Center Inc Nexus Outreach Center,4525 Lemmon Avenue Suite 201,Dallas,TX,75219,(214) 321-0156x2500Intake: (214) 321-0156x3118,SA TX OP WN SF PI AR SS
@@ -9340,15 +9340,15 @@ Year,Page,Center_name,Street_address,City,State,Postal_code,Phone,Keys
 2007,604,Bay Area Recovery Center,4316 Washington Street,Dickinson,TX,77539,(281) 337-1343,SA TX DT RS RL MN SF PI SP
 2007,604,Omega/Alpha House Inc Omega/Alpha House Womens Center,1122 Farm Market Road FM 517,Dickinson,TX,77539,(281) 339-3348,SA TX RS RL OP PH CO HV PW WN CJ SF PA AH SP
 2007,604,Sandstone Healthcare Inc Elsa Sail Altern Center Corner of Highway,107 and Mile 4,Edcouch,TX,78538,(956) 797-9924,SA TX OP PH AD SF MC SI PI AR SS PA AH SP
-2007,604,Judith Za˚rini Womens Center,1409 South 9th Street,Edinburg,TX,78539,(956) 380-2824Intake: (956) 289-8169,MH-SA TX RS RL OP CO PW WN SF MD AR AH SP
-2007,604,Narcotic Education League,1409 South 9th Street,Edinburg,TX,78539,(956) 289-8169Methadone Clients Only,MH-SA TX MM OP SF AR PA AH SP
+2007,604,AAMA Judith Zaffirini Womens Center,1409 South 9th Street,Edinburg,TX,78539,(956) 380-2824Intake: (956) 289-8169,MH-SA TX RS RL OP CO PW WN SF MD AR AH SP
+2007,604,AAMA Narcotic Education League,1409 South 9th Street,Edinburg,TX,78539,(956) 289-8169Methadone Clients Only,MH-SA TX MM OP SF AR PA AH SP
 2007,604,Area Management Information Systems Treatment Alcohol/Drug/Amistad,1409 South 9th Street,Edinburg,TX,78539,(956) 380-2824Intake: (956) 289-8169,MH-SA TX RS RL CO MN SF PI AR AH SP
 2007,604,Assoc for the Adv of Mexican Amer Inc (AAMA)/Ganadores,1409 South 9th Street,Edinburg,TX,78539,(956) 380-2824Intake: (956) 289-8169,MH-SA TX RS RL OP AD PW SF MD SI AR SP
 2007,604,New Beginnings Behavioral Health Services,1215 Expressway 281,Edinburg,TX,78539,(956) 381-1189Hotline: (956) 381-1189,SA TX OP AD CJ SF MD MC SI PI MI SP
 2007,604,South Texas Behavioral Health Center,2102 West Trenton Street,Edinburg,TX,78539,(956) 388-1300,MH TX DT HI AD CO SE PW SF MD MC SI PI MI SP
 2007,604,Aliviane NO/AD Inc,2007 Texas Avenue,El Paso,TX,79901,(915) 775-2501Hotlines: (915) 782-4014 (915) 858-6208,SA TX OP AD CJ SF MD SI SS PA AH SP
 2007,604,Aliviane NO/AD Inc Aliviane Family Recovery Center,7722 North Loop Drive,El Paso,TX,79915,(915) 782-4014Hotline: (915) 782-4014,SA TX RS RL CO PW WN BC SF MD SI PI AR SS PA
-2007,604,of Denison,2301 South Austin Avenue Unit 3,Denison,TX,75020,(903) 464-0717Methadone Clients Only,SA TX DT MM DM OP SF AH
+2007,604,HCI of Denison,2301 South Austin Avenue Unit 3,Denison,TX,75020,(903) 464-0717Methadone Clients Only,SA TX DT MM DM OP SF AH
 2007,604,Counseling PA Denton Recovery Options,1512 Scripture Street,Denton,TX,76201,(940) 382-5328x25Intake: (940) 382-5328x22,MH-SA TX OP MN CJ SF PI MI
 2007,604,Denton Treatment Services Opioid Treatment,621 Londonderry Lane,Denton,TX,76205,(940) 483-0644Methadone Clients Only,SA TX DT MM DM OP PW SF
 2007,604,Cedars Hospital,2000 North Old Hickory Trail,Desoto,TX,75115,(972) 298-7323x304,MH-SA TX DT HI OP PH CO SE SF MD MC SI PI MI
@@ -9513,4 +9513,1011 @@ Year,Page,Center_name,Street_address,City,State,Postal_code,Phone,Keys
 2007,613,Managed Care Center Inc Residential Female Program,1614 Avenue K,Lubbock,TX,79401,(806) 763-7633Hotline: (806) 797-8003,SA TX HH RS RL PW WN SF PI MI AR SS PA SP
 2007,613,Managed Care Center Inc Specialized Female Outpatient,1611 Avenue O,Lubbock,TX,79401,(806) 744-2727Intake: (806) 780-8300 Hotline: (806) 797-8003,TX OP CO PW WN SF PI AR SS PA AH
 2007,613,Plainview Serenity Center Inc,6824 Wine Avenue,Lubbock,TX,79401,(806) 293-9722,SA TX OP PW WN SF SI PI SS AH SP
- , , , , , , , ,
+2007,614,Genesis House Girls Unit,420 North Ward Street,Pampa,TX,79065,(806) 665-7123,SA TX RL AD CO CJ AR
+2007,614,Northeast Texas Council on Alcohol and Drug Abuse (COADA),1920 Clarksville Street,Paris,TX,75460,(903) 737-4394,SA TX OP AD MD SI SS
+2007,614,Northeast Texas Council on Alcohol and Drug Abuse (COADA)/Paris Facility,25 1st Street NW,Paris,TX,75460,(903) 737-4394Intake: (800) 221-2992,SA TX DT OP AD CO CJ SF MD MC SI PI MI SS AH
+2007,614,All About Recovery,1710 Strawberry Street Suite 300,Pasadena,TX,77502,(713) 920-2198Intake: (713) 697-6820,TX OP DU CJ SF AR SS PA SP
+2007,614,Houston Substance Abuse Clinic,5825 Spencer Highway Suite B,Pasadena,TX,77505,(281) 487-3934Methadone Clients Only,SA TX MM OP PW SF AH SP F2
+2007,614,Sandstone Healthcare Inc,200 East Expressway 83,Pharr,TX,78577,(512) 844-8730,SA TX OP AD WN SF MC SI PI AR SS PA AH SP
+2007,614,Sandstone Healthcare Inc,204 South Casa Street,Pharr,TX,78577,(956) 787-9924,SA TX RL MN SF MC SI PI AR SS PA AH SP
+2007,614,Central Plains Center for MH/MR and SA Reed Adolescent Center,404 Floydada Street,Plainview,TX,79072,(806) 291-4422,SA TX RS RL AD CO CJ SF SI PI MI AR SS SP
+2007,614,Plainview Serenity Center Inc,806 El Paso Street,Plainview,TX,79072,(806) 293-9722Intake: (806) 291-9444,MH-SA TX HH RS RL CO BC MN SF PI AR SS AH SP
+2007,614,Plainview Serenity Center Inc Outpatient Services,803 Broadway Street,Plainview,TX,79072,(806) 293-9722,SA TX OP WN BC SF PI AR SS AH SP
+2007,614,Clover House Inc Mens Clover House TTC,300 North Jackson Street,Odessa,TX,79761,(432) 580-8175,SA TX HH RL MN CJ SF PI MI AH SP
+2007,614,Permian Basin Community Centers Turning Point,2000 Maurice Road,Odessa,TX,79763,(432) 580-2654,SA TX DT RS RL SF SS
+2007,614,Sandstone Healthcare Inc Ector County Juvenile Probation,1401 East Yukon Street,Odessa,TX,79762,(512) 346-9800,SA TX OP AD SF MC SI PI AR SS PA AH SP
+2007,614,West Texas Counseling and Rehabilitation Program of Odessa,515 North Golder Avenue,Odessa,TX,79761,(432) 335-8141Intake: (866) 286-9827 Methadone Clients Only,SA TX DT MM DM OP SF PI
+2007,614,South East Texas Management Network Spindletop MH/MR Services/Tejas,4303 North Tejas Parkway,Orange,TX,77632,(409) 883-2973Intake: (409) 839-1044,MH TX OP CJ SF PI SS PA AH
+2007,614,Genesis House Boys Unit,600 West Browning Street,Pampa,TX,79065,(806) 665-7123,SA TX RL AD CO CJ SF AR
+2007,615,First Step Counseling Center,900 East Park Boulevard Suite 153,Plano,TX,75074,(972) 633-5544Intakes: (214) 942-8808x232 (214) 942- 8808x222,SA TX OP CO SF MD MC SI PI AH SP
+2007,615,Green Oaks Behavior Healthcare,4001 West 15th Street Suite 465,Plano,TX,75093,(972) 985-1599,MH-SA TX OP SF PI MI
+2007,615,Life Management Resources,3253 Independence Parkway,Plano,TX,75075,(972) 985-7565,MH-SA TX OP CO PW DU CJ SF MD SI PI SS PA SP F25
+2007,615,Recovery Healthcare Corporation Plano,3400 Silverstone Street Suite 103,Plano,TX,75023,(469) 467-9933,MH-SA TX OP DU CJ SF MD PI AR
+2007,615,West Texas Counseling and Rehabilitation Program of Plano Inc,1006 20th Street,Plano,TX,75074,(972) 423-8532Intake: (866) 286-9827 Methadone Clients Only,MH TX DT MM DM OP SF SI PI PA
+2007,615,Blues Management Inc DBA DAPA Family Recovery Program,23472 Sorters Road,Porter,TX,77365,(832) 443-5021Intake: (832) 452-7820 Hotline: (800) 828-3272,SA TX OP CO CJ SF MD MC PI AR SS SP
+2007,615,Richardson Regional Medical Center Mental Health Services,401 West Campbell Road,Richardson,TX,75080,(972) 498-8636Intake: (972) 498-8500,MH TX DT HI OP PH CO SF MD MC PI MI
+2007,615,Turning Point Inc Counseling Center,1701 North Greenville Avenue Suite 500,Richardson,TX,75081,(972) 234-8636,MH-SA TX DT OP AD CO DU SF PI
+2007,615,South Texas Council on Alc/Drug Abuse Outpatient Level IV,1665 East Benito Street,Rio Grande City,TX,78582,(956) 488-0342Intake: (956) 488-9804 Hotline: (800) 487-7752,SA TX OP CO WN SF MD PI SS PA SP
+2007,615,Cornerstone Counseling Inc,2107 North Mays Street,Round Rock,TX,78664,(512) 828-0800,SA TX OP WN MN SF SS
+2007,615,Sandstone Healthcare Inc,206 Laural Drive Suite A,Round Rock,TX,78664,(512) 346-9800,SA TX RL OP PH AD SF MC SI PI AR SS PA AH SP
+2007,615,Sandstone Healthcare Inc Round Rock Opportunity School,931 Luther Peterson Place,Round Rock,TX,78664,(512) 346-9800,SA TX OP PH SF MC SI PI AR SS PA AH SP
+2007,615,Alcohol/Drug Abuse Council Concho Valley/Outpatient,3553 Houston Harte Street,San Angelo,TX,76901,(325) 224-3481Intake: (800) 880-9641 Hotline: (800) 880-9641,SA TX OP SF SS PA
+2007,615,Alcohol/Drug Abuse Council Concho Valley/Saras House,401 West Twohig Street,San Angelo,TX,76902,(325) 224-3481Intake: (800) 880-9641 Hotline: (800) 880-9641,SA TX RS RL PW WN BC SF SS PA
+2007,615,Alcohol/Drug Abuse Council Concho Valley/Williams House,134 West College Avenue,San Angelo,TX,76903,(325) 224-3481Intake: (800) 880-9641,SA TX RS RL MN SF AR SS PA
+2007,616,Cantu Counseling Hector Cantu,2406 West Avenue North,San Angelo,TX,76904,(325) 653-8226,SA TX OP AD CO DU CJ SF MD SI PI MI SP
+2007,616,River Crest Hospital,1636 Hunters Glen Street,San Angelo,TX,76901,(800) 777-5722Intake: (325) 949-5722 Hotlines: (800) 777-5722 (325) 949-5722,MH-SA TX DT HI OP PH AD CO SF MD MC SI PI MI
+2007,616,West Texas Counseling and Rehabilitation Program of San Angelo,601 South Irving Street Suite 4,San Angelo,TX,76903,(325) 653-3683Intake: (866) 286-9827 Methadone Clients Only,SA TX DT MM DM OP SF PI
+2007,616,Alamo Area Resource Center Inc (AARC) Positive Recovery,527 North Leona Street,San Antonio,TX,78207,(210) 358-9995,TX OP HV GL SF SS PA SP
+2007,616,Alamo City Treatment Services,12042 Blanco Road Suite 101,San Antonio,TX,78216,(210) 541-8400,SA TX OP AD CO WN MN DU CJ SF MD SI PI SS SP
+2007,616,Alcoholic Rehabilitation Center of Bexar Cnty Texas Inc/Residential Servs,10290 Southton Road,San Antonio,TX,78223,(210) 633-0201Intake: (210) 734-6362,SA TX RS RL OP MN SF AR PA
+2007,616,Alpha Home Inc,300 East Mulberry Avenue,San Antonio,TX,78212,(210) 735-3822x203Intake: (210) 223-4284,SA TX RL PW WN SF MD AR PA AH
+2007,616,Alpha Home Inc Residential/Outpatient,814 Camden Street,San Antonio,TX,78215,(210) 223-4284,SA TX RL OP PW WN SF MD AR PA AH
+2007,616,Assoc for the Adv of Mexican Amer Inc (AAMA)/Selena Outpatient,235 East Mitchell Street,San Antonio,TX,78210,(210) 270-8575,SA TX OP AD SP
+2007,616,Assoc for the Adv of Mexican Amer Inc (AAMA)/Selena Outpatient,434 South Main Street Suite 217,San Antonio,TX,78204,(210) 270-8575,MH-SA TX OP AD CO SF SI PI AR PA SP
+2007,616,Assoc for the Adv of Mexican Amer Inc (AAMA)/Selena Youth Residential Trt,248 Post Avenue,San Antonio,TX,78215,(210) 223-4004,MH-SA TX RS RL OP AD CO SF SI AR PA AH SP
+2007,616,Center for Healthcare Services Central Outpatient Unit,3031 IH 10 West,San Antonio,TX,78201,(210) 731-1320,SA TX MM OP CO PW WN CJ SF AR AH SP
+2007,616,Elite Counseling,410 South Main Street Suite 201,San Antonio,TX,78204,(210) 822-9493,SA TX OP AD HV WN DU CJ SF AR SS PA SP
+2007,616,Lackland AFB Alcohol and Drug Abuse Prevention and Treatment Program,59 MDOS/MMCSA Lackland AFB Wilford Hall Medical Ctr,San Antonio,TX,78236,(210) 292-4452,MH-SA TX DT HI OP PH DU MD MC MI
+2007,616,Laurel Ridge Treatment Center,17720 Corporate Woods Drive,San Antonio,TX,78259,(210) 491-9400x3512Intakes: (210) 491-9400x3591 (210) 491- 9400x2022,MH-SA TX DT HI RS RL OP PH AD CO SF MD MC SI PI MI AH SP
+2007,616,Methodist Specialty/Transplant Hosp Inpatient Unit,8026 Floyd Curl Drive,San Antonio,TX,78229,(210) 575-8110,SA TX DT HI OP DU SF MD MC SI PI MI
+2007,616,Metro Treatment of Texas LP DBA San Antonio Treatment Center,3701 West Commerce Street,San Antonio,TX,78207,(210) 434-0531Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF
+2007,616,Patrician Movement Site,1/Residential 222 East Mitchell Street Adult Program,San Antonio,TX,78210,(210) 532-3126,SA TX RS RL CO HV PW WN MN SF MD PI SS AH SP
+2007,617,Patrician Movement Site,2/Outpatient Treatment Program 1249 South Saint Mary™s Street,San Antonio,TX,78210,(210) 532-3126Intake: (210) 534-4029,MH-SA TX OP SF MD PI SS SP
+2007,617,Patrician Movement Site,3/Outpatient Treatment Program 215 Claudia Street,San Antonio,TX,78210,(210) 533-0226,SA TX OP SF MD PI SS SP
+2007,617,River City Rehabilitation Center Inc,680 Stonewall Street,San Antonio,TX,78214,(210) 924-7547,SA TX MM OP CO HV GL SE PW WN MN DU CJ SF SP
+2007,617,San Antonio Substance Abuse Clinic,1701 North St Mary Street,San Antonio,TX,78205,(201) 299-1614Methadone Clients Only,SA TX DT MM DM OP PW SF AH SP
+2007,617,South Texas Outpatient Program For Substance Abuse (STOP SA LLC),3780 NW Loop 410,San Antonio,TX,78229,(210) 736-4405Methadone and Buprenorphine Clients Only,SA TX MM BU OP SF SP
+2007,617,Tejas Recovery and Counseling Services,7418 Military Drive West,San Antonio,TX,78227,(210) 673-8111,SA TX DT MM DM OP PW MN CJ SF PI AR SS SP
+2007,617,Volunteers of America Texas Inc LIGHT San Antonio,1424 Hemphill Street,San Antonio,TX,78240,(210) 558-0731,SA TX RS RL OP PH PW WN BC SF AR SS
+2007,617,Sandstone Healthcare Inc,102 Kilgore Drive,San Benito,TX,78586,(956) 787-9924,SA TX OP PH AD SF MC SI PI AR SS PA AH SP
+2007,617,Sandstone Healthcare Inc,2310 West Highway 77 JJAEP,San Benito,TX,78586,(956) 787-9924,SA TX OP PH AD SF MC SI PI AR SS PA AH SP
+2007,617,Hays Caldwell Council on Alcohol and Drug Abuse,1901 Dutton Drive Suite E,San Marcos,TX,78666,(512) 396-7695Intake: (512) 396-7695x201,SA TX OP AD CJ SF MD AR SS PA SP
+2007,617,River City Rehabilitation Center Seguin,1425 East Court Street,Seguin,TX,78155,(830) 379-1046Intake: (866) 379-1046,SA TX MM OP DU SF SP
+2007,617,Alcoholic Services of Texoma Inc House of Hope,2407 Texoma Parkway,Sherman,TX,75090,(903) 868-2123,SA TX OP CJ SF PI AR
+2007,617,Texoma Medical Center TMC Behavioral Health Center,2601 Cornerstone Drive,Sherman,TX,75092,(903) 416-3000x3010Intake: (903) 416-3000,MH DT HI CO SE PW WN MN SF MD MC PI MI
+2007,617,South East Texas Management Network Spindletop MH/MR Services,839 Highway 96 South,Silsbee,TX,77656,(409) 880-4600Intake: (409) 880-4646,MH TX OP CJ SF PI AR SS PA AH
+2007,617,Fort Bend Regional Council on Substance Abuse Inc,10435 Greenbough Street Suite 250,Sta ord,TX,77477,(281) 207-2400,SA TX OP DU CJ SF AR SS PA
+2007,617,S Behavioral Care Inc,10435 Greenbough Street Suite 250,Sta ord,TX,77477,(281) 207-2424,SA TX OP AD SF SI PI
+2007,617,Wholistic Counseling Services Inc,2503 South Main Street Suite N,Sta ord,TX,77477,(281) 403-0838Intake: (713) 747-6416,MH-SA TX OP SF MD PI AR
+2007,617,H/MR of Tarrant County Pecan Valley MHMR,906 Lingleville Highway,Stephenville,TX,76401,(254) 968-4181,MH TX OP PI SS
+2007,617,Council on Substance Abuse,239 South Virginia Street P.O. Box 976,Stephenville,TX,76401,(254) 965-5515Intake: (800) 375-1395,SA TX OP PW WN CJ SF MD SI PI SS PA
+2007,618,XASSummer Sky Inc,1100 North McCart Street,Stephenville,TX,76401,(888) 857-8857Intake: (800) 588-2907x5015 Hotlines: (888) 857-8857 (800) 588- 2907x5015,SA TX DT HI RS RL OP PH AD CO SE WN MN SF PI
+2007,618,Northeast Texas Council on Alcohol and Drug Abuse (COADA),923 Main Street,Sulphur Springs,TX,75482,(903) 439-0246,SA TX OP AD CO CJ SF MD MC SI PI MI
+2007,618,Shoreline Inc,1220 Gregory Street,Taˇ,TX,78390,(361) 643-6643Intakes: (800) 949-2141 (800) 628-3265 Hotlines: (800) 949-2141 (800) 628-3265,SA TX DT RS RL OP PH AD CO HV GL PW CJ SF SI PI MI SS AH SP
+2007,618,Central TX Veterans Healthcare System Mental Health and Behavioral Medicine,1901 South 1st Street,Temple,TX,76504,(254) 743-2866,SA TX DT HH RL OP PH CO PI MI
+2007,618,Central Texas CADA,5100 Midway Drive Suite 200-A,Temple,TX,76502,(254) 773-3722Intakes: (254) 690-4455 (800) 544-3254 Hotline: (866) 328-2232,SA TX OP AD CO PW DU SF MD SI SS PA AH
+2007,618,Christian Farms Treehouse Inc Treehouse Womens Center,3804 Riverside Trail,Temple,TX,76502,(254) 933-9400,SA TX HH RS RL WN BC SF PI AR SS
+2007,618,Scott and White Alcohol and Drug Dependence Treatment Program,2401 South 31st Street,Temple,TX,76508,(254) 724-2751Intake: (254) 724-2585,SA TX DT HI OP SF MC PI MI
+2007,618,West Texas Counseling and Rehabilitation Program of Temple,2610 Exchange Place,Temple,TX,76504,(254) 742-0490Intake: (866) 286-9827 Methadone Clients Only,SA TX DT MM DM OP SF PI
+2007,618,Hazel Street Recovery Center,1217 Hazel Street,Texarkana,TX,75501,(903) 791-0385Intake: (405) 848-9393,SA TX RS RL AD CO SF SI PI
+2007,618,Northeast Texas MH/MR Center First Step/Texarkana COPSD Program,1-C Oaklawn Center,Texarkana,TX,75505,(903) 831-7585Hotline: (903) 831-7585,MH-SA TX OP CO MD AH
+2007,618,Sabine Valley Center/˝e Beginning,601 Pine Street,Texarkana,TX,75501,(903) 838-9381,SA TX DT RS OP SF PI MI SS
+2007,618,Summerhill Counseling Center,4091 Summerhill Square,Texarkana,TX,75503,(903) 792-8887Hotline: (903) 792-8887,MH-SA TX OP CO SF MD PI MI
+2007,618,Gulf Coast Center Mainland Recovery Program,7510 FM 1765,Texas City,TX,77591,(409) 944-4440,SA TX OP WN DU SF MD MC SI PI MI AR SS PA
+2007,618,Azleway Boys Ranch,15892 County Road 26,Tyler,TX,75707,(903) 566-8444,SA TX OP AD CO CJ SF MD SI PI SS PA
+2007,618,East Texas Medical Center Behavioral Health Center,4101 University Boulevard,Tyler,TX,75701,(903) 266-2233Intake: (903) 266-2200,MH TX DT HI OP PH CO SF MD MC SI PI MI
+2007,618,Methadone Clinic of East Texas,536 South Oakland Street,Tyler,TX,75702,(903) 526-4055Intake: (903) 526-4056 Methadone Clients Only,SA TX MM OP PW WN MN SF
+2007,618,Sabine Valley Center/˝e Beginning,3320 Troop Highway Suite 285,Tyler,TX,75702,(903) 581-9472,SA TX OP CJ SF PI MI SS PA
+2007,618,Special Health Resources of East Texas,1308 Clinic Drive,Tyler,TX,75701,(903) 597-7558,SA TX OP AD HV GL CJ SF MD SI PI MI SS PA SP
+2007,619,Aliviane NO/AD Inc Van Horn Outpatient Clinic,1801 West Broadway,Van Horn,TX,79855,(432) 283-9133,MH-SA TX OP SF MD MC SI PI MI SS PA
+2007,619,North Texas State Hospital Vernon Campus Adolescent Forensic Program,4730 College Drive,Vernon,TX,76385,(940) 552-9901x4601Intakes: (940) 552-4604 (940) 552-4061,MH TX HI AD CO SF MD MC SI PI MI SS AH
+2007,619,Best Recovery Healthcare Inc,1708 North Laurent Street,Victoria,TX,77901,(361) 572-9122Methadone Clients Only,SA TX DT MM DM OP SF SP
+2007,619,Treatment Associates,107 Cozzi Circle,Victoria,TX,77901,(361) 572-3006Intake: (361) 578-7182 Hotline: (361) 572-3006,SA TX RS RL OP SF PI MI AH
+2007,619,Brentwood New Beginnings,2311 Austin Avenue,Waco,TX,76701,(254) 755-6411Methadone Clients Only,SA TX MM OP AD PW SF AH
+2007,619,Unit Dual Diagnosis Program,2505 Washington Avenue,Waco,TX,76703,(254) 753-3626,SA TX OP CO PW WN MN CJ SF PI MI AR PA AH
+2007,619,Freeman Center Doris Goodrich Jones House,326 North 14th Street,Waco,TX,76701,(254) 753-3625x232Intake: (254) 753-3625,SA TX RL CO PW WN BC CJ SF PI SS PA AH
+2007,619,Freeman Center Mens Residential,1401 Columbus Avenue,Waco,TX,76703,(254) 753-3625x224Intake: (254) 753-3625x204,SA TX HH RS RL CO MN CJ SF PI AR SS PA AH SP
+2007,619,Freeman Center Mens/TDCJ Prog/TX Dept of Crim Justice,1401 Columbus Avenue,Waco,TX,76701,(254) 753-3625x204Intake: (254) 753-3625,SA TX RL CO MN CJ SF AH
+2007,619,Freeman Center Outpatient Unit,2505 Washington Avenue,Waco,TX,76701,(254) 753-3653,SA TX OP AD CO CJ SF MD SI PI MI AR AH
+2007,619,Freeman Center Womens Residential,1425 Columbus Avenue,Waco,TX,76703,(254) 753-3625x224Intake: (254) 753-3625x204,SA TX RS RL WN SF PI AR SS AH SP
+2007,619,Freeman Center Youth Outpatient Services,2505 Washington Avenue,Waco,TX,76701,(254) 753-3653,SA TX OP AD CO PW WN MN CJ SF MD SI PI MI AR AH
+2007,619,Lake Shore Ctr for Psychological Servs Better Way Chem Dep Treatment Program,4555 Lake Shore Drive,Waco,TX,76710,(254) 776-0400x25,MH TX OP SF PI
+2007,619,Manna House Faith Based Treatment,926 North 14th Street,Waco,TX,76707,(254) 757-2233,SA TX RL MN PA AH
+2007,619,H/MR of Tarrant County Pecan Valley MH/MR,1715 Santa Fe Drive,Weatherford,TX,76086,(817) 594-3860,MH TX OP CO SF MD MC SI PI MI AR SS PA
+2007,619,Council on Substance Abuse,802 Fort Worth Highway Suite 105,Weatherford,TX,76086,(817) 599-7510Intake: (800) 375-1395,SA TX OP AD CO PW WN CJ SF MD SI PI SS PA
+2007,619,Bay Area Recovery Center Outpatient,100 East Nasa Road 1 Suite 403,Webster,TX,77598,(281) 526-0153,SA TX DT OP PH SF PI SS SP
+2007,619,Watershed Treatment Prog at Clear Lake,20 Professional Park Drive,Webster,TX,77598,(800) 711-6402Intake: (866) 891-5212 Hotlines: (800) 711-6402 (866) 891-5212,SA TX DT DM BU RS RL CO WN MN SF PI SP
+2007,620,Sandstone Healthcare Inc,13 East Pike Street Suite A,Weslaco,TX,78596,(956) 787-9924,SA TX OP SF MC SI PI AR SS PA AH SP
+2007,620,Weslaco Alternative School,103 South Iowa Street,Weslaco,TX,78596,(956) 969-6916,SA TX OP AD CO HV GL PW CJ MD SI SS PA SP
+2007,620,Sandstone Healthcare Inc,1010 North Rusk Street,Wharton,TX,77488,(979) 244-0800,SA TX OP PH AD WN MN SF MC SI PI AR SS PA AH SP
+2007,620,Helen Farabee Regional MH/MR Centers,500 Broad Street,Wichita Falls,TX,76301,(940) 397-3300Intakes: (940) 397-3379 (940) 397-3353 Hotline: (800) 621-8504,MH TX OP AD CJ SF MD SI PI SS PA
+2007,620,Helen Farabee Regional MH/MR Centers,600 Scott Street,Wichita Falls,TX,76301,(940) 397-3300,SA TX OP SF MD MC PI SS PA AH
+2007,620,Red River Hospital Chemical Dependency Unit,1505 8th Street,Wichita Falls,TX,76301,(940) 322-3171Intakes: (940) 322-3171x407 (800) 234- 5809x407Hotlines: (940) 322-3171 (800) 234-5809,MH-SA TX DT HI RS OP PH CO SE WN MN SF MC PI MI AH
+2007,620,Red River Recovery Center Ruelas Management Services,2501 Taylor Street,Wichita Falls,TX,76309,(940) 761-3034Intake: (866) 937-7772,SA TX RS OP PH SF SI PI MI
+2007,620,Council on Substance Abuse,918 Lamar Street,Wichita Falls,TX,76301,(940) 716-9980,SA TX OP AD WN SF MD MC PI MI
+2007,620,Serenity Foundation of Texas/Serenity Adult Outpatient Program,3100 Seymour Highway 5th Street Suite 111,Wichita Falls,TX,76301,(940) 767-0423,SA TX OP WN MN CJ SF PI PA
+2007,620,Texoma Treatment Clinic,1615 Kemp Street,Wichita Falls,TX,76309,(940) 322-9355Methadone Clients Only,SA TX DT MM DM OP PW SF AH
+2007,620,DePaul Center Chemical Dependency Program,301 Londonderry Street,Woodway,TX,76712,(254) 776-5970,MH-SA TX DT HI OP SF MC PI
+2007,620,Serving Children/Adolescents In Need (SCAN) Inc/Stand Outpatient Program,906 Jackson Street,Zapata,TX,78076,(956) 765-3555,SA TX OP AD MD PA SP
+2007,620,South Texas Council on Alc/Drug Abuse,1902 Jackson Street,Zapata,TX,78076,(956) 765-1075,SA TX OP SF PI MI SS PA SP
+2007,621,San Juan Counseling,356 South Main Street,Blanding,UT,84511,(435) 678-2992,MH TX OP PH AD BC DU SF MD MC SI PI MI SP N23
+2007,621,Bountiful Treatment Center,146 West 300 South Street Suite 100,Bountiful,UT,84010,(801) 292-2318Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF
+2007,621,Bear River Health Department Substance Abuse Treatment,245 West 1100 South Street,Brigham City,UT,84302,(435) 734-1321Hotline: (435) 730-2793,SA TX OP AD PW WN DU CJ SF MD MC SI PI MI SS AH SP
+2007,621,Four Corners Community Behavioral Health Inc/Emery County O˚ce,45 East 100 South Street,Castle Dale,UT,84513,(435) 381-2432,MH-SA TX OP AD DU CJ SF MD MC SI MI SS
+2007,621,Intermountain Specialized Abuse Treatment Center,189 South State Street Suite 160,Clear˙eld,UT,84015,(801) 399-4002,MH-SA TX OP DU CJ SF SI PI MI SS
+2007,621,Positive Adjustments Corporation,466 North Main Street Suite 207,Clear˙eld,UT,84015,(801) 776-4628Hotline: (801) 466-4484,SA TX OP CJ SF PI
+2007,621,Central Utah Counseling Center,51 North Center Street P.O . Box 357,Delta,UT,84624,(435) 864-3073Intake: (888) 343-3073,MH-SA TX OP DU SF MD MC SI PI MI SS AH SP
+2007,621,Youth Care of Utah Inc,12595 South Minuteman Drive,Draper,UT,84020,(801) 572-6989,MH-SA TX HI RL OP AD CO HV GL PW SF PI
+2007,621,Northeastern Counseling Center,28 East 200 South Street,Duchesne,UT,84021,(435) 738-5512Intake: (435) 725-6300,MH-SA TX OP SF MD MC SI PI
+2007,621,Central Utah Counseling Center,390 West 100 North Street,Ephraim,UT,84627,(435) 283-4065Intake: (877) 283-4065,MH-SA TX OP DU SF MD MC SI PI MI SS AH SP
+2007,621,Central Utah Counseling Center,65 West Center Street,Fillmore,UT,84631,(435) 743-5121,MH-SA TX OP DU CJ SF MD MC SI PI MI SS AH SP
+2007,621,Ute Indian Tribe Substance Abuse Treatment Program,550 South 6777 East Street,Fort Duchesne,UT,84026,(435) 722-3234,SA TX OP AD CO
+2007,621,Heber Valley Counseling,55 South 500 East Street,Heber City,UT,84032,(435) 654-3003,MH-SA TX OP AD DU CJ SF MD PI
+2007,621,75 Medical Group/SGOHS Substance Abuse Prevention and Trt,7309 11th Street Building 545,Hill AFB,UT,84056,(801) 777-7909,MH-SA TX OP DU PI MI
+2007,621,Sundance Behavioral Resources,459 North 300 West Suite 9,Kaysville,UT,84037,(888) 502-6170Intake: (801) 264-9522,MH-SA TX OP WN SF PI
+2007,621,Sorensons Ranch School Inc,410 North 100 East Street,Koosharem,UT,84744,(435) 638-7318,MH-SA TX RL AD CO SF MD PI
+2007,621,Davis Behavioral Health Inc Addictions Treatment Unit,2250 North 1700 West Street Building E,Layton,UT,84041,(801) 773-7060,SA TX RS RL OP PH PW WN MN DU SF MD MC SI PI MI SS SP
+2007,622,Davis Behavioral Health Inc Womens Recovery Center,2250 North 1700 West Street Building E,Layton,UT,84041,(801) 773-7060Intake: (801) 776-9228 Hotline: (801) 776-9228,SA TX DT RS RL OP PH CO PW WN DU SF MD MC PI MI SS
+2007,622,New Haven Inc,10998 West 7600 North,Lehi,UT,84043,(801) 768-2495,MH TX RL AD CO SF PI
+2007,622,Bear River Health Department Substance Abuse Treatment,655 East 1300 North Street,Logan,UT,84341,(435) 792-6420x421Intakes: (435) 792-6428 (435) 792-6420 Hotline: (435) 881-0358,SA TX OP AD CO PW WN DU CJ SF MD MC SI PI MI SS AH SP
+2007,622,Behavioral Mental Health Services DBA Comprehensive Treatment Clinic,40 West Cache Valley Boulevard Suite 10-A,Logan,UT,84341,(435) 787-2272,MH-SA TX OP SF SI PI MI SP
+2007,622,Metro Treatment of Utah LP Logan Metro Treatment Center,1300 North 200 East Suite 104,Logan,UT,84321,(435) 755-5916Intake: (435) 755-5915 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF
+2007,622,Highland Ridge Hospital,7309 South 180 West Street,Midvale,UT,84047,(801) 569-2153Hotline: (800) 574-4357,MH-SA TX DT HI OP PH CO SF PI
+2007,622,Four Corners Community Behavioral Hlth MOAB Clinical O˚ce,198 East Center Street,Moab,UT,84532,(435) 259-6131,MH-SA TX OP AD CJ SF MD MC SI SS
+2007,622,Central Utah Counseling Center,125 South State Street,Mount Pleasant,UT,84647,(435) 462-2421Intakes: (435) 462-2416 (800) 523-7412,MH TX RS OP SF MD MC SI PI MI SS AH SP
+2007,622,TR Inc,265 North State Street P.O. Box 31,Mount Pleasant,UT,84647,(435) 462-2781Intake: (435) 462-4454,SA TX DT HH RS RL SF AH
+2007,622,Central Utah Counseling Center,656 North Main Street,Nephi,UT,84648,(435) 623-1456Intake: (888) 859-3674,MH-SA TX OP DU SF MD MC SI PI MI SS AH SP
+2007,622,Blue Skies Recovery Center,727 24th Street,Ogden,UT,84401,(801) 392-8900Intake: (866) 229-1007 Hotlines: (801) 392-8900 (866) 229-1007,SA TX OP AD DU SF PI MI SS
+2007,622,Clinical Consultants,2351 Grants Avenue Suite 100,Ogden,UT,84401,(801) 621-8670,SA TX OP WN MN DU CJ SF PI MI
+2007,622,Metamorphosis Ogden Inc,2144 Washington Boulevard,Ogden,UT,84401,(801) 622-5272Methadone Clients Only,SA TX DT MM DM OP SF MD AH
+2007,622,New Horizons Education and Treatment,3003 Grant Avenue,Ogden,UT,84401,(801) 392-6958,MH-SA TX OP DU CJ SF PI MI
+2007,622,Ogden Regional Medical Center ACT,5475 South 500 East Street,Ogden,UT,84405,(801) 479-2250Intakes: (800) 215-2250 (801) 479-2270,SA TX DT HI OP PH CO SF MD MC PI MI
+2007,623,Professional Services Corporation,533 26th Street Suite 102,Ogden,UT,84401,(801) 621-3624,MH-SA TX OP AD DU SF MC PI MI SS SP
+2007,623,Salvation Army,2615 Grant Avenue,Ogden,UT,84401,(801) 621-3580x22,SA TX HH RL MN SF
+2007,623,Utah Alcoholism Foundation Serenity House,529 25th Street,Ogden,UT,84401,(801) 392-5971,MH-SA TX RS RL OP PH CO CJ SF PI SS AH
+2007,623,Weber Human Services,237 26th Street,Ogden,UT,84401,(801) 625-3700Hotline: (801) 625-3700,MH-SA TX DT RS OP AD CO DU CJ SF MD MC SI PI MI SS AH SP
+2007,623,Addiction and Psychological Services,224 North Orem Boulevard,Orem,UT,84057,(801) 222-0603Hotline: (801) 222-0603,MH-SA TX DT OP PH AD DU SF MC PI MI SP F30
+2007,623,Renaissance Ranch,4383 West Kilby Road,Park City,UT,84098,(435) 940-0406Intake: (877) 736-7262,SA TX RL OP CO MN CJ SF SI PI MI AH
+2007,623,Valley Mental Health Summit County Unit,1753 Sidewinder Drive,Park City,UT,84060,(435) 649-8347,MH-SA TX OP AD CO DU CJ SF MD MC SI PI MI SS SP
+2007,623,Mountain View Hospital New Vision Program,1000 East100 North,Payson,UT,84651,(801) 465-7315Intakes: (800) 939-2273 (800) 939,CARE MH-SA TX DT HI SF MD MC PI MI AH
+2007,623,Four Corners Community Behav Hlth Inc,575 East 100 South,Price,UT,84501,(435) 637-2358,MH-SA TX DT HI OP PH AD CO SE DU CJ SF MD MC SI PI MI SS SP
+2007,623,Intermountain Specialized Abuse Treatment Center,23 South Carbon Street Suite 10,Price,UT,84501,(435) 637-4852Hotline: (800) 303-9805,MH-SA TX OP PH AD CO WN MN CJ SF PI SP
+2007,623,Cirque Lodge Rural Route,3 Box A-10 3114 East Ida™s Road,Provo,UT,84604,(801) 222-9200,SA TX DT RS RL CO WN MN SF PI
+2007,623,Intermountain Specialized Abuse Treatment Center,1868 North 1120 West Street,Provo,UT,84604,(801) 373-0210,MH-SA TX OP AD CJ SF MC SI PI MI SS SP
+2007,623,Provo Canyon School,4501 North University Avenue,Provo,UT,84604,(801) 227-2000Intake: (801) 227-2100,MH-SA TX RL AD CO CJ SF MD MC PI
+2007,623,Utah Alcoholism Foundation House of Hope Provo,1726 South Buckley Lane,Provo,UT,84606,(801) 373-6562,SA TX RL WN BC SF MD PI
+2007,623,Cinnamon Hills Youth Crisis Center,770 East Saint George Boulevard,Saint George,UT,84770,(435) 674-0984,MH TX RL AD SF MD SI PI
+2007,623,Counseling Services of Southern UT LLC,561 East Tabernacle Road,Saint George,UT,84770,(435) 673-2822,MH-SA TX OP AD CO DU SF PI
+2007,624,Intermountain Specialized Abuse Treatment Center,321 North Mall Drive Suite A-101,Saint George,UT,84790,(435) 628-8075,TX OP AD DU CJ SF PI
+2007,624,Lighthouse Behavioral Health Services,1240 East 100 South Street Suite 18-B,Saint George,UT,84790,(435) 673-0050DWI/DUI Clients Only,MH-SA TX OP AD CO DU SF PI
+2007,624,Southwest Center Behavioral Health Services,474 West 200 North Street Suite 300,Saint George,UT,84770,(435) 634-5600Intakes: (435) 634-5602 (435) 634-5600x2 Hotline: (435) 634-5600,MH-SA TX DT HH RS RL OP PH AD CO DU SF MD MC SI PI MI SS
+2007,624,Asian Association of Utah,1588 South Major Street,Salt Lake City,UT,84115,(801) 467-6060Intake: (801) 467-6060x229,MH-SA TX OP AD DU SF MD SI SS SP F17 F43 F47 F92
+2007,624,Assessment Counseling and Educational Services (ACES),3808 Southwest Temple Street Suite 1-A,Salt Lake City,UT,84115,(801) 265-8000,TX OP CO PW WN MN DU SF MD PI SS SP
+2007,624,Catholic Community Services of Utah Saint Marys Home For Men,1206 West 200 South,Salt Lake City,UT,84104,(801) 328-1894,MH-SA TX RL OP CO HV BC MN CJ SF
+2007,624,Catholic Community Services of Utah Womens Treatment Program,250 East 300 South,Salt Lake City,UT,84111,(801) 977-9119,SA TX OP CO WN CJ SF MD MC SI PI SS
+2007,624,Cornerstone Counseling Center,660 South 200 East Suite 308,Salt Lake City,UT,84111,(801) 355-2846,MH-SA TX OP AD CO PW WN CJ SF MD MC PI MI SS PA
+2007,624,Criminal Justice Services,145 East 1300 South Street Suite 501,Salt Lake City,UT,84115,(801) 799-8471Intake: (801) 799-8466 Hotline: (801) 631-8623,SA TX OP PW WN DU CJ SF
+2007,624,First Step House,411 Grant Street,Salt Lake City,UT,84116,(801) 359-8862Intakes: (801) 359-8862x127 (801) 359- 8862x163,SA TX RS RL OP PH MN DU SF SS PA
+2007,624,Haven ˝e Helping Hand Association,974 East South Temple Street,Salt Lake City,UT,84102,(801) 533-0070,SA TX RL SF SS
+2007,624,Institute of Change,2760 South 1140 East Suite 10,Salt Lake City,UT,84106,(801) 487-0487,SA TX DT RS RL OP PH CO HV SF MC PI SP
+2007,624,Intermountain Center for Cognitive ˝erapy,111 East 5600 Street Suite 318,Salt Lake City,UT,84107,(801) 268-2887,MH-SA TX OP AD CO SE PW WN MN CJ SF MC PI MI
+2007,624,Intermountain Specialized Abuse Treatment Center,3809 Southwest Temple Street Suite 1-B,Salt Lake City,UT,84110,(801) 268-4454,MH-SA TX OP AD CO CJ SF MC PI MI SS SP
+2007,624,Journey At Willowcreek Family Tree Center LLC,8072 South Highland Drive,Salt Lake City,UT,84121,(801) 947-7664,MH-SA TX HH RS RL OP PH CO SF PI MI
+2007,624,Hospital Intermountain Healthcare Dayspring Program C Street and,8th Avenue,Salt Lake City,UT,84143,(801) 408-5580Hotlines: (801) 265-3049 (801) 233-1330,GH DT HI OP CO SF MD MC PI MI AH
+2007,625,Metamorphosis,339 East 3900 South Street,Salt Lake City,UT,84106,(801) 261-5790Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF AH
+2007,625,Odyssey House Inc,344 East 100 South Street Suite 301,Salt Lake City,UT,84111,(801) 322-4257Intake: (801) 322-3222,MH-SA TX HH RL OP PH AD CO HV GL SE PW WN MN CJ SF MD MC SI PI MI SS PA SP
+2007,625,Odyssey House Inc Adolescent Treatment Facility,607 East 200 South Street,Salt Lake City,UT,84102,(801) 363-0203Intakes: (801) 428-3448 (801) 898-6689,SA TX RL OP AD CO SF MD SI PI
+2007,625,Odyssey House Inc Adult Treatment Program,68 South 600 East Street,Salt Lake City,UT,84102,(801) 322-1001x3465Intakes: (801) 428-3415 (801) 428-3416,SA TX RL SF MD PI
+2007,625,Odyssey House Inc Outpatient,340 East 100 South Street,Salt Lake City,UT,84111,(801) 322-1185Intake: (801) 322-3222,SA TX OP WN DU SF MD MC SI PI MI SS SP
+2007,625,Odyssey House Inc Women and Childrens Program,42 South 500 East Street,Salt Lake City,UT,84102,(801) 596-1990,MH-SA TX RL CO WN BC SF MD MC SI PI MI SP
+2007,625,Positive Adjustments Corporation,2995 SW Temple Street Suite A,Salt Lake City,UT,84115,(801) 466-4484,SA TX OP DU CJ SF PI AH SP
+2007,625,Primary Childrens Medical Center Wasatch Canyons Campus,5770 South 1500 West Street,Salt Lake City,UT,84123,(801) 265-3142x3178Intakes: (801) 265-3108 (801) 270-4322 Hotline: (801) 265-3049,MH-SA TX DT RS RL OP PH AD CO SF SI PI PA AH
+2007,625,Professional Services Corporation Salt Lake City O˚ce,4667 Holladay Boulevard Suite 2,Salt Lake City,UT,84117,(801) 277-8025Hotline: (801) 277-8025,MH-SA TX OP CO GL DU SF MD MC SI PI MI AR SS
+2007,625,Project Reality,150 East 700 South Street,Salt Lake City,UT,84111,(801) 364-8080Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP CO HV PW WN MN CJ SF MD MC PI SP
+2007,625,Sequoia Counseling Center,3378 South 900 East Street,Salt Lake City,UT,84109,(801) 463-7520,MH-SA TX OP MN DU CJ SF PI SS
+2007,625,P˝erapy In Your Face,1579 West 600 South Street,Salt Lake City,UT,84104,(801) 973-0655,MH-SA TX OP SF MC PI MI SS SP
+2007,625,University of Utah Medical Ctr Alcohol/Drug Abuse Clinic,30 North 1900 East Street Room 1-R52,Salt Lake City,UT,84132,(801) 581-6228,SA TX OP WN MN DU CJ SF PI MI
+2007,625,University of Utah Neuropsychiatric Inst Recovery Works,501 Chipeta Way,Salt Lake City,UT,84108,(801) 587-3235,SA TX OP SF MC SI PI MI AH
+2007,625,Utah Alcoholism Foundation House of Hope Treatment Center,667 East South Temple Street,Salt Lake City,UT,84102,(801) 355-8536Intake: (801) 487-3276,SA TX RL OP PH CO PW WN BC DU SF MD PI
+2007,625,Healthcare System North Star SAT ,116NS) 500 South Foothill Drive,Salt Lake City,UT,84148,(801) 582-1565x1840,GH TX DT HH HI RL OP PH CO SF PI MI PA
+2007,625,Valley Mental Health Alcohol and Drug Treatment Unit,5965 South 900 East Street Suite 240,Salt Lake City,UT,84121,(801) 263-7225,SA TX OP PH CO PW WN CJ SF MD MC SI PI MI AH
+2007,625,Valley Mental Health Forensic Unit,443 South 600 East Suite 10,Salt Lake City,UT,84102,(801) 538-2057x228Intake: (801) 538-2057 Hotline: (801) 261-1442,MH-SA TX DT OP PH CO GL PW WN DU CJ SF MD MC PI MI AR SS AH SP
+2007,626,Volunteers of America/Utah Adult Detoxi˙cation Center,252 West Brooklyn Avenue,Salt Lake City,UT,84101,(801) 363-9400Intake: (801) 363-9400x22,SA DT RS WN SF SS PA
+2007,626,Volunteers of America/Utah Center for Women and Children,697 West 4170 South Street,Salt Lake City,UT,84123,(801) 261-9177x2Intake: (801) 261-9177x0,SA DT HH RS WN BC SF SS PA
+2007,626,Youth Support Systems,3392 West 3500 South Street,Salt Lake City,UT,84119,(801) 969-3307,SA TX OP AD SF MD SS PA AH SP
+2007,626,Psychotherapy and Clinical Counseling,8465 South 700 East Street,Sandy,UT,84070,(801) 233-8577Intake: (801) 233-8577x100,MH-SA TX DT OP DU SF MC SI PI MI
+2007,626,Counseling,9176 South 300 West Street Suite 29,Sandy,UT,84070,(801) 601-3163,SA TX OP AD CO DU CJ SF
+2007,626,Ark of Little Cottonwood,2919 East Granite Hollow Street,Sandy,UT,84092,(801) 733-0200,SA TX DT HH RS RL OP PH CO SE PW WN MN CJ SF SI PI MI PA SP
+2007,626,Changes Counseling/Consultation LLC,7370 South Creek Road Suite 102,Sandy,UT,84093,(801) 542-7060,SA TX OP WN MN DU SF MD MC SI PI MI SP F67
+2007,626,Salt Lake County Youth Services,10195 South Centennial Parkway,Sandy,UT,84070,(801) 352-8708,MH-SA TX OP AD SF MD SS PA AH
+2007,626,Sandy Counseling Center A DBA of Humanistic Counseling,8184 South Highland Drive Suite C-8,Sandy,UT,84093,(801) 944-1666,MH TX OP CJ SF MD MC PI MI SS SP
+2007,626,New Haven Inc,2096 East 7200 South Street,Spanish Fork,UT,84660,(801) 794-1218,MH-SA TX RL AD CO SF PI MI
+2007,626,Utah County Human Services Foothill Residential Treatment Center,3285 North Main Street,Spanish Fork,UT,84660,(801) 851-7652Intake: (801) 851-7128,SA TX DT RS RL CO HV PW WN MN CJ SF PI MI SS PA AH SP
+2007,626,Valley Mental Health/Tooele,100 South 1000 West Street,Tooele,UT,84074,(435) 843-3520,MH-SA TX DT OP AD PW WN MN DU CJ SF MD MC PI MI SS AH SP
+2007,626,Northeastern Counseling Center,1140 West 500 South Street,Vernal,UT,84078,(435) 789-6300,MH-SA TX OP DU CJ SF MD MC SI PI
+2007,626,Copperhill Youth Center,5899 West Rivendell Drive,West Jordan,UT,84088,(801) 561-3377Intake: (800) 776-7116,MH TX DT RS RL AD CO GL CJ SF MD MC SI PI SS AH
+2007,627,Healthcare and Rehabilitation Services of Southeastern Vermont (WRAP),1 Hospital Court Suite 410,Bellows Falls,VT,5101,(802) 463-3947,MH-SA TX HH OP AD CO SF MD SI PI SS AH
+2007,627,United Counseling Service of Bennington County Inc Ledge Hill Road,,Bennington,VT,5201,(802) 442-5491Hotline: (802) 442-5491,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI AH SP
+2007,627,Clara Martin Center,1483 Lower Plain Route 5,Bradford,VT,5033,(802) 222-4477Hotline: (800) 639-6360,MH-SA TX OP AD CO PW WN DU CJ SF MD MC SI PI MI SS
+2007,627,Valley Vista,23 Upper Plain Street,Bradford,VT,5033,(802) 222-5201,SA TX DT BU HI RS RL AD CO WN CJ SF MD SI PI MI SS PA AH
+2007,627,Brattleboro Retreat Adult Alcohol Abuse Program Anna Marsh Lane,,Brattleboro,VT,5302,(800) 738-7328Intake: (800) ,RETREAT MH-SA TX DT DM BU HI OP PH AD SF MD MC PI
+2007,627,Brattleboro Retreat Starting Now Anna Marsh Lane,P.O. Box 803,Brattleboro,VT,5302,(802) 258-3705Intake: (802) 258-3705x1,SA TX DT OP SF MD MC PI SS AH
+2007,627,Phoenix Houses of New England Brattleboro/Rise Program,435 Western Avenue,Brattleboro,VT,5301,(802) 257-4677Intakes: (802) 257-5654 (802) 257-2078,SA TX HH RL SF PI
+2007,627,Champlain Drug and Alcohol Services,855 Pine Street,Burlington,VT,5401,(802) 658-0404Intake: (802) 862-5243 Hotline: (802) 859-1230,MH-SA TX OP WN MN DU SF MD MC SI PI MI SS AH
+2007,627,Chittenden Center University Health Center,1 South Prospect Street Room 1420,Burlington,VT,5401,(802) 656-3700Hotline: (802) 863-2400 Methadone and Buprenorphine Clients Only,SA TX MM BU OP MD MC SI PI AH
+2007,627,Cornerstone Drug Treatment Program Lund Family Center,76 Glen Road,Burlington,VT,5401,(802) 864-7467,SA TX RL OP PH CO PW WN BC CJ SF MD PA SP
+2007,627,Howard Center for Human Services Act One/Bridge Program,184 Pearl Street,Burlington,VT,5401,(802) 859-1230Hotline: (802) 859-1230,SA TX RS WN SF MD MC SI PI MI SS AH F10
+2007,627,Howard Center for Human Services Co-occurring Disorders Treatment Prog,45 Clarke Street,Burlington,VT,5401,(802) 652-2106Hotlines: (802) 859-1230 (802) 863-2400,MH-SA TX OP CO WN MN CJ SF MD MC SI PI MI SS AH
+2007,627,Spectrum Youth and Family Services,177 Pearl Street,Burlington,VT,5401,(802) 862-5396x310,MH-SA TX HH OP AD CO WN SF MD SI PI PA AH SP
+2007,627,Healthcare and Rehabilitation Services of Southeastern Vermont (WRAP),49 School Street,Hartford,VT,5047,(802) 295-3031,MH-SA TX OP AD CO DU SF MD SI PI SS AH
+2007,627,Counseling Service of Addison County,89 Main Street,Middlebury,VT,5753,(802) 388-6751Hotline: (802) 388-7641,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI SS AH
+2007,627,Washington County Youth Service Bureau Boys and Girls Club,38 Elm Street,Montpelier,VT,5601,(802) 229-9151Hotline: (802) 229-9151,TX OP AD SF MD PI SS PA
+2007,628,BAART Behavioral Health Services,475 Union Street,Newport,VT,5855,(802) 334-0110Methadone and Buprenorphine Clients Only,SA TX DT MM BU OP PW SF MD PI PA
+2007,628,Tri-County Substance Abuse Services Northeast Kingdom Human Servs Inc,55 Seymour Lane,Newport,VT,5855,(802) 334-5246,SA TX DT RS OP AD CO DU CJ SF MD MC SI PI MI SS PA AH
+2007,628,Clara Martin Center Substance Abuse Treatment Unit,11 Main Street,Randolph,VT,5060,(802) 728-4466Intake: (800) 639-6360 Hotline: (800) 639-6360,MH-SA TX OP AD CO PW WN DU CJ SF MD MC SI PI MI
+2007,628,Recovery House Inc Grace House,35 Washington Street,Rutland,VT,5701,(802) 775-3476Intake: (802) 446-2640,SA TX HH RL CO SF AH
+2007,628,Rutland Mental Health Services,135 Granger Street,Rutland,VT,5701,(802) 747-3588x203Intake: (802) 775-2381,SA TX OP CO PW WN MN DU SF MD SI PI SS
+2007,628,Champlain Drug and Alcohol Services,172 Fair˙eld Street,Saint Albans,VT,5478,(802) 524-7265Hotline: (802) 859-1230,SA TX OP AD WN MN DU SF MD MC SI PI MI SS AH
+2007,628,Behavioral Health Services,445 Portland Street,Saint Johnsbury,VT,5819,(802) 748-6166Methadone Clients Only,SA TX DT MM OP PW SF MD PI PA
+2007,628,Tri-County Substance Abuse Services Northeast Kingdom Human Servs Inc,297 Summer Street,Saint Johnsbury,VT,5819,(802) 748-1682,SA TX DT RS OP AD CO WN DU CJ SF MD MC SI PI MI SS PA AH
+2007,628,Centerpoint Adolescent Treatment Services,1025 Airport Drive,South Burlington,VT,5403,(802) 658-7711Hotline: (802) 864-7777,MH-SA TX OP PH AD CO SF MD SI PI MI SS PA AH
+2007,628,Fletcher Allen Day One,56 West Twin Oaks Terrace Suite 6,South Burlington,VT,5403,(802) 847-3333,SA TX OP SF MD MC PI MI SS AH
+2007,628,Healthcare/Rehabilitation Services of Southeastern Vermont (WRAP),107 Park Street,Spring˙eld,VT,5156,(802) 885-5781,MH-SA TX OP AD CO SF MD SI PI SS AH
+2007,628,Maple Leaf Farm Associates Inc,10 Maple Leaf Road,Underhill,VT,5489,(802) 899-2911x206Intakes: (802) 899-2911x207 (802) 899- 2911x216,SA TX DT RS SF MD SI PI SS PA AH
+2007,628,Recovery House Inc Serenity House,98 Church Street,Wallingford,VT,5773,(802) 446-2640,SA TX DT RS OP WN MN SF MD SI PI MI SS PA AH
+2007,628,Veterans A airs Med/Reg O˚ce Ctr Substance Abuse Treatment Services,215 North Main Street Unit 116-C,White River Junction,VT,5009,(802) 295-9363x5235Intake: (802) 295-9363x6032,GH TX DT HI OP CO MC PI MI
+2007,628,Clara Martin Center ˛uitting Time,39 Fogg Farm Road,Wilder,VT,5088,(802) 295-1311Hotline: (800) 639-6360,SA TX OP AD PW WN DU CJ SF MD MC SI PI MI SS
+2007,629,Charles Harwood Hospital Alcohol and Drug Dependency Services Charles Harwood Medical Complex,3500 Richmond Street,Christiansted,VI,820,(340) 773-1311x4123Intake: (340) 773-1311x3023,SA TX DT MM DM OP PH AD CO HV GL SE PW MN CJ SF SI PI SS PA
+2007,629,Village Virgin Islands Inc,1 Sion Hill P.O. Box 5105 Sunny Isles Station,Christiansted,VI,823,(340) 719-9900,SA TX DT HH RS RL OP HV WN BC MN SF PI SS PA SP
+2007,631,Highlands Community Services (SAIOP) Substance Abuse Intensive Trt Program,432 East Main Street Suite A,Abingdon,VA,24210,(276) 676-2908Intake: (276) 628-5067 Hotline: (276) 628-5067,MH-SA TX OP AD PW WN DU CJ SF MD MC PI MI SS SP
+2007,631,Mountain Empire Day Reporting Center,252 West Main Street,Abingdon,VA,24210,(276) 676-5505x5004Intake: (276) 676-5477,SA TX OP CO HV GL SE PW WN MN CJ
+2007,631,Alexandria Community Services Board Substance Abuse Services,2355-A Mill Road,Alexandria,VA,22314,(703) 838-4525x108Intakes: (703) 838-6400 (703) 838-4528,SA TX DT MM RS OP CO HV WN MN CJ SF MC SI PI MI AH SP
+2007,631,Ethos Foundation,312 South Washington Street Suite 3-A,Alexandria,VA,22314,(703) 535-6800,MH-SA TX OP AD DU SF MD MC PI MI
+2007,631,Fairfax Methadone Treatment Center (FMTC),7008-G Little River Turnpike,Annandale,VA,22003,(703) 333-3113Intake: (800) 440-6310,SA TX DT OP SF
+2007,631,Harrison House of Virginia,5105 Backlick Road Unit Q,Annandale,VA,22003,(703) 256-6474Intake: (888) 682-1667,SA TX DT RS RL OP PH WN SF PI
+2007,631,Living Free Health Services,4306 Evergreen Lane Suite 204,Annandale,VA,22003,(703) 750-1292,SA TX OP AD CO DU CJ SF MD PI MI SS SP
+2007,631,Arlington County Alcohol and Drug Prog,1725 North George Mason Drive,Arlington,VA,22205,(703) 228-4900,SA TX OP CO WN MN SF SS PA SP
+2007,631,Vanguard Services Unlimited Phoenix Program,521 ˛uincy Street,Arlington,VA,22203,(703) 841-0660x260,SA TX RS RL AD CJ SF MC SI PI MI SP
+2007,631,Virginia Hospital Center,1701 North George Mason Drive,Arlington,VA,22205,(703) 558-6451Intake: (703) 558-6750,MH-SA TX DT HI OP PH SF MC PI MI AH
+2007,631,Frontier Health Inc Wise County Mental Health Center,3169 2nd Avenue East,Big Stone Gap,VA,24219,(276) 523-8300Hotline: (276) 523-8300,MH-SA TX DT OP AD CO HV SE PW WN MN DU CJ SF MC SI PI MI SS PA AH
+2007,631,Rappahannock Area Comm Services Board Caroline Clinic,204 North Main Street,Bowling Green,VA,22427,(804) 633-9997Hotline: (804) 633-4148,MH-SA TX OP MN SF MD MC SI PI MI SS PA
+2007,631,Human Resources Inc Willow Oaks,114 Willow Oaks Lane,Cartersville,VA,23027,(804) 375-3443,SA TX DT RS HV WN MN SF PI
+2007,631,Clinch Valley Treatment Center,111 Town Hollow Road,Cedar Blu ,VA,24609,(276) 963-3554Intakes: (800) 345-6998 (877) 757-6237 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP PW WN SF PI SS AH
+2007,631,Cumberland Mountain Comm Servs Board Substance Abuse Program,Route 19,Cedar Blu ,VA,24609,(276) 964-6702,MH-SA TX OP AD CO PW WN MN DU CJ SF MC SI PI AH
+2007,632,Addiction Recovery Systems LLC Pantops Clinic,1575 State Farm Boulevard Suite 2,Charlottesville,VA,22911,(434) 220-0080Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP PW WN SF PI MI
+2007,632,Region Ten CSB,401 4th Street NW,Charlottesville,VA,22903,(434) 972-1829,MH-SA TX OP CO SE PW WN DU CJ SF MD MC PI SS SP
+2007,632,Comprehensive Psychological Services,860 Greenbriar Circle Suite 100,Chesapeake,VA,23320,(757) 547-9007,MH-SA TX DT OP AD CO DU SF MD MC SI PI MI
+2007,632,Chester˙eld Department of Mental Health Support Services,6801 Lucy Corr Boulevard Rogers Building,Chester˙eld,VA,23832,(804) 768-7220Intakes: (804) 768-7318 (804) 768-7202 Hotlines: (804) 748-6356 (804) 768-7202,MH-SA TX OP AD CO SE WN MN SF MD MC SI PI MI SS
+2007,632,Carilion New River Valley Med Center Carilion St Albans Behavioral Health,2900 Tyler Road,Christiansburg,VA,24073,(800) 284-8898Hotline: (800) 284-8898,MH-SA TX DT DM BU HI OP PH CO SF MD MC PI MI AH
+2007,632,Dickenson County Behavioral Services Substance Abuse Services,133 McClure Avenue,Clintwood,VA,24228,(276) 926-1680Intake: (276) 926-1681 Hotline: (276) 926-1650,MH-SA TX OP AD CO PW WN MN DU CJ SF MD MC SI PI MI SS PA AH
+2007,632,Alleghany Highlands Community Services,311 South Monroe Avenue,Covington,VA,24426,(540) 965-2100Intake: (540) 965-2100x0 Hotlines: (540) 965-2100x0 (540) 965-1770,MH-SA TX OP CO WN DU SF SS
+2007,632,Alcoholic Counseling Services Inc Hope Harbor,1021 Main Street,Danville,VA,24541,(434) 793-9806,SA TX HH RL SF
+2007,632,Associates in Mental Health Servs PC,108 Holbrook Street Suite 203,Danville,VA,24541,(434) 791-2059,MH TX OP SF MD MC SI PI MI
+2007,632,Danville Pittsylvania Community Servs (DPCS),245 Hairston Street,Danville,VA,24540,(434) 799-0456,TX OP AD PW SF PI MI
+2007,632,Fairfax Falls Church CSB ADS,3900 Jermantown Road Suite 200,Fairfax,VA,22030,(703) 934-5476Intake: (703) 359-7040,SA TX DT HH RS RL OP PH AD CO HV PW WN BC MN CJ SF MD SI PI MI SS AH SP
+2007,632,Inova Kellar Center Behavioral,11204 Waples Mill Road,Fairfax,VA,22030,(703) 218-8500Intake: (703) 218-8506,MH-SA TX OP PH AD CO CJ SF PI PA
+2007,632,Life Line Counseling Center,10374 Democracy Lane Suite A,Fairfax,VA,22030,(703) 691-3029,SA TX OP AD MN DU SF PI F92
+2007,632,Inova Comprehensive Addiction Treatment Services (CATS),3300 Gallows Road,Falls Church,VA,22042,(703) 776-7777Intake: (703) 776-7771,SA TX DT DM BU HI OP PH SF PI AH SP F28 F67
+2007,632,Kenner Army Health Clinic Alcohol and Drug Comm Counseling Ctr,700 24th Street Suite D-26 Building 8130,Fort Lee,VA,23801,(804) 734-9601,SA TX DT OP DU MI
+2007,633,Womans Place,2016 Lafeyette Boulevard,Fredericksburg,VA,22401,(540) 891-3136Intake: (540) 373-6876 Hotline: (540) 373-6876,SA TX OP CO PW WN CJ SF MD MC SI PI MI
+2007,633,Rappahannock Area Comm Services Board Substance Abuse Services,600 Jackson Street,Fredericksburg,VA,22401,(540) 373-3223x3055Intakes: (540) 373-3223 (540) 373-6876 Hotline: (540) 373-6876,MH-SA TX OP CO MN CJ SF MD MC SI PI MI AH
+2007,633,Serenity Home Inc/Substance Abuse ICF and Halfway Treatment Services,514 Wolfe Street,Fredericksburg,VA,22401,(540) 371-3059,SA TX HH RS RL MN SF SP F35
+2007,633,Snowden at Fredericksburg,1200 Sam Perry Boulevard,Fredericksburg,VA,22401,(540) 741-3900x17156,MH TX DT HI OP PH SF PI MI
+2007,633,Northwestern Community Services Board Substance Abuse Service,209 West Criser Road Suite 100,Front Royal,VA,22630,(540) 636-2931Hotline: (540) 635-4357,MH-SA TX DT OP CO PW CJ SF MD MC SI MI SS
+2007,633,Galax Treatment Center Inc Life Center of Galax,112 Painter Street,Galax,VA,24333,(276) 236-2994x13,SA TX DT MM DM BU RS RL OP PH WN MN DU SF PI SS
+2007,633,Frontier Health Inc Scott County Mental Health Center,378 West Jackson Street Suite 3,Gate City,VA,24251,(423) 979-7460Intake: (276) 452-1144 Hotline: (276) 452-1144,MH-SA TX OP AD CO HV SE PW WN MN DU CJ SF MC SI PI MI SS PA AH
+2007,633,Henrico Area Mental Health Mental Retardation and Substance Abuse Servs,10299 Woodman Road,Glen Allen,VA,23060,(804) 261-8500Intake: (804) 727-8515 Hotline: (804) 727-8484,MH-SA TX OP AD CO SF MC SI PI MI SS PA
+2007,633,Deep Run Lodge,13259 Blackwells Mill Road,Goldvein,VA,22720,(540) 752-4619,SA TX RS RL AD SF SI PI MI
+2007,633,Goochland/Powhatan Community Services,3058 River Road West,Goochland,VA,23063,(804) 556-5400,MH-SA TX OP PW SF MD MC SI PI MI SS
+2007,633,Cumberland Mountain Comm Servs Board Substance Abuse Program,Route 83,Grundy,VA,24614,(276) 935-7154,MH-SA TX OP PW WN MN DU CJ SF MC SI PI AH
+2007,633,Hampton Roads Clinic Opioid Treatment Program,2236 Todds Lane Suite C,Hampton,VA,23666,(757) 827-8430Methadone Clients Only,SA TX DT MM OP WN SF SP
+2007,633,Hampton Veterans A airs Medical Center,100 Emancipation Drive Unit 116-A,Hampton,VA,23667,(757) 722-9961x3607,SA TX DT HH HI RS RL OP PH CO WN MN PA
+2007,633,Riverside Behavioral Health Center,2244 Executive Drive,Hampton,VA,23666,(757) 827-1001,MH-SA TX DT HI OP CO SF MC PI MI AH
+2007,633,Harrisonburg/Rockingham Community Services Board,1241 North Main Street,Harrisonburg,VA,22802,(540) 434-1941,MH-SA TX OP CO WN SF MD MC SI PI MI SS AH
+2007,633,Recovery Center of Northern Virginia,457 Carlisle Drive,Herndon,VA,20170,(703) 464-5122,SA TX OP AD CO WN MN DU SF
+2007,633,Frontier Health Inc Lee County Counseling Center,Route 58,Jonesville,VA,24263,(276) 346-3590Intake: (276) 346-1901 Hotlines: (276) 523-8300 (276) 346-3590,MH-SA TX OP AD CO SE WN MN DU CJ SF MC PI MI SS PA AH
+2007,634,Rappahannock Area Comm Services Board King George Clinic,8479 St Anthonys Road,King George,VA,22485,(540) 775-9879,MH TX OP DU SF SS
+2007,634,Graydon Manor Intermediate Residential Facility,801 Childrens Center Road,Leesburg,VA,20175,(703) 777-3485,MH TX RL AD SF MD PI
+2007,634,Loudoun County Mental Health Center Substance Abuse Program,102 Heritage Way NE Suite 302,Leesburg,VA,20176,(703) 771-5100,MH-SA TX OP AD CO CJ SF MD MC SI PI MI SS AH SP
+2007,634,Central Virginia Community Services Courtland Center,620 Court Street,Lynchburg,VA,24504,(434) 847-8035,MH-SA TX DT RS RL OP CO PW WN MN DU SF MD MC PI MI AH
+2007,634,Pathways Treatment Center,3300 Rivermont Avenue,Lynchburg,VA,24503,(434) 947-4455Intake: (866) 749-4455,SA TX DT RS OP PH WN MN SF PI MI
+2007,634,Center for Psychiatric and Addiction Treatment,8680 Hospital Way,Manassas,VA,20110,(703) 369-8464Intake: (703) 369-8404,MH-SA TX DT HI OP SF MD MC PI MI
+2007,634,Sellati and Co Inc Woodbridge Methadone Treatment Center,8427 Dorsey Circle Suite 101,Manassas,VA,20110,(800) 440-6310Methadone Clients Only,SA TX DT MM DM OP SF
+2007,634,Mount Rogers Transitions Substance Abuse Services,326 Commerce Street,Marion,VA,24354,(276) 783-9005x3102,SA TX OP CJ SF PI MI
+2007,634,Memorial Hospital of Martinsville and Henry County Psychiatric Services,320 Hospital Drive,Martinsville,VA,24115,(276) 666-7200,MH-SA TX DT HI SF MC PI MI
+2007,634,Piedmont Community Services,24 Clay Street,Martinsville,VA,24112,(276) 632-7128Hotline: (276) 632-7295,MH-SA TX RS RL OP PH AD CO WN DU CJ SF MD MC SI PI MI
+2007,634,Hanover County Community Service Board,8157 Old Cavalry Drive Suite 102,Mechanicsville,VA,23111,(804) 365-6760Intake: (804) 365-4222,MH-SA TX OP AD SF MD SI PI SS
+2007,634,Serenity House Substance Abuse Program Inc,15203 Warwick Boulevard Suite A,Newport News,VA,23608,(757) 898-9542x18Intake: (757) 898-9542,SA TX RS RL HV CJ SF
+2007,634,Naval Medical Center Portsmouth Substance Abuse Rehabilitation Program,1683 Gilbert Street Suite 100,Norfolk,VA,23511,(757) 444-1105x315Intakes: (757) 444-8506x303 (757) 444- 8506x366,SA TX RS OP PH DU PI MI
+2007,634,Norfolk Community Services Board Substance Abuse Services,7460 Tidewater Drive,Norfolk,VA,23505,(757) 664-6670,SA TX MM OP PH CO WN SF AH
+2007,634,District,19 Substance Abuse Services Petersburg Outpatient Services 20 West Bank Street Suite 8,Petersburg,VA,23803,(804) 862-6410Hotline: (804) 862-6410,SA TX OP AD CO SF MD MC SS PA
+2007,634,Poplar Springs Hospital,350 Poplar Drive,Petersburg,VA,23805,(804) 733-6874,MH DT HI AD CO SF MD MC PI MI
+2007,634,Dept of Behavioral Healthcare Service SA Outpatient Treatment Services,505 Washington Street Suite 606,Portsmouth,VA,23704,(757) 393-8896,MH-SA TX MM OP PH AD CO SE WN MN DU CJ SF
+2007,634,Neumann and Associates,720 Rodman Avenue,Portsmouth,VA,23707,(757) 393-9611,SA TX OP DU SF PI
+2007,635,New River Valley Community Services Pulaski Center,1006 East Main Street,Pulaski,VA,24301,(540) 994-5023Intake: (540) 961-8400 Hotline: (540) 961-8400,MH-SA TX OP AD CO CJ SF SI PI MI SS AH
+2007,635,Consolidated Substance Abuse Marine Corps Base ˛uantico,3035 Barnett Avenue,B-374/5˛uantico,VA,22134,(703) 784-3502Intake: (703) 784-3503,SA TX OP PA
+2007,635,New River Valley Community Services New Life Recovery Center,7193 Warden Court,Radford,VA,24141,(540) 831-4000Intake: (540) 961-8400,SA TX RS OP SF SS AH
+2007,635,Family Counseling Center For Recovery,4906 Radford Avenue,Richmond,VA,23230,(804) 354-1996,SA TX DT MM DM BU OP AD PW WN MN SF PI
+2007,635,Human Resources Inc Outpatient Methadone Program,15 West Cary Street,Richmond,VA,23220,(804) 644-4636Intake: (804) 644-6310 Methadone Clients Only,SA TX DT MM DM OP HV PW WN MN SF SS
+2007,635,McGuire Veterans A airs Medical Ctr Substance Abuse Treatment Program,1201 Broad Rock Boulevard,Richmond,VA,23249,(804) 675-5000x4200Intakes: (804) 675-5645 (804) 675-4193,MH TX DT MM DM BU HI OP CO PI AH
+2007,635,Metro Treatment of Virginia LP DBA Richmond Treatment Center,1601-L Overbrook Road,Richmond,VA,23220,(804) 213-0249Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF
+2007,635,Recovery Center of Richmond,9323 Midlothian Turnpike Suite S,Richmond,VA,23235,(804) 560-5400,SA TX OP PW WN MN SF PI
+2007,635,Richmond Private Methadone Clinic (RPMC),4926 West Broad Street,Richmond,VA,23230,(804) 673-5241Intake: (800) 440-6310 Methadone Clients Only,SA TX DT MM DM OP SF
+2007,635,Rubicon Inc Outpatient Services,1300 MacTavish Avenue,Richmond,VA,23230,(804) 359-3255Intake: (804) 359-3255x3120,SA TX OP SF
+2007,635,Rubicon Inc Womens Treatment Community,2825 Rady Street,Richmond,VA,23222,(804) 359-3255x3029Intakes: (804) 359-3255x3039 (804) 359- 3255x3049,SA TX HH RS RL HV PW WN BC CJ SF
+2007,635,Avenues to Recovery Inc,20 Walnut Avenue SW,Roanoke,VA,24016,(540) 344-3400,SA TX DT OP SF PI
+2007,635,Bethany Hall Recovery Home for Chemically Dependent Women,1109 Franklin Road SW,Roanoke,VA,24016,(540) 343-4261,SA TX RL CO HV GL SE PW WN BC CJ SF MD
+2007,635,Lewis Gale Medical Center Center for Recovery,1902 Braeburn Drive,Salem,VA,24153,(540) 772-2861Intake: (800) 541-9992 Hotline: (800) 541-9992,MH TX DT HI OP PH AD CO SF MD MC PI AH
+2007,635,Mount Regis Center,405 Kimball Avenue,Salem,VA,24153,(800) 477-3447,SA TX DT RS OP PH WN MN SF PI
+2007,635,Veterans A airs Medical Center Substance Abuse Treatment Program,1970 Roanoke Boulevard Unit 116-A4 Psychiatry,Salem,VA,24153,(540) 982-2463x2585,GH TX DT HI RS RL OP PH CO HV WN SF PI MI PA
+2007,635,Southside Community Services Board Halifax County,424 Hamilton Boulevard,South Boston,VA,24592,(434) 572-6916Intake: (434) 572-2936 Hotline: (434) 572-2936,MH-SA TX OP SF MD MC SI PI MI SS
+2007,636,622 VIRGINIA Rappahannock Area Comm Services Board Spotsylvania Clinic,7424 Brock Road,Spotsylvania,VA,22553,(540) 582-3980Intake: (540) 373-6876 Hotline: (540) 373-6876,MH-SA TX OP AD MN DU SF MD MC SI PI MI SS AH
+2007,636,Rappahannock Area Comm Services Board North Sta ord Clinic,15 Hope Road,Sta ord,VA,22554,(540) 659-2725Intake: (540) 659-2725x221 Hotline: (540) 373-6876,MH-SA TX OP SF MD MC SI PI MI
+2007,636,Valley Community Services Board Substance Abuse Services,85 Sangers Lane,Staunton,VA,24401,(540) 887-3200,MH-SA TX OP PH AD SF MD MC SI PI MI AH
+2007,636,Western Tidewater Mental Health Center Substance Abuse Department,135 South Saratoga Street,Su olk,VA,23434,(757) 925-2222,SA TX OP WN DU CJ SF MD MC SI PI MI SS AH
+2007,636,Cumberland Mountain Comm Servs Board Substance Abuse Program,102 Church Street,Tazewell,VA,24651,(276) 988-7961,MH-SA TX OP AD CO PW MN DU CJ SF MC SI PI AR AH
+2007,636,Adult Outpatient Services Pembroke,6 Outpatient Program 297 Independence Boulevard Pembroke 6 Suite 126,Virginia Beach,VA,23462,(757) 437-6088Intake: (757) 437-6150 Hotline: (757) 437-6150,SA TX OP CO WN SF PI SS AH
+2007,636,Atlantic Psychiatric Services,780 Lynnhaven Parkway Suite 400,Virginia Beach,VA,23452,(757) 468-0550,MH TX OP AD WN DU SF MD MC PI MI
+2007,636,New Bridges Outpatient Rehabilitation Center,3500 Virginia Beach Boulevard Suite 410,Virginia Beach,VA,23452,(757) 455-8283,MH-SA TX OP PH AD CO SE WN MN DU CJ SF MD MC PI MI SS
+2007,636,Recovery For ˝e City International,1861 Kempsville Road,Virginia Beach,VA,23464,(757) 575-0952,SA TX OP CO PA
+2007,636,Sellati and Co Inc Virginia Beach Methadone Clinic,1728 Virginia Beach Boulevard Suite 113,Virginia Beach,VA,23454,(757) 437-0411Intake: (800) 440-6310 Methadone Clients Only,SA TX DT MM DM OP SF
+2007,636,Tidewater Psychotherapy Services Horizons,256 North Witchduck Road Suite G,Virginia Beach,VA,23462,(757) 497-3670,MH-SA TX OP AD CO DU CJ
+2007,636,Virginia Beach Psychiatric Center,1100 1st Colonial Road,Virginia Beach,VA,23454,(757) 496-6000Intake: (757) 627-5433 Hotline: (757) 627-5433,MH TX DT HI PH AD CO HV WN SF MC PI MI
+2007,636,Behavioral Healthcare/Fauquier,340 Hospital Drive,Warrenton,VA,20186,(540) 347-7620Intake: (540) 825-3100x3600 Hotline: (540) 347-7620,MH-SA TX OP SF MD MC SI PI MI SS
+2007,636,Family Focus Counseling Service PC,20-B John Marshall Street,Warrenton,VA,20186,(540) 349-4537,MH-SA TX OP AD WN DU SF PI
+2007,636,Bacon Street Inc,247 McLaws Circle,Williamsburg,VA,23185,(757) 253-0111,SA TX OP AD SF MD SI PI MI SS PA
+2007,636,Colonial Services Board Substance Abuse Services,1657 Merrimac Trail,Williamsburg,VA,23185,(757) 220-3200Hotline: (757) 220-3200,MH-SA TX OP CO DU CJ SF PI MI SS AH SP
+2007,636,Williamsburg Place ˝e William J Farley Center,5477 Mooretown Road,Williamsburg,VA,23188,(757) 565-0106Intake: (800) 582-6066,SA TX DT RS RL WN MN SF PI
+2007,637,RGINIABridging the Gaps Inc Drayton House,505 Fairmont Avenue,Winchester,VA,22601,(540) 535-1111Intake: (866) 711-1234,SA TX RL SF
+2007,637,Bridging the Gaps Inc Substance Abuse and Outpatient Servs,423 West Cork Street,Winchester,VA,22601,(540) 535-1111Intake: (866) 711-1234,SA TX OP PH SF
+2007,637,Council on Alcoholism Lord Fairfax Community Inc,512 South Braddock Street,Winchester,VA,22601,(540) 662-8877,SA TX HH RL OP SF
+2007,637,Northwestern Community Services Board,441 North Main Street,Woodstock,VA,22664,(540) 459-5180Hotline: (540) 459-4072,MH-SA TX DT OP AD CO PW WN MN CJ SF MC SS AH
+2007,639,ABERDEENHarborCrest Behavioral Health Grays Harbor Community Hospital,1006 North H Street,Aberdeen,WA,98520,(360) 533-8500Intake: (360) 537-6200,SA TX DT HI OP PH WN MN DU SF MC SI PI MI AH
+2007,639,Social Treatment Opportunity Programs (STOP)/Aberdeen,2700 Simpson Avenue Suite 101,Aberdeen,WA,98520,(360) 533-4997,SA TX OP AD DU SF SI PI AR SS
+2007,639,True North Student Assistance and Treatment Services/Grays Harbor,104 South K Street,Aberdeen,WA,98520,(360) 533-9749,SA TX OP AD MD AH
+2007,639,Camas Institute Behavioral Health Serv Kalispel Tribe of Indians,934 South Gar˙eld Road,Airway Heights,WA,99001,(509) 456-0799x4179,MH-SA TX OP AD CO PW WN MN DU CJ SF MD MC SI PI AR SS AH
+2007,639,Alpine Recovery Services Inc,16404 Smokey Point Boulevard Suite 109,Arlington,WA,98223,(360) 658-1388Intake: (800) 773-9166,SA TX OP DU SF PI
+2007,639,Arlington,509 NW Avenue Suite B,Arlington,WA,98223,(425) 349-8130,SA TX OP AD DU SF MD PI AR SS
+2007,639,Island Crossing Counseling Services,21123 Smokey Point Boulevard,Arlington,WA,98223,(360) 652-9640x19Methadone Clients Only,SA TX DT MM DM OP PW WN MN CJ SF MD MC SI PI AR AH
+2007,639,Stillaguamish Tribe of Indians Alcohol and Drug Treatment Program,4126 172nd Street NE,Arlington,WA,98223,(360) 653-1104,MH-SA TX OP CO PW DU SF MD MC SI PI
+2007,639,All About Choices Inc,1833 Auburn Way North Suite J,Auburn,WA,98002,(253) 218-0317Intake: (253) 722-5493,SA TX OP AD CO SF PI SS
+2007,639,Assessment/Treatment Associates Inc Auburn,4508 Auburn Way North Suite B,Auburn,WA,98002,(253) 205-8200Intake: (425) 289-1600,SA TX OP DU SF PI
+2007,639,Future Visions Auburn,620 M Street NE Suite 2,Auburn,WA,98002,(253) 735-2718Intake: (253) 735-2774,SA TX OP SE WN MN DU CJ SF PI
+2007,639,Lakeside Milam Recovery Centers Inc,721 45th Street NE Suite C,Auburn,WA,98002,(253) 859-6436,SA TX OP SF SI PI
+2007,639,Seattle Mental Health,810 28th Street NE,Auburn,WA,98002,(253) 876-8900,MH-SA TX OP PH AD CO WN MN DU MD MC AR AH
+2007,639,Valley Cities Counseling/Consultation Branch of Valley Cities Counseling,2704 I Street NE,Auburn,WA,98002,(253) 939-4055,MH-SA TX OP AD CO DU SF MD PI AR
+2007,639,Western Washington Alcohol and Drug PX Center,4210 Auburn Way North Suite 2,Auburn,WA,98002,(253) 536-5549,SA TX OP DU SF PI MI AR
+2007,639,Saint Peter Chemical Dependency Center Belfair Branch,24070 NE Highway 3 Suite A,Belfair,WA,98528,(360) 277-0523,SA TX OP SF MD MC SI PI MI AH
+2007,639,Assessment/Treatment Associates Inc,13353 Bel-Red Road Suite 101,Bellevue,WA,98005,(425) 289-1600,SA TX OP DU SF
+2007,639,Associated Behavioral Healthcare Inc Bellevue,1800 112th Avenue NE Suite 150-W,Bellevue,WA,98004,(425) 646-7279,SA TX OP MN DU SF PI SP
+2007,640,Coastal Treatment Services,14730 NE 8th Street Suite 110,Bellevue,WA,98007,(425) 646-4406,MH-SA TX DT OP CO WN MN DU SF PI AH
+2007,640,Consejo Counseling and Referral Servs,1412 140th Place NE,Bellevue,WA,98007,(425) 746-4512x202Intake: (425) 747-7892x202,MH-SA TX OP CO HV GL SE PW WN MN CJ SF MD MC PI AR SP
+2007,640,Eastside Addiction Professionals,1450 114th Avenue SE Conifer Building Suite 100,Bellevue,WA,98004,(425) 462-8558,SA TX OP AD CO WN DU SF PI
+2007,640,Eastside Recovery Center,1412 140th Place NE,Bellevue,WA,98007,(425) 747-7892,SA TX OP PW WN DU CJ SF MD SI PI MI SS AH F70
+2007,640,Lakeside Milam Recovery Centers Inc Bellevue,275 118th Avenue SE Suite 100,Bellevue,WA,98005,(425) 452-8343,SA TX DT OP AD DU SF SI PI MI
+2007,640,Paci˙c Northwest Treatment Services,1050 140th Avenue NE Suite G,Bellevue,WA,98005,(425) 641-1999,MH-SA TX OP DU SF SI PI MI SS
+2007,640,Praxis Inc/Bellevue,1800 112th Avenue NE Suite 260-E,Bellevue,WA,98004,(425) 454-9490,SA TX OP SE WN MN DU CJ SF PI
+2007,640,Rational Treatment Services Dual Diagnosis Indiviudal and Groups,1309 114th Avenue SE Suite 104,Bellevue,WA,98004,(206) 459-2242,MH-SA TX OP AD CO DU SF PI
+2007,640,United Treatment and ˝erapy,12501 Bel Red Road Suite 206,Bellevue,WA,98005,(425) 688-0033,MH-SA TX OP AD CO DU SF PI SS
+2007,640,Youth Eastside Services (YES) Bellevue Main Facility,999 164th Avenue NE,Bellevue,WA,98008,(425) 747-4937,MH-SA TX OP AD SF MD SI PI MI
+2007,640,Belair Clinic,1130 North State Street,Bellingham,WA,98225,(360) 676-4485,SA TX OP DU SF PI
+2007,640,Recovery Center,2806 Douglas Avenue,Bellingham,WA,98225,(360) 676-2187x127Intake: (360) 676-2187x100,SA TX OP AD CO PW WN MN DU CJ SF MD SI PI MI SS PA AH
+2007,640,Lummi Care Program,2530 Kwina Road,Bellingham,WA,98226,(360) 384-2330x4602Intake: (360) 384-2530x2602,SA TX OP AD WN BC MN MD
+2007,640,Paci˙c Recovery Healing Center,3082 NW Avenue,Bellingham,WA,98225,(360) 715-8959Intake: (360) 752-3262,SA TX OP DU CJ SF PI MI SS
+2007,640,Saint Josephs Hospital Behavioral Health Services,809 East Chestnut Street 3rd Floor,Bellingham,WA,98225,(360) 715-6400Intake: (360) 715-6526,MH-SA TX DT HI OP CO SE WN MN DU CJ SF MC SI PI MI AH SP F70
+2007,640,Sea Mar Visions,1603 East Illinois Street,Bellingham,WA,98226,(360) 647-4266Intake: (360) 647-4266x104,SA TX RL AD CO PW SF MD SI PI MI AH SP
+2007,640,Westcoast Counseling and Treatment Ctr,1200 Dupont Street Suite 1-A,Bellingham,WA,98225,(360) 647-7577,SA TX OP WN SF MD PI SS
+2007,640,Whatcom Community Detox,2030 Division Street,Bellingham,WA,98225,(360) 734-2867,SA TX OP MD MC
+2007,640,Alpha Center for Treatment Inc,10614 Beardslee Boulevard Suite D,Bothell,WA,98011,(425) 483-4664,SA TX OP CO SF PI
+2007,640,Northshore STARS Program Center for Human Services,18315 Bothell Way NE,Bothell,WA,98011,(425) 489-6028,SA TX OP AD SF MD MC
+2007,641,Northshore Youth and Family Services,10309 NE 185th Street,Bothell,WA,98011,(425) 485-6541,MH TX OP AD CO SF MD SI PI SS PA
+2007,641,Advantages Counseling Services Bremerton,645 4th Street Suite 201,Bremerton,WA,98337,(360) 479-0853,SA TX OP DU SF PI SP
+2007,641,Cascadia Addiction Treatment Services,2817 Wheaton Way Suite 205,Bremerton,WA,98310,(360) 373-0155Hotline: (360) 373-0155,SA TX OP DU SF SI PI
+2007,641,Mental Health Services Youth MICA Program,5455 Almira Drive,Bremerton,WA,98311,(360) 479-4994x2178Intake: (360) 405-4010,MH TX OP AD CO MD MC PI
+2007,641,Recovery Center,1975 NE Fuson Road,Bremerton,WA,98311,(360) 337-4625,SA TX DT RS OP SF MD SI PI
+2007,641,Naval Hospital Bremerton Substance Abuse Rehabilitation Program Building,491 2nd Floor Naval Base KITSAP-Bremerton,Bremerton,WA,98314,(360) 476-2594,SA TX OP PH
+2007,641,Olympic Educational Services District,114/Youth Recovery Program 105 National Avenue North,Bremerton,WA,98312,(360) 405-5833Intake: (360) 337-5557,SA TX OP AD SF SI PI SS PA
+2007,641,Olympic Educational Services ESD,114 Youth Recovery Program 105 National Avenue North,Bremerton,WA,98312,(360) 478-9893x5833Intake: (360) 620-4770,SA TX OP AD CJ SF SI PI SS PA
+2007,641,Right Choice Counseling Serv Inc,1740 NE Riddell Road Suite 314,Bremerton,WA,98310,(360) 373-4077,SA TX OP PW WN MN DU SF PI
+2007,641,James Oldham Treatment Center,201 Highland Drive,Buena,WA,98921,(509) 865-6705Intake: (509) 248-1800x325,SA TX RS MN SF MD SI PI MI
+2007,641,Follman Agency Burlington,910 South Anacortes Street,Burlington,WA,98233,(360) 755-1125Hotline: (360) 755-1125,SA TX OP PH AD CO SE WN MN DU CJ SF PI
+2007,641,Raging River Recovery Center,4480 Tolt Avenue,Carnation,WA,98014,(425) 333-5425,MH-SA TX OP AD MN SF MD MC SI PI PA
+2007,641,Drug Abuse Prevention Ctr/Castle Rock,2232 South Silverlake Road,Castle Rock,WA,98611,(360) 274-3262,SA TX HH RS RL MD AR
+2007,641,Wahkiakum Chemical Dependency Services,42 Elochoman Valley Road,Cathlamet,WA,98612,(360) 795-8630,SA TX OP AD CO DU SF MD SI PI MI AR SS PA
+2007,641,New Directions Counseling Chehalis,1000 Kresky Road Suite G,Centralia,WA,98531,(360) 740-4380,SA TX OP SF PI
+2007,641,Cascade Mental Healthcare,135 West Main Street,Chehalis,WA,98532,(360) 748-6696,MH-SA TX OP CO SF MD MC SI PI SS PA AH
+2007,641,Eugenia Center,121 NW Chehalis Avenue,Chehalis,WA,98532,(360) 740-3439Intake: (360) 740-9767,SA TX OP AD SF MC SI PI MI SS
+2007,641,Providence Addictions Recovery Center Chehalis,500 SE Washington Avenue,Chehalis,WA,98532,(360) 748-4357Intakes: (800) 622-4009 (360) 748,HELP SA TX OP CJ SF MD MC SI PI MI AH
+2007,641,True North Student Assistance and Treatment Services/Lewis,2100 North National Avenue Box 12,Chehalis,WA,98532,(360) 748-2274,SA TX OP AD MD PA AH
+2007,642,628 WASHINGTON,628 Addiction Recovery Center at Lake Chelan Community Hospital 503 East Highland Avenue,Chelan,WA,98816,(509) 682-4300,MH-SA TX DT HI CO WN MN SF MC PI MI
+2007,642,Stevens County Counseling Services Chewelah Branch,301 East Clay Street Room 210,Chewelah,WA,99109,(509) 935-4808,MH-SA TX OP DU CJ SF MD MC SI PI AH
+2007,642,Rogers Counseling Center Clarkston Main Facility,900 7th Street,Clarkston,WA,99403,(360) 427-2050Intake: (509) 758-3341,MH TX OP AD PW WN MN DU SF MD MC PI MI AR SS AH
+2007,642,Stevens County Counseling Services Colville Branch,165 East Hawthorne Avenue,Colville,WA,99114,(509) 684-4597DWI/DUI Clients Only,MH-SA TX OP AD DU SF MD MC SI PI MI PA AH
+2007,642,Compass Health/Coupeville,105 NW 1st Street,Coupeville,WA,98239,(360) 678-5555,MH-SA TX OP AD CO CJ SF MD SI PI MI SS
+2007,642,Lincoln County Alcohol/Drug Center,510 Morgan Street,Davenport,WA,99122,(509) 725-2111,SA TX OP AD DU SF MD MC SI PI MI SS
+2007,642,Deer Park Recovery,206 West 1st Street,Deer Park,WA,99006,(509) 276-2797,SA TX OP SE WN MN DU CJ SF PI
+2007,642,Barrier and Associates E Wenatchee,230 Grant Road Suite CB-1,East Wenatchee,WA,98802,(509) 884-1020,SA TX OP AD SE WN DU SF SI PI
+2007,642,New Spirit Recovery Program Inc,22617 76th Avenue West Suite 101,Edmonds,WA,98026,(425) 771-1194,SA TX DT OP PH DU SF MD MC PI
+2007,642,Center for Counseling and Health Resources Inc/Edmonds,547 Dayton Street,Edmonds,WA,98020,(425) 771-5166,MH-SA TX OP PH CO WN DU SF PI SS
+2007,642,Coles Counseling Center Inc,8923 236th Street SW Suite C,Edmonds,WA,98026,(425) 778-7118,SA TX OP AD CJ SF
+2007,642,Lakeside Milam Recovery Centers Inc North Edmonds Branch,7935 Lake Ballinger Way,Edmonds,WA,98026,(425) 670-3664,SA TX OP AD SF PI
+2007,642,Alcohol/Drug Dependency Services Cle Elum (ADDS),507 North Naunum Street Suite 111,Ellensburg,WA,98926,(509) 674-2146,SA TX OP AD DU CJ SF MD SI PI
+2007,642,Alcohol/Drug Dependency Services Ellensburg (ADDS),507 North Nanum Street Room 111,Ellensburg,WA,98926,(509) 925-9821Hotline: (509) 925-4168,SA TX OP AD DU CJ SF MD SI PI
+2007,642,Cascade Recovery Resource Center,707 North Pearl Street Suite G,Ellensburg,WA,98926,(509) 933-3838DWI/DUI Clients Only,SA TX OP DU SF MD SI PI MI
+2007,642,Rainier Counseling,847 Blake Street,Enumclaw,WA,98022,(360) 802-0446,SA TX OP SF SI PI
+2007,642,Catholic Community Services Recovery Center/Everett,1114 Paci˙c Avenue,Everett,WA,98201,(425) 258-5270,SA TX OP AD PW WN DU CJ SF MD SI PI MI AR SS
+2007,643,Catholic Community Services Tree of Life Recovery Program,10110 19th Avenue SE Suite R-100,Everett,WA,98208,(425) 257-2111Intake: (425) 337-7817,SA TX HH OP CO PW WN DU SF MD MC PI SS PA
+2007,643,Center for Counseling/Health Resources ˝e Everett,13000 21st Drive SE,Everett,WA,98020,(425) 338-7671,MH-SA TX OP SF PI SS
+2007,643,Everett Treatment Services,7207 Evergreen Way Suite M,Everett,WA,98203,(425) 347-9070,SA TX OP CJ SF PI
+2007,643,Evergreen Manor Inc Detox Services,2601 Summit Avenue Building C,Everett,WA,98201,(425) 258-3255Intake: (425) 258-2407,SA DT HH RS AD SF MD SI PI MI PA AH
+2007,643,Evergreen Manor Inc Evergreen Outpatient Unit I,2601 Summit Avenue Building A,Everett,WA,98201,(425) 258-2407,SA TX OP CO SE PW WN MN DU CJ SF MD SI PI AR SS PA AH
+2007,643,Evergreen Manor Inc Evergreen Residential Main Campus,2601 Summit Avenue Building C,Everett,WA,98201,(425) 258-2407,SA TX HH RL CO PW WN BC SF MD SI PI PA AH
+2007,643,Evergreen Manor Inc OP Servs Banrch of Evergreen Manor Inc,2932 Hoyt Avenue,Everett,WA,98201,(425) 259-5842Intake: (425) 258-2407,SA TX OP CO SE PW WN MN DU CJ SF MD SI PI AR SS PA
+2007,643,Everett,909 SE Everett Mall Way Suite C-364,Everett,WA,98208,(425) 349-6240,SA TX OP AD DU SF MC PI AR AH
+2007,643,Lakeside Milam Recovery Centers Inc Everett Branch,111 SE Everett Mall Way Building F,Everett,WA,98208,(425) 267-9573,SA TX OP AD SF SI PI
+2007,643,North Sound Assessment and Counseling Service,1316 Wall Street Suite 2-B,Everett,WA,98201,(425) 252-1779DWI/DUI Clients Only,SA TX OP DU CJ SF PI
+2007,643,Port Gardner Bay Recovery,2722 Colby Avenue Suite 424,Everett,WA,98201,(425) 252-4656,SA TX OP SF PI
+2007,643,Providence Behavioral Health Services Providence Everett Medical Center,916 Paci˙c Avenue,Everett,WA,98206,(425) 258-7390,SA TX DT HI OP PH DU SF MC PI MI
+2007,643,Sea Mar Community Health Center,1031 SE Everett Mall Way,Everett,WA,98208,(425) 347-5415,MH-SA TX OP DU SF MD SI PI MI AR SS AH SP
+2007,643,Nooksack Tribe™s Genesis II,6750 Mission Road,Everson,WA,98247,(360) 966-7704,MH-SA TX HH OP PH CO HV PW WN MN DU CJ SF MD MC SI PI SS
+2007,643,Intercept Associates,30620 Paci˙c Highway South Suite 107,Federal Way,WA,98003,(253) 941-7555Hotline: (253) 941-7555,SA TX OP AD SF PI AH SP
+2007,643,Lakeside Milam Recovery Centers Inc,34004 9th Avenue South Suite 1 Building A,Federal Way,WA,98003,(253) 942-8686,SA TX OP AD SF SI PI
+2007,643,Jerry F Starr Memorial Foundation Avalon Counseling and Treatment Servs,5778 2nd Avenue Suite B,Ferndale,WA,98248,(360) 384-5329,SA TX OP DU SF PI SS
+2007,644,West End Outreach Services Forks Community Hospital,530 Bogachiel Way,Forks,WA,98331,(360) 374-6177Intakes: (360) 374-6177x320 (360) 374- 5011x360,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI SS PA
+2007,644,Compass Health/San Juan,520 Spring Street,Friday Harbor,WA,98250,(360) 378-2669x8511Intake: (360) 378-4994,MH-SA TX OP AD CO DU CJ SF MD MC SI PI MI
+2007,644,Chance to Change,5775 Soundview Drive Suite B-104,Gig Harbor,WA,98335,(253) 564-1165Intake: (253) 853-7954,SA TX OP AD SF SS
+2007,644,Gig Harbor Counseling Branch of Olalla Recovery Centers,5122 Olympic Drive NW Suite A-105,Gig Harbor,WA,98335,(253) 851-2552Intake: (253) 857-6798,SA TX OP WN MN DU CJ SF SI PI
+2007,644,Central Washington Comprehensive MH and Dependency Health Services,112 West Main Street,Goldendale,WA,98620,(509) 773-5801,MH-SA TX OP AD WN DU SF MD MC SI PI MI SS PA
+2007,644,Casa de Esperanza,300 Division Street,Grandview,WA,98930,(509) 882-3273DWI/DUI Clients Only,SA TX OP AD MN DU CJ SF MD MC SI PI AR SS PA SP
+2007,644,Grays Harbor Crisis Clinic Detox Unit,615 8th Street,Hoquiam,WA,98550,(360) 538-2889Intake: (360) 532-4357 Hotlines: (360) 532-4357 (800) 685-6556,MH DT RS SF MD MC SI PI MI SS PA
+2007,644,Saint Peter Chemical Dependency Center Hoquiam,508 1/2 8th Street,Hoquiam,WA,98550,(360) 533-8813Intakes: (360) 853-8813 (360) 493-4744,SA TX OP SF MD MC SI PI MI AH
+2007,644,Colville Tribal Alcohol/Drug Program Inchelium Branch,320 Short Cut Road,Inchelium,WA,99138,(509) 722-7067,SA TX OP AD WN MN DU MD PA
+2007,644,Lakeside Milam Recovery Centers Inc Issaquah Outpatient,98 NE Gilman Boulevard Suite 200,Issaquah,WA,98027,(425) 392-8468,SA TX OP AD SF SI PI
+2007,644,Colville Tribal Alcohol/Drug Program Keller,11669 South Highway 21,Keller,WA,99140,(509) 634-2260DWI/DUI Clients Only,SA TX DT OP PH SE MN DU PA
+2007,644,Drug Abuse Prevention Center Women™s Outpatient Services,621 Grade Street Suite B,Kelso,WA,98626,(360) 425-9600,TX OP PW WN DU SF MD SS PA AH
+2007,644,Action Chemical Dependency Center,1010 East Bruneau Street,Kennewick,WA,99336,(509) 735-7410,SA TX OP AD CO GL SE WN MN DU CJ SF SI PI MI AR SS PA
+2007,644,Advocates for Wellness,120 Vista Way,Kennewick,WA,99336,(509) 783-8833,SA TX OP AD CO DU CJ SF MD MC SI PI MI SS
+2007,644,Casita del Rio Unit I Branch of Triumph Treatment Services,1213 Morain Loop,Kennewick,WA,99336,(509) 734-7490Intake: (509) 248-1800,SA TX HH RL PW BC SF MD PI PA AH
+2007,644,Life Changes Chemical Dependency Agency,313 North Morain Street,Kennewick,WA,99336,(509) 783-3766,SA TX OP AD WN DU SF MD SI PI SS AH
+2007,645,Alternative Counseling,19115 South West Valley Highway Suite H-110,Kent,WA,98032,(425) 251-1933,SA TX OP SF PI
+2007,645,Comprehensive Alcohol Services,1609 South Central Avenue Suite 1,Kent,WA,98032,(253) 859-5487,SA TX OP SF PI
+2007,645,Hope Recovery Services,10830 SE Kent Kangley Road Suite 102,Kent,WA,98031,(253) 520-7460,SA TX OP DU AH
+2007,645,Kent Youth and Family Services,232 South 2nd Avenue Suite 201,Kent,WA,98032,(253) 859-0300,MH-SA TX OP AD SF MD PA AH
+2007,645,Recovery Centers of King County/Kent Outpatient,505 Washington Avenue South,Kent,WA,98032,(253) 854-6513,SA TX OP CO PW WN DU CJ SF MD MC SI PI AR SS AH
+2007,645,Seattle Mental Health,1404 South Central Avenue Suite 113,Kent,WA,98030,(206) 302-2200Intake: (206) 302-2300 Hotlines: (877) 435-7056 (877) 435-7054,MH-SA TX OP AD CO GL SE WN MN CJ SF MD MC SI PI AR SS PA AH
+2007,645,Valley Cities Counseling/Consultation Kent,325 West Gowe Street,Kent,WA,98032,(253) 939-4055,MH-SA TX OP AD CO SF MD PI MI AR PA
+2007,645,Lakeside Milam Recovery Centers Inc,10322 NE 132nd Street,Kirkland,WA,98034,(425) 823-3116,SA TX DT RS SF SI PI
+2007,645,Lakeside Milam Recovery Centers Inc,10422 NE 37th Circle Suite B,Kirkland,WA,98033,(425) 822-5095,SA TX OP AD SF PI
+2007,645,Soil New School of Innovate Learning,10200 NE 132nd Street,Kirkland,WA,98034,(425) 821-2000x1588Intake: (425) 821-2000,SA TX DT HI OP PH AD CO DU SF PI MI
+2007,645,Residence XII,12029 113th Avenue NE,Kirkland,WA,98034,(425) 823-8844,SA TX RS OP PH CO SE DU SF PI
+2007,645,Swinomish Alcohol Program,17337 Reservation Road,La Conner,WA,98257,(360) 466-7256Intake: (360) 466-1024,SA TX OP AD CO SF MD PI AR
+2007,645,Damon Counseling Services,4438 Paci˙c Avenue SE,Lacey,WA,98503,(360) 491-0920,SA TX OP DU SF MC PI SS
+2007,645,Providence Saint Peter Chemical Dependency Center,4800 College Street SE,Lacey,WA,98503,(360) 456-7575Intake: (360) 493-7575,SA TX DT HI OP PH AD GL SE PW DU SF MD MC SI PI MI SS AH
+2007,645,Right Step Inc,801 Sleater-Kinney Road SE Suite 20,Lacey,WA,98503,(360) 923-9585,SA TX DT OP SE WN MN DU SF PI
+2007,645,My Service Mind of Northwest,11016 Bridgeport Way SW,Lakewood,WA,98499,(253) 584-5615DWI/DUI Clients Only,SA TX OP DU SF PI F47
+2007,646,Reˆections Recovery and Learning Ctr Lakewood Branch,8907 Gravelly Lake Drive SW Suite C,Lakewood,WA,98499,(253) 581-5556,SA TX OP CO WN DU CJ SF MD MC SI PI AR SS AH
+2007,646,Providence Addictions Recovery Center Long Beach,103 East 6th Street,Long Beach,WA,98631,(360) 642-5059Intakes: (360) 748-4357 (800) 622-4009 (360) 748,HELP SA TX OP AD SF MD MC SI PI MI AH
+2007,646,Awakenings,920 Fir Street,Longview,WA,98632,(360) 423-2806,MH-SA TX OP CO SF PI
+2007,646,Cowlitz Indian Tribe Cowlitz Tribal Treatment Program,1055 9th Avenue Suite D,Longview,WA,98632,(360) 575-3316,GH TX OP WN DU SF MD MC PI AR PA
+2007,646,Drug Abuse Prevention Center Longview Outpatient,600 Broadway,Longview,WA,98632,(360) 425-9210,SA TX RS RL OP PW WN BC CJ SF MD MC SS PA AH
+2007,646,Kaiser Permanente,1230 7th Avenue,Longview,WA,98632,(360) 636-2400Intake: (360) 636-6235,GH TX DT OP WN MN SF MC PI
+2007,646,Providence Addictions Recovery Center Longview,1322 Commerce Avenue,Longview,WA,98632,(360) 414-8771Intake: (800) 622-4009,SA TX OP AD CJ SF MD MC SI PI MI AH
+2007,646,Southwest Washington Safehaven,1441 11th Avenue,Longview,WA,98632,(360) 577-4340DWI/DUI Clients Only,SA TX OP AD CO DU SF PI SS AH
+2007,646,Starting Point Inc Longview Branch,1315 Hemlock Street,Longview,WA,98632,(360) 423-1563,SA TX OP DU CJ SF PI
+2007,646,Center,310 5th Street,Lynden,WA,98264,(360) 354-5120,SA TX OP AD CO DU SF PI MI
+2007,646,Bowen Recovery Center,1120 164th Street SW Suite I,Lynnwood,WA,98087,(425) 787-5833,SA TX OP CO SF PI MI
+2007,646,Crosby Recovery Center Crosby Center,3924 204th Street SW,Lynnwood,WA,98036,(425) 774-2955,SA TX OP SF PI
+2007,646,La Esperanza Health Counseling Servs,19909 64th Avenue West Suite A,Lynnwood,WA,98036,(206) 306-2690,SA TX OP PH AD CO HV GL SE PW WN MN DU CJ SF PI SS SP
+2007,646,Options/Lynnwood,15620 Highway 99 Suite 6,Lynnwood,WA,98037,(360) 405-5833Intake: (425) 742-6410,SA TX OP PH CO GL SE PW WN MN DU CJ SF PI
+2007,646,HS Inc/Lynnwood Clinic,18631 Alderwood Mall Parkway Suite 102,Lynnwood,WA,98037,(425) 672-7293Intake: (425) 760-1365 Hotline: (866) 575-8188 Methadone Clients Only,SA TX DT MM DM OP CO WN MN SF PI SS SP
+2007,646,Catholic Community Services,1227 2nd Street,Marysville,WA,98270,(360) 651-2366,SA TX OP AD PW WN SF MD PI AR AH
+2007,646,Clearview Counseling Prevention and Treatment Professionals,1106 Columbia Avenue,Marysville,WA,98270,(360) 653-0374x111Intake: (360) 651-5693,MH-SA TX OP AD DU CJ SF PI MI SS
+2007,647,Tulalip Tribal Family Services Chemical Dependency Program,2821 Mission Hill Road,Marysville,WA,98270,(360) 651-4400,MH-SA TX OP AD PW WN DU SF MD MC SI PI AR SS PA
+2007,647,Tulalip Tribes Family and Youth Servs Treatment and Prevention Program,2821 Mission Hill Road,Marysville,WA,98271,(360) 651-4400,MH-SA TX OP AD WN DU CJ SF MD MC PI SS AH
+2007,647,Alpha Center for Treatment Inc,146 North Blakely Street,Monroe,WA,98272,(360) 794-7187,SA TX OP CO CJ SF PI
+2007,647,Fire With Fire Interventions,17707 West Main Street Suite 203,Monroe,WA,98272,(360) 794-5489,SA TX OP PH AD CO DU SF PI
+2007,647,Sea Mar Community Healthcare Centers Monroe Branch,909 West Main Street Suite 102A,Monroe,WA,98272,(425) 347-5415Intake: (360) 805-3122,SA TX OP SF MD MC SI PI AR SS
+2007,647,Valley General Behavioral Health Servs,14701 179th Street SE,Monroe,WA,98272,(360) 794-1405,SA TX RS OP PH PW DU SF MD MC PI MI
+2007,647,Providence Addictions Recovery Center Morton,218 Main Street Suite A,Morton,WA,98356,(360) 496-6216Intakes: (360) 748-4357 (800) 622-4009 (360) 748,HELP SA TX OP SF MD MC SI PI MI AH
+2007,647,Alcohol/Drug Dependency Services,708 Penn Street,Moses Lake,WA,98837,(509) 764-5206,SA TX OP DU SF SI PI
+2007,647,New Directions Counseling Mossyrock,224 East State Street,Mossyrock,WA,98564,(360) 983-3472,SA TX OP SF PI
+2007,647,Recovery Center,1905 Continental Place,Mount Vernon,WA,98273,(360) 428-7835,SA TX DT RS RL OP AD CO WN MN DU CJ SF MD SI PI SS PA AH
+2007,647,Sea Mar Substance Abuse Services Outpatient Mount Vernon Branch,2500 East College Way Suite 100,Mount Vernon,WA,98273,(360) 428-8912,MH-SA TX OP AD WN SF MD PI SS SP
+2007,647,Alderwood Recovery Mountlake Terrace,6405 218th Street SW Suite 301,Mountlake Terrace,WA,98043,(425) 478-1000,SA TX OP AD CO HV SE WN MN DU CJ SF PI
+2007,647,Colville Tribal Alcohol/Drug Program Behavioral Health Programs Hwy,155 Colville Tribal Headquarters,Nespelem,WA,99155,(509) 634-2433x2433Intakes: (509) 634-2601x2601 (509) 634- 2610x2610,MH-SA TX OP PH AD CO HV GL SE PW WN MN DU CJ MD MC SI
+2007,647,Pend Oreille County Counseling Center Chemical Dependency Treatment,105 South Garden Avenue,Newport,WA,99156,(509) 447-6424Intakes: (509) 447-5651 (509) 447,MICI SA TX OP AD CO DU SF MD MC SI PI MI SS PA
+2007,647,Island Assessment and Counseling Ctr,520 East Whidbey Avenue Suite 205,Oak Harbor,WA,98277,(360) 675-5782DWI/DUI Clients Only,SA TX OP AD CO HV GL SE PW WN MN DU CJ SF SI PI AH
+2007,647,Tsapowum Chehalis/Chehalis Behav Heath Chemical Dependency Program,420 Howanut Drive,Oakville,WA,98568,(360) 273-5595Intakes: (360) 273-5595x1672 (360) 858-1672,MH-SA TX DT OP PH AD DU SF MD MC SI PI MI SS PA AH
+2007,647,Olalla Recovery Centers,12851 Lala Cove Lane SE,Olalla,WA,98359,(253) 857-6201Intake: (800) 882-6201,SA TX RS SF SI PI
+2007,648,Alternatives Professional Counseling,203 4th Avenue Suites 301-304,Olympia,WA,98501,(360) 357-7986,MH-SA TX OP AD DU CJ SF MD PI MI SS
+2007,648,Behavioral Health Services Recovery Services,325 4th Avenue East,Olympia,WA,98501,(360) 704-7170,SA TX HH OP CO PW WN SF MD SI PI AR
+2007,648,Nisqually Tribe Substance Abuse Program,4816 She-Nah-Num Drive SE,Olympia,WA,98513,(360) 459-5312Intake: (360) 459-5312x1171,SA TX DT OP PH DU MD MC SI PI AH
+2007,648,Sea Mar Olympia Branch Outpatient Substance Services,409 Custer Way Suite D,Olympia,WA,98501,(360) 570-8258,MH-SA TX OP MN DU SF MD SI PI SS PA SP
+2007,648,South Sound Clinic of Evergreen Treatment Services,6700 Martin Way East Suite 117,Olympia,WA,98516,(360) 413-6910Methadone Clients Only,SA TX DT MM DM OP SF MD PI
+2007,648,True North Student Assistance and Treatment Services/˝urston,601 McPhee Road SW,Olympia,WA,98502,(360) 464-6870,TX OP AD SF MD PA AH
+2007,648,Colville Tribal Alcohol/Drug Program Omak Branch,500 Benton Street,Omak,WA,98841,(509) 422-7410,MH-SA TX DT OP AD CO DU MD MC SI PI PA
+2007,648,Okanogan Behavioral Healthcare Inc Chemical Dependency/Medical Servs,1007 Koala Drive,Omak,WA,98841,(509) 826-5600,MH-SA TX DT OP AD CO WN MN DU SF MD MC SI PI MI AR AH SP
+2007,648,Adams Cnty Community Counseling Servs,425 East Main Street,Othello,WA,99344,(509) 488-5611,SA TX OP AD CO WN MN SF MD SI PI SS PA AH SP
+2007,648,Lourdes Chemical Dependency Program Pasco,520 North 4th Street,Pasco,WA,99301,(509) 546-2377x2375Intake: (509) 546-2377,SA TX OP CO SF MD MC PI MI SS PA
+2007,648,Nueva Esperanza Counseling Center,720 West Court Street Suite 8,Pasco,WA,99301,(509) 545-6506DWI/DUI Clients Only,MH-SA TX OP DU CJ SF MD PI SP
+2007,648,Unity Counseling Services,303 North 20th Street,Pasco,WA,99301,(509) 547-9545,SA TX OP AD PW WN DU SF MD MC PI SS SP
+2007,648,Rogers Counseling Center,856 Main Street,Pomeroy,WA,99347,(509) 843-3791Hotline: (509) 843-3791,MH-SA TX OP AD SE WN MN SF MD PI AH
+2007,648,Highland Courte,1704 Melody Circle,Port Angeles,WA,98362,(360) 417-5356Intake: (866) 417-3322,SA TX RS RL PW WN MN SF MD MC SI PI AR
+2007,648,Klallam Counseling Services,1026 East 1st Street Suite 2,Port Angeles,WA,98362,(360) 452-4432,SA TX OP AD CO WN MN SF MD SI SS PA
+2007,648,Trillium Treatment Center,528 West 8th Street,Port Angeles,WA,98362,(360) 457-9200,SA TX OP SE WN MN DU SF SI PI SP
+2007,648,True Star Recovery Program Clallam County Youth Services,1912 West 18th Street,Port Angeles,WA,98363,(360) 417-2282,SA TX DT OP AD CO CJ SF MD MC SI PI MI AR SS
+2007,648,West End Outreach Servs Oak Street Ctr Branch of Forks Community Hospital,109 North Oak Street,Port Angeles,WA,98363,(360) 417-9456Intake: (360) 417-9456x10,SA TX OP CO PW WN SF MC PI PA AH
+2007,649,Turning Point Recovery,11086 Rhody Drive,Port Hadlock,WA,98339,(360) 385-4855,SA TX OP GL DU SF SI PI SS AH
+2007,649,Action Counseling,729 Prospect Street Suite 200,Port Orchard,WA,98366,(360) 895-1307,SA TX OP CO SF PI
+2007,649,West Sound Treatment Center,1415 Lumsden Road,Port Orchard,WA,98367,(360) 876-0713Intake: (360) 876-9430,SA TX OP PW WN DU SF MD PI SS AH
+2007,649,Gray Wolf Ranch Port Townsend,4148 Hastings Avenue West,Port Townsend,WA,98368,(360) 385-5505Intake: (800) 571-5505,SA TX RL AD CO GL MN SF
+2007,649,Safe Harbor Recovery Center Port Townsend,686 Lake Street Suite 400,Port Townsend,WA,98368,(360) 385-3866Hotline: (360) 385-3866,SA TX OP DU SF MD SI PI AR
+2007,649,New Beginning with Advantages Poulsbo,19950 7th Avenue NE Suite 201,Poulsbo,WA,98370,(360) 598-3929,SA TX OP AD DU SF PI
+2007,649,Cascade Recovery Center North,174 Front Street,Poulsbo,WA,98370,(360) 698-7267,SA TX OP AD WN SF MD SI PI SS
+2007,649,Palouse Recovery Center LLC Pullman,1240 SE Bishop Boulevard Suite P,Pullman,WA,99163,(509) 334-0718,SA TX OP DU SF PI AH
+2007,649,Palouse River Counseling,340 Maple Street NE,Pullman,WA,99163,(509) 334-1133,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI SS PA AH
+2007,649,Alcohol Drug Services of WA Puyallup,10312 120th Street East Suite 3,Puyallup,WA,98374,(866) 807-6187,SA TX OP DU SF PI
+2007,649,Lakeside Milam Recovery Centers Inc,102107 125th Street Court East Suite 100,Puyallup,WA,98374,(253) 840-8687,SA TX OP AD DU SF PI
+2007,649,Paci˙c Rim Counseling Inc Paci˙c Rim Counseling Services Inc,319 South Meridian Street,Puyallup,WA,98371,(253) 841-4284,SA TX OP CO WN DU SF PI MI
+2007,649,Social Treatment Opportunity Programs (STOP),12812 101st Avenue Court East Suite 103,Puyallup,WA,98373,(253) 770-4720,SA TX OP AD DU SF SI PI AR SS
+2007,649,Sound Counseling Inc,719 East Main Avenue Suite C,Puyallup,WA,98372,(253) 841-8165,SA TX OP DU SF PI SS
+2007,649,Group Health Cooperative Behavioral Health Detox Residential Unit,2700 152nd Avenue NE 2 North EMB,Redmond,WA,98052,(425) 883-5151x4366Hotline: (425) 883-5151x4366,SA TX DT HI RS PH MC SI PI MI AH
+2007,649,Square One Redmond,16310 NE 80th Street Suite 104,Redmond,WA,98052,(425) 881-7084,SA TX OP DU SF PI
+2007,649,Alcohol and Drug Services of Renton WA,140 Rainer Avenue South Suite 103,Renton,WA,98055,(425) 430-9548,SA TX OP SF PI AR
+2007,649,Lakeside Milam Recovery Centers Inc South,1000 SW 7th Street,Renton,WA,98055,(206) 248-4358Intake: (253) 840-8687,SA TX OP AD SF SI PI
+2007,650,Renton Area Youth and Family Services,1025 South 3rd Street,Renton,WA,98055,(425) 271-5600x24Intake: (425) 271-5600,MH-SA TX OP AD CO CJ SF MD SS PA
+2007,650,Renton Clinic A member of CRC Health Group Inc,2838 Sunset Boulevard NE,Renton,WA,98056,(425) 687-7082Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP PW WN MN SF PI SS
+2007,650,Western Washington Alcohol/Drug Ctr,140 Rainer Avenue South Suite 5,Renton,WA,98055,(425) 271-1990,SA TX OP WN DU SF PI AR SS
+2007,650,Change Point of Ferry County Community Services,147 North Clark Avenue Suite 12,Republic,WA,99166,(509) 775-2958x534Intakes: (509) 775-2958 (509) 775-3341,SA TX OP AD CO DU CJ SF MD MC SI PI MI SS
+2007,650,Choices and Changes Inc,1236 Columbia Park Trail,Richland,WA,99352,(509) 735-7899,SA TX OP DU SF PI AH
+2007,650,Somerset Counseling Center,1305 Mans˙eld Street Suite 5,Richland,WA,99352,(509) 942-1624,SA TX OP AD DU SF MD SI PI SS AH
+2007,650,Positive Alternative Womens Center and Mens Recovery Program,4649 Sunnyside Avenue North Suite 200,Seattle,WA,98103,(206) 547-1955,SA TX OP WN MN SF PI
+2007,650,Alternatives Inc,3123 Eastlake Avenue East Suite 100,Seattle,WA,98102,(206) 323-4750,SA TX OP DU SF PI
+2007,650,Armstrong Alcohol and Drug Recovery,625 Strander Boulevard Suite C,Seattle,WA,98188,(206) 575-1958DWI/DUI Clients Only,SA TX OP DU SF PI SS PA
+2007,650,Asian Counseling and Referral Service,720 8th Avenue South Suite 200,Seattle,WA,98104,(206) 695-7600,MH-SA TX OP AD CO GL SE MN DU CJ SF MD MC PI AR SS PA F13 F17 F47 F48 F81 F86 F92
+2007,650,Associated Behavioral Healthcare Inc North Seattle Facility,1155 North 130th Street Suite 303,Seattle,WA,98133,(206) 306-8450,SA TX OP SF PI SS
+2007,650,Associated Behavioral Healthcare Inc West Seattle Branch,4701 41st Avenue SW Suite 120,Seattle,WA,98116,(206) 935-1282,SA TX OP DU SF PI SS
+2007,650,Circle of Recovery,1207 North 200th Street Suite 104,Seattle,WA,98133,(206) 542-1136x542Intake: (206) 542-1136,SA TX OP SF SI PI
+2007,650,Cocaine Outreach and Recovery Programs (CORP) Recovery,1905 South Jackson Suite A,Seattle,WA,98104,(206) 323-5399,SA TX OP MN SF SI PI MI SS PA
+2007,650,Community Psychiatric Clinic Bridgeway Branch,3825 Bridgeway North,Seattle,WA,98103,(206) 632-5009,SA TX OP CO WN MN DU CJ SF MD PI AR AH
+2007,650,Consejo Counseling and Referral Servs,3808 South Angeline Street,Seattle,WA,98118,(206) 461-4880Intake: (206) 461-4880x155,MH-SA TX OP AD CO SE MN DU CJ SF MD MC SI PI AR AH SP
+2007,650,Downtown Emergency Service Center,515 3rd Avenue,Seattle,WA,98104,(206) 464-1570x3084,MH-SA TX OP CO MD AR AH
+2007,650,Emmanuel Counseling/Educational Servs,12508 Lake City Way NE Suite 220,Seattle,WA,98125,(206) 417-2222,SA TX OP SF SI PI
+2007,650,Evergreen Treatment Services Unit,1 1700 Airport Way South,Seattle,WA,98134,(206) 223-3644Methadone Clients Only,SA TX MM DM OP CO SF MD SI PI AR AH SP
+2007,651,Evergreen Treatment Services Unit,2 1740 Airport Way South,Seattle,WA,98134,(206) 223-3644Methadone Clients Only,SA TX DT MM DM OP CO SF MD SI PI AR AH SP
+2007,651,Evergreen Treatment Services Unit,3 1718 Airport Way South,Seattle,WA,98134,(206) 223-3644Methadone Clients Only,SA TX DT MM DM OP SF MD SI PI AR
+2007,651,Genesis House,621 34th Avenue,Seattle,WA,98122,(206) 328-0881,SA TX RL OP CO PW WN BC MN CJ SF MD MC
+2007,651,Guardian Recovery Program,4812 Aurora Avenue North,Seattle,WA,98103,(206) 545-0597Intake: (206) 522-5856,SA TX OP SF PI
+2007,651,Harborview Medical Ctr Addictions Prog,401 Broadway Avenue,Seattle,WA,98104,(206) 744-9600Intake: (206) 744-9657,SA TX DT OP CO WN MN SF MD SI PI AR SS PA AH
+2007,651,Highline Addiction Recovery Center Highline Medical Center,12844 Military Road South,Seattle,WA,98168,(206) 248-4787,SA TX DT HI OP PH WN MN DU SF MC SI PI MI AH
+2007,651,Lakeside Milam Recovery Centers Inc,12845 Ambaum Boulevard SW,Seattle,WA,98146,(206) 241-0890Intake: (800) 544-1211,SA TX RL AD SF SI PI
+2007,651,Lakeside Milam Recovery Centers Inc,2815 Eastlake Avenue East Suite 100,Seattle,WA,98102,(206) 341-9373,SA TX OP AD DU SF PI
+2007,651,Northwest Resources,22620 7th Avenue South,Seattle,WA,98198,(206) 824-9273Hotline: (800) 562-1240,SA TX OP AD WN MN DU SF PI SS AH
+2007,651,Perinatal Treatment Services,600 North 130th Street,Seattle,WA,98133,(206) 223-1300x239Intakes: (206) 223-1300x234 (253) 475- 2500x228,SA TX RL OP PW BC MD AH
+2007,651,Pioneer Counseling Services/Adult Branch of Pioneer Human Services,105 14th Street Suite 3-A,Seattle,WA,98122,(206) 464-1684Intake: (206) 464-1684x5003,MH-SA TX OP AD CO CJ SF MD PI AR
+2007,651,Pioneer Counseling Servs Youth/Family Branch of Pioneer Human Services,105 14th Street Suite 3-B,Seattle,WA,98122,(206) 464-1684Intake: (206) 464-1684x5003,MH-SA TX OP AD CO WN DU CJ SF MD PI AR
+2007,651,Professional Health Associates,610 NW 44th Street,Seattle,WA,98107,(206) 784-4646,SA TX OP DU CJ SF PI
+2007,651,P˛uantah Assessment and Counseling Services,8420 Dayton Avenue North,Seattle,WA,98103,(206) 957-0721,SA TX OP AD CO DU CJ SF MI SS AH F43
+2007,651,Recovery Centers of King County,464 12th Avenue Suite 300,Seattle,WA,98122,(206) 322-2970,SA TX OP CO PW WN MN DU SF MD MC SI PI MI AR SS PA AH
+2007,651,Recovery Centers of King County Detoxi˙cation Facility,1701 18th Avenue South,Seattle,WA,98144,(206) 325-5000,SA TX DT HH RS AD SF MD PI AR PA AH
+2007,651,Recovery Options Northwest,2150 North 107th Street Suite 200,Seattle,WA,98133,(206) 361-4707x3Intake: (206) 361-4707,SA TX OP SF PI SS
+2007,651,Ruth Dykeman Youth and Family Service,15001 8th Avenue SW,Seattle,WA,98166,(206) 243-5544x315Intake: (206) 243-5544x311,MH-SA TX OP AD CO CJ SF MD SS
+2007,652,Ryther Child Center Adolescent Chem Dependency Trt Prog,2400 NE 95th Street,Seattle,WA,98115,(206) 525-5050,SA TX RL OP AD CO SF MD MC SI PI SS PA AH
+2007,652,Ryther Child Center Safeco Safe House,11729 1/2 36th Avenue NE,Seattle,WA,98125,(206) 525-5050x207Intake: (206) 525-5050,SA TX RL AD CO SF MD MC SI PI SS PA AH
+2007,652,Ryther Child Center West Seattle Outpatient Branch,1725 SW Roxbury Street,Seattle,WA,98106,(206) 766-9789Intake: (206) 525-5050,SA TX OP AD CO SF MD MC SI PI SS AH
+2007,652,Schick Shadel Hospital Substance Abuse Program,12101 Ambaum Boulevard SW,Seattle,WA,98146,(206) 244-8100Intakes: (800) 272-8464 (800) ,CRAVING SA TX DT HI DU SF MC SI PI
+2007,652,Sea Mar Community Health Centers Des Moines Recovery Center,24215 Paci˙c Highway South,Seattle,WA,98198,(206) 878-7393,SA TX RL HV SF MD SP
+2007,652,Sea Mar Renacer Youth Treatment Ctr,10001 17th Place South,Seattle,WA,98168,(206) 766-6960,SA TX RL AD SF MD SI PI AH SP
+2007,652,Seadrunar Forest Park,10344 14th Avenue South,Seattle,WA,98108,(206) 767-0244,SA TX RL BC SF MD MC
+2007,652,Seadrunar Phase,1 Branch of Seattle Drug/Narcotic Center 10344 14th Avenue South,Seattle,WA,98168,(206) 767-0244,SA TX RL BC SF MD MC
+2007,652,Seattle Counseling Services For Sexual Minorities,1216 Pine Street Suite 300,Seattle,WA,98101,(206) 323-1768,MH-SA TX OP AD CO GL DU SF MD SI PI AR SS PA AH
+2007,652,Seattle Indian Health Board Alcohol Drug Outpatient,2212 South Jackson Street,Seattle,WA,98144,(206) 834-4029,SA TX OP SF MD MC AR SS PA
+2007,652,Seattle Mental Health NCI Renton,6100 Southcenter Boulevard Suite 200,Seattle,WA,98188,(206) 302-2388Intake: (206) 302-2300 Hotlines: (877) 435-7056 (877) 435-7054,MH-SA TX OP AD CO GL SE WN MN CJ SF MD MC SI PI AR SS PA AH
+2007,652,Seattle Mental Health Northgate,9706 4th Avenue NE Suite 303,Seattle,WA,98155,(206) 302-2200x2388Intake: (206) 302-2300 Hotlines: (877) 435-7056 (877) 435-7054,MH-SA TX OP AD CO GL SE WN MN CJ SF MD MC SI PI AR SS PA AH
+2007,652,Seattle Mental Health Tukwila,6100 Southcenter Boulevard Suite 200,Seattle,WA,98188,(206) 302-2200x2388Intake: (206) 302-2300 Hotlines: (877) 435-7056 (877) 435-7054,MH-SA TX OP AD CO GL SE WN MN CJ SF MD MC SI PI AR SS PA AH
+2007,652,Shamrock Group Inc,8535 Phinney Avenue North,Seattle,WA,98103,(206) 789-4784,SA TX OP DU CJ SF
+2007,652,Sunrise Centers,12650 1st Avenue South,Seattle,WA,98168,(206) 248-3006,SA TX OP DU CJ SF SI PI MI SS
+2007,652,Swedish Medical Center/Ballard Addiction Recovery Services,5300 Tallman Avenue NW,Seattle,WA,98107,(206) 781-6209Intake: (206) 781-6048,GH TX DT HI PW WN SF MD MC PI MI
+2007,652,Central Youth and Family Services,1901 Martin Luther King Jr Way South,Seattle,WA,98144,(206) 322-7676x200Intake: (206) 322-7676x226,MH-SA TX OP AD CO CJ SF MD SI PI AR SS PA
+2007,652,˝e Living Center,19940 Ballinger Way NE Suite B-1,Seattle,WA,98155,(206) 363-1992Intake: (800) 719-6604 Hotlines: (206) 363-1992 (800) 719-6604,SA TX DT OP PH AD CO DU CJ SF SI PI SS
+2007,653,˝erapeutic Health Services Midvale Branch,17962 Midvale Avenue North Suite 150,Seattle,WA,98133,(206) 546-9766,SA TX DT MM DM OP CO PW WN MN DU SF MD SI PI MI AR
+2007,653,S˝erapeutic Health Services Rainier Branch South,5802 Rainier Avenue South,Seattle,WA,98118,(206) 723-1980,MH TX OP WN MN DU CJ SF MD PI MI SS AH F3
+2007,653,˝erapeutic Health Services Seneca Branch,1305 Seneca Street,Seattle,WA,98101,(206) 323-0934Intake: (206) 323-0934x0 Methadone Clients Only,SA TX DT MM DM OP CO PW WN MN CJ SF MD PI AR AH F37 F92
+2007,653,˝erapeutic Health Services Summit Branch,1116 Summit Avenue,Seattle,WA,98101,(206) 323-0930,SA TX DT MM DM OP CO PW WN MN DU CJ SF MD SI PI MI AR SS AH F37 F44 F48
+2007,653,˝underbird Treatment Center,9236 Renton Avenue South,Seattle,WA,98118,(206) 722-7152,SA TX RS RL WN MN SF MD MC SI PI SS PA AH SP
+2007,653,Riverton Place,3020 South 128th Street,Seattle,WA,98168,(206) 242-5585,SA TX HH OP MN
+2007,653,University of Washington Department of Psychiatry,146 North Canal Street Suite 100,Seattle,WA,98103,(206) 685-2085Intakes: (206) 685-3765 (206) 323-5900,MH TX OP AD CO CJ MC
+2007,653,Puget Sound Healthcare System Seattle Division,1660 South Columbian Way Mail Stop S-116-ATC,Seattle,WA,98108,(206) 764-2782x2782Intake: (206) 764-2457,MH-SA TX DT MM BU HI OP CO WN MN SF PI MI PA
+2007,653,Washington Asian Paci˙c Islander Families Against Substance Abuse,606 Maynard Avenue South Suite 106,Seattle,WA,98104,(206) 223-9578Intake: (206) 467-1563,SA TX OP AD CJ SF MD SS PA F43
+2007,653,Phoenix Recovery Services,2000 Hosptial Drive,Sedro Woolley,WA,98284,(360) 856-7241Intake: (360) 848-8437,SA TX OP AD CO PW SF MD MC SI PI SS PA AH
+2007,653,Pioneer Center North Branch of Pioneer Human Services,24961 ˝ompson Drive,Sedro Woolley,WA,98284,(360) 856-3186Intake: (360) 856-3155,SA TX DT RS RL CO SF PA AH
+2007,653,Upper Skagit Indian Tribe Chemical Dependency Treatment Program,25959 Community Plaza Way,Sedro Woolley,WA,98284,(360) 854-7070,SA TX OP SF MD PI
+2007,653,Jamestown S™Klallam Chemical Dependency Program,1033 Old Blyn Highway,Sequim,WA,98382,(360) 681-4625x625Intakes: (360) 681-4625 (800) 262-6603x4625,TX OP SF MD MC SI PI
+2007,653,Olympic Personal Growth Center,390 East Cedar Street,Sequim,WA,98382,(360) 681-8463Hotline: (800) 562-1240,SA TX OP AD SF MD SI PI SS AH
+2007,653,Safe Harbor Recovery Center Sequim,609 West Washington Street Suite 4,Sequim,WA,98382,(360) 681-7494,SA TX OP AD SF PI MI AR AH
+2007,653,New Directions Counseling Shelton,627 West Franklin Street,Shelton,WA,98584,(360) 427-5232,SA TX OP SF PI SP
+2007,653,Northwest Resources II Inc Shelton,428 West Birch Street Suite 14-B,Shelton,WA,98584,(360) 426-0890,SA TX OP DU SF SI PI SS
+2007,653,Saint Peter Chemical Dependency Center Shelton Branch,506 West Franklin Street,Shelton,WA,98584,(360) 432-8692,SA TX OP AD CJ SF MD MC SI PI MI AH
+2007,653,Skokomish HOPE Alcohol/Drug Program North,80 Tribal Center Road,Shelton,WA,98584,(360) 426-7788,MH-SA TX OP AD CO SE PW WN MN DU CJ SF SS PA SP
+2007,654,True North Student Assistance and Treatment Services/Mason,807 West Pine Street,Shelton,WA,98584,(360) 427-2050,SA TX OP AD SF MD SI PI SS PA AH
+2007,654,Cascade Recovery Center Silverdale,9095 McConnell Avenue NW,Silverdale,WA,98383,(360) 698-7267,SA TX OP AD WN SF MD MC SI PI SS AH
+2007,654,Providence Addictions Recovery Center South Bend,914-B West Robert Bush Drive,South Bend,WA,98586,(360) 875-4172Intakes: (360) 748-4357 (800) 622-4009 (360) 748,HELP SA TX OP AD SF MD MC SI PI MI AH
+2007,654,Reˆections Recovery and Learning Ctr Spanaway Unit,2 18407 Paci˙c Avenue South Suite 19,Spanaway,WA,98387,(253) 846-9779,MH-SA TX DT OP AD CO SE DU SF MC SI PI AR SS PA AH
+2007,654,Abstemious Outpatient Clinic Inc,1007 West Francis Avenue,Spokane,WA,99205,(509) 326-7721Intake: (509) 326-7725 Hotline: (509) 326-7721,SA TX OP WN MN DU CJ SF PI SS
+2007,654,American Behavioral Health Systems,44 East Cozza Drive,Spokane,WA,99208,(509) 325-6800,SA TX RS RL SF MD MC SI PI AH
+2007,654,Colonial Clinic North,910 Washington Street Suite 210,Spokane,WA,99201,(509) 327-9831,SA TX OP SF SI PI SS
+2007,654,Daybreak Youth Services Intensive Inpatient Program for Youth,628 South Cowley Street,Spokane,WA,99202,(509) 624-3227Intake: (888) 454-5506x18,SA TX RL AD SF PI SS AH
+2007,654,Daybreak Youth Services Outpatient Treatment,960 East 3rd Avenue,Spokane,WA,99202,(509) 444-7033Intake: (509) 444-7033x0,SA TX OP AD DU SF MD SI PI SS AH SP
+2007,654,Daybreak Youth Services Valley Outpatient,11711 East Sprague Street Suite D-4,Spokane,WA,99206,(509) 927-1991Intake: (509) 444-7033x0,SA TX OP AD DU SF MD SI PI SS AH
+2007,654,Excelsior Youth Centers Inc,3754 West Indian Trail Road,Spokane,WA,99208,(509) 328-7041x101,MH-SA TX RL AD CO SF MD MC SI PI PA AH
+2007,654,Gateway Counseling Services,140 South Arthur Street Suite 506,Spokane,WA,99202,(509) 532-8855Intake: (877) 532-8855,SA TX DT OP WN MN DU SF PI SS
+2007,654,Group Health Cooperative Behavioral Health Services,322 West North River Drive,Spokane,WA,99201,(509) 241-2575,SA TX OP WN MN DU SF MC PI AH
+2007,654,Native Project,1803 West Maxwell Avenue,Spokane,WA,99201,(509) 325-5502,MH-SA TX OP AD CO PW CJ SF MD SI PI MI SS PA SP N18
+2007,654,New Directions Outpatient Clinic,2132 North West Boulevard,Spokane,WA,99205,(509) 838-0304,MH-SA TX OP AD DU CJ SF PI SS
+2007,654,New Horizon Counseling Services Outpatient,504 East 2nd Avenue,Spokane,WA,99202,(509) 838-6092x32Intake: (509) 838-6092x10,SA TX OP HV WN MN SF MD PI AR SS AH
+2007,654,Northeast Washington Treatment Alternatives,1224 North Ash Street,Spokane,WA,99201,(509) 326-7740,SA TX OP AD WN DU CJ SF MC AR SS AH
+2007,655,Partners with Families and Children Spokane,613 South Washingon Street,Spokane,WA,99204,(509) 473-4810,MH-SA TX OP CO PW WN MN CJ SF MD PI MI AR
+2007,655,Powder Basin Associates Ltd,301 East Sharp Avenue Suite A,Spokane,WA,99202,(206) 302-2200Intakes: (509) 328-7352 (208) 762-3979,MH-SA TX DT OP AD CO SE WN DU CJ SF MD MC PI MI AH
+2007,655,Social Treatment Opportunity Programs (STOP)/Spokane,9212 East Montgomery Street Suite 501,Spokane,WA,99206,(509) 927-3668,SA TX OP AD DU SF PI AR SS
+2007,655,Spokane Addiction Recovery Centers (SPARC)/Christoph House,1403 West 7th Avenue,Spokane,WA,99204,(509) 624-3251,SA TX RS CO MN SF MD AH
+2007,655,Spokane Addiction Recovery Centers (SPARC)/Outpatient Services,1508 West 6th Avenue,Spokane,WA,99204,(509) 624-5228,SA TX OP DU SF MD AR AH
+2007,655,Spokane Addiction Recovery Centers (SPARC)/Shaw,1509 West 8th Avenue,Spokane,WA,99204,(509) 624-3251,SA TX RL MN SF MD AH
+2007,655,Stepps/YFA Connections,901 East 2nd Avenue Suite 100,Spokane,WA,99202,(509) 532-2000Intake: (509) 532-2000x28,SA TX OP CO PW SF MD PI AR SS PA AH
+2007,655,Sun Ray Court Adult Male Branch,518 South Browne Street,Spokane,WA,99204,(509) 456-5465Hotlines: (800) 562-1240 (206) 722-3700,SA TX HH RS RL MN SF MD MC PI AR AH
+2007,655,Veterans A airs Medical Center Substance Abuse Treatment Program,4815 North Assembly Drive,Spokane,WA,99205,(509) 434-7000x7285Intakes: (509) 434-7000x7014 (509) 434-7285,SA TX RS OP PH DU CJ PA
+2007,655,Crossroads Behavioral Health,240 SW Cascade Avenue,Stevenson,WA,98648,(509) 427-7100,SA TX OP AD HV GL SE PW WN MN DU CJ SF MD MC SI PI MI AR SS PA
+2007,655,Skamania County Counseling Center,683 SW Rock Creek Drive,Stevenson,WA,98648,(509) 427-3850,MH-SA TX OP AD WN DU SF MD MC SI PI MI SS AH
+2007,655,Center East Sumner Branch,1110 Fryar Avenue Suite B,Sumner,WA,98390,(253) 863-0682,SA TX OP SF MD PI AR
+2007,655,Exodus Counseling and Treatment Servs,918 Alder Avenue,Sumner,WA,98390,(253) 891-2662,MH-SA TX OP AD CO DU SF SI PI MI
+2007,655,Merit Resource Services,702 Franklin Avenue,Sunnyside,WA,98944,(509) 837-7700,SA TX OP AD CO DU CJ SF MD MC SI PI MI AR SS SP
+2007,655,Suquamish Tribe Wellness Program,18513 Augusta Avenue,Suquamish,WA,98392,(360) 394-5200Intake: (360) 394-8558,MH-SA TX DT HH OP AD CO DU SF MD SI PI
+2007,655,Avenue of Recovery,11006 Paci˙c Avenue South Suite 4,Tacoma,WA,98444,(253) 548-0779,SA TX OP AD DU SF PI AR SS SP
+2007,655,A Change Counseling Services Inc Tacoma,4002 South M Street Suite C,Tacoma,WA,98418,(253) 473-1844DWI/DUI Clients Only,SA TX OP CO DU SF PI
+2007,655,Action Association Counseling Services Tacoma,923 Martin Luther King Jr Way,Tacoma,WA,98405,(253) 572-8170,SA TX OP AD DU SF PI
+2007,655,BI Inc,1712 6th Avenue,Tacoma,WA,98405,(253) 272-0200,SA TX OP AD DU CJ SF SS
+2007,656,Casteele Williams and Associates,8833 Paci˙c Avenue Suite D,Tacoma,WA,98444,(253) 536-2881,SA TX DT OP AD CO WN MN DU CJ SF PI MI SS SP F44 F47 F92
+2007,656,Center Main Facility Metropolitan Development Council,721 South Fawcett Avenue Suite 101,Tacoma,WA,98402,(253) 593-2740,SA TX OP SF MD PI AR
+2007,656,Community Counseling Institute Inc,2502 Tacoma Avenue South,Tacoma,WA,98402,(253) 759-0852,SA TX OP AD WN DU SF PI SS PA SP
+2007,656,Consejo Counseling and Referral Servs Tacoma Branch,3808 Portland Avenue,Tacoma,WA,98118,(253) 383-1528Intake: (253) 414-7461,SA TX OP AD DU SF MD SI PI AH SP
+2007,656,Crossroads Treatment Center Inc,12202 Paci˙c Avenue South Suite D,Tacoma,WA,98444,(253) 535-3919Intake: (253) 473-7474,SA TX OP DU SF PI
+2007,656,Fort Lewis Army Substance Abuse Prog (ASAP) Box,"339500, MS 20 Building 2006 A Room 211",Tacoma,WA,98433,(253) 967-2202,SA TX OP SE WN CJ MI
+2007,656,Foundation for Multicultural Solutions El Camino Program,423 Martin Luther King Jr Way,Tacoma,WA,98405,(253) 572-3214,SA TX OP AD CO WN MN DU SF MC SI SP
+2007,656,Horizon Treatment Services O -Site Pearl Street Center Group Care Home,815 South Pearl Street,Tacoma,WA,98465,(253) 396-5937Intake: (253) 396-5931,MH-SA TX RS RL AD CO MD MC PI PA AH
+2007,656,Lakeside Milam Recovery Centers Inc Tacoma,535 Dock Street Suite 104,Tacoma,WA,98402,(253) 272-2242,SA TX OP DU SF PI
+2007,656,Madigan Army Medical Center Army Substance Abuse Program (ASAP) MCHJ-DA,Building 2006,Tacoma,WA,98431,(253) 967-2202,MH-SA TX DT OP PH WN MN DU MI AH SP F30 F47
+2007,656,Moms and Womens Recovery Center East Puyallup Branch,617 East Main Street,Tacoma,WA,98408,(253) 798-6655Hotline: (253) 798,CARE SA TX OP WN DU SF MD PI AR SS PA AH
+2007,656,Moms and Womens Recovery Center South Parkland Branch,12108 Paci˙c Avenue Room G-7,Tacoma,WA,98447,(253) 798-6655Hotline: (253) 572,CARE SA TX OP WN DU SF MD PI AR SS PA AH F24
+2007,656,Moms and Womens Recovery Center Tacoma Branch,3408 Union Avenue South,Tacoma,WA,98407,(253) 798-6655Hotline: (253) 798,CARE GH TX OP CO WN DU SF MD PI AR PA AH
+2007,656,Perinatal Treatment Services Pierce County Branch,4810 South Wilkeson Street,Tacoma,WA,98408,(253) 475-2500Intakes: (206) 223-1300x234 (253) 475- 2500x228,SA TX RL PW BC MD AH
+2007,656,Perinatal Treatment Services/Pierce Adolescent Fresh Start,4810 South Wilkeson Street,Tacoma,WA,98408,(253) 475-2500Intakes: (253) 475-2500x228 (206) 223- 1300x234,SA TX RL AD BC MD AH
+2007,656,Pierce County Alliance,510 Tacoma Avenue South,Tacoma,WA,98402,(253) 502-5416Intake: (253) 502-5400,SA TX OP AD WN CJ SF MC PI AR SS
+2007,656,Pioneer Adult Counseling/Tacoma,758 Saint Helens Street,Tacoma,WA,98402,(253) 274-0484,SA TX OP SF MD PI AR
+2007,657,Prosperity Wellness Center,5001 112th Street East,Tacoma,WA,98446,(253) 531-2103,MH-SA TX RS RL SF MD MC SI AR AH
+2007,657,Puyallup Tribal Treatment Center,2209 East 32nd Street,Tacoma,WA,98404,(253) 593-0291,SA TX HH RS RL OP SF MD SI PI PA AH
+2007,657,Sea Mar Residential Alc Drug Treatment,1415 Center Street,Tacoma,WA,98409,(253) 627-2250,SA TX RS SF MD MC AH SP
+2007,657,Sea Mar Tacoma Branch Outpatient Substance Abuse Services,1516 South 11th Street,Tacoma,WA,98405,(253) 396-1634,SA TX OP SF MD MC SI PI MI AR SS SP
+2007,657,Serenity Counseling Services,5113 Paci˙c Highway East Suite 3,Tacoma,WA,98424,(253) 922-0229DWI/DUI Clients Only,SA TX OP DU SF PI
+2007,657,Social Treatment Opportunity Programs (STOP)/Tacoma,4301 South Pine Street Suite 112,Tacoma,WA,98409,(253) 471-0890,SA TX OP WN DU SF SI PI AR SS
+2007,657,Tacoma Pierce County Health Department Methadone Treatment Services,3629 South D Street,MS-499Tacoma,WA,98408,(253) 798-6576Hotline: (253) 798CARE Methadone Clients Only,TX MM OP PW WN MN SF MD MC PI AR SS AH
+2007,657,Tacoma Pierce County Health Department Treatment Services Unit,2 3629 South D Street MS Chd-051,Tacoma,WA,98408,(253) 798-6576Hotline: (253) 798CARE Methadone Clients Only,GH TX MM OP PW WN MN SF MD MC PI AR SS AH
+2007,657,Veteran Admin Puget Sound Hlthcare Sys American Lake Division,9600 Veterans Drive,Tacoma,WA,98493,(253) 582-8440x1603Intake: (253) 583-1603,MH-SA TX MM BU RS OP CO WN DU SF PI MI PA AH
+2007,657,Shoalwater Bay Indian Tribe Shoalwater Bay Counseling/CD Program,4168 State Road 105 South,Tokeland,WA,98590,(360) 740-3439Intake: (360) 267-3408,SA TX OP AD CO HV SE WN MN SF MC PI SS
+2007,657,Merit Resource Services,217 South Toppenish Avenue Suite A,Toppenish,WA,98948,(509) 865-5233,SA TX OP AD CO DU CJ SF MD MC SI PI MI AR SS SP
+2007,657,Crossroads Treatment Center Inc Tacoma Main Facility,5915 Orchard Street West Building B,University Place,WA,98467,(253) 473-7474,SA TX OP DU SF PI
+2007,657,Columbia River Mental Health,6926 East 4th Plain Boulevard,Vancouver,WA,98661,(360) 993-3000Intake: (360) 993-3040,MH-SA TX DT MM DM OP CO WN CJ SF MD MC PI AR
+2007,657,Columbia Treatment Services,7017 NE Highway 99 Suite 114,Vancouver,WA,98665,(360) 694-7484,SA TX OP PW WN DU SF MC SI PI F3
+2007,657,Daybreak/Vancouver,2924 Falk Road,Vancouver,WA,98661,(360) 750-9588Intakes: (888) 454-5506x18 (509) 624-3227,SA TX RL AD SF MD SI PI AH
+2007,657,Life Line Connections,1601 East 4th Plain Street Building 17,Vancouver,WA,98661,(360) 397-8246,SA TX DT RS RL OP AD CO PW WN DU CJ SF MD SI PI AR SS PA AH
+2007,657,Northwest Recovery Center Intensive Outpatient,1601 East 4th Plain Boulevard Building 17 Suite 222,Vancouver,WA,98660,(360) 695-1297Intake: (360) 397-8488,SA TX OP AD CO HV PW WN MN DU SF MD PI AR AH
+2007,658,Right Choice Vancouver,316 East 4th Plain Boulevard Suite C,Vancouver,WA,98663,(360) 696-1023,SA TX OP SF PI
+2007,658,Rivercrest Treatment Center,1801 D Street Suite 5,Vancouver,WA,98663,(360) 696-3307,SA TX OP SF PI AH
+2007,658,Veterans A airs Medical Center Substance Abuse Treatment Program,1601 East 4th Plain Boulevard,Vancouver,WA,98661,(360) 690-1841Intakes: (360) 696-4061x33588 (503) 220- 8262x33588,SA TX HH OP CO SE SF
+2007,658,Chemical Dependency Treatment Program DVAMC,77 Wainwright Drive Mail Stop 320,Walla Walla,WA,99362,(509) 525-5200x22671Intakes: (509) 525-5200x22691 (509) 525- 5200x22752,SA TX DT HH HI RS RL OP PH CO SF PI MI PA
+2007,658,Serenity Point Counseling Services,705 West Rose Suite 1,Walla Walla,WA,99362,(509) 529-6036Intake: (509) 529-6036x101,SA TX OP AD CO DU SF MD SI PI MI SS SP
+2007,658,Merit Resource Services Wapato Branch,312 West 2nd Street,Wapato,WA,98951,(509) 877-7271,SA TX OP AD CO DU CJ SF MD MC SI PI MI AR SS
+2007,658,Spokane Tribal Substance Abuse Program Old School Lane,,Wellpinit,WA,99040,(509) 258-7502,SA TX OP CO WN DU SF MD MC PI
+2007,658,Aalpha Beta Addiction Counseling,23 Soouth Mission Street Suite A,Wenatchee,WA,98801,(509) 667-0899,SA TX DT OP DU SF
+2007,658,Center for Alcohol and Drug Treatment,327 Okanogan Avenue,Wenatchee,WA,98801,(509) 662-9673Hotline: (509) 662-9673,SA TX DT RS OP AD CO SF MD SI PI AH SP
+2007,658,Sunrise Counseling Westport,1200 North Montesano Street,Westport,WA,98595,(360) 268-9051,SA TX DT OP MN DU CJ SF SI PI AH
+2007,658,Dependency Hlth Services White Salmon Branch of Central WA Comprehension,251 Rhine Village Drive,White Salmon,WA,98672,(509) 493-3400,SA TX OP AD CO SF MD MC SI PI MI SS PA
+2007,658,Motivations Treatment Center,17311 135th Avenue NE Suite C-400,Woodinville,WA,98072,(425) 481-2112,SA TX OP DU SF PI MI
+2007,658,Apple Valley Counseling Services,504 North Naches Avenue Suite 2,Yakima,WA,98901,(509) 452-1000Intake: (509) 469-3322,SA TX OP DU SF PI SS AH SP
+2007,658,Barth and Associates Barth Clinic,201 East Lincoln Avenue,Yakima,WA,98901,(509) 457-5653Intake: (509) 930-9232,SA TX DT OP PH SF SI PI MI AH SP
+2007,658,Casa de Esperanza,402 North 4th Street Suite 300,Yakima,WA,98901,(509) 453-9387DWI/DUI Clients Only,SA TX OP AD MN DU CJ SF MD MC PI AR SS PA SP
+2007,658,Center for Addictions Recovery and Edu,1015 South 40th Avenue Suite 23,Yakima,WA,98908,(509) 965-3115,MH-SA TX OP DU SF MC SI PI MI AH
+2007,659,Community Counseling Clinic LLC,2642 Main Street,Yakima,WA,98903,(509) 452-6546Intake: (509) 452-6631,SA TX DT OP CO SE WN MN DU CJ SF PI MI SS
+2007,659,Community Resource Group/Yakima,7901 West Nob Hill Boulevard,Yakima,WA,98908,(509) 830-9225,MH-SA TX OP AD SE WN DU SF AR
+2007,659,Delozier Recovery Services,3908 Creekside Loop Suite 125,Yakima,WA,98902,(509) 469-5515,SA TX DT OP WN MN DU CJ SF PI SP
+2007,659,Dependency Health Servs Yakima Outpt Central WA Comprehensive Mental Health,402 South 4th Avenue,Yakima,WA,98902,(509) 248-1200,SA TX OP AD CO DU SF MD MC SI PI MI AR SS
+2007,659,Merit Resource Services,414 North 3rd Street,Yakima,WA,98901,(509) 469-9366,SA TX OP AD CO DU CJ SF MD MC SI PI MI AR SS
+2007,659,Riel House,613 Superior Lane,Yakima,WA,98902,(509) 575-4810Intakes: (509) 575-4800 (509) 248-1800,TX RL PW BC SF MD PI AH
+2007,659,Sundown M Ranch,2280 State Route 821,Yakima,WA,98901,(509) 457-0990Intake: (800) 326-7444,SA TX DT HH RS RL OP PH AD SE PW WN MN DU SF PI
+2007,659,Triumph Treatment Services Inc Community Drug and Alcohol Center,102 South Naches Avenue,Yakima,WA,98901,(509) 248-1800,SA TX OP SF MD SI PI AR SS PA
+2007,659,Yakima Substance Abuse Outreach Branch of VA Med Center Walla Walla,1111 North 1st Street,Yakima,WA,98901,(509) 457-2736,MH-SA TX OP DU PI MI PA
+2007,659,Washington DeLozier Recovery Services,3908 Creekside Loop Suite 125,Yakima,WA,98902,(212) 987-5120Intake: (509) 469-5515,SA TX DT OP DU SF PI SS SP
+2007,659,Discovery Counseling,306 2nd Street NE,Yelm,WA,98597,(360) 400-2242,SA TX OP DU SF PI
+2007,659,True North Student Assistance and Treatment Services/˝urston,1315 Yelm Highway,Yelm,WA,98597,(360) 458-6233,TX OP AD SF MD SI SS PA AH
+2007,659,Barth Clinic,513 Main Street Lower Level,Zillah,WA,98953,(509) 829-6440Intake: (509) 457-5653,SA TX DT OP PH SF SI PI MI SP
+2007,661,Oasis Behavioral Health Services LLC,689 Central Avenue,Barboursville,WV,25504,(304) 733-3331,MH-SA TX OP SF MC SI PI AH
+2007,661,Beckley Treatment Center Inc,175 Philport Lane,Beaver,WV,25813,(304) 254-9262Hotline: (866) 762-3766 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP CO PW WN SF SS AH SP
+2007,661,RS Health Systems Inc Raleigh County O˚ce,101 South Eisenhower Drive,Beckley,WV,25801,(304) 256-7100Hotline: (304) 256-7100,MH-SA TX DT RS RL OP AD CO PW WN BC MN DU SF MD MC PI MI SS AH
+2007,661,Southern West Virginia Fellowship Home Inc,201 Woodlawn Avenue,Beckley,WV,25801,(304) 253-1441Hotlines: (800) 333-5051 (304) 252-9444,SA TX HH RL SF
+2007,661,Appalachian Community Health Ctr Inc Barbour County O˚ce Adult Services,1410 Crim Avenue,Belington,WV,26250,(304) 823-3873Intake: (888) 357-3232 Hotline: (888) 357-3232,MH-SA TX OP DU SF MD MC SI PI MI
+2007,661,EastRidge Health Systems Sugar Hollow Industrial Center,Lot 3,Berkeley Springs,WV,25411,(304) 258-2889Intake: (304) 263-8954 Hotline: (304) 263-8954,MH-SA TX OP SF MD MC SI PI AH
+2007,661,Mercer County Fellowship Home Inc,421 Scott Street,Blue˙eld,WV,24701,(304) 327-9876,SA TX HH RL SF PA
+2007,661,Prestera Center for MH Services Inc Lincoln County Lincoln County O˚ce,25 Lincoln Plaza,Branchland,WV,25506,(304) 824-5790Intakes: (304) 824-5790x8600 (304) 525- 7851x8600Hotline: (800) 642-3434,MH TX OP SF MD MC SI PI SS
+2007,661,Appalachian Community Health Ctr Inc Upshur County O˚ce Adult Services,27 South Kanawha Street,Buckhannon,WV,26201,(304) 472-2022Intake: (888) 357-3232 Hotline: (888) 357-3232,MH-SA TX OP AD DU SF MD MC SI PI MI
+2007,661,Behavioral Health Services,4605 MacCorkle Avenue SW,Charleston,WV,25309,(304) 766-3441Intake: (304) 766-3553 Hotline: (304) 766-3553,MH-SA TX DT HI OP PH CO SF MD MC SI PI MI AH
+2007,661,United Summit Center,6 Hospital Plaza,Clarksburg,WV,26301,(304) 623-5661,MH-SA TX OP DU SF MD MC SI PI MI SS PA AH
+2007,661,Veterans A airs Medical Center Substance Abuse Services,1 Medical Center Drive,Clarksburg,WV,26301,(304) 623-7613,SA TX DT HI RS OP SF MD MC SI PI MI
+2007,661,Prestera™s Addiction Recovery Centers,1020 Grosscup Avenue,Dunbar,WV,25064,(304) 766-7336x1500Intake: (304) 525-7851x8600 Hotlines: (304) 525-7851 (800) 624-3434,SA TX OP WN DU SF MD MC SI PI MI SS AH
+2007,661,Appalachian Community Health Ctr Inc Randolph County O˚ce Adult Services,725 Yokum Street,Elkins,WV,26241,(304) 636-3232x202Intakes: (304) 636-3232 (888) 357-3232 Hotline: (888) 357-3232,MH-SA TX OP PH AD DU SF MD MC SI PI MI
+2007,662,Fairmont General Hospital Center for Behavioral Health,1325 Locust Avenue,Fairmont,WV,26554,(304) 367-7229Intake: (304) 367-7281,MH TX DT HI OP SF MD MC SI PI MI SS PA
+2007,662,Valley Comprehensive Comm MH Ctr Inc Alpha Chemical Dependency Trt Unit,100 Crosswind Drive,Fairmont,WV,26554,(304) 363-2228Intake: (304) 363-2228x4330 Hotline: (800) 232-0020,SA TX RS SF MD PI PA
+2007,662,Valley Comprehensive Comm MH Ctr Inc Marion County O˚ce,448 Leonard Avenue,Fairmont,WV,26554,(304) 366-7174,MH-SA TX OP AD WN DU SF MD MC SI PI MI SS PA AH
+2007,662,Valley Comprehensive Comm MH Ctr Inc New Beginnings Program for Women,202 Columbia Street,Fairmont,WV,26554,(304) 363-2228x4320,SA TX RL OP WN SF MD SI PI MI PA
+2007,662,Potomac Highlands MH Guild Inc Pendleton County O˚ce,100 Maple Avenue,Franklin,WV,26807,(304) 358-2351Intake: (800) 545-4357 Hotline: (800) 545-4357,MH-SA TX OP AD DU SF MD MC SI PI MI AH SP
+2007,662,Valley Comprehensive Comm MH Ctr Inc Taylor County O˚ce,501 North Pike Street,Graˇon,WV,26354,(304) 265-3947,MH-SA TX OP AD SF MD MC SI PI MI SS PA AH
+2007,662,Area Psychiatric and Psychotherapy Group,10 West 6th Avenue Suite 300,Huntington,WV,25701,(304) 525-9355,MH TX OP SF MD MC PI
+2007,662,Huntington Treatment,135 4th Avenue,Huntington,WV,25701,(304) 525-5691Intakes: (304) 525-5691x322 (800) 525-1449 Hotline: (304) 634-6897 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP CO GL PW WN CJ SF PI
+2007,662,Laurelwood Transitional Housing for Men,432 6th Avenue,Huntington,WV,25701,(304) 525-5250,TX HH RL MN SF MD MC PI
+2007,662,Prestera Center for MH Services Inc (PARC)/West Residential,1420 Washington Avenue,Huntington,WV,25704,(304) 697-1277Intake: (304) 585-7851 Hotline: (304) 525-7851,SA TX RS WN MN SF MD MC SI PI MI AH
+2007,662,Prestera Center for MH Services Inc Prestera Addict Rec Ctr (PARC)/Detox,1420 Washington Avenue,Huntington,WV,25704,(304) 697-1790Intake: (304) 525-7851 Hotline: (304) 525-7851,SA DT RS SF MD MC SI PI MI AH
+2007,662,Renaissance Place,1853 8th Avenue,Huntington,WV,25701,(304) 525-7851Hotline: (304) 525-7851,SA TX OP CO PW WN CJ SF MD MC SI PI MI SS PA AH
+2007,662,Riverpark Hospital,1230 6th Avenue,Huntington,WV,25701,(304) 526-9111x100Intakes: (800) 922-9101 (304) 526-9111,MH-SA TX DT HI RL AD CO SE SF MD MC SI PI MI
+2007,662,Veterans A airs Medical Center Outpatient Treatment Program,1540 Spring Valley Drive,Huntington,WV,25704,(304) 429-6741x2722Intakes: (304) 429-6755x2722 (800) 827- 8244x2722,GH TX OP PI MI
+2007,662,Word House Inc Focus Consultation Services,1005 5th Avenue Suite A,Huntington,WV,25701,(304) 523-9673,MH-SA TX OP SF MD MC SI PI MI
+2007,662,Potomac Highlands MH Guild Inc Mineral County SA Services Mineral County,O˚ce HC-72,Keyser,WV,26726,(304) 788-2241Hotline: (800) 545-4357,MH-SA TX OP AD DU SF MD MC SI PI MI AH SP
+2007,662,Olympic Center/Preston Inc Adolescent Treatment Program,Route 7,Kingwood,WV,26537,(304) 329-2400,SA TX RL AD CO CJ SF MD PI
+2007,663,Valley Healthcare System Preston County O˚ce,202 Tunnelton Street Garden Towers,Kingwood,WV,26537,(304) 329-1059,MH-SA TX OP AD DU SF MD MC SI PI MI SS PA AH
+2007,663,Seneca Health Services Inc,100 Church Street,Lewisburg,WV,24901,(304) 645-3319,MH-SA TX DT OP AD CO WN MN DU SF MD MC SI PI MI SS PA
+2007,663,Logan/Mingo Area Mental Health Inc Route,10 3 Mile Curve,Logan,WV,25601,(304) 792-7130Intake: (304) 792-7132 Hotline: (304) 792-7130,MH-SA TX OP DU SF MD MC SI PI MI SS
+2007,663,Seneca Health Services Inc,704 3rd Avenue Suite A,Marlinton,WV,24954,(304) 799-6865,MH-SA TX DT OP AD CO SF MD MC SI PI MI SS PA
+2007,663,City Hospital Inc Gateway Behavioral Health Services Dry Run Road,,Martinsburg,WV,25401,(304) 264-1230x3010Intakes: (304) 264-1230 (304) 264-1357 Hotline: (304) 264-1230,MH DT HI SF MD MC SI PI MI
+2007,663,Eastridge Health Systems Addictions Treatment Center,125 West Martin Street,Martinsburg,WV,25401,(304) 263-8954x210Intake: (304) 263-8954 Hotline: (304) 263-8954,SA TX RS SF MD MC PI
+2007,663,Eastridge Health Systems Berkeley County O˚ce,235 South Water Street,Martinsburg,WV,25401,(304) 263-8954Hotline: (304) 263-8954,MH-SA TX OP AD DU SF MD MC SI PI AH
+2007,663,Martinsburg Institute Berkeley Plaza,183 Monroe Street,Martinsburg,WV,25401,(304) 263-1101Methadone Clients Only,SA TX DT MM DM OP HV PW WN SF
+2007,663,Chestnut Ridge Hosp/WVU Hospitals Inc Dept Behav Med/Psych Addic Recov Unit,930 Chestnut Ridge Road,Morgantown,WV,26505,(304) 598-6400,MH-SA TX DT HI OP PH CO BC SF MD MC SI PI MI AH
+2007,663,Valley Healthcare System Monongalia County Adolescent SA Servs,301 Scott Avenue,Morgantown,WV,26508,(304) 296-1731,MH-SA TX OP AD DU SF MD MC SI PI MI SS PA AH
+2007,663,Southern Highlands Comm MH Center Inc Wyoming County Adolescent SA Servs Wyoming County O˚ce,102 Howard Avenue,Mullens,WV,25882,(304) 294-5353Intake: (304) 294-5353x301,MH TX OP AD DU SF MD MC SI PI MI SS
+2007,663,Parkersburg Treatment Center,184 Holiday Hills Drive,Parkersburg,WV,26104,(304) 420-2400Hotline: (866) 762-3766 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP PW SF PI MI SS
+2007,663,Westbrook Health Services Amity Detox and Treatment Center,1011 Mission Drive,Parkersburg,WV,26101,(304) 485-1781Hotline: (304) 485-1721,SA TX DT RS SF MD PA
+2007,663,Worthington Center Inc,3199 Core Road,Parkersburg,WV,26104,(304) 485-5185x330Intakes: (304) 485-5185x328 (304) 485-1883 Hotlines: (800) 810-9090 (304) 482-7572,MH-SA TX DT OP PH AD CO SF MD MC SI PI MI
+2007,663,Appalachian Community Health Ctr Inc Tucker County SA Services,601 Walnut Street,Parsons,WV,26287,(304) 478-2764Intake: (888) 357-3232 Hotline: (888) 357-3232,MH-SA TX OP AD CO WN DU SF MD MC SI PI MI
+2007,664,Southern Highlands Comm MH Center Inc Outpatient Services,200 12th Street Extension,Princeton,WV,24740,(304) 425-9541x265Intake: (304) 425-9541x224,MH-SA TX DT OP AD CO WN DU CJ SF MD MC SI PI MI SS PA
+2007,664,Eastridge Health Systems,1212 North Mildred Street Suite C,Ranson,WV,25438,(304) 725-7565Intake: (304) 263-8954 Hotline: (304) 263-8954,MH-SA TX OP SF MD MC SI PI AH
+2007,664,Potomac Highlands MH Guild Inc Hampshire County Adolescent SA Servs,850 North High Street,Romney,WV,26757,(304) 822-3897Hotline: (800) 545-4357,MH-SA TX OP AD DU SF MD MC SI PI MI AH SP
+2007,664,C Health Group Inc Wheeling Treatment Center Rural Route,1 Box 256-A,Triadelphia,WV,26059,(304) 547-9197Intake: (877) 637-6237 Hotline: (877) 637-6237 Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP PW WN CJ SF PI
+2007,664,Options Alternative Program,1400 12th Street,Vienna,WV,26105,(304) 485-1721x249,SA TX OP AD CO SF MD SI PI MI PA AH
+2007,664,Westbrook Health Services Wood County/Substance Abuse Services,2121 7th Street,Vienna,WV,26105,(304) 485-1721x115Hotlines: (304) 485-1721 (800) 579-5844,MH-SA TX OP AD CO PW WN MN DU SF MD MC SI PI MI
+2007,664,Wayne County Outpatient Services,145 Kenova Avenue,Wayne,WV,25570,(304) 272-3466,MH-SA TX DT OP WN SF MD MC SI PI SS PA
+2007,664,Seneca Health Services Inc,70 Parcoal Road,Webster Springs,WV,26288,(304) 847-5425Hotline: (304) 847-5425,MH TX OP AD CO DU SF MD MC PI MI SS
+2007,664,United Summit Center Lewis County O˚ce,37 Elizabeth Drive,Weston,WV,26452,(304) 269-5220,MH-SA TX OP CJ SF MD MC SI PI MI SS PA AH
+2007,664,Williamson Treatment Center Inc,1609 West 3rd Avenue,Williamson,WV,25661,(304) 235-0026Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP WN SF
+2007,665,Courage To Change Recovery,106 Galvin Road,Abbotsford,WI,54405,(715) 223-0480Hotline: (800) 863-3560,SA TX OP AD CO HV GL SE PW WN MN DU CJ SF MD MC SI PI MI AH
+2007,665,Langlade Healthcare Center North Central Healthcare Facilities,1225 Langlade Road,Antigo,WI,54409,(715) 623-2394Hotlines: (800) 799-0122 (715) 845-4326,MH-SA TX OP DU SF MD MC SI PI MI SS PA
+2007,665,nity Health Systems Inc St Elizabeths Hosp/Outpt Behav Servs,1531 South Madison Street Suite 580,Appleton,WI,54915,(920) 730-4411,MH-SA TX OP AD DU SF MD MC SI PI MI AH
+2007,665,Appleton Psychiatric/Counseling Center,477 South Nicolet Road,Appleton,WI,54914,(920) 882-6610,MH-SA TX DT OP DU SF MD MC SI PI MI AR
+2007,665,Casa Clare A Div of Mooring Programs Inc,201 South Glenridge Court,Appleton,WI,54914,(920) 731-3981,SA TX DT HH RS RL CO WN BC SF PI AH
+2007,665,Lutheran Social Services Wisconsin and Upper Michigan Inc,3003 North Richmond Street Suite A,Appleton,WI,54911,(920) 730-1321,MH-SA TX OP AD CO DU SF SS PA AH
+2007,665,Behavioral Health Services of Memorial Medical Center Inc,1635 Maple Lane,Ashland,WI,54806,(715) 685-5400x5408Intakes: (715) 685-5400x6554 (715) 685-5371 Hotline: (715) 682-8217,MH-SA TX DT HI OP PH CO SF MD MC SI PI MI AH
+2007,665,Pathway Clinic,635 15th Street,Baraboo,WI,53913,(608) 356-9884Intake: (608) 643-3663,MH TX OP SF MC PI MI
+2007,665,Saint Clare Center Saint Clare Hospital,1510 Je erson Street,Baraboo,WI,53913,(608) 356-1533Hotline: (608) 356-1533,SA TX RS OP PH SF PI MI SS
+2007,665,Sauk County Dept of Human Services Alcoholism and Drug Abuse Outpt Servs,505 Broadway Street,Baraboo,WI,53913,(608) 355-4200Hotline: (800) 533-5692,MH-SA TX OP SF MD MC SI PI MI SS AH SP
+2007,665,Red Cli Tribe Redcli AODA Program North Braddum Road o Blueberry Road,,Bay˙eld,WI,54814,(715) 779-3741Intake: (715) 779-3742,SA TX RS RL OP SF PI SS
+2007,665,Psychiatric Associates,200 Front Street,Beaver Dam,WI,53916,(920) 885-2780Hotline: (920) 885-2780,MH TX OP DU SF MD MC PI
+2007,665,Mercy Options Mercy Hospital Addiction Trt Services,2825 Prairie Avenue,Beloit,WI,53511,(608) 365-2709,GH TX DT OP SF MD MC PI AH
+2007,665,Tellurian UCAN Inc Beloit Inner City,403 Prospect Street,Beloit,WI,53511,(608) 365-6600,SA TX OP AD HV DU SF PI SS PA
+2007,665,Ho Chunk Nation Dept of Hlth/Soc Servs Alcohol and Drug Program Services,6520 North Guy Road,Black River Falls,WI,54615,(715) 284-9851x5010,SA TX OP DU AH N12
+2007,666,Memorial Hospital of Boscobel Association Boscobel Area Healthcare,205 Parker Street,Boscobel,WI,53805,(608) 375-6341Intake: (608) 375-6331 Hotline: (866) 810-3433,MH-SA TX DT HI OP DU SF MD PI
+2007,666,Stockbridge-Munsee Health and Wellness Center/Behavioral Health Department West,12802 County A,Bowler,WI,54416,(715) 793-3000,MH-SA TX OP AD CO DU SF MD MC PI
+2007,666,Aro Counseling Centers Inc,285 N Janacek Road Suite B,Brook˙eld,WI,53045,(608) 255-1116,MH-SA TX DT OP PH AD CO HV GL SE PW WN MN DU CJ SF MD MC SI PI MI
+2007,666,Behavioral Medicine Center Brook˙eld,2085 North Calhoun Road,Brook˙eld,WI,53005,(262) 928-4036Intake: (262) 928-2396 Hotline: (262) 928-4036,MH-SA TX OP SF MD MC SI PI AH
+2007,666,Pathways Counseling Center,13105 West Bluemound Road Suite 100,Brook˙eld,WI,53005,(262) 641-9790Intake: (262) 641-9790x10,MH TX OP CO SF MC PI
+2007,666,North Shore Clinic and Consultants Inc West,62 North 248 Washington Avenue Suite 207,Cedarburg,WI,53012,(262) 375-1116,MH-SA TX OP CO GL WN DU CJ SF PI MI
+2007,666,Calumet County Dept of Human Services,206 Court Street Courthouse,Chilton,WI,53014,(920) 849-1400Hotlines: (920) 832-4646 (920) 849-9317,MH-SA TX OP CO DU SF MD MC SI PI MI SS PA AH
+2007,666,Phillips Libertas Center,2661 County Highway I,Chippewa Falls,WI,54729,(715) 723-5585Intake: (800) 680-4578 Hotlines: (715) 723-5585 (800) 680-4578,SA TX DT HI OP AD CO PW WN MN DU CJ SF MD MC SI PI MI AH
+2007,666,Serenity House Inc,205 East Grand Avenue,Chippewa Falls,WI,54729,(715) 723-8468,SA TX HH RS RL OP SF PI
+2007,666,Koller Behavioral Health Services,208 South Hazeldell Street,Crandon,WI,54520,(715) 478-3524,SA TX OP CO SF MD MC SI PI MI AR SS
+2007,666,Lafayette County Department of Human Servs/AODA Prog,627 Main Street,Darlington,WI,53530,(608) 776-4800Hotlines: (608) 776-4800 (608) 776-4848,MH-SA TX OP CO WN MN SF MD MC SI PI MI SS AH
+2007,666,Uni˙ed Community Services,1122 Professional Drive,Dodgeville,WI,53533,(608) 935-2776Hotline: (800) 362-5717,MH-SA TX OP SF MD MC PI SS AH
+2007,666,Eagle River Memorial Hospital Emergency Room Substance Abuse Servs,201 Hospital Road,Eagle River,WI,54521,(715) 479-7411,GH DT HI SF MD MC SI PI MI
+2007,666,Koller Behavioral Health Services,150 Hospital Road,Eagle River,WI,54521,(715) 479-4585,SA TX HI OP AD SE WN SF MD MC SI PI MI AR
+2007,666,Eau Claire Academy,550 North Dewey Street,Eau Claire,WI,54702,(715) 834-6681Intake: (715) 834-6681x206,MH TX RS RL OP AD CO PW PI
+2007,666,Eau Claire Metro Treatment Center,2000 North Oxford Avenue Building 2,Eau Claire,WI,54703,(715) 834-1078Methadone and Buprenorphine Clients Only,SA TX DT MM DM BU OP SF MD
+2007,666,Fahrman Center,3136 Craig Road,Eau Claire,WI,54701,(715) 835-9110,SA TX HH RS RL WN CJ SF PI MI AH
+2007,667,SCONSINAro Counseling Centers Inc,797 East Geneva Street,Elkhorn,WI,53121,(262) 723-1455,MH-SA TX OP PH AD CO DU SF MD MC SI PI MI SS SP
+2007,667,Pierce County Dept of Human Services Alcohol and Other Drug Abuse Services,412 West Kinne Street,Ellsworth,WI,54011,(715) 273-6770,SA TX OP DU SF MD MC SI PI MI SS AH
+2007,667,American Behavioral Clinic,15285 Watertown Plank Road,Elm Grove,WI,53122,(262) 797-2818,MH-SA TX OP CO WN MN DU SF MD MC PI MI SS
+2007,667,Red Oak Counseling Ltd,12970 West Bluemound Road Suite 308,Elm Grove,WI,53122,(262) 780-1020,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI SS AR
+2007,667,C Community Services Inc Substance Abuse Services for Women,27 3rd Street Suite B,Fond du Lac,WI,54935,(920) 907-0813,SA TX HH RL OP PH WN CJ PA
+2007,667,A˚liated Counseling Center LLC,17 Forest Avenue,Fond du Lac,WI,54935,(920) 922-7440,MH-SA TX OP CO SE MN DU SF MC PI MI AR
+2007,667,Beacon House,166 South Park Avenue,Fond du Lac,WI,54935,(920) 923-3999,SA TX HH RL PW WN BC SF
+2007,667,Blandine House Inc,25 North Park Avenue,Fond du Lac,WI,54935,(920) 922-9487Hotline: (920) 922-7512,SA TX RS RL MN CJ SF PI
+2007,667,Fond Du Lac County Department of Community Programs,459 East 1st Street,Fond du Lac,WI,54935,(920) 929-3500Intake: (920) 929-3565 Hotline: (920) 929-3535,MH-SA TX DT HI OP AD SF MD MC SI PI SS AH
+2007,667,Saint Agnes Hospital Behavioral Health Services,430 East Division Street,Fond du Lac,WI,54935,(920) 926-4290Intake: (920) 926-4200 Hotline: (920) 926-4290,MH-SA TX DT HI OP PH CO SF MD MC SI PI MI AH
+2007,667,Fort Healthcare Behavioral Health,509 McMillen Street,Fort Atkinson,WI,53538,(920) 563-7995Intake: (920) 563-9542,MH-SA TX OP SF MD MC SI PI MI AH
+2007,667,Department of Health and Human Servs Adams County,108 East North Street,Friendship,WI,53934,(608) 339-4505Intake: (888) 830-3454,MH-SA TX OP AD CO WN DU SF MD MC SI PI MI SS PA AH
+2007,667,Bellin Psychiatric Center,301 East Saint Joseph Street,Green Bay,WI,54301,(920) 431-5533,MH TX OP DU SF MD SI PI MI AH SP F37 F70
+2007,667,Jackie Nitschke Center Inc,630 Cherry Street,Green Bay,WI,54301,(920) 435-2093,SA TX RS OP DU SF PI AR
+2007,667,Libertas Treatment Center,1701 Dousman Street,Green Bay,WI,54303,(920) 498-8600,SA TX DT HI OP AD SF MD SI PI AH
+2007,667,Green Lake County Department of Health and Human Servs,500 Lake Steel Street,Green Lake,WI,54941,(920) 294-4070,MH-SA TX OP DU SF MD MC SI PI MI AR SS PA AH
+2007,667,Maehnowesekiyah Wellness Center North,2150 Kesaehkahtek,Gresham,WI,54128,(715) 799-3835,SA TX RS RL OP AD SF MD SI PI MI
+2007,667,Cedar Creek Family Counseling Center,9415 West Forest Home Avenue Suite 108,Hales Corners,WI,53130,(414) 427-4884,SA TX OP CO DU SF SI PI MI SS PA AH SP F92
+2007,668,Aro Counseling Centers Inc,141 Cottonwood Avenue Suite A,Hartland,WI,53029,(262) 367-5104,MH-SA TX OP AD WN DU CJ SF MD MC SI PI MI AR
+2007,668,Lac Courte Oreilles Alcohol Drug and Mental Health Program,13380 West Trepania Road,Hayward,WI,54843,(715) 638-5100Intake: (715) 638-5105,MH-SA TX OP PH AD SF MD MC PI MI
+2007,668,Burkwood Inc,615 Old Mill Road,Hudson,WI,54016,(715) 386-6125,SA TX HH RS RL CO MN SF SI PI AR SP
+2007,668,Hudson Hospital Programs For Change,405 Stage Line Road,Hudson,WI,54016,(715) 531-6752Intake: (715) 531-6755,SA TX OP WN MN SF MD MC SI PI MI
+2007,668,Iron County Human Services Dept and Associates,300 Taconite Street Suite 201,Hurley,WI,54534,(715) 561-3636,MH-SA TX OP DU SF MD PI MI
+2007,668,Alcohab Inc New Dawn Residential Primary Treatment,430 North Jackson Street,Janesville,WI,53545,(608) 754-4166Intakes: (608) 754-2651 (608) 754-6800,SA TX HH RS RL SF PI AH
+2007,668,Alcohab Inc ˝e River Commons,786 South Main Street,Janesville,WI,53545,(608) 754-6800Intake: (608) 754-2651,SA TX HH RS RL SF PI AH
+2007,668,Crossroads Counseling Center,17 South River Street Suite 254,Janesville,WI,53545,(608) 755-5260Intake: (608) 755-5270,MH-SA TX OP CO CJ SF MD MC SI PI AR SS AH F28 F92
+2007,668,Lutheran Social Services Alcohol and Drug Treatment Unit,612 North Randall Avenue Suite A,Janesville,WI,53545,(608) 752-7660,MH-SA TX OP DU SF MD MC SI PI MI AR SS AH
+2007,668,Mercy Options Addiction Treatment Services,1000 Mineral Point,Janesville,WI,53548,(608) 756-6545,SA TX DT HI PH CO SF MD MC PI
+2007,668,Je erson County Human Services Dept North,3995 Annex Road,Je erson,WI,53549,(920) 674-3105,MH-SA TX OP AD CO WN SF MD MC SI PI MI AR SS PA
+2007,668,Dodge County Department of Human Services and Health Department,199 Home Road,Juneau,WI,53039,(920) 386-3500Hotline: (920) 386-3500,MH-SA TX OP DU SF MD MC SI PI MI SS AH
+2007,668,All Saints Counseling Center Kenosha,10117 74th Street Suite 100,Kenosha,WI,53142,(262) 697-8268,MH-SA TX OP SF MD MC SI PI MI AH
+2007,668,Aro Counseling Centers Inc,1111 55th Street,Kenosha,WI,53140,(262) 842-0500,MH-SA TX OP PH AD CO WN DU SF MD MC SI PI MI SS
+2007,668,Oakwood Clinical Associates Ltd,4109 67th Street,Kenosha,WI,53142,(262) 652-9830,MH-SA TX OP AD CO WN MN DU SF MD MC SI PI MI SP
+2007,668,Menominee Cnty Hlth Human Servs Dept Alcohol and Other Drug Abuse Program ,3272 Wolf River Road P.O. Box 280,Keshena,WI,54135,(715) 799-3861Hotlines: (715) 799-3861 (715) 799-3881,MH-SA TX OP SF MD MC SI PI MI SS AH
+2007,669,Exodus Transitional Care Facility Inc,1421 Fond Du Lac Avenue,Kewaskum,WI,53040,(262) 626-4166,SA TX HH RL CO HV MN SF PI AH
+2007,669,Kewaunee County Dept of Human Services Alcohol and Drug Abuse Treatment Prog,810 Lincoln Street,Kewaunee,WI,54216,(920) 388-7030x270Hotlines: (920) 388-7030 (920) 388-3100,MH-SA TX OP DU SF MD MC SI PI MI AR SS
+2007,669,Coulee Youth Centers Inc,231 Copeland Avenue,La Crosse,WI,54602,(608) 782-7152Intake: (608) 785-2447,TX OP AD CO WN MN SF MD MC PI SS
+2007,669,Franciscan Skemp Healthcare Behav Hlth Res Servs/LAAR House,1022 Division Street,La Crosse,WI,54601,(608) 782-7700Intake: (608) 791-9555,SA TX DT HH RS RL OP MN SF SI PI MI
+2007,669,Franciscan Skemp Healthcare Intensive Resid Adult Chem Depend Prog,1022 Division Street,La Crosse,WI,54601,(608) 782-7700,SA TX HH RS CO BC MN SF PI MI AH
+2007,669,Gundersen Lutheran Behav Health Unity House for Men,1312 5th Avenue,La Crosse,WI,54601,(608) 775-4753Intakes: (608) 775-4718 (800) 362- 9567x54718Hotlines: (608) 775-4344 (800) 362- 8255x54344,SA TX HH RS MN SF SI PI MI SS AH
+2007,669,Gundersen Lutheran Behav Health Unity House for Women,1922 Miller Street,La Crosse,WI,54601,(608) 775-4718Intake: (800) 362-9567x54718 Hotlines: (608) 775-4344 (800) 362- 8255x54344,SA TX HH RS WN SF SI PI MI SS AH
+2007,669,Gundersen Lutheran Behavioral Health,1910 South Avenue,La Crosse,WI,54601,(608) 775-2287Intake: (800) 362-9567x52287 Hotlines: (608) 775-4344 (800) 362- 8255x54344,MH-SA TX DT MM BU HI OP CO WN DU SF MD MC SI PI MI SS AH
+2007,669,Ho Chunk Nation Behavioral Health,724 Main Street,La Crosse,WI,54601,(608) 784-3083,SA TX OP AH N12
+2007,669,Hoffe Counseling Inc,319 Main Street Suite 302,La Crosse,WI,54601,(608) 796-1168,MH-SA TX OP AD CO SF MC PI SS
+2007,669,La Crosse County Human Services Clinical Services Section,300 North 4th Street,La Crosse,WI,54601,(608) 785-6100Intake: (608) 785-6101,MH-SA TX OP DU SF MD MC PI SS
+2007,669,Family Resource Center,533 Peace Pipe Road,Lac du Flambeau,WI,54538,(715) 588-1511,MH-SA TX OP AD DU CJ MD MC SI PI
+2007,669,Uni˙ed Community Services,200 West Alona Lane,Lancaster,WI,53813,(608) 723-6357Hotline: (800) 362-5717,MH-SA TX OP SF MD MC PI SS AH
+2007,669,ARC Community Services Inc ARC Center for Women and Children,1409 Emil Street,Madison,WI,53713,(608) 283-6426,SA TX PH WN PA SP
+2007,669,ATTIC Correctional Services Inc,1709 South Park Street Suite 1,Madison,WI,53713,(608) 255-0307,TX OP MN DU CJ SF SP
+2007,669,Connections Counseling,1334 Applegate Road Suite 101,Madison,WI,53713,(608) 221-1500x11,SA TX OP AD CO WN MN DU CJ SF PI SS PA
+2007,670,Gateway Recovery,25 Kessel Court Suite 200,Madison,WI,53711,(608) 278-8200,SA TX DT OP AD CO WN SF MD MC SI PI MI AH
+2007,670,Hope Haven Inc Rebos United Inc,425 West Johnson Street,Madison,WI,53703,(608) 251-8881,SA TX HH RS RL OP DU CJ SF SS PA
+2007,670,Lutheran Social Services Wisconsin and Upper Michigan Inc,5 Odana Court 2nd Floor,Madison,WI,53719,(608) 277-0610x605,MH-SA TX OP WN MN DU CJ SF MD SI PI SS AH
+2007,670,Madison Health Services,3113 East Washington Avenue,Madison,WI,53704,(608) 242-0220Intake: (608) 242-0220xNA Methadone Clients Only,SA TX DT MM DM OP PW SF MD MC SI PI MI AH
+2007,670,Mental Health Center of Dane County Integrated Alcohol and Drug Services,625 West Washington Avenue,Madison,WI,53703,(608) 280-2520Intake: (608) 280-2710,SA TX DT OP AD CO HV GL WN MN DU CJ SF MD MC SI PI MI SS PA AH SP F36
+2007,670,Meriter New Start Inpatient,202 South Park Street,Madison,WI,53715,(608) 267-6000x5339Intake: (608) 271-4144,GH TX DT HI RS CO SF MD MC PI MI
+2007,670,New Start Program Meriter Hospital Addiction Med Consult and Eval Service,202 South Park Street,Madison,WI,53715,(608) 271-4144,SA TX DT MM DM HI OP SF MD MC SI PI MI AH
+2007,670,New Start Program Meriter Hospital New Start Outpatient Services,1015 Gammon Lane,Madison,WI,53719,(608) 271-4144,SA TX DT OP PH AD WN DU SF MD MC PI MI AH
+2007,670,Rebos Chris Farley House,810 West Olin Avenue,Madison,WI,53715,(608) 255-5922,SA TX HH RL OP CJ SF SS PA
+2007,670,Tellurian UCAN Inc Day Treatment,2914 Industrial Drive,Madison,WI,53713,(608) 223-3308Intake: (608) 223-3300,MH-SA TX OP PH CO DU SF MD PI
+2007,670,Tellurian UCAN Inc Detoxi˙cation Unit,2914 Industrial Drive,Madison,WI,53713,(608) 223-3311Intake: (608) 222-7311x104,SA TX DT RS RL SF SI PI SS PA AH SP
+2007,670,Tellurian UCAN Inc Network Day Treatment,1250 Femrite Drive Suite 205,Madison,WI,53716,(608) 223-3342Intakes: (608) 223-3345 (608) 223-3341,MH-SA TX OP AD CO SF MD PI
+2007,670,Tellurian UCAN Inc Teresa McGovern/Adult Res Prog (ARP),300 Femrite Drive,Madison,WI,53716,(608) 222-7311x110Intake: (608) 222-7311x104,MH-SA TX RS RL CO PW WN MN SF PI
+2007,670,Holy Family Memorial Inc,2300 Western Avenue,Manitowoc,WI,54221,(920) 320-2479Intake: (920) 320-2400,MH-SA DT HI SF MD MC SI PI MI AR AH
+2007,670,Marinette County Hlth and Human Servs Adapt Clinic,2500 Hall Avenue Suite A,Marinette,WI,54143,(715) 732-7760,MH-SA TX OP DU SF MD MC PI MI SS
+2007,670,Saint Joseph™s Hospital Alcohol and Drug Recovery Services,611 Saint Joseph Avenue,Marsh˙eld,WI,54449,(800) 468-9700Hotline: (800) 468-9700,GH TX DT HI OP PH WN DU CJ SF MD MC SI PI MI AH
+2007,670,Family Services of Northeast WI Inc,1810 Appleton Road,Menasha,WI,54952,(920) 739-4226,MH TX OP SF MD PI MI AH
+2007,670,Valley Health Services,1201 West Tuckaway Lane,Menasha,WI,54952,(920) 733-4443Methadone Clients Only,SA TX DT MM DM OP SF MD SI PI SS F37
+2007,671,SCONSINArbor Place Inc Alcohol and Other Drug Abuse,320 21st Street NE,Menomonie,WI,54751,(715) 235-4537x106Intake: (715) 235-4537 Hotline: (715) 235-4537,SA TX HH RS RL OP PH DU SF MD PI MI AH
+2007,671,Lincoln Healthcare Center Merrill O˚ce,607 North Sales Street,Merrill,WI,54452,(715) 536-9482Hotlines: (800) 799-0122 (715) 845-4326,MH-SA TX OP SF MD MC SI PI MI SS PA
+2007,671,American Behavioral Clinic,7330 West Layton Avenue,Milwaukee,WI,53220,(414) 281-1677,MH-SA TX OP CO MN DU SF MD MC SI PI MI SS
+2007,671,American Behavioral Clinic,9720 West Bluemound Road,Milwaukee,WI,53226,(414) 774-1794,MH-SA TX OP CO WN MN DU SF MD MC PI MI SS
+2007,671,Aro Counseling Centers Inc,4325 South 60th Street Suite 3,Milwaukee,WI,53220,(414) 546-0467,MH-SA TX OP PH AD CO WN DU CJ SF MD MC SI PI MI AR SS
+2007,671,Aro Counseling Centers Inc,5678 West Brown Deer Road Suite 102,Milwaukee,WI,53223,(414) 362-8147,MH-SA TX OP PH CO WN DU SF MD MC SI PI MI AR SS
+2007,671,Aurora Psychiatric Hospital Chemical Dependency Services,1220 Dewey Avenue,Milwaukee,WI,53213,(414) 454-6600Intakes: (414) 454-6707 (414) 454-6777,MH-SA TX DT DM HH BU HI RS OP PH AD WN SF MD MC SI PI MI
+2007,671,Genesis Behavioral Services Inc Milwaukee Outpatient Clinics,230 West Wells Street Suite 312,Milwaukee,WI,53203,(414) 344-3406,SA TX OP AD CO WN CJ SF AR SS PA AH
+2007,671,Genesis Behavioral Services Inc Residential Treatment Center,2436 North 50th Street,Milwaukee,WI,53210,(414) 442-5990,SA TX RS RL MN SF PI AR
+2007,671,Genesis Behavioral Services Inc Womens Residential Program,5427 West Villard Avenue,Milwaukee,WI,53218,(414) 536-3530,SA TX HH RL WN SF PI AR PA AH
+2007,671,Genesis Detoxi˙cation Center,2835 North 32nd Street,Milwaukee,WI,53208,(414) 342-6200,SA DT RS PA AH
+2007,671,Harambee Ombudsman Project Inc Imani II Program,3614 North 39th Street,Milwaukee,WI,53216,(414) 442-6334,SA TX RL MN AR
+2007,671,Horizon House,2511 West Vine Street,Milwaukee,WI,53205,(414) 342-3237Intake: (414) 324-3237,TX RS RL OP PH WN CJ AR PA
+2007,671,Lutheran Social Services,1545 South Layton Boulevard,Milwaukee,WI,53215,(414) 671-5920Intake: (414) 671-5935,MH-SA TX OP AD SE WN SF MD MC SI PI MI AR SS SP N24
+2007,671,Matt Talbot Recovery Center,3195 South Superior Suite 400,Milwaukee,WI,53207,(414) 294-3050Intake: (414) 342-5474,SA TX RL CO HV MN AR PA
+2007,671,Meta House Inc Family Care Center,2266 North Prospect Avenue,Milwaukee,WI,53202,(414) 962-1200,SA TX OP PH PW WN SF MD PI AR
+2007,671,Meta House Inc Riverwest North,2626 North Bremen Street,Milwaukee,WI,53212,(414) 962-1200,MH-SA TX RS RL PW WN BC SF PI AR
+2007,671,Milwaukee Health Service Systems,4383 North 27th Street,Milwaukee,WI,53216,(414) 871-8883Intake: (414) 871-8950 Methadone Clients Only,SA TX DT MM DM OP CO HV PW WN MN SF MD MC SI PI MI AR PA
+2007,671,Milwaukee Health Service Systems II,10th Street Clinic 4800 South 10th Street,Milwaukee,WI,53221,(414) 744-5370Methadone Clients Only,SA TX DT MM DM OP CO PW DU SF MD PI SS AH SP F37
+2007,672,Multi Cultural Counseling Services DBA Renew Counseling Services,1225 West Mitchell Street Suite 223,Milwaukee,WI,53204,(414) 383-4455,MH-SA TX OP PH CO HV SE PW WN DU SF MD MC SI PI AR AH SP F2
+2007,672,8Multi Cultural Counseling Services DBA Renew Counseling Services,2801 West Wisconsin Avenue Second Floor,Milwaukee,WI,53208,(414) 933-8700Hotlines: (414) 933-8700 (414) 383-4455,MH-SA TX OP PH CO SE DU CJ SF MD MC PI MI
+2007,672,North Shore Clinic and Consulting,2363 South 102nd Street,Milwaukee,WI,53227,(414) 545-1950,MH-SA TX OP CO GL WN DU CJ SF PI MI
+2007,672,˛uality Addiction Management (QAM) West Milwaukee,4701 West National Avenue,Milwaukee,WI,53214,(414) 672-3801Methadone Clients Only,SA TX DT MM DM OP SF MD
+2007,672,Ravenswood Clinic,2266 North Prospect Avenue Suite 608,Milwaukee,WI,53202,(414) 224-0492,MH-SA TX OP AD CO DU SF MD SI PI MI AR SS
+2007,672,Shorehaven Behavioral Health Inc,3900 West Brown Deer Road Suite 200,Milwaukee,WI,53209,(414) 540-2170,MH-SA TX OP CO DU SF MD MC SI PI MI AR SS
+2007,672,Zablocki Veterans A airs Medical Ctr,5000 West National Avenue,Milwaukee,WI,53295,(414) 384-2000Intake: (414) 384-2000x42098,GH TX DT HH HI RL OP PH CO SF PI MI
+2007,672,Marquette Chemical Dependency Service North,3829 South 22,Montello,WI,53949,(608) 297-2085,SA TX OP AD SF MD PI SS
+2007,672,Behavioral Medicine Center Mukwonago,240 Maple Avenue,Mukwonago,WI,53149,(262) 928-2396Intake: (262) 928-4036 Hotline: (262) 928-4036,MH-SA TX OP DU SF MD MC SI PI AH
+2007,672,Clark County Community Services Substance Abuse Services,517 Court Street,Neillsville,WI,54456,(715) 743-5204Hotlines: (800) 863-3560 (715) 743-3400,MH-SA TX OP SF MD SI PI MI SS
+2007,672,Behavioral Medical Center New Berlin,13900 West National Avenue,New Berlin,WI,53151,(262) 928-4036Intake: (262) 928-2396 Hotline: (262) 928-4036,MH-SA TX OP SF MD MC SI PI AH
+2007,672,Aro Counseling Centers Inc,6416 South Howell Avenue,Oak Creek,WI,53154,(414) 762-5429,MH-SA TX OP PH AD CO DU SF MD MC SI PI MI AR SS
+2007,672,Behavioral Medicine Center Oconomowoc,1185 Corporate Center Drive,Oconomowoc,WI,53066,(262) 928-4036Intake: (262) 928-2396 Hotline: (262) 928-4036,MH-SA TX OP SF MD MC SI PI AH
+2007,672,Herrington Program,34700 Valley Road,Oconomowoc,WI,53066,(800) 767-4411x516Intake: (800) 767-4411 Hotline: (800) 767-4411,SA TX RL MN SF PI
+2007,672,Rogers Memorial Hospital Oconomowoc,34700 Valley Road,Oconomowoc,WI,53066,(800) 767-4411,MH-SA TX DT HI RL OP AD CO WN MN SF MC PI MI AH
+2007,672,Bad River Alcohol Program,100 Maple Lane,Odanah,WI,54861,(715) 682-7116,SA TX OP WN MN CJ PA
+2007,672,Gundersen Lutheran Behavioral Health,123 16th Avenue South,Onalaska,WI,54650,(608) 775-2287Hotlines: (608) 775-4344 (800) 362- 8255x54344,MH-SA TX OP SF MD MC PI MI SS AH
+2007,673,Affinity Behavioral Health Mercy Counseling Service,515 South Washburn Street Suite 104,Oshkosh,WI,54904,(920) 236-8570,MH-SA TX OP AD DU SF MD MC SI PI MI AH
+2007,673,Nova Counseling Services Inc Nova Treatment Center,3240 Jackson Street,Oshkosh,WI,54901,(920) 231-0143,SA TX HH RS RL OP WN MN SF PI
+2007,673,˝eda Care Behavioral Health at Oshkosh,2935 Universal Court,Oshkosh,WI,54904,(920) 720-2300Hotline: (920) 720-2300,MH-SA TX OP PH AD SF MD MC SI PI MI AH
+2007,673,Counseling and Development Center Inc Mental Health AODA Treatment Program,171 Chestnut Street,Phillips,WI,54555,(715) 339-3048,MH-SA TX OP DU CJ SF MD MC SI PI MI SS PA AH
+2007,673,Aro Counseling Centers Inc,116 West Grand Avenue Suite 205,Port Washington,WI,53074,(262) 284-3117,MH-SA TX OP AD CO WN BC DU SF MD MC SI PI MI SS
+2007,673,Pauquette Center for Psychological Services,2901 Hunters Trail,Portage,WI,53901,(608) 742-5518Hotline: (608) 742-5344,MH-SA TX OP AD CO DU CJ SF MD MC SI PI MI
+2007,673,Poynette Counseling and Psychotherapy Associates Inc,415 North Main Street,Poynette,WI,53955,(608) 635-2146,MH-SA TX OP CO CJ SF MD MC SI PI MI AR
+2007,673,Franciscan Skemp Behavioral Healthcare Villa Success,121 South Prairie Street,Prairie du Chien,WI,53821,(608) 326-8424Hotline: (608) 326-8424,SA TX DT RS RL OP AD DU CJ SF PI PA
+2007,673,Gundersen Lutheran Behavioral Health,610 East Taylor Street,Prairie du Chien,WI,53821,(608) 326-3380,MH-SA TX OP SF MD MC PI MI SS AH
+2007,673,Pathway Clinic,560 4th Street,Prairie du Sac,WI,53578,(608) 643-3663Intake: (608) 356-9884,MH TX OP DU SF MC SI PI MI
+2007,673,All Saints Behavioral Health Services,1320 Wisconsin Avenue,Racine,WI,53403,(262) 687-2011,MH-SA TX DT HI OP PH AD SF MD MC SI PI MI AH SP F67
+2007,673,Genesis Behavioral Services Inc Durand House,4606 Durand Avenue,Racine,WI,53405,(262) 554-7728,SA TX HH RL MN SF
+2007,673,Genesis Behavioral Services Inc Racine Outpatient,1654 Washington Avenue,Racine,WI,53403,(262) 633-5001,SA TX OP PH AD DU CJ SF MD MC PI SS PA SP
+2007,673,Genesis Behavioral Services Inc Saint Clair House,4107-4109 Saint Clair Street,Racine,WI,53402,(262) 681-3202,SA TX RL MN SF MD MC SI PI MI
+2007,673,Lutheran Social Services,2219 Washington Avenue,Racine,WI,53403,(262) 637-3886,MH TX OP SF MD MC SI PI MI
+2007,673,S˛uality Addiction Management (QAM) Narcotic Treatment Program,6233 Bankers Road Suite 10,Racine,WI,53406,(262) 598-1392Methadone Clients Only,SA TX MM DM OP SF MD
+2007,673,Racine Psychological Services Inc,840 Lake Avenue Suite 101,Racine,WI,53403,(262) 634-8688,MH TX OP DU SF MD MC SI PI AH SP
+2007,673,Koller Behavioral Health Services,622 Mason Street,Rhinelander,WI,54501,(715) 369-2210,SA TX OP AD WN SF MD MC SI PI MI AR SS
+2007,674,Richland County Health and Human Servs West O˚ce,1000 Highway 14 West,Richland Center,WI,53581,(608) 647-6384x222Intake: (608) 647-6384x301 Hotlines: (608) 647-2106 (608) 647-6384x301,MH-SA TX OP AD CO DU SF MD MC SI PI MI AR SS PA AH
+2007,674,Kinnic Falls Alcohol and Drug Abuse Services,900 South Orange Street,River Falls,WI,54022,(715) 426-5950x104Intakes: (800) 525-4712 (715) 426-5950,MH-SA TX HH RL OP DU SF SI PI
+2007,674,Shawano County Department Comm Progs Outpatient Services,504 Lakeland Road,Shawano,WI,54166,(715) 526-5547Hotline: (715) 526-3240,MH-SA TX OP SF MD MC SI PI MI SS AH SP
+2007,674,Shawano Medical Center,309 North Bartlette Street,Shawano,WI,54166,(715) 526-7300Intake: (715) 526-3240 Hotline: (715) 526-3240,SA DT HI SF MD MC SI PI MI AH
+2007,674,Aurora Sheboygan Memorial Medical Ctr Behavioral Health Services,2629 North 7th Street,Sheboygan,WI,53083,(920) 451-5548,MH-SA TX DT HI OP AD WN DU SF MD MC SI PI MI
+2007,674,Genesis Behavioral Services Inc,503 Wisconsin Avenue,Sheboygan,WI,53081,(920) 457-7802,SA TX RS RL CO GL SE PW WN MN CJ SF PI
+2007,674,Libertas of Sheboygan,3149 Saemann Avenue,Sheboygan,WI,53081,(920) 803-0740,SA TX OP AD SF PI
+2007,674,Sheboygan County Human Services Outpatient Services,1011 North 8th Street,Sheboygan,WI,53081,(920) 459-3151Intake: (920) 459-3155 Hotline: (920) 459-3151,MH-SA TX OP AD CO DU SF MD MC SI PI MI PA AH
+2007,674,Franciscan Skemp Healthcare Behavioral Health/Sparta Campus,310 West Main Street,Sparta,WI,54656,(608) 269-4132,MH TX OP SF MD MC SI PI MI AH
+2007,674,Gundersen Lutheran Behavioral Health,218 West Main Street,Sparta,WI,54656,(608) 269-1588Hotlines: (608) 775-4344 (800) 362- 8255x54344,MH-SA TX OP SF MD MC PI MI SS AH
+2007,674,Ministry Behavioral Health,209 Prentice Street North,Stevens Point,WI,54481,(715) 344-4611Hotline: (715) 344-4611,SA TX OP PH WN MN CJ SF MD MC SI PI MI SS AH
+2007,674,Ministry Behavioral Health Residential Treatment Center,201 North Prentice Street,Stevens Point,WI,54481,(715) 345-0711,SA TX HH RS RL SF PI AH
+2007,674,Saint Michaels Hospital Detoxi˙cation Services,900 Illinois Avenue,Stevens Point,WI,54481,(715) 346-5000,MH DT HI SF MD MC SI PI MI
+2007,674,Counseling Associates of Door County,620 North 12th Avenue,Sturgeon Bay,WI,54235,(920) 743-9554,SA TX OP DU SF MD SI PI MI
+2007,674,Door County Department of Community Programs,421 Nebraska Street,Sturgeon Bay,WI,54235,(920) 746-2345,MH-SA TX OP DU SF MD MC PI MI SS AH SP
+2007,674,HRC,1500 North 34th Street Suite 600,Superior,WI,54880,(715) 392-8216Hotline: (715) 395-2259,SA TX RS RL CO SF MD SI PI MI
+2007,674,HRC Mental Health Services,39 North 25th Street East,Superior,WI,54880,(715) 392-8216Hotline: (715) 395-2259,MH-SA TX OP AD CO DU SF MD MC SI PI MI
+2007,674,Huiras Center,1500 West Market Street Suite 300,˝iensville,WI,53092,(262) 241-6127,SA TX OP PH AD SF MD MC SI PI MI AH
+2007,675,Dept of Veterans A airs Alcohol/Drug Dependence Treatment Program,500 East Veterans Street,Tomah,WI,54660,(608) 372-1758Intake: (800) 872-8662x61758,GH TX DT HI RS RL OP CO DU SF PI MI
+2007,675,Gundersen Lutheran Behavioral Health,601 North Superior Avenue,Tomah,WI,54660,(608) 374-3853Hotlines: (608) 775-4344 (800) 362- 8255x54344,MH-SA TX OP SF MD MC PI MI SS AH
+2007,675,Lincoln Healthcare Center Tomahawk O˚ce/Substance Abuse Servs,310 West Wisconsin Avenue,Tomahawk,WI,54487,(715) 453-5381Hotlines: (800) 799-0122 (715) 845-4326,MH-SA TX OP SF MD MC SI PI MI SS PA
+2007,675,Aro Counseling Centers Inc,400 West Moreland Boulevard,Waukesha,WI,53188,(262) 524-9416,MH-SA TX OP PH AD CO WN DU SF MD MC SI PI MI SS
+2007,675,Behavioral Medicaine Center,721 American Avenue Suite 501,Waukesha,WI,53188,(262) 928-4036Intake: (262) 928-2396 Hotline: (262) 928-4036,MH-SA TX OP SF MD MC SI PI AH
+2007,675,Behavioral Medicine Center Lawrence Center,3011 Saylesville Road,Waukesha,WI,53189,(262) 928-6900Intake: (262) 928-4253 Hotlines: (262) 928-4036 (262) 928-4253,SA TX DT RS OP PH AD CO WN MN SF SI PI
+2007,675,Century House,1130 Northview Road,Waukesha,WI,53188,(262) 544-6233,SA TX HH RL MN SF PI AR
+2007,675,Genesis House,1002 Motor Avenue,Waukesha,WI,53188,(262) 544-0711Intake: (262) 544-1321,SA TX HH RL SF PI
+2007,675,La Casa de Esperanza Outpatient Clinic,210 NW Barstow Street Suite 110,Waukesha,WI,53188,(262) 928-4402,SA TX OP CO DU CJ SF MD SS SP
+2007,675,Lutheran Social Services House of Hope,325 Sentinel Drive,Waukesha,WI,53189,(262) 542-2663,SA TX HH RL PW WN BC
+2007,675,F˛uality Addiction Management (QAM),2422 North Grandview Boulevard,Waukesha,WI,53188,(262) 549-6469Intake: (262) 549-6600 Methadone Clients Only,SA TX DT MM DM OP SF MD
+2007,675,Riverside Medical Center Behav Health,190 Grand Seasons Drive,Waupaca,WI,54981,(715) 258-8459Intake: (715) 258-1119,MH-SA TX DT OP SF MD PI
+2007,675,˝eda Care Behavioral Health,902 Riverside Drive Suite 204,Waupaca,WI,54981,(715) 256-1475,MH-SA TX OP AD SF MD PI MI AH
+2007,675,Family Counseling Services of Wausau,903 2nd Street,Wausau,WI,54403,(715) 842-3346Hotline: (715) 842-3346,MH-SA TX DT OP AD CO WN MN DU SF MD MC SI PI MI SS AH
+2007,675,North Central Healthcare Facilities,1100 Lakeview Drive,Wausau,WI,54403,(715) 848-4600Hotlines: (800) 799-0122 (715) 845-4326,MH-SA TX DT HI OP PH CO DU SF MD MC SI PI MI SS PA AH
+2007,675,Wausau Health Services,209 West Washington Street Suite B,Wausau,WI,54403,(715) 845-3637,SA TX DT MM DM OP CO WN MN DU SF MD SI PI MI SS AH
+2007,675,Waushara County Clinical Services,230 West Park Street P.O. Box 1230,Wautoma,WI,54982,(920) 787-6550Intake: (888) 250-4331 Hotline: (800) 784-2433,MH-SA TX OP AD DU CJ SF MD MC SI PI MI SS PA AH
+2007,675,Saint Croix Tribal Mental Health AODA/Mental Health Clinic,4404 State Road 70,Webster,WI,54893,(877) 455-1901x5264Intake: (715) 349-8554x5264,MH-SA TX OP WN MN DU SF MD PI
+2007,676,Affiliated Clinical Services Inc,400 West River Drive,West Bend,WI,53090,(262) 338-2717,MH-SA TX DT OP SF MD MC SI PI MI
+2007,676,Winnebago Mental Health Institute Anchorage Adolescent Program,4100 Tre ert Drive,Winnebago,WI,54985,(920) 235-4910x2438Intake: (920) 235-4910x2360,MH-SA TX DT HI AD CO SF MD SI PI MI
+2007,676,Winnebago Mental Health Institute Gemini Adult Program Tre ert Drive and Butler Street,,Winnebago,WI,54985,(920) 235-4910Intakes: (920) 235-4910x2427 (920) 235- 4910x2432,MH-SA TX HI CO SF MD SI PI AH
+2007,676,Wood County Uni˙ed Services Outpatient,2611 12th Street South,Wisconsin Rapids,WI,54494,(715) 421-8840,MH-SA TX OP PH CO DU SF MD MC PI MI SS AH
+2007,676,Koller Behavioral Health Services,311 Elm Street,Woodru ,WI,54568,(715) 356-8540,MH-SA TX HI OP SF MD MC SI PI MI AR SS
+2007,677,Big Horn County Counseling,116 South 3rd Street,Basin,WY,82410,(307) 568-2020DWI/DUI Clients Only,MH-SA TX OP PH AD CO PW WN MN DU CJ SF MD SI PI MI AR SS PA AH SP
+2007,677,Northern Wyoming Mental Health Center Substance Abuse Services,521 West Lott Street,Bu alo,WY,82834,(307) 684-5531Hotline: (307) 684-5531,MH-SA TX OP AD DU CJ SF MD MC SI PI MI SS AH
+2007,677,Casper VA Outpatient Clinic,4140 South Poplar Street,Casper,WY,82601,(307) 235-4143Intake: (307) 235-4143x204,TX DT OP CO DU MD SI PI MI PA
+2007,677,Central Wyoming Counseling Center,1430 Wilkins Circle,Casper,WY,82601,(307) 237-9583Hotline: (307) 237-9583,MH-SA TX OP AD CO CJ SF MD SI PI MI AR SS PA AH
+2007,677,New Directions,1514 East 12th Street Suite 101,Casper,WY,82601,(307) 237-6033Intake: (307) 237-9583,SA TX RL AD CO CJ SF SI PI MI AR SS PA
+2007,677,New Horizons,837 East C Street,Casper,WY,82601,(307) 237-7077Intake: (307) 237-9583,SA TX RL MN CJ SF PI MI SS PA
+2007,677,Reˆections,1514 East 12th Street Building D,Casper,WY,82601,(307) 237-5041Intakes: (307) 237-9583 (307) 237-7077,SA TX RL PW WN BC CJ SF PI MI SS PA
+2007,677,Transitions Family Counseling and Mediation Center,336 South Jackson Street,Casper,WY,82601,(307) 265-2555,MH-SA TX OP CO DU CJ SF SI PI MI AR
+2007,677,Wyoming Behavioral Institute,2521 East 15th Street,Casper,WY,82609,(307) 237-7444Hotline: (307) 237-7444,MH TX DT HI RS OP PH AD CO HV SF MD MC SI PI AH
+2007,677,Wyoming Recovery,231 South Wilson Street,Casper,WY,82601,(307) 265-3791,SA TX DT HH RS RL OP PH SF PI AR
+2007,677,Alternatives Counseling and Consulting Center LLC,2111 Warren Avenue,Cheyenne,WY,82001,(307) 635-5347Intake: (307) 421-6237,MH-SA TX DT OP CO DU SF SI PI MI
+2007,677,Cheyenne VA Medical Center Substance Abuse Treatment Program,2360 East Pershing Boulevard,Cheyenne,WY,82001,(307) 778-7550x7698Intake: (307) 778-7349,GH TX OP PH SF PI MI
+2007,677,Peak Wellness Center,2526 Seymour Avenue,Cheyenne,WY,82001,(307) 634-9653Hotline: (307) 634-9653,MH-SA TX OP CO SE SF MD MC SI PI MI SS PA AH
+2007,677,Peak Wellness Center Transitions Residential Program,2310 East 8th Street,Cheyenne,WY,82001,(307) 632-6433,SA TX DT RS RL MN SF MD MC PI MI AR SS AH
+2007,677,Cedar Mountain Center at West Park Hospital,707 Sheridan Avenue,Cody,WY,82414,(307) 578-2421x421Intakes: (307) 578-2421 (800) 775-6016,SA TX DT HI RS OP PH AD CO HV DU SF MD MC PI
+2007,677,Solutions for Life Substance Abuse Services,1841 Madora Avenue,Douglas,WY,82633,(307) 358-2846Hotline: (307) 358-2846,MH-SA TX OP AD DU CJ SF MD MC SI PI MI SS
+2007,678,664 WYOMING Cornerstone,195 Featherway Street Suite 1,Evanston,WY,82930,(307) 789-0715x506Intake: (307) 789-0715,MH-SA TX OP AD DU SF MD SI PI MI SS
+2007,678,Wyoming State Hospital Substance Abuse Track,831 South Highway 150,Evanston,WY,82930,(307) 789-3464x488Intakes: (307) 789-3464x207 (307) 789- 3464x209,MH TX HI CO SF MD PI MI SS PA AH SP
+2007,678,Behavioral Health Services Outpatient Campbell County Memorial Hospital,501 South Burma Avenue,Gillette,WY,82716,(307) 688-5000Intake: (307) 688-1000 Hotlines: (307) 688-5000 (307) 688-1000,MH-SA TX DT HI OP AD WN DU SF MD SI PI MI SS
+2007,678,Gillette VA Outpatient Clinic,1701 Phillip Circle Suite A,Gillette,WY,82718,(307) 685-0676,TX DT OP CO DU MD SI PI MI PA
+2007,678,Personal Frontiers Inc,310 South Miller Avenue Suite G,Gillette,WY,82717,(307) 686-1189Intake: (307) 686-1191 Hotline: (307) 688-1000,SA TX OP AD PW WN MN DU CJ SF MD MC SI PI MI AR SS
+2007,678,Transitions Family Counseling and Mediation Center,801 East 4th Street Suite 18,Gillette,WY,82716,(307) 682-8617,MH-SA TX OP CO DU CJ SF SI PI MI AR AH
+2007,678,Curran/Seeley Foundation,610 West Broadway Suite L-1,Jackson,WY,83001,(307) 733-3908,SA TX OP AD WN MN DU SF MD MC PI SS PA SP
+2007,678,Peak Wellness Center Albany County Clinic,1263 North 15th Street,Laramie,WY,82072,(307) 745-8915x251Intake: (307) 745-8915 Hotline: (307) 745-8915,MH-SA TX OP AD SF MD MC SI PI MI AR SS AH SP
+2007,678,Wyoming Counseling and Outreach Servs,417 East Fremont Street,Laramie,WY,82072,(307) 721-4164,MH-SA TX OP SF PI
+2007,678,Big Horn County Counseling,25 West 10th Street,Lovell,WY,82431,(307) 548-6543,MH-SA TX OP AD CO DU SF MD SI PI SS AH SP F30
+2007,678,Solutions for Life Substance Abuse Services,905 South Main Street,Lusk,WY,82225,(307) 334-3666,MH-SA TX OP CO DU SF MD MC SI PI MI SS
+2007,678,Northern Wyoming Mental Health Center Substance Abuse Services,420 Deanne Avenue,Newcastle,WY,82701,(307) 746-4456Hotline: (307) 746-4456,MH-SA TX OP DU SF MD MC SI PI MI SS AH
+2007,678,Chrysalis House,805 Pine Street P.O. Box 610,Pine Blu s,WY,82082,(307) 245-3444,SA TX RL CO WN BC SF MD MC SI PI MI SS
+2007,678,Fremont Counseling Service,1110 Major Avenue,Riverton,WY,82501,(307) 856-6587,MH-SA TX OP AD CJ SF MD SI PI MI SS
+2007,678,Riverton VA Outpatient Clinic,2300 Rose Lane,Riverton,WY,82501,(307) 857-1211,TX DT OP CO DU MD SI PI MI PA
+2007,678,Southwest Counseling Service,2300 Foothill Boulevard,Rock Springs,WY,82901,(307) 352-6677Hotline: (307) 352-6677,SA TX HH RL OP PH AD CO PW WN BC MN DU CJ SF MD MC SI PI MI AR SS SP
+2007,678,Southwest Counseling Service Rosen Recovery Center,1414 9th Street,Rock Springs,WY,82901,(307) 352-6677Hotline: (307) 352-6677,SA TX DT HH RS RL SF MD MC SI PI MI AR SS
+2007,679,Wyoming Behavioral Institute Sweetwater County Clinic,79 Winston Drive Suite 210,Rock Springs,WY,82901,(307) 362-8701Intake: (800) 457-9312 Hotline: (800) 457-9312,MH-SA TX OP AD DU SF MC PI MI
+2007,679,Northern Wyoming Mental Health Center Substance Abuse Services,1043 Co en Avenue Suite B,Sheridan,WY,82801,(307) 674-7702Intake: (307) 674-4405 Hotlines: (307) 674-7702 (307) 674-4405,SA TX OP AD CO WN MN DU CJ SF MD MC SI PI MI SS AH
+2007,679,Piedmont Addiction Recovery Practice,425 West Loucks Street,Sheridan,WY,82801,(307) 672-2468,MH-SA TX OP CO SF MD MC SI PI MI
+2007,679,Wyoming SA Trt and Recovery Centers (WYSTAR),1898 Fort Road Building 4,Sheridan,WY,82801,(307) 673-4523Intake: (307) 672-2044,SA TX HH RL CO MN SF MD MC PI
+2007,679,Wyoming SA Trt and Recovery Centers (WYSTAR) ˝e Gathering Place,1003 Saberton Street,Sheridan,WY,82801,(307) 672-2044,SA TX DT HH RS RL CO WN BC SF MD MC SI PI MI SS
+2007,679,Hot Springs County Counseling Service,121 South 4th Street,˝ermopolis,WY,82443,(307) 864-3138,MH-SA TX OP DU SF MD SI PI MI AR SS PA
+2007,679,Peak Wellness Center Goshen County Clinic,501 Albany Avenue,Torrington,WY,82240,(307) 532-4091,MH-SA TX OP AD DU SF MD MC SI PI MI SS
+2007,679,Peak Wellness Center Substance Abuse Services,103 Park Avenue,Wheatland,WY,82201,(307) 322-3190Hotline: (307) 322-3190,MH-SA TX OP CO DU SF MD MC SI PI MI SS
+2007,679,Washakie Mental Health Services,206 South 7th Street,Worland,WY,82401,(307) 347-6165Hotline: (307) 347-6165,MH-SA TX OP DU SF MD SI PI MI SS AH
