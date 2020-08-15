@@ -4,10 +4,6 @@ library(tidyverse)
 setwd("/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy scan/")
 census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf")
 
-#dpProfileVar18 <- load_variables(2018, "acs5/profile", cache = TRUE)
-#var18 <- load_variables(2018, "acs5", cache = TRUE)
-# unique(dp18$concept)
-# see 2018_ProductDataList excel file
 
 ## DP02 select social characteristics
 ## DP03 economic characteristics 
@@ -29,8 +25,8 @@ census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf")
 #  12.Age  : Age >=65   DP05_0029 Estimate!!SEX AND AGE!!Total population!!65 years and over	
 
 ## identify variables from DP02 table
-#  1.Edu   : Pop >=25   DP02_0058 Estimate!!EDUCATIONAL ATTAINMENT!!Population 25 years and over
-#  2.Edu   : >= HS      DP02_0066 Estimate!!EDUCATIONAL ATTAINMENT!!Population 25 years and over!!High school graduate or higher	
+#  1.Edu   : Pop >=25   B06009_001Estimate!!Total	- Population 25 years and over
+#  2.Edu   : < HS       B06009_002Estimate!!Total!!Less than high school graduate	
 #  3.Ins   : NonIns Pop DP02_0070 Estimate!!DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION!!Total Civilian Noninstitutionalized Population	
 #  4.Dis   : Disab      DP02_0071 Estimate!!DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION!!Total Civilian Noninstitutionalized Population!!With a disability	
 
@@ -39,10 +35,10 @@ yeartoFetch <- 2018
 shapetoFetch <- c("county","zcta","state")
 variablestoFetch <- data.frame(cbind( c('DP05_0001','DP05_0037','DP05_0038','DP05_0071','DP05_0005','DP05_0006',
                                         'DP05_0007','DP05_0008','DP05_0009','DP05_0010','DP05_0011','DP05_0029',
-                                        'DP02_0058','DP02_0066','DP02_0070','DP02_0071'),
+                                        'B06009_001','B06009_002','DP02_0070','DP02_0071'),
                                       c('totPop','white','black','hispanic','age0_4','age5_9','age10_14',
                                         'age15_19','age20_24','age25_34','age35_44','ageOv65',
-                                        'popOver25','eduOverHS','nonInsPop','disab')))
+                                        'popOver25','eduNoHS','nonInsPop','disab')))
 colnames(variablestoFetch) <- c('code','name')
 variablestoFetch$code <- as.character(variablestoFetch$code)
 variablestoFetch$name <- as.character(variablestoFetch$name)
@@ -66,10 +62,10 @@ for (i in 1:length(shapetoFetch))
   varDf$pctBlack  <-  varDf$black/varDf$totPop
   varDf$pctHisp   <-  varDf$hispanic/varDf$totPop
   varDf$disb      <-  varDf$disab/varDf$nonInsPop
-  varDf$pctNoHS   <-  1 - (varDf$eduOverHS/varDf$popOver25)
+  varDf$pctNoHS   <-  varDf$eduNoHS/varDf$popOver25
   varDf$onsPop    <-  varDf$totPop - varDf$nonInsPop
   varDf$pctPop15_24 <-  (varDf$age15_19 + varDf$age20_24)/varDf$totPop
-  varDf$pctPopUnder45 <-(varDf$age0_4 + varDf$age5_9 + varDf$age10_14 + varDf$age20_24 + 
+  varDf$pctPopUnder45 <-(varDf$age0_4 + varDf$age5_9 + varDf$age10_14 + varDf$age15_19 + varDf$age20_24 + 
                            varDf$age25_34 + varDf$age35_44)/varDf$totPop
   varDf$pctPopOver65  <-varDf$ageOv65/varDf$totPop
   
@@ -111,7 +107,7 @@ varDf$pctBlack  <-  varDf$black/varDf$totPop
 varDf$pctHisp   <-  varDf$hispanic/varDf$totPop
 varDf$disb      <-  varDf$disab/varDf$nonInsPop
 varDf$pctNoHS   <-  1 - (varDf$eduOverHS/varDf$popOver25)
-varDf$onsPop    <-  varDf$totPop - varDf$nonInsPop
+varDf$insPop    <-  varDf$totPop - varDf$nonInsPop
 varDf$pctPop15_24 <-  (varDf$age15_19 + varDf$age20_24)/varDf$totPop
 varDf$pctPopUnder45 <-(varDf$age0_4 + varDf$age5_9 + varDf$age10_14 + varDf$age20_24 + 
                          varDf$age25_34 + varDf$age35_44)/varDf$totPop
