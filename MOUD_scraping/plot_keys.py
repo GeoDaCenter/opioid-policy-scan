@@ -86,9 +86,10 @@ y_pos = np.arange(len(labels))
 
 y_count = 0
 for (key, count), med in zip(data_cleaned, MEDS):
-    rects = ax.barh(y_pos[y_count:y_count + len(count)], count, barwidth, align='center', label=med)
-    autolabel(rects)
-    y_count += len(count)
+	if count:
+	    rects = ax.barh(y_pos[y_count:y_count + len(count)], count, barwidth, align='center', label=med)
+	    autolabel(rects)
+	    y_count += len(count)
 
 ax.set_yticks(y_pos)
 ax.set_yticklabels(labels)
