@@ -40,14 +40,17 @@ def clean_key(keys, counts):
     counts = [count for count in counts if count!= 0]
     return (keys, counts)
 
+n = 2 #number of words before line change
 data = [([], []), ([], []), ([], [])] #(keys, counts)
 for key, val in keys_dict.items():
     if val:
         i = 0
-        while i < 3:
+        while i < len(MEDS):
             if (MEDS[i] in val) or (MEDS[i].lower() in val):
-                keyname = '{0} ({1})'.format(val, key).split()
-                data[i][0].append('\n'.join([' '.join(keyname[i:i+3]) for i in range(0, len(keyname), 3)]))
+                #keyname = '{0} ({1})'.format(val, key).split()
+                keyname = '{0} ({1})'.format(val, key).replace('/', '/ ').split()
+				#data[i][0].append('\n'.join([' '.join(keyname[i:i+n]) for i in range(0, len(keyname), n)]))
+                data[i][0].append('\n'.join([' '.join(keyname[i:i+n]).replace('/ ', '/') for i in range(0, len(keyname), n)]))
                 data[i][1].append(count_keys(key))
             i += 1
 
@@ -55,9 +58,9 @@ for (key, count), med in zip(data, MEDS):
     if not key:
         print('Keys related to {} not found.'.format(med))
 
-data_cleaned = [0, 0, 0]
+data_cleaned = [0] * len(MEDS)
 i = 0
-while i < 3:
+while i < len(MEDS):
     data_cleaned[i] = clean_key(data[i][0], data[i][1])
     i += 1
 for (key, count), (key_cleaned, count_cleaned), med in zip(data, data_cleaned, MEDS):
@@ -70,6 +73,8 @@ print('\n')
 
 
 #plot
+#‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’, ‘x-large’, ‘xx-large’
+
 def autolabel(rects):
     for rect in rects:
         height = rect.get_width()
@@ -77,13 +82,15 @@ def autolabel(rects):
         ax.annotate('{}'.format(height), xy=(height + 200, y + barwidth/2 + 0.1), ha='center', va='bottom')
 
 barwidth = 0.5
-num_keys = len(data_cleaned[0][1]) + len(data_cleaned[1][1]) + len(data_cleaned[2][1])
+num_keys = 0
+labels = []
+for med_data in data_cleaned:
+	num_keys += len(med_data[0])
+	labels += med_data[0]
+
 plt.rcdefaults()
 fig, ax = plt.subplots(figsize = (5, num_keys))
-
-labels = data_cleaned[0][0] + data_cleaned[1][0] + data_cleaned[2][0]
 y_pos = np.arange(len(labels))
-
 y_count = 0
 for (key, count), med in zip(data_cleaned, MEDS):
 	if count:
@@ -92,11 +99,15 @@ for (key, count), med in zip(data_cleaned, MEDS):
 	    y_count += len(count)
 
 ax.set_yticks(y_pos)
-ax.set_yticklabels(labels)
+ax.set_yticklabels(labels, fontdict = {'fontsize': 'x-large'}) #15
 ax.invert_yaxis()  # labels read top-to-bottom
-ax.set_xlabel('Number of treatment units')
-ax.set_title('Opioid-related services, {}'.format(YEAR))
+ax.set_xlabel('Number of treatment units', fontdict = {'fontsize': 'x-large'})
+ax.set_title('Opioid-related services, {}'.format(YEAR), fontdict = {'fontsize': 'xx-large'})
+
 
 plt.xlim(0, 4000)
 plt.legend()
 plt.savefig('{0}/{0}_stats.png'.format(YEAR), bbox_inches = 'tight', dpi = 300)
+
+
+
