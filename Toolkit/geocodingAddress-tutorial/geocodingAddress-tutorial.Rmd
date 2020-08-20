@@ -1,0 +1,142 @@
+---
+title: 'Geocoding Addresses to Spatial DataPoints'
+author: "Moksha Menghaney"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    collapse: subsection
+    scroll_highlight: yes
+  pdf_document: default
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+body {text-align: justify}
+</style>
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Tutorial objectives
+
+This tutorial demonstrates how to convert a bunch of addresses to spatial data points that can be then used for mapping and other geospatial analysis. Geocoding is the formal process of converting addresses (like a street address) into geographic coordinates (latitude and longitude). This tutorial assumes some familiarity with the R programming language. Please contact Moksha Menghaney at mmenghaney@uchicago.edu with any questions about this content.
+
+Our inputs is:
+  
+- a CSV file with the addresses of our resources ("chicago_methadone.csv") 
+
+We will convert these addresses to their appropriate geographic coordinates and project them with the relevant crs as spatial data points. Our final result will be a shapefile with the geographic coordinates for each address.
+
+### Packages used
+
+We will use the following packages in this tutorial:
+  
+- `sf`: to manipulate spatial data
+- `tmap`: to visualize and create maps
+- `tidygeocoder`: to convert addresses to geographic coordinates.
+
+First, install the relevant R packages with the following commands:
+  
+```{r install, eval=FALSE}
+install.packages("sf")
+install.packages("tmap")
+install.packages("tidygeocoder")
+```
+
+Then load the libraries for use. (The message you see about GEOS, GDAL, and PROJ refer to the software libraries that allow you to work with spatial data.)
+
+```{r load}
+library(sf)
+library(tidygeocoder)
+library(tmap)
+```
+
+# Read in resource data {#read-resources}
+
+We will use a .csv of methadone clinic addresses in Chicago as an example. Let's take a look at the first few rows of the dataset. As we see, our data has only addresses but no geographic coordinates.
+
+```{r read}
+methadoneClinics <- read.csv("chicago_methadone.csv")
+head(methadoneClinics)
+```
+
+# Geocode addresses {#geocode-addresses} 
+To do geospatial analysis like mapping and other advanced analysis we need the latitude and longitude for each location.To get those, there are a number of options in R. I like the `tidygeocoder` package. It uses mutliple geocoding services, giving user an option to choose. It also provides the option to use `cascade` method which queries other geocoding services incase the default fails to provide coordinates. 
+
+Default method uses the [US Census geocoder](https://geocoding.geo.census.gov/) and this caps you at around 10,000 addresses at once. This process may require some data manipulation, so for your ease you may wish to use a proprietary software instead (i.e. Esri Geocoder, which is included in Esri software like ArcGIS).
+
+Here's an example of geocoding a single address:
+
+```{r}
+geo("4545 North Broadway St. Chicago, IL", lat = latitude, long = longitude, 
+    method = 'cascade')
+```
+
+To apply the function to multiple addresses, follow the next few steps.
+
+First we need ensure that we have a *character vector* of full addresses.
+
+```{r}
+str(methadoneClinics)
+```
+
+```{r}
+# convert all fields to character first to avoid issues with factors
+methadoneClinics$fullAdd <- paste(as.character(methadoneClinics$Address), 
+                                  as.character(methadoneClinics$City),
+                                  as.character(methadoneClinics$State), 
+                                  as.character(methadoneClinics$Zip))
+head(methadoneClinics)
+```
+
+Then geocode the addresses. Tibble below includes the address, latitude, longitude and also the geocoding service used to get the coordinates. Please note geocoding takes a bit of time.
+
+```{r geocode}
+geoCodedClinics <- methadoneClinics %>% 
+                            geocode(methadoneClinics, address = 'fullAdd', 
+                                    lat = latitude, long = longitude, method = 'cascade')
+geoCodedClinics
+```
+
+The code worked for all addresses except the first two. We already resolved the `4545 North Broadway St.`address above but here in the dataframe we get NAs. It is pointing to some issue with the string input. Unfortunately, such quirks are common across geocoding services in R and we just have to handle them. We manually update the full address strings to get apprpriate coordinates.
+
+```{r}
+
+methadoneClinics[1,'fullAdd'] <- '4453 North Broadway St.,Chicago IL 60640'
+methadoneClinics[2,'fullAdd'] <- '4545 North Broadway St.,Chicago IL 60640'
+geoCodedClinics <- methadoneClinics %>% 
+                            geocode(methadoneClinics, address = 'fullAdd', 
+                                    lat = latitude, long = longitude, method = 'cascade')
+geoCodedClinics
+```
+
+# Convert to Spatial DataFrame {#spatial-dataframe} 
+
+Next we convert our dataframe to a spatial data frame using the `st_as_sf()` function. The coords argument specifies which two columns are the X and Y for your data. We set the crs argument equal to 4326 because this data is in latitude and longitude (otherwise known as “unprojected”, which means it is not in feet or meters).
+
+*Please note longitude is entered as first column rather than the latitude. It is a very common mistake.*
+
+```{r spatialdf}
+methadoneSf <- st_as_sf(geoCodedClinics, 
+                        coords = c("longitude", "latitude"),
+                        crs = 4326)
+head(data.frame(methadoneSf))
+```
+
+Note that this is a data frame, but that it has a final column called “geometry” that stores the spatial information.
+We can now plot the location of the methadone clinics with base R.
+
+```{r plot}
+tmap_mode("view")
+tm_shape(methadoneSf) + tm_dots() + tm_basemap("OpenStreetMap")
+```
+
+Finally, we save this spatial dataframe as a shapefile which can be used for further spatial analysis.
+```{r write shp,eval= FALSE}
+write_sf(methadoneSf, "methadoneClinics.shp")
+```
