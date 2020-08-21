@@ -1,5 +1,5 @@
 **Meta Data Name**: 2018 Race and Ethnicity variables, part of the Demographic Social dataset  
-**Date Last Modified**: August 21st, 2020  
+**Last Modified**: August 21st, 2020  
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
