@@ -5,7 +5,6 @@ library(geojsonio)
 library(tidyverse)
 
 
-setwd("/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy scan/code")
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
 ## initialize variables
@@ -18,9 +17,9 @@ zctasToBeExcluded <- c('969','00') # PR and other islands
 
 
 ## get the geometries using tigris 
-counties <- counties(year = yeartoFetch)
-states   <- states(year = yeartoFetch)
-zctas    <- zctas(year = yeartoFetch)
+counties <- counties(year = yeartoFetch, cb = TRUE)
+states   <- states(year = yeartoFetch, cb = TRUE)
+zctas    <- zctas(year = yeartoFetch, cb = TRUE)
 
 counties <- st_transform(counties, crsToSet)
 states <- st_transform(states, crsToSet)
@@ -29,7 +28,7 @@ zctas <- st_transform(zctas, crsToSet)
 # tracts shapefiles need state as input, doesnt work for entire country like other functions.
 #tracts    <- tracts(year = yeartoFetch)
 tracts <- map(.x = as.numeric(states$STATEFP),
-               .f = ~ tracts(state = .x, county = NULL, year = yeartoFetch))
+               .f = ~ tracts(state = .x, county = NULL, year = yeartoFetch, cb = TRUE))
 tracts <- do.call(rbind.data.frame, tracts)
 tracts <- st_transform(tracts, crsToSet)
 

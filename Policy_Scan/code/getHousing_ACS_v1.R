@@ -8,7 +8,6 @@ library(tmap)
 library(sf)
 library(tigris)
 
-setwd("/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy scan/code")
 geometryFilesLoc <- '/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy Scan/code/'
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
@@ -86,7 +85,7 @@ for (i in 1:length(shapetoFetch))
     varDf$unitDens <- varDf$totUnits/varDf$areaSqMile
     
     varDf <- varDf[,c('GEOID','totUnits','pctOcc','pctVacant','pctMoblie','pctLngterm','unitDens')]
-    write.csv(varDf,paste0('HS01_',yeartoFetch,"_",filename[i],".csv"))
+    write.csv(varDf,paste0('HS01_',yeartoFetch,"_",filename[i],".csv"),row.names = FALSE)
 }
 
 ## api not working correctly for "tract" so need to run it separately
@@ -121,4 +120,4 @@ varDf <- merge(varDf,baseGeo[,c('GEOID','areaSqMile')], by.x = 'GEOID', by.y = '
 varDf$unitDens <- varDf$totUnits/varDf$areaSqMile
 
 varDf <- varDf[,c('GEOID','totUnits','pctOcc','pctVacant','pctMoblie','pctLngterm','unitDens')]
-write.csv(varDf,paste0('HS01_',yeartoFetch,"_T",".csv"))
+write.csv(varDf,paste0('HS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)

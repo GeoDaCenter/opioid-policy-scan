@@ -8,7 +8,6 @@ library(tmap)
 library(geojsonio)
 library(tigris)
 
-setwd("/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy scan/code")
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
 
@@ -85,7 +84,7 @@ for (i in 1:length(shapetoFetch))
   
   varDf <- varDf[,c('GEOID','totPop','pctWhite','pctBlack','pctAmInd','pctAsian','pctPacIs',
                     'pctOther','pctHisp','pctNoHS','pct15_24','pctUnder45','pctOver65','pctDisab')]
-  write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"))
+  write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
  
   # tmap_save(tm = tm_shape(baseGeo) +tm_fill("pctOver65", n =5, style = "fisher", palette = "YlGnBu")+
   #          tm_borders(col = "grey25", alpha = 0.3) +
@@ -136,4 +135,4 @@ varDf$pctOver65 <-  round(varDf$ageOv65*100/varDf$totPop,2)
 
 varDf <- varDf[,c('GEOID','totPop','pctWhite','pctBlack','pctAmInd','pctAsian','pctPacIs',
                   'pctOther','pctHisp','pctNoHS','pct15_24','pctUnder45','pctOver65','pctDisab')]
-write.csv(varDf,paste0('DS01_',yeartoFetch,"_T",".csv"))
+write.csv(varDf,paste0('DS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)
