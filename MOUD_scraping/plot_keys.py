@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import sys
 YEAR = sys.argv[1]
 MEDS = ['Methadone', 'Buprenorphine', 'Naltrexone']
+#['Drug', 'Alcoholism']
 
 
 #import files
@@ -40,7 +41,7 @@ def clean_key(keys, counts):
     counts = [count for count in counts if count!= 0]
     return (keys, counts)
 
-n = 2 #number of words before line change
+n = 3 #number of words before line change
 data = [([], []), ([], []), ([], [])] #(keys, counts)
 for key, val in keys_dict.items():
     if val:
@@ -99,7 +100,7 @@ for (key, count), med in zip(data_cleaned, MEDS):
 	    y_count += len(count)
 
 ax.set_yticks(y_pos)
-ax.set_yticklabels(labels, fontdict = {'fontsize': 'x-large'}) #15
+ax.set_yticklabels(labels, fontdict = {'fontsize': 12}) #15, 'x-large'
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.set_xlabel('Number of treatment units', fontdict = {'fontsize': 'x-large'})
 ax.set_title('Opioid-related services, {}'.format(YEAR), fontdict = {'fontsize': 'xx-large'})
