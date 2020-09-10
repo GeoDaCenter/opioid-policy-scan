@@ -14,3 +14,10 @@ MOUD_scraping/**/*.pdf
 MOUD_scraping/**/*.csv
 !MOUD_scraping/**/*_c.csv
 Policy_Scan/code/.Rapp.history
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.cpg
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.dbf
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.prj
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp.ea.iso.xml
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp.iso.xml
+Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shx
