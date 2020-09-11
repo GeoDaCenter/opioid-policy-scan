@@ -1,4 +1,4 @@
-"yfips","year","fips","state","county_name","total_prison_pop_rate","female_prison_pop_rate","male_prison_pop_rate","aapi_prison_pop_rate","black_prison_pop_rate","latinx_prison_pop_rate","native_prison_pop_rate","white_prison_pop_rate","total_prison_adm_rate","female_prison_adm_rate","male_prison_adm_rate","aapi_prison_adm_rate","black_prison_adm_rate","latinx_prison_adm_rate","native_prison_adm_rate","white_prison_adm_rate"
+"YFips","Year","Fips","State","CountyName","TtlPrPpr","FmlPrPpr","MlPrPpr","AapiPrPpr","BlckPrPpr","LtnxPrPpr","NtvPrPpr","WhtPrPpr","TtlPrAPpr","FmlPrAPpr","MlPrAPpr","AapiPrAPpr","BlckPrAPpr","LtnxPrAPpr","NtvPrAPpr","WhtPrAPpr"
 201601001,2016,"01001","AL","Autauga County",502.84,81.34,935.78,NA,1182.23,NA,NA,339.78,236.31,86.77,389.91,NA,489.2,NA,NA,179.02
 201601003,2016,"01003","AL","Baldwin County",618.44,78.14,1186.51,0,2281.6,0,0,458.76,353.5,105.19,614.58,0,1240.33,0,0,269.15
 201601005,2016,"01005","AL","Barbour County",902.36,NA,NA,NA,NA,NA,NA,NA,240.63,NA,NA,NA,NA,NA,NA,NA
