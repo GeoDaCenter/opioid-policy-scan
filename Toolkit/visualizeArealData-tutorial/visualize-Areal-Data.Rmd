@@ -1,0 +1,255 @@
+---
+title: 'Visualize Areal Data - Choropleth Mapping (a.k.a Thematic Maps)'
+author: "Moksha Menghaney"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    collapse: subsection
+    scroll_highlight: yes
+    fig_width: 6
+    fig_height: 6
+  pdf_document: default
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+body {text-align: justify}
+</style>
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tigris_use_cache = TRUE)
+```
+
+# Tutorial objectives
+
+This tutorial demonstrates how to plot data variables spatially i.e. create thematic maps, technically known as choropleth maps. These are generally used to highlight data variability across the space dimension. We will cover the most commonly used types of choropleth mapping techniques employed in R. Please note the methods covered here are mere an introduction to spatial plotting. This tutorial assumes some familiarity with the R programming language. Please contact Moksha Menghaney at mmenghaney@uchicago.edu with any questions about this content.
+
+We will using the race data for Illinois downloaded & saved as a shapefile using the [get-ACS_Data tutorial](link) from the Census Bureau.
+
+Our output will be three thematic maps highlighting the distribution of percentage hispanic population at a county level across the state of Illinois.
+
+### Packages used
+
+We will use the following packages in this tutorial:
+  
+- `tidyverse`: to manipulate data
+- `tmap`: to visualize and create maps
+- `sf`: to read/write and manipulate spatial data
+
+First, install and load the relevant R packages with the following commands:
+
+```{r install, eval=FALSE}
+install.packages("tidyverse")
+install.packages("tmap")
+install.packages("sf")
+```
+
+
+```{r load, message=FALSE}
+library(tidyverse)
+library(tmap)
+library(sf)
+```
+
+# Load data {#load-variables}
+
+We will read in the shapefile with percentage hispanic population at the county level for the state of Illinois for year 2018.
+
+```{r get data, message=FALSE, warning=FALSE, eval=FALSE}
+pctHispanic <- st_read("IL_County_18.shp")
+```
+
+Alternatively, if you have not saved the dataset from [get-ACS-Data tutorial](link), you can download it using the code below.
+```{r alternate data, message=FALSE}
+require(tidycensus)
+pctHispanic <- tidycensus::get_acs(geography = 'county', state = 'IL', 
+                                   variables =  c(totPop18 = "B01001_001", 
+                                                  hispanic ="B03003_003", 
+                                                  notHispanic = "B03003_002",
+                                                  white = "B02001_002", 
+                                                  afrAm = "B02001_003", 
+                                                  asian = "B02001_005"),
+                                   year = 2018, geometry = TRUE) %>% 
+                           select(GEOID, NAME, variable, estimate) %>% 
+                           spread(variable, estimate) %>% 
+                           mutate(hispPr18  = hispanic/totPop18, WhitePr18 = white/totPop18,
+                                  AfrAmPr18 = afrAm/totPop18, AsianPr18 = asian/totPop18) %>%
+                           select(GEOID,totPop18,hispPr18,WhitePr18,AfrAmPr18, AsianPr18)
+```
+
+Lets check the dataset structure.
+``` {r view data}
+head(pctHispanic)
+```
+
+In a shapefile, the 'geometry' column provides the geographic information/boundaries that we can map. We can do a quick plot using:
+```{r quick plot, fig.align='center'}
+plot(pctHispanic$geometry)
+```
+
+Before we move ahead, lets convert the percentages for easy plotting. 
+```{r multiply, message=FALSE, warning=FALSE}
+pctHispanic <- pctHispanic %>% 
+               mutate_at(vars(hispPr18:AsianPr18),
+                          .funs = funs(round(. * 100,2)))
+```
+
+
+# Thematic Plotting {#mapping} 
+
+We will be using `tmap` package for plotting spatial data distributions. The package syntax has similarities with `ggplot2` and follows the same idea of *A Layered Grammar of Graphics*.  
+
++ for each input data layer use `tm_shape()`, 
++ followed by the method to plot it, e.g `tm_fill() or tm_dots() or tm_line() or tm_borders()` etc.
+
+Similar to ggplot2, aesthetics can be provided for each layer and plot layout can be manipulated using `tm_layout()`. For more details on `tmap` usage & functionality, check  [tmap documentation](https://cran.r-project.org/web/packages/tmap/tmap.pdf). The previous map we plotted using `plot` can be mapped using `tmap` as in the code below.
+
+```{r quick plot tmap, fig.align='center'}
+tm_shape(pctHispanic) + tm_borders() + tm_layout(frame =  FALSE)
+```
+
+In tmap, the classification scheme is set by the `style` option in `tm_fill()` and the default style is `pretty`. Lets plot the distribution of percentage of hispanic population by county across the state of Illinois with default style using the code below. We can also change the color palette used to depict the spatial distribution. See [Set Color Palette](#set-palette) in Appendix for more details on that.
+
+```{r plot pretty, fig.align='center'}
+tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Pretty') + 
+tm_borders() + 
+tm_layout(frame = FALSE, legend.outside = TRUE, legend.outside.position = 'right',
+          legend.title.size = 0.9,
+          main.title = 'Pct of hispanic population by county, IL 2018', 
+          main.title.size = 0.9)
+```
+
+We will be plotting the spatial distribution of variable hispPr18 for the state of Illinois using three methods.
+
+1. Quantile
+2. Natural Breaks
+3. Standard Deviation  
+
+For detailed documentation on choropleth mapping and methods use check [GeoDa Center Documentation](https://geodacenter.github.io/workbook/3a_mapping/lab3a.html#thematic-maps-overview).
+
+### Quantile {#quantile-plot} 
+
+A quantile map is based on sorted values for the variable that are then grouped into bins such that each bin has the same number of observations. It is obtained by setting `style = 'quantile'` and `n = no of bins` arguments in tm_fill(). 
+
+```{r plot quantile, message=FALSE, fig.align='center'}
+p1 <- tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Quantile', 
+                                style = 'quantile', n = 5) + tm_borders() + 
+      tm_layout(frame = FALSE,legend.outside = TRUE, 
+                legend.outside.position = 'right', legend.title.size =0.9,
+                main.title = 'Pct of hispanic population by county, IL 2018', 
+                main.title.size = 0.9)
+
+tmap_save(p1, 'PctHisp_18_Quantile.png') # save the map in a .png file
+p1
+```
+
+
+### Natural Breaks {#jenks-plot} 
+
+Natural breaks or jenks distribution uses a nonlinear algorithm to cluster data into groups such that the intra-bin similarity is maximized and inter-bin dissimilarity is minimized. It is obtained by setting `style = 'jenks'` and `n = no. of bins` in the tm_fill(). 
+
+As we can see, jenks method better classifies the dataset in review than the quantile distribution. There is no correct method to use and the choice of classification method is dependent on the problem & dataset used.
+
+```{r plot jenks, message=FALSE, fig.align='center'}
+p2 <- tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Jenks', 
+                                style = 'jenks', n = 5) + tm_borders() + 
+      tm_layout(frame = FALSE,legend.outside = TRUE, 
+                legend.outside.position = 'right', legend.title.size =0.9,
+                main.title = 'Pct of hispanic population by county, IL 2018', 
+                main.title.size = 0.9)
+
+tmap_save(p2, 'PctHisp_18_Jenks.png')# save the map in a .png file
+p2
+```
+
+
+### Standard Deviation {#stdev-plot} 
+
+A standard deviation map normalizes the dataset (mean = 0, stdev = 1) and transforms it into units of stdev (given mean =0). It helps identify outliers in the dataset. It is obtained by setting `style = 'sd'` in the tm_fill().
+The normalization process can create bins with negative values, which in this case don't necessarily make sense for the dataset, but it still helps identify the outliers.
+
+```{r plot stdev, message=FALSE, fig.align='center'}
+p3 <- tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Stdev', 
+                                style = 'sd') + tm_borders() + 
+      tm_layout(frame = FALSE, legend.outside = TRUE, 
+                legend.outside.position = 'right', legend.title.size =0.9,
+                main.title = 'Pct of hispanic population by county, IL 2018', 
+                main.title.size = 0.9)
+
+tmap_save(p3, 'PctHisp_18_Stdev.png')# save the map in a .png file
+p3
+```
+
+
+# Appendix
+### Set Color Palette {#set-palette}
+
+The range of colors used to depict the distribution in the map can be set by modifying the `palette` argument in tm_fill(). For example, we can use `Blues` palette to create the map below.
+
+```{r plot palette, fig.align='center'}
+tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Jenks', 
+                                style = 'jenks', n = 5, palette = 'Blues') + tm_borders() + 
+tm_layout(frame = FALSE,legend.outside = TRUE, 
+          legend.outside.position = 'right', legend.title.size =0.9,
+          main.title = 'Pct of hispanic population by county, IL 2018', 
+          main.title.size = 0.9)
+```
+
+### Use ColorBrewer {#colorbrewer}
+
+To build aesthetically pleasing and easy-to-read maps, we recommend using color palette schemes recommended in [ColorBrewer 2.0](https://colorbrewer2.org/#) developed by Cynthia Brewer. The website distinguishes between sequential(ordered), diverging(spread around a center) & qualitative(categorical) data. Information on these palettes cab be displayed in R using RColorBrewer package.
+
+We can get the hex values for the colors used in a specific palette with n bins & plot the corresponding colors using code below.
+
+```{r colorbrewer, message = FALSE}
+require(RColorBrewer)
+
+RColorBrewer::brewer.pal(5,"PuBuGn")
+RColorBrewer::display.brewer.pal(5,"PuBuGn")
+```
+
+We can update the jenks map by using this sequential color scheme and changing the transparency using `alpha = 0.8` as below.
+
+```{r plot jenks improved, fig.align='center'}
+tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Jenks', 
+                                style = 'jenks', n = 5, palette = 'PuBuGn') + tm_borders() + 
+tm_layout(frame = FALSE,
+          legend.outside = TRUE, legend.outside.position = 'right', legend.title.size =0.9,
+          main.title = 'Pct of hispanic population by county, IL 2018', 
+          main.title.size = 0.9)
+```
+
+We can also update the stdev map by using a diverging color scheme as below.
+```{r plot stdev improved, fig.align='center'}
+tm_shape(pctHispanic) + tm_fill('hispPr18', title = 'PctHispanic% - Stdev', 
+                                style = 'sd', palette = '-RdBu', alpha = 0.9) + tm_borders() + 
+tm_layout(frame = FALSE,
+          legend.outside = TRUE, legend.outside.position = 'right', legend.title.size =0.9,
+          main.title = 'Pct of hispanic population by county, IL 2018', 
+          main.title.size = 0.9)
+```
+
+### Example - using ColorBrewer for US wide datasets
+
+Download and plot the distribution of median household income in US by county for year 2018.
+```{r plot median hh income, message = FALSE, out.width = "800px", fig.height=4, fig.align='center'}
+require(tidycensus)
+medianHHInc <- tidycensus::get_acs('county', variables = c(median_HHInc = 'B19013_001'), 
+                                    year = 2018, geometry = TRUE, output = 'wide')
+
+medianHHInc <- medianHHInc %>% separate(NAME, c("CountyName", "State"), sep = ', ') %>%
+               filter(!(State %in% c('Puerto Rico','Alaska','Hawaii'))) ##  contiguous US
+
+tm_shape(medianHHInc) + tm_fill('median_HHIncE', title = 'Median Household Income $ - Jenks', 
+                                style = 'jenks', n = 7, palette = 'PuBuGn') +
+tm_borders(alpha = 0.4) + 
+tm_layout(frame = FALSE,
+          legend.outside = TRUE, legend.outside.position = 'right', legend.title.size =0.9,
+          main.title = 'Distribution of Household Income, by county, US 2018', 
+          main.title.position = c('center','top'), main.title.size = 0.9)
+```
