@@ -47,9 +47,9 @@ filename <- c("C","Z","S")
 variablestoFetch <- data.frame(cbind( c('B02001_001','B02001_002','B02001_003','B02001_004','B02001_005','B02001_006',
                                         'B03003_003','S0101_C01_002','S0101_C01_005','S0101_C01_006' ,'S0101_C01_030','S0101_C01_024','S0101_C01_020',
                                         'B06009_001','B06009_002','DP02_0071P'),
-                                      c('totPop','white','black','amerInd','asian','pacificIs',
+                                      c('totPopE','white','black','amerInd','asian','pacificIs',
                                         'hispanic','age0_4','age15_19','age20_24','ageOv65','age15_44','age5_14',
-                                        'popOver25','eduNoHS','pctDisab')))
+                                        'popOver25','eduNoHS','disbP')))
 colnames(variablestoFetch) <- c('code','name')
 variablestoFetch$code <- as.character(variablestoFetch$code)
 variablestoFetch$name <- as.character(variablestoFetch$name)
@@ -67,35 +67,36 @@ for (i in 1:length(shapetoFetch))
   colnames(varDf) <- gsub("estimate.","",colnames(varDf))
   colnames(varDf)[-1] <- variablestoFetch$name[match(colnames(varDf)[-1],variablestoFetch$code)]
   
-  varDf$otherRace <-  varDf$totPop - (varDf$white + varDf$black + varDf$amerInd + varDf$asian + varDf$pacificIs)
-  varDf$pctWhite  <-  round(varDf$white*100/varDf$totPop,2)
-  varDf$pctBlack  <-  round(varDf$black*100/varDf$totPop,2)
-  varDf$pctAmInd  <-  round(varDf$amerInd*100/varDf$totPop,2)
-  varDf$pctAsian  <-  round(varDf$asian*100/varDf$totPop,2)
-  varDf$pctPacIs  <-  round(varDf$pacificIs*100/varDf$totPop,2)
-  varDf$pctOther  <-  round(varDf$otherRace*100/varDf$totPop,2)
-  varDf$pctHisp   <-  round(varDf$hispanic*100/varDf$totPop,2)
-  varDf$pctNoHS   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
-  #varDf$InsPop    <-  varDf$totPop - varDf$nonInsPop
-  varDf$pct15_24  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPop,2)
-  varDf$pctUnder45<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPop,2)
-  varDf$pctOver65 <-  round(varDf$ageOv65*100/varDf$totPop,2)
+  varDf$otherRace <-  varDf$totPopE - (varDf$white + varDf$black + varDf$amerInd + varDf$asian + varDf$pacificIs)
+  varDf$whiteP  <-  round(varDf$white*100/varDf$totPopE,2)
+  varDf$blackP  <-  round(varDf$black*100/varDf$totPopE,2)
+  varDf$amIndP  <-  round(varDf$amerInd*100/varDf$totPopE,2)
+  varDf$asianP  <-  round(varDf$asian*100/varDf$totPopE,2)
+  varDf$pacIsP  <-  round(varDf$pacificIs*100/varDf$totPopE,2)
+  varDf$otherP  <-  round(varDf$otherRace*100/varDf$totPopE,2)
+  varDf$hispP   <-  round(varDf$hispanic*100/varDf$totPopE,2)
+  varDf$noHSP   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
+  #varDf$InsPop    <-  varDf$totPopE - varDf$nonInsPop
+  varDf$a15_24P  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPopE,2)
+  varDf$und45P<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPopE,2)
+  varDf$ovr65P <-  round(varDf$ageOv65*100/varDf$totPopE,2)
+  varDf$year <- yeartoFetch
   
   
-  varDf <- varDf[,c('GEOID','totPop','pctWhite','pctBlack','pctAmInd','pctAsian','pctPacIs',
-                    'pctOther','pctHisp','pctNoHS','pct15_24','pctUnder45','pctOver65','pctDisab')]
+  varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','pacIsP',
+                    'otherP','hispP','noHSP','a15_24P','und45P','ovr65P','disbP')]
   write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
  
-  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("pctOver65", n =5, style = "fisher", palette = "YlGnBu")+
+  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("ovr65P", n =5, style = "fisher", palette = "YlGnBu")+
   #          tm_borders(col = "grey25", alpha = 0.3) +
   #          tm_layout(frame = FALSE, legend.title.size = 0.9, legend.outside = FALSE),
   #         filename = paste0('PopOver65_',shapetoFetch[i],"_",yeartoFetch,".png"))
-  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("pctBlack", n =5, style = "fisher", palette = "YlGnBu")+
+  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("blackP", n =5, style = "fisher", palette = "YlGnBu")+
   #             tm_borders(col = "grey25", alpha = 0.3) +
   #             tm_layout(frame = FALSE, legend.title.size = 0.9, legend.outside = FALSE),
   #           filename = paste0('AfricanAmerican_',shapetoFetch[i],"_",yeartoFetch,".png"))
   # ggplot(baseGeo) + 
-  #   geom_sf(aes(fill = PctHisp), color = NA) + 
+  #   geom_sf(aes(fill = hispP), color = NA) + 
   #   coord_sf(datum = NA) + 
   #   theme_minimal() + 
   #   scale_fill_viridis_c()
@@ -119,20 +120,21 @@ varDf <- reshape(variables,idvar = 'GEOID',timevar = 'variable',direction = 'wid
 colnames(varDf) <- gsub("estimate.","",colnames(varDf))
 colnames(varDf)[-1] <- variablestoFetch$name[match(colnames(varDf)[-1],variablestoFetch$code)]
 
-varDf$otherRace <-  varDf$totPop - (varDf$white + varDf$black + varDf$amerInd + varDf$asian + varDf$pacificIs)
-varDf$pctWhite  <-  round(varDf$white*100/varDf$totPop,2)
-varDf$pctBlack  <-  round(varDf$black*100/varDf$totPop,2)
-varDf$pctAmInd  <-  round(varDf$amerInd*100/varDf$totPop,2)
-varDf$pctAsian  <-  round(varDf$asian*100/varDf$totPop,2)
-varDf$pctPacIs  <-  round(varDf$pacificIs*100/varDf$totPop,2)
-varDf$pctOther  <-  round(varDf$otherRace*100/varDf$totPop,2)
-varDf$pctHisp   <-  round(varDf$hispanic*100/varDf$totPop,2)
-varDf$pctNoHS   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
-#varDf$InsPop    <-  varDf$totPop - varDf$nonInsPop
-varDf$pct15_24  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPop,2)
-varDf$pctUnder45<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPop,2)
-varDf$pctOver65 <-  round(varDf$ageOv65*100/varDf$totPop,2)
+varDf$otherRace <-  varDf$totPopE - (varDf$white + varDf$black + varDf$amerInd + varDf$asian + varDf$pacificIs)
+varDf$whiteP  <-  round(varDf$white*100/varDf$totPopE,2)
+varDf$blackP  <-  round(varDf$black*100/varDf$totPopE,2)
+varDf$amIndP  <-  round(varDf$amerInd*100/varDf$totPopE,2)
+varDf$asianP  <-  round(varDf$asian*100/varDf$totPopE,2)
+varDf$pacIsP  <-  round(varDf$pacificIs*100/varDf$totPopE,2)
+varDf$otherP  <-  round(varDf$otherRace*100/varDf$totPopE,2)
+varDf$hispP   <-  round(varDf$hispanic*100/varDf$totPopE,2)
+varDf$noHSP   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
+#varDf$InsPop    <-  varDf$totPopE - varDf$nonInsPop
+varDf$a15_24P  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPopE,2)
+varDf$und45P<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPopE,2)
+varDf$ovr65P <-  round(varDf$ageOv65*100/varDf$totPopE,2)
+varDf$year <- yeartoFetch
 
-varDf <- varDf[,c('GEOID','totPop','pctWhite','pctBlack','pctAmInd','pctAsian','pctPacIs',
-                  'pctOther','pctHisp','pctNoHS','pct15_24','pctUnder45','pctOver65','pctDisab')]
+varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','pacIsP',
+                  'otherP','hispP','noHSP','a15_24P','und45P','ovr65P','disbP')]
 write.csv(varDf,paste0('DS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)
