@@ -15,78 +15,88 @@ The data wrangled in this analysis will be further developed as a data and visua
 We plan to source following data variables.
 
 ### Policy Variables
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| Medicaid Expansion |  |  |  |  |
-| Medicaid Expenditure |  |  |  |  | 
-| Naloxone Access Laws |  |  |  |  |
-| Good Samaritan Laws |  |  |  |  |
-| Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |
-| Controlled Substance Laws |  |  |  |  |
-| State & Local Govt. |  |  |  |  |
-| Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Medicaid Expansion |  |  |  |  |  |
+| Medicaid Expenditure |  |  |  |  |  |
+| Naloxone Access Laws |  |  |  |  |  |
+| Good Samaritan Laws |  |  |  |  |  |
+| Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
+| Controlled Substance Laws |  |  |  |  |  |
+| State & Local Govt. |  |  |  |  |  |
+| Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
+
+<br>
 
 ### Health Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| Access to MOUDs |  |  |  |  |
-| Access to FQHC facilities |  |  |  |  |
-| Access to Pharmacies |  |  |  |  |
-| Access to Hospitals |  |  |  |  |
-| Access to Mental Health <br> Practitioners |  |  |  |  |
-| Primary Care Providers |  |  |  |  |
-| Speciality Care Providers |  |  |  |  |
-| Opioid overdose death rate |  |  |  |  |
-| Hepatitis C infection rate |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Access to MOUDs |  |  |  |  |  |
+| Access to FQHC facilities |  |  |  |  |  |
+| Access to Pharmacies |  |  |  |  |  |
+| Access to Hospitals |  |  |  |  |  |
+| Access to Mental Health <br> Practitioners |  |  |  |  |  |
+| Primary Care Providers |  |  |  |  |  |
+| Speciality Care Providers |  |  |  |  |  |
+| Opioid overdose death rate |  |  |  |  |  |
+| Hepatitis C infection rate |  |  |  |  |  |
+
+<br>
 
 ### Demographic Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| Black, White percentage |  |  |  |  |
-| Hispanic Percentage |  |  |  |  |
-| Population with a Disability |  |  |  |  |
-| College Aged |  |  |  |  |
-| Population over 65 |  |  |  |  |
-| Incarceration rates |  |  |  |  |
-| SDOH Typologies |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Black, White percentage |  |  |  |  |  |
+| Hispanic Percentage |  |  |  |  |  |
+| Population with a Disability |  |  |  |  |  |
+| College Aged |  |  |  |  |  |
+| Population over 65 |  |  |  |  |  |
+| Incarceration rates |  |  |  |  |  |
+| SDOH Typologies |  |  |  |  |  |
+
+<br>
 
 ### Economic Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| 'High Risk of Injury' jobs |  |  |  |  |
-| Unemployment Rate |  |  |  |  |
-| Poverty Rate |  |  |  |  |
-| Per Capita Income |  |  |  |  |
-| Population over 65 |  |  |  |  |
-| Educational Attainment |  |  |  |  |
-| Foreclosure Rate |  |  |  |  |
-| Socioeconomic Disadvantage Index |  |  |  |  |
-| Urban Core Opportunity |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| 'High Risk of Injury' jobs |  |  |  |  |  |
+| Unemployment Rate |  |  |  |  |  |
+| Poverty Rate |  |  |  |  |  |
+| Per Capita Income |  |  |  |  |  |
+| Population over 65 |  |  |  |  |  |
+| Educational Attainment |  |  |  |  |  |
+| Foreclosure Rate |  |  |  |  |  |
+| Socioeconomic Disadvantage Index |  |  |  |  |  |
+| Urban Core Opportunity |  |  |  |  |  |
+
+<br>
 
 ### Physical Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| Urban/Suburban/Rural |  |  |  |  |
-| Housing Occupancy Rate |  |  |  |  |
-| Vacancy Rate |  |  |  |  |
-| Long Term Occupancy |  |  |  |  |
-| Mobile Home Structures |  |  |  |  |
-| Rental Rates |  |  |  |  |
-| Housing Unit Density |  |  |  |  |
-| Alcohol Outlet Density |  |  |  |  |
-| Hypersegregated Cities |  |  |  |  |
-| Southern Black Belt |  |  |  |  |
-| Native American Reservations |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Urban/Suburban/Rural |  |  |  |  |  |
+| Housing Occupancy Rate |  |  |  |  |  |
+| Vacancy Rate |  |  |  |  |  |
+| Long Term Occupancy |  |  |  |  |  |
+| Mobile Home Structures |  |  |  |  |  |
+| Rental Rates |  |  |  |  |  |
+| Housing Unit Density |  |  |  |  |  |
+| Alcohol Outlet Density |  |  |  |  |  |
+| Hypersegregated Cities |  |  |  |  |  |
+| Southern Black Belt |  |  |  |  |  |
+| Native American Reservations |  |  |  |  |  |
+
+<br>
 
 ### COVID Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
-|-|-|-|-|-|
-| Historical Confirmed<br>Case Count & Rate |  |  |  |  |
-| Historical 7-day Average<br>New Case Count & Rate |  |  |  |  |
-| Statistical Hotspot/Coldspot |  |  |  |  |
-| Spatiotemporal Profiles |  |  |  |  |
-|  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |
-| 'Essential worker' jobs |  |  |  |  |
+| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
+|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Historical Confirmed<br>Case Count & Rate |  |  |  |  |  |
+| Historical 7-day Average<br>New Case Count & Rate |  |  |  |  |  |
+| Statistical Hotspot/Coldspot |  |  |  |  |  |
+| Spatiotemporal Profiles |  |  |  |  |  |
+|  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |  |
+| 'Essential worker' jobs|  |  |  |  |  |
 
 
 ## Data Wrangling
