@@ -1,5 +1,5 @@
 **Meta Data Name**: 2018 Race and Ethnicity variables, part of the Demographic Social dataset  
-**Last Modified**: August 21st, 2020  
+**Last Modified**: October 16th, 2020  
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
@@ -35,13 +35,13 @@ Percentage for each racial/ethnic group was calculated as: *estimate for the gro
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % White  | pctWhite | Percentage of Population with Race identified as White alone |
-| % Black  | pctBlack | Percentage of Population with Race identified as Black or African American alone |
-| % American Indian | pctAmInd | Percentage of Population with Race identified as American Indian and Alaska Native alone |
-| % Asian  | pctAsian | Percentage of Population with Race identified as Asian alone |
-| % Native Hawaiian | pctPacIs | Percentage of Population with Race identified as Native Hawaiian and Other Pacific Islander alone |
-| % Other | pctOther | Percentage of Population with Race not mentioned in any of the options above (includes two race or more races) |
-| % Hispanic | pctHisp | Percentage of Population with Ethnicity identified as of Hispanic or Latino origin |
+| % White  | whiteP | Percentage of Population with Race identified as White alone |
+| % Black  | blackP | Percentage of Population with Race identified as Black or African American alone |
+| % American Indian | amIndP | Percentage of Population with Race identified as American Indian and Alaska Native alone |
+| % Asian  | asianP | Percentage of Population with Race identified as Asian alone |
+| % Native Hawaiian | pacIsP | Percentage of Population with Race identified as Native Hawaiian and Other Pacific Islander alone |
+| % Other | otherP | Percentage of Population with Race not mentioned in any of the options above (includes two race or more races) |
+| % Hispanic | hispP | Percentage of Population with Ethnicity identified as of Hispanic or Latino origin |
 
 ### Data Limitations:
 n/a
