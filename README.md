@@ -46,11 +46,11 @@ We plan to source following data variables.
 ### Demographic Factors
 | Variable Construct | Variable Proxy | Source(s) | Tables / Metadata | Spatial Scale | Status<br>(internal use)|
 |:-------------------|:---------------|:----------|:------------------|:--------------|:------------------------|
-| Black, White percentage | Population with Race identified as Black or African American alone (blackP),<br>Population with Race identified as White alone (whiteP) | 2014 - 2018 ACS | DS01 / [Here](Policy_Scan/data_final/metadata/Race & Ethinicity variables_2018.md) | State, County, Tract, Zip | Complete |
-| Hispanic Percentage | Population with Ethnicity identified as of Hispanic or Latino origin (hispP) | 2014 - 2018 ACS | DS01 / [Here](Policy_Scan/data_final/metadata/Race & Ethinicity variables_2018.md) | State, County, Tract, Zip | Complete |
+| Black, White percentage | Population with Race identified as Black or African American alone (blackP),<br>Population with Race identified as White alone (whiteP) | 2014 - 2018 ACS | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
+| Hispanic Percentage | Population with Ethnicity identified as of Hispanic or Latino origin (hispP) | 2014 - 2018 ACS | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
 | Population with a Disability |  |  |  |  |  |
-| College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Here](Policy_Scan/data_final/metadata/Age variables_2018.md) | State, County, Tract, Zip | Complete |
-| Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Here](Policy_Scan/data_final/metadata/Age variables_2018.md) | State, County, Tract, Zip | Complete |
+| College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
+| Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Incarceration rates |  |  |  |  |  |
 | SDOH Typologies |  |  |  |  |  |
 
