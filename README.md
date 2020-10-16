@@ -81,11 +81,11 @@ We plan to source following data variables.
 ### COVID Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale |
 |-|-|-|-|-|
-| Historical Confirmed Case Count & Rate |  |  |  |  |
-| Historical 7-day Average New Case Count & Rate |  |  |  |  |
+| Historical Confirmed<br>Case Count & Rate |  |  |  |  |
+| Historical 7-day Average<br>New Case Count & Rate |  |  |  |  |
 | Statistical Hotspot/Coldspot |  |  |  |  |
 | Spatiotemporal Profiles |  |  |  |  |
-|  Non Pharmaceutical Interventions (NPI) |  |  |  |  |
+|  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |
 | 'Essential worker' jobs |  |  |  |  |
 
 
