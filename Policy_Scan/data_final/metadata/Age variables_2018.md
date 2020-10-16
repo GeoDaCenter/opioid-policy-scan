@@ -1,13 +1,13 @@
 **Meta Data Name**: 2018 Age variables, part of the Demographic Social dataset  
-**Last Modified**: August 21st, 2020  
+**Last Modified**: October 16th, 2020  
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-DS02 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
-* DS02_T  
-* DS02_Z  
-* DS02_C  
-* DS02_S  
+DS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+* DS01_T  
+* DS01_Z  
+* DS01_C  
+* DS01_S  
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S0101, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
@@ -30,9 +30,9 @@ All three variables were then converted to percentages using total population as
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Population between 15-24  | pctPop15_24 | Percentage of population between ages of 15 & 24 |
-| % Population under 45  | pctPopUnder45 | Percentage of population below 45 years of age |
-| % Population over 65 | pctPopOver65 | Percentage of population over 65 |
+| % Population between 15-24  | a15_24P | Percentage of population between ages of 15 & 24 |
+| % Population under 45  | und45P | Percentage of population below 45 years of age |
+| % Population over 65 | ovr65P | Percentage of population over 65 |
 
 ### Data Limitations:
 n/a
