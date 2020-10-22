@@ -28,9 +28,9 @@ The following variables were included from B02001:
 The following variables were included from B03002:
   1.	Estimate; Hispanic or Latino – Total  
 
-Percentage for each racial/ethnic group was calculated as: *estimate for the group / total population*, e.g.  
-    % White = White alone / Total population   
-    % Other  = 1 - (% White alone + % Black alone + % American Indian alone + % Asian alone + % Native Hawaiian alone )
+Percentage for each racial/ethnic group was calculated as: *estimate for the group / total population*, e.g. <br>
+        *% White = White alone / Total population   
+        % Other  = 1 - (% White alone + % Black alone + % American Indian alone + % Asian alone + % Native Hawaiian alone )*
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
