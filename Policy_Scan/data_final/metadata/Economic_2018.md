@@ -31,8 +31,9 @@ The following variables were included from **S1701**:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Less than High School graduate  | noHSP | Percentage of population 25 years and over, less than a high school graduate |
-| % Population Disabled  | disbP | Percentage of civilian non institutionalized population with a disability |
+| Unemployment Rate | unempP | Unemployment Rate |
+| Poverty Rate | povP | Percent below poverty level |
+| Per Capita Income | pciE | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) |
 
 ### Data Limitations:
 n/a
