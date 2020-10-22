@@ -1,6 +1,6 @@
 # Author : Moksha Menghaney
 # Date : August 17th, 2020
-# This piece of code will genreate DS01 tables for Policy Scan.
+# This piece of code will generate DS01 tables for Policy Scan.
 
 library(tidycensus)
 library(tidyverse)
@@ -8,7 +8,7 @@ library(tmap)
 library(geojsonio)
 library(tigris)
 
-#census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
+#census_api_key("key", install = TRUE)
 
 
 ## identify variables from B02001: RACE table

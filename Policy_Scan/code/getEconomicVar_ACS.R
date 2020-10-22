@@ -1,11 +1,20 @@
 # Author : Moksha Menghaney
 # Date : Sep 16th, 2020
-# This piece of code will genreate Unemployment rate, Poverty rate, Per capita income  for EC tables for Policy Scan.
+# This piece of code will generate Unemployment rate, Poverty rate, Per capita income  for EC tables for Policy Scan.
 
 
 library(tidycensus)
 library(tidyverse)
 library(tmap)
+
+## identify variables from DP03: SELECTED ECONOMIC CHARACTERISTICS
+#  1. Unemp : DP03_0009P Percent Estimate!!EMPLOYMENT STATUS!!Civilian labor force!!Unemployment Rate
+
+## identify variables from S1701: POVERTY STATUS IN THE PAST 12 MONTHS
+#  1. Poverty : S1701_C03_001 Estimate!!Percent below poverty level
+
+## identify variables from B19301: PER CAPITA INCOME IN THE PAST 12 MONTHS (IN 2018 INFLATION-ADJUSTED DOLLARS)
+#  1. Income : B19301_001 Estimate!!Per capita income in the past 12 months (in 2018 inflation-adjusted dollars)
 
 
 ## initialize variables

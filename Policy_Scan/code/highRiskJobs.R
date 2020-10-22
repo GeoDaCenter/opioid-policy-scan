@@ -1,12 +1,12 @@
 # Author : Moksha Menghaney
 # Date : Sep 16th, 2020
-# This piece of code will genreate High Risk Jobs variable for EC tables for Policy Scan.
+# This piece of code will generate High Risk Jobs variable for EC tables for Policy Scan.
 
 
 library(tidycensus)
 library(tidyverse)
 library(tmap)
-library(geojsonio)
+library(reshape2)
 library(tigris)
 
 # will be sourcing data from S2403 table
@@ -27,33 +27,33 @@ sProfileVar18 <- load_variables(2018,"acs5/subject", cache = TRUE) %>%
   mutate(label = str_replace(label, "Estimate!!Total!!Civilian employed population 16 years and over!!",""))
 
 indsToSelect <- tribble(~variable, ~type,
-                        "S2401_C01_001", "total",
-                        "S2401_C01_002", "no",
-                        "S2401_C01_003", "highRisk",
-                        "S2401_C01_004", "highRisk",
-                        "S2401_C01_005", "highRisk",
-                        "S2401_C01_006", "highRisk",
-                        "S2401_C01_007", "no",
-                        "S2401_C01_008", "retail",
-                        "S2401_C01_009", "no",
-                        "S2401_C01_010", "no",
-                        "S2401_C01_011", "highRisk",
-                        "S2401_C01_012", "no",
-                        "S2401_C01_013", "no",
-                        "S2401_C01_014", "no",
-                        "S2401_C01_015", "no",
-                        "S2401_C01_016", "no",
-                        "S2401_C01_017", "no",
-                        "S2401_C01_018", "no",
-                        "S2401_C01_019", "no",
-                        "S2401_C01_020", "no",
-                        "S2401_C01_021", "edu",
-                        "S2401_C01_022", "hlthCare",
-                        "S2401_C01_023", "no",
-                        "S2401_C01_024", "no",
-                        "S2401_C01_025", "no",
-                        "S2401_C01_026", "no",
-                        "S2401_C01_027", "no",)
+                        "S2403_C01_001", "total",
+                        "S2403_C01_002", "no",
+                        "S2403_C01_003", "highRisk",
+                        "S2403_C01_004", "highRisk",
+                        "S2403_C01_005", "highRisk",
+                        "S2403_C01_006", "highRisk",
+                        "S2403_C01_007", "no",
+                        "S2403_C01_008", "retail",
+                        "S2403_C01_009", "no",
+                        "S2403_C01_010", "no",
+                        "S2403_C01_011", "highRisk",
+                        "S2403_C01_012", "no",
+                        "S2403_C01_013", "no",
+                        "S2403_C01_014", "no",
+                        "S2403_C01_015", "no",
+                        "S2403_C01_016", "no",
+                        "S2403_C01_017", "no",
+                        "S2403_C01_018", "no",
+                        "S2403_C01_019", "no",
+                        "S2403_C01_020", "no",
+                        "S2403_C01_021", "edu",
+                        "S2403_C01_022", "hlthCare",
+                        "S2403_C01_023", "no",
+                        "S2403_C01_024", "no",
+                        "S2403_C01_025", "no",
+                        "S2403_C01_026", "no",
+                        "S2403_C01_027", "no",)
 
 
 ## initialize variables
@@ -92,7 +92,7 @@ for (i in 1:length(shapetoFetch))
   write.csv(varDf,paste0('EC01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
 }
 
-
+## for tracts
 states <- tigris::states(year = yeartoFetch)
 territoriesToBeExcluded <- c('60','72','66','69','78') # american territories
 states <- states[!(states$STATEFP %in% territoriesToBeExcluded),]
