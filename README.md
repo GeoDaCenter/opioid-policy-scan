@@ -48,7 +48,7 @@ We plan to source following data variables.
 |:-------------------|:---------------|:----------|:------------------|:--------------|:------------------------|
 | Black, White percentage | Population with Race identified as Black or African American alone (blackP),<br>Population with Race identified as White alone (whiteP) | 2014 - 2018 ACS | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
 | Hispanic Percentage | Population with Ethnicity identified as of Hispanic or Latino origin (hispP) | 2014 - 2018 ACS | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
-| Population with a Disability | Civilian Non Institutionalized Population with a Disability(disbP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
+| Population with a Disability | Civilian Non Institutionalized Population with a Disability (disbP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Incarceration rates |  |  |  |  |  |
@@ -59,11 +59,11 @@ We plan to source following data variables.
 ### Economic Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| 'High Risk of Injury' jobs | Population employed in Agriculture, forestry, fishing and hunting, Mining, quarrying, and oil and gas extraction, Construction, Manufacturing, and Utilities industries | 2014 - 2018 ACS |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
-| Unemployment Rate | Unemployment Rate | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
-| Poverty Rate | Percent below poverty level | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
-| Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
-| Educational Attainment | Population without a High School degree | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
+| 'High Risk of Injury' jobs | Population employed in Agriculture, forestry, fishing and hunting, Mining, quarrying, and oil and gas extraction, Construction, Manufacturing, and Utilities industries (hghRskP) | 2014 - 2018 ACS |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
+| Unemployment Rate | Unemployment Rate (unempP) | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
+| Poverty Rate | Percent below poverty level (povP) | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
+| Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) (pciE) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
+| Educational Attainment | Population without a High School degree (noHSP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | Foreclosure Rate |  |  |  |  |  |
 | Socioeconomic Disadvantage Index |  |  |  |  |  |
 | Urban Core Opportunity |  |  |  |  |  |
@@ -95,7 +95,7 @@ We plan to source following data variables.
 | Statistical Hotspot/Coldspot |  |  |  |  |  |
 | Spatiotemporal Profiles |  |  |  |  |  |
 |  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |  |
-| 'Essential worker' jobs| Population employed in Community and social service occupations, Healthcare practitioners and technical occupations, Healthcare support occupations, Protective service occupations, Food preparation and serving related occupations, Building and grounds cleaning and maintenance occupations, Farming, fishing, and forestry occupations, Construction and extraction occupations, Installation, maintenance, and repair occupations,Transportation occupations, Material moving occupations | 2014 - 2018 ACS | EC02/ [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
+| 'Essential worker' jobs| Population employed in Community and social service occupations, Healthcare practitioners and technical occupations, Healthcare support occupations, Protective service occupations, Food preparation and serving related occupations, Building and grounds cleaning and maintenance occupations, Farming, fishing, and forestry occupations, Construction and extraction occupations, Installation, maintenance, and repair occupations,Transportation occupations, Material moving occupations (essnWrkP) | 2014 - 2018 ACS | EC02/ [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
 ## Data Wrangling
