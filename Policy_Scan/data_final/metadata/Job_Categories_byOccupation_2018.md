@@ -18,8 +18,8 @@ S2401 : Occupation by sex for the civilian employed population 16 years and over
 ### Description of Data Processing: 
 All variables were included from S2401.
 
-Percentage of population employed in Essential Jobs was calculated as : 
-	*Sum of the workers employed in (
+Percentage of population employed in Essential Jobs was calculated as :
+	*Sum of the workers employed in <br> (
                  Community and social service occupations, <br>
                  Healthcare practitioners and technical occupations,<br>
                  Healthcare support occupations,<br>
