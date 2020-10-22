@@ -19,7 +19,7 @@ S2403 : Industry by sex for the civilian employed population 16 years and over
 All variables were included from S2403.
 
 Percentage of population employed in High Risk of Injury Jobs was calculated as : 
-	*Sum of the workers employed in (<br> 
+*Sum of the workers employed in (<br> 
 		- Agriculture, forestry, fishing and hunting, <br>
 		- Mining, quarrying, and oil and gas extraction,<br>
 		- Construction,<br>
@@ -27,13 +27,13 @@ Percentage of population employed in High Risk of Injury Jobs was calculated as 
 		- Utilities) / (Total Civilian employed population 16 years and over)*
 
 Percentage of population employed in Educations Jobs was calculated as : <br>
-	*Sum of the workers employed in (Educational services) / (Total Civilian employed population 16 years and over)*
+*Sum of the workers employed in Educational services / (Total Civilian employed population 16 years and over)*
 	
 Percentage of population employed in HealthCare Jobs was calculated as : <br>
-	*Sum of the workers employed in (Health care and social assistance) / (Total Civilian employed population 16 years and over)*
+*Sum of the workers employed in Health care and social assistance/ (Total Civilian employed population 16 years and over)*
 
-Percentage of population employed in Retail Jobs was calculated as : 
-    * Sum of the workers employed in (Retail trade) / (Total Civilian employed population 16 years and over)* 
+Percentage of population employed in Retail Jobs was calculated as : <br>
+*Sum of the workers employed in Retail trade / (Total Civilian employed population 16 years and over)* 
         
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
