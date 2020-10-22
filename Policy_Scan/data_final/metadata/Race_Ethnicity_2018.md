@@ -13,19 +13,19 @@ DS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [h
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B02001, B03002, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
-B02001 : RACE table provides breakdown by RACE of the total population. <br>
-B03002 : HISPANIC OR LATINO ORIGIN BY RACE table provides ethnicity breakdown of the total population.
+B02001 : Provides breakdown by Race of the total population. <br>
+B03002 : Hispanic or Latino origin by race table, provides ethnicity breakdown of the total population.
 
 ### Description of Data Processing: 
-The following variables were included from B02001:  
-  1.	Estimate; RACE – Total Population  
-  2.	Estimate; RACE – White alone 
-  3.	Estimate; RACE – Black or African American alone 
-  4.	Estimate; RACE – American Indian and Alaska Native alone 
-  5.	Estimate; RACE – Asian alone 
-  6.	Estimate; RACE – Native Hawaiian and Other Pacific Islander alone 
+The following variables were included from **B02001**:  
+  1.	Estimate; Race – Total Population  
+  2.	Estimate; Race – White alone 
+  3.	Estimate; Race – Black or African American alone 
+  4.	Estimate; Race – American Indian and Alaska Native alone 
+  5.	Estimate; Race – Asian alone 
+  6.	Estimate; Race – Native Hawaiian and Other Pacific Islander alone 
 
-The following variables were included from B03002:
+The following variables were included from **B03002**:
   1.	Estimate; Hispanic or Latino – Total  
 
 Percentage for each racial/ethnic group was calculated as: *estimate for the group / total population*, e.g. <br>
