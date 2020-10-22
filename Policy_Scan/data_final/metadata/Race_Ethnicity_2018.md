@@ -13,7 +13,7 @@ DS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [h
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B02001, B03002, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
-B02001 : RACE table provides breakdown by RACE of the total population. 
+B02001 : RACE table provides breakdown by RACE of the total population. <br>
 B03002 : HISPANIC OR LATINO ORIGIN BY RACE table provides ethnicity breakdown of the total population.
 
 ### Description of Data Processing: 
