@@ -13,17 +13,16 @@ DS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [h
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B06009, DP02, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
-B06009 : PLACE OF BIRTH BY EDUCATIONAL ATTAINMENT
-
-DP02 : SELECTED SOCIAL CHARACTERISTICS, provides the percentage of disabled population
+B06009 : Place of birth by Educational Attainment <br>
+DP02 : Selected Social Characteristics, provides the percentage of disabled population
 
 ### Description of Data Processing: 
-The following variables were included from B06009:
-  1.    Estimate; Total Population 25 years and over in the United States
-  2.    Estimate; Educational Attainment  – Less than high school graduate (for population 25 years and over)
+The following variables were included from **B06009**:
+  1. Estimate; Total Population 25 years and over in the United States
+  2. Estimate; Educational Attainment  – Less than high school graduate (for population 25 years and over)
   
-The following variables were included from DP02:
-  1.    Percent Estimate; Disability Status of the Civilan NonInstitutionalized Population
+The following variables were included from **DP02**:
+  1. Percent Estimate; Disability Status of the Civilan NonInstitutionalized Population
 
 
 Percentage of population, less than a high school graduate was calculated as: *estimate for the group / total population of age 25 years and over*,
