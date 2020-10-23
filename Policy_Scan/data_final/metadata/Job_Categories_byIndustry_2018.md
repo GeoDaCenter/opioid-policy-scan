@@ -33,7 +33,7 @@ All variables were included from S2403.
 * Percentage of population employed in HealthCare Jobs was calculated as : <br>
 *Sum of the workers employed in Health care and social assistance/ (Total Civilian employed population 16 years and over)*
 
-Percentage of population employed in Retail Jobs was calculated as : <br>
+* Percentage of population employed in Retail Jobs was calculated as : <br>
 *Sum of the workers employed in Retail trade / (Total Civilian employed population 16 years and over)* 
         
 ### Key Variable and Definitions:
@@ -48,7 +48,9 @@ Percentage of population employed in Retail Jobs was calculated as : <br>
 Please note this dataset uses industry as a classifier and doesn't include any information about the specific occupation in that industry. This can lead to an overestimation of High Risk to Injury workers category.
 
 ### Comments/Notes:
-Using the API, following variables from table S2403 were identified as High Risk of Injury jobs for 2018 - S2403_C01_003, S2403_C01_004, S2403_C01_005, S2403_C01_006, and S2403_C01_011. <br>
-Using the API, following variables from table S2403 were identified as Education jobs for 2018 - S2403_C01_021. <br>
-Using the API, following variables from table S2403 were identified as Health Care jobs for 2018 - S2403_C01_022. <br>
-Using the API, following variables from table S2403 were identified as Retail jobs for 2018 - S2403_C01_008.
+Using the API, following variables from table S2403 were identified as 
+
+* High Risk of Injury jobs for 2018 - S2403_C01_003, S2403_C01_004, S2403_C01_005, S2403_C01_006, and S2403_C01_011  
+* Education jobs for 2018 - S2403_C01_021 
+* Health Care jobs for 2018 - S2403_C01_022  
+* Retail jobs for 2018 - S2403_C01_008  
