@@ -74,12 +74,12 @@ We plan to source following data variables.
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | Urban/Suburban/Rural |  |  |  |  |  |
-| Housing Occupancy Rate |  |  |  |  |  |
-| Vacancy Rate |  |  |  |  |  |
-| Long Term Occupancy |  |  |  |  |  |
-| Mobile Home Structures |  |  |  |  |  |
-| Rental Rates |  |  |  |  |  |
-| Housing Unit Density |  |  |  |  |  |
+| Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Vacancy Rate | Percent vacant units (vacantP) | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Long Term Occupancy | Population that moved into current housing 20 years or before | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Mobile Home Structures | Percent mobile housing structures (mobileP)  | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Rental Rates | Percent occupied housing units on rent (rentalP)  | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Housing Unit Density | Housing units per square mile | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Alcohol Outlet Density |  |  |  |  |  |
 | Hypersegregated Cities |  |  |  |  |  |
 | Southern Black Belt |  |  |  |  |  |

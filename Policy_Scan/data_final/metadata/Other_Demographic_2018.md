@@ -24,8 +24,8 @@ The following variables were included from **B06009**:
 The following variables were included from **DP02**:
   1. Percent Estimate; Disability Status of the Civilan NonInstitutionalized Population
 
-
-Percentage of population, less than a high school graduate was calculated as: *estimate for the group / total population of age 25 years and over*
+----------
+* Percentage of population with less than a high school degree was calculated as: *estimate for the group / total population of age 25 years and over*
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
