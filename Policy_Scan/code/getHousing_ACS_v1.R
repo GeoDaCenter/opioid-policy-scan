@@ -8,6 +8,7 @@ library(tmap)
 library(sf)
 library(tigris)
 
+# update this for your drive!
 geometryFilesLoc <- '/Users/yashbansal/Desktop/CSDS_RA/opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
@@ -114,7 +115,7 @@ varDf$rentalP <-  round(varDf$renOcc*100/(varDf$popOwnOcc + varDf$popRenOcc),2)
 
 baseGeo <- read_sf(paste0(geometryFilesLoc,'tl_2018_tract/tracts2018.shp'))
 st_geometry(baseGeo) <- NULL
-baseGeo <- data.frame(baseGeo[,grepl('GEOID|ALAND', colnames(baseGeo))])#aland in sq meters
+baseGeo <- data.frame(baseGeo[,grepl('\\bGEOID|ALAND', colnames(baseGeo))])#aland in sq meters
 baseGeo$areaSqMile <- baseGeo[,grep('ALAND',colnames(baseGeo))]/2590000 # sqmiles
 colnames(baseGeo)[grep('GEOID',colnames(baseGeo))] <- 'GEOID'
 varDf <- merge(varDf,baseGeo[,c('GEOID','areaSqMile')], by.x = 'GEOID', by.y = 'GEOID')
