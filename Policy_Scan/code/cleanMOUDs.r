@@ -1,4 +1,7 @@
-#clean MOUDs, add Vivitrol and create new csv and .gpkg
+# Author : Moksha Menghaney
+# Date : October 22nd, 2020
+# This piece of code will clean MOUD file, add Vivitrol and 
+# create new csv and .gpkg
 
 library(sf)
 library(tmap)
@@ -6,9 +9,9 @@ library(tidyverse)
 
 
 ## update these for your drive!
-geometryFilesLoc <- './CSDS_RA/opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
-rawDataFilesLoc <- './CSDS_RA/opioid-policy-scan/Policy_Scan/data_raw/'
-outputFilesLoc <- './CSDS_RA/opioid-policy-scan/Policy_Scan/data_final/moud/'
+geometryFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
+rawDataFilesLoc <- './opioid-policy-scan/Policy_Scan/data_raw/'
+outputFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/moud/'
   
 counties <- st_read(paste0(geometryFilesLoc,'tl_2018_county/counties2018.shp')) %>% 
   st_transform(crs = 4326) %>% select(GEOID,NAME,geometry)
@@ -47,6 +50,7 @@ vivitrol$street2 <- NA
 vivitrol$zip4 <- NA
 vivitrol$source <- 'vivitrolWeb'
 
+## merge and save
 mouds$source <- 'SAMHSA'
 mouds <- rbind(mouds, vivitrol)
 table(as.factor(mouds$category))

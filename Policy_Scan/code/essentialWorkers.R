@@ -116,7 +116,7 @@ for (i in 1:length(shapetoFetch))
   write.csv(varDf,paste0('EC02_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
 }
 
-
+## for tracts
 states <- tigris::states(year = yeartoFetch)
 territoriesToBeExcluded <- c('60','72','66','69','78') # american territories
 states <- states[!(states$STATEFP %in% territoriesToBeExcluded),]

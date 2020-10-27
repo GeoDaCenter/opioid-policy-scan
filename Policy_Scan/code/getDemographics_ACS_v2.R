@@ -87,19 +87,6 @@ for (i in 1:length(shapetoFetch))
                     'otherP','hispP','noHSP','a15_24P','und45P','ovr65P','disbP')]
   write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
  
-  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("ovr65P", n =5, style = "fisher", palette = "YlGnBu")+
-  #          tm_borders(col = "grey25", alpha = 0.3) +
-  #          tm_layout(frame = FALSE, legend.title.size = 0.9, legend.outside = FALSE),
-  #         filename = paste0('PopOver65_',shapetoFetch[i],"_",yeartoFetch,".png"))
-  # tmap_save(tm = tm_shape(baseGeo) +tm_fill("blackP", n =5, style = "fisher", palette = "YlGnBu")+
-  #             tm_borders(col = "grey25", alpha = 0.3) +
-  #             tm_layout(frame = FALSE, legend.title.size = 0.9, legend.outside = FALSE),
-  #           filename = paste0('AfricanAmerican_',shapetoFetch[i],"_",yeartoFetch,".png"))
-  # ggplot(baseGeo) + 
-  #   geom_sf(aes(fill = hispP), color = NA) + 
-  #   coord_sf(datum = NA) + 
-  #   theme_minimal() + 
-  #   scale_fill_viridis_c()
 }
 
 ## api not working correctly for "tract" so need to run it separately

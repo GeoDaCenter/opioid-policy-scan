@@ -9,7 +9,7 @@ library(sf)
 library(tigris)
 
 # update this for your drive!
-geometryFilesLoc <- '/Users/yashbansal/Desktop/CSDS_RA/opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
+geometryFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
 
