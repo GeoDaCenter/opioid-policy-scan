@@ -12,7 +12,7 @@ Tract and Zipcode level classifications were calculated using the Rural-Urban Co
 
 
 ### Description of Data Source Tables:
-For each census tract USDA calculates 10 primary and 21 secondary codes. Tract-to-tract commuting patterns are utilized these codes. Primary codes use the largest share commuting flow to classify tracts. 
+For each census tract, the USDA calculates 10 primary and 21 secondary codes. Tract-to-tract commuting patterns are utilized for calculation of these codes. Primary codes use the largest share commuting flow to classify tracts. 
 
 * Codes 1, 4 and 7 are Core Codes, i.e., these identify the tract equivalents for cores of Metropolitan, Micropolitan and Small Towns respectively. 
 
@@ -20,14 +20,14 @@ For each census tract USDA calculates 10 primary and 21 secondary codes. Tract-t
 
 * Codes 3, 6 and 9 are Low Commuting Codes, i.e., these identify the tract equivalents for communities with primary flows to Metropolitan, Mitropolitan and Small Towns respectively, but these flows account for less than 30% of the communities total commute. Please note, this flow is still the largest commuting flow, but it is less than 30%. 
 
-Secondary codes utilize the second largest share of commuting patterns to further classify census tracts. Exact definitons can be found here https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/documentation/.
+Secondary codes utilize the second largest share of commuting patterns to further classify census tracts. Exact definitons can be found [here](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/documentation/).
 
 
 ### Description of Data Processing: 
 
 Census Tracts & Zipcodes were classified as :
-* Urban if their RUCA2 codes were 1.0 and 1.1 
-* Suburban if their RUCA2 codes were 2.0, 2.1, 4.0, and 4.1 
+* Urban, if their RUCA2 codes were 1.0 and 1.1 
+* Suburban, if their RUCA2 codes were 2.0, 2.1, 4.0, and 4.1 
 * All other RUCA2 codes were classified as Rural.
 
   
