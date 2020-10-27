@@ -10,22 +10,22 @@ HS02 - Policy Scan Environment Report at 1 spatial scale. File can be found [her
 ### Data Source(s) Description:  
 Percentage rural and urban population is sourced from the Census Bureau. Raw data and more details can be found at https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html.
 
-Also, the census tract level classifications generated using the RUCA codes were aggregated at a county level. Aggregated county level data can be found [here](). 
+Also, census tract level classifications were generated using the RUCA codes, which were then aggregated at a county level. Aggregated county level data can be found [here](Policy_Scan/data_raw/county_RUCA_rurality.csv). 
 
 
 ### Description of Data Source Tables:
-After each decennial census, the bureau identifies Urban areas under two categories :
+After each decennial census, the bureau identifies Urban Areas under two categories :
 * Urbanized Areas (UAs) of 50,000 or more people;
 * Urban Clusters (UCs) of at least 2,500 and less than 50,000 people.
-All other areas are classified as Rural. These classifications are done at a census block/tract level and are primarily based on population density and land use. 
 
+All other areas are classified as Rural. These classifications are done at a census block/tract level and are primarily based on population density and land use. 
 Using these classifications, for each county, the bureau calculates a percent rurality measure which is the percentage of population living in non-urban areas. We source this variable. More details on methodology can be found [here](https://www2.census.gov/geo/pdfs/reference/ua/Defining_Rural.pdf).
 
 
 ### Description of Data Processing: 
 For each county, from the census data, the percentage of population living in non-urban areas is identified as percentage rurality.
 
-For each county, the percentage of tracts classified as urban/suburban/rural(using the RUCA code definitions) were calculated. Details on the classification methodology can be found [here]().
+For each county, the percentage of tracts classified as urban/suburban/rural, using the RUCA code definitions were calculated. Details on the classification methodology can be found [here](Policy_Scan/data_final/metadata/Rural_Urban_Classification_T_Z.md).
   
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
@@ -43,4 +43,4 @@ n/a
 
 ### Comments/Notes:
 The datasets come from two different sources and might have some gaps.
-For Census Rurality, there are additional notes included for certain counties, e.g. change in FIPS code, etc., these can be found in the `note` column.
+For Census rurality, there are additional notes included for certain counties, e.g. change in FIPS code, etc., these can be found under the `note` column.
