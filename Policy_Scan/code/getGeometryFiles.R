@@ -1,7 +1,7 @@
 ## This code downloads geometries for a particular year for policy scan
 
 library(tigris)
-library(sf)
+library(geojsonio)
 library(tidyverse)
 
 
@@ -27,26 +27,21 @@ zctas <- st_transform(zctas, crsToSet)
 
 # tracts shapefiles need state as input, doesnt work for entire country like other functions.
 #tracts    <- tracts(year = yeartoFetch)
-colNameS <- colnames(states)[startsWith(colnames(states),"STATE")]
-colNameC <- colnames(counties)[startsWith(colnames(counties),"STATE")]
-
-tracts <- map(.x = as.numeric(data.frame(states[colNameS])[,1]),
+tracts <- map(.x = as.numeric(states$STATEFP),
                .f = ~ tracts(state = .x, county = NULL, year = yeartoFetch, cb = TRUE))
-tracts <- lapply(tracts, function(x) st_transform(x, crsToSet))
-tracts <- do.call(rbind, tracts)
-
+tracts <- do.call(rbind.data.frame, tracts)
+tracts <- st_transform(tracts, crsToSet)
 
 # ## exclude ones in territories
-counties <- counties[!(as.numeric(data.frame(states[colNameS])[,1]) %in% territoriesToBeExcluded),]
-states <- states[!(as.numeric(data.frame(states[colNameS])[,1]) %in% territoriesToBeExcluded),]
+counties <- counties[!(counties$STATEFP %in% territoriesToBeExcluded),]
+states <- states[!(states$STATEFP %in% territoriesToBeExcluded),]
 tracts <- tracts[!(tracts$STATEFP %in% territoriesToBeExcluded),]
 for (i in 1: length(zctasToBeExcluded))
 {
-  zctas <- zctas[!(startsWith(zctas$ZCTA5,zctasToBeExcluded[i])),]
+  zctas <- zctas[!(startsWith(zctas$ZCTA5CE10,zctasToBeExcluded[i])),]
 }
 
 
-## change the names according to year.
 st_write(counties,dsn ='geometryFiles/tl_2018_county/counties2018.shp')
 st_write(tracts,dsn ='geometryFiles/tl_2018_tract/tracts2018.shp')
 st_write(states,dsn ='geometryFiles/tl_2018_state/states2018.shp')
