@@ -73,7 +73,7 @@ We plan to source following data variables.
 ### Physical Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census(cenRuralP) | USDA & ACS  | HS02/ [Rural-Urban Classifications]() | County, Tract, Zip | Complete |
+| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census(cenRuralP) | USDA & ACS  | HS02/ [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
 | Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Vacancy Rate | Percent vacant units (vacantP) | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Long Term Occupancy | Population that moved into current housing 20 years or before | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
