@@ -13,7 +13,7 @@ geometryFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
 rawDataFilesLoc <- './opioid-policy-scan/Policy_Scan/data_raw/'
 outputFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/'
 
-#classifications finalized, uses RUCA2
+#classifications finalized
 urban <- c(1.0, 1.1)
 suburban <- c(2.0, 2.1, 4.0, 4.1)
 # everything else rural

@@ -31,7 +31,7 @@ We plan to source following data variables.
 ### Health Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs |  |  |  |  |  |
+| Access to MOUDs | Euclidean Distance to Nearest Resource | Census, SAMHSA and Vivitrol website | Access01/ [Access : Minimum Distance](Policy_Scan/data_final/metadata/Access_MinDistance.md) | Tract, Zip | Complete |
 | Access to FQHC facilities |  |  |  |  |  |
 | Access to Pharmacies |  |  |  |  |  |
 | Access to Hospitals |  |  |  |  |  |
