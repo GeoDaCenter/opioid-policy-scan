@@ -8,7 +8,8 @@ library(tmap)
 library(sf)
 library(tigris)
 
-geometryFilesLoc <- '/Users/yashbansal/Desktop/CSDS_RA/Opioid/Policy Scan/code/'
+# update this for your drive!
+geometryFilesLoc <- './opioid-policy-scan/Policy_Scan/data_final/geometryFiles/'
 #census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
 
 
@@ -62,11 +63,11 @@ for (i in 1:length(shapetoFetch))
   colnames(varDf) <- gsub("estimate.","",colnames(varDf))
   colnames(varDf)[-1] <- variablestoFetch$name[match(colnames(varDf)[-1],variablestoFetch$code)]
   
-  varDf$pctOcc    <-  round(varDf$occupied*100/varDf$totUnits,2)
-  varDf$pctVacant <-  round(varDf$vacant*100/varDf$totUnits,2)
-  varDf$pctMoblie <-  round(varDf$mobileHome*100/varDf$totUnits,2)
-  varDf$pctLngterm<-  round(100*(varDf$popO_90_99 + varDf$popO_bfr89 + varDf$popR_90_99 + varDf$popR_bfr89)/(varDf$popOwnOcc + varDf$popRenOcc),2)
-  
+  varDf$occP    <-  round(varDf$occupied*100/varDf$totUnits,2)
+  varDf$vacantP    <-  round(varDf$vacant*100/varDf$totUnits,2)
+  varDf$mobileP <-  round(varDf$mobileHome*100/varDf$totUnits,2)
+  varDf$lngTermP<-  round(100*(varDf$popO_90_99 + varDf$popO_bfr89 + varDf$popR_90_99 + varDf$popR_bfr89)/(varDf$popOwnOcc + varDf$popRenOcc),2)
+  varDf$rentalP <-  round(varDf$renOcc*100/(varDf$occUnits),2)
   
   # get ALAND area to calcuate units per square mile
   if(shapetoFetch[i] == 'county'){
@@ -78,13 +79,13 @@ for (i in 1:length(shapetoFetch))
     }
   
     st_geometry(baseGeo) <- NULL
-    baseGeo <- data.frame(baseGeo[,grepl('GEOID|ALAND', colnames(baseGeo))]) #aland in sq meters
+    baseGeo <- data.frame(baseGeo[,grepl('\\bGEOID|ALAND', colnames(baseGeo))]) #aland in sq meters
     baseGeo$areaSqMile <- baseGeo[,grep('ALAND',colnames(baseGeo))]/2590000 # sqmiles
-    colnames(baseGeo)[grep('GEOID',colnames(baseGeo))] <- 'GEOID'
+    colnames(baseGeo)[grep('GEOID',colnames(baseGeo), fixed = TRUE)] <- 'GEOID'
     varDf <- merge(varDf,baseGeo[,c('GEOID','areaSqMile')], by.x = 'GEOID', by.y = 'GEOID')
     varDf$unitDens <- varDf$totUnits/varDf$areaSqMile
     
-    varDf <- varDf[,c('GEOID','totUnits','pctOcc','pctVacant','pctMoblie','pctLngterm','unitDens')]
+    varDf <- varDf[,c('GEOID','totUnits','occP','vacantP','mobileP','lngTermP','rentalP','unitDens')]
     write.csv(varDf,paste0('HS01_',yeartoFetch,"_",filename[i],".csv"),row.names = FALSE)
 }
 
@@ -106,18 +107,19 @@ varDf <- reshape(variables,idvar = 'GEOID',timevar = 'variable',direction = 'wid
 colnames(varDf) <- gsub("estimate.","",colnames(varDf))
 colnames(varDf)[-1] <- variablestoFetch$name[match(colnames(varDf)[-1],variablestoFetch$code)]
 
-varDf$pctOcc    <-  round(varDf$occupied*100/varDf$totUnits,2)
-varDf$pctVacant <-  round(varDf$vacant*100/varDf$totUnits,2)
-varDf$pctMoblie <-  round(varDf$mobileHome*100/varDf$totUnits,2)
-varDf$pctLngterm<-  round(100*(varDf$popO_90_99 + varDf$popO_bfr89 + varDf$popR_90_99 + varDf$popR_bfr89)/(varDf$popOwnOcc + varDf$popRenOcc),2)
+varDf$occP    <-  round(varDf$occupied*100/varDf$totUnits,2)
+varDf$vacantP <-  round(varDf$vacant*100/varDf$totUnits,2)
+varDf$mobileP <-  round(varDf$mobileHome*100/varDf$totUnits,2)
+varDf$lngTermP<-  round(100*(varDf$popO_90_99 + varDf$popO_bfr89 + varDf$popR_90_99 + varDf$popR_bfr89)/(varDf$popOwnOcc + varDf$popRenOcc),2)
+varDf$rentalP <-  round(varDf$renOcc*100/(varDf$popOwnOcc + varDf$popRenOcc),2)
 
 baseGeo <- read_sf(paste0(geometryFilesLoc,'tl_2018_tract/tracts2018.shp'))
 st_geometry(baseGeo) <- NULL
-baseGeo <- data.frame(baseGeo[,grepl('GEOID|ALAND', colnames(baseGeo))])#aland in sq meters
+baseGeo <- data.frame(baseGeo[,grepl('\\bGEOID|ALAND', colnames(baseGeo))])#aland in sq meters
 baseGeo$areaSqMile <- baseGeo[,grep('ALAND',colnames(baseGeo))]/2590000 # sqmiles
 colnames(baseGeo)[grep('GEOID',colnames(baseGeo))] <- 'GEOID'
 varDf <- merge(varDf,baseGeo[,c('GEOID','areaSqMile')], by.x = 'GEOID', by.y = 'GEOID')
 varDf$unitDens <- varDf$totUnits/varDf$areaSqMile
 
-varDf <- varDf[,c('GEOID','totUnits','pctOcc','pctVacant','pctMoblie','pctLngterm','unitDens')]
+varDf <- varDf[,c('GEOID','totUnits','occP','vacantP','mobileP','lngTermP','rentalP','unitDens')]
 write.csv(varDf,paste0('HS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)

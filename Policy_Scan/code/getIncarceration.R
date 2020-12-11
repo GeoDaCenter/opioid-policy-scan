@@ -48,6 +48,17 @@ prison_2016 <- prison_2016 %>%
 write.csv(prison_2016,"data_final/PS01_2016_C.csv", row.names = FALSE)
 write.csv(jail_2017,"data_final/PS02_2017_C.csv", row.names = FALSE)
 
+# rename variables 
+colnames(jail_2017) <- c("YFips", "Year", "Fips", "State", "CountyName", 
+         "TtlJlPpr", "FmlJlPpr", "MlJlPpr", "AapiJlPpr", 
+         "BlckJlPpr","LtnxJlPpr", "NtvJlPpr", "WhtJlPpr", 
+         "TtlJlAdmr", "TtlJlPrtr")
+
+colnames(prison_2016) <- c("YFips", "Year", "Fips", "State", "CountyName", 
+                           "TtlPrPpr", "FmlPrPpr", "MlPrPpr", "AapiPrPpr",
+                           "BlckPrPpr","LtnxPrPpr", "NtvPrPpr", "WhtPrPpr",
+                           "TtlPrAPpr", "FmlPrAPpr", "MlPrAPpr", "AapiPrAPpr",
+                           "BlckPrAPpr","LtnxPrAPpr", "NtvPrAPpr", "WhtPrAPpr")
 
 
 

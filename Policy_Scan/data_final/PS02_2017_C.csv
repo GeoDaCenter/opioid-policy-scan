@@ -1,4 +1,4 @@
-"yfips","year","fips","state","county_name","total_jail_pop_rate","female_jail_pop_rate","male_jail_pop_rate","aapi_jail_pop_rate","black_jail_pop_rate","latinx_jail_pop_rate","native_jail_pop_rate","white_jail_pop_rate","total_jail_adm_rate","total_jail_pretrial_rate"
+"YFips","Year","Fips","State","CountyName","TtlJlPpr","FmlJlPpr","MlJlPpr","AapiJlPpr","BlckJlPpr","LtnxJlPpr","NtvJlPpr","WhtJlPpr","TtlJlAdmr","TtlJlPrtr"
 201701001,2017,"01001","AL","Autauga County",453.9,135.14,711.4,0,645.16,195.5,557.05,279.87,2145.69,266.84
 201701003,2017,"01003","AL","Baldwin County",476.27,160.46,796.73,460.36,1266.4,624.73,220.75,369.36,11350.3,368.75
 201701005,2017,"01005","AL","Barbour County",690.04,113.19,1020.18,0,123.05,1199.4,5545.45,1150.23,4848.94,261.1

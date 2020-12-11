@@ -12,44 +12,44 @@ Variables were obtained from the Vera Institute of Justice. Raw data and more de
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
- 1. total_prison_pop_rate
- 2. female_prison_pop_rate
- 3. male_prison_pop_rate
- 4. aapi_prison_pop_rate
- 5. black_prison_pop_rate
- 6. latinx_prison_pop_rate
- 7. native_prison_pop_rate
- 8. white_prison_pop_rate
- 9. total_prison_adm_rate
- 10. female_prison_adm_rate
- 11. male_prison_adm_rate
- 12. aapi_prison_adm_rate
- 13. black_prison_adm_rate
- 14. latinx_prison_adm_rate
- 15. native_prison_adm_rate
- 16. white_prison_adm_rate
+ 1. Total prison population rate;
+ 2. Female prison population rate;
+ 3. Male prison population rate;
+ 4. Asian American/Pacific Islander prison population rate;
+ 5. Black prison population rate;
+ 6. Latinx prison population rate;
+ 7. Native American prison population rate;
+ 8. White prison population rate;
+ 9. Total prison admission rate;
+ 10. Female prison admission rate;
+ 11. Male prison admission rate;
+ 12. Asian American/Pacific Islander prison admission rate;
+ 13. Black prison admission rate;
+ 14. Latinx prison admission rate;
+ 15. Native American prison admission rate;
+ 16. White prison admission rate.
  
 These rates were calculated using base rate of county population aged 15-64. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total prison population rate | total_prison_pop_rate | Total Prison Population Rate |
-| Female prison population rate | female_prison_pop_rate | Prison Population Rate, Female |
-| Male prison population rate | male_prison_pop_rate | Prison Population Rate, Male |
-| Asian American/Pacific Islander prison population rate | aapi_prison_pop_rate | Prison Population Rate, Asian American / Pacific Islander |
-| Black prison population rate | black_prison_pop_rate | Prison Population Rate, Black |
-| Latinx prison population rate | latinx_prison_pop_rate | Prison Population Rate, Latinx |
-| Native American prison population rate | native_prison_pop_rate | Prison Population Rate, Native American |
-| White prison population rate | white_prison_pop_rate | Prison Population Rate, White |
-| Total prison admission rate | total_prison_adm_rate | Prison Prison Admissions Rate |
-| Female prison admission rate | female_prison_adm_rate | Prison Admission Rate, Female |
-| Male prison admission rate | male_prison_adm_rate | Prison Admission Rate, Male |
-| Asian American/Pacific Islander prison admission rate | aapi_prison_adm_rate | Prison Admission Rate, Asian American / Pacific Islander |
-| Black prison admission rate | black_prison_adm_rate | Prison Admission Rate, Black |
-| Latinx prison admission rate | latinx_prison_adm_rate | Prison Admission Rate, Latinx |
-| Native American prison admission rate | native_prison_adm_rate | Prison Admission Rate, Native American |
-| White prison admission rate | white_prison_adm_rate | Prison Admission Rate, White |
+| Total prison population rate | TtlPrPpr | Total Prison Population Rate |
+| Female prison population rate | FmlPrPpr | Prison Population Rate, Female |
+| Male prison population rate | MlPrPpr | Prison Population Rate, Male |
+| Asian American/Pacific Islander prison population rate | AapiPrPpr | Prison Population Rate, Asian American / Pacific Islander |
+| Black prison population rate | BlckPrPpr | Prison Population Rate, Black |
+| Latinx prison population rate | LtnxPrPpr | Prison Population Rate, Latinx |
+| Native American prison population rate | NtvPrPpr | Prison Population Rate, Native American |
+| White prison population rate | WhtPrPpr | Prison Population Rate, White |
+| Total prison admission rate | TtlPrAPpr | Prison Prison Admissions Rate |
+| Female prison admission rate | FmlPrAPpr | Prison Admission Rate, Female |
+| Male prison admission rate | MlPrAPpr | Prison Admission Rate, Male |
+| Asian American/Pacific Islander prison admission rate | AapiPrAPpr | Prison Admission Rate, Asian American / Pacific Islander |
+| Black prison admission rate | BlckPrAPpr | Prison Admission Rate, Black |
+| Latinx prison admission rate | LtnxPrAPpr | Prison Admission Rate, Latinx |
+| Native American prison admission rate | NtvPrAPpr | Prison Admission Rate, Native American |
+| White prison admission rate | WhtPrAPpr | Prison Admission Rate, White |
 
 ### Data Limitations:
 There are missing data in many counties. 
