@@ -51,7 +51,8 @@ We plan to source following data variables.
 | Population with a Disability | Civilian Non Institutionalized Population with a Disability (disbP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
-| Incarceration rates |  |  |  |  |  |
+| Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | the Vera Institute of Justice | PS01 / [Prison Variables](Policy_Scan/data_final/metadata/Prison variables_2016.md) | County | Complete |
+| Incarceration rates (Jail) | Jail population rate by gender and ethnicity | the Vera Institute of Justice | PS02 / [Jail Variables](Policy_Scan/data_final/metadata/Jail variables_2017.md) | County | Complete |
 | SDOH Typologies |  |  |  |  |  |
 
 <br>
