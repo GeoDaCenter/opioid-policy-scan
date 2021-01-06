@@ -1,0 +1,12 @@
+OPTIC-Vetted Good Samaritan Policy Data
+
+The files in this folder are for the Good Samaritan law variables (1990-2018) included in the OPTIC-Vetted Policy Data Sets.	
+Analytic file for Stata:  WEB_GSL.dta
+Analytic file for Excel:  WEB_GSL.xlsx
+Documentation file: WEB_GSL.pdf
+
+Last Updated: July 29, 2020
+
+The folder is associated with "The State of the Science in Opioid Policy Research" https://www.rand.org/pubs/external_publications/EP68218.html. 
+
+All OPTIC-Vetted Policy Data Sets available for download can be found at https://www. rand.org/health-care/centers/optic/resources/datasets.html.

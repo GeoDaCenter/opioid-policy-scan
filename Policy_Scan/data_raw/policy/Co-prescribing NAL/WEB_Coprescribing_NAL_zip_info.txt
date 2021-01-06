@@ -1,0 +1,12 @@
+OPTIC-Vetted Co-prescribing Naloxone Policy Data
+
+The files in this folder are for the Co-prescribing Naloxone policy variables (1990-2020) included in the OPTIC-Vetted Policy Data Sets. 	
+Analytic file for Excel:  WEB_Coprescribing_NAL.xlsx
+Analytic file for Stata:  WEB_Coprescribing_NAL.dta
+Documentation file: WEB_OPTIC Vetted Coprescribing NAL Policy Data.pdf
+
+Last Updated: September 28, 2020
+
+The folder is associated with "Legal Requirements and Recommendations to Prescribe Naloxone" https://www.rand.org/pubs/external_publications/EP68090.html. 
+
+All OPTIC-Vetted Policy Data Sets available for download can be found at https://www. rand.org/health-care/centers/optic/resources/datasets.html.
