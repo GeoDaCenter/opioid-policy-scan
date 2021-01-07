@@ -31,11 +31,11 @@ We plan to source following data variables.
 ### Health Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Euclidean Distance to Nearest Resource | U.S. Census, SAMHSA and Vivitrol website | Access01/ [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MinDistance.md) | Tract, Zip | Complete |
-| Access to FQHC facilities | Euclidean Distance to Nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02/[Access: FQHC, Min. Distance](Policy_Scan/data_final/metadata/FQHC_Access_MinDistance.md) | Tract, Zip | Complete |
-| Access to Hospitals | Euclidean Distance to Nearest FQHC | U.S. Census, CovidCareMap |  Access03/[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
+| Access to MOUDs | Euclidean distaince to nearest MOUD | U.S. Census, SAMHSA and Vivitrol website | Access01/ [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
+| Access to FQHC facilities | Euclidean distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02/[Access: FQHC, Min. Distance](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
+| Access to Hospitals | Euclidean distance to nearest hospital | U.S. Census, CovidCareMap |  Access03/[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
 | Access to Mental Health <br> Practitioners |  |  |  |  |  |
-| Access to Pharmacies | Euclidean Distance to Nearest Pharmacy | U.S. Census, Infogroup Inc. Business and Consumer Data 2019 | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Pharmacies_Access_MinDistance.md) | Tract, Zip | Complete |
+| Access to Pharmacies | Euclidean distance to nearest pharmacy | U.S. Census, Infogroup Inc. Business and Consumer Data 2019 | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
 | Opioid overdose death rate |  |  |  |  |  |
