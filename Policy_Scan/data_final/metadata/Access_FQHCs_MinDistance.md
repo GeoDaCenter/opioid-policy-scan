@@ -1,5 +1,5 @@
-**Meta Data Name**: Access to FQHCs, part of the Health Factors dataset  
-**Last Modified**: January 5, 2021
+**Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
+**Last Modified**: January 5, 2021  
 **Author**: Susan Paykin 
 
 ### Data Location: 
