@@ -53,9 +53,8 @@ unique(pharmacies_clean$State)
 # Read in clean pharmacy dataset
 pharmacies <- read.csv("pharmacies_2019.csv")
 
+# Remove NAs from longitude
 which(is.na(pharmacies$Longitude)) # row 10667 Longitude is NA
-
-# Remove NA
 pharmacies <- pharmacies[-10667, ]
 
 # Convert longitude variable to numeric
@@ -141,6 +140,7 @@ head(minDistTracts_sf)
 
 #### Part 3) Save final Access Metrics datasets ####
 
+# Save zips
 write_sf(minDistZips_sf, "data_final/Access05_Z.csv")
 
 # Save tracts
