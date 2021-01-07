@@ -1,6 +1,6 @@
-**Meta Data Name**: Access to Hospitals
-**Last Modified**: January 6, 2021
-**Author**: Susan Paykin 
+**Meta Data Name**: Access to Hospitals  
+**Last Modified**: January 6, 2021  
+**Author**: Susan Paykin  
 
 ### Data Location: 
 Access03 - Policy Scan Environment Report at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
