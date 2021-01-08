@@ -25,17 +25,20 @@ We plan to source following data variables.
 | Controlled Substance Laws |  |  |  |  |  |
 | State & Local Govt. |  |  |  |  |  |
 | Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
+| Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | the Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
+| Incarceration rates (Jail) | Jail population rate by gender and ethnicity | the Vera Institute of Justice | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
+| SDOH Typologies |  |  |  |  |  |
 
 <br>
 
 ### Health Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Euclidean Distance to Nearest Resource | Census, SAMHSA and Vivitrol website | Access01/ [Access: MOUD Min. Distance](Policy_Scan/data_final/metadata/Access_MinDistance.md) | Tract, Zip | Complete |
-| Access to FQHC facilities | Euclidean Distance to Nearest FQHC | Census, COVID Atlas/HRSA  | Access02/[Access: FQHC Min. Distance](Policy_Scan/data_final/metadata/FQHC_Access_MinDistance.md) | Tract, Zip | Complete |
-| Access to Pharmacies |  |  |  |  |  |
-| Access to Hospitals |  |  |  |  |  |
+| Access to MOUDs | Euclidean distaince to nearest MOUD | U.S. Census, SAMHSA and Vivitrol website | Access01/ [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
+| Access to FQHC facilities | Euclidean distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02/[Access: FQHC, Min. Distance](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
+| Access to Hospitals | Euclidean distance to nearest hospital | U.S. Census, CovidCareMap |  Access03/[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
 | Access to Mental Health <br> Practitioners |  |  |  |  |  |
+| Access to Pharmacies | Euclidean distance to nearest pharmacy | U.S. Census, Infogroup Inc. Business and Consumer Data 2019 | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
 | Opioid overdose death rate |  |  |  |  |  |
@@ -51,8 +54,6 @@ We plan to source following data variables.
 | Population with a Disability | Civilian Non Institutionalized Population with a Disability (disbP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
-| Incarceration rates |  |  |  |  |  |
-| SDOH Typologies |  |  |  |  |  |
 
 <br>
 
