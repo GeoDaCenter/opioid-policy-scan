@@ -19,8 +19,8 @@ We plan to source following data variables.
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | Medicaid Expansion |  |  |  |  |  |
 | Medicaid Expenditure |  |  |  |  |  |
-| Naloxone Access Laws |  |  |  |  |  |
-| Good Samaritan Laws |  |  |  |  |  |
+| Naloxone Access Laws | Naloxone policy | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
+| Good Samaritan Laws | Good Samaritan laws | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
 | PDMP | PDMP policy | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
 | Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
 | Controlled Substance Laws |  |  |  |  |  |
