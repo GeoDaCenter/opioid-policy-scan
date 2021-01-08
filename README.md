@@ -21,6 +21,7 @@ We plan to source following data variables.
 | Medicaid Expenditure |  |  |  |  |  |
 | Naloxone Access Laws |  |  |  |  |  |
 | Good Samaritan Laws |  |  |  |  |  |
+| PDMP | PDMP policy | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
 | Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
 | Controlled Substance Laws |  |  |  |  |  |
 | State & Local Govt. |  |  |  |  |  |
