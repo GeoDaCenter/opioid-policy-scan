@@ -11,16 +11,14 @@ Variables were obtained from KFF. https://www.kff.org/medicaid/state-indicator/t
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
-1. Total medical expenditure (Character);
-2. Total medical expenditure (Numeric). 
-
-Fractions are calculated based on the number of months out of 12 that a law is effective. A law is considered effective for a given month if a law becomes effective by the 7th for January, or if a law becomes effective by the 3rd for February – December.
+1. Total medicaid spending  (Character);
+2. Total medicaid spending (Numeric). 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total medical expenditure (Character) | TtlMedExpC | Total medical expenditure in a character format |
-| Total medical expenditure (Numeric) | TtlMedExpN | Total medical expenditure in a numeric format |
+| Total medicaid spending (Character) | TtlMedExpC | Total medicaid spending in a character format |
+| Total medicaid spendinge (Numeric) | TtlMedExpN | Total medicaid spending in a numeric format |
 
 
 ### Data Limitations:
