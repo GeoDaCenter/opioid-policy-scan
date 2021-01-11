@@ -16,25 +16,25 @@ Zip code tract area (ZCTA) and Census Tract files were sourced from the U.S. Cen
 n/a
 
 ### Description of Data Processing: 
-Nearest euclidean distance, in miles, was calculated from the centroid of each tract/ZCTA to the nearest pharmacy location.
+Data was sourced from Infogroup's historical dataset, filtered for pharmacies via NAICS code, cleaned, and then converted to spatial data. Next, we conducted a nearest resource analysis using minimum distance as a proxy variable for access. This analysis included calculating centroids for all U.S. census tracts and ZCTAs, determining the nearest pharmact to each tract/zip centroid, then converting the distance units from meters to miles.
 
 ### Key Variable and Definitions:
 
-Tracts (Access05_T):
+Tracts ([Access05_T](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Full GEOID | GEOID | Unique GEOID, including state, county, and tract IDs |
-| Tract # | TRACTCE | Unique census tract ID |
-| Access to Nearest Pharmacy | minDistT_mi | Euclidean distance from tract centroid to closest pharmacy, in miles |
+| Census tract| TRACTCE | Unique census tract ID |
+| Access to pharmacies | minDistT_mi | Euclidean distance from tract centroid to closest pharmacy, in miles |
 
-Zip Code (Access05_Z):
+Zip Code ([Access05_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Full GEOID | GEOID10 | Unique GEOID, same as zip code |
 | Zip code tract area | ZCTA5CE10 | Zip code |
-| Access to Nearest Pharmacy | minDistZ_mi | Euclidean distance from zip code centroid to closest pharmacy, in miles |
+| Access to pharmacies | minDistZ_mi | Euclidean distance from zip code centroid to closest pharmacy, in miles |
 
 ### Data Limitations:
 Distance is Euclidean - not driving or walking routes. 

@@ -48,8 +48,6 @@ unique(pharmacies_clean$State)
 # Save pharmacy dataset 
 #write.csv(pharmacies_clean, "pharmacies_2019.csv")
 
-#### Part 2) Nearest Resource Analysis ####
-
 # Read in clean pharmacy dataset
 pharmacies <- read.csv("pharmacies_2019.csv")
 
@@ -68,6 +66,8 @@ pharmacies.sf <- st_as_sf(pharmacies,
 
 # Quick plot
 plot(st_geometry(pharmacies.sf))
+
+#### Part 2) Nearest Resource Analysis ####
 
 # Read in location data
 zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp")
@@ -140,7 +140,7 @@ head(minDistTracts_sf)
 
 #### Part 3) Save final Access Metrics datasets ####
 
-# Save zips
+io# Save zips
 write_sf(minDistZips_sf, "data_final/Access05_Z.csv")
 
 # Save tracts
