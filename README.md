@@ -17,15 +17,14 @@ We plan to source following data variables.
 ### Policy Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Medicaid Expansion |  |  |  |  |  |
-| Medicaid Expenditure |  |  |  |  |  |
-| Naloxone Access Laws | Naloxone policy | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
-| Good Samaritan Laws | Good Samaritan laws | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
-| PDMP | PDMP policy | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
+| Medicaid Expansion | Spending for adults who have enrolled through ACA's expansion | KFF | PS07 / [MedExpan](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExpan_2018.md) | State | Complete |
+| Medicaid Expenditure | Total medicaid spending | KFF | PS06 / [MedExp](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExp_2019.md) | State | Complete |
+| Naloxone Access Laws |  Any Naloxone law; Naloxone law allowing distribution through a standing or protocal order effective; Naloxone law allowing pharmacists prescriptive authority | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
+| Good Samaritan Laws | Any Good Samaritan Law; Good Samaritan Law protecting arrest | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
+| PDMP | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
 | Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
 | Controlled Substance Laws |  |  |  |  |  |
-| State & Local Govt. |  |  |  |  |  |
-| Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
+| State & Local Govt. Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
 | Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | the Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
 | Incarceration rates (Jail) | Jail population rate by gender and ethnicity | the Vera Institute of Justice | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
 | SDOH Typologies |  |  |  |  |  |
