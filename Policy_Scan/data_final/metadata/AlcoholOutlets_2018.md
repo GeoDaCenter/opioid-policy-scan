@@ -1,4 +1,4 @@
-**Meta Data Name**: Alcohol Outlet Density, part of the Physical Factors dataset
+**Meta Data Name**: Alcohol Outlet Density, part of the Physical Factors dataset  
 **Last Modified**: January 12, 2021   
 **Author**: Susan Paykin    
 
@@ -27,12 +27,12 @@ From U.S. Census/TIGER files, key variables include:
 
 ### Description of Data Processing: 
 
-* Alcohol outlet locations were sourced from the Infogroup Historical Datafile, which was filtered by NAICS code 445310 for *Beer, Wine, and Liquor Stores*. Location data was then cleaned and converted to spatial data.
+* Alcohol outlet locations were sourced from the Infogroup Historical Datafile, which was filtered by NAICS code 445310 for BEER, WINE, & LIQUOR STORES. Location data was then cleaned and converted to spatial data.
 * Total outlet counts were calculated via point-in-polygon procedure where outlets points were merged with geometries, then counted & summed by state, county, tract, and zip codes.
-* Land area in sq meters (*ALAND* variable) was sourced from geometry files and converted to sq miles (1 sq mi = 2,590,000 sq m).
+* Land area in sq meters (ALAND variable) was sourced from geometry files and converted to sq miles (1 sq mi = 2,590,000 sq m).
 * Alcohol outlet density was calculated as: 
   * Geographic density: Total outlets / Land area in sq mi
-  * *[future, not yet added] Population-weighted density: Total outlets / population*
+  * *[future] Population-weighted density: Total outlets / population*
 
 ### Key Variable and Definitions:
 
