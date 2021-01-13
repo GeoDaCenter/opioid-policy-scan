@@ -51,7 +51,7 @@ unique(pharmacies_clean$State)
 # Read in clean pharmacy dataset
 pharmacies <- read.csv("pharmacies_2019.csv")
 
-# Remove NAs from longitude
+# Remove NAs / missing data from longitude
 which(is.na(pharmacies$Longitude)) # row 10667 Longitude is NA
 pharmacies <- pharmacies[-10667, ]
 
@@ -76,7 +76,6 @@ tracts <- read_sf("data_final/geometryFiles/tl_2018_tract/tracts2018.shp")
 # Check & transform CRS to projected EPSG:3857, with unit measurement of meters
 st_crs(zips)
 zips <- st_transform(zips, 3857)
-
 tracts <- st_transform(tracts, 3857)
 
 st_crs(pharmacies.sf)
@@ -140,8 +139,8 @@ head(minDistTracts_sf)
 
 #### Part 3) Save final Access Metrics datasets ####
 
-io# Save zips
-write_sf(minDistZips_sf, "data_final/Access05_Z.csv")
+# Save zips
+write_sf(minDistZips_sf, "data_final/Access04_Z.csv")
 
 # Save tracts
-write_sf(minDistTracts_sf, "data_final/Access05_T.csv")
+write_sf(minDistTracts_sf, "data_final/Access04_T.csv")
