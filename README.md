@@ -81,7 +81,7 @@ We plan to source following data variables.
 | Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Alcohol Outlet Density |  |  |  |  |  |
+| Alcohol Outlet Density | Alcohol outlets per square mile | Infogroup Historical Business Datafile 2018, U.S. Census TIGER Files 2018  | [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
 | Hypersegregated Cities |  |  |  |  |  |
 | Southern Black Belt |  |  |  |  |  |
 | Native American Reservations |  |  |  |  |  |
