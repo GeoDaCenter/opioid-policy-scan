@@ -32,15 +32,17 @@ From U.S. Census/TIGER files, key variables include:
 * Land area in sq meters (ALAND variable) was sourced from geometry files and converted to sq miles (1 sq mi = 2,590,000 sq m).
 * Alcohol outlet density was calculated as: 
   * Geographic density: Total outlets / Land area in sq mi
-  * *[future] Population-weighted density: Total outlets / population*
+  * Per capita density: Total outlets / Total population
 
 ### Key Variable and Definitions:
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Alcohol outlet density | alcDens | Number of alcohol outlets per square mile of land area |
+| Alcohol outlet density per land area | alcDens | Number of alcohol outlets per square mile |
+| Alcohol outlet density per capita | alcPerCap | Number of alcohol outlets per capita |
 | Total alcohol outlets | alcTotal | Total number of alcohol outlets in geography |
 | Total area | areaSqMi | Land area of geography in sq miles |
+| Total population | totPopE | Total population estimate |
 
 ### Data Limitations: 
 Land area density is not always the best measurement of the spatial impact of alcohol outlets and liquor stores. We also plan to incorporate population-weighted density, which in some areas, particularly densely-population urban centers and sparsely-populated rural areas, may be a better proxy for access to alcohol outlets.   
