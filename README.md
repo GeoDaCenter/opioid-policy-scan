@@ -65,7 +65,7 @@ We plan to source following data variables.
 | Poverty Rate | Percent below poverty level (povP) | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) (pciE) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Educational Attainment | Population without a High School degree (noHSP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
-| Foreclosure Rate |  |  |  |  |  |
+| Foreclosure Rate | Foreclosure rate and severe delinquency rate | NSP2, CFPB | EC04/ [Foreclosure Rate](Policy_Scan/data_final/metadata/ForeclosureRate.md)) | State, County, Tract | In progress / near complete |
 | Socioeconomic Disadvantage Index |  |  |  |  |  |
 | Urban Core Opportunity |  |  |  |  |  |
 
