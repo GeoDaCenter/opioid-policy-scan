@@ -14,7 +14,7 @@ library(tidyverse)
 
 setwd("~/git/opioid-policy-scan/Policy_Scan")
 
-#### Foreclosure data ----
+#### Tract - Foreclosure data ----
 
 # Load foreclosure data
 # Data description here: https://www.huduser.gov/portal/NSP2datadesc.html
@@ -29,7 +29,7 @@ str(foreclosure)
 # nforeclose = Foreclosure Risk Score (range: 1 - 20)
 # fordq_rate = Estimated percent of mortgages to start foreclosure process or be seriously delinquent in past 2 years
 
-foreclosure_clean <- foreclosure %>% select(GEOID = geoid, state = sta, cntyname, fordq_rate, nforeclose)
+foreclosure_clean <- foreclosure %>% select(GEOID = geoid, state = sta, cntyname, fordq_rate)
 
 # Convert variable to numeric 
 foreclosure_clean$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
@@ -37,15 +37,14 @@ foreclosure_clean$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
 # Save dataset
 write.csv(foreclosure_clean, "data_final/EC04_T.csv")
 
-
-#### 90+ Day Delinquency data ---
+#### County &  State: 90+ Day Delinquency data ---
 
 # Load state data - delinquency rates, mean 2014-2018
 mortgages_st_raw <- read.csv("data_raw/StateMortgagesPercent-90-plusDaysLate-thru-2018-12.csv")
 head(mortgages_st_raw)
 
 # Save by total rate, mean 2014-2018 delinquency rate
-mortgages_st <- mortgages_st_raw %>% select(FIPSCode, Name, delinqR = DelinqR)
+mortgages_st <- mortgages_st_raw %>% select(GEOID = FIPSCode, Name, delinqR = DelinqR)
 
 # Load county data
 mortgages_co_raw <- read.csv("data_raw/CountyMortgagesPercent-90-plusDaysLate-thru-2019-12.csv")
@@ -56,10 +55,8 @@ mortgages_co_raw <- mortgages_co_raw %>% mutate(delinqR = rowMeans(.[, 6:64]))
 mortgages_co_raw$delinqR <- sprintf(mortgages_co_raw$delinqR, fmt = '%#.2f')
 
 # Save total rate, mean 2014-2018 delinquency rate
-mortgages_co <- mortgages_co_raw %>% select(FIPSCode, State, Name, delinqR) 
+mortgages_co <- mortgages_co_raw %>% select(GEOID = FIPSCode, State, Name, delinqR) 
 
 # Save datasets
-write.csv(mortgages_st, "data_final/EC04.1_S")
-write.csv(mortgages_co, "data_final/EC04.1_C")
-  
-  
+write.csv(mortgages_st, "data_final/EC04_S.csv")
+write.csv(mortgages_co, "data_final/EC04_C.csv")
