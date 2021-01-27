@@ -22,24 +22,27 @@ The Mortgage Performance Trends data come from the NMDB, a joint project we’ve
 
 ### Description of Data Source Tables:
 
-[HUD NSP2](https://www.huduser.gov/portal/NSP2datadesc.html): This file included variables used to estimate census tract -level risk scores, including estimated number of foreclosures, rate of foreclosures, vacancy rates, number of mortgages, type of mortgages, price changes, average unemployment, and change in unemployment.  
+#### Tract
+The NSP2 data includes variables used to estimate census tract-level foreclosure risk scores, including estimated number of foreclosures, rate of foreclosures, vacancy rates, number of mortgages, type of mortgages, price changes, average unemployment, and change in unemployment. 
 
-[CFPB Mortgage Performance Trends](https://www.consumerfinance.gov/data-research/mortgage-performance-trends/):  These files included monthly 90+ day delinquency rate data aggregated by state and county, January 2008 - December 2018. 
+#### County and State
+The Mortgage Performance Trends data includes monthly 90+ day delinquency rate estimates, aggregated by state and county. We used historical data from January 2014 to December 2018, though data is available dating back to January 2008 and is updated regularly. 
 
 ### Description of Data Processing: 
 
-Foreclosure and delinquency data were wrangled and cleaned, and appropriate variables selected for inclusion in final datasets. See code comments for detailed notes. For county and state datasets, the mean rate over 2014-2018 period was calculated from monthly rates.
+Foreclosure and delinquency data were wrangled and cleaned, and appropriate variables selected for inclusion in final datasets. See code comments for detailed notes. For county and state-level estimates, the mean delinquency rate over 2014-2018 period was calculated from monthly rates.
 
 ### Key Variable and Definitions:
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique identifier for census tracts (11 digits), counties (5 digits), and states (3 digits)  |
-| Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent, 2007-2008 |
-| Delinquency rate | delinqR | Rate of mortgages 90+ days delinquent |
+| Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent, 2007-2008 (Tract) |
+| Delinquency rate | delinqR | Rate of mortgages 90+ days delinquent (County, State) |
 
 ### Data Limitations:
 While the NSP2 foreclosure data is from 2007-2008, the data is correlated with 2018 health and economic outcomes. 
 
 ### Comments/Notes:
+
 
