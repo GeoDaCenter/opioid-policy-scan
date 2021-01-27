@@ -1,4 +1,4 @@
-##### INTRO #####
+##### INTRO ----
 
 # Author : Susan Paykin
 # Date : January 26, 2021
@@ -6,7 +6,7 @@
 # - Load and clean 2008 NSP2 dataset on foreclosures, save datasets for tract
 # - load and clean 2014-2018 mean mortgage delingquency rate data, save datasets for county and state
 
-##### Set Up #####
+##### Set up ----
 
 library(sf)
 library(tmap)
@@ -29,7 +29,7 @@ str(foreclosure)
 # nforeclose = Foreclosure Risk Score (range: 1 - 20)
 # fordq_rate = Estimated percent of mortgages to start foreclosure process or be seriously delinquent in past 2 years
 
-foreclosure_clean <- foreclosure %>% select(GEOID = geoid, state = sta, cntyname, fordq_rate)
+foreclosure_clean <- foreclosure %>% select(GEOID = geoid, state = sta, co_name = cntyname, fordq_rate)
 
 # Convert variable to numeric 
 foreclosure_clean$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
@@ -37,26 +37,28 @@ foreclosure_clean$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
 # Save dataset
 write.csv(foreclosure_clean, "data_final/EC04_T.csv")
 
-#### County &  State: 90+ Day Delinquency data ---
+#### County & State: 90+ Day Delinquency data ---
 
 # Load state data - delinquency rates, mean 2014-2018
 mortgages_st_raw <- read.csv("data_raw/StateMortgagesPercent-90-plusDaysLate-thru-2018-12.csv")
 head(mortgages_st_raw)
 
 # Save by total rate, mean 2014-2018 delinquency rate
-mortgages_st <- mortgages_st_raw %>% select(GEOID = FIPSCode, Name, delinqR = DelinqR)
+mortgages_st <- mortgages_st_raw %>% select(GEOID = FIPSCode, st_name = Name, dq_rate = DelinqR)
 
 # Load county data
 mortgages_co_raw <- read.csv("data_raw/CountyMortgagesPercent-90-plusDaysLate-thru-2019-12.csv")
 head(mortgages_co_raw)
 
 # Create variable - mean 2014-2018 delinquency rate
-mortgages_co_raw <- mortgages_co_raw %>% mutate(delinqR = rowMeans(.[, 6:64]))
-mortgages_co_raw$delinqR <- sprintf(mortgages_co_raw$delinqR, fmt = '%#.2f')
+mortgages_co_raw <- mortgages_co_raw %>% mutate(dq_rate = rowMeans(.[, 6:64]))
+mortgages_co_raw$dq_rate <- sprintf(mortgages_co_raw$dq_rate, fmt = '%#.2f')
 
 # Save total rate, mean 2014-2018 delinquency rate
-mortgages_co <- mortgages_co_raw %>% select(GEOID = FIPSCode, State, Name, delinqR) 
+mortgages_co <- mortgages_co_raw %>% select(GEOID = FIPSCode, state = State, co_name = Name, dq_rate) 
 
 # Save datasets
 write.csv(mortgages_st, "data_final/EC04_S.csv")
 write.csv(mortgages_co, "data_final/EC04_C.csv")
+
+#### FIN ----

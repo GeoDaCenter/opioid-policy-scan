@@ -38,7 +38,7 @@ Foreclosure and delinquency data were wrangled and cleaned, and appropriate vari
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique identifier for census tracts (11 digits), counties (5 digits), and states (3 digits)  |
 | Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent, 2007-2008 (Tract) |
-| Delinquency rate | delinqR | Rate of mortgages 90+ days delinquent (County, State) |
+| Delinquency rate | dq_rate | Estimated percent of of mortgages 90+ days delinquent, 2014-2018 (County, State) |
 
 ### Data Limitations:
 While the NSP2 foreclosure data is from 2007-2008, the data is correlated with 2018 health and economic outcomes. 
