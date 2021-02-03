@@ -31,7 +31,11 @@ rucaCounty$GEOID <- sprintf("%05s", as.character(rucaCounty$GEOID))
 # Create rurality variable categorizing Urban, Suburban, Rural by greatest population percentage
 rucaCounty$rurality <- ifelse(rucaCounty$rcaUrbP > rucaCounty$rcaSubrbP & rucaCounty$rcaUrbP > rucaCounty$rcaRuralP, "Urban",
                               ifelse(rucaCounty$rcaSubrbP > rucaCounty$rcaUrbP & rucaCounty$rcaSubrbP > rucaCounty$rcaRuralP, "Suburban",
-                                     ifelse(rucaCounty$rcaRuralP > rucaCounty$rcaUrbP || rucaCounty$rcaSubrbP, "Rural")))
+                                     ifelse(rucaCounty$rcaRuralP > rucaCounty$rcaUrbP & rucaCounty$rcaSubrbP, "Rural", 
+                                            ifelse(rucaCounty$rcaUrbP == rucaCounty$rcaSubrbP & rucaCounty$rcaRuralP > rucaCounty$rcaSubrbP, "Rural", 
+                                                   ifelse(rucaCounty$rcaUrbP == rucaCounty$rcaSubrbP & rucaCounty$rcaRuralP > rucaCounty$rcaSubrbP, "Rural",
+                                                          ifelse(rucaCounty$rcaSubrbP == rucaCounty$rcaRuralP & rucaCounty$rcaSubrbP > rucaCounty$rcaUrbP, "Suburban",
+                                                          "Suburban"))))))
 
 rucaCounty$rurality <- factor(rucaCounty$rurality, levels = c('Urban', 'Suburban', 'Rural'))
 
@@ -52,7 +56,9 @@ str(rucaCounty.sf)
 ruca_map_C <- 
   tm_shape(rucaCounty.sf) +
   tm_fill(col = "rurality",
-          title = "Type") +
+          title = "Type", 
+          showNA = FALSE) +
   tm_layout(frame = FALSE, main.title = "Rural, Suburban, Urban Stratification by County")
+ruca_map_C
 
 #### FIN ----
