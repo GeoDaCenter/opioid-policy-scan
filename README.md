@@ -39,7 +39,7 @@ We plan to source following data variables.
 | Access to Hospitals | Euclidean distance to nearest hospital | U.S. Census, CovidCareMap |  Access03/[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
 | Access to Mental Health Providers |  Euclidean distance to nearest mental health provider | U.S. Census, SAMSHA|  Access04/[Access: MH Providers, Min. Distance](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
 | Access to Pharmacies | Euclidean distance to nearest pharmacy | U.S. Census, Infogroup Inc. Business and Consumer Data 2019 | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
-| Drug-related death rate | Drug-related death rate, 2009-2018 | CDC Wonder | Health01/[Health: Drug Deaths](Policy_Scan/data_final/metadata/Healeth_DrugDeaths.md) | County | In progress |
+| Drug-related death rate | Drug-related death rate, 2009-2018 | CDC Wonder | Health01/[Health: Drug Deaths](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | County | In progress |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
 | Hepatitis C infection rate |  |  |  |  |  |
