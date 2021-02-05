@@ -31,22 +31,22 @@ We plan to source following data variables.
 
 <br>
 
-### Health Factors
+### Health Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA and Vivitrol website | Access01/ [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
+| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01/ [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
 | Access to FQHC facilities | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02/[Access: FQHC, Min. Distance](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
 | Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03/[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
-| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA|  Access04/[Access: MH Providers, Min. Distance](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
-| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup Inc. Business and Consumer Data 2019 | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
-| Drug-related death rate | Death rate from drug-related causes | CDC Wonder, 2009-2018 | Health01/[Health: Drug-Related Deaths](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
+| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04/[Access: MH Providers, Min. Distance](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
+| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05/[Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
+| Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01/[Health: Drug-Related Deaths](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
 | Hepatitis C infection rate |  |  |  |  |  |
 
 <br>
 
-### Demographic Factors
+### Demographic Variables
 | Variable Construct | Variable Proxy | Source(s) | Tables / Metadata | Spatial Scale | Status<br>(internal use)|
 |:-------------------|:---------------|:----------|:------------------|:--------------|:------------------------|
 | Black, White percentage | Population with Race identified as Black or African American alone (blackP),<br>Population with Race identified as White alone (whiteP) | 2014 - 2018 ACS | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
@@ -57,7 +57,7 @@ We plan to source following data variables.
 
 <br>
 
-### Economic Factors
+### Economic Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | 'High Risk of Injury' jobs | Population employed in Agriculture, forestry, fishing and hunting, Mining, quarrying, and oil and gas extraction, Construction, Manufacturing, and Utilities industries (hghRskP) | 2014 - 2018 ACS |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
@@ -71,7 +71,7 @@ We plan to source following data variables.
 
 <br>
 
-### Physical Factors
+### Physical Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census(cenRuralP) | USDA & ACS  | HS02/ [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
@@ -81,7 +81,7 @@ We plan to source following data variables.
 | Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Alcohol Outlet Density | Alcohol outlets per sq mile (*alcDens*) and per capita (*alcPerCap*) | Infogroup 2018  | HS03/ [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
+| Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03/ [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
 | Hypersegregated Cities |  |  |  |  |  |
 | Southern Black Belt |  |  |  |  |  |
 | Native American Reservations |  |  |  |  |  |
@@ -117,4 +117,4 @@ We plan to source following data variables.
 
 ## Team
 
-Marynia Kolak (Lead), Qinyun Lin (Postdoc), Moksha Menghaney (Analyst), Angela Li (Analyst).
+Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Analyst/Former), Angela Li (Former Analyst/Former).
