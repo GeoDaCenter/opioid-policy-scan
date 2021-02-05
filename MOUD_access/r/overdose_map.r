@@ -1,62 +1,56 @@
+#### About ----
+# This code wrangles U.S. CDC WONDER data on underlying cause of death from drug-induced causes from 2009-2018.  
+# Dataset: Underlying Cause of Death, 1999-2019
+
+
 #### Set up ---- 
 
 library(tmap)
 library(sf)
+library(sp)
 library(tidyverse)
 
-#### CDC WONDER 2018 data----
+#### CDC cause of death data // County ----
 
-# Load and clean data
-drug_deaths <- read.csv("data_raw/Drug-induced causes 2018.csv")
+# Load drug-related death data
+drug_related <- read.csv("data_raw/Drug-related causes 2009-2018.csv")
 
-drug_deaths <- drug_deaths[,2:8]
-
-drug_deaths <- drug_deaths %>% 
+# Filter out AK, HI
+drug_related <- drug_related %>%
   filter(!is.na(State.Code)) %>%
   filter(!State == "Alaska") %>%
   filter(!State == "Hawaii")
-  
-drug_deaths$County.Code <- sprintf("%05s", as.character(drug_deaths$County.Code))
-drug_deaths$Deaths <- as.numeric(drug_deaths$Deaths)
-drug_deaths$Population <- as.numeric(drug_deaths$Population)
+
+# Clean
+drug_related$Deaths <- as.numeric(drug_related$Deaths)
+drug_related$Population <- as.numeric(drug_related$Population)
+drug_related$County.Code <- sprintf("%05s", as.character(drug_related$County.Code))
+drug_related$State.Code <- sprintf("%02s", as.character(drug_related$State.Code))
+
+# Create crude rate, normalized per 100K Pop
+drug_related$Crude.Rate <- round((drug_related$Deaths / drug_related$Population) * 100000, 1)
 
 # Merge with county geometry
-drug_deaths.sf <- merge(county_clean, drug_deaths, by.x="GEOID", by.y = "County.Code", all.x = TRUE)
+drug_related.sf <- merge(county_clean, drug_related, by.x="GEOID", by.y = "County.Code", all.x = TRUE) %>%
+  st_set_crs(4326) %>%
+  st_transform("+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs")
+
+# Code NAs as 0, for mapping
+drug_related.sf <- drug_related.sf %>% replace(is.na(.), 0)
+
 
 # Map 
-death_map <- 
-tm_shape(drug_deaths.sf) +
-  tm_fill("Deaths",
-          title = "Deaths (CDC)",
-          style = "quantile")
-
-
-#### County Health Rankings 2018 data ----
-
-# Load and clean data
-OD <- read.csv("data_raw/2018 County Health Rankings Data - v2.xls")
-
-# Select variable - Drug overdose deaths = Number of drug poisoning deaths per 100,000 population
-OD <- OD %>% select(FIPS, State, County, DrOverdMrtRt)
-
-OD$FIPS <- sprintf("%05s", as.character(OD$FIPS))
-
-# Merge with geometry
-OD.sf <- merge(county_clean, OD, by.x="GEOID", by.y="FIPS")
-str(OD.sf)
-
-# Map
-overdose_map <- 
-  tm_shape(OD.sf) +
-  tm_fill("DrOverdMrtRt", 
-          title = "Overdose rate (CHR)",
-          style = "quantile")
-
-
-
-#### Compare CDC & CHR maps ----
-
-tmap_arrange(death_map, overdose_map)
+drug_related_map <- 
+  tm_shape(drug_related.sf) +
+  tm_fill("Crude.Rate",
+          title = "Drug-Related Death Rate \nper 100K Population",
+          style = "fixed",
+          breaks = c(-Inf, 5, 10, 15, 20, 25, 30, Inf),
+          textNA = "Low Deaths") +
+  tm_shape(states) +
+  tm_borders(alpha = 0.7, lwd = 0.5)
+  
+drug_related_map
 
 
 #### FIN ----
