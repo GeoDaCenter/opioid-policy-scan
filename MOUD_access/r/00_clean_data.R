@@ -1,0 +1,54 @@
+library(readr)
+library(tidyverse)
+
+accesstoNalVivitrol <- read_csv("raw_data/accesstoNalVivitrol.csv")
+minDis <- read_csv("raw_data/Access01_Z.csv", col_types = cols(originGEOID = col_double()))
+rurality <- read_csv("raw_data/HS02_RUCA_Z.csv", col_types = cols(RUCA1 = col_skip(), RUCA2 = col_skip()))
+rurality$GEOID <- as.numeric(rurality$ZIP_CODE)
+minDis <- left_join(minDis, rurality, by = c("originGEOID" = "GEOID"))
+ ## notice that there are zip code areas that are missing 
+data <- left_join(minDis, accesstoNalVivitrol, by = c("originGEOID" = "ZCTA"))
+ ## notice that the travel time has 0 and 999? 
+
+bup_data_us <- read_csv("raw_data/bup_data_us.csv") 
+meth_data_us <- read_csv("raw_data/meth_data_us.csv")
+
+data <- left_join(data, bup_data_us, by = c("ZIP_CODE" = "GEOID"))
+data <- left_join(data, meth_data_us, by = c("ZIP_CODE" = "GEOID"))
+
+summary(data$time_to_nearest_buprenorphine)
+data$time_to_nearest_buprenorphine <- 
+  ifelse(data$time_to_nearest_buprenorphine == 9999, NA, data$time_to_nearest_buprenorphine)
+
+summary(data$time_to_nearest_methadone)
+data$time_to_nearest_methadone <- 
+  ifelse(data$time_to_nearest_methadone == 9999, NA, data$time_to_nearest_methadone)
+
+summary(data$`time_to_nearest_naltrexone/vivitrol`)
+data$`time_to_nearest_naltrexone/vivitrol` <- 
+  ifelse(data$`time_to_nearest_naltrexone/vivitrol` == 999, NA, data$`time_to_nearest_naltrexone/vivitrol`)
+
+SVI2018_US <- read_csv("raw_data/SVI2018_US.csv") 
+SVI <- SVI2018_US %>% 
+  select(FIPS, RPL_THEME1, RPL_THEME2, RPL_THEME3, RPL_THEME4, RPL_THEMES)
+
+ZIP_TRACT_122020 <- read_excel("raw_data/ZIP_TRACT_122020.xlsx", 
+                               col_types = c("text", "text", "numeric", "numeric", "numeric", "numeric"))
+
+ZIP_TRACT <- ZIP_TRACT_122020 %>% 
+  group_by(ZIP) %>% 
+  filter(RES_RATIO == max(RES_RATIO)) %>% 
+  select(ZIP, TRACT)
+
+data <- left_join(data, ZIP_TRACT, by = c("ZIP_CODE" = "ZIP"))
+data <- left_join(data, SVI, by = c("TRACT" = "FIPS"))
+
+data$RPL_THEME1[data$RPL_THEME1 == -999] <- NA
+data$RPL_THEME2[data$RPL_THEME2 == -999] <- NA
+data$RPL_THEME3[data$RPL_THEME3 == -999] <- NA
+data$RPL_THEME4[data$RPL_THEME4 == -999] <- NA
+data$RPL_THEMES[data$RPL_THEMES == -999] <- NA
+
+data_final <- data
+
+write_csv(data, "data_final/allaccess_SVI_rurality.csv")
