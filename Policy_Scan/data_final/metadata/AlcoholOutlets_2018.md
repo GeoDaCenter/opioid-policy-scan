@@ -1,4 +1,5 @@
-**Meta Data Name**: Alcohol Outlet Density, part of the Physical Factors dataset  
+**Meta Data Name**: Alcohol Outlet Density  
+**Environment**: Physical Factors   
 **Last Modified**: January 12, 2021   
 **Author**: Susan Paykin    
 
@@ -38,6 +39,7 @@ From U.S. Census/TIGER files, key variables include:
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
+| GEOID | GEOID | Unique identifier with 2 digits for states, 5 digits for counties, 11 digits for census tracts, 5 digits for ZCTAs (more [here](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html)) |
 | Alcohol outlet density per land area | alcDens | Number of alcohol outlets per square mile |
 | Alcohol outlet density per capita | alcPerCap | Number of alcohol outlets per capita |
 | Total alcohol outlets | alcTotal | Total number of alcohol outlets in geography |
