@@ -48,7 +48,7 @@ Data was wrangled, cleaned and filtered for only contiguous U.S. states & Washin
 
 ### Data Limitations: 
 
-FSub-national data representing fewer than ten persons (0-9) are suppressed for year 1989 and later years. Rates may be considered "unreliable" when the death count is less than 20. For more information, see [CDC](https://wonder.cdc.gov/wonder/help/ucd.html#). 
+County-level and other subnational data representing fewer than ten persons (0-9) are suppressed for year 1989 and later years, including our years of interest 2009-2018. Furthermore, rates may be considered "unreliable" when the death count is less than 20. For more information, see [CDC](https://wonder.cdc.gov/wonder/help/ucd.html#). 
 
 ### Comments/Notes:
 
