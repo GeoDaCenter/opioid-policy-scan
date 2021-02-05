@@ -6,6 +6,7 @@
 ### Data Location: 
 Health01 - Policy Scan Environment Report at XX spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * Health01_C
+* Health01_S
 
 ### Data Source(s) Description:  
 
@@ -15,7 +16,7 @@ The mortality data are based on information from all death certificates filed in
 
 ### Description of Data Source Tables: 
 
-Data was aggregated state and county and included Population and Death totals by county, all demographics, times, and places for 2009-2018. The ICD-10 codes included as drug-related deaths were as follows:  
+Data was aggregated to state and county-levels, including total population and total deaths, for all demographics, times, and places for the period 2009-2018. The ICD-10 codes included as drug-related deaths were as follows:  
 
 **Drug-induced diseases**
 D52.1, D59.0, D59.2, D61.1, D64.2, E06.4, E23.1, E24.2, E27.3, G24.0, G25.1, G25.4, G25.6, G72.0, J70, K03.2, K73, K85.3, L10.5, M10.2, M81.4, M87.1
@@ -34,7 +35,7 @@ X60-X64
 
 ### Description of Data Processing: 
 
-Data was wrangled, cleaned and filtered for only contiguous U.S. states & Washington, D.C. The crude death rate per 100,000 population was calculated by dividing total deaths by population weighted by 100,000. 
+Data was wrangled, cleaned and filtered for only contiguous U.S. states & Washington, D.C. The crude death rate per 100,000 population was calculated by dividing total deaths by population, weighted by 100,000 (death / pop * 100,000). 
 
 ### Key Variable and Definitions:
 
@@ -44,7 +45,7 @@ Data was wrangled, cleaned and filtered for only contiguous U.S. states & Washin
 | State FIPS code | state.code | Unique 2-digit identifier for U.S. states |
 | Deaths | deaths | Total deaths from drug-related causes, 2009-2018 |
 | Population | pop | Total population |
-| Raw mortality rate | rawDeathRate | Raw mortality rate normalized per 100K population (death / pop * 100,000) |
+| Raw mortality rate | rawDeathRate | Raw mortality rate normalized per 100K population |
 
 ### Data Limitations: 
 
