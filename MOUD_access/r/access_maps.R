@@ -23,25 +23,6 @@ zips_clean <- zips %>% filter(!grepl("^999", ZCTA5CE10), !grepl("^998", ZCTA5CE1
                             !grepl("^969", ZCTA5CE10), !grepl("^968", ZCTA5CE10), !grepl("^967", ZCTA5CE10)) #HI
 
 
-                            
-          
-#### Minimum distance data ----
-
-# Merge min dist with zip geom
-mindist.sf <- merge(zips_clean, mindist, by.x = "GEOID10", by.y = "GEOID")
-# Filter variables
-mindist.sf <- mindist.sf %>% select(GEOID = GEOID10, minDisBup, minDisMet, minDisNalV, geometry)
-str(mindist.sf)
-
-# Code NAs as 9999s, for mapping
-mindist.sf <- mindist.sf %>% replace(is.na(.), 9999)
-mindist.sf$minDisBup <- round(mindist.sf$minDisBup, 2)
-mindist.sf$minDisMet <- round(mindist.sf$minDisMet, 2)
-mindist.sf$minDisNalV <- round(mindist.sf$minDisNalV, 2)
-
-
-
-
 #### Buprenorphine maps ----
 
 # Merge buprenorphine data with zip geom

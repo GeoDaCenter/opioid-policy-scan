@@ -18,7 +18,6 @@ Count_BM$GEOID <- sprintf("%05d", Count_BM$GEOID)
 
 mydir_time <- "access_time"
 myfiles = list.files(path = mydir_time, pattern ="*.csv", full.names = TRUE)
-Time_BM <- ldply(myfiles, read_csv)
 
 Time_BM$GEOID <- sprintf("%05d", Time_BM$GEOID)
 
