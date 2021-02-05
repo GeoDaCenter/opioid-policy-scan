@@ -34,11 +34,11 @@ We plan to source following data variables.
 ### Health Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUD, Min. Distance](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
-| Access to FQHC facilities | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02 /[Access: FQHC, Min. Distance](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
-| Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 /[Access: Hospitals, Min. Distance](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
-| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 /[Access: MH Providers, Min. Distance](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
-| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies, Min. Distance](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
+| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
+| Access to FQHC facilities | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02 / [Access: FQHCs](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
+| Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
+| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 / [Access: Mental Health Providers](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
+| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Deaths](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
@@ -74,14 +74,14 @@ We plan to source following data variables.
 ### Physical Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census(cenRuralP) | USDA & ACS  | HS02/ [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
-| Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Vacancy Rate | Percent vacant units (vacantP) | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Long Term Occupancy | Population that moved into current housing 20 years or before | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census (cenRuralP) | USDA & ACS  | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
+| Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Vacancy Rate | Percent vacant units (vacantP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Long Term Occupancy | Population that moved into current housing 20 years or before | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03/ [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
+| Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
 | Hypersegregated Cities |  |  |  |  |  |
 | Southern Black Belt |  |  |  |  |  |
 | Native American Reservations |  |  |  |  |  |
@@ -96,7 +96,7 @@ We plan to source following data variables.
 | Statistical Hotspot/Coldspot |  |  |  |  |  |
 | Spatiotemporal Profiles |  |  |  |  |  |
 |  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |  |
-| 'Essential worker' jobs| Population employed in Community and social service occupations, Healthcare practitioners and technical occupations, Healthcare support occupations, Protective service occupations, Food preparation and serving related occupations, Building and grounds cleaning and maintenance occupations, Farming, fishing, and forestry occupations, Construction and extraction occupations, Installation, maintenance, and repair occupations,Transportation occupations, Material moving occupations (essnWrkP) | 2014 - 2018 ACS | EC02/ [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
+| 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
 ## Data Wrangling
