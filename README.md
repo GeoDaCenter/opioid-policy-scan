@@ -117,4 +117,4 @@ We plan to source following data variables.
 
 ## Team
 
-Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Analyst/Former), Angela Li (Former Analyst/Former).
+Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Analyst-Former), Angela Li (Former Analyst-Former).
