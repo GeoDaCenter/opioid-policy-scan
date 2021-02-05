@@ -9,13 +9,13 @@ library(tmap)
 library(sp)
 library(tidyverse)
 
-#### CDC cause of death data ----
+#### CDC data / County ----
 
 # Load drug-related death data
 drug_related <- read.csv("Policy_Scan/data_raw/Drug-related causes 2009-2018.csv")
 
 # Filter out AK, HI
-drug_related <- drug_related %>%
+drug_related <- drug_related[,1:7] %>%
   filter(!is.na(State.Code)) %>%
   filter(!State == "Alaska") %>%
   filter(!State == "Hawaii")
@@ -35,3 +35,31 @@ drug_related_final <- drug_related %>%
 
 # Save final dataset
 write.csv(drug_related_final, "Policy_Scan/data_final/Health01_C.csv")
+
+
+#### CDC data // State ----
+
+# Load drug-related death data
+drug_related_st <- read.csv("Policy_Scan/data_raw/Drug-related causes state 2009-2018.csv")
+
+# Filter out AK, HI
+drug_related_st <- drug_related_st %>%
+  filter(!State == "Alaska") %>%
+  filter(!State == "Hawaii")
+
+# Clean
+drug_related_st$Deaths <- as.numeric(drug_related_st$Deaths)
+drug_related_st$Population <- as.numeric(drug_related_st$Population)
+drug_related_st$State.Code <- sprintf("%02s", as.character(drug_related_st$State.Code))
+
+# Create crude rate, normalized per 100K Pop
+drug_related_st$Crude.Rate <- round((drug_related_st$Deaths / drug_related_st$Population) * 100000, 1)
+
+# Select variables
+drug_related_st <- drug_related_st %>%
+  select(GEOID = State.Code, state = State, deaths = Deaths, pop = Population, rawDeathRt = Crude.Rate)
+
+# Save final dataset
+write.csv(drug_related_st, "Policy_Scan/data_final/Health01_S.csv")
+
+#### FIN ----
