@@ -41,7 +41,7 @@ Data was wrangled, cleaned and filtered for only contiguous U.S. states & Washin
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | GEOID | Unique 5-digit identifier for U.S. counties. First two digits correspond with state FIPS code. |
+| GEOID | GEOID | Unique 5-digit identifier for counties, 2-digit indentifier for states |
 | State FIPS code | state.code | Unique 2-digit identifier for U.S. states |
 | Deaths | deaths | Total deaths from drug-related causes, 2009-2018 |
 | Population | pop | Total population |
