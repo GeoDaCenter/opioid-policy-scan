@@ -6,7 +6,7 @@
 #### Set up ---- 
 
 library(tmap)
-library(sp)
+library(sf)
 library(tidyverse)
 
 #### CDC data / County ----
