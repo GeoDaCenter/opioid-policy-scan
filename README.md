@@ -39,10 +39,11 @@ We plan to source following data variables.
 | Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
 | Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 / [Access: Mental Health Providers](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
 | Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
-| Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Deaths](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
+| Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
+| Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
 | Primary Care Providers |  |  |  |  |  |
 | Speciality Care Providers |  |  |  |  |  |
-| Hepatitis C infection rate |  |  |  |  |  |
+
 
 <br>
 
