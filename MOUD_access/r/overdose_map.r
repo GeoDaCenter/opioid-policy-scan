@@ -43,14 +43,18 @@ drug_related.sf <- drug_related.sf %>% replace(is.na(.), 0)
 drug_related_map <- 
   tm_shape(drug_related.sf) +
   tm_fill("Crude.Rate",
-          title = "Drug-Related Death Rate \nper 100K Population",
+          title = "Death Rate",
           style = "fixed",
           breaks = c(-Inf, 5, 10, 15, 20, 25, 30, Inf),
           textNA = "Low Deaths") +
   tm_shape(states) +
-  tm_borders(alpha = 0.7, lwd = 0.5)
+  tm_borders(alpha = 0.7, lwd = 0.5) +
+  tm_layout(frame = FALSE, 
+            main.title = "Drug-Related Death Rate per 100K Population, 2014-2018")
   
 drug_related_map
+
+#tmap_save(drug_related_map, "output/drugdeaths_map.png")
 
 
 #### FIN ----
