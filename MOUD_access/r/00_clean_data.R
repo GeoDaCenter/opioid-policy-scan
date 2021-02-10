@@ -51,10 +51,9 @@ data$RPL_THEME3[data$RPL_THEME3 == -999] <- NA
 data$RPL_THEME4[data$RPL_THEME4 == -999] <- NA
 data$RPL_THEMES[data$RPL_THEMES == -999] <- NA
 
-minDistDialy <- read_csv("intmed_output/Access_Dialysis_Z.csv",
-                         col_types = cols(originGEOID = col_character()))
+minDistDialy <- read_csv("intmed_output/Access_Dialysis_Z.csv")
 
-data <- left_join(data, minDistDialy, by = c("ZIP_CODE" = "originGEOID"))
+data <- left_join(data, minDistDialy, by = "originGEOID")
 
 write_csv(data, "data_final/allaccess_SVI_rurality.csv")
 
