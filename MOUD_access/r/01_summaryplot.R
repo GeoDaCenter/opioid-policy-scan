@@ -1,25 +1,31 @@
 library(psych)
+library(ggplot2)
 
-minDisData <- data_final %>% 
+minDisData <- data %>% 
   select(starts_with("min"), "rurality") %>%  
-  gather(medication, minDis, minDisBup:minDisNalV) %>% 
+  gather(medication, minDis, minDisBup:minDialysis) %>% 
   filter(!is.na(rurality))
 
 minDisData$medication <- ifelse(minDisData$medication == "minDisNalV", "Naltrexone/Vivitrol", minDisData$medication)
 minDisData$medication <- ifelse(minDisData$medication == "minDisMet", "Methadone", minDisData$medication)
 minDisData$medication <- ifelse(minDisData$medication == "minDisBup", "Buprenorphine", minDisData$medication)
+minDisData$medication <- ifelse(minDisData$medication == "minDialysis", "Dialysis", minDisData$medication)
+
+theme_set(theme_bw(base_size=12))
 
 ggplot(minDisData, aes(x = medication, y = minDis)) + 
   geom_bar(aes(medication, minDis), 
            position = "dodge", stat = "summary", fun = "median") + 
+  facet_wrap(rurality ~ ., nrow = 3)+
   coord_flip()+
-  facet_grid(rurality ~ .)+
   labs(title="Median Distance to Nearest Resource")+
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         plot.title = element_text(hjust = 0.5),
         text = element_text(size=20))
 
+dev.new(width = 10, height = 7.5, unit="in", noRStudioGD = T);last_plot()
+ggsave("output/medianDistHist.png",width = dev.size()[1],height = dev.size()[2]);dev.off()
 
 ###########count
 countData <- data_final %>% 

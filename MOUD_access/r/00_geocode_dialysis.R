@@ -60,3 +60,13 @@ geoCoded <- geoCoded %>%
   select(`Address Line 1`, `Address Line 2`, City, State, Zip, fullAdd, 
          latitude, longitude)
 head(geoCoded)
+
+## used RCC to geocoded the others
+
+us_dialysis <- read_csv("intmed_output/us_dialysis.csv")
+us_dialysis_sf <- st_as_sf(us_dialysis, 
+                        coords = c("Longitude", "Latitude"),
+                        crs = 4326)
+head(data.frame(us_dialysis_sf))
+
+st_write(us_dialysis_sf, "intmed_output/us_dialysis.gpkg")

@@ -1,13 +1,16 @@
+library(readr) 
 library(corrplot)
 library(tidyverse)
 library(Hmisc)
 
-data <- data_final %>% 
+allaccess_SVI_rurality <- read_csv("data_final/allaccess_SVI_rurality.csv", col_types = cols(minDialysis = col_number()))
+
+data <- allaccess_SVI_rurality %>% 
   select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"),
          starts_with("RPL"))
 
 
-names(data) <- c("miDBup", "miDMet", "miDNalV", 
+names(data) <- c("miDBup", "miDMet", "miDNalV", "miDDia",
                      "cntNalV", "cntBup", "cntMet", 
                      "timNalV", "timBup", "timMet",
                      "scoreNal", "scoreBup", "scoreMet",
@@ -16,31 +19,28 @@ names(data) <- c("miDBup", "miDMet", "miDNalV",
 data_cor <- cor(data, use = "pairwise.complete.obs")
 corrplot.mixed(data_cor)
 
-data_corp <- rcorr(as.matrix(data)) 
-corrplot.mixed(data_corp$r,  
+da0ta_corp <- rcorr(as.matrix(data)) 
+corrplot(data_corp$r, method = "square",  
                p.mat = data_corp$P, sig.level = 0.001, insig = "blank")
-
 
 
 ### stratify by rurality to see if any difference
 
 ##### urban
-data_urban <- data_final %>% 
+data_urban <- allaccess_SVI_rurality %>% 
   filter(rurality == "Urban") %>% 
-  select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"),
-         starts_with("RPL"))
+  select(starts_with("count"), ends_with("_score"),
+         starts_with("RPL"), -c("RPL_THEMES", "minDialysis"))
 
-names(data_urban) <- c("miDBup", "miDMet", "miDNalV", 
-                     "cntNalV", "cntBup", "cntMet", 
-                     "timNalV", "timBup", "timMet",
+names(data_urban) <- c("cntNalV", "cntBup", "cntMet", 
                      "scoreNal", "scoreBup", "scoreMet",
-                     "SVI1", "SVI2", "SVI3", "SVI4", "SVI")
+                     "SVI1", "SVI2", "SVI3", "SVI4")
 
 data_cor_urban <- cor(data_urban, use = "pairwise.complete.obs")
 corrplot.mixed(data_cor_urban)
 
 data_cor_urbanp <- rcorr(as.matrix(data_urban)) 
-corrplot.mixed(data_cor_urbanp$r,  
+corrplot(data_cor_urbanp$r, method = "square", 
          p.mat = data_cor_urbanp$P, sig.level = 0.001, insig = "blank")
 
 corrplot(data_cor_urbanp$r, type = "upper", 
@@ -48,23 +48,20 @@ corrplot(data_cor_urbanp$r, type = "upper",
 
 
 ##### suburban
-data_suburban <- data_final %>% 
+data_suburban <- allaccess_SVI_rurality %>% 
   filter(rurality == "Suburban") %>% 
-  select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"),
-         starts_with("RPL"))
+  select(starts_with("count"), ends_with("_score"),
+         starts_with("RPL"), -c("RPL_THEMES", "minDialysis"))
 
-
-names(data_suburban) <- c("miDBup", "miDMet", "miDNalV", 
-                           "cntNalV", "cntBup", "cntMet", 
-                           "timNalV", "timBup", "timMet",
-                           "scoreNal", "scoreBup", "scoreMet",
-                           "SVI1", "SVI2", "SVI3", "SVI4", "SVI")
+names(data_suburban) <- c("cntNalV", "cntBup", "cntMet", 
+                          "scoreNal", "scoreBup", "scoreMet",
+                          "SVI1", "SVI2", "SVI3", "SVI4")
 
 data_cor_suburban <- cor(data_suburban, use = "pairwise.complete.obs")
 corrplot.mixed(data_cor_suburban)
 
 data_cor_suburbanp <- rcorr(as.matrix(data_suburban)) 
-corrplot.mixed(data_cor_suburbanp$r,  
+corrplot(data_cor_suburbanp$r,  method = "square", 
                p.mat = data_cor_suburbanp$P, sig.level = 0.001, insig = "blank")
 
 corrplot(data_cor_suburbanp$r, type = "upper", 
@@ -72,23 +69,21 @@ corrplot(data_cor_suburbanp$r, type = "upper",
 
 
 ##### rural
-data_rural <- data_final %>% 
+data_rural <- allaccess_SVI_rurality %>% 
   filter(rurality == "Rural") %>% 
-  select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"),
-         starts_with("RPL"))
+  select(starts_with("count"), ends_with("_score"),
+         starts_with("RPL"), -c("RPL_THEMES", "minDialysis"))
 
 
-names(data_rural) <- c("miDBup", "miDMet", "miDNalV", 
-                              "cntNalV", "cntBup", "cntMet", 
-                              "timNalV", "timBup", "timMet",
-                              "scoreNal", "scoreBup", "scoreMet",
-                              "SVI1", "SVI2", "SVI3", "SVI4", "SVI")
+names(data_rural) <- c("cntNalV", "cntBup", "cntMet", 
+                        "scoreNal", "scoreBup", "scoreMet",
+                        "SVI1", "SVI2", "SVI3", "SVI4")
 
 data_cor_rural <- cor(data_rural, use = "pairwise.complete.obs")
 corrplot.mixed(data_cor_rural)
 
 data_cor_ruralp <- rcorr(as.matrix(data_rural)) 
-corrplot.mixed(data_cor_ruralp$r,  
+corrplot(data_cor_ruralp$r,  method = "square",
                p.mat = data_cor_ruralp$P, sig.level = 0.001, insig = "blank")
 
 corrplot(data_cor_ruralp$r, type = "upper", 
