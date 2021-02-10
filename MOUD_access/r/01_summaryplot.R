@@ -22,7 +22,9 @@ ggplot(minDisData, aes(x = medication, y = minDis)) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         plot.title = element_text(hjust = 0.5),
-        text = element_text(size=20))
+        text = element_text(size=20),
+        strip.background = element_blank(), 
+        panel.border = element_blank())
 
 dev.new(width = 10, height = 7.5, unit="in", noRStudioGD = T);last_plot()
 ggsave("output/medianDistHist.png",width = dev.size()[1],height = dev.size()[2]);dev.off()
