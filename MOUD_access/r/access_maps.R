@@ -120,6 +120,8 @@ meth_time_map <-
 
 #tmap_save(meth_time_map, "output/meth_time_map.png")
 
+meth.sf$count_in_range_methadone <- as.numeric(meth.sf$count_in_range_methadone)
+
 # Count in 30 min. range
 meth_count_map <- 
   tm_shape(meth.sf) +
@@ -128,12 +130,13 @@ meth_count_map <-
           alpha = 0.7,
           title = "Count",
           style = "fixed",
-          breaks = c(0, 1, 5, 20, 50, 75, 100)) +
+          breaks = c(0, 3, 10, 20, 50, 100)) +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Methadone: Count within 30 Minutes")
 
 #tmap_save(meth_count_map, "output/meth_count_map.png")
+tmap_save(meth_count_map, "output/meth_count_map3.png")
 
 # Access score map
 meth_score_map <- 
@@ -238,6 +241,22 @@ nalviv_mindist_map <-
 
 #tmap_save(nalviv_mindist_map, "output/nalviv_mindist_map.png")
 
+#### Dialysis maps ----
 
+# Min Distance
+
+dialysis_mindist_map <- 
+  tm_shape(mindist.sf) +
+  tm_fill(col = "minDisDial",
+          palette = "-RdYlBu",
+          alpha = 0.7,
+          title = "Miles",
+          style = "fixed",
+          breaks = c(0, 10, 20, 30, 50, Inf)) +
+  tm_shape(states) +
+  tm_borders(alpha = 0.7, lwd = 0.5) +
+  tm_layout(frame = FALSE, main.title = "Dialysis: Minimum Distance")
+
+tmap_save(dialysis_mindist_map, "output/dialysis_mindist_map.png")
 
 #### FIN ----
