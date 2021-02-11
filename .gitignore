@@ -11,8 +11,6 @@
 MOUD_scraping/metrics/tl_2010_us_zcta510/*
 MOUD_scraping/metrics/tl_2019_us_zcta510/*
 MOUD_scraping/**/*.pdf
-MOUD_scraping/**/*.csv
-!MOUD_scraping/**/*_c.csv
 Policy_Scan/code/.Rapp.history
 Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.cpg
 Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.dbf
