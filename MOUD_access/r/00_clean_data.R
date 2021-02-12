@@ -3,6 +3,8 @@ library(tidyverse)
 
 accesstoNalVivitrol <- read_csv("data_raw/NaltrexoneVivtrolCalcs_fromMoksha/accesstoNalVivitrol.csv")
 minDis <- read_csv("data_raw/Access01_Z.csv", col_types = cols(originGEOID = col_double()))
+minDis <- minDis %>% 
+  select(-"minDisBup")
 rurality <- read_csv("data_raw/HS02_RUCA_Z.csv", col_types = cols(RUCA1 = col_skip(), RUCA2 = col_skip()))
 rurality$GEOID <- as.numeric(rurality$ZIP_CODE)
 minDis <- left_join(minDis, rurality, by = c("originGEOID" = "GEOID"))
@@ -10,17 +12,18 @@ minDis <- left_join(minDis, rurality, by = c("originGEOID" = "GEOID"))
 data <- left_join(minDis, accesstoNalVivitrol, by = c("originGEOID" = "ZCTA"))
  ## notice that the travel time has 0 and 999? 
 
-bup_data_us <- read_csv("data_final/bup_access.csv", col_types = cols(ZCTA = col_character()))
-bup_data_us$X1 <- NULL
+## bup_data_us <- read_csv("data_final/bup_access.csv", col_types = cols(ZCTA = col_character()))
+## bup_data_us$X1 <- NULL
+
 meth_data_us <- read_csv("data_final/meth_access.csv", col_types = cols(ZCTA = col_character()))
 meth_data_us$X1 <- NULL
 
-data <- left_join(data, bup_data_us, by = c("ZIP_CODE" = "ZCTA"))
+## data <- left_join(data, bup_data_us, by = c("ZIP_CODE" = "ZCTA"))
 data <- left_join(data, meth_data_us, by = c("ZIP_CODE" = "ZCTA"))
 
-summary(data$time_to_nearest_buprenorphine)
-data$time_to_nearest_buprenorphine <- 
-  ifelse(data$time_to_nearest_buprenorphine == 999, NA, data$time_to_nearest_buprenorphine)
+## summary(data$time_to_nearest_buprenorphine)
+## data$time_to_nearest_buprenorphine <- 
+##  ifelse(data$time_to_nearest_buprenorphine == 999, NA, data$time_to_nearest_buprenorphine)
 
 summary(data$time_to_nearest_methadone)
 data$time_to_nearest_methadone <- 
@@ -34,6 +37,7 @@ SVI2018_US <- read_csv("data_raw/SVI2018_US.csv")
 SVI <- SVI2018_US %>% 
   select(FIPS, RPL_THEME1, RPL_THEME2, RPL_THEME3, RPL_THEME4, RPL_THEMES)
 
+library(readxl)
 ZIP_TRACT_122020 <- read_excel("data_raw/ZIP_TRACT_122020.xlsx", 
                                col_types = c("text", "text", "numeric", "numeric", "numeric", "numeric"))
 
@@ -55,5 +59,8 @@ minDistDialy <- read_csv("intmed_output/Access_Dialysis_Z.csv")
 
 data <- left_join(data, minDistDialy, by = "originGEOID")
 
-write_csv(data, "data_final/allaccess_SVI_rurality.csv")
+Access_Bup_Z_minDist <- read_csv("intmed_output/Access_Bup_Z_minDist.csv")
+data <- left_join(data, Access_Bup_Z_minDist, by = "originGEOID")
+
+write_csv(data, "data_final/allaccess_SVI_rurality_missingBupAdAccess.csv")
 
