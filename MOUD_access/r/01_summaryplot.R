@@ -3,7 +3,7 @@ library(ggplot2)
 
 minDisData <- data %>% 
   select(starts_with("min"), "rurality") %>%  
-  gather(medication, minDis, minDisBup:minDialysis) %>% 
+  gather(medication, minDis, minDisMet:minDisBup) %>% 
   filter(!is.na(rurality))
 
 minDisData$medication <- ifelse(minDisData$medication == "minDisNalV", "Naltrexone/Vivitrol", minDisData$medication)

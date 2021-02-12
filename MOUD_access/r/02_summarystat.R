@@ -9,9 +9,19 @@ allaccess_SVI_rurality <- read_csv("data_final/allaccess_SVI_rurality.csv", col_
 data <- allaccess_SVI_rurality %>% 
   select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"), rurality)
 
+## 
+data <- data %>% 
+  select(starts_with("min"), starts_with("count"), starts_with("time"), ends_with("_score"), rurality)
+
+col_order <- c("minDisNalV", "minDisMet", "minDialysis", "minDisBup",                           
+               "count_in_range_naltrexone/vivitrol", "count_in_range_methadone",
+               "time_to_nearest_naltrexone/vivitrol", "time_to_nearest_methadone",
+               "naltrexone/vivitrol_score", "methadone_score", "rurality")
+data_order <- data[, col_order]
+
 library(gtsummary)
 table <- tbl_summary(
-  data,
+  data_order,
   by = rurality, 
   missing = "no",
   digits = all_continuous() ~ 2,
