@@ -34,7 +34,7 @@ nrow(bup_geo[is.na(bup_geo$latitude),]) # 302 still NA
 
 # Save those remaining NAs as separate dataset, export to CSV for outside geocoding
 bup_geo_NA <- bup_geo %>% filter(is.na(latitude))
-write.csv(bup_geo_NA, "intmed_output/bup_NA.csv")
+#write.csv(bup_geo_NA, "intmed_output/bup_NA.csv")
 
 # Add former missing, now geocoded lat/long columns to bup_raw
 bup_raw$latitude[is.na(bup_raw$latitude)] <- bup_geo$latitude[bup_geo$zipCode %in% bup_raw$zipCode]
@@ -72,9 +72,6 @@ tmap_mode("plot")
 
 tm_shape(bup.clean.sf) +
   tm_dots() 
-
-# Export as gpkg
-st_write(bup.clean.sf, "intmed_output/bup_providers.gpkg")
 
 # Export as csv
 write.csv(bup.clean.sf, "intmed_output/bup_providers.csv")

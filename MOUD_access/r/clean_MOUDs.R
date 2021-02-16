@@ -16,10 +16,24 @@ bup.clean.sf2 <- bup.clean.sf %>% select(name1, name2, street1 = addressLine1, s
 str(bup.clean.sf2)
 str(mouds_new)
 
-mouds_final <- rbind(mouds_new, bup.clean.sf2)
+mouds_final <- rbind(mouds_new, bup.clean.sf2) %>%
+  filter(!state %in% c("AE", "AK", "HI", "GU", "VI", "MP", "PR"))
 
-unique(mouds_final$category)
+mouds_final <- st_transform(mouds_final, 4326)
+st_crs(mouds_final)
+
+str(mouds_final)
 
 # Export as geopackage, csv
 st_write(mouds_final, "data_final/us-wide-moudsCleaned.gpkg")
 write.csv(mouds_final, "data_final/us-wide-moudsCleaned.csv")
+
+
+# plot
+clip_to_continental_us(mouds_final)
+
+tmap_mode("view")
+tm_shape(mouds_final) +
+  tm_dots()
+
+
