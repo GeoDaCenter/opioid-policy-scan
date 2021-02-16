@@ -1,5 +1,6 @@
 #### About ----
-# This code prepares the count data for all 3 MOUDs, counts the number of MOUD types within the 30 min range (0, 1, 2, or 3), 
+
+# This code prepares the count data for all 3 MOUDs, counts the number of MOUD providers within the 30 min range (0, 1, 2, or 3), 
 # and maps ZCTAs by this variable.
 
 #### Set up ----
@@ -8,6 +9,9 @@ library(tmap)
 library(sf)
 library(tidyverse)
 library(RColorBrewer)
+
+# Set CRS - EPSG 102003
+crs <- "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
 
 #### Prepare data ----
 
@@ -45,7 +49,7 @@ count_data$type_count <- factor(count_data$type_count, levels = c('0', '1', '2',
 # Merge with zip geometry, set projection
 count.sf <- merge(zips_clean, count_data, by.x = "GEOID10", by.y = "GEOID") %>%
   st_set_crs(4326) %>%
-  st_transform("+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs")
+  st_transform(crs)
 
 str(count.sf)
 
@@ -54,14 +58,14 @@ write.csv(count_data, "data_final/type_count_data.csv")
 
 #### Map ----
 
-conditional_map <- 
+count_map <- 
   tm_shape(count.sf) +
   tm_fill(col = "type_count",
-          palette = "-Oranges",
-          title = "Number of Types") +
+          palette = "Oranges",
+          title = "Types") +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE,
-            main.title = "Access to Number of MOUDs within 30 Minutes")
+            main.title = "Count of MOUD Types within 30 Minutes")
 
-tmap_save(conditional_map, "output/MOUDtype_map.png")
+tmap_save(count_map, "output/type_count_map.png")

@@ -5,33 +5,33 @@ library(sf)
 library(tidyverse)
 library(RColorBrewer)
 
+# Set CRS - EPSG 102003
+crs <- "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
+
 ### ZCTA Rural/Urban/Suburban stratification ----
 
 # Load and clean
-rucaZ <- read.csv("raw_data/HS02_RUCA_Z.csv")
+rucaZ <- read.csv("data_raw/HS02_RUCA_Z.csv")
 rucaZ$ZIP_CODE <- sprintf("%05s", as.character(rucaZ$ZIP_CODE))
 
 # Merge with geometry
-rucaZCTA.sf <- merge(zips_clean, rucaZ, by.x = "ZCTA5CE10", by.y = "ZIP_CODE") %>%
+rucaZ.sf <- merge(zips_clean, rucaZ, by.x = "ZCTA5CE10", by.y = "ZIP_CODE") %>%
   st_set_crs(4326) %>%
-  st_transform("+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs")
-str(rucaZCTA.sf)
+  st_transform(crs)
+
+str(rucaZ.sf)
 
 ruca.cols <- c("#ece2f0", "#a6bddb", "#1c9099")
-ruca.cols2 <- c("#f7fcb9", "#addd8e", "#31a354")
 
 # Map
 ruca_map_Z <-
-  tm_shape(rucaZCTA.sf) +
+  tm_shape(rucaZ.sf) +
   tm_fill(col = "rurality",
-          title = "Type",
-          palette = ruca.cols2) +
+          title = "Classification",
+          palette = ruca.cols) +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Rural, Suburban, Urban Stratification by ZCTA")
-
-tmap_mode("plot")
-ruca_map_Z
 
 tmap_save(ruca_map_Z, "output/ruca_Z.png")
 
