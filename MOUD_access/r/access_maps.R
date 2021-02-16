@@ -108,7 +108,7 @@ bup_mindist_map <-
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Buprenorphine: Minimum Distance")
 
-tmap_save(bup_mindist_map, "output/bup_mindist_map.png")
+tmap_save(bup_mindist_map, "output/bup_access/bup_mindist_map.png")
 
 
 #### Methadone maps ----
@@ -159,9 +159,9 @@ meth_count_map <-
           title = "Count") +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
-  tm_layout(frame = FALSE, main.title = "Methadone: Count within 30 Minutes")
+  tm_layout(frame = FALSE, main.title = "Methadone: Count")
 
-tmap_save(meth_count_map, "output/meth_count_map.png")
+tmap_save(meth_count_map, "output/meth_access/meth_count_map.png")
 
 # Access score map
 meth_score_map <- 
@@ -175,7 +175,7 @@ meth_score_map <-
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Methadone: Score")
 
-tmap_save(meth_score_map, "output/meth_score_map.png")
+tmap_save(meth_score_map, "output/meth_access/meth_score_map.png")
 
 # Minimum distance map 
 meth_mindist_map <- 
@@ -189,7 +189,7 @@ meth_mindist_map <-
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Methadone: Minimum Distance")
 
-tmap_save(meth_mindist_map, "output/meth_mindist_map.png")
+tmap_save(meth_mindist_map, "output/meth_access/meth_mindist_map.png")
 
 
 
@@ -244,7 +244,7 @@ nalviv_score_map <-
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Naltrexone: Score")
 
-#tmap_save(nalviv_score_map, "output/nalViv_access/nalviv_score_map.png")
+tmap_save(nalviv_score_map, "output/nalViv_access/nalviv_score_map.png")
 
 # Min Distance map
 nalviv_mindist_map <- 
