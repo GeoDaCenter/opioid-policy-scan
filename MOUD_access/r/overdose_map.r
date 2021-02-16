@@ -43,10 +43,7 @@ drug_related.sf <- drug_related.sf %>% replace(is.na(.), 0)
 drug_related_map <- 
   tm_shape(drug_related.sf) +
   tm_fill("Crude.Rate",
-          title = "Death Rate",
-          style = "fixed",
-          breaks = c(-Inf, 5, 10, 15, 20, 25, 30, Inf),
-          textNA = "Low Deaths") +
+          title = "Oranges") +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, 

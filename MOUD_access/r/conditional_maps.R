@@ -57,8 +57,8 @@ write.csv(count_data, "data_final/type_count_data.csv")
 conditional_map <- 
   tm_shape(count.sf) +
   tm_fill(col = "type_count",
-          palette = "RdYlBu",
-          title = "Number of MOUDs") +
+          palette = "-Oranges",
+          title = "Number of Types") +
   tm_shape(states) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE,
