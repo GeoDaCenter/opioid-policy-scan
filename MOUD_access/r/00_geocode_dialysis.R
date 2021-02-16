@@ -66,7 +66,8 @@ head(geoCoded)
 us_dialysis <- read_csv("intmed_output/us_dialysis.csv")
 us_dialysis_sf <- st_as_sf(us_dialysis, 
                         coords = c("Longitude", "Latitude"),
-                        crs = 4326)
+                        crs = 4326,
+                        remove = FALSE)
 head(data.frame(us_dialysis_sf))
 
 st_write(us_dialysis_sf, "intmed_output/us_dialysis.gpkg")
