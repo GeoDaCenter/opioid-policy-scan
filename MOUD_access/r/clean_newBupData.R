@@ -76,14 +76,4 @@ tm_shape(bup.clean.sf) +
 # Export as csv
 write.csv(bup.clean.sf, "intmed_output/bup_providers.csv")
 
-# Use in colab to calculate access metrics
-
-clip_to_continental_us <- function(sf) {
-  
-  continental_bbox <- st_as_sfc("POLYGON((-126.3 50.6, -66.0 50.6, -66.0 20.1, -126.3 20.1, -126.3 50.6))") %>% 
-    st_as_sf(crs = 4326) %>% 
-    st_transform(st_crs(sf))
-  
-  continental_sf <- st_intersection(continental_bbox, sf)
-  
-}
+#### FIN ----
