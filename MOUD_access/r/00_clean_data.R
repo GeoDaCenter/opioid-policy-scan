@@ -21,7 +21,7 @@ meth_data_us$X1 <- NULL
 ## data <- left_join(data, bup_data_us, by = c("ZIP_CODE" = "ZCTA"))
 data <- left_join(data, meth_data_us, by = c("ZIP_CODE" = "ZCTA"))
 
-## summary(data$time_to_nearest_buprenorphine)
+###summary(data$time_to_nearest_buprenorphine)
 ## data$time_to_nearest_buprenorphine <- 
 ##  ifelse(data$time_to_nearest_buprenorphine == 999, NA, data$time_to_nearest_buprenorphine)
 
@@ -63,4 +63,25 @@ Access_Bup_Z_minDist <- read_csv("intmed_output/Access_Bup_Z_minDist.csv")
 data <- left_join(data, Access_Bup_Z_minDist, by = "originGEOID")
 
 write_csv(data, "data_final/allaccess_SVI_rurality_missingBupAdAccess.csv")
+
+## 0216 - add in updated bup advanced access metrics and dialysis advanced metrics
+data <- read_csv("data_final/allaccess_SVI_rurality_missingBupAdAccess.csv")
+
+bup_adaccess <- bup_adaccess <- read_csv("data_final/bup_access.csv", col_types = cols(X1 = col_skip()))
+data <- left_join(data, bup_adaccess, by = c("originGEOID" = "ZCTA"))
+
+summary(data$time_to_nearest_buprenorphine)
+data$time_to_nearest_buprenorphine <- 
+  ifelse(data$time_to_nearest_buprenorphine == 999, NA, data$time_to_nearest_buprenorphine)
+
+access_Dialysis <- read_csv("data_raw/accesstoDialysis.csv")
+data <- left_join(data, access_Dialysis, by = c("originGEOID" = "ZCTA")) 
+
+summary(data$time_to_nearest_dialysis)
+data$time_to_nearest_dialysis <- 
+  ifelse(data$time_to_nearest_dialysis == 999, NA, data$time_to_nearest_dialysis)
+
+write_csv(data, "data_final/allaccess_SVI_rurality.csv")
+
+
 

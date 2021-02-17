@@ -65,6 +65,38 @@ ggplot(scoreData, aes(x = medication, y = count)) +
         text = element_text(size=20))
 
 
+###### travel time
+allaccess_SVI_rurality <- read_csv("data_final/allaccess_SVI_rurality.csv", col_types = cols(minDialysis = col_number()))
+
+timeData <- data %>% 
+  select(starts_with("time"), "rurality") %>%  
+  gather(medication, time_to_nearest, "time_to_nearest_naltrexone/vivitrol":"time_to_nearest_dialysis") %>% 
+  filter(!is.na(rurality))
+
+timeData$medication <- ifelse(timeData$medication == "time_to_nearest_methadone", "Methadone", timeData$medication)
+timeData$medication <- ifelse(timeData$medication == "time_to_nearest_naltrexone/vivitrol", "Naltrexone/Vivitrol", timeData$medication)
+timeData$medication <- ifelse(timeData$medication == "time_to_nearest_buprenorphine", "Buprenorphine", timeData$medication)
+timeData$medication <- ifelse(timeData$medication == "time_to_nearest_dialysis", "Dialysis", timeData$medication)
+
+theme_set(theme_bw(base_size=12))
+
+ggplot(timeData, aes(x = medication, y = time_to_nearest)) + 
+  geom_bar(aes(medication, time_to_nearest), 
+           position = "dodge", stat = "summary", fun = "median") + 
+  facet_wrap(rurality ~ ., nrow = 3)+
+  coord_flip()+
+  labs(title="Median Travel Time to Nearest Resource")+
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        plot.title = element_text(hjust = 0.5),
+        text = element_text(size=20),
+        strip.background = element_blank(), 
+        panel.border = element_blank())
+
+dev.new(width = 10, height = 7.5, unit="in", noRStudioGD = T);last_plot()
+ggsave("output/medianTime.png",width = dev.size()[1],height = dev.size()[2]);dev.off()
+
+
 
 
 ggplot(minDisData, aes(x = medication, y = minDis)) + 
