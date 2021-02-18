@@ -7,8 +7,7 @@ library(tmap)
 library(tigris)
 library(RColorBrewer)
 
-# Function - clip to continental US 
-
+# Create function - clip to continental US 
 clip_to_continental_us <- function(sf) {
   
   continental_bbox <- st_as_sfc("POLYGON((-126.3 50.6, -66.0 50.6, -66.0 20.1, -126.3 20.1, -126.3 50.6))") %>% 
@@ -24,14 +23,27 @@ crs <- "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +
 
 ##### Load geometry data ----
 
-# States data
+# State geometry
 states <- us_states()
 states <- states %>% filter(!stusps %in% c("AK", "HI", "PR"))
 
-# ZCTA data
+# ZCTA geometry
 zips <- st_read("data_raw/tl_2018_zcta/zctas2018.shp")
 zips_clean <- zips %>% clip_to_continental_us()
 
+# Regional geometry
+regions <- st_read("data_raw/tl_2018_interiorRegions/DOI_12_Unified_Regions_20180801.shp")
+regions <- regions %>% st_transform(crs) %>% clip_to_continental_us()
+
+# Census Regions geometry
+regions_large <- st_read("data_raw/tl_2018_region/cb_2018_us_region_5m.shp")
+regions_large <- regions_large %>% st_transform(crs) %>% clip_to_continental_us()
+
+# Census Divisions geometry
+divisions <- st_read("data_raw/tl_2018_divisions/cb_2018_us_division_500k.shp")
+divisions <- divisions %>% st_transform(crs) %>% clip_to_continental_us()
+
+  
 #### Buprenorphine maps ----
 
 # Merge buprenorphine data with zip geom, set projection to EPSG 102003
@@ -70,7 +82,24 @@ tm_shape(bup.sf) +
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Buprenorphine: Driving Time")
 
-tmap_save(bup_time_map, "output/bup_time_map.png")
+tmap_save(bup_time_map, "output/bup_access/bup_time_map.png")
+
+# Driving time map - REGIONS
+bup_time_regions.map <- 
+  tm_shape(bup.sf) +
+  tm_fill(col = "time_to_nearest_buprenorphine", 
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(regions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Buprenorphine: Driving Time")
+
+tmap_save(bup_time_regions.map, "output/bup_access/bup_time_regions.map.png")
+
 
 # Count in 30 min. map
 bup_count_map <- 
@@ -150,6 +179,52 @@ meth_time_map <-
   tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
 
 tmap_save(meth_time_map, "output/meth_time_map.png")
+
+# Driving time map - DOI REGIONS
+meth_time_regions.map <- 
+  tm_shape(meth.sf) +
+  tm_fill(col = "time_to_nearest_methadone", 
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(regions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
+
+tmap_save(meth_time_regions.map, "output/meth_access/meth_time_regions.png")
+
+meth_time_regionsL.map <- 
+  tm_shape(meth.sf) +
+  tm_fill(col = "time_to_nearest_methadone", 
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(regions_large) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
+
+tmap_save(meth_time_regionsL.map, "output/meth_access/meth_time_regionsL.png")
+
+meth_time_divisions.map <- 
+  tm_shape(meth.sf) +
+  tm_fill(col = "time_to_nearest_methadone", 
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(divisions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
+
+tmap_save(meth_time_divisions.map, "output/meth_access/meth_time_divisions.png")
 
 # Count in 30 min. map
 meth_count_map <- 
