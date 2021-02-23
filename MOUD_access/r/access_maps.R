@@ -1,3 +1,7 @@
+#### About ----
+# This script generates maps for access metrics across across MOUD and dialysis resources at the U.S. zip code level (ZCTA). 
+# The access metrics include: 1) Driving time to nearest resource, 2) Count of resources within 30 Mins, 3) Access score, and 4) Minimum Euclidean distance to nearest resource.
+
 #### Set up ----
 
 library(sf)
@@ -21,7 +25,7 @@ clip_to_continental_us <- function(sf) {
 # Set CRS - EPSG 102003
 crs <- "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
 
-##### Load geometry data ----
+##### Geometry data ----
 
 # State geometry
 states <- us_states()
@@ -31,44 +35,12 @@ states <- states %>% filter(!stusps %in% c("AK", "HI", "PR"))
 zips <- st_read("data_raw/tl_2018_zcta/zctas2018.shp")
 zips_clean <- zips %>% clip_to_continental_us()
 
-# Regional geometry
-regions <- st_read("data_raw/tl_2018_interiorRegions/DOI_12_Unified_Regions_20180801.shp")
-regions <- regions %>% st_transform(crs) %>% clip_to_continental_us()
-
-# Census Regions geometry
-regions_large <- st_read("data_raw/tl_2018_region/cb_2018_us_region_5m.shp")
-regions_large <- regions_large %>% st_transform(crs) %>% clip_to_continental_us()
-
-# Census Divisions geometry
+# Census Regional Divisions geometry
 divisions <- st_read("data_raw/tl_2018_divisions/cb_2018_us_division_500k.shp")
 divisions <- divisions %>% st_transform(crs) %>% clip_to_continental_us()
 
   
 #### Buprenorphine maps ----
-
-# Merge buprenorphine data with zip geom, set projection to EPSG 102003
-bup.sf <- merge(zips_clean, bup_data, by.x = "ZCTA5CE10", by.y = "ZCTA") %>%
-  st_set_crs(4326) %>%
-  st_transform(crs)
-
-# Filter variables
-bup.sf <- bup.sf %>% select(GEOID = GEOID10, count_in_range_buprenorphine, time_to_nearest_buprenorphine, buprenorphine_score, geometry)
-str(bup.sf)
-
-# Round score variable
-bup.sf$buprenorphine_score <- round(bup.sf$buprenorphine_score, 2)
-
-# Create categorical variable for count mapping
-bup.sf$count_cat <- ""
-bup.sf$count_cat <- ifelse(bup.sf$count_in_range_buprenorphine == 0, "0", 
-                            ifelse(bup.sf$count_in_range_buprenorphine == 1, "1", 
-                                   ifelse(bup.sf$count_in_range_buprenorphine >= 2 & bup.sf$count_in_range_buprenorphine <= 5, "2 to 5", 
-                                          ifelse(bup.sf$count_in_range_buprenorphine >= 6 & bup.sf$count_in_range_buprenorphine <= 10, "6 to 10", "More than 10"))))
-
-bup.sf <- bup.sf %>%
-  mutate(cat = cut(count_in_range_buprenorphine, breaks = c(0, 1, 2, 5, 10, Inf),
-                   labels = c(0, 1, 2, 3, 4))) %>%
-  arrange(cat)
 
 # Driving time map
 bup_time_map <- 
@@ -84,7 +56,7 @@ tm_shape(bup.sf) +
 
 tmap_save(bup_time_map, "output/bup_access/bup_time_map.png")
 
-# Driving time map - REGIONS
+# Driving time map - DIVISIONS
 bup_time_regions.map <- 
   tm_shape(bup.sf) +
   tm_fill(col = "time_to_nearest_buprenorphine", 
@@ -94,12 +66,11 @@ bup_time_regions.map <-
           breaks = c(0, 15, 30, 60, 90, Inf)) +
   tm_shape(states) +
   tm_borders(lwd = 0.5) +
-  tm_shape(regions) +
+  tm_shape(divisions) +
   tm_borders(col = "#362827", lwd = 2.5) +
   tm_layout(frame = FALSE, main.title = "Buprenorphine: Driving Time")
 
-tmap_save(bup_time_regions.map, "output/bup_access/bup_time_regions.map.png")
-
+tmap_save(bup_time_regions.map, "output/bup_access/bup_time_map.divs.png")
 
 # Count in 30 min. map
 bup_count_map <- 
@@ -142,30 +113,6 @@ tmap_save(bup_mindist_map, "output/bup_access/bup_mindist_map.png")
 
 #### Methadone maps ----
 
-# Merge meth data with zip geom
-meth.sf <- merge(zips_clean, meth_data, by.x = "GEOID10", by.y = "ZCTA") %>%
-  st_set_crs(4326) %>%
-  st_transform(crs)
-
-# Filter variables
-meth.sf <- meth.sf %>% select(GEOID = GEOID10, count_in_range_methadone, time_to_nearest_methadone, methadone_score, geometry)
-str(meth.sf)
-
-# Round score variable
-meth.sf$methadone_score <- round(meth.sf$methadone_score, 2)
-
-# Create categorical variable for count mapping
-meth.sf$count_cat <- ""
-meth.sf$count_cat <- ifelse(meth.sf$count_in_range_methadone == 0, "0", 
-                            ifelse(meth.sf$count_in_range_methadone == 1, "1", 
-                                   ifelse(meth.sf$count_in_range_methadone >= 2 & meth.sf$count_in_range_methadone <= 5, "2 to 5", 
-                                          ifelse(meth.sf$count_in_range_methadone >= 6 & meth.sf$count_in_range_methadone <= 10, "6 to 10", "More than 10"))))
-
-meth.sf <- meth.sf %>%
-  mutate(cat = cut(count_in_range_methadone, breaks = c(0, 1, 2, 5, 10, Inf),
-                   labels = c(0, 1, 2, 3, 4))) %>%
-  arrange(cat)
-
 # Driving time map
 meth_time_map <- 
   tm_shape(meth.sf) +
@@ -180,37 +127,7 @@ meth_time_map <-
 
 tmap_save(meth_time_map, "output/meth_time_map.png")
 
-# Driving time map - DOI REGIONS
-meth_time_regions.map <- 
-  tm_shape(meth.sf) +
-  tm_fill(col = "time_to_nearest_methadone", 
-          palette = "-RdYlBu",
-          title = "Minutes",
-          style = "fixed",
-          breaks = c(0, 15, 30, 60, 90, Inf)) +
-  tm_shape(states) +
-  tm_borders(lwd = 0.5) +
-  tm_shape(regions) +
-  tm_borders(col = "#362827", lwd = 2.5) +
-  tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
-
-tmap_save(meth_time_regions.map, "output/meth_access/meth_time_regions.png")
-
-meth_time_regionsL.map <- 
-  tm_shape(meth.sf) +
-  tm_fill(col = "time_to_nearest_methadone", 
-          palette = "-RdYlBu",
-          title = "Minutes",
-          style = "fixed",
-          breaks = c(0, 15, 30, 60, 90, Inf)) +
-  tm_shape(states) +
-  tm_borders(lwd = 0.5) +
-  tm_shape(regions_large) +
-  tm_borders(col = "#362827", lwd = 2.5) +
-  tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
-
-tmap_save(meth_time_regionsL.map, "output/meth_access/meth_time_regionsL.png")
-
+# Driving time map - DIVISIONS
 meth_time_divisions.map <- 
   tm_shape(meth.sf) +
   tm_fill(col = "time_to_nearest_methadone", 
@@ -224,7 +141,7 @@ meth_time_divisions.map <-
   tm_borders(col = "#362827", lwd = 2.5) +
   tm_layout(frame = FALSE, main.title = "Methadone: Driving Time")
 
-tmap_save(meth_time_divisions.map, "output/meth_access/meth_time_divisions.png")
+tmap_save(meth_time_divisions.map, "output/meth_access/meth_time_map.divs.png")
 
 # Count in 30 min. map
 meth_count_map <- 
@@ -237,6 +154,19 @@ meth_count_map <-
   tm_layout(frame = FALSE, main.title = "Methadone: Count")
 
 tmap_save(meth_count_map, "output/meth_access/meth_count_map.png")
+
+meth_count_map.divs <- 
+  tm_shape(meth.sf) +
+  tm_fill(col = "count_cat",
+          palette = "RdYlBu",
+          title = "Count") +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(divisions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Methadone: Count")
+
+tmap_save(meth_count_map.divs, "output/meth_access/meth_count_map.divs.png")
 
 # Access score map
 meth_score_map <- 
@@ -270,15 +200,6 @@ tmap_save(meth_mindist_map, "output/meth_access/meth_mindist_map.png")
 
 #### Nalaxotrone / Vivitrol maps ----
 
-# Merge nalviv data with zip geom
-nalviv.sf <- merge(zips_clean, NalViv_data, by.x = "GEOID10", by.y = "ZCTA") %>%
-  st_set_crs(4326) %>%
-  st_transform(crs)
-
-# Filter variables
-nalviv.sf <- nalviv.sf %>% select(GEOID = GEOID10, count_in_range_naltrexone.vivitrol, time_to_nearest_naltrexone.vivitrol, naltrexone.vivitrol_score, geometry)
-str(nalviv.sf)
-
 # Driving time map
 nalviv_time_map <- 
   tm_shape(nalviv.sf) +
@@ -292,6 +213,22 @@ nalviv_time_map <-
   tm_layout(frame = FALSE, main.title = "Naltrexone: Driving Time")
 
 tmap_save(nalviv_time_map, "output/nalViv_access/nalviv_time_map.png")
+
+# Driving time map - DIVISIONS
+nalviv_time_map.divs <- 
+  tm_shape(nalviv.sf) +
+  tm_fill(col = "time_to_nearest_naltrexone.vivitrol", 
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(divisions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Naltrexone: Driving Time")
+
+tmap_save(nalviv_time_map.divs, "output/nalViv_access/nalviv_time_map.divs.png")
 
 # Count in 30 min. map
 nalviv_count_map <- 
@@ -337,15 +274,6 @@ tmap_save(nalviv_mindist_map, "output/nalViv_access/nalviv_mindist_map.png")
 
 #### Dialysis maps ----
 
-# Merge dialysis data with geom
-dialysis.sf <- merge(zips_clean, dial_data, by.x = "GEOID10", by.y = "ZCTA") %>%
-  st_set_crs(4326) %>%
-  st_transform(crs)
-
-# Filter variables
-dialysis.sf <- dialysis.sf %>% select(GEOID = GEOID10, time_to_nearest_dialysis, count_in_range_dialysis, geometry)
-str(dialysis.sf)
-
 # Driving time map
 dialysis_time_map <-
   tm_shape(dialysis.sf) +
@@ -358,7 +286,23 @@ dialysis_time_map <-
   tm_borders(alpha = 0.7, lwd = 0.5) +
   tm_layout(frame = FALSE, main.title = "Dialysis: Driving Time")
 
-tmap_save(dialysis_time_map, "output/dialysis_time_map.png")
+tmap_save(dialysis_time_map, "output/dialysis_access/dialysis_time_map.png")
+
+# Driving time map - DIVISIONS
+dialysis_time_map.divs <-
+  tm_shape(dialysis.sf) +
+  tm_fill(col = "time_to_nearest_dialysis",
+          palette = "-RdYlBu",
+          title = "Minutes",
+          style = "fixed",
+          breaks = c(0, 15, 30, 60, 90, Inf)) +
+  tm_shape(states) +
+  tm_borders(lwd = 0.5) +
+  tm_shape(divisions) +
+  tm_borders(col = "#362827", lwd = 2.5) +
+  tm_layout(frame = FALSE, main.title = "Dialysis: Driving Time")
+
+tmap_save(dialysis_time_map.divs, "output/dialysis_access/dialysis_time_map.divs.png")
 
 # Min Distance map
 dialysis_mindist_map <- 
@@ -374,6 +318,13 @@ dialysis_mindist_map <-
 
 tmap_save(dialysis_mindist_map, "output/dialysis_mindist_map.png")
 
+#### Reference maps -----
+
+division_map <-
+  tm_shape(divisions) +
+  tm_borders() +
+  tm_layout(frame = FALSE)
+division_map
 
 #### FIN ----
 
