@@ -79,9 +79,9 @@ The data included in this analysis will be further developed as a Policy Scan da
 | Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
-| Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation |  | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation | Massey, D. S., Tannen, J. (2015) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 | Southern Black Belt | Southern US counties that were at least 40% Black or African American in the 2000 Census |  | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
-| Native American Reservations | Percent area of total land in Native American Reservations |  | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Native American Reservations | Percent area of total land in Native American Reservations | US Vensus, TIGER (2010) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 
 <br>
 
