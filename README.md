@@ -90,9 +90,6 @@ The data included in this analysis will be further developed as a Policy Scan da
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | Historical Cumulative <br>Case Count & Rate | Data for first day of month, March 2020 - Jan 2021 |  |  | State, County |  |
 | Historical 7-day Average<br>New Case Count & Rate | Data for first day of month, March 2020 - Jan 2021 |  |  | State, County |  |
-| Statistical Hotspots and Coldspots: Cumulative |  |  |  |  |  |
-| Statistical Hotspots and Coldspots: 7-day Average |  |  |  |  |  |
-|  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |  |
 | 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
