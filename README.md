@@ -18,7 +18,7 @@ The data included in this analysis will be further developed as a Policy Scan da
 | Naloxone Access Laws |  Any Naloxone law; Naloxone law allowing distribution through a standing or protocal order effective; Naloxone law allowing pharmacists prescriptive authority | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
 | Good Samaritan Laws | Any Good Samaritan Law; Good Samaritan Law protecting arrest | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
 | PDMP | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
-| Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
+| Syringe Exchange,<br> Distribution, Possession Laws | Laws clarifying legal status for syringe services programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
 | Controlled Substance Laws |  |  |  |  |  |
 | State & Local Govt. Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
 | Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
