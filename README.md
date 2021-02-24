@@ -37,8 +37,8 @@ The data included in this analysis will be further developed as a Policy Scan da
 | Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
-| Primary Care Providers |  |  |  |  |  |
-| Speciality Care Providers |  |  |  |  |  |
+| Primary Care Providers | PCP Count and Rate  | HRSA |  |  | In progress |
+| Speciality Care Providers | SCP Count and Rate | HRSA |  |  | In progress |
 
 
 <br>
@@ -63,8 +63,6 @@ The data included in this analysis will be further developed as a Policy Scan da
 | Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) (pciE) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Educational Attainment | Population without a High School degree (noHSP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | Foreclosure Rate | Mortgage foreclosure and severe delinquency rates | HUD, CFPB | EC04 / [Foreclosure Rate](Policy_Scan/data_final/metadata/ForeclosureRate.md) | State, County, Tract | Complete |
-| Socioeconomic Disadvantage Index |  |  |  |  |  |
-| Urban Core Opportunity |  |  |  |  |  |
 
 <br>
 
@@ -88,8 +86,8 @@ The data included in this analysis will be further developed as a Policy Scan da
 ### COVID Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Historical Cumulative <br>Case Count & Rate | Data for first day of month, March 2020 - Jan 2021 |  |  | State, County |  |
-| Historical 7-day Average<br>New Case Count & Rate | Data for first day of month, March 2020 - Jan 2021 |  |  | State, County |  |
+| Historical Cumulative <br>Case Count & Rate | All data, through Jan 2021 |  |  | State, County |  |
+| Historical 7-day Average<br>New Case Count & Rate | All data, through Jan 2021 |  |  | State, County |  |
 | 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
