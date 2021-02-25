@@ -1,12 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Opioid Environment Program
+# Opioid Environment Data Warehouse
 
 This repository stores R scripts used to wrangle, clean, join, and visualize data
-for the CSDS opioid environment program. 
+for the JCOIN Opioid Environment Data Warehouse.
 
-The data included in this analysis will be further developed as a Policy Scan data and visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
+The data included in this analysis will be further developed as a data and visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
+
+Data requests and feedback can be submitted [here](https://docs.google.com/forms/d/e/1FAIpQLSd53yogyubGxepfwQymS_699DIGRpraSNaKb0PEPMl9rCo1Tg/viewform). 
 
 ## Data Overview
 
