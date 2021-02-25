@@ -3,16 +3,12 @@
 
 # Opioid Environment Program
 
-This repository stores R scripts used to clean, join, and visualize data
+This repository stores R scripts used to wrangle, clean, join, and visualize data
 for the CSDS opioid environment program. 
 
-The data wrangled in this analysis will be further developed as a data and visualization product (Policy Scan) to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
+The data included in this analysis will be further developed as a Policy Scan data and visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
 
 ## Data Overview
-
-++ to add grid of all datasets and scales included
-
-We plan to source following data variables.
 
 ### Policy Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
@@ -22,7 +18,7 @@ We plan to source following data variables.
 | Naloxone Access Laws |  Any Naloxone law; Naloxone law allowing distribution through a standing or protocal order effective; Naloxone law allowing pharmacists prescriptive authority | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
 | Good Samaritan Laws | Any Good Samaritan Law; Good Samaritan Law protecting arrest | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
 | PDMP | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
-| Syringe Exchange,<br> Distribution, Possession Laws |  |  |  |  |  |
+| Syringe Exchange,<br> Distribution, Possession Laws | Laws clarifying legal status for syringe services programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
 | Controlled Substance Laws |  |  |  |  |  |
 | State & Local Govt. Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
 | Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
@@ -41,8 +37,8 @@ We plan to source following data variables.
 | Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
-| Primary Care Providers |  |  |  |  |  |
-| Speciality Care Providers |  |  |  |  |  |
+| Primary Care Providers | PCP Count and Rate  | HRSA |  |  | In progress |
+| Speciality Care Providers | SCP Count and Rate | HRSA |  |  | In progress |
 
 
 <br>
@@ -67,8 +63,6 @@ We plan to source following data variables.
 | Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) (pciE) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Educational Attainment | Population without a High School degree (noHSP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | Foreclosure Rate | Mortgage foreclosure and severe delinquency rates | HUD, CFPB | EC04 / [Foreclosure Rate](Policy_Scan/data_final/metadata/ForeclosureRate.md) | State, County, Tract | Complete |
-| Socioeconomic Disadvantage Index |  |  |  |  |  |
-| Urban Core Opportunity |  |  |  |  |  |
 
 <br>
 
@@ -83,39 +77,20 @@ We plan to source following data variables.
 | Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
-| Hypersegregated Cities |  |  |  |  |  |
-| Southern Black Belt |  |  |  |  |  |
-| Native American Reservations |  |  |  |  |  |
+| Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation | Massey, D. S., Tannen, J. (2015) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Southern Black Belt | Southern US counties that were at least 40% Black or African American in the 2000 Census | Census (2000) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER (2010) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 
 <br>
 
 ### COVID Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Historical Confirmed<br>Case Count & Rate |  |  |  |  |  |
-| Historical 7-day Average<br>New Case Count & Rate |  |  |  |  |  |
-| Statistical Hotspot/Coldspot |  |  |  |  |  |
-| Spatiotemporal Profiles |  |  |  |  |  |
-|  Non Pharmaceutical<br>Interventions (NPI) |  |  |  |  |  |
+| Historical Cumulative <br>Case Count & Rate | All data, through Jan 2021 |  |  | State, County |  |
+| Historical 7-day Average<br>New Case Count & Rate | All data, through Jan 2021 |  |  | State, County |  |
 | 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
-
-
-## Data Wrangling
-
-++ to add chart of data wrangling and cleaning scripts for data
-
-## Access Calculations
-
-| Input                                     | Script   | Output                                    | Purpose                                                                                                                                          |
-| ----------------------------------------- | -------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| data/\*                                   | R/01\_\* | data-output/01\_\*                        | Clean original data and get each into 3-column format with `name`, `category_service`, and `geometry`                                            |
-| data-output/01\_\*                        | R/02\_\* | data-output/02\_\*                        | Combine datasets together to get combined point dataset (needed for map overlays), create point maps for each resource (for jurisdictional plan) |
-| data-output/02\_\*                        | R/03\_\* | data-output/03\_\*                        | **(unused)** Create various buffers on point dataset, count buffers per zip                                                                      |
-| data-output/01\_\*                        | R/04\_\* | data-output/min-dists-to-zip-centroid.csv | Calculate min distance from resources to zip centroids                                                                                           |
-| data-output/min-dists-to-zip-centroid.csv | R/05\_\* | data-output/sum\_zscores.gpkg/.shp        | Convert centroid distances to summative z-scores                                                                                                 |
-| data/carto….                              | R/99\_\* | data-output/carto…                        | One-off cleaning/joining scripts for manipulating CARTO datasets for collaborators                                                               |
 
 
 ## Team
 
-Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Analyst-Former), Angela Li (Former Analyst-Former).
+Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Former Analyst), Angela Li (Former Analyst).

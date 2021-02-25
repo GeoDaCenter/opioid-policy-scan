@@ -13,24 +13,32 @@ mindist$originGEOID <- sprintf("%05d", mindist$originGEOID)
 str(mindist)
 
 mindist <- mindist %>% 
-  mutate(GEOID = originGEOID) %>% 
-  select(GEOID, minDisBup, minDisMet, minDisNalV)
+  select(GEOID = originGEOID, minDisMet, minDisNalV)
 
 ##### Dialysis min dist
 
-dialysis <- read.csv("intmed_output/Access_Dialysis_Z.csv")
-dialysis$originGEOID <- sprintf("%05d", dialysis$originGEOID)
+mindist.dial <- read.csv("intmed_output/Access_Dialysis_Z.csv")
+mindist.dial$originGEOID <- sprintf("%05d", mindist.dial$originGEOID)
+mindist.dial <- mindist.dial %>% select(GEOID = originGEOID, minDisDial = minDialysis)
 
-dialysis <- dialysis %>% select(GEOID = originGEOID, minDisDial = minDialysis)
+# Merge with mindist
+mindist <- left_join(mindist, mindist.dial, by = "GEOID")
 
-mindist <- left_join(mindist, dialysis, by = "GEOID")
+#### Buprenorphone min dist
+
+mindist.bup <- read.csv("intmed_output/Access_Bup_Z_minDist.csv")
+mindist.bup$originGEOID <- sprintf("%05d", mindist.bup$originGEOID)
+mindist.bup <- mindist.bup %>% select(GEOID = originGEOID, minDisBup)
+
+# Merge with mindist
+mindist <- left_join(mindist, mindist.bup, by = "GEOID")
 
 #### Merge with geometry ----
 
 # Merge min dist with zip geom, set projection
 mindist.sf <- merge(zips_clean, mindist, by.x = "GEOID10", by.y = "GEOID") %>%
   st_set_crs(4326) %>%
-  st_transform("+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs")
+  st_transform(crs)
 
 # Filter variables
 mindist.sf <- mindist.sf %>% select(GEOID = GEOID10, minDisBup, minDisMet, minDisNalV, minDisDial, geometry)
@@ -44,5 +52,6 @@ mindist.sf$minDisNalV <- round(mindist.sf$minDisNalV, 2)
 mindist.sf$minDisDial <- round(mindist.sf$minDisDial, 2)
 
 
-
 #### FIN ----
+
+
