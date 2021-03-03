@@ -39,8 +39,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
-| Primary Care Providers | PCP Count and Rate  | HRSA |  |  | In progress |
-| Speciality Care Providers | SCP Count and Rate | HRSA |  |  | In progress |
+| Primary Care Physicians | Number of PC Physicians| Dartmouth Atlas | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
+| Speciality Care Physicians | Number of Specialist Physicians | Darthmoouth Atlas | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
 
 
 <br>
