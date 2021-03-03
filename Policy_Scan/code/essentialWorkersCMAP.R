@@ -1,5 +1,5 @@
-# Author : Moksha Menghaney
-# Date : Sep 16th, 2020
+# Author : Moksha Menghaney (Qinyun Lin revised using defintion from CMAP)
+# Date : March 2nd, 2021
 # This piece of code will generate Essential Worker variable for EC tables for Policy Scan.
 
 library(tidycensus)
@@ -21,6 +21,8 @@ library(tigris)
 # Natural Resources, Construction, and Maintenance Occupations: Installation, Maintenance, and Repair Occupations:
 # Production, Transportation, and Material Moving Occupations: Transportation Occupations:
 # Production, Transportation, and Material Moving Occupations: Material Moving Occupations:
+
+## update using CMAP definition: https://github.com/CMAP-REPOS/essentialworkers/blob/master/essential%20occupations%20script.R
 
 sProfileVar18 <- load_variables(2018,"acs5/subject", cache = TRUE) %>% 
                       filter(str_detect(name, 'S2401_C01')) %>% 
@@ -60,14 +62,14 @@ occsToSelect <- tribble(~variable, ~type,
                      "S2401_C01_012", "no",
                      "S2401_C01_013", "no",
                      "S2401_C01_014", "no",
-                     "S2401_C01_015", "yes",
-                     "S2401_C01_016", "no",
-                     "S2401_C01_017", "no",
+                     "S2401_C01_015", "no",
+                     "S2401_C01_016", "yes",
+                     "S2401_C01_017", "yes",
                      "S2401_C01_018", "no",
                      "S2401_C01_019", "yes",
-                     "S2401_C01_020", "yes",
-                     "S2401_C01_021", "no",
-                     "S2401_C01_022", "no",
+                     "S2401_C01_020", "no",
+                     "S2401_C01_021", "yes",
+                     "S2401_C01_022", "yes",
                      "S2401_C01_023", "yes",
                      "S2401_C01_024", "yes",
                      "S2401_C01_025", "no",
@@ -79,7 +81,7 @@ occsToSelect <- tribble(~variable, ~type,
                      "S2401_C01_031", "yes",
                      "S2401_C01_032", "yes",
                      "S2401_C01_033", "no",
-                     "S2401_C01_034", "no",
+                     "S2401_C01_034", "yes",
                      "S2401_C01_035", "yes",
                      "S2401_C01_036", "yes")
 
@@ -104,7 +106,7 @@ for (i in 1:length(shapetoFetch))
                 mutate(type = ifelse(variable == 'S2401_C01_001','total','essential'))
   variables <- variables %>% group_by(GEOID, type) %>% summarize(check = n(), value = sum(estimate))
   
-  try(if(dim(variables %>% filter(!check %in% c(1,11)))[1] > 0) stop("check n, missing values"))
+  try(if(dim(variables %>% filter(!check %in% c(1,14)))[1] > 0) stop("check n, missing values"))
   
   varDf <- dcast(variables, GEOID~type, value.var = 'value')
   
@@ -130,7 +132,7 @@ variables <- map_df(.x = as.numeric(states$STATEFP),
 variables <- variables %>% select(GEOID, variable, estimate) %>% mutate(type = ifelse(variable == 'S2401_C01_001','total','essential'))
 variables <- variables %>% group_by(GEOID, type) %>% summarize(check = n(), value = sum(estimate))
 
-try(if(dim(variables %>% filter(!check %in% c(1,11)))[1] > 0) stop("check n, missing values"))
+try(if(dim(variables %>% filter(!check %in% c(1,14)))[1] > 0) stop("check n, missing values"))
 
 varDf <- dcast(variables, GEOID~type, value.var = 'value')
 
