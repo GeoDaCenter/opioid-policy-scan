@@ -33,7 +33,7 @@ All variables were included from S2401.
                  - Construction and extraction occupations,<br>
                  - Installation, maintenance, and repair occupations,<br>
                  - Production, <br>
-                 - Transportation occupations) / (Total Civilian employed population 16 years and over)*
+                 - Transportation and material moving occupations) / (Total Civilian employed population 16 years and over)*
 
         
 ### Key Variable and Definitions:
