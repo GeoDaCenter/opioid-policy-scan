@@ -21,7 +21,7 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Good Samaritan Laws | Any Good Samaritan Law; Good Samaritan Law protecting arrest | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
 | PDMP | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete | 
 | Syringe Exchange,<br> Distribution, Possession Laws | Laws clarifying legal status for syringe services programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
-| Controlled Substance Laws |  |  |  |  |  |
+| Controlled Substance Laws | Law authorizing adults to use medical marijuana | PDAPS | PS08 / [MedMarijLaw](Policy_Scan/data_final/metadata/MedMarijLaw.md) | State | Complete |
 | State & Local Govt. Expenditure on health, public,<br> welfare, police, correction, etc. |  |  |  |  |  |
 | Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
 | Incarceration rates (Jail) | Jail population rate by gender and ethnicity | Vera Institute of Justice | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
