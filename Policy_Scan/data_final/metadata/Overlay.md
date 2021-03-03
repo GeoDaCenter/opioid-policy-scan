@@ -28,4 +28,4 @@ The following variables were included from the source data:
 The percentage of Native American Reservations is calculated as a percent of total land area in US Albers Equal Area projection. There might be some distortion in Alaska.
 
 ### Comments/Notes:
-NA
+We include southern US counties that were at least 40% Black or African American in the 2000 Census. But the Southern Black Belt areas have been variously defined in literature. See, for example, Webster, G. R., & Bowman, J. (2008). Quantitatively Delineating the Black Belt Geographic Region. *Southeastern Geographer*, 48(1), 3–18. https://doi.org/10.1353/sgo.0.0007. 
