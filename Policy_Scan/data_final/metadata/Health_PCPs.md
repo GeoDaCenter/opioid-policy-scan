@@ -24,8 +24,8 @@ Data was wrangled, cleaned and processed for creation of tract, county and state
 | Primary care physicians | pcp_total | Number of PCPs in area |
 | Specialty physicians | sp_total | Number of specialty physicians in area |
 | GEOID | geoid | Unique 11-digit identifier for census tracts |
-| State FIPS | state | 2-digit identifier for states |
-| County FIPS | county | 5-digit identifier for counties |
+| State FIPS | state | Unique 2-digit identifier for states |
+| County FIPS | county | Unique 5-digit identifier for counties (state + county) |
 | Census tract | tract | 6-digit identifier for census tracts |
 
 ### Data Limitations:
