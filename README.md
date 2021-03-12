@@ -25,7 +25,7 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Syringe Exchange,<br> Distribution, Possession Laws | Laws clarifying legal status for syringe services programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
 | Controlled Substance Laws | Law authorizing adults to use medical marijuana | PDAPS | PS09 / [MedMarijLaw](Policy_Scan/data_final/metadata/MedMarijLaw.md) | State | Complete |
 | SDOH Typologies | SDOH Neighborhood Typologies | Kolak et al. (2020) | PS10 / [SDOH Typology](Policy_Scan/data_final/metadata/SDOH_2014.md) | Tract | Complete |
-| State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | U.S. Census | PS 11 / [Government Expenditures](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PublicExpenditures.md) | State, Local | In progress |
+| State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | U.S. Census | PS 11 / [Government Expenditures](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PublicExpenditures.md) | State, Local | Complete |
 
 <br>
 
@@ -71,13 +71,13 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Physical Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census (cenRuralP) | USDA & ACS  | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
 | Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Vacancy Rate | Percent vacant units (vacantP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Long Term Occupancy | Population that moved into current housing 20 years or before | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census (cenRuralP) | USDA & ACS  | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
 | Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
 | Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation | Massey, D. S., Tannen, J. (2015) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 | Southern Black Belt | Southern US counties that were at least 40% Black or African American in the 2000 Census | Census (2000) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
@@ -95,4 +95,4 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 
 ## Team
 
-Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Former Analyst), Angela Li (Former Analyst).
+Marynia Kolak (Lead), Qinyun Lin (Postdoc), Susan Paykin (Analyst), Moksha Menghaney (Analyst), Angela Li (Analyst).
