@@ -1,4 +1,4 @@
-**Meta Data Name**: State & Local Public Expenditures  
+**Meta Data Name**: State & Local Government Expenditures  
 **Environment**: Policy Variables   
 **Last Modified**: March 10, 2021    
 **Author**: Susan Paykin  
@@ -9,17 +9,33 @@ PS11 - Policy Scan Environment Report. Files can be found [here](https://github.
 
 ### Data Source(s) Description:  
 
-This data was sourced from the 2018 [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm). 
+This data was sourced from the 2018 [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) and accessed via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm). 
+
+This survey is the only source of nationwide, comprehensive local government finance information. It provides statistics on revenue, expenditure, debt, and assets for the 50 states and D.C. The 2018 data was released in September 2020. 
 
 ### Description of Data Source Tables: 
 
-To be completed --
+The data source table included the following variables for state and local government expenditures.
 
-Initial variables included: 
+| Category | Survey Variable |
+|:---------|:----------------|
+| Police & fire protection | (E019) Police & Fire Protection-Dir Exp |
+| Correctional system | (E021) Total Correct-Dir Exp |
+| | (E022) Total Correct-Cur Oper |
+| | (E023) Total Correct-Cap Out |
+| | (E052) Health & Hosp-Dir Exp |
+| Public health & hospitals | (E053) Health & Hosp-Cur Oper |
+| | (E054) Health & Hosp-Cap Out |
+| Public welfare | (E090) Public Welf-Direct Exp |
+| | (E091) Public Welf-Cur Oper |
+| | (E092) Public Welf-Cash Asst |
+| | (E093) Welf-Categ-Cash Assist |
+| | (E094) Welf-Cash-Cash Assist |
+| | (E095) Public Welf-Cap Outlay |
 
 ### Description of Data Processing: 
 
-Data was downloaded, cleaned and prepared for analysis. The expenditure variables listed above were aggregated by category (corrections, police and fire, health and hospitals, and public welfare) to create summed totals for state-level spending, local-level spending (aggregated at the state level), and total spending for each state. These variables were then merged into the final dataset, including all finance information by state. 
+Data was downloaded, cleaned and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for state-level spending, local-level spending, and combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C. 
 
 ### Key Variable and Definitions:
 
@@ -32,13 +48,13 @@ Data was downloaded, cleaned and prepared for analysis. The expenditure variable
 | Public health expenditures | healthExp_X | Total expenditures on public health and hospitals |
 | Public welfare expenditures | wlfrExp_X | Total expenditures on public welfare programs |
 
-For the expenditure variables, the last characters *_S, _L,* or *_T* indicate the following levels:  
+For the expenditure variables, the last characters indicate the following levels:  
 
 | Code | Level | Description |
 |:-----|:------|:------------|
-| S | State | State finance information exclusive of local revenues or spending |
-| L | Local | State totals of finance information for all local governments within each state. This includes data for all counties, municipalities, towns, special districts, and school districts |
-| T | Total | Aggregated finance information state and local levels of government |
+| _S | State | State finance information exclusive of local revenues or spending |
+| _L | Local | State totals of finance information for all local governments within each state. This includes data for all counties, municipalities, towns, special districts, and school districts |
+| _T | Total | Aggregated finance information state and local levels of government |
 
 ### Data Limitations: 
 
