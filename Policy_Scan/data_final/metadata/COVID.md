@@ -13,6 +13,8 @@ COVID01-04 - COVID cases and rates at state and county levels. Files can be foun
 * COVID03_C: 7 day average confirmed cases, county level
 * COVID04_S: 7 day average confirmed cases, per 100K ppl, state level
 * COVID04_C: 7 day average confirmed cases, per 100K ppl, county level
+* Note that each .csv includes a full-time series for one variable.
+
 
 
 ### Data Source(s) Description:  
@@ -29,7 +31,6 @@ We download the daily new cases reported from New York Times. Then we calcuated 
 | cumulative confirmed cases, per 100K ppl | CmAd200121 | cumulative confirmed cases, per 100K ppl for 2020-01-21 |
 | 7 day average confirmed cases | Wk200121 | 7 day average confirmed cases for 2020-01-21 |
 | 7 day average confirmed cases, per 100K ppl | WkAd200121 | 7 day average confirmed cases per 100K ppl for 2020-01-21 |
-Note that each .csv includes a full-time series for one variable.
 
 ### Data Limitations:
 The data may be different from what is reported from CDC. 
