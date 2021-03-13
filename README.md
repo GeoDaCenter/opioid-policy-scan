@@ -89,7 +89,7 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
 | Historical Cumulative <br>Case Count & Rate | All data, through Jan 2021 | New York Times | [COVID](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Historical 7-day Average<br>New Case Count & Rate | All data, through Jan 2021 | New York Times |  | State, County | Complete |
+| Historical 7-day Average<br>New Case Count & Rate | All data, through Jan 2021 | New York Times | [COVID](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
 | 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
