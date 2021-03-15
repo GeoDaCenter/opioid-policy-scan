@@ -13,12 +13,12 @@ minDisData$medication <- ifelse(minDisData$medication == "minDialysis", "Dialysi
 
 theme_set(theme_bw(base_size=12))
 
-ggplot(minDisData, aes(x = medication, y = minDis)) + 
+ggplot(minDisData, aes(x = order(medication, minDis), y = minDis)) + 
   geom_bar(aes(medication, minDis), 
            position = "dodge", stat = "summary", fun = "median") + 
   facet_wrap(rurality ~ ., nrow = 3)+
   coord_flip()+
-  labs(title="Median Distance to Nearest Resource")+
+  labs(title="Median Distance to Nearest Resource (miles)")+
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         plot.title = element_text(hjust = 0.5),
@@ -66,8 +66,6 @@ ggplot(scoreData, aes(x = medication, y = count)) +
 
 
 ###### travel time
-allaccess_SVI_rurality <- read_csv("data_final/allaccess_SVI_rurality.csv", col_types = cols(minDialysis = col_number()))
-
 timeData <- data %>% 
   select(starts_with("time"), "rurality") %>%  
   gather(medication, time_to_nearest, "time_to_nearest_naltrexone/vivitrol":"time_to_nearest_dialysis") %>% 
@@ -85,7 +83,7 @@ ggplot(timeData, aes(x = medication, y = time_to_nearest)) +
            position = "dodge", stat = "summary", fun = "median") + 
   facet_wrap(rurality ~ ., nrow = 3)+
   coord_flip()+
-  labs(title="Median Travel Time to Nearest Resource")+
+  labs(title="Median Travel Time to Nearest Resource (min)")+
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         plot.title = element_text(hjust = 0.5),

@@ -7,7 +7,7 @@ allaccess_SVI_rurality <- read_csv("data_final/allaccess_SVI_rurality.csv", col_
 
 data <- allaccess_SVI_rurality %>% 
   select(starts_with("count"), starts_with("time"),
-         starts_with("RPL"))
+         starts_with("SVI"))
 
 
 names(data) <- c("cntNalV", "cntMet", "cntBup", "cntDia",
@@ -28,16 +28,16 @@ corrplot(data_corp$r, method = "square",
 data_urban <- allaccess_SVI_rurality %>% 
   filter(rurality == "Urban") %>% 
   select(starts_with("count"), starts_with("time"),
-         starts_with("RPL"), -c("RPL_THEMES"))
+         starts_with("SVI"), -c("SVIS"))
 
 names(data_urban) <- c("cntNalV", "cntMet", "cntBup", "cntDia",
                        "timNalV", "timMet", "timBup", "timDia",
                        "SVI1", "SVI2", "SVI3", "SVI4")
 
-data_cor_urban <- cor(data_urban, use = "pairwise.complete.obs")
+data_cor_urban <- cor(data_urban, use = "pairwise.complete.obs", method = c("spearman"))
 corrplot.mixed(data_cor_urban)
 
-data_cor_urbanp <- rcorr(as.matrix(data_urban)) 
+data_cor_urbanp <- rcorr(as.matrix(data_urban), type="spearman") 
 corrplot(data_cor_urbanp$r, method = "square", 
          p.mat = data_cor_urbanp$P, sig.level = 0.001, insig = "blank")
 
@@ -46,16 +46,16 @@ corrplot(data_cor_urbanp$r, method = "square",
 data_suburban <- allaccess_SVI_rurality %>% 
   filter(rurality == "Suburban") %>% 
   select(starts_with("count"), starts_with("time"),
-         starts_with("RPL"), -c("RPL_THEMES"))
+         starts_with("SVI"), -c("SVIS"))
 
 names(data_suburban) <- c("cntNalV", "cntMet", "cntBup", "cntDia",
                           "timNalV", "timMet", "timBup", "timDia",
                           "SVI1", "SVI2", "SVI3", "SVI4")
 
-data_cor_suburban <- cor(data_suburban, use = "pairwise.complete.obs")
+data_cor_suburban <- cor(data_suburban, use = "pairwise.complete.obs", method = "spearman")
 corrplot.mixed(data_cor_suburban)
 
-data_cor_suburbanp <- rcorr(as.matrix(data_suburban)) 
+data_cor_suburbanp <- rcorr(as.matrix(data_suburban), type = "spearman") 
 corrplot(data_cor_suburbanp$r,  method = "square", 
          p.mat = data_cor_suburbanp$P, sig.level = 0.001, insig = "blank")
 
@@ -67,17 +67,17 @@ corrplot(data_cor_suburbanp$r, type = "upper",
 data_rural <- allaccess_SVI_rurality %>% 
   filter(rurality == "Rural") %>% 
   select(starts_with("count"), starts_with("time"),
-         starts_with("RPL"), -c("RPL_THEMES"))
+         starts_with("SVI"), -c("SVIS"))
 
 
 names(data_rural) <- c("cntNalV", "cntMet", "cntBup", "cntDia",
                        "timNalV", "timMet", "timBup", "timDia",
                        "SVI1", "SVI2", "SVI3", "SVI4")
 
-data_cor_rural <- cor(data_rural, use = "pairwise.complete.obs")
+data_cor_rural <- cor(data_rural, use = "pairwise.complete.obs", method = "spearman")
 corrplot.mixed(data_cor_rural)
 
-data_cor_ruralp <- rcorr(as.matrix(data_rural)) 
+data_cor_ruralp <- rcorr(as.matrix(data_rural), type = "spearman") 
 corrplot(data_cor_ruralp$r,  method = "square",
          p.mat = data_cor_ruralp$P, sig.level = 0.001, insig = "blank")
 
