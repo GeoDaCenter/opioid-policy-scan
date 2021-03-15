@@ -1,9 +1,9 @@
 **Meta Data Name**: Access to MOUDs, Minimum Distance  
-**Last Modified**: Marhc 15, 2021  
+**Last Modified**: March 15, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Access01 - Policy Scan Environment Report at two spatial scales - Census Tract and Zip Code Tract Area (ZCTA). Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Access01 - Policy Scan Environment Report at 2 spatial scales - Census Tract and Zip Code Tract Area (ZCTA). Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * Access01_T  
 * Access01_Z  
 
@@ -11,7 +11,7 @@ Access01 - Policy Scan Environment Report at two spatial scales - Census Tract a
 Provider locations prescribing Medications for Opioid Overuse Disorder (MOUDs) were sourced from SAMHSA database for Buprenorphine & Methadone. Provider locations for those prescribing Vivitrol/Naltrexone data was scraped from *vivitrol.com*. 
 
 ### Description of Data Processing: 
-Data was first cleaned and prepared for analysis. We geocoded all the locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R as well as supplemental geocoding through University of Chicago Library GIS services. We calculated centroids for each census tract and ZCTA, and then conducted a nearest resource analysis to determine the Euclidean distance from each centroid to the nearest MOUD provider location. This produced minimum distance access variables for each of the three medications.
+Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded locations locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. We calculated centroids for each census tract and ZCTA, and then conducted a nearest resource analysis to determine the Euclidean distance from each centroid to the nearest MOUD provider location. This produced minimum distance access variables for each of the three medications.
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
