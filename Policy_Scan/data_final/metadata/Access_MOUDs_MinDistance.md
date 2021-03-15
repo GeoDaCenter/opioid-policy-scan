@@ -1,6 +1,6 @@
-**Meta Data Name**: Access to MOUDs variables, part of the Health Factors dataset  
-**Last Modified**: October 30th, 2020  
-**Author**: Moksha Menghaney  
+**Meta Data Name**: Access to MOUDs, Minimum Distance
+**Last Modified**: Marhc 15, 2021
+**Author**: Susan Paykin 
 
 ### Data Location: 
 Access01 - Policy Scan Environment Report at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
@@ -8,27 +8,22 @@ Access01 - Policy Scan Environment Report at 2 spatial scales. Files can be foun
 * Access01_Z  
 
 ### Data Source(s) Description:  
-Locations prescribing Medication for Opioid Overuse Disorder were sourced from SAMHSA database for Naltrexone, Buprenorphine & Methadone. Vivitrol data was scraped from vivitrol.com. **Update this section and Data Source Table section with more details**
-
-Centers of population or population weighted centroids for census tracts were sourced from the NHGIS. Raw data and more information can be found [here](https://www.nhgis.org).
-
-Centers of population or population weighted centroids for zctas were calculated inhouse (check notes or discuss with Vidal).
-
-### Description of Data Source Tables:
-
+Provider locations prescribing Medications for Opioid Overuse Disorder (MOUDs) were sourced from SAMHSA database for Buprenorphine & Methadone. Provider locations for those prescribing Vivitrol/Naltrexone data was scraped from *vivitrol.com*. 
 
 ### Description of Data Processing: 
-Euclidean Distance was calculated from the population weighted centroid of each tract/zcta to the nearest location of Buprenorphine, Methadone and Naltrexone/Vivitrol. Naltrexone and Vivitrol locations were clubbed into one category for this calculation.
+Data was first cleaned and prepared for analysis. We geocoded all the locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R as well as supplemental geocoding through University of Chicago Library GIS services. We calculated centroids for each census tract and Zip Code Tract Area (ZCTA)s, and then the Euclidean distance from each centroid to the nearest MOUD provider location. 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Access to Buprenorphine | minDisBup | Euclidean Distance to Nearest Buprenorphine location |
-| Access to Methadone | minDisMet | Euclidean Distance to Nearest Methadone location |
-| Access to Naltrexone/Vivitrol | minDisNalV | Euclidean Distance to Nearest Naltrexone/Vivitrol location |
+| GEOID | ID for zip or tract | Unique 5-digit ID for ZCTA, unique 11-digit ID for census tracts | 
+| Access to nearest MOUD | minDistZ or minDistT | Euclidean distance to nearest MOUD (all types) |
+| Access to Buprenorphine | minDistBup | Euclidean distance to nearest buprenorphine provider |
+| Access to Methadone | minDisMet | Euclidean distance to nearest methadone provider |
+| Access to Naltrexone/Vivitrol | minDisNalV | Euclidean distance to nearest naltrexone/Vivitrol provider |
 
 ### Data Limitations:
-n/a
+This analysis uses non-population weighted centroids. 
 
 ### Comments/Notes:
-n/a
+This dataset does not include U.S. territories.
