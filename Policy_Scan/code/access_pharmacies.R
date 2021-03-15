@@ -1,4 +1,4 @@
-########### INFO ###########
+#### About ----
 
 # Author : Susan Paykin
 # Date : January 6, 2021
@@ -12,7 +12,7 @@
 # Part 3) Save final Access Metrics datasets: 
   # Create new csv files with access metrics by census tracts and zip codes, saved in the data_final folder. 
 
-#### Part 1) Wrangle national pharmacy data ####
+#### Part 1) Wrangle national pharmacy data ----
 
 # Set up 
 library(tidyverse)
@@ -67,7 +67,7 @@ pharmacies.sf <- st_as_sf(pharmacies,
 # Quick plot
 plot(st_geometry(pharmacies.sf))
 
-#### Part 2) Nearest Resource Analysis ####
+#### Part 2) Nearest Resource Analysis ---
 
 # Read in location data
 zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp")
@@ -81,14 +81,16 @@ tracts <- st_transform(tracts, 3857)
 st_crs(pharmacies.sf)
 pharmacies.sf <- st_transform(pharmacies.sf, 3857)
 
-##### Calculate Centroids - Zip Codes #####
+##### Part 2) Nearest Resource Analysis ----
+
+# Calculate Centroids - Zip Codes 
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
 zipCentroids
 
 # Identify pharmacy that is closest to zip centroid. 
-# Will return index, so then subset pharmacies by the index to get the nearest hc. 
+# This will return index, so then subset pharmacies by the index to get the nearest location 
 nearestPharma_index <- st_nearest_feature(zipCentroids, pharmacies.sf)
 nearestPharma <- pharmacies.sf[nearestPharma_index,]
 nearestPharma
@@ -109,14 +111,14 @@ head(minDistZips_sf)
 minDistZips_sf <- minDistZips_sf %>% select(GEOID10, ZCTA5CE10, AFFGEOID10, minDistZ_mi)
 head(minDistZips_sf)
 
-##### Calculate Centroids - Census Tracts #####
+# Calculate Centroids - Census Tracts
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
 head(tractCentroids)
 
-# Identify health center that is closest to tract centroid.  
-# Will return index, so then subset the fqhcs by the index to get the nearest hc. 
+# Identify pharmacy that is closest to tract centroid.  
+# Will return index, so then subset by the index to get the nearest location. 
 nearestPharma_index_tract <- st_nearest_feature(tractCentroids, pharmacies.sf)
 nearestPharma_tract <- pharmacies.sf[nearestPharma_index_tract, ]
 nearestPharma_tract
@@ -137,7 +139,7 @@ head(minDistTracts_sf)
 minDistTracts_sf <- minDistTracts_sf %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, minDistT_mi = minDistTracts_mi)
 head(minDistTracts_sf)
 
-#### Part 3) Save final Access Metrics datasets ####
+#### Part 3) Save final Access Metrics ----
 
 # Save zips
 write_sf(minDistZips_sf, "data_final/Access04_Z.csv")
