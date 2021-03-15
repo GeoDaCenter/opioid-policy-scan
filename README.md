@@ -32,7 +32,7 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Health Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs_MinDistance.md) | Tract, Zip | Complete |
+| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs.md) | Tract, Zip | Complete |
 | Access to FQHC facilities | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02 / [Access: FQHCs](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
 | Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
 | Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 / [Access: Mental Health Providers](Policy_Scan/data_final/metadata/Acesss_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
