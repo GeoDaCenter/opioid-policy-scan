@@ -8,15 +8,15 @@ Access02 - Policy Scan Environment Report at 2 spatial scales. Files can be foun
 * Access02_Z  
 
 ### Data Source(s) Description:  
-Locations of Federal Qualified Health Centers were sourced from the the [Health Resources and Services Administration](https://bphc.hrsa.gov/datareporting/index.html) via the US COVID Atlas. 
+Locations of Federal Qualified Health Centers (FQHCs) were sourced from the the [Health Resources and Services Administration](https://bphc.hrsa.gov/datareporting/index.html) which were cleaned and geocoded for the [US COVID Atlas](https://theuscovidatlas.org/). 
 
-Zip code tract area (ZCTA) and Census Tract files were sourced from the US Census, TIGER/Line Shapefiles 2018. 
+ZIP Code Tract Area (ZCTA) and Census Tract boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 
 ### Description of Data Source Tables: 
-n/a
+The raw source FQHC dataset includes the name of the FQHC facility, address, state, phone number, COVID testing status (yes/no), and latitude and logitude variables. 
 
 ### Description of Data Processing: 
-Euclidean Distance was calculated from the centroid of each tract/ZCTA to the nearest FQHC location.
+Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA and Census Tract geometries. For the nearest resource analysis, Euclidean distance was calculated from the centroid of each tract/ZCTA to the nearest FQHC location.
 
 ### Key Variable and Definitions:
 
@@ -24,20 +24,20 @@ Tracts (Access02_T):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Full GEOID | GEOID | Unique GEOID, including state, county, and tract IDs |
-| Tract # | TRACTCE | Unique census tract ID |
-| Access to FQHC | minDistTracts_mi | Euclidean distance from tract centroid to closest FQHC, in miles |
+| GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
+| Tract # | TRACTCE | 6-digit census tract ID |
+| Access to FQHC | minDistTracts_mi | Euclidean distance from centroid to closest FQHC, in miles |
 
 Zip Code (Access02_Z):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Full GEOID | GEOID10 | Unique GEOID, same as zip code |
-| Zip code tract area | ZCTA5CE10 | Zip code |
-| Access to FQHC | minDistZips_mi | Euclidean distance from zip code centroid to closest FQHC, in miles |
+| Full GEOID | GEOID10 | Unique GEOID, same as ZCTA |
+| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Assigned ZCTA by the USPS |
+| Access to FQHC | minDistZips_mi | Euclidean distance from centroid to closest FQHC, in miles |
 
 ### Data Limitations:
-Distance is Euclidean - not driving or walking routes. 
+NA
 
 ### Comments/Notes:
-n/a
+Zip code and tract centroids are not population-weighted. 
