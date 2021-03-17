@@ -8,7 +8,7 @@ Access05 - Policy Scan Environment Report at 2 spatial scales. Files can be foun
 * Access05_Z  
 
 ### Data Source(s) Description:  
-Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/) 2019 Business and Consumer Historical Datafile.
+Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library.
 
 Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 
@@ -16,7 +16,7 @@ Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Cens
 The source InfoGroup dataset includes the business name, location (address, city, state, census tract, latitude, longitude), NAICS Code, and NAICS Code Description variables. 
 
 ### Description of Data Processing: 
-Data was downloaded and sourced from InfoGroup's historical dataset, filtered for pharmacies via [NAICS class code](https://www.naics.com/naics-code-description/?code=446110) *4461100*, cleaned, and then converted to spatial data. Next, the nearest resource analysis was conducted using minimum Euclidean distance as a proxy variable for access. This analysis included calculating centroids for all U.S. census tracts and ZCTAs, identifying the nearest pharmact to each tract/zip centroid, then measuring the distance in miles.
+Data was downloaded and sourced from InfoGroup's historical dataset, filtered for pharmacies via [NAICS class code](https://www.naics.com/naics-code-description/?code=446110) 4461100, cleaned, and then converted to spatial data. Next, the nearest resource analysis was conducted using minimum Euclidean distance as a proxy variable for access. This analysis included calculating centroids for all U.S. census tracts and ZCTAs, identifying the nearest pharmact to each tract/zip centroid, then measuring the distance in miles.
 
 ### Key Variable and Definitions:
 
