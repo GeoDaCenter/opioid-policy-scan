@@ -25,7 +25,9 @@ Tracts (Access03_T):
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Full GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
-| Tract # | TRACTCE | 6-digit census tract ID |
+| State | STATEFP | Unique 2-digit ID for states |
+| County | COUNTYFP | 3-digit ID for counties |
+| Census Tract | TRACTCE | 6-digit ID for census tracts |
 | Access to Nearest Hospital | minDistT_mi | Euclidean distance from centroid to nearest hospital, in miles |
 
 Zip Code (Access03_Z):
