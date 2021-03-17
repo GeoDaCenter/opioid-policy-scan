@@ -32,16 +32,15 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Health Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs.md) | Tract, Zip | Complete |
-| Access to FQHC facilities | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02 / [Access: FQHCs](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
-| Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
-| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 / [Access: Mental Health Providers](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
-| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
 | Primary Care Physicians | Number of PC Physicians| Dartmouth Atlas | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
 | Speciality Care Physicians | Number of Specialist Physicians | Darthmoouth Atlas | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
-
+| Access to MOUDs | Distance to nearest MOUD | U.S. Census, SAMHSA, Vivitrol | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs.md) | Tract, Zip | Complete |
+| Access to Health Centers | Distance to nearest FQHC | U.S. Census, COVID Atlas/HRSA  | Access02 / [Access: FQHCs](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
+| Access to Hospitals | Distance to nearest hospital | U.S. Census, CovidCareMap |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
+| Access to Mental Health Providers |  Distance to nearest mental health provider | U.S. Census, SAMSHA |  Access04 / [Access: Mental Health Providers](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip | Complete |
+| Access to Pharmacies | Distance to nearest pharmacy | U.S. Census, Infogroup | Access05 / [Access: Pharmacies](Policy_Scan/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip | Complete |
 
 <br>
 
