@@ -40,4 +40,4 @@ Zip Code (Access02_Z):
 NA
 
 ### Comments/Notes:
-Zip code and tract centroids are not population-weighted. 
+Includes all U.S. States, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted. 
