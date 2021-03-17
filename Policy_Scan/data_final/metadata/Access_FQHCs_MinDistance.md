@@ -37,7 +37,7 @@ Zip Code (Access02_Z):
 | Access to FQHC | minDistZips_mi | Euclidean distance from centroid to closest FQHC, in miles |
 
 ### Data Limitations:
-NA
+Euclidean distance or straight-line is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
 
 ### Comments/Notes:
-Includes all U.S. States, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted. 
+This dataset includes all US states, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
