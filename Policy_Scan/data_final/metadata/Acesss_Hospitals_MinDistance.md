@@ -39,7 +39,7 @@ Zip Code (Access03_Z):
 | Access to Nearest Hospital | minDistZ_mi | Euclidean distance from centroid to nearest hospital, in miles |
 
 ### Data Limitations:
-Euclidean distance or straight-line is a simple approximation of distance or travel time from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. 
+Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. 
 
 ### Comments/Notes:
 This dataset includes all US states, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
