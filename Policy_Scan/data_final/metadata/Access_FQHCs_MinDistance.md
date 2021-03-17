@@ -25,7 +25,9 @@ Tracts (Access02_T):
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
-| Tract # | TRACTCE | 6-digit census tract ID |
+| State | STATEFP | Unique 2-digit ID for states |
+| County | COUNTYFP | 3-digit ID for counties |
+| Census Tract | TRACTCE | 6-digit ID for census tracts |
 | Access to FQHC | minDistTracts_mi | Euclidean distance from centroid to closest FQHC, in miles |
 
 Zip Code (Access02_Z):
