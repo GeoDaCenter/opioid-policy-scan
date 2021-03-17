@@ -42,4 +42,4 @@ Zip Code ([Access04_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/ma
 Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.  
 
 ### Comments/Notes:
-This final data includes US states and Puerto Rico, but missing other territories (Guam, Northern Mariana Islands, American Samoa, Palau). ZCTA and tract centroids are not population-weighted.
+The final dataset includes US states, Washington, D.C., and Puerto Rico, but does not include other territories (Guam, Northern Mariana Islands, American Samoa, Palau). ZCTA and tract centroids are not population-weighted.
