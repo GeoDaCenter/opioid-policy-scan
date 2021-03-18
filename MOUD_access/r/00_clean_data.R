@@ -103,5 +103,41 @@ data <- left_join(data, SVI_ZIP, by = c("originGEOID" = "GEOID")) %>%
 
 write_csv(data, "data_final/allaccess_SVI_rurality.csv")
 
+### merge in population and get summary stats
+library(readr)
+DS01 <- read_csv("~/Documents/opioid-policy-scan/Policy_Scan/data_final/DS01_2018_Z.csv", 
+                 col_types = cols(GEOID = col_number(),
+                                  amIndP = col_skip(), asianP = col_skip(), 
+                                  blackP = col_skip(), otherP = col_skip(), 
+                                  pacIsP = col_skip(), whiteP = col_skip(),
+                                  year = col_skip()))
 
+data <- left_join(data, DS01, by = c("originGEOID" = "GEOID"))
+data %>% 
+  group_by(rurality) %>% 
+  summarise(sum(totPopE))
 
+######################
+# Load data
+rucaZ <- read.csv("Policy_Scan/data_final/HS02_RUCA_Z.csv")
+rucaZ$ZIP_CODE <- sprintf("%05s", as.character(rucaZ$ZIP_CODE))
+
+# Merge with zip geometry
+zips_clean <- st_read("Policy_Scan/data_final/geometryFiles/tl_2018_zcta/zctas2018.shp") %>% 
+              st_transform(crs = 4326) 
+rucaZ.sf <- merge(zips_clean, rucaZ, by.x = "ZCTA5CE10", by.y = "ZIP_CODE") %>% 
+  select(GEOID10, rurality, geometry)
+
+moud <- st_read("MOUD_access/data_final/us-wide-moudsCleaned.gpkg") %>% 
+  st_transform(crs = 4326)
+
+moud <- st_join(moud, rucaZ.sf)
+table(moud[moud$rurality == "Urban",]$category) 
+table(moud[moud$rurality == "Suburban",]$category) 
+table(moud[moud$rurality == "Rural",]$category) 
+
+dialysis <- st_read("MOUD_access/intmed_output/us_dialysis.gpkg") %>% 
+  st_transform(crs = 4326)
+
+dialysis <- st_join(dialysis, rucaZ.sf)
+table(dialysis$rurality)
