@@ -13,8 +13,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ## Data Overview
 
 ### Policy Variables
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
-|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Prison Incarceration Rates | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice, 2016 | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
 | Jail Incarceration Rates | Jail population rate by gender and ethnicity | Vera Institute of Justice, 2017 | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
 | Prescription Drug Monitoring Programs (PDMP) | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC, 2017 | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete |
@@ -30,8 +30,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 <br>
 
 ### Health Variables
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
-|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2009-2019 | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS, 2014-2018 | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
 | Primary Care Physicians | Number of PC Physicians| Dartmouth Atlas, 2010 | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
@@ -45,8 +45,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 <br>
 
 ### Demographic Variables
-| Variable Construct | Variable Proxy | Source(s) | Tables / Metadata | Spatial Scale | Status<br>(internal use)|
-|:-------------------|:---------------|:----------|:------------------|:--------------|:------------------------|
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Percentage Black, Percentage White | Population with race identified as Black or African American alone, Population with race identified as white alone | ACS 2014-2018 | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
 | Percentage Hispanic | Population with ethnicity identified as of Hispanic or Latinx origin | ACS 2014-2018 | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
 | Population with a Disability | Civilian Non Institutionalized Population with a Disability | ACS 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
@@ -57,8 +57,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 <br>
 
 ### Economic Variables
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
-|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | High Risk of Injury Jobs | Population employed in agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, and utilities industries | ACS, 2014-2018 |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
 | Essential Worker Jobs | See below, under *COVID Variables* | 
 | Unemployment Rate | Unemployment Rate | ACS, 2014-2018 | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
@@ -69,8 +69,8 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 <br>
 
 ### Physical Variables
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
-|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Housing Occupancy Rate | Percent occupied units | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Vacancy Rate | Percent vacant units | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Long Term Occupancy | Percentage of population living in current housing for 20+ years | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
@@ -85,9 +85,9 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 
 <br>
 
-### COVID Factors
-| Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
-|:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
+### COVID Variables
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Cumulative Case Count | Daily case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | [COVID01](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
 | Adjusted Case Rate per 100K | Daily case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | [COVID02](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
 | Historical 7-day Average Case Count | 7-day average case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | [COVID03](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
