@@ -15,17 +15,17 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Policy Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Incarceration rates (Prison) | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
-| Incarceration rates (Jail) | Jail population rate by gender and ethnicity | Vera Institute of Justice | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
-| PDMP | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete |
+| Prison Incarceration Rates | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice | PS01 / [Prison Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Prison%20variables_2016.md) | County | Complete |
+| Jail Incarceration Rates | Jail population rate by gender and ethnicity | Vera Institute of Justice | PS02 / [Jail Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/Jail%20variables_2017.md) | County | Complete |
+| Prescription Drug Monitoring Programs (PDMP) | Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP | OPTIC | PS03 / [PDMP](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PDMP_2017.md) | State | Complete |
 | Good Samaritan Laws | Any Good Samaritan Law; Good Samaritan Law protecting arrest | OPTIC | PS04 / [GSL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GSL_2018.md) | State | Complete | 
 | Naloxone Access Laws |  Any Naloxone law; Naloxone law allowing distribution through a standing or protocal order effective; Naloxone law allowing pharmacists prescriptive authority | OPTIC | PS05 / [NAL](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/NAL_2017.md) | State | Complete | 
 | Medicaid Expenditure | Total medicaid spending | KFF | PS06 / [MedExp](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExp_2019.md) | State | Complete |
 | Medicaid Expansion | Spending for adults who have enrolled through ACA's expansion | KFF | PS07 / [MedExpan](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExpan_2018.md) | State | Complete |
-| Syringe Exchange,<br> Distribution, Possession Laws | Laws clarifying legal status for syringe services programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
+| Syringe Services Laws | Laws clarifying legal status for syringe exchange, distribution, and possession programs | LawAtlas | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
 | Controlled Substance Laws | Law authorizing adults to use medical marijuana | PDAPS | PS09 / [MedMarijLaw](Policy_Scan/data_final/metadata/MedMarijLaw.md) | State | Complete |
-| SDOH Typologies | SDOH Neighborhood Typologies | Kolak et al. (2020) | PS10 / [SDOH Typology](Policy_Scan/data_final/metadata/SDOH_2014.md) | Tract | Complete |
-| State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | U.S. Census | PS 11 / [Government Expenditures](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PublicExpenditures.md) | State, Local | Complete |
+| Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al. (2020) | PS10 / [SDOH Typology](Policy_Scan/data_final/metadata/SDOH_2014.md) | Tract | Complete |
+| State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | US Census 2018 | PS 11 / [Government Expenditures](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PublicExpenditures.md) | State, Local | Complete |
 
 <br>
 
@@ -47,22 +47,23 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Demographic Variables
 | Variable Construct | Variable Proxy | Source(s) | Tables / Metadata | Spatial Scale | Status<br>(internal use)|
 |:-------------------|:---------------|:----------|:------------------|:--------------|:------------------------|
-| Black, White percentage | Population with Race identified as Black or African American alone (blackP),<br>Population with Race identified as White alone (whiteP) | 2014 - 2018 ACS | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
-| Hispanic Percentage | Population with Ethnicity identified as of Hispanic or Latino origin (hispP) | 2014 - 2018 ACS | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
-| Population with a Disability | Civilian Non Institutionalized Population with a Disability (disbP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
-| College Aged | Population b/w ages of 15 & 24 (a15_24P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
-| Population over 65 | Population over 65 (ovr65P) | 2014 - 2018 ACS | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
+| Percentage Black, Percentage White | Population with race identified as Black or African American alone, Population with race identified as white alone | ACS 2014-2018 | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
+| Percentage Hispanic | Population with ethnicity identified as of Hispanic or Latinx origin | ACS 2014-2018 | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
+| Population with a Disability | Civilian Non Institutionalized Population with a Disability | ACS 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
+| Educational Attainment | Population without a High School degree | ACS 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
+| Population over 65 | Population over age 65 | ACS 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
+| Young Adult Population under 25 | Population between ages 15-24 | ACS 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 
 <br>
 
 ### Economic Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| 'High Risk of Injury' jobs | Population employed in Agriculture, forestry, fishing and hunting, Mining, quarrying, and oil and gas extraction, Construction, Manufacturing, and Utilities industries (hghRskP) | 2014 - 2018 ACS |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
-| Unemployment Rate | Unemployment Rate (unempP) | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
-| Poverty Rate | Percent below poverty level (povP) | 2014 - 2018 ACS | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
-| Per Capita Income | Per capita income in the past 12 months (in 2018 inflation-adjusted dollars) (pciE) | 2014 - 2018 ACS |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
-| Educational Attainment | Population without a High School degree (noHSP) | 2014 - 2018 ACS | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
+| High Risk of Injury Jobs | Population employed in agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, and utilities industries | ACS 2014-2018 |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
+| Essential Worker Jobs | See below, under *COVID Variables* | 
+| Unemployment Rate | Unemployment Rate | ACS 2014-2018 | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
+| Poverty Rate | Percent below poverty level | ACS 2014-2018 | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
+| Per Capita Income | Per capita income in the past 12 months | ACS 2014-2018 |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Foreclosure Rate | Mortgage foreclosure and severe delinquency rates | HUD, CFPB | EC04 / [Foreclosure Rate](Policy_Scan/data_final/metadata/ForeclosureRate.md) | State, County, Tract | Complete |
 
 <br>
@@ -70,26 +71,28 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 ### Physical Variables
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Housing Occupancy Rate | Percent occupied units (occP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Vacancy Rate | Percent vacant units (vacantP) | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Long Term Occupancy | Population that moved into current housing 20 years or before | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Mobile Home Structures | Percent mobile housing structures (mobileP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Rental Rates | Percent occupied housing units on rent (rentalP)  | 2014 - 2018 ACS | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Housing Unit Density | Housing units per square mile | 2014 - 2018 ACS | HS01/ [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Urban/Suburban/Rural | Classification of census tracts & zipcodes as rural, urban and suburban using RUCA Codes (rurality), <br> For Counties, percent tracts under each classification (rcaUrbP/rcaSubrbP/rcaRuralP) and percent rurality as calculated by the Census (cenRuralP) | USDA & ACS  | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
-| Alcohol Outlet Density | Alcohol outlets per sq mile and per capita | Infogroup  | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
+| Housing Occupancy Rate | Percent occupied units | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Vacancy Rate | Percent vacant units | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Long Term Occupancy | Percentage of population living in current housing for 20+ years | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Mobile Homes | Percent of housing units classified as mobile homes | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Rental Rates | Percent of housing units occupied by renters  | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Housing Unit Density | Housing units per square mile | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Urban/Suburban/Rural | Classification of census tracts & ZCTAs as rural, urban and suburban using percent rurality (County) or RUCA Codes (Tract, Zip) | USDA & ACS  | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
+| Alcohol Outlet Density | Alcohol outlets per square mile and alcohol outlets per capita | Infogroup 2018 | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
 | Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation | Massey, D. S., Tannen, J. (2015) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
-| Southern Black Belt | Southern US counties that were at least 40% Black or African American in the 2000 Census | Census (2000) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
-| Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER (2010) | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Southern Black Belt | Southern US counties where 30% of the population identified as Black or African American | US Census, 2000 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 
 <br>
 
 ### COVID Factors
 | Variable Construct | Variable Proxy | Source(s) | Metadata Document | Spatial Scale | Status<br>(for Internal team use)|
 |:------------------ | -------------- | --------- | ----------------- | ------------- | -------------------------------- |
-| Historical Cumulative <br>Case Count & Rate | All data, through Jan 2021 | New York Times | [COVID](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Historical 7-day Average<br>New Case Count & Rate | All data, through Jan 2021 | New York Times | [COVID](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| 'Essential worker' jobs| Percentage of population employed in occupations deemed essential during COVID-19 crisis | 2014 - 2018 ACS | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
+| Cumulative Case Count | Daily case count, 01/21/20 - 03/03/2021 | The New York Times | [COVID01](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Adjusted Case Rate per 100K | Daily case rate, 01/21/20 - 03/03/2021 | The New York Times | [COVID02](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Historical 7-day Average Case Count | 7-day average case count, 01/21/20 - 03/03/2021 | The New York Times | [COVID03](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Historical 7-day Average Case Rate per 100K | 7-day average case rate, 01/21/20 - 03/03/2021 | The New York Times | [COVID04](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Essential Worker Jobs | Percentage of population employed in occupations deemed essential during COVID-19 crisis | ACS 2014-2018 | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 
 
 ## Team
