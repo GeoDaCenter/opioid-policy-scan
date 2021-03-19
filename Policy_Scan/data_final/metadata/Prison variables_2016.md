@@ -1,4 +1,4 @@
-**Meta Data Name**: 2016 Prison variables, part of the Policy dataset  
+**Meta Data Name**: Prison Incarceration Rates
 **Last Modified**: August 26th, 2020  
 **Author**: Qinyun Lin  
 
