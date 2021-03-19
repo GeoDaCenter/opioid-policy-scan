@@ -28,7 +28,7 @@ Tracts ([Access05_T](https://github.com/GeoDaCenter/opioid-policy-scan/tree/mast
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to pharmacies | minDistT_mi | Euclidean distance from centroid to closest pharmacy, in miles |
+| Access to pharmacies | minDistT_mi | Euclidean distance from centroid to nearest pharmacy, in miles |
 
 Zip Code ([Access05_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
 
@@ -36,7 +36,7 @@ Zip Code ([Access05_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/ma
 |:---------|:--------------------|:------------|
 | Full GEOID | GEOID10 | Unique GEOID, same as zip code |
 | Zip code tract area | ZCTA5CE10 | Zip code |
-| Access to pharmacies | minDistZ_mi | Euclidean distance from centroid to closest pharmacy, in miles |
+| Access to pharmacies | minDistZ_mi | Euclidean distance from centroid to nearest pharmacy, in miles |
 
 ### Data Limitations:
 Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.
