@@ -28,7 +28,7 @@ Tracts (Access02_T):
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to FQHC | minDistTracts_mi | Euclidean distance from centroid to closest FQHC, in miles |
+| Access to FQHC | minDistTracts_mi | Distance from centroid to nearest FQHC, in miles |
 
 Zip Code (Access02_Z):
 
@@ -36,10 +36,10 @@ Zip Code (Access02_Z):
 |:---------|:--------------------|:------------|
 | Full GEOID | GEOID10 | Unique GEOID, same as ZCTA |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Assigned ZCTA by the USPS |
-| Access to FQHC | minDistZips_mi | Euclidean distance from centroid to closest FQHC, in miles |
+| Access to FQHC | minDistZips_mi | Distance from centroid to nearest FQHC, in miles |
 
 ### Data Limitations:
-Euclidean distance or straight-line is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
 
 ### Comments/Notes:
 This dataset includes all US states, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
