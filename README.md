@@ -27,7 +27,7 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Medicaid Expenditure | Total Medicaid spending | KFF, 2019 | PS06 / [MedExp](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExp_2019.md) | State | Complete |
 | Medicaid Expansion | Spending for adults who have enrolled through Medicaid expansion | KFF, 2018 | PS07 / [MedExpan](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/MedExpan_2018.md) | State | Complete |
 | Syringe Services Laws | Laws clarifying legal status for syringe exchange, distribution, and possession programs | LawAtlas, 2019 | PS08 / [Syringe](Policy_Scan/data_final/metadata/Syringe.md) | State | Complete |
-| Controlled Substance Laws | Law authorizing adults to use medical marijuana | PDAPS, 2017 | PS09 / [MedMarijLaw](Policy_Scan/data_final/metadata/MedMarijLaw.md) | State | Complete |
+| Medical Marijuana Laws | Law authorizing adults to use medical marijuana | PDAPS, 2017 | PS09 / [MedMarijLaw](Policy_Scan/data_final/metadata/MedMarijLaw.md) | State | Complete |
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | PS10 / [SDOH Typology](Policy_Scan/data_final/metadata/SDOH_2014.md) | Tract | Complete |
 | State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | US Census, 2018 | PS 11 / [Government Expenditures](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/PublicExpenditures.md) | State, Local | Complete |
 
