@@ -1,5 +1,5 @@
 **Meta Data Name**: Drug-Related Death Rate  
-**Environment**: Health Variables
+**Environment**: Health Variables  
 **Last Modified**: February 5, 2021  
 **Author**: Susan Paykin  
 
@@ -44,7 +44,8 @@ Data was wrangled, cleaned and filtered for the 48 contiguous US states & Washin
 | GEOID | GEOID | Unique 5-digit identifier for counties, 2-digit indentifier for states |
 | Deaths | deaths | Total deaths from drug-related causes, 2009-2018 |
 | Population | pop | Total population |
-| Raw mortality rate | rawDeathRate | Adjusted death rate per 100K population |
+| Raw death rate | rawDeathRt | Raw death rate |
+| Adjusted death rate per 100K | adjDeathRt | Adjusted death rate per 100K population |
 
 ### Data Limitations: 
 
