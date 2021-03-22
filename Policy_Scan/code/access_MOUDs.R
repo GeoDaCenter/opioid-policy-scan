@@ -4,15 +4,14 @@
 # Date : March 15, 2021
 # About: This code prepares the metrics on Access to Pharmacies for zip codes and census tracts. 
 
-# Part 1) Wrangle national MOUD location data
+# Part 1) Prepare national MOUD location data
 
-# Part 2) Conduct nearest resource analysis, using minimum distance as proxy for access, 
-# determining the distance from a) census tracts and b) zip codes to MOUDs
+# Part 2) Conduct nearest resource analysis: Minimum distance as proxy for access 
+# Calculate distance from ZCTA and tract centroids to nearest MOUD by type
 
-# Part 3) Save final Access Metrics: 
-# Create final csv files with access metrics by census tracts and zip codes, saved in the data_final folder. 
+# Part 3) Save final datasets
 
-#### Part 1) Wrangle national MOUD location data ----
+#### Part 1) Prepare MOUD data ----
 
 # Set up 
 library(tidyverse)
@@ -39,7 +38,7 @@ tracts <- read_sf("Policy_Scan/data_final/geometryFiles/tl_2018_tract/tracts2018
 
 #### Part 2) Nearest Resource Analysis ----
 
-#### Minimum Distance, ZCTA ----
+#### Nearest MOUD, ZCTA ----
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
@@ -90,7 +89,7 @@ minDistZips_clean <- minDistZips_clean %>% select(GEOID = GEOID10,
                                                   minDisNalV = minDistnalViv)
 head(minDistZips_clean)
 
-#### Minimum Distanbce, Tracts ----
+#### Nearest MOUD, Tracts ----
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
