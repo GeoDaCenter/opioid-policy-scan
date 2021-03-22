@@ -20,23 +20,14 @@ Data was scraped from the SAMSHA Treatment Locator tool, filtered for mental hea
 
 ### Key Variable and Definitions:
 
-Tracts ([Access04_T](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
-
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Full GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
+| Access to mental health providers | minDisMH | Euclidean distance from centroid to nearest mental health provider, in miles |
+| ZIP Code Tract Area (ZCTA) | ZCTA | Unique 5-digit assigned ZCTA, usually same as ZIP code |
+| Tract GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to mental health providers | minDistT_mi | Euclidean distance from centroid to nearest provider, in miles |
-
-Zip Code ([Access04_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
-
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Full GEOID | GEOID10 | Unique 5-digit GEOID, same as ZCTA |
-| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Assigned ZCTA by the USPS |
-| Access to mental health providers | minDistZ_mi | Euclidean distance from centroid to nearest provider, in miles |
 
 ### Data Limitations:
 Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.  
