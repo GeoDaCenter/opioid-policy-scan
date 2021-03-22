@@ -1,5 +1,5 @@
-**Meta Data Name**: Housing Variables  
-**Last Modified**: October 22, 2020  
+**Meta Data Name**: Housing Variables
+**Last Modified**: March 20, 2021 
 **Author**: Moksha Menghaney, updates by Susan Paykin   
 
 ### Data Location: 
@@ -54,15 +54,14 @@ The following variables were included from **B25026**:
 * **Housing Unit Density** was calculated as : *Total Housing Units / Land area in square miles*  
 Note: Total land area for each spatial scale was sourced from geometry files and converted to square miles.
 
-
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Occupancy Rate | occP | Percent housing units occupied |
-| Vacancy Rate | vacantP | Percent housing units vacant |
-| Rental Rate | rentalP | Percent occupied housing units on rent |
-| Mobile Homes | mobileP | Percent mobile housing structures |
-| Long-term Occupancy | lngTermP | Percent population that moved into current housing 20 years or before |
+| Housing Occupancy Rate | occP | Percentage of housing units occupied |
+| Housing Vacancy Rate | vacantP | Percentage of housing units vacant |
+| Long-Term Occupancy | lngTermP | Percentage of population who moved into their current housing more than 20 years ago |
+| Rental Rate | rentalP | Percentage of occupied housing units that are rented |
+| Mobile Homes Rate | mobileP | Percentage of total housing units categorized as mobile housing structures |
 | Housing Unit Density | unitDens | Number of housing units per square mile of land area |
 
 ### Data Limitations:
