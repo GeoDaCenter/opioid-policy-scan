@@ -20,23 +20,14 @@ Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA a
 
 ### Key Variable and Definitions:
 
-Tracts (Access02_T):
-
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
+| Access to FQHC | minDisFQHC | Distance from centroid to nearest FQHC, in miles |
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to FQHC | minDistTracts_mi | Distance from centroid to nearest FQHC, in miles |
-
-Zip Code (Access02_Z):
-
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Full GEOID | GEOID10 | Unique GEOID, same as ZCTA |
-| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Assigned ZCTA by the USPS |
-| Access to FQHC | minDistZips_mi | Distance from centroid to nearest FQHC, in miles |
+| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
 
 ### Data Limitations:
 Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
