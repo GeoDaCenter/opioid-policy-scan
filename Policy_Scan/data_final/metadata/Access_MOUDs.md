@@ -17,8 +17,8 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | GEOID | ID for zip or tract | Unique 5-digit ID for ZCTA, unique 11-digit ID for census tracts | 
-| Access to nearest MOUD | minDistZ or minDistT | Euclidean distance to nearest MOUD (all types) |
-| Access to Buprenorphine | minDistBup | Euclidean distance to nearest buprenorphine provider |
+| Access to nearest MOUD | minDisMOUD | Euclidean distance to nearest MOUD (all types) |
+| Access to Buprenorphine | minDisBup | Euclidean distance to nearest buprenorphine provider |
 | Access to Methadone | minDisMet | Euclidean distance to nearest methadone provider |
 | Access to Naltrexone/Vivitrol | minDisNalV | Euclidean distance to nearest naltrexone/Vivitrol provider |
 
