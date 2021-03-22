@@ -1,17 +1,13 @@
-**Meta Data Name**: Rural Urban Classification for Counties, part of the Physical Factors dataset  
-**Last Modified**: October 27th, 2020  
-**Author**: Moksha Menghaney  
+**Meta Data Name**: Rural Urban Classification for Counties  
+**Last Modified**: March 20, 2020  
+**Author**: Moksha Menghaney, updates by Susan Paykin
 
 ### Data Location: 
-HS02 - Policy Scan Environment Report at 1 spatial scale. File can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS02 at the County scale. File can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * HS02_C  
 
-
 ### Data Source(s) Description:  
-Percentage rural and urban population is sourced from the Census Bureau. Raw data and more details can be found at https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html.
-
-Also, census tract level classifications were generated using the RUCA codes, which were then aggregated at a county level. Aggregated county level data can be found [here](Policy_Scan/data_raw/county_RUCA_rurality.csv). 
-
+Percentage rural and urban population is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
 
 ### Description of Data Source Tables:
 After each decennial census, the bureau identifies Urban Areas under two categories :
@@ -20,7 +16,6 @@ After each decennial census, the bureau identifies Urban Areas under two categor
 
 All other areas are classified as Rural. These classifications are done at a census block/tract level and are primarily based on population density and land use. 
 Using these classifications, for each county, the bureau calculates a percent rurality measure which is the percentage of population living in non-urban areas. We source this variable. More details on methodology can be found [here](https://www2.census.gov/geo/pdfs/reference/ua/Defining_Rural.pdf).
-
 
 ### Description of Data Processing: 
 For each county, from the census data, the percentage of population living in non-urban areas is identified as percentage rurality.
@@ -42,5 +37,4 @@ For each county, the percentage of tracts classified as urban/suburban/rural, us
 n/a
 
 ### Comments/Notes:
-The datasets come from two different sources and might have some gaps.
-For Census rurality, there are additional notes included for certain counties, e.g. change in FIPS code, etc., these can be found under the `note` column.
+The datasets come from two different source. As a result, there might have some gaps or mismatches in the rurality categorization. Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the `note` column.
