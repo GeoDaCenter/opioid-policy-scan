@@ -13,14 +13,12 @@ Hospital locations were sourced from [CovidCareMap Healthcare System Capacity da
 Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 
 ### Description of Data Source Tables: 
-n
+The source datatable from CovidCareMap included the hospital name, address, city, state, county, latitute and longitude, as well as additional variables for hospital bed and ICU bed capacity, current bed occupancy rates, and staffing rates. For this analysis, we used only the hospital name and location variables. 
 
 ### Description of Data Processing: 
 Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA and Census Tract geometries. For the nearest resource analysis, Euclidean distance was calculated from the centroid of each tract/ZCTA to the nearest hospital location.
 
 ### Key Variable and Definitions:
-
-Tracts (Access03_T):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
