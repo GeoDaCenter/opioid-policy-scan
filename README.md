@@ -94,6 +94,6 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Essential Worker Jobs | Percentage of population employed in occupations deemed *essential* during the COVID-19 crisis | ACS, 2014-2018 | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
 | Cumulative Case Count | Daily case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID01 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Adjusted Case Rate per 100K | Daily case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID02 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Adjusted Case Count per 100K | Daily case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID02 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
 | Historical 7-day Average Case Count | 7-day average case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID03 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Historical 7-day Average Case Rate per 100K | 7-day average case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID04 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Historical 7-day Average Adjusted Case Count per 100K | 7-day average case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID04 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
