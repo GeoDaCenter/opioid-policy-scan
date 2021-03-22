@@ -37,15 +37,14 @@ zips <- read_sf("Policy_Scan/data_final/geometryFiles/tl_2018_zcta/zctas2018.shp
 tracts <- read_sf("Policy_Scan/data_final/geometryFiles/tl_2018_tract/tracts2018.shp") %>%
   st_transform(3857)
 
-#### Part 2) Nearest Resource Analysis, Minimum Distance ----
+#### Part 2) Nearest Resource Analysis ----
 
-#### Calculate Centroids - Zip Codes ----
+#### Minimum Distance, ZCTA ----
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
 
-#### All MOUD ----
-
+#### All MOUD - ZCTA
 # Identify MOUD that is closest to zip centroid, then subset by index to get nearest location
 nearestMOUD_index <- st_nearest_feature(zipCentroids, mouds)
 nearestMOUD <- mouds[nearestMOUD_index, ]
@@ -58,24 +57,21 @@ head(minDistZips) # meters
 minDistZips_mi <- set_units(minDistZips, "mi")
 head(minDistZips_mi)
 
-#### Buprenorphine ----
-
+#### Buprenorphine - ZCTA
 nearestbup_index <- st_nearest_feature(zipCentroids, bup)
 nearestbup <- bup[nearestbup_index, ]
 minDistBup <- st_distance(zipCentroids, nearestbup, by_element = TRUE)
 minDistBup <- set_units(minDistBup, "mi")
 head(minDistBup)
 
-#### Methadone ----
-
+#### Methadone - ZCTA
 nearestMeth_index <- st_nearest_feature(zipCentroids, meth)
 nearestMeth <- meth[nearestMeth_index, ]
 minDistMeth <- st_distance(zipCentroids, nearestMeth, by_element = TRUE)
 minDistMeth <- set_units(minDistMeth, "mi")
 head(minDistMeth)
 
-#### NalViv -----
-
+#### NalViv - ZCTA
 nearestnalViv_index <- st_nearest_feature(zipCentroids, nalViv)
 nearestnalViv <- nalViv[nearestnalViv_index, ]
 minDistnalViv <- st_distance(zipCentroids, nearestnalViv, by_element = TRUE)
@@ -87,16 +83,19 @@ minDistZips_clean <- cbind(zips, minDistZips_mi, minDistBup, minDistMeth, minDis
 head(minDistZips_clean)
 
 # Clean up data
-minDistZips_clean <- minDistZips_clean %>% select(GEOID = GEOID10, minDistZ = minDistZips_mi, minDistBup, minDistMeth, minDistNalViv = minDistnalViv)
+minDistZips_clean <- minDistZips_clean %>% select(GEOID = GEOID10, 
+                                                  minDisMOUD = minDistZips_mi, 
+                                                  minDisBup = minDistBup, 
+                                                  minDisMeth = minDistMeth, 
+                                                  minDisNalV = minDistnalViv)
 head(minDistZips_clean)
 
-#### Calculate Centroids - Census Tracts ----
+#### Minimum Distanbce, Tracts ----
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
 
-# All MOUD ----
-
+#### All MOUDs
 # Identify MOUD that is closest to tract centroid, then subset by index to get nearest location
 nearestMOUD_tract_index <- st_nearest_feature(tractCentroids, mouds)
 nearestMOUD_tract <- mouds[nearestMOUD_tract_index, ]
@@ -109,24 +108,21 @@ head(minDistTracts) # meters
 minDistTracts_mi <- set_units(minDistTracts, "mi")
 head(minDistTracts_mi)
 
-#### Buprenorphine ----
-
+#### Buprenorphine - Tracts
 nearestbup_index <- st_nearest_feature(tractCentroids, bup)
 nearestbup <- bup[nearestbup_index, ]
 minDistBup <- st_distance(tractCentroids, nearestbup, by_element = TRUE)
 minDistBup <- set_units(minDistBup, "mi")
 head(minDistBup)
 
-#### Methadone ----
-
+#### Methadone - Tracts
 nearestMeth_index <- st_nearest_feature(tractCentroids, meth)
 nearestMeth <- meth[nearestMeth_index, ]
 minDistMeth <- st_distance(tractCentroids, nearestMeth, by_element = TRUE)
 minDistMeth <- set_units(minDistMeth, "mi")
 head(minDistMeth)
 
-#### NalViv -----
-
+#### NalViv - Tracts
 nearestnalViv_index <- st_nearest_feature(tractCentroids, nalViv)
 nearestnalViv <- nalViv[nearestnalViv_index, ]
 minDistnalViv <- st_distance(tractCentroids, nearestnalViv, by_element = TRUE)
@@ -139,14 +135,16 @@ head(minDistTracts_clean)
 
 # Clean up data
 minDistTracts_clean <- minDistTracts_clean %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, 
-                                                      minDistT = minDistTracts_mi, minDistBup, minDistMeth, 
-                                                      minDistNalViv = minDistnalViv)
+                                                      minDisMOUD = minDistTracts_mi, 
+                                                      minDisBup = minDistBup, 
+                                                      minDisMeth = minDistMeth, 
+                                                      minDisNalV = minDistnalViv)
 head(minDistTracts_clean)
 
-#### Part 3) Save final Access Metrics ----
+#### Part 3) Save final datasets ----
 
-# Save zip code access metrics
+# Save ZCTA file
 write_sf(minDistZips_clean, "Policy_Scan/data_final/Access01_Z.csv")
 
-# Save tract access metrics
+# Save tract file
 write_sf(minDistTracts_clean, "Policy_Scan/data_final/Access01_T.csv")

@@ -1,26 +1,26 @@
-########### INFO ###########
+#### About ----
 
 # Author : Susan Paykin
 # Date : January 7, 2021
 # About: This code prepares the metrics on Access to Hospitals via nearest resource analysis for all U.S. zip codes and census tracts. 
 
-# Part 1) Wrangle national hospital: 
-# loads the data source saves the cleaned pharmacy dataset in the data_raw folder. 
-# Part 2) Conduct nearest resource analysis, using minimum distance as proxy for access,
-# determining the distance from census tracts and zip code tracts to hospitals. 
-# Part 3) Save final Access Metrics datasets: 
-# Create new csv files with access metrics by census tracts and zip codes, saved in the data_final folder. 
+# Part 1) Prepare data: Clean and wrangle national hospital data.
+# Loads the data source saves the cleaned pharmacy dataset in the data_raw folder. 
 
-#### Set Up ####
+# Part 2) Conduct nearest resource analysis: Minimum distance as proxy for access.
+# Caculate the distance from census tracts and zip code tracts to hospitals. 
 
+# Part 3) Save final datasets. 
+# Creates new csv files with access metrics by tracts and ZCTAs, saved in the data_final folder. 
+
+#### Part 1) Prepare hospital data ----
+
+# Load libraries
 library(tidyverse)
 library(tmap)
 library(sf)
 library(units)
 
-#### Part 1) Wrangle national hospital data ####
-
-# Data sourced from CovidCareMap - https://github.com/covidcaremap/covid19-healthsystemcapacity/tree/master/data
 # Read in data
 data <- "https://raw.githubusercontent.com/covidcaremap/covid19-healthsystemcapacity/v0.2/data/published/us_healthcare_capacity-facility-CovidCareMap.csv"
 hospitals <- read.csv(data)
@@ -28,9 +28,12 @@ hospitals <- read.csv(data)
 # Save raw hospital dataset
 # write.csv(hospitals, "data_raw/hospitals_raw.csv")
 
-#### Part 2) Nearest Resource Analysis ####
+# Read in hospitals data, remove overseas territories
+hospitals <- read.csv("Policy_Scan/data_raw/hospitals_raw.csv") %>%
+  filter(!State %in% c("GU", "MP", "PW", "AS", "VI"))
+unique(hospitals$State)
 
-str(hospitals)
+#### Part 2) Nearest Resource Analysis ----
 
 # Convert to spatial data
 hospitals.sf <- st_as_sf(hospitals,
@@ -42,22 +45,19 @@ str(hospitals.sf)
 hospitals.sf <- hospitals.sf[,1:8]
 str(hospitals.sf)
 
+# Simple plot
 plot(st_geometry(hospitals.sf))
 
 # Read in location data
 zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp")
 tracts <- read_sf("data_final/geometryFiles/tl_2018_tract/tracts2018.shp")
 
-# Check & transform CRS to projected EPSG:3857, with unit measurement of meters
-st_crs(zips)
+# Transform CRS to projected EPSG:3857, with unit measurement of meters
 zips <- st_transform(zips, 3857)
-
 tracts <- st_transform(tracts, 3857)
-
-st_crs(hospitals.sf)
 hospitals.sf <- st_transform(hospitals.sf, 3857)
 
-##### Calculate Centroids - Zip Codes #####
+##### Nearest Hospital - ZCTA ----
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
@@ -70,22 +70,22 @@ nearestHospital <-  hospitals.sf[nearestHospital_index,]
 head(nearestHospital)
 
 # Calculate distance
-minDistZips <- st_distance(zipCentroids, nearestHospital, by_element = TRUE)
-head(minDistZips) #meters
+minDistZipsHosp <- st_distance(zipCentroids, nearestHospital, by_element = TRUE)
+head(minDistZipsHosp) #meters
 
 # Change from meters to miles
-minDistZ_mi <- set_units(minDistZips, "mi")
-head(minDistZ_mi)
+minDistZipsHosp_mi <- set_units(minDistZipsHosp, "mi")
+head(minDistZipsHosp_mi)
 
 # Merge data - rejoin minDist_mi to zips
-minDistZips_sf <- cbind(zips, minDistZ_mi)
-head(minDistZips_sf)
+minDistZipsHosp_sf <- cbind(zips, minDistZipsHosp_mi)
+head(minDistZipsHosp_sf)
 
 # Clean up data
-minDistZips_sf <- minDistZips_sf %>% select(GEOID10, ZCTA5CE10, AFFGEOID10, minDistZ_mi)
-head(minDistZips_sf)
+minDistZipsHosp_sf <- minDistZipsHosp_sf %>% select(ZCTA = ZCTA5CE10, minDisHosp = minDistZipsHosp_mi)
+head(minDistZipsHosp_sf)
 
-##### Calculate Centroids - Tracts #####
+##### Nearest Hospital - Tracts ----
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
@@ -98,28 +98,29 @@ nearestHospital_tract <- hospitals.sf[nearestHospital_index_tract, ]
 head(nearestHospital_tract)
 
 # Calculate distance
-minDistTracts <- st_distance(tractCentroids, nearestHospital_tract, by_element = TRUE)
-head(minDistTracts) #meters
+minDistTractsHosp <- st_distance(tractCentroids, nearestHospital_tract, by_element = TRUE)
+head(minDistTractsHosp) #meters
 
 # Change from meters to miles
-minDistTracts_mi <- set_units(minDistTracts, "mi")
-head(minDistTracts_mi)
+minDistTractsHosp_mi <- set_units(minDistTractsHosp, "mi")
+head(minDistTractsHosp_mi)
 
 # Merge data - rejoin minDist_mi to zips
-minDistTracts_sf <- cbind(tracts, minDistTracts_mi)
-head(minDistTracts_sf)
+minDistTractsHosp_sf <- cbind(tracts, minDistTractsHosp_mi)
+head(minDistTractsHosp_sf)
 
 # Clean up data
-minDistTracts_sf <- minDistTracts_sf %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, minDistT_mi = minDistTracts_mi)
-head(minDistTracts_sf)
+minDistTractsHosp_sf <- minDistTractsHosp_sf %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, 
+                                                        minDisHosp = minDistTractsHosp_mi)
+head(minDistTractsHosp_sf)
 
-#### Part 3) Save final Access datasets ####
+#### Part 3) Save final datasets ----
 
-# Save zips
-write_sf(minDistZips_sf, "data_final/Access03_Z.csv")
+# Save ZCTA file
+write_sf(minDistZipsHosp_sf, "Policy_Scan/data_final/Access03_Z.csv")
 
-# Save tracts
-write_sf(minDistTracts_sf, "data_final/Access03_T.csv")
+# Save tract file
+write_sf(minDistTractsHosp_sf, "Policy_Scan/data_final/Access03_T.csv")
 
 
 

@@ -20,9 +20,7 @@ library(sf)
 library(tmap)
 library(units)
 
-setwd("~/git/opioid-policy-scan/Policy_Scan/data_raw")
-
-# Load full business dataset
+# Load full raw business dataset
 pharmacies <- read.table("2019_Business_Academic_QCQ.txt", sep = ",", header = TRUE)
 
 # Explore structure and variable names
@@ -49,7 +47,7 @@ unique(pharmacies_clean$State)
 #write.csv(pharmacies_clean, "pharmacies_2019.csv")
 
 # Read in clean pharmacy dataset
-pharmacies <- read.csv("pharmacies_2019.csv")
+pharmacies <- read.csv("Policy_Scan/data_raw/pharmacies_2019.csv")
 
 # Remove NAs / missing data from longitude
 which(is.na(pharmacies$Longitude)) # row 10667 Longitude is NA
@@ -67,7 +65,7 @@ pharmacies.sf <- st_as_sf(pharmacies,
 # Quick plot
 plot(st_geometry(pharmacies.sf))
 
-#### Part 2) Nearest Resource Analysis ---
+#### Part 2) Nearest Resource Analysis ----
 
 # Read in location data
 zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp")
@@ -81,9 +79,7 @@ tracts <- st_transform(tracts, 3857)
 st_crs(pharmacies.sf)
 pharmacies.sf <- st_transform(pharmacies.sf, 3857)
 
-##### Part 2) Nearest Resource Analysis ----
-
-# Calculate Centroids - Zip Codes 
+#### Nearest Pharmacies - ZCTAs ----
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
@@ -93,25 +89,24 @@ zipCentroids
 # This will return index, so then subset pharmacies by the index to get the nearest location 
 nearestPharma_index <- st_nearest_feature(zipCentroids, pharmacies.sf)
 nearestPharma <- pharmacies.sf[nearestPharma_index,]
-nearestPharma
 
 # Calculate distance
-minDistZips <- st_distance(zipCentroids, nearestPharma, by_element = TRUE)
-head(minDistZips) #meters
+minDistZPharma <- st_distance(zipCentroids, nearestPharma, by_element = TRUE)
+head(minDistZPharma) #meters
 
 # Change from meters to miles
-minDistZ_mi <- set_units(minDistZips, "mi")
-head(minDistZ_mi)
+minDistZPharma_mi <- set_units(minDistZPharma, "mi")
+head(minDistZPharma_mi)
 
 # Merge data - rejoin minDist_mi to zips
-minDistZips_sf <- cbind(zips, minDistZ_mi)
-head(minDistZips_sf)
+minDistZPharma_sf <- cbind(zips, minDistZPharma_mi)
+head(minDistZPharma_sf)
 
 # Clean up data
-minDistZips_sf <- minDistZips_sf %>% select(GEOID10, ZCTA5CE10, AFFGEOID10, minDistZ_mi)
-head(minDistZips_sf)
+minDistZPharma_sf <- minDistZPharma_sf %>% select(ZCTA = ZCTA5CE10, minDisRx = minDistZPharma_mi)
+head(minDistZPharma_sf)
 
-# Calculate Centroids - Census Tracts
+#### Nearest Pharmacies - Tracts ----
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
@@ -124,25 +119,25 @@ nearestPharma_tract <- pharmacies.sf[nearestPharma_index_tract, ]
 nearestPharma_tract
 
 # Calculate distance
-minDistTracts <- st_distance(tractCentroids, nearestPharma_tract, by_element = TRUE)
-head(minDistTracts) #meters
+minDistPharmaT <- st_distance(tractCentroids, nearestPharma_tract, by_element = TRUE)
+head(minDistPharmaT) #meters
 
 # Change from meters to miles
-minDistTracts_mi <- set_units(minDistTracts, "mi")
-head(minDistTracts_mi)
+minDistPharmaT_mi <- set_units(minDistPharmaT, "mi")
+head(minDistPharmaT_mi)
 
 # Merge data - rejoin minDist_mi to zips
-minDistTracts_sf <- cbind(tracts, minDistTracts_mi)
-head(minDistTracts_sf)
+minDistPharmaT_sf <- cbind(tracts, minDistPharmaT_mi)
+head(minDistPharmaT_sf)
 
 # Clean up data
-minDistTracts_sf <- minDistTracts_sf %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, minDistT_mi = minDistTracts_mi)
-head(minDistTracts_sf)
+minDistPharmaT_sf <- minDistPharmaT_sf %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, minDisRx = minDistPharmaT_mi)
+head(minDistPharmaT_sf)
 
-#### Part 3) Save final Access Metrics ----
+#### Part 3) Save final datasets ----
 
 # Save zips
-write_sf(minDistZips_sf, "data_final/Access04_Z.csv")
+write_sf(minDistZPharma_sf, "Policy_Scan/data_final/Access04_Z.csv")
 
 # Save tracts
-write_sf(minDistTracts_sf, "data_final/Access04_T.csv")
+write_sf(minDistPharmaT_sf, "Policy_Scan/data_final/Access04_T.csv")
