@@ -24,22 +24,15 @@ Tracts (Access03_T):
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Full GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
+| Access to Hospitals | minDisHosp | Euclidean distance from centroid to nearest hospital, in miles |
+| Census Tract GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to Nearest Hospital | minDistT_mi | Euclidean distance from centroid to nearest hospital, in miles |
-
-Zip Code (Access03_Z):
-
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Full GEOID | GEOID10 | Unique GEOID, same as zip code |
-| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Assigned ZCTA by the USPS |
-| Access to Nearest Hospital | minDistZ_mi | Euclidean distance from centroid to nearest hospital, in miles |
+| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code |
 
 ### Data Limitations:
 Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. 
 
 ### Comments/Notes:
-This dataset includes all US states, Washington D.C., and territories, including: Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
+This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
