@@ -20,23 +20,14 @@ Data was downloaded and sourced from InfoGroup's historical dataset, filtered fo
 
 ### Key Variable and Definitions:
 
-Tracts ([Access05_T](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
-
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | GEOID | Unique GEOID, including state, county, and tract IDs |
+| GEOID | GEOID | Unique 11-digit GEOID, including state, county, and tract IDs |
 | State | STATEFP | Unique 2-digit ID for states |
 | County | COUNTYFP | 3-digit ID for counties |
 | Census Tract | TRACTCE | 6-digit ID for census tracts |
-| Access to pharmacies | minDistT_mi | Euclidean distance from centroid to nearest pharmacy, in miles |
-
-Zip Code ([Access05_Z](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final)):
-
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Full GEOID | GEOID10 | Unique GEOID, same as zip code |
-| Zip code tract area | ZCTA5CE10 | Zip code |
-| Access to pharmacies | minDistZ_mi | Euclidean distance from centroid to nearest pharmacy, in miles |
+| ZIP Code Tract Area (ZCTA) | ZCTA | Unique 5-digit assigned ZCTA, usually same as ZIP Code |
+| Access to pharmacies | minDisRx | Euclidean distance from tract or zip centroid to nearest pharmacy, in miles |
 
 ### Data Limitations:
 Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.
