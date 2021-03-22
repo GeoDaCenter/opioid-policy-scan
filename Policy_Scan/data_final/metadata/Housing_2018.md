@@ -1,16 +1,16 @@
-**Meta Data Name**: 2018 Housing variables, part of the Physical Factors dataset  
-**Last Modified**: October 22nd, 2020  
-**Author**: Moksha Menghaney  
+**Meta Data Name**: Housing Variables  
+**Last Modified**: October 22, 2020  
+**Author**: Moksha Menghaney, updates by Susan Paykin   
 
 ### Data Location: 
-HS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * HS01_T  
 * HS01_Z  
 * HS01_C  
 * HS01_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B25002, B25024, B25003, and B25026 at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
+Variables were obtained from the 2014 - 2018 American Community Survey (ACS), tables B25002, B25024, B25003, and B25026, each at the State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
 B25002 : Occupancy status <br>
@@ -41,18 +41,18 @@ The following variables were included from **B25026**:
   6. Estimate; Total Population in renter occupied units moved in between 1990 and 1999
 
 ----------
-* Occupancy was calculated as : *Occupied units / total units*  
+* **Occupancy rate** was calculated as : *Occupied units / Total units*  
 
-* Vacancy was calculated as : *Vacant units / total units*  
+* **Vacancy rate** was calculated as : *Vacant units / Total units*  
 
-* Percetange of Mobile homes was calculated as : *Mobile units / total units*   
+* **Rental rate** was calculated as : *Renter occupied units / Total occupied units*  
 
-* Rental percentage was calculated as : *Renter occupied units / total occupied units*  
+* **Percentange of mobile housing structures** was calculated as : *Mobile units / Total units*   
 
-* Long-term occupancy was calculated as : *(Owner & renter populations moved in before 1989 +  Owner & renter population moved in between 1990 & 1999)/ (total population in owner & renter occupied units)*  
+* **Long-term occupancy rate** was calculated as : *(Owner & renter populations moved in before 1989 + Owner & renter population moved in between 1990 & 1999) / (Total population in owner & renter occupied units)*  
 
-* Housing Unit Density was calculated as : *Total Housing Units/Land area in Square Miles*  
-Land Area was sourced from geometry files and converted to square miles on dividing by 2590000
+* **Housing Unit Density** was calculated as : *Total Housing Units / Land area in square miles*  
+Note: Total land area for each spatial scale was sourced from geometry files and converted to square miles.
 
 
 ### Key Variable and Definitions:
@@ -61,7 +61,7 @@ Land Area was sourced from geometry files and converted to square miles on divid
 | Occupancy Rate | occP | Percent housing units occupied |
 | Vacancy Rate | vacantP | Percent housing units vacant |
 | Rental Rate | rentalP | Percent occupied housing units on rent |
-| Mobile Houses | mobileP | Percent mobile housing structures |
+| Mobile Homes | mobileP | Percent mobile housing structures |
 | Long-term Occupancy | lngTermP | Percent population that moved into current housing 20 years or before |
 | Housing Unit Density | unitDens | Number of housing units per square mile of land area |
 
