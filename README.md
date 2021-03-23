@@ -19,6 +19,11 @@ We welcome questions, comments or feedback through the [Request Form](https://do
 
 ## Data Overview
 
+### Geographic Boundaries
+| Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
+|:------------------ | :------------- | :----- | :------- | :------------ | :------|
+| Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census, 2018 | [Geographic Boundaries](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/Policy_Scan/data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip | Complete |
+
 ### Policy Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | :------------- | :----- | :------- | :------------ | :------|
