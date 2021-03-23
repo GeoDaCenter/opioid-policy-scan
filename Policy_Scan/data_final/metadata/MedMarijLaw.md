@@ -1,30 +1,30 @@
-**Meta Data Name**: Medical Marijuana policy variables, part of the Policy dataset  
-**Last Modified**: March 2nd, 2021
+**Meta Data Name**: Medical Marijuana Policies  
+**Last Modified**: March 2, 2021  
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-PS09 - Medical Marijuana policy variables at the state level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+PS09 - at the state level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * PS09_2017_S  
 
 ### Data Source(s) Description:  
-Variable was obtained from Prescription Drug Abuse Policy System, Medical Marijuana Caregiver Rules: http://pdaps.org/datasets/rules-of-caregivers-medical-marijuana-1501610940. 
+Variable was obtained from Prescription Drug Abuse Policy System, [Medical Marijuana Caregiver Rules](http://pdaps.org/datasets/rules-of-caregivers-medical-marijuana-1501610940). This is a longitudinal dataset, displaying medical marijuana caregiver laws in effect as of January 1, 2014 through February 1, 2017.
 
-See Comments/Notes for where to find more detailed variables regarding medical marijuana related policies. 
+See **Comments/Notes** section below for where to find more detailed variables regarding medical marijuana related policies. 
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
-1. Have a law authorizing adults to use medical marijuana;
+1. Dummy variable; State has a law authorizing adults to use medical marijuana
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Have a law authorizing adults to use medical marijuana | MedMarijLaw | whether the state has a law authorizing adults to use medical marijuana |
+| Law authorizing adults to use medical marijuana | MedMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0 = no, 1 = yes) |
 
 ### Data Limitations:
-NA
+N/A
 
 ### Comments/Notes:
-The variables included here are very high-level and for Feb 1, 2017. For more detailed and longitudinal data, we recommend the following datasets from Prescription Drug Abuse Policy System: 
+The variables included here are very high-level and collected as of Feb 1, 2017. For more detailed and longitudinal data, we recommend the following datasets from Prescription Drug Abuse Policy System: 
 1. [Medical Marijuana Caregiver Rubles from 2003 to 2017](http://pdaps.org/datasets/rules-of-caregivers-medical-marijuana-1501610940)
 2. [Medical Marijuana Dispensaries from 1999 to 2017](http://pdaps.org/datasets/dispensaries-medical-marijuana-1501611712)
 3. [Medical Marijuana Laws for Patients from 2009 to 2017](http://pdaps.org/datasets/medical-marijuana-patient-related-laws-1501600783)
