@@ -41,8 +41,7 @@ We welcome questions, comments or feedback through the [Request Form](https://do
 |:------------------ | :------------- | :----- | :------- | :------------ | :------|
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2009-2019 | Health01 / [Drug-Related Death Rate](Policy_Scan/data_final/metadata/Health_DrugDeaths.md) | State, County | Complete |
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS, 2014-2018 | Health02 / [Hepatitis C Rate](Policy_Scan/data_final/metadata/HepC_rate.md) | State | Complete |
-| Primary Care Physicians | Number of PC Physicians| Dartmouth Atlas, 2010 | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
-| Speciality Care Physicians | Number of Specialist Physicians | Darthmouth Atlas, 2010 | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
+| Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](Policy_Scan/data_final/metadata/Health_PCPs.md) | Tract, County, State | Complete |
 | Access to MOUDs | Distance to nearest MOUD | US Census, SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](Policy_Scan/data_final/metadata/Access_MOUDs.md) | Tract, Zip | Complete |
 | Access to Health Centers | Distance to nearest FQHC | US Census, US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](Policy_Scan/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | Complete |
 | Access to Hospitals | Distance to nearest hospital | US Census, CovidCareMap, 2020 |  Access03 / [Access: Hospitals](Policy_Scan/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip | Complete |
@@ -54,20 +53,17 @@ We welcome questions, comments or feedback through the [Request Form](https://do
 ### Demographic Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
-| Percentage Black, Percentage White | Population with race identified as Black or African American alone, Population with race identified as white alone | ACS, 2014-2018 | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
-| Percentage Hispanic | Population with ethnicity identified as Hispanic or Latinx origin | ACS, 2014-2018 | DS01 / [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
+| Race & Ethnicity | Percentages of population defined by categories of race and ethnicity | ACS, 2014-2018 | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
+| Age | Percentages of population between ages 15-24, below age 45, and above age 65 | ACS, 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Population with a Disability | Percentage of population with a disability | ACS, 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | Educational Attainment | Population without a high school degree | ACS, 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
-| Population over 65 | Population over age 65 | ACS, 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
-| Population under 25 | Young adult population between ages 15-24 | ACS, 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 
 <br>
 
 ### Economic Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
-| High Risk of Injury Jobs | Population employed in agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, and utilities industries | ACS, 2014-2018 |  EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
-| Essential Worker Jobs | See below, under *COVID Variables* | 
+| Employment Trends | Percentages of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries | EC01/ [Jobs by Industry](Policy_Scan/data_final/metadata/Job_Categories_byIndustry_2018.md)| State, County, Tract, Zip | Complete |
 | Unemployment Rate | Unemployment rate | ACS, 2014-2018 | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | Complete |
 | Poverty Rate | Percent classified as below poverty level, based on income | ACS, 2014-2018 | EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
 | Per Capita Income | Per capita income in the past 12 months | ACS, 2014-2018 |  EC03/ [Economic Variables](Policy_Scan/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | Complete |
@@ -95,8 +91,8 @@ We welcome questions, comments or feedback through the [Request Form](https://do
 ### COVID Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
-| Essential Worker Jobs | Percentage of population employed in occupations deemed *essential* during the COVID-19 crisis | ACS, 2014-2018 | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
-| Cumulative Case Count | Daily case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID01 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Adjusted Case Count per 100K | Daily case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID02 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Historical 7-day Average Case Count | 7-day average case count, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID03 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
-| Historical 7-day Average Adjusted Case Count per 100K | 7-day average case rate, 01/21/20 - 03/03/2021 | The New York Times, 2021 | COVID04 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Essential Worker Jobs | Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic | ACS, 2014-2018 | EC02 / [Jobs by Occupation](Policy_Scan/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | Complete |
+| Cumulative Case Count | Daily cumulative raw case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID01 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Adjusted Case Count per 100K | Daily cumulative adjusted case count per 100K population (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID02 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| 7-day Average Case Count | 7-day average case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID03 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
+| Historical 7-day Average Adjusted Case Count per 100K | 7-day average adjusted case count per 100K population (01/21/20 - 03/03/2021)| The New York Times, 2021 | COVID04 / [COVID Variables](Policy_Scan/data_final/metadata/COVID.md) | State, County | Complete |
