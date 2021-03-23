@@ -3,8 +3,8 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-PS11 - Policy Scan Environment Report. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
-* PS11_2018_S
+PS11 - at the state level, with aggregate local-level spending indicators included in the state-level dataset. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+* PS11_S
 
 ### Data Source(s) Description:  
 
