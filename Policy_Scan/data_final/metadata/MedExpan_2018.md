@@ -1,13 +1,13 @@
-**Meta Data Name**: 2019 Medicaid expenditure variables, part of the Policy dataset  
-**Last Modified**: Jan 11th, 2021
+**Meta Data Name**: Medicaid Expansion  
+**Last Modified**: January 11, 2021  
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-PS07 - Medicaid Expenditure policy variables at the state level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+PS07 - at the state level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * PS07_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from Kaiser Family Foundation (KFF). https://www.kff.org/medicaid/state-indicator/medicaid-expansion-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Total%20Medicaid%20Spending%22,%22sort%22:%22desc%22%7D on Jan 11th, 2021. Raw data is downloaded in the folder of data_raw, named as "raw_data_medi_expan.csv". The sources are from he Centers for Medicare and Medicaid Services (CMS) [Medicaid Budget and Expenditure System (MBES)](https://www.medicaid.gov/medicaid/financing-and-reimbursement/state-expenditure-reporting/expenditure-reports/index.html).
+Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/medicaid-expansion-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Total%20Medicaid%20Spending%22,%22sort%22:%22desc%22%7D), accessed January 11, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_raw), named as *raw_data_medi_expan.csv*. Kaiser Family Foundation uses data in its analysis from the Centers for Medicare and Medicaid Services (CMS) [Medicaid Budget and Expenditure System (MBES)](https://www.medicaid.gov/medicaid/financing-and-reimbursement/state-expenditure-reporting/expenditure-reports/index.html).
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
@@ -27,9 +27,8 @@ The following variables were included from the source data:
 | Expansion state spending | ExpnSttExp | Expansion Group - State Spending |
 
 
-
 ### Data Limitations:
-N/A.
+N/A
 
 ### Comments/Notes:
 1. Medicaid is financed by both the federal government and the states using a formula that is based on a state's per capita income. The federal share (FMAP) varies by state from a floor of 50% to a high of 74% with exceptions for certain services or populations. The Affordable Care Act (ACA) expanded Medicaid eligibility for adults under age 65 and provided the states that chose to expand with an Enhanced FMAP of 100% federal funding through 2016 for the newly eligible adults. The federal share for the expansion population phased down to 95% in 2017 and to 90% by 2020 and beyond. 
