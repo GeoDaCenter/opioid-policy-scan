@@ -3,12 +3,15 @@
 
 # Opioid Environment Data Warehouse
 
-This repository stores R scripts used to wrangle, clean, join, and visualize data
-for the JCOIN Opioid Environment Data Warehouse.
+*Updated: March 2021*
+
+This repository stores R scripts used to wrangle, clean, join, and visualize data for the JCOIN Opioid Environment Data Warehouse.
 
 The data included in this analysis will be further developed as a data and visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
 
-Data requests and feedback can be submitted [here](https://docs.google.com/forms/d/e/1FAIpQLSd53yogyubGxepfwQymS_699DIGRpraSNaKb0PEPMl9rCo1Tg/viewform).
+For more information about the data included, please refer to the [Data Dictionary](https://docs.google.com/spreadsheets/d/1qOFYjOvU0A9XBdTUQ-n1thfeJ7vP1Aswx7fULBv-QUY/edit?usp=sharing). 
+
+We welcome questions, comments or feedback through the [Request Form](https://docs.google.com/forms/d/e/1FAIpQLSd53yogyubGxepfwQymS_699DIGRpraSNaKb0PEPMl9rCo1Tg/viewform).
 
 ## Team
 
@@ -76,15 +79,15 @@ Data requests and feedback can be submitted [here](https://docs.google.com/forms
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Housing Occupancy Rate | Percent occupied units | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Vacancy Rate | Percent vacant units | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
+| Housing Vacancy Rate | Percent vacant units | ACS 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Long Term Occupancy | Percentage of population living in current housing for 20+ years | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Mobile Homes | Percent of housing units classified as mobile homes | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Rental Rates | Percent of housing units occupied by renters  | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
 | Housing Unit Density | Housing units per square mile | ACS, 2014-2018 | HS01 / [Housing Variables](Policy_Scan/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | Complete |
-| Urban/Suburban/Rural | Classification of census tracts & ZCTAs as rural, urban and suburban using percent rurality (County) or RUCA Codes (Tract, Zip) | USDA & ACS, 2014-2018 | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
-| Alcohol Outlet Density | Alcohol outlets per square mile and alcohol outlets per capita | InfoGroup, 2018 | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
-| Hypersegregated Cities | American metropolitan areas where black residents experience hypersegregation | Massey et al, 2015 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
-| Southern Black Belt | Southern US counties where 30% of the population identified as Black or African American | US Census, 2000 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Urban/Suburban/Rural Classification | Classification of areas as rural, urban or suburban using percent rurality (County) or RUCA Codes (Tract, Zip) | USDA & ACS, 2014-2018 | HS02 / [Rural-Urban Classifications](Policy_Scan/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | Complete |
+| Alcohol Outlet Density | Alcohol outlets per square mile, alcohol outlets per capita | InfoGroup, 2018 | HS03 / [Physical Factors](Policy_Scan/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | Complete |
+| Hypersegregated Cities | US metropolitan areas where black residents experience hypersegregation | Massey et al, 2015 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
+| Southern Black Belt | US counties where 30% of the population identified as Black or African American | US Census, 2000 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 | Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER, 2018 | HS04 / [Overlay Variables](Policy_Scan/data_final/metadata/Overlay.md) | County | Complete |
 
 <br>
