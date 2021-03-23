@@ -27,10 +27,11 @@ medi_expan$NAME <- NULL
 medi_expan$Year <- "2018"
 
 # rename variables 
-colnames(medi_expan) <- c("GEOID", 
+colnames(medi_expan) <- c("STATEFP", 
                         "TtlMedExp", "TradFedExp", "TradSttExp", 
                         "ExpnFedExp", "ExpnSttExp", "Year")
 
+# Save final dataaset
 write.csv(medi_expan,"data_final/PS07_2018_S.csv", row.names = FALSE)
 
 

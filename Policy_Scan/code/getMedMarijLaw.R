@@ -2,10 +2,10 @@
 # Date : March 2nd, 2021
 # This code select medical marijuana policy variables from the raw data. 
 
+# Load libraries
 library(readxl)
 library(tidyverse)
 library(sf)
-
 
 # read in raw data
 raw <- read_excel("data_raw/20170919.MM.Caregiver.Stat.Data.xlsx")
@@ -29,8 +29,9 @@ raw$geometry <- NULL
 raw$NAME <- NULL
 
 # rename variables 
-colnames(raw) <- c("GEOID", "MedMarijLaw")
+colnames(raw) <- c("STATEFP", "MedMarijLaw")
 
+# Save final dataset
 write.csv(raw,"data_final/PS09_2017_S.csv", row.names = FALSE)
 
 

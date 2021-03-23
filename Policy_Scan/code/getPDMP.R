@@ -8,7 +8,8 @@ library(sf)
 
 
 # read in raw data
-PDMP <- read_excel("data_raw/policy/PDMP 12-2020/WEB_OPTIC_PDMP.xlsx", sheet = "WEB_PDMP")
+#PDMP <- read_excel("data_raw/policy/PDMP 12-2020/WEB_OPTIC_PDMP.xlsx", sheet = "WEB_PDMP")
+PDMP <- read_excel("data_raw/WEB_OPTIC_PDMP.xlsx", sheet = "WEB_PDMP")
 
 # select PDMP variables
 PDMP_2017 <- PDMP  %>% 
@@ -28,10 +29,11 @@ PDMP_2017$geometry <- NULL
 PDMP_2017$STUSPS <- NULL
 
 # rename variables 
-colnames(PDMP_2017) <- c("GEOID", "Year", 
+colnames(PDMP_2017) <- c("STATEFP", "Year", 
                          "AnyPDMPfr", "AnyPDMPHfr", "OpPDMPfr", "MsAcPDMPfr", "ElcPDMPfr",
                          "AnyPDMPdt", "AnyPDMPHdt", "OpPDMPdt", "MsAcPDMPdt", "ElcPDMPdt")
 
+# Save final dataset
 write.csv(PDMP_2017,"data_final/PS03_2017_S.csv", row.names = FALSE)
 
 

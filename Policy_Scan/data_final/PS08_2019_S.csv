@@ -1,4 +1,4 @@
-GEOID,STUSPS,NAME,expSSP,noPrphLw,ntPrFrDsSy,PrExcInj,PrNtRefInj,noLwRmUnc
+STATEFP,STUSPS,NAME,expSSP,noPrphLw,ntPrFrDsSy,PrExcInj,PrNtRefInj,noLwRmUnc
 28,MS,Mississippi,0,0,0,0,0,1
 37,NC,North Carolina,1,0,0,0,0,0
 40,OK,Oklahoma,0,0,0,0,0,1

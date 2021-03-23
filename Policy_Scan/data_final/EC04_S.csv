@@ -1,52 +1,52 @@
-"","GEOID","st_name","dq_rate"
-"1",1,"Alabama",1.59
-"2",2,"Alaska",0.78
-"3",4,"Arizona",0.94
-"4",5,"Arkansas",1.58
-"5",6,"California",0.89
-"6",8,"Colorado",0.67
-"7",9,"Connecticut",2.06
-"8",10,"Delaware",2.22
-"9",11,"District of Columbia",2.09
-"10",12,"Florida",2.25
-"11",13,"Georgia",1.62
-"12",15,"Hawaii",1.39
-"13",16,"Idaho",0.81
-"14",17,"Illinois",1.7
-"15",18,"Indiana",1.46
-"16",19,"Iowa",1.04
-"17",20,"Kansas",1.12
-"18",21,"Kentucky",1.59
-"19",22,"Louisiana",2.01
-"20",23,"Maine",2.12
-"21",24,"Maryland",2.13
-"22",25,"Massachusetts",1.6
-"23",26,"Michigan",1.08
-"24",27,"Minnesota",0.81
-"25",28,"Mississippi",2.53
-"26",29,"Missouri",1.22
-"27",30,"Montana",0.87
-"28",31,"Nebraska",0.79
-"29",32,"Nevada",1.89
-"30",33,"New Hampshire",0.99
-"31",34,"New Jersey",2.91
-"32",35,"New Mexico",1.69
-"33",36,"New York",2.53
-"34",37,"North Carolina",1.61
-"35",38,"North Dakota",0.63
-"36",39,"Ohio",1.49
-"37",40,"Oklahoma",1.59
-"38",41,"Oregon",1.09
-"39",42,"Pennsylvania",1.89
-"40",44,"Rhode Island",2.04
-"41",45,"South Carolina",1.81
-"42",46,"South Dakota",0.73
-"43",47,"Tennessee",1.38
-"44",48,"Texas",1.39
-"45",49,"Utah",0.88
-"46",50,"Vermont",1.34
-"47",51,"Virginia",1.15
-"48",53,"Washington",1.09
-"49",54,"West Virginia",1.62
-"50",55,"Wisconsin",0.87
-"51",56,"Wyoming",0.92
+STATEFP,st_name,dq_rate
+1,Alabama,1.59
+2,Alaska,0.78
+4,Arizona,0.94
+5,Arkansas,1.58
+6,California,0.89
+8,Colorado,0.67
+9,Connecticut,2.06
+10,Delaware,2.22
+11,District of Columbia,2.09
+12,Florida,2.25
+13,Georgia,1.62
+15,Hawaii,1.39
+16,Idaho,0.81
+17,Illinois,1.7
+18,Indiana,1.46
+19,Iowa,1.04
+20,Kansas,1.12
+21,Kentucky,1.59
+22,Louisiana,2.01
+23,Maine,2.12
+24,Maryland,2.13
+25,Massachusetts,1.6
+26,Michigan,1.08
+27,Minnesota,0.81
+28,Mississippi,2.53
+29,Missouri,1.22
+30,Montana,0.87
+31,Nebraska,0.79
+32,Nevada,1.89
+33,New Hampshire,0.99
+34,New Jersey,2.91
+35,New Mexico,1.69
+36,New York,2.53
+37,North Carolina,1.61
+38,North Dakota,0.63
+39,Ohio,1.49
+40,Oklahoma,1.59
+41,Oregon,1.09
+42,Pennsylvania,1.89
+44,Rhode Island,2.04
+45,South Carolina,1.81
+46,South Dakota,0.73
+47,Tennessee,1.38
+48,Texas,1.39
+49,Utah,0.88
+50,Vermont,1.34
+51,Virginia,1.15
+53,Washington,1.09
+54,West Virginia,1.62
+55,Wisconsin,0.87
+56,Wyoming,0.92

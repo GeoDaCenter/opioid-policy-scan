@@ -6,7 +6,6 @@ library(readxl)
 library(tidyverse)
 library(sf)
 
-
 # read in raw data
 Nal <- read_excel("data_raw/WEB_NAL.xlsx", sheet = "WEB_NAL")
 
@@ -28,7 +27,7 @@ Nal_2017$geometry <- NULL
 Nal_2017$NAME <- NULL
 
 # rename variables 
-colnames(Nal_2017) <- c("GEOID", "Year", 
+colnames(Nal_2017) <- c("STATEFP", "Year", 
                         "AnyNaldt", "NalPrStdt", "NalPresdt",
                         "AnyNalfr", "NalPrStfr", "NalPresfr")
 

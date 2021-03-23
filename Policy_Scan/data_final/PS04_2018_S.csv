@@ -1,4 +1,4 @@
-"GEOID","Year","AnyGSLdt","GSLArrdt","AnyGSLfr","GSLArrfr"
+"STATEFP","Year","AnyGSLdt","GSLArrdt","AnyGSLfr","GSLArrfr"
 "01",2018,2015-06-10,NA,1,0
 "02",2018,2008-09-08,NA,1,0
 "04",2018,2018-04-26,NA,0.666666686534882,0

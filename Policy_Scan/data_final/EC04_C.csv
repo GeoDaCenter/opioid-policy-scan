@@ -1,471 +1,471 @@
-"","GEOID","state","co_name","dq_rate"
-"1",1003,"AL","Baldwin County","0.85"
-"2",1073,"AL","Jefferson County","1.96"
-"3",1081,"AL","Lee County","1.15"
-"4",1089,"AL","Madison County","1.14"
-"5",1097,"AL","Mobile County","2.21"
-"6",1101,"AL","Montgomery County","2.16"
-"7",1117,"AL","Shelby County","1.09"
-"8",1125,"AL","Tuscaloosa County","1.59"
-"9",2020,"AK","Anchorage Municipality","0.77"
-"10",4013,"AZ","Maricopa County","0.85"
-"11",4015,"AZ","Mohave County","0.91"
-"12",4019,"AZ","Pima County","1.18"
-"13",4021,"AZ","Pinal County","1.10"
-"14",4025,"AZ","Yavapai County","0.64"
-"15",4027,"AZ","Yuma County","1.38"
-"16",5007,"AR","Benton County","0.79"
-"17",5119,"AR","Pulaski County","1.76"
-"18",5125,"AR","Saline County","1.49"
-"19",5143,"AR","Washington County","0.92"
-"20",6001,"CA","Alameda County","0.65"
-"21",6007,"CA","Butte County","0.76"
-"22",6013,"CA","Contra Costa County","0.72"
-"23",6017,"CA","El Dorado County","0.66"
-"24",6019,"CA","Fresno County","1.11"
-"25",6029,"CA","Kern County","1.34"
-"26",6037,"CA","Los Angeles County","1.07"
-"27",6041,"CA","Marin County","0.23"
-"28",6047,"CA","Merced County","0.94"
-"29",6053,"CA","Monterey County","0.85"
-"30",6055,"CA","Napa County","0.63"
-"31",6059,"CA","Orange County","0.71"
-"32",6061,"CA","Placer County","0.59"
-"33",6065,"CA","Riverside County","1.26"
-"34",6067,"CA","Sacramento County","0.95"
-"35",6071,"CA","San Bernardino County","1.39"
-"36",6073,"CA","San Diego County","0.75"
-"37",6075,"CA","San Francisco County","0.38"
-"38",6077,"CA","San Joaquin County","1.15"
-"39",6079,"CA","San Luis Obispo County","0.37"
-"40",6081,"CA","San Mateo County","0.51"
-"41",6083,"CA","Santa Barbara County","0.80"
-"42",6085,"CA","Santa Clara County","0.48"
-"43",6087,"CA","Santa Cruz County","0.47"
-"44",6089,"CA","Shasta County","0.85"
-"45",6095,"CA","Solano County","1.15"
-"46",6097,"CA","Sonoma County","0.53"
-"47",6099,"CA","Stanislaus County","0.92"
-"48",6107,"CA","Tulare County","1.14"
-"49",6111,"CA","Ventura County","0.69"
-"50",6113,"CA","Yolo County","0.53"
-"51",8001,"CO","Adams County","0.92"
-"52",8005,"CO","Arapahoe County","0.61"
-"53",8013,"CO","Boulder County","0.22"
-"54",8031,"CO","Denver County","0.55"
-"55",8035,"CO","Douglas County","0.38"
-"56",8041,"CO","El Paso County","0.79"
-"57",8059,"CO","Jefferson County","0.46"
-"58",8069,"CO","Larimer County","0.50"
-"59",8077,"CO","Mesa County","1.51"
-"60",8101,"CO","Pueblo County","1.27"
-"61",8123,"CO","Weld County","0.70"
-"62",9001,"CT","Fairfield County","2.12"
-"63",9003,"CT","Hartford County","1.94"
-"64",9005,"CT","Litchfield County","2.37"
-"65",9007,"CT","Middlesex County","1.36"
-"66",9009,"CT","New Haven County","2.30"
-"67",9011,"CT","New London County","2.03"
-"68",9013,"CT","Tolland County","1.35"
-"69",10001,"DE","Kent County","3.46"
-"70",10003,"DE","New Castle County","2.29"
-"71",10005,"DE","Sussex County","1.43"
-"72",11001,"DC","District of Columbia","2.00"
-"73",12001,"FL","Alachua County","1.90"
-"74",12005,"FL","Bay County","1.38"
-"75",12009,"FL","Brevard County","1.85"
-"76",12011,"FL","Broward County","2.85"
-"77",12015,"FL","Charlotte County","1.70"
-"78",12019,"FL","Clay County","2.31"
-"79",12021,"FL","Collier County","1.34"
-"80",12031,"FL","Duval County","2.34"
-"81",12033,"FL","Escambia County","2.08"
-"82",12053,"FL","Hernando County","2.58"
-"83",12057,"FL","Hillsborough County","2.54"
-"84",12061,"FL","Indian River County","2.03"
-"85",12069,"FL","Lake County","1.93"
-"86",12071,"FL","Lee County","1.30"
-"87",12073,"FL","Leon County","1.89"
-"88",12081,"FL","Manatee County","1.75"
-"89",12083,"FL","Marion County","2.51"
-"90",12085,"FL","Martin County","1.44"
-"91",12086,"FL","Miami-Dade County","2.76"
-"92",12091,"FL","Okaloosa County","1.66"
-"93",12095,"FL","Orange County","2.15"
-"94",12097,"FL","Osceola County","2.36"
-"95",12099,"FL","Palm Beach County","1.84"
-"96",12101,"FL","Pasco County","2.74"
-"97",12103,"FL","Pinellas County","2.16"
-"98",12105,"FL","Polk County","2.52"
-"99",12109,"FL","St. Johns County","1.17"
-"100",12111,"FL","St. Lucie County","2.55"
-"101",12113,"FL","Santa Rosa County","2.11"
-"102",12115,"FL","Sarasota County","1.45"
-"103",12117,"FL","Seminole County","1.84"
-"104",12127,"FL","Volusia County","2.38"
-"105",13051,"GA","Chatham County","1.69"
-"106",13057,"GA","Cherokee County","0.73"
-"107",13063,"GA","Clayton County","3.53"
-"108",13067,"GA","Cobb County","1.10"
-"109",13073,"GA","Columbia County","0.97"
-"110",13077,"GA","Coweta County","1.05"
-"111",13089,"GA","DeKalb County","1.92"
-"112",13097,"GA","Douglas County","2.44"
-"113",13113,"GA","Fayette County","0.95"
-"114",13117,"GA","Forsyth County","0.66"
-"115",13121,"GA","Fulton County","1.43"
-"116",13135,"GA","Gwinnett County","1.42"
-"117",13139,"GA","Hall County","1.03"
-"118",13151,"GA","Henry County","2.09"
-"119",13153,"GA","Houston County","1.29"
-"120",13215,"GA","Muscogee County","1.79"
-"121",13223,"GA","Paulding County","1.89"
-"122",13245,"GA","Richmond County","2.36"
-"123",15001,"HI","Hawaii County","2.36"
-"124",15003,"HI","Honolulu County","1.18"
-"125",15009,"HI","Maui County","1.63"
-"126",16001,"ID","Ada County","0.46"
-"127",16027,"ID","Canyon County","0.84"
-"128",16055,"ID","Kootenai County","0.90"
-"129",17019,"IL","Champaign County","0.80"
-"130",17031,"IL","Cook County","2.16"
-"131",17043,"IL","DuPage County","1.08"
-"132",17089,"IL","Kane County","1.43"
-"133",17093,"IL","Kendall County","2.00"
-"134",17097,"IL","Lake County","1.47"
-"135",17111,"IL","McHenry County","1.53"
-"136",17113,"IL","McLean County","1.05"
-"137",17119,"IL","Madison County","1.53"
-"138",17143,"IL","Peoria County","1.27"
-"139",17161,"IL","Rock Island County","1.27"
-"140",17163,"IL","St. Clair County","1.78"
-"141",17167,"IL","Sangamon County","1.01"
-"142",17179,"IL","Tazewell County","1.24"
-"143",17197,"IL","Will County","1.78"
-"144",17201,"IL","Winnebago County","1.76"
-"145",18003,"IN","Allen County","1.25"
-"146",18039,"IN","Elkhart County","1.37"
-"147",18057,"IN","Hamilton County","0.83"
-"148",18063,"IN","Hendricks County","0.93"
-"149",18081,"IN","Johnson County","1.40"
-"150",18089,"IN","Lake County","2.12"
-"151",18097,"IN","Marion County","1.97"
-"152",18127,"IN","Porter County","1.54"
-"153",18141,"IN","St. Joseph County","1.50"
-"154",18157,"IN","Tippecanoe County","0.95"
-"155",18163,"IN","Vanderburgh County","1.46"
-"156",19103,"IA","Johnson County","0.58"
-"157",19113,"IA","Linn County","0.85"
-"158",19153,"IA","Polk County","1.05"
-"159",19163,"IA","Scott County","1.26"
-"160",20091,"KS","Johnson County","0.69"
-"161",20173,"KS","Sedgwick County","1.20"
-"162",20177,"KS","Shawnee County","1.43"
-"163",20209,"KS","Wyandotte County","2.26"
-"164",21015,"KY","Boone County","1.22"
-"165",21067,"KY","Fayette County","0.90"
-"166",21111,"KY","Jefferson County","1.52"
-"167",21117,"KY","Kenton County","1.60"
-"168",22015,"LA","Bossier Parish","1.35"
-"169",22017,"LA","Caddo Parish","2.45"
-"170",22019,"LA","Calcasieu Parish","1.07"
-"171",22033,"LA","East Baton Rouge Parish","2.03"
-"172",22051,"LA","Jefferson Parish","2.28"
-"173",22055,"LA","Lafayette Parish","1.41"
-"174",22063,"LA","Livingston Parish","2.43"
-"175",22071,"LA","Orleans Parish","2.32"
-"176",22103,"LA","St. Tammany Parish","1.60"
-"177",23005,"ME","Cumberland County","1.24"
-"178",23019,"ME","Penobscot County","2.85"
-"179",23031,"ME","York County","1.85"
-"180",24003,"MD","Anne Arundel County","1.55"
-"181",24005,"MD","Baltimore County","2.40"
-"182",24009,"MD","Calvert County","1.56"
-"183",24013,"MD","Carroll County","1.39"
-"184",24017,"MD","Charles County","3.10"
-"185",24021,"MD","Frederick County","1.56"
-"186",24025,"MD","Harford County","1.73"
-"187",24027,"MD","Howard County","1.25"
-"188",24031,"MD","Montgomery County","1.23"
-"189",24033,"MD","Prince George's County","3.58"
-"190",24037,"MD","St. Mary's County","1.63"
-"191",24043,"MD","Washington County","1.94"
-"192",24510,"MD","Baltimore city","3.62"
-"193",25001,"MA","Barnstable County","1.44"
-"194",25003,"MA","Berkshire County","1.15"
-"195",25005,"MA","Bristol County","1.84"
-"196",25009,"MA","Essex County","1.54"
-"197",25013,"MA","Hampden County","2.52"
-"198",25015,"MA","Hampshire County","1.19"
-"199",25017,"MA","Middlesex County","1.00"
-"200",25021,"MA","Norfolk County","1.31"
-"201",25023,"MA","Plymouth County","2.35"
-"202",25025,"MA","Suffolk County","1.39"
-"203",25027,"MA","Worcester County","2.10"
-"204",26021,"MI","Berrien County","1.22"
-"205",26045,"MI","Eaton County","1.07"
-"206",26049,"MI","Genesee County","1.63"
-"207",26065,"MI","Ingham County","1.18"
-"208",26075,"MI","Jackson County","1.24"
-"209",26077,"MI","Kalamazoo County","0.92"
-"210",26081,"MI","Kent County","0.67"
-"211",26093,"MI","Livingston County","0.56"
-"212",26099,"MI","Macomb County","1.05"
-"213",26115,"MI","Monroe County","1.16"
-"214",26121,"MI","Muskegon County","1.48"
-"215",26125,"MI","Oakland County","0.76"
-"216",26139,"MI","Ottawa County","0.59"
-"217",26145,"MI","Saginaw County","1.57"
-"218",26147,"MI","St. Clair County","0.99"
-"219",26161,"MI","Washtenaw County","0.63"
-"220",26163,"MI","Wayne County","1.83"
-"221",27003,"MN","Anoka County","0.84"
-"222",27019,"MN","Carver County","0.49"
-"223",27037,"MN","Dakota County","0.71"
-"224",27053,"MN","Hennepin County","0.76"
-"225",27109,"MN","Olmsted County","0.60"
-"226",27123,"MN","Ramsey County","0.97"
-"227",27137,"MN","St. Louis County","0.97"
-"228",27139,"MN","Scott County","0.67"
-"229",27145,"MN","Stearns County","0.63"
-"230",27163,"MN","Washington County","0.79"
-"231",27171,"MN","Wright County","0.65"
-"232",28033,"MS","DeSoto County","2.11"
-"233",28047,"MS","Harrison County","1.73"
-"234",28049,"MS","Hinds County","3.20"
-"235",28121,"MS","Rankin County","1.60"
-"236",29019,"MO","Boone County","0.53"
-"237",29047,"MO","Clay County","1.00"
-"238",29077,"MO","Greene County","0.92"
-"239",29095,"MO","Jackson County","1.54"
-"240",29099,"MO","Jefferson County","1.45"
-"241",29183,"MO","St. Charles County","0.85"
-"242",29189,"MO","St. Louis County","1.30"
-"243",29510,"MO","St. Louis city","2.13"
-"244",30111,"MT","Yellowstone County","0.81"
-"245",31055,"NE","Douglas County","0.90"
-"246",31109,"NE","Lancaster County","0.64"
-"247",31153,"NE","Sarpy County","0.66"
-"248",32003,"NV","Clark County","2.07"
-"249",32031,"NV","Washoe County","1.34"
-"250",33011,"NH","Hillsborough County","0.86"
-"251",33013,"NH","Merrimack County","1.20"
-"252",33015,"NH","Rockingham County","1.05"
-"253",33017,"NH","Strafford County","1.05"
-"254",34001,"NJ","Atlantic County","4.53"
-"255",34003,"NJ","Bergen County","2.16"
-"256",34005,"NJ","Burlington County","3.16"
-"257",34007,"NJ","Camden County","3.98"
-"258",34009,"NJ","Cape May County","1.84"
-"259",34013,"NJ","Essex County","4.12"
-"260",34015,"NJ","Gloucester County","3.03"
-"261",34017,"NJ","Hudson County","2.55"
-"262",34019,"NJ","Hunterdon County","1.38"
-"263",34021,"NJ","Mercer County","3.18"
-"264",34023,"NJ","Middlesex County","2.30"
-"265",34025,"NJ","Monmouth County","2.19"
-"266",34027,"NJ","Morris County","1.54"
-"267",34029,"NJ","Ocean County","2.89"
-"268",34031,"NJ","Passaic County","3.51"
-"269",34035,"NJ","Somerset County","1.78"
-"270",34037,"NJ","Sussex County","3.25"
-"271",34039,"NJ","Union County","3.62"
-"272",35001,"NM","Bernalillo County","1.61"
-"273",35013,"NM","Dona Ana County","1.48"
-"274",35043,"NM","Sandoval County","1.97"
-"275",35049,"NM","Santa Fe County","1.61"
-"276",36001,"NY","Albany County","1.72"
-"277",36005,"NY","Bronx County","3.78"
-"278",36007,"NY","Broome County","1.74"
-"279",36027,"NY","Dutchess County","2.91"
-"280",36029,"NY","Erie County","1.58"
-"281",36047,"NY","Kings County","2.88"
-"282",36055,"NY","Monroe County","1.66"
-"283",36059,"NY","Nassau County","2.90"
-"284",36061,"NY","New York County","0.87"
-"285",36063,"NY","Niagara County","1.62"
-"286",36065,"NY","Oneida County","2.11"
-"287",36067,"NY","Onondaga County","1.80"
-"288",36071,"NY","Orange County","3.38"
-"289",36081,"NY","Queens County","3.02"
-"290",36083,"NY","Rensselaer County","2.46"
-"291",36085,"NY","Richmond County","2.79"
-"292",36087,"NY","Rockland County","2.76"
-"293",36091,"NY","Saratoga County","1.34"
-"294",36093,"NY","Schenectady County","2.72"
-"295",36103,"NY","Suffolk County","3.38"
-"296",36111,"NY","Ulster County","3.13"
-"297",36119,"NY","Westchester County","1.97"
-"298",37001,"NC","Alamance County","1.65"
-"299",37019,"NC","Brunswick County","1.23"
-"300",37021,"NC","Buncombe County","1.13"
-"301",37025,"NC","Cabarrus County","1.90"
-"302",37035,"NC","Catawba County","1.44"
-"303",37051,"NC","Cumberland County","2.12"
-"304",37057,"NC","Davidson County","1.35"
-"305",37063,"NC","Durham County","1.57"
-"306",37067,"NC","Forsyth County","1.62"
-"307",37071,"NC","Gaston County","1.96"
-"308",37081,"NC","Guilford County","1.66"
-"309",37097,"NC","Iredell County","1.29"
-"310",37101,"NC","Johnston County","1.51"
-"311",37119,"NC","Mecklenburg County","1.53"
-"312",37129,"NC","New Hanover County","1.34"
-"313",37133,"NC","Onslow County","2.87"
-"314",37147,"NC","Pitt County","1.51"
-"315",37179,"NC","Union County","1.16"
-"316",37183,"NC","Wake County","0.95"
-"317",38017,"ND","Cass County","0.54"
-"318",39017,"OH","Butler County","1.30"
-"319",39025,"OH","Clermont County","1.31"
-"320",39035,"OH","Cuyahoga County","2.17"
-"321",39041,"OH","Delaware County","0.60"
-"322",39045,"OH","Fairfield County","1.12"
-"323",39049,"OH","Franklin County","1.43"
-"324",39057,"OH","Greene County","0.98"
-"325",39061,"OH","Hamilton County","1.43"
-"326",39085,"OH","Lake County","1.31"
-"327",39089,"OH","Licking County","1.27"
-"328",39093,"OH","Lorain County","1.80"
-"329",39095,"OH","Lucas County","1.84"
-"330",39099,"OH","Mahoning County","1.76"
-"331",39103,"OH","Medina County","1.01"
-"332",39113,"OH","Montgomery County","1.80"
-"333",39133,"OH","Portage County","1.02"
-"334",39151,"OH","Stark County","1.43"
-"335",39153,"OH","Summit County","1.48"
-"336",39155,"OH","Trumbull County","1.75"
-"337",39165,"OH","Warren County","0.83"
-"338",40017,"OK","Canadian County","1.33"
-"339",40027,"OK","Cleveland County","1.38"
-"340",40109,"OK","Oklahoma County","1.41"
-"341",40143,"OK","Tulsa County","1.54"
-"342",41005,"OR","Clackamas County","0.85"
-"343",41017,"OR","Deschutes County","0.63"
-"344",41029,"OR","Jackson County","1.52"
-"345",41039,"OR","Lane County","1.12"
-"346",41047,"OR","Marion County","1.37"
-"347",41051,"OR","Multnomah County","0.94"
-"348",41067,"OR","Washington County","0.78"
-"349",42003,"PA","Allegheny County","1.71"
-"350",42007,"PA","Beaver County","1.96"
-"351",42011,"PA","Berks County","1.69"
-"352",42017,"PA","Bucks County","1.49"
-"353",42019,"PA","Butler County","1.14"
-"354",42029,"PA","Chester County","0.97"
-"355",42041,"PA","Cumberland County","1.12"
-"356",42043,"PA","Dauphin County","1.64"
-"357",42045,"PA","Delaware County","2.13"
-"358",42049,"PA","Erie County","1.76"
-"359",42055,"PA","Franklin County","1.47"
-"360",42069,"PA","Lackawanna County","2.05"
-"361",42071,"PA","Lancaster County","1.19"
-"362",42077,"PA","Lehigh County","2.10"
-"363",42079,"PA","Luzerne County","2.65"
-"364",42089,"PA","Monroe County","4.11"
-"365",42091,"PA","Montgomery County","1.23"
-"366",42095,"PA","Northampton County","1.98"
-"367",42101,"PA","Philadelphia County","3.28"
-"368",42125,"PA","Washington County","1.59"
-"369",42129,"PA","Westmoreland County","1.76"
-"370",42133,"PA","York County","1.92"
-"371",44003,"RI","Kent County","2.06"
-"372",44007,"RI","Providence County","2.46"
-"373",44009,"RI","Washington County","1.21"
-"374",45003,"SC","Aiken County","1.59"
-"375",45007,"SC","Anderson County","1.66"
-"376",45013,"SC","Beaufort County","1.47"
-"377",45015,"SC","Berkeley County","2.19"
-"378",45019,"SC","Charleston County","1.39"
-"379",45035,"SC","Dorchester County","2.23"
-"380",45045,"SC","Greenville County","1.38"
-"381",45051,"SC","Horry County","1.29"
-"382",45063,"SC","Lexington County","1.61"
-"383",45079,"SC","Richland County","2.20"
-"384",45083,"SC","Spartanburg County","1.86"
-"385",45091,"SC","York County","1.48"
-"386",46099,"SD","Minnehaha County","0.83"
-"387",47037,"TN","Davidson County","1.13"
-"388",47065,"TN","Hamilton County","1.24"
-"389",47093,"TN","Knox County","0.94"
-"390",47125,"TN","Montgomery County","1.76"
-"391",47149,"TN","Rutherford County","1.13"
-"392",47157,"TN","Shelby County","2.22"
-"393",47163,"TN","Sullivan County","0.75"
-"394",47165,"TN","Sumner County","1.23"
-"395",47187,"TN","Williamson County","0.56"
-"396",47189,"TN","Wilson County","0.91"
-"397",48027,"TX","Bell County","1.71"
-"398",48029,"TX","Bexar County","1.48"
-"399",48039,"TX","Brazoria County","1.32"
-"400",48041,"TX","Brazos County","1.12"
-"401",48061,"TX","Cameron County","1.84"
-"402",48085,"TX","Collin County","0.83"
-"403",48091,"TX","Comal County","0.75"
-"404",48113,"TX","Dallas County","1.64"
-"405",48121,"TX","Denton County","0.81"
-"406",48139,"TX","Ellis County","1.33"
-"407",48141,"TX","El Paso County","1.56"
-"408",48157,"TX","Fort Bend County","1.07"
-"409",48167,"TX","Galveston County","1.37"
-"410",48187,"TX","Guadalupe County","1.28"
-"411",48201,"TX","Harris County","1.53"
-"412",48209,"TX","Hays County","0.74"
-"413",48215,"TX","Hidalgo County","2.17"
-"414",48245,"TX","Jefferson County","2.08"
-"415",48251,"TX","Johnson County","1.59"
-"416",48303,"TX","Lubbock County","1.29"
-"417",48309,"TX","McLennan County","1.09"
-"418",48339,"TX","Montgomery County","1.10"
-"419",48355,"TX","Nueces County","1.32"
-"420",48367,"TX","Parker County","1.39"
-"421",48381,"TX","Randall County","0.89"
-"422",48423,"TX","Smith County","1.40"
-"423",48439,"TX","Tarrant County","1.38"
-"424",48453,"TX","Travis County","0.68"
-"425",48479,"TX","Webb County","2.17"
-"426",48491,"TX","Williamson County","0.67"
-"427",49011,"UT","Davis County","0.74"
-"428",49035,"UT","Salt Lake County","0.88"
-"429",49049,"UT","Utah County","0.70"
-"430",49053,"UT","Washington County","0.70"
-"431",49057,"UT","Weber County","1.23"
-"432",50007,"VT","Chittenden County","0.60"
-"433",51013,"VA","Arlington County","0.43"
-"434",51041,"VA","Chesterfield County","1.26"
-"435",51059,"VA","Fairfax County","0.54"
-"436",51085,"VA","Hanover County","0.81"
-"437",51087,"VA","Henrico County","1.10"
-"438",51107,"VA","Loudoun County","0.59"
-"439",51153,"VA","Prince William County","1.10"
-"440",51177,"VA","Spotsylvania County","1.59"
-"441",51179,"VA","Stafford County","1.19"
-"442",51510,"VA","Alexandria city","0.38"
-"443",51550,"VA","Chesapeake city","1.65"
-"444",51650,"VA","Hampton city","2.26"
-"445",51700,"VA","Newport News city","2.11"
-"446",51710,"VA","Norfolk city","2.28"
-"447",51760,"VA","Richmond city","1.46"
-"448",51810,"VA","Virginia Beach city","1.32"
-"449",53005,"WA","Benton County","1.01"
-"450",53011,"WA","Clark County","0.98"
-"451",53033,"WA","King County","0.80"
-"452",53035,"WA","Kitsap County","1.10"
-"453",53053,"WA","Pierce County","1.73"
-"454",53061,"WA","Snohomish County","1.11"
-"455",53063,"WA","Spokane County","1.22"
-"456",53067,"WA","Thurston County","1.45"
-"457",53073,"WA","Whatcom County","0.83"
-"458",53077,"WA","Yakima County","1.09"
-"459",54003,"WV","Berkeley County","2.03"
-"460",54039,"WV","Kanawha County","1.37"
-"461",55009,"WI","Brown County","0.83"
-"462",55025,"WI","Dane County","0.43"
-"463",55059,"WI","Kenosha County","1.14"
-"464",55079,"WI","Milwaukee County","1.68"
-"465",55087,"WI","Outagamie County","0.70"
-"466",55101,"WI","Racine County","1.07"
-"467",55105,"WI","Rock County","1.45"
-"468",55131,"WI","Washington County","0.51"
-"469",55133,"WI","Waukesha County","0.53"
-"470",55139,"WI","Winnebago County","0.86"
+COUNTYFP,state,county_name,dq_rate
+1003,AL,Baldwin County,0.85
+1073,AL,Jefferson County,1.96
+1081,AL,Lee County,1.15
+1089,AL,Madison County,1.14
+1097,AL,Mobile County,2.21
+1101,AL,Montgomery County,2.16
+1117,AL,Shelby County,1.09
+1125,AL,Tuscaloosa County,1.59
+2020,AK,Anchorage Municipality,0.77
+4013,AZ,Maricopa County,0.85
+4015,AZ,Mohave County,0.91
+4019,AZ,Pima County,1.18
+4021,AZ,Pinal County,1.1
+4025,AZ,Yavapai County,0.64
+4027,AZ,Yuma County,1.38
+5007,AR,Benton County,0.79
+5119,AR,Pulaski County,1.76
+5125,AR,Saline County,1.49
+5143,AR,Washington County,0.92
+6001,CA,Alameda County,0.65
+6007,CA,Butte County,0.76
+6013,CA,Contra Costa County,0.72
+6017,CA,El Dorado County,0.66
+6019,CA,Fresno County,1.11
+6029,CA,Kern County,1.34
+6037,CA,Los Angeles County,1.07
+6041,CA,Marin County,0.23
+6047,CA,Merced County,0.94
+6053,CA,Monterey County,0.85
+6055,CA,Napa County,0.63
+6059,CA,Orange County,0.71
+6061,CA,Placer County,0.59
+6065,CA,Riverside County,1.26
+6067,CA,Sacramento County,0.95
+6071,CA,San Bernardino County,1.39
+6073,CA,San Diego County,0.75
+6075,CA,San Francisco County,0.38
+6077,CA,San Joaquin County,1.15
+6079,CA,San Luis Obispo County,0.37
+6081,CA,San Mateo County,0.51
+6083,CA,Santa Barbara County,0.8
+6085,CA,Santa Clara County,0.48
+6087,CA,Santa Cruz County,0.47
+6089,CA,Shasta County,0.85
+6095,CA,Solano County,1.15
+6097,CA,Sonoma County,0.53
+6099,CA,Stanislaus County,0.92
+6107,CA,Tulare County,1.14
+6111,CA,Ventura County,0.69
+6113,CA,Yolo County,0.53
+8001,CO,Adams County,0.92
+8005,CO,Arapahoe County,0.61
+8013,CO,Boulder County,0.22
+8031,CO,Denver County,0.55
+8035,CO,Douglas County,0.38
+8041,CO,El Paso County,0.79
+8059,CO,Jefferson County,0.46
+8069,CO,Larimer County,0.5
+8077,CO,Mesa County,1.51
+8101,CO,Pueblo County,1.27
+8123,CO,Weld County,0.7
+9001,CT,Fairfield County,2.12
+9003,CT,Hartford County,1.94
+9005,CT,Litchfield County,2.37
+9007,CT,Middlesex County,1.36
+9009,CT,New Haven County,2.3
+9011,CT,New London County,2.03
+9013,CT,Tolland County,1.35
+10001,DE,Kent County,3.46
+10003,DE,New Castle County,2.29
+10005,DE,Sussex County,1.43
+11001,DC,District of Columbia,2
+12001,FL,Alachua County,1.9
+12005,FL,Bay County,1.38
+12009,FL,Brevard County,1.85
+12011,FL,Broward County,2.85
+12015,FL,Charlotte County,1.7
+12019,FL,Clay County,2.31
+12021,FL,Collier County,1.34
+12031,FL,Duval County,2.34
+12033,FL,Escambia County,2.08
+12053,FL,Hernando County,2.58
+12057,FL,Hillsborough County,2.54
+12061,FL,Indian River County,2.03
+12069,FL,Lake County,1.93
+12071,FL,Lee County,1.3
+12073,FL,Leon County,1.89
+12081,FL,Manatee County,1.75
+12083,FL,Marion County,2.51
+12085,FL,Martin County,1.44
+12086,FL,Miami-Dade County,2.76
+12091,FL,Okaloosa County,1.66
+12095,FL,Orange County,2.15
+12097,FL,Osceola County,2.36
+12099,FL,Palm Beach County,1.84
+12101,FL,Pasco County,2.74
+12103,FL,Pinellas County,2.16
+12105,FL,Polk County,2.52
+12109,FL,St. Johns County,1.17
+12111,FL,St. Lucie County,2.55
+12113,FL,Santa Rosa County,2.11
+12115,FL,Sarasota County,1.45
+12117,FL,Seminole County,1.84
+12127,FL,Volusia County,2.38
+13051,GA,Chatham County,1.69
+13057,GA,Cherokee County,0.73
+13063,GA,Clayton County,3.53
+13067,GA,Cobb County,1.1
+13073,GA,Columbia County,0.97
+13077,GA,Coweta County,1.05
+13089,GA,DeKalb County,1.92
+13097,GA,Douglas County,2.44
+13113,GA,Fayette County,0.95
+13117,GA,Forsyth County,0.66
+13121,GA,Fulton County,1.43
+13135,GA,Gwinnett County,1.42
+13139,GA,Hall County,1.03
+13151,GA,Henry County,2.09
+13153,GA,Houston County,1.29
+13215,GA,Muscogee County,1.79
+13223,GA,Paulding County,1.89
+13245,GA,Richmond County,2.36
+15001,HI,Hawaii County,2.36
+15003,HI,Honolulu County,1.18
+15009,HI,Maui County,1.63
+16001,ID,Ada County,0.46
+16027,ID,Canyon County,0.84
+16055,ID,Kootenai County,0.9
+17019,IL,Champaign County,0.8
+17031,IL,Cook County,2.16
+17043,IL,DuPage County,1.08
+17089,IL,Kane County,1.43
+17093,IL,Kendall County,2
+17097,IL,Lake County,1.47
+17111,IL,McHenry County,1.53
+17113,IL,McLean County,1.05
+17119,IL,Madison County,1.53
+17143,IL,Peoria County,1.27
+17161,IL,Rock Island County,1.27
+17163,IL,St. Clair County,1.78
+17167,IL,Sangamon County,1.01
+17179,IL,Tazewell County,1.24
+17197,IL,Will County,1.78
+17201,IL,Winnebago County,1.76
+18003,IN,Allen County,1.25
+18039,IN,Elkhart County,1.37
+18057,IN,Hamilton County,0.83
+18063,IN,Hendricks County,0.93
+18081,IN,Johnson County,1.4
+18089,IN,Lake County,2.12
+18097,IN,Marion County,1.97
+18127,IN,Porter County,1.54
+18141,IN,St. Joseph County,1.5
+18157,IN,Tippecanoe County,0.95
+18163,IN,Vanderburgh County,1.46
+19103,IA,Johnson County,0.58
+19113,IA,Linn County,0.85
+19153,IA,Polk County,1.05
+19163,IA,Scott County,1.26
+20091,KS,Johnson County,0.69
+20173,KS,Sedgwick County,1.2
+20177,KS,Shawnee County,1.43
+20209,KS,Wyandotte County,2.26
+21015,KY,Boone County,1.22
+21067,KY,Fayette County,0.9
+21111,KY,Jefferson County,1.52
+21117,KY,Kenton County,1.6
+22015,LA,Bossier Parish,1.35
+22017,LA,Caddo Parish,2.45
+22019,LA,Calcasieu Parish,1.07
+22033,LA,East Baton Rouge Parish,2.03
+22051,LA,Jefferson Parish,2.28
+22055,LA,Lafayette Parish,1.41
+22063,LA,Livingston Parish,2.43
+22071,LA,Orleans Parish,2.32
+22103,LA,St. Tammany Parish,1.6
+23005,ME,Cumberland County,1.24
+23019,ME,Penobscot County,2.85
+23031,ME,York County,1.85
+24003,MD,Anne Arundel County,1.55
+24005,MD,Baltimore County,2.4
+24009,MD,Calvert County,1.56
+24013,MD,Carroll County,1.39
+24017,MD,Charles County,3.1
+24021,MD,Frederick County,1.56
+24025,MD,Harford County,1.73
+24027,MD,Howard County,1.25
+24031,MD,Montgomery County,1.23
+24033,MD,Prince George's County,3.58
+24037,MD,St. Mary's County,1.63
+24043,MD,Washington County,1.94
+24510,MD,Baltimore city,3.62
+25001,MA,Barnstable County,1.44
+25003,MA,Berkshire County,1.15
+25005,MA,Bristol County,1.84
+25009,MA,Essex County,1.54
+25013,MA,Hampden County,2.52
+25015,MA,Hampshire County,1.19
+25017,MA,Middlesex County,1
+25021,MA,Norfolk County,1.31
+25023,MA,Plymouth County,2.35
+25025,MA,Suffolk County,1.39
+25027,MA,Worcester County,2.1
+26021,MI,Berrien County,1.22
+26045,MI,Eaton County,1.07
+26049,MI,Genesee County,1.63
+26065,MI,Ingham County,1.18
+26075,MI,Jackson County,1.24
+26077,MI,Kalamazoo County,0.92
+26081,MI,Kent County,0.67
+26093,MI,Livingston County,0.56
+26099,MI,Macomb County,1.05
+26115,MI,Monroe County,1.16
+26121,MI,Muskegon County,1.48
+26125,MI,Oakland County,0.76
+26139,MI,Ottawa County,0.59
+26145,MI,Saginaw County,1.57
+26147,MI,St. Clair County,0.99
+26161,MI,Washtenaw County,0.63
+26163,MI,Wayne County,1.83
+27003,MN,Anoka County,0.84
+27019,MN,Carver County,0.49
+27037,MN,Dakota County,0.71
+27053,MN,Hennepin County,0.76
+27109,MN,Olmsted County,0.6
+27123,MN,Ramsey County,0.97
+27137,MN,St. Louis County,0.97
+27139,MN,Scott County,0.67
+27145,MN,Stearns County,0.63
+27163,MN,Washington County,0.79
+27171,MN,Wright County,0.65
+28033,MS,DeSoto County,2.11
+28047,MS,Harrison County,1.73
+28049,MS,Hinds County,3.2
+28121,MS,Rankin County,1.6
+29019,MO,Boone County,0.53
+29047,MO,Clay County,1
+29077,MO,Greene County,0.92
+29095,MO,Jackson County,1.54
+29099,MO,Jefferson County,1.45
+29183,MO,St. Charles County,0.85
+29189,MO,St. Louis County,1.3
+29510,MO,St. Louis city,2.13
+30111,MT,Yellowstone County,0.81
+31055,NE,Douglas County,0.9
+31109,NE,Lancaster County,0.64
+31153,NE,Sarpy County,0.66
+32003,NV,Clark County,2.07
+32031,NV,Washoe County,1.34
+33011,NH,Hillsborough County,0.86
+33013,NH,Merrimack County,1.2
+33015,NH,Rockingham County,1.05
+33017,NH,Strafford County,1.05
+34001,NJ,Atlantic County,4.53
+34003,NJ,Bergen County,2.16
+34005,NJ,Burlington County,3.16
+34007,NJ,Camden County,3.98
+34009,NJ,Cape May County,1.84
+34013,NJ,Essex County,4.12
+34015,NJ,Gloucester County,3.03
+34017,NJ,Hudson County,2.55
+34019,NJ,Hunterdon County,1.38
+34021,NJ,Mercer County,3.18
+34023,NJ,Middlesex County,2.3
+34025,NJ,Monmouth County,2.19
+34027,NJ,Morris County,1.54
+34029,NJ,Ocean County,2.89
+34031,NJ,Passaic County,3.51
+34035,NJ,Somerset County,1.78
+34037,NJ,Sussex County,3.25
+34039,NJ,Union County,3.62
+35001,NM,Bernalillo County,1.61
+35013,NM,Dona Ana County,1.48
+35043,NM,Sandoval County,1.97
+35049,NM,Santa Fe County,1.61
+36001,NY,Albany County,1.72
+36005,NY,Bronx County,3.78
+36007,NY,Broome County,1.74
+36027,NY,Dutchess County,2.91
+36029,NY,Erie County,1.58
+36047,NY,Kings County,2.88
+36055,NY,Monroe County,1.66
+36059,NY,Nassau County,2.9
+36061,NY,New York County,0.87
+36063,NY,Niagara County,1.62
+36065,NY,Oneida County,2.11
+36067,NY,Onondaga County,1.8
+36071,NY,Orange County,3.38
+36081,NY,Queens County,3.02
+36083,NY,Rensselaer County,2.46
+36085,NY,Richmond County,2.79
+36087,NY,Rockland County,2.76
+36091,NY,Saratoga County,1.34
+36093,NY,Schenectady County,2.72
+36103,NY,Suffolk County,3.38
+36111,NY,Ulster County,3.13
+36119,NY,Westchester County,1.97
+37001,NC,Alamance County,1.65
+37019,NC,Brunswick County,1.23
+37021,NC,Buncombe County,1.13
+37025,NC,Cabarrus County,1.9
+37035,NC,Catawba County,1.44
+37051,NC,Cumberland County,2.12
+37057,NC,Davidson County,1.35
+37063,NC,Durham County,1.57
+37067,NC,Forsyth County,1.62
+37071,NC,Gaston County,1.96
+37081,NC,Guilford County,1.66
+37097,NC,Iredell County,1.29
+37101,NC,Johnston County,1.51
+37119,NC,Mecklenburg County,1.53
+37129,NC,New Hanover County,1.34
+37133,NC,Onslow County,2.87
+37147,NC,Pitt County,1.51
+37179,NC,Union County,1.16
+37183,NC,Wake County,0.95
+38017,ND,Cass County,0.54
+39017,OH,Butler County,1.3
+39025,OH,Clermont County,1.31
+39035,OH,Cuyahoga County,2.17
+39041,OH,Delaware County,0.6
+39045,OH,Fairfield County,1.12
+39049,OH,Franklin County,1.43
+39057,OH,Greene County,0.98
+39061,OH,Hamilton County,1.43
+39085,OH,Lake County,1.31
+39089,OH,Licking County,1.27
+39093,OH,Lorain County,1.8
+39095,OH,Lucas County,1.84
+39099,OH,Mahoning County,1.76
+39103,OH,Medina County,1.01
+39113,OH,Montgomery County,1.8
+39133,OH,Portage County,1.02
+39151,OH,Stark County,1.43
+39153,OH,Summit County,1.48
+39155,OH,Trumbull County,1.75
+39165,OH,Warren County,0.83
+40017,OK,Canadian County,1.33
+40027,OK,Cleveland County,1.38
+40109,OK,Oklahoma County,1.41
+40143,OK,Tulsa County,1.54
+41005,OR,Clackamas County,0.85
+41017,OR,Deschutes County,0.63
+41029,OR,Jackson County,1.52
+41039,OR,Lane County,1.12
+41047,OR,Marion County,1.37
+41051,OR,Multnomah County,0.94
+41067,OR,Washington County,0.78
+42003,PA,Allegheny County,1.71
+42007,PA,Beaver County,1.96
+42011,PA,Berks County,1.69
+42017,PA,Bucks County,1.49
+42019,PA,Butler County,1.14
+42029,PA,Chester County,0.97
+42041,PA,Cumberland County,1.12
+42043,PA,Dauphin County,1.64
+42045,PA,Delaware County,2.13
+42049,PA,Erie County,1.76
+42055,PA,Franklin County,1.47
+42069,PA,Lackawanna County,2.05
+42071,PA,Lancaster County,1.19
+42077,PA,Lehigh County,2.1
+42079,PA,Luzerne County,2.65
+42089,PA,Monroe County,4.11
+42091,PA,Montgomery County,1.23
+42095,PA,Northampton County,1.98
+42101,PA,Philadelphia County,3.28
+42125,PA,Washington County,1.59
+42129,PA,Westmoreland County,1.76
+42133,PA,York County,1.92
+44003,RI,Kent County,2.06
+44007,RI,Providence County,2.46
+44009,RI,Washington County,1.21
+45003,SC,Aiken County,1.59
+45007,SC,Anderson County,1.66
+45013,SC,Beaufort County,1.47
+45015,SC,Berkeley County,2.19
+45019,SC,Charleston County,1.39
+45035,SC,Dorchester County,2.23
+45045,SC,Greenville County,1.38
+45051,SC,Horry County,1.29
+45063,SC,Lexington County,1.61
+45079,SC,Richland County,2.2
+45083,SC,Spartanburg County,1.86
+45091,SC,York County,1.48
+46099,SD,Minnehaha County,0.83
+47037,TN,Davidson County,1.13
+47065,TN,Hamilton County,1.24
+47093,TN,Knox County,0.94
+47125,TN,Montgomery County,1.76
+47149,TN,Rutherford County,1.13
+47157,TN,Shelby County,2.22
+47163,TN,Sullivan County,0.75
+47165,TN,Sumner County,1.23
+47187,TN,Williamson County,0.56
+47189,TN,Wilson County,0.91
+48027,TX,Bell County,1.71
+48029,TX,Bexar County,1.48
+48039,TX,Brazoria County,1.32
+48041,TX,Brazos County,1.12
+48061,TX,Cameron County,1.84
+48085,TX,Collin County,0.83
+48091,TX,Comal County,0.75
+48113,TX,Dallas County,1.64
+48121,TX,Denton County,0.81
+48139,TX,Ellis County,1.33
+48141,TX,El Paso County,1.56
+48157,TX,Fort Bend County,1.07
+48167,TX,Galveston County,1.37
+48187,TX,Guadalupe County,1.28
+48201,TX,Harris County,1.53
+48209,TX,Hays County,0.74
+48215,TX,Hidalgo County,2.17
+48245,TX,Jefferson County,2.08
+48251,TX,Johnson County,1.59
+48303,TX,Lubbock County,1.29
+48309,TX,McLennan County,1.09
+48339,TX,Montgomery County,1.1
+48355,TX,Nueces County,1.32
+48367,TX,Parker County,1.39
+48381,TX,Randall County,0.89
+48423,TX,Smith County,1.4
+48439,TX,Tarrant County,1.38
+48453,TX,Travis County,0.68
+48479,TX,Webb County,2.17
+48491,TX,Williamson County,0.67
+49011,UT,Davis County,0.74
+49035,UT,Salt Lake County,0.88
+49049,UT,Utah County,0.7
+49053,UT,Washington County,0.7
+49057,UT,Weber County,1.23
+50007,VT,Chittenden County,0.6
+51013,VA,Arlington County,0.43
+51041,VA,Chesterfield County,1.26
+51059,VA,Fairfax County,0.54
+51085,VA,Hanover County,0.81
+51087,VA,Henrico County,1.1
+51107,VA,Loudoun County,0.59
+51153,VA,Prince William County,1.1
+51177,VA,Spotsylvania County,1.59
+51179,VA,Stafford County,1.19
+51510,VA,Alexandria city,0.38
+51550,VA,Chesapeake city,1.65
+51650,VA,Hampton city,2.26
+51700,VA,Newport News city,2.11
+51710,VA,Norfolk city,2.28
+51760,VA,Richmond city,1.46
+51810,VA,Virginia Beach city,1.32
+53005,WA,Benton County,1.01
+53011,WA,Clark County,0.98
+53033,WA,King County,0.8
+53035,WA,Kitsap County,1.1
+53053,WA,Pierce County,1.73
+53061,WA,Snohomish County,1.11
+53063,WA,Spokane County,1.22
+53067,WA,Thurston County,1.45
+53073,WA,Whatcom County,0.83
+53077,WA,Yakima County,1.09
+54003,WV,Berkeley County,2.03
+54039,WV,Kanawha County,1.37
+55009,WI,Brown County,0.83
+55025,WI,Dane County,0.43
+55059,WI,Kenosha County,1.14
+55079,WI,Milwaukee County,1.68
+55087,WI,Outagamie County,0.7
+55101,WI,Racine County,1.07
+55105,WI,Rock County,1.45
+55131,WI,Washington County,0.51
+55133,WI,Waukesha County,0.53
+55139,WI,Winnebago County,0.86

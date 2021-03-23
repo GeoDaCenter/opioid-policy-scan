@@ -9,7 +9,7 @@ library(stringr)
 
 # read in raw data
 raw_data_medicaid_exp <- read_csv("data_raw/raw_data_medicaid_exp.csv", 
-                                  + col_types = cols(`Total Medicaid Spending` = col_character()))
+                                 col_types = cols(`Total Medicaid Spending` = col_character()))
 
 # generate a new column for the expenditure
 raw_data_medicaid_exp$expnum <- str_remove(raw_data_medicaid_exp$`Total Medicaid Spending`, "[$]")
@@ -33,9 +33,10 @@ raw_data_medicaid_exp$NAME <- NULL
 raw_data_medicaid_exp$Year <- "2019"
 
 # rename variables 
-colnames(raw_data_medicaid_exp) <- c("GEOID", 
+colnames(raw_data_medicaid_exp) <- c("STATEFP", 
                         "TtlMedExpC", "TtlMedExpN", "Year")
 
+# Save final dataset
 write.csv(raw_data_medicaid_exp,"data_final/PS06_2019_S.csv", row.names = FALSE)
 
 

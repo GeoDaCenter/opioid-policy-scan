@@ -6,20 +6,19 @@ library(readxl)
 library(tidyverse)
 library(sf)
 
-
 # read in raw data
 incarceration_trends <- read_excel("data_raw/incarceration_trends.xlsx")
 
 # select jail related variables 
 jail_2017 <- incarceration_trends %>% 
-  select(yfips, year, fips, state, county_name, 
+  select(fips, yfips, year, state, county_name, 
          total_jail_pop_rate, female_jail_pop_rate, male_jail_pop_rate,
          aapi_jail_pop_rate, black_jail_pop_rate, latinx_jail_pop_rate, native_jail_pop_rate,white_jail_pop_rate, 
          total_jail_adm_rate, total_jail_pretrial_rate) %>% 
   filter(year=="2017")
 
 prison_2016 <- incarceration_trends %>% 
-  select(yfips, year, fips, state, county_name, 
+  select(fips, yfips, year, state, county_name, 
          total_prison_pop_rate, female_prison_pop_rate, male_prison_pop_rate,
          aapi_prison_pop_rate, black_prison_pop_rate, latinx_prison_pop_rate, native_prison_pop_rate,white_prison_pop_rate, 
          total_prison_adm_rate, female_prison_adm_rate, male_prison_adm_rate, 
@@ -44,22 +43,19 @@ jail_2017 <- jail_2017 %>%
 prison_2016 <- prison_2016 %>% 
   filter(fips != "02270")
 
-
-write.csv(prison_2016,"data_final/PS01_2016_C.csv", row.names = FALSE)
-write.csv(jail_2017,"data_final/PS02_2017_C.csv", row.names = FALSE)
-
 # rename variables 
-colnames(jail_2017) <- c("YFips", "Year", "Fips", "State", "CountyName", 
+
+colnames(jail_2017) <- c("COUNTYFP", "YFips", "Year", "State", "CountyName", 
          "TtlJlPpr", "FmlJlPpr", "MlJlPpr", "AapiJlPpr", 
          "BlckJlPpr","LtnxJlPpr", "NtvJlPpr", "WhtJlPpr", 
          "TtlJlAdmr", "TtlJlPrtr")
 
-colnames(prison_2016) <- c("YFips", "Year", "Fips", "State", "CountyName", 
+colnames(prison_2016) <- c("COUNTYFP", "YFips", "Year", "State", "CountyName", 
                            "TtlPrPpr", "FmlPrPpr", "MlPrPpr", "AapiPrPpr",
                            "BlckPrPpr","LtnxPrPpr", "NtvPrPpr", "WhtPrPpr",
                            "TtlPrAPpr", "FmlPrAPpr", "MlPrAPpr", "AapiPrAPpr",
                            "BlckPrAPpr","LtnxPrAPpr", "NtvPrAPpr", "WhtPrAPpr")
 
-
-
-
+# Save datasets
+write.csv(prison_2016, "data_final/PS01_2016_C.csv")
+write.csv(jail_2017, "data_final/PS02_2017_C.csv")

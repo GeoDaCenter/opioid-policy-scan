@@ -1,4 +1,4 @@
-"GEOID","Year","AnyNaldt","NalPrStdt","NalPresdt","AnyNalfr","NalPrStfr","NalPresfr"
+"STATEFP","Year","AnyNaldt","NalPrStdt","NalPresdt","AnyNalfr","NalPrStfr","NalPresfr"
 "01",2017,2015-07-01,2015-07-01,NA,1,1,0
 "02",2017,2016-04-01,2016-04-01,NA,1,1,0
 "04",2017,2016-09-01,2016-09-01,NA,1,1,0

@@ -28,10 +28,11 @@ GSL_2018$geometry <- NULL
 GSL_2018$NAME <- NULL
 
 # rename variables 
-colnames(GSL_2018) <- c("GEOID", "Year", 
+colnames(GSL_2018) <- c("STATEFP", "Year", 
                         "AnyGSLdt", "GSLArrdt",
                         "AnyGSLfr", "GSLArrfr")
 
+# Save final dataset
 write.csv(GSL_2018,"data_final/PS04_2018_S.csv", row.names = FALSE)
 
 
