@@ -1,5 +1,4 @@
 **Meta Data Name**: State & Local Government Expenditures  
-**Environment**: Policy Variables   
 **Last Modified**: March 10, 2021    
 **Author**: Susan Paykin  
 
@@ -41,8 +40,6 @@ Data was downloaded, cleaned and prepared for analysis. The expenditure variable
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | geoid | Unique 2-digit identifier for U.S. states |
-| State name | state | U.S. state name |
 | Police & fire expenditures | plcFireExp_X | Total expenditures on police and fire protection|
 | Corrections expenditures | crrctExp_X | Total expenditures on corrections system and operations |
 | Public health expenditures | healthExp_X | Total expenditures on public health and hospitals |
