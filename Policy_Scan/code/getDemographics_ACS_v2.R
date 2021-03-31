@@ -1,5 +1,6 @@
-# Author : Moksha Menghaney
+# Author : Moksha Menghaney, updated by Susan Paykin
 # Date : August 17th, 2020
+# Last modified : March 30, 2021
 # This piece of code will generate DS01 tables for Policy Scan.
 
 library(tidycensus)
@@ -9,7 +10,6 @@ library(geojsonio)
 library(tigris)
 
 #census_api_key("key", install = TRUE)
-
 
 ## identify variables from B02001: RACE table
 #  1. Total Population  B02001_001 Estimate!!Total	
@@ -24,11 +24,16 @@ library(tigris)
 
 ## identify variables from S0101 : AGE & SEX
 #  1. Age  : <5         S0101_C01_002 Estimate!!Total!!Total population!!AGE!!Under 5 years	
-#  2. Age  : Age 15-19  S0101_C01_005 Estimate!!Total!!Total population!!AGE!!15 to 19 years	
-#  3. Age  : Age 20-24  S0101_C01_006	Estimate!!Total!!Total population!!AGE!!20 to 24 years
-#  4. Age  : Age >=65   S0101_C01_030 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!65 years and over	
-#  5. Age  : Age 15-44  S0101_C01_024 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!15 to 44 years	
-#  6. Age  : Age 5-14   S0101_C01_020 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!5 to 14 years	
+#  2. Age  : Age 5-14   S0101_C01_020 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!5 to 14 years	
+#  3. Age  : Age 15-19  S0101_C01_005 Estimate!!Total!!Total population!!AGE!!15 to 19 years
+#  4. Age  : Age 20-24  S0101_C01_006	Estimate!!Total!!Total population!!AGE!!20 to 24 years
+#  5. Age  : Age 15-44  S0101_C01_024 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!15 to 44 years
+#  6. Age  : Age 45-49  S0101_C01_011	Estimate!!Total!!Total population!!AGE!!45 to 49 years
+#  7. Age  : Age 50-54  S0101_C01_012	Estimate!!Total!!Total population!!AGE!!50 to 54 years
+#  8. Age  : Age 55-59  S0101_C01_013	Estimate!!Total!!Total population!!AGE!!55 to 59 years
+#  9. Age  : Age 60-64  S0101_C01_014	Estimate!!Total!!Total population!!AGE!!60 to 64 years
+#  10. Age  : Age >=65  S0101_C01_030 Estimate!!Total!!Total population!!SELECTED AGE CATEGORIES!!65 years and over	
+#  11. Age  : Age >=18  S0101_C02_026	Estimate!!Percent!!Total population!!SELECTED AGE CATEGORIES!!18 years and over
 
 ## identify variables from B06009: PLACE OF BIRTH BY EDUCATIONAL ATTAINMENT IN THE UNITED STATES
 #  1. Pop : PopOver25   B06009_001 Estimate!!Total	Pop over 25
@@ -44,19 +49,20 @@ filename <- c("C","Z","S")
 
 
 ## set the ACS variables
-variablestoFetch <- data.frame(cbind( c('B02001_001','B02001_002','B02001_003','B02001_004','B02001_005','B02001_006',
-                                        'B03003_003','S0101_C01_002','S0101_C01_005','S0101_C01_006' ,'S0101_C01_030','S0101_C01_024','S0101_C01_020',
+variablestoFetch <- data.frame(cbind( c('B02001_001','B02001_002','B02001_003','B02001_004','B02001_005','B02001_006', 'B03003_003',
+                                        'S0101_C01_002','S0101_C01_020','S0101_C01_005','S0101_C01_006','S0101_C01_024', 'S0101_C01_011',
+                                        'S0101_C01_012', 'S0101_C01_013', 'S0101_C01_014', 'S0101_C01_030', 'S0101_C01_026',
                                         'B06009_001','B06009_002','DP02_0071P'),
-                                      c('totPopE','white','black','amerInd','asian','pacificIs',
-                                        'hispanic','age0_4','age15_19','age20_24','ageOv65','age15_44','age5_14',
+                                      c('totPopE','white','black','amerInd','asian','pacificIs','hispanic',
+                                        'age0_4', 'age5_14', 'age15_19','age20_24','age15_44', 'age45_49', 
+                                        'age50_54', 'age55_59', 'age60_64', 'ageOv65', 'ageOv18',
                                         'popOver25','eduNoHS','disbP')))
 colnames(variablestoFetch) <- c('code','name')
 variablestoFetch$code <- as.character(variablestoFetch$code)
 variablestoFetch$name <- as.character(variablestoFetch$name)
 
 # fetch and save each shape
-for (i in 1:length(shapetoFetch))
-{
+for (i in 1:length(shapetoFetch)){
   
   variables <- get_acs(geography = shapetoFetch[i], variables = variablestoFetch$code,
                        year = yeartoFetch, geometry = FALSE) # w/o geometry 
@@ -77,20 +83,23 @@ for (i in 1:length(shapetoFetch))
   varDf$hispP   <-  round(varDf$hispanic*100/varDf$totPopE,2)
   varDf$noHSP   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
   #varDf$InsPop    <-  varDf$totPopE - varDf$nonInsPop
+  varDf$age18_64 <- round(varDf$ageOv18 - varDf$ageOv65,2) 
   varDf$a15_24P  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPopE,2)
   varDf$und45P<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPopE,2)
   varDf$ovr65P <-  round(varDf$ageOv65*100/varDf$totPopE,2)
   varDf$year <- yeartoFetch
   
-  
   varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','pacIsP',
-                    'otherP','hispP','noHSP','a15_24P','und45P','ovr65P','disbP')]
+                    'otherP','hispP','noHSP', 
+                    'age0_4', 'age5_14', 'age15_19','age20_24','age15_44', 'age45_49', 
+                    'age50_54', 'age55_59', 'age60_64', 'ageOv65', 'ageOv18',
+                    'age18_64', 'a15_24P', 'und45P', 'ovr65P', 'disbP')]
   write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
- 
+
 }
 
-## api not working correctly for "tract" so need to run it separately
-# get counties
+## API not working correctly for Tracts, so need to run it separately
+
 states <- tigris::states(year = yeartoFetch)
 territoriesToBeExcluded <- c('60','72','66','69','78') # american territories
 states <- states[!(states$STATEFP %in% territoriesToBeExcluded),]
@@ -117,11 +126,16 @@ varDf$otherP  <-  round(varDf$otherRace*100/varDf$totPopE,2)
 varDf$hispP   <-  round(varDf$hispanic*100/varDf$totPopE,2)
 varDf$noHSP   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
 #varDf$InsPop    <-  varDf$totPopE - varDf$nonInsPop
+varDf$age18_64 <- round(varDf$ageOv18 - varDf$ageOv65,2) 
 varDf$a15_24P  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPopE,2)
 varDf$und45P<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPopE,2)
 varDf$ovr65P <-  round(varDf$ageOv65*100/varDf$totPopE,2)
 varDf$year <- yeartoFetch
 
 varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','pacIsP',
-                  'otherP','hispP','noHSP','a15_24P','und45P','ovr65P','disbP')]
+                  'otherP','hispP','noHSP', 
+                  'age0_4', 'age5_14', 'age15_19','age20_24','age15_44', 'age45_49', 
+                  'age50_54', 'age55_59', 'age60_64', 'ageOv65', 'ageOv18',
+                  'age18_64', 'a15_24P', 'und45P', 'ovr65P', 'disbP')]
+
 write.csv(varDf,paste0('DS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)
