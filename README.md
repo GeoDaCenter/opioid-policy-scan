@@ -59,7 +59,7 @@ We welcome questions, comments or feedback through the [Request Form](https://do
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | Status |
 |:------------------ | -------------- | ------ | -------- | ------------- | -------|
 | Race & Ethnicity | Percentages of population defined by categories of race and ethnicity | ACS, 2014-2018 | DS01/ [Race & Ethnicity Variables](Policy_Scan/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip | Complete |
-| Age | Percentages of population between ages 15-24, below age 45, and above age 65 | ACS, 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
+| Age | Age group estimates and percentages of population | ACS, 2014-2018 | DS01 / [Age Variables](Policy_Scan/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | Complete |
 | Population with a Disability | Percentage of population with a disability | ACS, 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 | Educational Attainment | Population without a high school degree | ACS, 2014-2018 | DS01 / [Other Demographic Variables](Policy_Scan/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | Complete |
 
