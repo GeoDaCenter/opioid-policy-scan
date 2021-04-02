@@ -1,14 +1,14 @@
-**Meta Data Name**: Rural Urban Classification, part of the Physical Factors dataset  
-**Last Modified**: October 27th, 2020  
+**Meta Data Name**: Rural-Urban Classification for Tracts & ZCTAs  
+**Last Modified**: October 27, 2020  
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-HS02 - Policy Scan Environment Report at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS02 at 2 spatial scales. Files can be found [here](/data_final).
 * HS02_RUCA_T  
 * HS02_RUCA_Z  
 
 ### Data Source(s) Description:  
-Tract and Zipcode level classifications were calculated using the Rural-Urban Commuting Area Codes (RUCA codes). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them. Raw data and more details can be found at https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx.
+Tract and ZCTA level classifications were calculated using the [Rural-Urban Commuting Area Codes (RUCA codes)](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them.
 
 
 ### Description of Data Source Tables:
