@@ -1,9 +1,9 @@
-**Meta Data Name**: Primary Care and Specialist Physicians  
+**Meta Data Name**: Primary Care Physicians and Specialist Physicians  
 **Last Modified**: March 3, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Health03 - Policy Scan at 3 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Health03 at 3 spatial scales. Files can be found [here](/data_final).
 * Health03_T  
 * Health03_C
 * Health03_S
