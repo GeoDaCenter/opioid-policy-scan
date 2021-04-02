@@ -3,7 +3,7 @@
 **Author**: Moksha Menghaney & Qinyun Lin  
 
 ### Data Location: 
-EC02 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+EC02 at 4 spatial scales. Files can be found [here](/data_final).
 * EC02_T  
 * EC02_Z  
 * EC02_C  
