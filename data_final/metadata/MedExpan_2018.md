@@ -3,7 +3,7 @@
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-PS07 - at the state level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+PS07 - at the state level. Files can be found [here](/data_final).
 * PS07_S  
 
 ### Data Source(s) Description:  
