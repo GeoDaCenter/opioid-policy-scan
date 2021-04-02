@@ -3,7 +3,7 @@
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-EC01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+EC01 at 4 spatial scales. Files can be found [here](/data_final).
 * EC01_T  
 * EC01_Z  
 * EC01_C  
