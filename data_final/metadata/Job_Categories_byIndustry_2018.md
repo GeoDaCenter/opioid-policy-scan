@@ -1,9 +1,9 @@
-**Meta Data Name**: 2018 Job Category variables, part of the Economic Factors dataset  
-**Last Modified**: October 22nd, 2020  
+**Meta Data Name**: Jobs by Industries  
+**Last Modified**: October 22, 2020  
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-EC01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+EC01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * EC01_T  
 * EC01_Z  
 * EC01_C  
@@ -16,8 +16,13 @@ Variables were obtained from the 2014 - 2018 American Community Survey (ACS), ta
 S2403 : Industry by sex for the civilian employed population 16 years and over 
 
 ### Description of Data Processing: 
-All variables were included from S2403.
+All variables were included from S2403 (2018):
 
+* High risk of injury jobs - S2403_C01_003, S2403_C01_004, S2403_C01_005, S2403_C01_006, and S2403_C01_011  
+* Education jobs - S2403_C01_021 
+* Health care jobs - S2403_C01_022  
+* Retail jobs - S2403_C01_008  
+* 
 ----------
 * Percentage of population employed in High Risk of Injury Jobs was calculated as : 
 *Sum of the workers employed in (<br> 
@@ -39,18 +44,13 @@ All variables were included from S2403.
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % High Risk of Injury Jobs  | hghRskP | Percentage of Population Employed in following Industries : Agriculture, forestry, fishing and hunting, Mining, quarrying, and oil and gas extraction, Construction, Manufacturing, Utilities |
-| % Education Jobs  | eduP | Percentage of Population Employed in Educational services Industry |
-| % Health Care Jobs | hltCrP | Percentage of Population Employed in Health care and social assistance Industry |
-| % Retail Jobs  | retailP | PPercentage of Population Employed in Retail trade Industry|
+| % High Risk of Injury Jobs  | hghRskP | Percentage of population employed in following industries: agriculture, rorestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities |
+| % Education Jobs  | eduP | Percentage of population employed in educational services industry |
+| % Health Care Jobs | hltCrP | Percentage of population employed in health care and social assistance industries |
+| % Retail Jobs  | retailP | Percentage of population employed in retail trade industry |
 
 ### Data Limitations:
-Please note this dataset uses industry as a classifier and doesn't include any information about the specific occupation in that industry. This can lead to an overestimation of High Risk to Injury workers category.
+Please note this dataset uses industry as a classifier and does not include any information about the specific occupation in that industry. This could lead to an overestimation of High Risk to Injury workers category.
 
 ### Comments/Notes:
-Using the API, following variables from table S2403 were identified as 
-
-* High Risk of Injury jobs for 2018 - S2403_C01_003, S2403_C01_004, S2403_C01_005, S2403_C01_006, and S2403_C01_011  
-* Education jobs for 2018 - S2403_C01_021 
-* Health Care jobs for 2018 - S2403_C01_022  
-* Retail jobs for 2018 - S2403_C01_008  
+n/a
