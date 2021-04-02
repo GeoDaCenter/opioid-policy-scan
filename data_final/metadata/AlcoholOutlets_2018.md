@@ -1,9 +1,9 @@
-**Meta Data Name**: Alcohol Outlet Density 
+**Meta Data Name**: Alcohol Outlet Density  
 **Last Modified**: January 12, 2021   
 **Author**: Susan Paykin    
 
 ### Data Location: 
-HS03 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS03 at 4 spatial scales. Files can be found [here](/data_final).
 * HS03_S 
 * HS03_C
 * HS03_T  
