@@ -1,9 +1,9 @@
-**Meta Data Name**: Access to MOUDs, Minimum Distance  
+**Meta Data Name**: Access to MOUDs
 **Last Modified**: March 15, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Access01 - Policy Scan Environment Report at 2 spatial scales - Census Tract and Zip Code Tract Area (ZCTA). Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Access01 at 2 spatial scales. Files can be found [here](/data_final).
 * Access01_T  
 * Access01_Z  
 
@@ -23,7 +23,7 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 | Access to Naltrexone/Vivitrol | minDisNalV | Euclidean distance to nearest naltrexone/Vivitrol provider |
 
 ### Data Limitations:
-This analysis uses non-population weighted centroids. 
+Centroids are not population weighted.
 
 ### Comments/Notes:
 This dataset does not include U.S. territories.
