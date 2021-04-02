@@ -3,7 +3,7 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-EC04 at 3 spatial scales. Final data can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).  
+EC04 at 3 spatial scales. Final data can be found [here](/data_final).  
 * EC04_T
 * EC04_C
 * EC04_S
