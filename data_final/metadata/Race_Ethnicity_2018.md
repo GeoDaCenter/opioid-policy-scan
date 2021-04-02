@@ -1,6 +1,6 @@
-**Meta Data Name**: Race and Ethnicity variables
-**Last Modified**: March 15, 2021
-**Author**: Moksha Menghaney, updates by Susan Paykin 
+**Meta Data Name**: Race and Ethnicity Variables  
+**Last Modified**: March 15, 2021  
+**Author**: Moksha Menghaney & Susan Paykin 
 
 ### Data Location: 
 DS01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
