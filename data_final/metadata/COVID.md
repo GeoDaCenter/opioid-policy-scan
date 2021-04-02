@@ -7,18 +7,21 @@ COVID01-04 - COVID case counts and rates at state and county spatial scales. Fil
 
 * COVID01_S: cumulative confirmed cases, state level
 * COVID01_C: cumulative confirmed cases, county level
+  
 * COVID02_S: cumulative confirmed cases, per 100K ppl, state level
 * COVID02_C: cumulative confirmed cases, per 100K ppl, county level
+  
 * COVID03_S: 7 day average confirmed cases, state level
 * COVID03_C: 7 day average confirmed cases, county level
+  
 * COVID04_S: 7 day average confirmed cases, per 100K ppl, state level
 * COVID04_C: 7 day average confirmed cases, per 100K ppl, county level
 
-* **Note:** Each .csv includes the full time series dataset, January 21, 2020 to March 3, 2021.
+**Note:** Each .csv includes the full time series dataset, January 21, 2020 to March 3, 2021.
 
 ### Data Source(s) Description:  
 
-Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The *Times* has made data available aggregated from dozens of journalists working to collect and monitor data. Their jouralists communicate with public officials to clarify and categorize cases.
+Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The Times has made data available aggregated from dozens of journalists working to collect and monitor data. Their jouralists communicate with public officials to clarify and categorize cases.
 
 Population data used to compute population-adjusted rates were obtained from the [2018 American Comnmunity Survey](https://data.census.gov/). 
 
@@ -43,8 +46,8 @@ This data may differ slightly than official data reported by the CDC.
 ### Comments/Notes:
 Other soruces for county and state level covid data: 
 
-1. [USAFacts](https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/?utm_source=MailChimp&utm_campaign=census-covid2).This dataset is provided by a non-profit organization. The data are aggregated from the CDC, state- and local-level public health agencies. County-level data is confirmed by referencing state and local agencies directly.
+1. [USAFacts](https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/?utm_source=MailChimp&utm_campaign=census-covid2). This dataset is provided by a non-profit organization. The data are aggregated from the CDC, state- and local-level public health agencies. County-level data is confirmed by referencing state and local agencies directly.
 
-2. [1P3A](https://coronavirus.1point3acres.com/en).This was the initial, crowdsourced data project that served as a volunteer project led by 1P3acres.com and Dr. Yu Gao, Head of Machine Learning Platform at Uber. 
+2. [1P3A](https://coronavirus.1point3acres.com/en). This was the initial, crowdsourced data project that served as a volunteer project led by 1P3acres.com and Dr. Yu Gao, Head of Machine Learning Platform at Uber. 
 
-3. Visualize this data and more on the [US COVID Atlas](https://theuscovidatlas.org/data), and download other COVID-related variables. 
+3. Visualize this data and more on [The US COVID Atlas](https://theuscovidatlas.org/data), or download other COVID-related variables. 
