@@ -1,10 +1,9 @@
 **Meta Data Name**: Drug-Related Death Rate  
-**Environment**: Health Variables  
 **Last Modified**: February 5, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Health01 - Policy Scan Environment Report at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Health01 at 2 spatial scales. Files can be found [here](/data_final).
 * Health01_C
 * Health01_S
 
