@@ -3,7 +3,7 @@
 **Author**: Susan Paykin 
 
 ### Data Location: 
-Access02 - Policy Scan Environment Report at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Access02 at 2 spatial scales. Files can be found [here](/data_final).
 * Access02_T  
 * Access02_Z  
 
