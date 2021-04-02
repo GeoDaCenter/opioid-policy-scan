@@ -1,9 +1,9 @@
-**Meta Data Name**: Foreclosure Rates, part of the Economic Factors dataset  
+**Meta Data Name**: Foreclosure Rates & Mortgage Delinquencies  
 **Last Modified**: January 27, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-EC04 - Policy Scan Environment Report at 3 spatial scales. Final data can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).  
+EC04 at 3 spatial scales. Final data can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).  
 * EC04_T
 * EC04_C
 * EC04_S
@@ -36,13 +36,11 @@ Foreclosure and delinquency data were wrangled and cleaned, and appropriate vari
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | GEOID | Unique identifier for census tracts (11 digits), counties (5 digits), and states (3 digits)  |
 | Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent, 2007-2008 (Tract) |
 | Delinquency rate | dq_rate | Estimated percent of of mortgages 90+ days delinquent, 2014-2018 (County, State) |
 
 ### Data Limitations:
-While the NSP2 foreclosure data is from 2007-2008, the data is correlated with 2018 health and economic outcomes. 
+While the NSP2 foreclosure data is from 2007-2008, the data is correlated with 2018 trends. 
 
 ### Comments/Notes:
-
-
+n/a
