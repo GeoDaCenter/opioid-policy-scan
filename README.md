@@ -100,7 +100,7 @@ For more information about the individual variables, please refer to the data di
 | Rental Rates | Percent of housing units occupied by renters  | ACS, 2014-2018 | HS01 / [Housing Variables](/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
 | Housing Unit Density | Housing units per square mile | ACS, 2014-2018 | HS01 / [Housing Variables](/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip |
 | Urban/Suburban/Rural Classification | Classification of areas as rural, urban or suburban using percent rurality (County) or RUCA Codes (Tract, Zip) | USDA & ACS, 2014-2018 | HS02 / [Rural-Urban Classifications](/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | 
-| Alcohol Outlet Density | Alcohol outlets per square mile, alcohol outlets per capita | InfoGroup, 2018 | HS03 / [Physical Factors](/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | 
+| Alcohol Outlet Density | Alcohol outlets per square mile, alcohol outlets per capita | InfoGroup, 2018 | HS03 / [Alcohol Outlets](/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | 
 | Hypersegregated Cities | US metropolitan areas where black residents experience hypersegregation | Massey et al, 2015 | HS04 / [Overlay Variables](/data_final/metadata/Overlay.md) | County | 
 | Southern Black Belt | US counties where 30% of the population identified as Black or African American | US Census, 2000 | HS04 / [Overlay Variables](/data_final/metadata/Overlay.md) | County | 
 | Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER, 2018 | HS04 / [Overlay Variables](/data_final/metadata/Overlay.md) | County | 
