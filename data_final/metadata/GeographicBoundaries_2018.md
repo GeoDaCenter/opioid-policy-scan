@@ -3,7 +3,7 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Four geographic boundary files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final/geometryFiles).
+Four geographic boundary files can be found [here](/data_final/geometryFiles).
 * State 
 * County
 * Tract
