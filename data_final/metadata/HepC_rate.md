@@ -1,10 +1,9 @@
 **Meta Data Name**: Hepatitis C Infection Rate  
-**Environment**: Health Variables  
 **Last Modified**: February 8, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Health02 - Policy Scan Environment Report. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+Health02 at the state-level. Files can be found [here](/data_final).
 * Health02_S
 
 ### Data Source(s) Description:  
@@ -18,6 +17,7 @@ For case definition, see [Surveillance Case Definitions](https://wwwn.cdc.gov/nn
 Data was obtained from the 2018 Surveillance Report [Table 3.1 - Number of rate of reported cases of acute hepatitis C, by state or jurisdiction, 2014-2018](https://www.cdc.gov/hepatitis/statistics/2018surveillance/HepC.htm#Table3.1).  
 
 Note: In source table, some data was missing or unreportable by state law (see **Data Limitations** below). These are marked as follows in the annual number and rate columns:  
+
 *N: Not reportable. The disease or condition was not reportable by law, statue, or regulation in the reporting jurisdiction.
 *U: Unavailable. The data are unavailable.
 
