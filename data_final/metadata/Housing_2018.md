@@ -1,9 +1,9 @@
-**Meta Data Name**: Housing Variables
+**Meta Data Name**: Housing Variables  
 **Last Modified**: March 20, 2021 
-**Author**: Moksha Menghaney, updates by Susan Paykin   
+**Author**: Susan Paykin & Moksha Menghaney
 
 ### Data Location: 
-HS01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS01 at 4 spatial scales. Files can be found [here](/data_final).
 * HS01_T  
 * HS01_Z  
 * HS01_C  
