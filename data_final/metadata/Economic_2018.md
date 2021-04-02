@@ -1,4 +1,4 @@
-**Meta Data Name**: Economic Variables
+**Meta Data Name**: Economic Variables  
 **Last Modified**: October 22nd, 2020  
 **Author**: Moksha Menghaney  
 
@@ -20,6 +20,7 @@ DP03: Selected Economic Characteristics <br>
 S1701: Poverty status in the past 12 months
 
 ### Description of Data Processing: 
+
 The following variables were included from **B19301**:
   1. Estimate; Per capita income in the past 12 months (in 2018 inflation-adjusted dollars)
   
@@ -31,6 +32,7 @@ The following variables were included from **S1701**:
   
   
 ### Key Variable and Definitions:
+
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Unemployment Rate | unempP | Unemployment Rate |
