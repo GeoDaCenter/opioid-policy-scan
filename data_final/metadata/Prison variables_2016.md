@@ -3,7 +3,7 @@
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-PS01 - Prison variables at the county level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+PS01 - Prison variables at the county level. Files can be found [here](/data_final).
 * PS01_C  
 
 ### Data Source(s) Description:  
