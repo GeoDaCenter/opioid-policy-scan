@@ -3,7 +3,7 @@
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-DS01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+DS01 at 4 spatial scales. Files can be found [here](/data_final).
 * DS01_T  
 * DS01_Z  
 * DS01_C  
