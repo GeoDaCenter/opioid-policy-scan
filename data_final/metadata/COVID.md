@@ -1,9 +1,9 @@
-**Meta Data Name**: COVID variables
-**Last Modified**: March 12th, 2021  
+**Meta Data Name**: COVID-19 Variables  
+**Last Modified**: March 12, 2021  
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-COVID01-04 - COVID case counts and rates at state and county levels. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+COVID01-04 - COVID case counts and rates at state and county spatial scales. Files can be found [here](/data_final/).
 
 * COVID01_S: cumulative confirmed cases, state level
 * COVID01_C: cumulative confirmed cases, county level
@@ -14,22 +14,25 @@ COVID01-04 - COVID case counts and rates at state and county levels. Files can b
 * COVID04_S: 7 day average confirmed cases, per 100K ppl, state level
 * COVID04_C: 7 day average confirmed cases, per 100K ppl, county level
 
-* **Note:** Each .csv includes a full-time series for one variable.
+* **Note:** Each .csv includes the full time series dataset, January 21, 2020 to March 3, 2021.
 
 ### Data Source(s) Description:  
-Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The Times has made data available aggregated from dozens of journalists working to collect and monitor data from new conferences. They communicate with public officials to clarify and categorize cases.
-Population data used to compute population-adjusted rates are obtained from the [2018 American Comnmunity Survey](https://data.census.gov/). 
+
+Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The *Times* has made data available aggregated from dozens of journalists working to collect and monitor data. Their jouralists communicate with public officials to clarify and categorize cases.
+
+Population data used to compute population-adjusted rates were obtained from the [2018 American Comnmunity Survey](https://data.census.gov/). 
 
 ### Description of Data Processing: 
-Data was downloaded for the daily new cases reported by *The New York Times*. Then we calcuated cumulative cases and 7-day average cases, and adjusted by local populations. 
+
+Data was downloaded for the daily new cases. Then we calcuated cumulative cases and 7-day average cases, and adjusted by local populations. 
 
 ### Key Variable and Definitions:
 
-For the example variable table below, note that all variable ID and descriptions are for the example date January 21, 2020. In the final dataset, each variable represents a different date in year-month-day format, i.e. 200121 for January 21, 2020. The data collected is from the first year of the pandemic, roughly January 21, 2020 through March 3, 2021. 
+For the example variable table below, note that all variable ID and descriptions are for the example date January 21, 2020. In the final dataset, each variable represents a different date in year-month-day format, i.e. 200121 for January 21, 2020. The data collected is from the first year of the pandemic from January 21, 2020 through March 3, 2021. 
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:-------------|:-------------|
-| Cumulative Case Count | Cm200121 | Cumulative confirmed case count for date (January 21, 2020) |
+| Cumulative Case Count | Cm200121 | Cumulative confirmed case count for date (i.e. January 21, 2020) |
 | Adjusted Case Count per 100K | CmAd200121 | Confirmed cases per 100K people for date |
 | 7-Day Average Case Count | Wk200121 | 7-Day average confirmed cases for date |
 | 7-Day Average Adjusted Case Count per 100K | WkAd200121 | 7-Day average adjusted cases per 100K ppl for date |
