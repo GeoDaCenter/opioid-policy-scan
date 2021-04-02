@@ -1,9 +1,9 @@
-**Meta Data Name**: Rural Urban Classification for Counties  
+**Meta Data Name**: Rural-Urban Classification for Counties  
 **Last Modified**: March 20, 2020  
-**Author**: Moksha Menghaney, updates by Susan Paykin
+**Author**: Moksha Menghaney & Susan Paykin  
 
 ### Data Location: 
-HS02 at the County scale. File can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS02 at the County scale. File can be found [here](/data_final).
 * HS02_C  
 
 ### Data Source(s) Description:  
@@ -32,9 +32,8 @@ For each county, the percentage of tracts classified as urban/suburban/rural, us
 | Rural Population| rurlPop10 | 2010 Population living in non urban areas, as defined by Census Bureau |
 | % Rurality | cenRuralP | % of 2010 Population living in non urban areas, as defined by Census Bureau |
 
-
 ### Data Limitations:
 n/a
 
 ### Comments/Notes:
-The datasets come from two different source. As a result, there might have some gaps or mismatches in the rurality categorization. Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the `note` column.
+The datasets come from two different sources. As a result, there might have some gaps or mismatches in the rurality categorization. Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the `note` column.
