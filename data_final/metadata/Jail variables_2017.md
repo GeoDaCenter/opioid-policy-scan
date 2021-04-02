@@ -1,9 +1,9 @@
-**Meta Data Name**: 2017 Jail variables, part of the Policy dataset  
+**Meta Data Name**: Jail Incarceration Variables  
 **Last Modified**: August 26th, 2020  
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-PS02 - Jail variables at the county level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+PS02 - Jail variables at the county level. Files can be found [here](/data_final).
 * PS02_C  
 
 ### Data Source(s) Description:  
