@@ -1,9 +1,9 @@
-**Meta Data Name**: Vulnerable Community Overlay Variables
+**Meta Data Name**: Community Overlay Variables  
 **Last Modified**: Feburary 23, 2021  
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-HS04 at the county level. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+HS04 at the county level. Files can be found [here](/data_final).
 * HS04_C  
 
 ### Data Source(s) Description:  
