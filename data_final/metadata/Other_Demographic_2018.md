@@ -1,9 +1,9 @@
-**Meta Data Name**: 2018 Other Demographic Variables
-**Last Modified**: October 22nd, 2020  
-**Author**: Moksha Menghaney, updates by Susan Paykin 
+**Meta Data Name**: Demographic Variables  
+**Last Modified**: October 22, 2020  
+**Author**: Moksha Menghaney  
 
 ### Data Location: 
-DS01 - Policy Scan Environment Report at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
+DS01 at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_final).
 * DS01_T  
 * DS01_Z  
 * DS01_C  
