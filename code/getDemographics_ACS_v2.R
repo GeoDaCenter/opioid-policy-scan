@@ -1,5 +1,5 @@
 # Author : Moksha Menghaney, updated by Susan Paykin
-# Date : August 17th, 2020
+# Date : August 17, 2020
 # Last modified : March 30, 2021
 # This piece of code will generate DS01 tables for Policy Scan.
 
@@ -8,6 +8,9 @@ library(tidyverse)
 library(tmap)
 library(geojsonio)
 library(tigris)
+
+# Set working directory
+setwd("~/git/opioid-policy-scan")
 
 #census_api_key("key", install = TRUE)
 
@@ -44,7 +47,7 @@ library(tigris)
 
 ## initialize variables
 yeartoFetch <- 2018
-shapetoFetch <- c("county","zcta","state")
+shapetoFetch <- c("county", "zip code tabulation area", "state")
 filename <- c("C","Z","S")
 
 
@@ -94,7 +97,7 @@ for (i in 1:length(shapetoFetch)){
                     'age0_4', 'age5_14', 'age15_19','age20_24','age15_44', 'age45_49', 
                     'age50_54', 'age55_59', 'age60_64', 'ageOv65', 'ageOv18',
                     'age18_64', 'a15_24P', 'und45P', 'ovr65P', 'disbP')]
-  write.csv(varDf,paste0('DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
+  write.csv(varDf,paste0('data_final/DS01_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
 
 }
 
@@ -139,3 +142,47 @@ varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','
                   'age18_64', 'a15_24P', 'und45P', 'ovr65P', 'disbP')]
 
 write.csv(varDf,paste0('DS01_',yeartoFetch,"_T",".csv"), row.names = FALSE)
+
+### For ZCTA
+
+states <- tigris::states(year = yeartoFetch)
+territoriesToBeExcluded <- c('60','72','66','69','78') # american territories
+states <- states[!(states$STATEFP %in% territoriesToBeExcluded),]
+states$STATEFP <- as.numeric(states$STATEFP)
+
+variables <- map_df(.x = as.numeric(states$STATEFP),
+                    ~ get_acs(geography = "zcta",
+                              variables = variablestoFetch$code,
+                              year = yeartoFetch, geometry = FALSE))
+
+variables <- data.frame(variables)
+variables <- variables[,c("GEOID","variable","estimate")] # drop name and margin
+varDf <- reshape(variables,idvar = 'GEOID',timevar = 'variable',direction = 'wide') # long to wide
+colnames(varDf) <- gsub("estimate.","",colnames(varDf))
+colnames(varDf)[-1] <- variablestoFetch$name[match(colnames(varDf)[-1],variablestoFetch$code)]
+
+varDf$otherRace <-  varDf$totPopE - (varDf$white + varDf$black + varDf$amerInd + varDf$asian + varDf$pacificIs)
+varDf$whiteP  <-  round(varDf$white*100/varDf$totPopE,2)
+varDf$blackP  <-  round(varDf$black*100/varDf$totPopE,2)
+varDf$amIndP  <-  round(varDf$amerInd*100/varDf$totPopE,2)
+varDf$asianP  <-  round(varDf$asian*100/varDf$totPopE,2)
+varDf$pacIsP  <-  round(varDf$pacificIs*100/varDf$totPopE,2)
+varDf$otherP  <-  round(varDf$otherRace*100/varDf$totPopE,2)
+varDf$hispP   <-  round(varDf$hispanic*100/varDf$totPopE,2)
+varDf$noHSP   <-  round(varDf$eduNoHS*100/varDf$popOver25,2)
+#varDf$InsPop    <-  varDf$totPopE - varDf$nonInsPop
+varDf$age18_64 <- round(varDf$ageOv18 - varDf$ageOv65,2) 
+varDf$a15_24P  <-   round((varDf$age15_19 + varDf$age20_24)*100/varDf$totPopE,2)
+varDf$und45P<-  round((varDf$age0_4 + varDf$age5_14 + varDf$age15_44)*100/varDf$totPopE,2)
+varDf$ovr65P <-  round(varDf$ageOv65*100/varDf$totPopE,2)
+varDf$year <- yeartoFetch
+
+varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','pacIsP',
+                  'otherP','hispP','noHSP', 
+                  'age0_4', 'age5_14', 'age15_19','age20_24','age15_44', 'age45_49', 
+                  'age50_54', 'age55_59', 'age60_64', 'ageOv65', 'ageOv18',
+                  'age18_64', 'a15_24P', 'und45P', 'ovr65P', 'disbP')]
+
+varDf$GEOID <- substr(varDf$GEOID, 3, varDf$GEOID)
+
+write.csv(varDf,paste0('data_final/DS01_',yeartoFetch,"_Z",".csv"), row.names = FALSE)
