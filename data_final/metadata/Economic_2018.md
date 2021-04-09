@@ -1,6 +1,6 @@
 **Meta Data Name**: Economic Variables  
-**Last Modified**: October 22nd, 2020  
-**Author**: Moksha Menghaney  
+**Last Modified**: April 9, 2021  
+**Authors**: Moksha Menghaney & Susan Paykin
 
 ### Data Location: 
 EC03 at 4 spatial scales. Files can be found [here](/data_final).
@@ -11,7 +11,7 @@ EC03 at 4 spatial scales. Files can be found [here](/data_final).
 
 ### Data Source(s) Description:  
 
-Variables were obtained from the [2014 - 2018 American Community Survey (ACS)](https://data.census.gov), tables B19301, DP03, B19301, at the state, county, tract and ZIP Code Tabulation Area (ZCTA) levels.
+Variables were obtained from the [2014 - 2018 American Community Survey (ACS)](https://data.census.gov), tables B19301, DP03, and B19301, at the state, county, tract and ZIP Code Tabulation Area (ZCTA) levels.
 
 The ACS is an ongoing survey that provides vital information on a yearly basis about our nation and its people. Learn more about the ACS [here](https://www.census.gov/programs-surveys/acs/about.html). 
 
