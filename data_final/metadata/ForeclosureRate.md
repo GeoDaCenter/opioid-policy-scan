@@ -16,8 +16,8 @@ The [Neighborhood Stabilization Program (NSP)](https://www.huduser.gov/portal/da
 
 [NSP2 Data & Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. HUD has developed these foreclosure estimates and foreclosure risk scores for Census tracts based on: 
 
-* whether or not loans are high cost or highly leveraged in the census tract (see https://www.huduser.gov/periodicals/ushmc/summer08/summary.pdf),
-* change in home values in the metropolitan area (or non-metropolitan portion of the state),
+* whether or not loans are high cost or highly leveraged in the census tract (see [here](https://www.huduser.gov/periodicals/ushmc/summer08/summary.pdf)),
+* change in home values in the metropolitan area (or non-metropolitan portion of the state,
 * the unemployment rate for the county in 2008, and
 * change in unemployment in the county between 2007 and 2008.
 
