@@ -86,7 +86,7 @@ For more information about the individual variables, please refer to the data di
 | Unemployment Rate | Unemployment rate | ACS, 2014-2018 | EC03/ [Economic Variables](/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | 
 | Poverty Rate | Percent classified as below poverty level, based on income | ACS, 2014-2018 | EC03/ [Economic Variables](/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | 
 | Per Capita Income | Per capita income in the past 12 months | ACS, 2014-2018 |  EC03/ [Economic Variables](/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | 
-| Foreclosure Rate | Mortgage foreclosure and severe delinquency rates | HUD, 2009; CFPB, 2014-2018 | EC04 / [Foreclosure Rate](/data_final/metadata/ForeclosureRate.md) | State, County, Tract | 
+| Foreclosure Rate | Mortgage foreclosure and severe delinquency rate | HUD, 2009 | EC04 / [Foreclosure Rate](/data_final/metadata/ForeclosureRate.md) | State, County, Tract | 
 
 <br>
 
