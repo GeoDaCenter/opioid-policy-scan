@@ -37,6 +37,7 @@ For more information about the individual variables, please refer to the data di
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
 | Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census, 2018 | [Geographic Boundaries](data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip |
+| Crosswalk files | County, Census Tract, Zip Code Tract Area (ZCTA) | HUD’s Office of Policy Development and Research (PD&R) | [Crosswalk Files](data_final/metadata/GeographicBoundaries_2018.md) | County, Tract, Zip |
 
 ### Policy Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
