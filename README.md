@@ -77,7 +77,7 @@ For more information about the individual variables, please refer to the data di
 | Population with a Disability | Percentage of population with a disability | ACS, 2014-2018 | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Educational Attainment | Population without a high school degree | ACS, 2014-2018 | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
-| Social Vulnerability Index (SVI) | SVI rankings | CDC | DS03 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | County, Tract | 
+| Social Vulnerability Index (SVI) | SVI rankings | CDC | DS03 / [SVI](data_final/metadata/SVI_2018.md) | County, Tract | 
 
 
 <br>
