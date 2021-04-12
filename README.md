@@ -51,7 +51,6 @@ For more information about the individual variables, please refer to the data di
 | Medicaid Expansion | Spending for adults who have enrolled through Medicaid expansion | KFF, 2018 | PS07 / [MedExpan](data_final/metadata/MedExpan_2018.md) | State | 
 | Syringe Services Laws | Laws clarifying legal status for syringe exchange, distribution, and possession programs | LawAtlas, 2019 | PS08 / [Syringe](data_final/metadata/Syringe.md) | State | 
 | Medical Marijuana Laws | Law authorizing adults to use medical marijuana | PDAPS, 2017 | PS09 / [MedMarijLaw](data_final/metadata/MedMarijLaw.md) | State |
-| Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | PS10 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
 | State & Local Government Expenditures | Government spending on public health, welfare, public safety, and corrections | US Census, 2018 | PS11 / [Government Expenditures](/data_final/metadata/PublicExpenditures.md) | State, Local |
 
 <br>
@@ -77,6 +76,9 @@ For more information about the individual variables, please refer to the data di
 | Age | Age group estimates and percentages of population | ACS, 2014-2018 | DS01 / [Age Variables](/data_final/metadata/Age_2018.md) | State, County, Tract, Zip | 
 | Population with a Disability | Percentage of population with a disability | ACS, 2014-2018 | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Educational Attainment | Population without a high school degree | ACS, 2014-2018 | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
+| Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
+| Social Vulnerability Index (SVI) | SVI rankings | CDC | DS03 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | County, Tract | 
+
 
 <br>
 
