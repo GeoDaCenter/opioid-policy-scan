@@ -35,7 +35,7 @@ Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent |
+| Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
 
 ### Data Limitations:
 The data reflects 2007-2008 estimates, before the Great Recession, but the data is correlated with 2018 trends. 
