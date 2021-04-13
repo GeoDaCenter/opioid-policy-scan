@@ -7,9 +7,11 @@
 
 ## Introduction
 
-This repository stores scripts used to wrangle, clean, join, and visualize data for the Opioid Environment Policy Scan data warehouse, available to the JCOIN Network on the JCOIN Data Commons. This documentation provides variable metadata and data details for variable constructs included in the Policy Scan. 
+The Opioid Environment Policy Scan provides access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States.
 
-The data included in this project will be further developed as a data visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
+This repository stores scripts used to wrangle, clean, join, and visualize data for the Opioid Environment Policy Scan, available to the JCOIN Network through the JCOIN Data Commons. This documentation provides variable metadata and data details for variable constructs included in the Policy Scan. 
+
+The Policy Scan will be further developed as a data visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
 
 For more information, please refer to the full [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing). 
 
