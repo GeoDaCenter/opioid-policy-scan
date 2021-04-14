@@ -42,7 +42,11 @@ foreclosure_county <- foreclosure_tract %>%
 counties <- counties()
 str(counties)
 
-foreclosure_co_clean <- left_join(foreclosure_county, counties, by = c("county" = "NAMELSAD")) %>%
+foreclosure_co_clean <- left_join(foreclosure_county, states, by = c("state" = "STUSPS")) %>%
+  select(county, STATEFP, state, fordq_rate)
+
+foreclosure_co_clean2 <- left_join(foreclosure_co_clean, counties, by = c("county" = "NAMELSAD", 
+                                                                       "STATEFP" = "STATEFP")) %>%
   select(COUNTYFP, county, STATEFP, state, fordq_rate)
 
 #### State variables ----
