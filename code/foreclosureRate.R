@@ -64,7 +64,7 @@ foreclosure_st_clean <- left_join(foreclosure_state, states, by = c("state" = "S
 #### Save final datasets ---- 
 
 write.csv(foreclosure_tract_clean, "data_final/EC04_T.csv")
-write.csv(foreclosure_co_clean, "data_final/EC04_C.csv")
+write.csv(foreclosure_co_clean2, "data_final/EC04_C.csv")
 write.csv(foreclosure_st_clean, "data_final/EC04_S.csv")
 
 
