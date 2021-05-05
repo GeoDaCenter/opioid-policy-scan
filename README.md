@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Opioid Environment Data Warehouse
+# Opioid Environment Policy Scan Data Warehouse
 
 *Updated April 2021*
 
