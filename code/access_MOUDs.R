@@ -2,14 +2,15 @@
 
 # Author : Susan Paykin
 # Date : March 15, 2021
-# About: This code prepares the metrics on Access to Pharmacies for zip codes and census tracts. 
+# About: This code prepares the minimum distance metrics on access to Medications for Opioid Use Disorder (MOUDs)
+# for all U.S. ZIP Code Tract Areas (ZCTAs), Census tracts, and counties.
 
-# Part 1) Prepare national MOUD location data
+#     Part 1) Prepare national MOUD location data
 
-# Part 2) Conduct nearest resource analysis: Minimum distance as proxy for access 
-# Calculate distance from ZCTA and tract centroids to nearest MOUD by type
+#     Part 2) Conduct nearest resource analysis: Minimum distance as proxy for access 
+#     Calculate distance from ZCTA and tract centroids to nearest MOUD by type
 
-# Part 3) Save final datasets
+#     Part 3) Save final datasets
 
 #### Part 1) Prepare MOUD data ----
 
@@ -22,7 +23,7 @@ library(units)
 setwd("~/git/opioid-policy-scan")
 
 # Load full MOUD dataset
-mouds <- st_read("Policy_Scan/data_raw/us-wide-moudsCleaned.gpkg") %>%
+mouds <- st_read("data_raw/us-wide-moudsCleaned.gpkg") %>%
   st_transform(3857)
 
 # Subset MOUD by category
@@ -31,12 +32,68 @@ meth <- mouds %>% filter(category == "methadone")
 nalViv <- mouds %>% filter(category == "naltrexone/vivitrol")
 
 # Read in location data
-zips <- read_sf("Policy_Scan/data_final/geometryFiles/tl_2018_zcta/zctas2018.shp") %>%
+zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp") %>%
   st_transform(3857)
-tracts <- read_sf("Policy_Scan/data_final/geometryFiles/tl_2018_tract/tracts2018.shp") %>%
+tracts <- read_sf("data_final/geometryFiles/tl_2018_tract/tracts2018.shp") %>%
+  st_transform(3857)
+counties <- read_sf("data_final/geometryFiles/tl_2018_county/counties2018.shp") %>%
   st_transform(3857)
 
 #### Part 2) Nearest Resource Analysis ----
+
+#### Nearest MOUD, Counties ----
+
+# Create centroids for counties
+countyCentroids <- st_centroid(counties)
+
+#### All MOUD - ZCTA
+# Identify MOUD that is closest to county centroid, then subset by index to get nearest location
+nearestMOUD_index <- st_nearest_feature(countyCentroids, mouds)
+nearestMOUD <- mouds[nearestMOUD_index, ]
+
+# Calculate distance
+minDistCounty <- st_distance(countyCentroids, nearestMOUD, by_element = TRUE)
+head(minDistCounty) # meters
+
+# Change from meters to miles
+minDistCounty_mi <- set_units(minDistCounty, "mi")
+head(minDistCounty_mi)
+
+#### Buprenorphine - County
+nearestbup_index <- st_nearest_feature(countyCentroids, bup)
+nearestbup <- bup[nearestbup_index, ]
+minDistBup <- st_distance(countyCentroids, nearestbup, by_element = TRUE)
+minDistBup <- set_units(minDistBup, "mi")
+head(minDistBup)
+
+#### Methadone - County
+nearestMeth_index <- st_nearest_feature(countyCentroids, meth)
+nearestMeth <- meth[nearestMeth_index, ]
+minDistMeth <- st_distance(countyCentroids, nearestMeth, by_element = TRUE)
+minDistMeth <- set_units(minDistMeth, "mi")
+head(minDistMeth)
+
+#### NalViv - County
+nearestnalViv_index <- st_nearest_feature(countyCentroids, nalViv)
+nearestnalViv <- nalViv[nearestnalViv_index, ]
+minDistnalViv <- st_distance(countyCentroids, nearestnalViv, by_element = TRUE)
+minDistnalViv <- set_units(minDistnalViv, "mi")
+head(minDistnalViv)
+
+# Merge data
+minDistCounty_clean <- cbind(counties, minDistCounty_mi, minDistBup, minDistMeth, minDistnalViv)
+head(minDistCounty_clean)
+
+# Clean up data
+minDistCounty_clean <- minDistCounty_clean %>% select(STATEFP, 
+                                                      COUNTYFP = GEOID,
+                                                      minDisMOUD = minDistCounty_mi, 
+                                                      minDisBup = minDistBup, 
+                                                      minDisMeth = minDistMeth, 
+                                                      minDisNalV = minDistnalViv)
+head(minDistCounty_clean)
+-----------
+
 
 #### Nearest MOUD, ZCTA ----
 
@@ -142,8 +199,11 @@ head(minDistTracts_clean)
 
 #### Part 3) Save final datasets ----
 
+# Save county file
+write_sf(minDistCounty_clean, "data_final/Access01_C.csv")
+
 # Save ZCTA file
-write_sf(minDistZips_clean, "Policy_Scan/data_final/Access01_Z.csv")
+write_sf(minDistZips_clean, "data_final/Access01_Z.csv")
 
 # Save tract file
-write_sf(minDistTracts_clean, "Policy_Scan/data_final/Access01_T.csv")
+write_sf(minDistTracts_clean, "data_final/Access01_T.csv")
