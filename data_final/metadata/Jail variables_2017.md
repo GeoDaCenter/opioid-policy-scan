@@ -23,7 +23,7 @@ The following variables were included from the source data:
 9. Total jail admission rate;
 10. Pretrial jail population rate. 
  
-These rates were calculated using base rate of county population aged 15-64. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." 
+These rates were calculated using base rate of county population aged 15-64 and the unit is per 100K people. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." Also note that these rates are jail population relative to the total county population. For example, the female jail population rate is calcualted as the jail female population divided by the female population (aged 15–64) in that county (multiply by 100,000). 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
