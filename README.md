@@ -3,23 +3,21 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-*Updated April 2021*
+*Updated June 2021*
 
 ## About
 
-The Opioid Environment Policy Scan is a database providng access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States.
+The Opioid Environment Policy Scan is a database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. We used a risk environment framework ([Rhodes 2009](https://www.sciencedirect.com/science/article/pii/S095539590800203X?via%3Dihub)) to guide data selection for the Opioid Environment Policy Scan. Data were stratified into seven spheres of influence: Policy, Health, Demographic, Economic, Physical Environment, and COVID-19. The warehouse includes 45 data variable constructs across spheres characterizing the opioid use risk environment across U.S. geographies and spatial scales at the Census tract, ZIP Code Tract Area (ZCTA), county, and state levels. 
 
-This repository stores scripts used to wrangle, clean, join, and visualize data for the Opioid Environment Policy Scan, available to the JCOIN Network through the JCOIN Data Commons. The [Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing) provides metadata and descriptions for variable constructs included in the Policy Scan. 
+This repository stores scripts used to wrangle, clean, join, and visualize data for the Opioid Environment Policy Scan, available to the JCOIN Network through the JCOIN Data Commons. The [Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing) provides metadata and descriptions for variable constructs included in the Policy Scan. The Policy Scan will be further developed as a data visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
 
-The Policy Scan will be further developed as a data visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
-
-We welcome questions, comments or feedback through our [Request Form](https://docs.google.com/forms/d/e/1FAIpQLSd53yogyubGxepfwQymS_699DIGRpraSNaKb0PEPMl9rCo1Tg/viewform), or contact Susan Paykin at spaykin at uchicago dot edu. 
+Contact Susan Paykin at spaykin at uchicago dot edu with any questions. 
 
 ## Documentation
 Please refer to the [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing). 
 
 ## Citation
-Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
+Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
 
 ## Team
 
