@@ -27,7 +27,23 @@ The following variables were included from the source data:
  13. Black prison admission rate;
  14. Latinx prison admission rate;
  15. Native American prison admission rate;
- 16. White prison admission rate.
+ 16. White prison admission rate;
+ 17. Total prison population count;
+ 18. Female prison population count;
+ 19. Male prison population count;
+ 20. Asian American/Pacific Islander prison population count;
+ 21. Black prison population count;
+ 22. Latinx prison population count;
+ 23. Native American prison population count;
+ 24. White prison population count;
+ 25. Total prison admission count;
+ 26. Female prison admission count;
+ 27. Male prison admission count;
+ 28. Asian American/Pacific Islander prison admission count;
+ 29. Black prison admission count;
+ 30. Latinx prison admission count;
+ 31. Native American prison admission count;
+ 32. White prison admission count.
  
 These rates were calculated using base rate of county population aged 15-64. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." 
 
@@ -50,6 +66,22 @@ These rates were calculated using base rate of county population aged 15-64. The
 | Latinx prison admission rate | LtnxPrAPpr | Prison Admission Rate, Latinx |
 | Native American prison admission rate | NtvPrAPpr | Prison Admission Rate, Native American |
 | White prison admission rate | WhtPrAPpr | Prison Admission Rate, White |
+| Total prison population count | TtlPrPp | Total Prison Population Count|
+| Female prison population count | FmlPrPp | Prison Population Count, Female |
+| Male prison population count | MlPrPp | Prison Population Count, Male |
+| Asian American/Pacific Islander prison population count | AapiPrPp | Prison Population Count, Asian American / Pacific Islander |
+| Black prison population count | BlckPrPp | Prison Population Count, Black |
+| Latinx prison population count | LtnxPrPp | Prison Population Count, Latinx |
+| Native American prison population count | NtvPrPp | Prison Population Count, Native American |
+| White prison population count | WhtPrPp | Prison Population Count, White |
+| Total prison admission count | TtlPrAPp | Prison Prison Admissions Count |
+| Female prison admission count | FmlPrAPp | Prison Admission Count, Female |
+| Male prison admission count | MlPrAPp | Prison Admission Count, Male |
+| Asian American/Pacific Islander prison admission count | AapiPrAPp | Prison Admission Count, Asian American / Pacific Islander |
+| Black prison admission count | BlckPrAPp | Prison Admission Count, Black |
+| Latinx prison admission count | LtnxPrAPp | Prison Admission Count, Latinx |
+| Native American prison admission count | NtvPrAPp | Prison Admission Count, Native American |
+| White prison admission count | WhtPrAPp | Prison Admission Count, White |
 
 ### Data Limitations:
 There are missing data in many counties. 
