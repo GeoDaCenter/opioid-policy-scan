@@ -95,7 +95,7 @@ For more information about the individual variables, please refer to the data di
 
 <br>
 
-### Physical Environment Variables
+### Built Environment Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Housing Occupancy Rate | Percent occupied units | ACS, 2014-2018 | HS01 / [Housing Variables](/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
