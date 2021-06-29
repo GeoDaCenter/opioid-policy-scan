@@ -19,10 +19,10 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 |:---------|:--------------------|:------------|
 | GEOID | ID for zip or tract | Unique 5-digit identifier for ZCTAs, unique 11-digit identifier for census tracts | 
 | COUNTYFP | ID for counties | Unique 5-digit identifier for counties, w/ first 2 digits being state FIPS |
-| Access to nearest MOUD | minDisMOUD | Euclidean distance to nearest MOUD (all types) |
-| Access to Buprenorphine | minDisBup | Euclidean distance to nearest buprenorphine provider |
-| Access to Methadone | minDisMet | Euclidean distance to nearest methadone provider |
-| Access to Naltrexone/Vivitrol | minDisNalV | Euclidean distance to nearest naltrexone/Vivitrol provider |
+| Access to nearest MOUD | minDisMOUD | Euclidean distance (mi) to nearest MOUD (all types) |
+| Access to Buprenorphine | minDisBup | Euclidean distance (mi) to nearest buprenorphine provider |
+| Access to Methadone | minDisMet | Euclidean distance (mi) to nearest methadone provider |
+| Access to Naltrexone/Vivitrol | minDisNalV | Euclidean distance (mi) to nearest naltrexone/Vivitrol provider |
 
 ### Data Limitations:
 Centroids are not population weighted.
