@@ -60,7 +60,7 @@ For more information about the individual variables, please refer to the data di
 ### Health Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
-| Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2009-2019 | Health01 / [Drug-Related Death Rate](data_final/metadata/Health_DrugDeaths.md) | State, County | 
+| Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2009-2019 10-year ave. | Health01 / [Drug-Related Death Rate](data_final/metadata/Health_DrugDeaths.md) | State, County | 
 | Hepatitis C infection rate | Hepatitis C infection rate | CDC NNDSS, 2014-2018 | Health02 / [Hepatitis C Rate](data_final/metadata/HepC_rate.md) | State | 
 | Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](data_final/metadata/Health_PCPs.md) | Tract, County, State | 
 | Access to MOUDs | Distance to nearest MOUD | US Census, SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
