@@ -1,15 +1,15 @@
 **Meta Data Name**: Access to MOUDs  
-**Last Modified**: March 15, 2021  
+**Last Modified**: July 6, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Access01 at 2 spatial scales. Files can be found [here](/data_final).
+Access01 - Access to MOUDs at 3 spatial scales. Files can be found [here](/data_final).
 * Access01_C  
 * Access01_T  
 * Access01_Z  
 
 ### Data Source(s) Description:  
-Provider locations prescribing Medications for Opioid Overuse Disorder (MOUDs) were sourced from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Treatment Locator](https://findtreatment.samhsa.gov/locator). Naltrexone provider location data from SAMHSA was supplemented by provider data from *Vivitrol.com* and duplicates removed. 
+Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) and their locations were sourced from the [U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) Treatment Locator](https://findtreatment.samhsa.gov/locator) in September 2020. Naltrexone provider data from SAMHSA was supplemented by provider data from *Vivitrol.com*, with duplicates removed. 
 
 ### Description of Data Processing: 
 Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded locations locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. We calculated population-weighted centroids for each County, Census tract and ZCTA and conducted a nearest resource analysis from centroid to provider location to determine the nearest Euclidean (straight-line) distance for each of the three MOUDs. We then calculated additional spatial access metrics using the [spatial_access Python package](https://github.com/GeoDaCenter/spatial_access): driving time to nearest provider and count of providers within 30 minunites driving range.  
@@ -33,7 +33,7 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 | Count of naltrexone providers | count_in_range_naltrexone.vivitrol | Count of naltrexone providers in 30 minute driving time range |
 
 ### Data Limitations:
-Access metrics are calculated for continental U.S. and does not include Hawaii, Alaska, or U.S. territories due to spatial mismatch.  
+Access metrics are calculated for continental U.S., and does not include Hawaii, Alaska, or U.S. territories. 
 
 ### Comments/Notes:
 * All access calculations were calculated using population-weighted centroids. 
