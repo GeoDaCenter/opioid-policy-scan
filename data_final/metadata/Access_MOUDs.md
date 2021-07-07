@@ -29,8 +29,8 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 | Driving time to nearest buprenorphine | time_to_nearest_buprenorphine | Driving time (minutes) to nearest buprenorphine provider |
 | Count of buprenorphine providers | count_in_range_buprenorphine | Count of methadone providers in 30 minute driving time range |
 | Mininum distance to naltrexone | minDisNalV | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider |
-| Driving time to nearest naltrexone |  time_to_nearest_naltrexone.vivitrol | Driving time (minutes) to nearest naltrexone provider |
-| Count of naltrexone providers | count_in_range_naltrexone.vivitrol | Count of naltrexone providers in 30 minute driving time range |
+| Driving time to nearest naltrexone |  time_to_nearest_naltrexone | Driving time (minutes) to nearest naltrexone provider |
+| Count of naltrexone providers | count_in_range_naltrexone | Count of naltrexone providers in 30 minute driving time range |
 
 ### Data Limitations:
 Access metrics are calculated for continental U.S., and does not include Hawaii, Alaska, or U.S. territories. 
