@@ -1,5 +1,5 @@
-**Meta Data Name**: Residential Segregation Indices
-**Last Modified**: July 8, 2021
+**Meta Data Name**: Residential Segregation Indices  
+**Last Modified**: July 8, 2021  
 **Author**: Susan Paykin  
 
 ### Data Location: 
@@ -50,4 +50,4 @@ The three indices measuring  residential segregation included here represent two
 ### Comments/Notes:
 From the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), on Measures of Residential Segregation: "Massey and Denton (1988) used an extensive literature search and cluster analysis to identify 20 different indexes of segregation and classify them into five key dimensions of segregation. Basically, evenness involves the differential distribution of the subject population, exposure measures potential contact, concentration refers to the relative amount of physical space occupied, centralization indicates the degree to which a group is located near the center of an urban area, and clustering measures the degree to which minority group members live disproportionately in contiguous areas.""
 
-Note: In all of the calculations, non- Hispanic Whites are considered the "majority" (reference) population. 
+Note: In all of the calculations, non-Hispanic whites are considered the "majority" (reference) population. 
