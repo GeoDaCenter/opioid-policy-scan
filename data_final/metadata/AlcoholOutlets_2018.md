@@ -3,11 +3,11 @@
 **Author**: Susan Paykin    
 
 ### Data Location: 
-HS03 at 4 spatial scales. Files can be found [here](/data_final).
-* HS03_S 
-* HS03_C
-* HS03_T  
-* HS03_Z 
+BE03 at 4 spatial scales. Files can be found [here](/data_final).
+* BE03_S 
+* BE03_C
+* BE03_T  
+* BE03_Z 
 
 ### Data Source(s) Description:  
 Alcohol outlet locations are from Infogroup's 2018 Business and Consumer Historical Datafile. State, county, census tract, and ZIP Code Tract Area (ZCTA) geometry files are from the U.S. Census TIGER/Line Shapefiles 2018. 
