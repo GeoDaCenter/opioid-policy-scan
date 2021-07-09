@@ -3,9 +3,9 @@
 **Author**: Moksha Menghaney  
 
 ### Data Location: 
-HS02 at 2 spatial scales. Files can be found [here](/data_final).
-* HS02_RUCA_T  
-* HS02_RUCA_Z  
+BE02 at 2 spatial scales. Files can be found [here](/data_final).
+* BE02_RUCA_T  
+* BE02_RUCA_Z  
 
 ### Data Source(s) Description:  
 Tract and ZCTA level classifications were calculated using the [Rural-Urban Commuting Area Codes (RUCA codes)](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them.
