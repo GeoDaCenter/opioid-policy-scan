@@ -3,8 +3,8 @@
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-HS04 at the county level. Files can be found [here](/data_final).
-* HS04_C  
+BE04 at the county level. Files can be found [here](/data_final).
+* BE04_C  
 
 ### Data Source(s) Description:  
 Variables were obtained from [The US Covid Atlas Projec](https://theuscovidatlas.org/map)t. Hypersegregated cities refer to American metropolitan areas where black residents experience hypersegregation. See [here](https://www.princeton.edu/news/2015/05/18/hypersegregated-cities-face-tough-road-change) for more information. The Black Belt refers to Southern US counties where at least 30% of the population identified Black or African American in the 2000 Census (see [here](https://en.wikipedia.org/wiki/Black_Belt_in_the_American_South)). Native American or American Indian reservation boundaries come from the [TIGER/Line 2017](https://catalog.data.gov/dataset/tiger-line-shapefile-2017-nation-u-s-current-american-indian-alaska-native-native-hawaiian-area) dataset.
