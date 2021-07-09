@@ -3,8 +3,8 @@
 **Author**: Moksha Menghaney & Susan Paykin  
 
 ### Data Location: 
-HS02 at the County scale. File can be found [here](/data_final).
-* HS02_C  
+BE02 at the County scale. File can be found [here](/data_final).
+* BE02_RUCA_C  
 
 ### Data Source(s) Description:  
 Percentage rural and urban population is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
