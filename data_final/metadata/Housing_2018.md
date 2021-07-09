@@ -3,11 +3,11 @@
 **Author**: Susan Paykin & Moksha Menghaney
 
 ### Data Location: 
-HS01 at 4 spatial scales. Files can be found [here](/data_final).
-* HS01_T  
-* HS01_Z  
-* HS01_C  
-* HS01_S  
+BE01 at 4 spatial scales. Files can be found [here](/data_final).
+* BE01_T  
+* BE01_Z  
+* BE01_C  
+* BE01_S  
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), tables B25002, B25024, B25003, and B25026, each at the State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels. Raw data and more details can be found at https://data.census.gov.
