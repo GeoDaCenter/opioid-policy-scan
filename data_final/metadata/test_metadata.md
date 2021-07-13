@@ -3,7 +3,7 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-
+TEST variable at 2 spatial scales. Data found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
 
 ### Data Source(s) Description:  
 
