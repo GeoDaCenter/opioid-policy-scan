@@ -27,14 +27,16 @@ Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean 
 
 ### Key Variable and Definitions:
 
+State variables: 
+
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | GEOID | Unique 2-digit identifier for U.S. states |
+| State FIPS code | STATEFP | Unique 2-digit identifier for U.S. states |
 | State abbreviation | state | Official USPS abbreviation for states |
-| Average Number | AveNo | Average number of infections, 2014-2018 |
+| Average Number | AveNo | Average number of infections, 2014-2018 ave. |
 | Average Rate | AveRt | Average rate of infection per 100,000 population |
-| Number of infections | No_20XX | Number of infections in given year |
-| Rate of infection | Rt_20XX | Rate of infections per 100,000 population |
+| Number of infections | No_20XX | Number of infections in given year (2014-2018) |
+| Rate of infection | Rt_20XX | Rate of infections per 100,000 population in given year (2014-2018)  |
 
 ### Data Limitations: 
 
