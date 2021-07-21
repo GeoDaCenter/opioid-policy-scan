@@ -53,10 +53,10 @@ These rates were calculated using sex by age by veteran status for the civilian 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
   |:---------|:--------------------|:------------|
-  | Total Population: Tract, County, State  | TotalPopTract | Total population |
-  | TotalVeteran Population: Tract, County, State  | TotalVetPopTract | Total veteran population |
-  | Total Male Population: Tract, County, State  |  MalePop  | Male population |
-  | Total Male Veteran Population: Tract, County, State  |  MaleVetPop  | Male veteran population |
+  | Total Population  | TotalPop | Total population |
+  | Total Veteran Population  | TotalVetPop | Total veteran population |
+  | Total Male Population  |  MalePop  | Male population |
+  | Total Male Veteran Population  |  MaleVetPop  | Male veteran population |
   | Male Population 18-34   |  Male18To34  | Male population, 18-34 |
   | Male Veteran Population 18-34  |  MaleVet18To34  | Male veteran population, 18-34 |
   | Male Population 35-54  |  Male35To54  | Male population, 35-54 |
