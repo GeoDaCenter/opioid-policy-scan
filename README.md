@@ -80,7 +80,7 @@ For more information about the individual variables, please refer to the data di
 | Educational Attainment | Population without a high school degree | ACS, 2018 5-year | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
 | Social Vulnerability Index (SVI) | SVI Rankings | CDC, 2018 | DS03 / [SVI](data_final/metadata/SVI_2018.md) | County, Tract | 
-
+| Veteran Population | Population as defined by veteran status | ACS, 2017 5-year | DS04 / [Veteran Population Variables](data_final/metadata/VetPop.md) | State, County, Tract, Zip | 
 
 <br>
 
