@@ -23,7 +23,7 @@ Read the complete descriptions of data source tables at HepVu's [Data Methods](h
 
 **Hepatitis C Prevalence Estimates**:
 
-State-level Hepatitis C prevalence estimates from HepVu were published by the Coalition for Applied Modeling for Prevention (CAMP) researchers. These estimates were calculated using four data sources – National Health and Nutrition Examination Survey (NHANES) (1999-2016), National Vital Statistics System (NVSS) (1999-2016), American Community Survey (ACS) Public Use Microdata Samples (PUMS) (2012-2016), and U.S. Census intercensal data (1999-2016). The Hepatitis C prevalence analyses were restricted to people aged 18 years or older, living within the 50 states and D.C. Rates are expressed as the number of estimated cases per 100,000 people in the population, rounded to the nearest 10 persons. It is an expression of the relative concentration of people with current Hepatitis C infection in an area (state). Estimated cases are rounded to the nearest hundred persons. For a complete description, see HepVu's [Data Methods](https://hepvu.org/data-methods/). 
+State-level Hepatitis C prevalence estimates (2013-2016 average) from HepVu were published by the Coalition for Applied Modeling for Prevention (CAMP) researchers. These estimates were calculated using four data sources – National Health and Nutrition Examination Survey (NHANES) (1999-2016), National Vital Statistics System (NVSS) (1999-2016), American Community Survey (ACS) Public Use Microdata Samples (PUMS) (2012-2016), and U.S. Census intercensal data (1999-2016). The Hepatitis C prevalence analyses were restricted to people aged 18 years or older, living within the 50 states and D.C. Rates are expressed as the number of estimated cases per 100,000 people in the population, rounded to the nearest 10 persons. It is an expression of the relative concentration of people with current Hepatitis C infection in an area (state). Estimated cases are rounded to the nearest hundred persons. For a complete description, see HepVu's [Data Methods](https://hepvu.org/data-methods/). 
 
 **Hepatitis C State Mortality Data**
 
@@ -46,7 +46,7 @@ Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean 
 |:---------|:--------------------|:------------|
 | State FIPS code | STATEFP | Unique 2-digit identifier for U.S. states |
 | State abbreviation | state.abb | Official USPS abbreviation for states |
-| State Cases | State Cases | |
+| State Cases | State Cases | Average, 2013-2016 |
 | State Rate  | State Rate  | |
 | Male Cases | Male Cases | |
 | Male Rate | Male Rate | |
@@ -69,28 +69,27 @@ Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean 
 |:---------|:--------------------|:------------|
 | State FIPS code | STATEFP | Unique 2-digit identifier for U.S. states |
 | State abbreviation | state.abb | Official USPS abbreviation for states |
-
-State Death Rate_2014                         
-Male Death Cases_2014  
- Male Death Rate_2014          
-Female Death Cases_2014     
- Female Death Rate_2014          
-American Indian/Alaska Native Death Cases_2014
- American Indian/Alaska Native Death Rate_2014
- $ Asian or Pacific Islander Death Cases_2014 
- $ Asian or Pacific Islander Death Rate_2014
- $ Black Death Cases_2014        
- $ Black Death Rate_2014       
- $ Hispanic Death Cases_2014           
- $ Hispanic Death Rate_2014      
- $ White Death Cases_2014     
- $ White Death Rate_2014         
- $ Age Less than 50 Death Cases_2014           
- $ Age Less than 50 Death Rate_2014          
- $ Age 50-74 Death Cases_2014         
- $ Age 50-74 Death Rate_2014      
- $ Age 75 Plus Death Cases_2014    
- $ Age 75 Plus Death Rate_2014 
+| State Death Rate |  State Death Rate_20XX | Individual years, 2014-2017 |                      
+| Male Death Cases | Male Death Cases_20XX | 
+| Male Death Rate | Male Death Rate_20XX |     
+| Female Death Cases | Female Death Cases_20XX | 
+| Female Death Rate | Female Death Rate_20XX |           
+| American Indian/Alaska Native Death Cases | American Indian/Alaska Native Death Cases_20XX |
+| American Indian/Alaska Native Death Rate | American Indian/Alaska Native Death Rate_20XX |
+| Asian or Pacific Islander Death Cases | Asian or Pacific Islander Death Cases_20XX |
+| Asian or Pacific Islander Death Rate | Asian or Pacific Islander Death Rate_20XX |
+| Black Death Cases |  Black Death Cases_20XX |          
+| Black Death Rate | Black Death Rate_20XX |      
+| Hispanic Death Cases | Hispanic Death Cases_20XX |      
+| Hispanic Death Rate  | Hispanic Death Rate_20XX |    
+| White Death Cases | White Death Cases_20XX |    
+| White Death Rate  | White Death Rate_20XX
+| Age Less than 50 Death Cases | Age Less than 50 Death Cases_20XX           
+| Age Less than 50 Death Rate | Age Less than 50 Death Rate_20XX          
+| Age 50-74 Death Cases  | Age 50-74 Death Cases_20XX       
+| Age 50-74 Death Rate  | Age 50-74 Death Rate_20XX         
+| Age 75 Plus Death Cases | Age 75 Plus Death Cases_20XX
+| Age 75 Plus Death Rate | Age 75 Plus Death Rate_20XX 
 
 #### County Mortality
 
