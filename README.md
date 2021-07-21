@@ -16,19 +16,6 @@ Contact Susan Paykin at spaykin at uchicago dot edu with any questions.
 ## Documentation
 Please refer to the [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing). 
 
-## Citation
-Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
-
-## Team
-
-This toolkit was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. 
-
-The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC),  providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization. JCOIN is part of the NIH HEAL (Helping to End Addiction Long-term<sup>SM</sup>) Initiative. The [NIH HEAL Initiative<sup>SM</sup>](https://heal.nih.gov/) supports a wide range of programs to develop new or improved prevention and treatment strategies for opioid addiction. JCOIN conducts research to address gaps in Opioid Use Disorder (OUD) treatment and related service in a wide range of criminal justice settings, including jails, drug and other problem-solving courts, policing and diversion, re-entry, and probation and parole. 
-
-## Acknowledgements
-
-This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
-
 ## Data Overview
 
 Variable constructs have been grouped thematically to highlight the multi-dimensional risk environment of opioid use in justice populations.  The variable themes are: **Geographic Boundaries, Policy, Health, Demographic, Economic, Physical Environment,** and **COVID-19**.
@@ -127,3 +114,16 @@ For more information about the individual variables, please refer to the data di
 | Adjusted Case Count per 100K | Daily cumulative adjusted case count per 100K population (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID02 / [COVID Variables](/data_final/metadata/COVID.md) | State, County |
 | 7-day Average Case Count | 7-day average case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID03 / [COVID Variables](/data_final/metadata/COVID.md) | State, County | 
 | Historical 7-day Average Adjusted Case Count per 100K | 7-day average adjusted case count per 100K population (01/21/20 - 03/03/2021)| The New York Times, 2021 | COVID04 / [COVID Variables](/data_final/metadata/COVID.md) | State, County | 
+
+## Citation
+Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
+
+## Team
+
+This toolkit was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. 
+
+The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC),  providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization. JCOIN is part of the NIH HEAL (Helping to End Addiction Long-term<sup>SM</sup>) Initiative. The [NIH HEAL Initiative<sup>SM</sup>](https://heal.nih.gov/) supports a wide range of programs to develop new or improved prevention and treatment strategies for opioid addiction. JCOIN conducts research to address gaps in Opioid Use Disorder (OUD) treatment and related service in a wide range of criminal justice settings, including jails, drug and other problem-solving courts, policing and diversion, re-entry, and probation and parole. 
+
+## Acknowledgements
+
+This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
