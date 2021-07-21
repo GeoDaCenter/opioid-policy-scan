@@ -3,7 +3,7 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-*Updated June 2021*
+*Updated July 2021*
 
 ## About
 
@@ -36,12 +36,14 @@ Variable constructs have been grouped thematically to highlight the multi-dimens
 For more information about the individual variables, please refer to the data dictionary in the complete [Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing).
 
 ### Geographic Boundaries
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
 | Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census, 2018 | [Geographic Boundaries](data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip |
 | Crosswalk files | County, Census Tract, Zip Code Tract Area (ZCTA) | HUD’s Office of Policy Development and Research (PD&R) | [Crosswalk Files](data_final/metadata/crosswalk.md) | County, Tract, Zip |
 
 ### Policy Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
 | Prison Incarceration Rates | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice, 2016 | PS01 / [Prison Variables](data_final/metadata/Prison%20variables_2016.md) | County | 
@@ -58,6 +60,7 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Health Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year ave. | Health01 / [Drug-Related Death Rate](data_final/metadata/Health_DrugDeaths.md) | State, County | 
@@ -72,6 +75,7 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Demographic Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Race & Ethnicity | Percentages of population defined by categories of race and ethnicity | ACS, 2018 5-year | DS01/ [Race & Ethnicity Variables](/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip |
@@ -85,6 +89,7 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Economic Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Employment Trends | Percentages of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries | ACS, 2018 5-year | EC01/ [Jobs by Industry](/data_final/metadata/Job_Categories_byIndustry_2018.md) | State, County, Tract, Zip | 
@@ -96,6 +101,7 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Built Environment Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Housing Occupancy Rate | Percent occupied units | ACS, 2018 5-year | BE01 / [Housing](/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
