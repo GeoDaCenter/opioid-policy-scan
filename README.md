@@ -3,7 +3,7 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-*Updated June 2021*
+*Updated July 2021*
 
 ## About
 
@@ -61,7 +61,7 @@ For more information about the individual variables, please refer to the data di
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year ave. | Health01 / [Drug-Related Death Rate](data_final/metadata/Health_DrugDeaths.md) | State, County | 
-| Hepatitis C rates | HepC prevalence and mortality | CDC WONDER, HepVu | Health02 / [Hepatitis C Rate](data_final/metadata/HepC_rate.md) | State | 
+| Hepatitis C rates | HepC prevalence and mortality | HepVu | Health02 / [Hepatitis C](data_final/metadata/HepC_rate.md) | State, County | 
 | Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](data_final/metadata/Health_PCPs.md) | Tract, County, State | 
 | Access to MOUDs | Distance to nearest MOUD | US Census, SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
 | Access to Health Centers | Distance to nearest FQHC | US Census, US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | 
