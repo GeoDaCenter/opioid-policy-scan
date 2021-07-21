@@ -1,4 +1,4 @@
-**Meta Data Name**: Hepatitis C Mortality & Prevalence
+**Meta Data Name**: Hepatitis C Mortality & Prevalence  
 **Last Modified**: July 20, 2021  
 **Author**: Susan Paykin  
 
@@ -35,7 +35,7 @@ The county-level hepatitis C mortality data presented on HepVu (single-year data
 
 ### Description of Data Processing: 
 
-Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean (2014-2018), averages were taken for total number and rates for each state. Dataset was then merged with state geometry file in order to add the state FIPS codes (GEOID) and abbreviations. 
+Data was cleaned and prepared for analysis by aggregating multiple single year datasets for mortality data into single multi-year county-level and state-level datasets. Stability levels were removed for dataset preparation but are available for reference in the raw datasets. 
 
 ### Key Variable and Definitions:
 
@@ -46,7 +46,7 @@ Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean 
 |:---------|:--------------------|:------------|
 | State FIPS code | STATEFP | Unique 2-digit identifier for U.S. states |
 | State abbreviation | state.abb | Official USPS abbreviation for states |
-| State Cases | State Cases | Average, 2013-2016 |
+| State Cases | State Cases | Mean, 2013-2016 |
 | State Rate  | State Rate  | |
 | Male Cases | Male Cases | |
 | Male Rate | Male Rate | |
@@ -97,23 +97,18 @@ Data was wrangled, cleaned and prepared for analysis. To obtain the 5-year mean 
 |:---------|:--------------------|:------------|
 | County FIPS code | COUNTYP | Unique 5-digit identifier for U.S. counties |
 | County name | county | County name |
-$ County HCV Death Rate_2014          : num [1:3220] 2.47 4.39 3.94 4.06 3.08 4.57 2.79 3.38 4.01 4.4 ...
- $ Age Less than 40 HCV Death Rate_2014: num [1:3220] 0.15 0.21 0.18 0.25 0.23 0.16 0.16 0.19 0.15 0.2 ...
- $ Age 40+ HCV Death Rate_2014         : num [1:3220] 5.55 9.93 8.93 9.09 6.85 10.4 6.29 7.61 9.13 9.97 ...
- $ County HCV Death Rate_2015          : num [1:3220] 2.23 3.93 3.46 3.61 2.69 3.98 2.56 2.96 3.48 4.03 ...
- $ Age Less than 40 HCV Death Rate_2015: num [1:3220] 0.16 -1 0.18 0.29 0.26 0.15 0.17 0.21 0.15 0.23 ...
- $ Age 40+ HCV Death Rate_2015         : num [1:3220] 4.98 -1 7.79 7.98 5.9 9.05 5.73 6.59 7.89 9.05 ...
- $ County HCV Death Rate_2016          : num [1:3220] 2.35 3.99 3.42 3.47 2.54 3.77 2.64 2.73 3.44 3.99 ...
- $ Age Less than 40 HCV Death Rate_2016: num [1:3220] 0.16 -1 0.19 0.27 0.23 0.17 0.18 0.2 0.16 0.22 ...
- $ Age 40+ HCV Death Rate_2016         : num [1:3220] 5.24 -1 7.69 7.72 5.6 8.57 5.9 6.06 7.76 8.96 ...
- $ County HCV Death Rate_2017          : num [1:3220] 2.29 3.86 3.27 3.36 2.55 3.58 2.63 2.73 3.29 3.78 ...
- $ Age Less than 40 HCV Death Rate_2017: num [1:3220] 0.18 -1 0.17 0.27 0.27 0.14 0.18 0.22 0.16 0.25 ...
- $ Age 40+ HCV Death Rate_2017        
-
-| Average Number | AveNo | Average number of infections, 2014-2018 ave. |
-| Average Rate | AveRt | Average rate of infection per 100,000 population |
-| Number of infections | No_20XX | Number of infections in given year (2014-2018) |
-| Rate of infection | Rt_20XX | Rate of infections per 100,000 population in given year (2014-2018)  |
+| County HCV Death Rate  |  County HCV Death Rate_20XX  | Individual years, 2014-2017
+| Age Less than 40 HCV Death Rate | Age Less than 40 HCV Death Rate_20XX |
+| Age 40+ HCV Death Rate | Age 40+ HCV Death Rate_20XX | 
+| County HCV Death Rate | County HCV Death Rate_20XX |
+| Age Less than 40 HCV Death Rate | Age Less than 40 HCV Death Rate_20XX  | 
+| Age 40+ HCV Death Rate | Age 40+ HCV Death Rate_20XX | 
+| County HCV Death Rate | County HCV Death Rate_20XX   
+| Age Less than 40 HCV Death Rate | Age Less than 40 HCV Death Rate_20XX
+| Age 40+ HCV Death Rate | Age 40+ HCV Death Rate_20XX 
+| County HCV Death Rate  | County HCV Death Rate_20XX 
+| Age Less than 40 HCV Death Rate | Age Less than 40 HCV Death Rate_20XX
+| Age 40+ HCV Death Rate  | Age 40+ HCV Death Rate_20XX    
 
 ### Data Limitations: 
 
