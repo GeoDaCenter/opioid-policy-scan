@@ -3,7 +3,7 @@
 **Author**: Rachel Vigil 
 
 ### Data Location: 
-Access06 - Nearest euclidean distance from Substance Use Treatment facilities to centroids of ZCTA areas. Files can be found [here]().
+Access06 - Nearest euclidean distance from Substance Use Treatment facilities to centroids of ZCTA areas. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
 * Access06_Z: Access at ZCTA level for contiguous US
 * Access06_T: Access at census tract level for contiguous US
 * Access06_AK_Z: Access at ZCTA level for state of Alaska
