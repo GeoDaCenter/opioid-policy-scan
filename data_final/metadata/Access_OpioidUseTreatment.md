@@ -1,6 +1,6 @@
-**Meta Data Name**: Nearest distance for Substance Use treatment resources.  
-**Last Modified**: July 23nd, 2021
-**Author**: Rachel Vigil 
+**Meta Data Name**: Nearest Distance for Opioid Use Treatment Providers  
+**Last Modified**: July 23, 2021  
+**Author**: Rachel Vigil  
 
 ### Data Location: 
 Access06 - Nearest euclidean distance from Opioid Use Treatment facilities to centroids of ZCTA areas. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
