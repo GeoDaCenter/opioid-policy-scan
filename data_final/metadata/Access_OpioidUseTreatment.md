@@ -6,13 +6,10 @@
 Access06 - Nearest euclidean distance from Opioid Use Treatment facilities to centroids of ZCTA areas. Files can be found [here]().
 * Access07_Z: Access at ZCTA level for contiguous US
 * Access07_T: Access at census tract level for contiguous US
-* Access07_AK_Z: Access at ZCTA level for state of Alaska
-* Access07_AK_T: Access at census tract level for state of Alaska
-* Access07_HI_Z: Access at ZCTA level for state of Hawaii
-* Access07_HI_T: Access at census tract level for state of Hawaii
+
 
 ### Data Source(s) Description:  
-Variables were obtained from the SAMHSA service locator. Raw data and more details can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx).
+Variables were obtained from the SAMHSA service locator. The Opioid Treatment Programs (OTPs) represented in this set are those certified, either fully or provisionally by SAMHSA. Cetification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here]https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
 
 
 ### Description of Data Processing: 
