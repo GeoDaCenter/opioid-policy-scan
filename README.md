@@ -58,6 +58,8 @@ For more information about the individual variables, please refer to the data di
 | Access to Hospitals | Distance to nearest hospital | US Census, CovidCareMap, 2020 |  Access03 / [Access: Hospitals](/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip |
 | Access to Mental Health Providers |  Distance to nearest mental health provider | US Census, SAMSHA 2020 |  Access04 / [Access: Mental Health Providers](data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip |
 | Access to Pharmacies | Distance to nearest pharmacy | US Census, InfoGroup 2018 | Access05 / [Access: Pharmacies](/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip |
+|Access to Substance Use Treatment Facilities| Distance to nearest substance use treatment facility| SAMHSA, SSATS 2021| Access06 / [Access: Substance Use Treatment](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_SubstanceUseTreatment.md)|Tract, Zip|
+|Access to Opioid Treatment Programs| Distance to nearest Opioid treatment program| SAMHSA, SSATS 2021| Access 07 / [Access: Opioid Treatment Programs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_OpioidUseTreatment.md)|Tract, Zip|
 
 <br>
 
