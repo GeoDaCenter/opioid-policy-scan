@@ -9,12 +9,12 @@ Access07 - Nearest euclidean distance from Opioid Use Treatment facilities to ce
 
 
 ### Data Source(s) Description:  
-Variables were obtained from the SAMHSA service locator. The Opioid Treatment Programs (OTPs) represented in this set are those certified, either fully or provisionally by SAMHSA. Cetification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here]https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
+Variables were obtained from the SAMHSA service locator. The Opioid Treatment Programs (OTPs) represented in this set are those certified, either fully or provisionally by SAMHSA. Cetification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
 
 
 ### Description of Data Processing: 
 The following variable was calculated using minimum distance calculations using ZCTA and census tract centroids and locations of the substance use treatment centers.
- 1. The minimum distance from ZCTA or Census Tract centroid to a substance use treatement facility.
+* Minimum distance from ZCTA or Census Tract centroid to a substance use treatement facility.
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
