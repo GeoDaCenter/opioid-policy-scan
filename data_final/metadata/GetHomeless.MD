@@ -1,0 +1,46 @@
+**Meta Data Name**: Homeless Population 
+**Last Modified**: July 30th, 2021  
+**Author**: Ally Muszynski  
+
+### Data Location: 
+DS05 - 4 spatial scales. Files can be found [here](/data_final).
+* DS04_T  
+* DS04_Z  
+* DS04_C  
+* DS04_S  
+
+### Data Source(s) Description:  
+Variables were obtained from the 2015 - 2019 American Community Survey (ACS), table B09019 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov. Additional information was obtained from the Department of Housing and Urban Development Homeless Census, 2019, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
+
+### Description of Data Source Table:
+B09019 : Provides breakdown of unhoused individuals living in group quarters.
+DP03: Annual homeless census point in time and bed count.fields
+
+### Description of Data Processing: 
+The following variables were included from the source data:
+1. Total population
+2. Total group non-related group dwelling population
+3. Total group dwelling population
+4. Homeless shelter bed count
+5. Homeless shelter point in time count
+6. Homeless shelter yearly bed count
+
+These rates were calculated using group dwelling and point in count estimates for homelessness. 
+
+----------
+  * Percentage for homeless rate was calculated as: *estimate for the group / total population*, e.g.
+-  *% group dwelling  = non-related group dwelling / Total population* \
+
+### Key Variable and Definitions:
+| Variable | Variable ID in .csv | Description |
+  |:---------|:--------------------|:------------|
+  | Total Population: Tract, County, State  | TotalPop | Total population |
+  | Non-related Group Dwelling | Non-relatedGroupDwelling | Number of people under one roof that are unrelated |
+  | Group Dwelling | GroupQuarters | Number of people under one roof |
+  | Rate of Homelessness | HomelessPercent | estamate of homelessness over total population |
+  | Bed Count | BED_COUNT | Number of beds availible to homeless populations in group quarters availible at the time of the census |
+  | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
+  | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds availible to homeless populations in group quarters availible year-round |
+  
+  
+  
