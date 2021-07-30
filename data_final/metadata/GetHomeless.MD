@@ -4,10 +4,10 @@
 
 ### Data Location: 
 DS05 - 4 spatial scales. Files can be found [here](/data_final).
-* DS04_T  
-* DS04_Z  
-* DS04_C  
-* DS04_S  
+* DS05_T  
+* DS05_Z  
+* DS05_C  
+* DS05_S  
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2015 - 2019 American Community Survey (ACS), table B09019 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov. Additional information was obtained from the Department of Housing and Urban Development Homeless Census, 2019, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
