@@ -3,31 +3,18 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-*Updated June 2021*
+*Updated July 2021*
 
 ## About
 
-The Opioid Environment Policy Scan is a database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. We used a risk environment framework ([Rhodes 2009](https://www.sciencedirect.com/science/article/pii/S095539590800203X?via%3Dihub)) to guide data selection for the Opioid Environment Policy Scan. Data were stratified into six spheres of influence: Policy, Health, Demographic, Economic, Physical Environment, and COVID-19. The warehouse includes 45 data variable constructs across spheres characterizing the opioid use risk environment across U.S. geographies and spatial scales at the Census tract, ZIP Code Tract Area (ZCTA), county, and state levels. 
+The Opioid Environment Policy Scan (OEPS) is a free, open-source database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. We used a [risk environment framework](https://www.sciencedirect.com/science/article/pii/S0955395902000075) to guide data selection, stratifying all data across six spheres of influence: Policy, Health, Demographic, Economic, Physical Environment, and COVID-19 factors. The database includes more than four dozen variable constructs ranging across thematic spheres, relevant to research and analyses of opioid environments across U.S. geographies at different spatial scales, including Census tract, ZIP Code Tract Area (ZCTA), county, and state levels.
 
-This repository stores scripts used to wrangle, clean, join, and visualize data for the Opioid Environment Policy Scan, available to the JCOIN Network through the JCOIN Data Commons. The [Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing) provides metadata and descriptions for variable constructs included in the Policy Scan. The Policy Scan will be further developed as a data visualization product to characterize the multi-dimensional risk environment impacting the opioid crisis in the United States.
+This project was developed for the Methodology and Advanced Analytics Resource Center (MAARC) of the Justice Community Opioids Innovation Network (JCOIN), an NIH HEAL Initiative. Data is also available JCOIN Network through the [JCOIN Data Commons](https://jcoin.datacommons.io/).
 
-Contact Susan Paykin at spaykin at uchicago dot edu with any questions. 
+Contact [Susan Paykin](mailto:spaykin@uchicago.edu) with any questions. 
 
 ## Documentation
 Please refer to the [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing). 
-
-## Citation
-Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
-
-## Team
-
-This toolkit was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. 
-
-The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC),  providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization. JCOIN is part of the NIH HEAL (Helping to End Addiction Long-term<sup>SM</sup>) Initiative. The [NIH HEAL Initiative<sup>SM</sup>](https://heal.nih.gov/) supports a wide range of programs to develop new or improved prevention and treatment strategies for opioid addiction. JCOIN conducts research to address gaps in Opioid Use Disorder (OUD) treatment and related service in a wide range of criminal justice settings, including jails, drug and other problem-solving courts, policing and diversion, re-entry, and probation and parole. 
-
-## Acknowledgements
-
-This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
 
 ## Data Overview
 
@@ -36,12 +23,14 @@ Variable constructs have been grouped thematically to highlight the multi-dimens
 For more information about the individual variables, please refer to the data dictionary in the complete [Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing).
 
 ### Geographic Boundaries
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
 | Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census, 2018 | [Geographic Boundaries](data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip |
 | Crosswalk files | County, Census Tract, Zip Code Tract Area (ZCTA) | HUD’s Office of Policy Development and Research (PD&R) | [Crosswalk Files](data_final/metadata/crosswalk.md) | County, Tract, Zip |
 
 ### Policy Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
 | Prison Incarceration Rates | Prison population rate and prison admission rate by gender and ethnicity | Vera Institute of Justice, 2016 | PS01 / [Prison Variables](data_final/metadata/Prison%20variables_2016.md) | County | 
@@ -58,20 +47,24 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Health Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
 | Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year ave. | Health01 / [Drug-Related Death Rate](data_final/metadata/Health_DrugDeaths.md) | State, County | 
-| Hepatitis C rates | HepC prevalence and mortality | CDC WONDER, HepVu | Health02 / [Hepatitis C Rate](data_final/metadata/HepC_rate.md) | State | 
+| Hepatitis C rates | HepC prevalence and mortality | HepVu | Health02 / [Hepatitis C](data_final/metadata/HepC_rate.md) | State, County | 
 | Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](data_final/metadata/Health_PCPs.md) | Tract, County, State | 
 | Access to MOUDs | Distance to nearest MOUD | US Census, SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
 | Access to Health Centers | Distance to nearest FQHC | US Census, US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | 
 | Access to Hospitals | Distance to nearest hospital | US Census, CovidCareMap, 2020 |  Access03 / [Access: Hospitals](/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip |
 | Access to Mental Health Providers |  Distance to nearest mental health provider | US Census, SAMSHA 2020 |  Access04 / [Access: Mental Health Providers](data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip |
 | Access to Pharmacies | Distance to nearest pharmacy | US Census, InfoGroup 2018 | Access05 / [Access: Pharmacies](/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip |
+|Access to Substance Use Treatment Facilities| Distance to nearest substance use treatment facility| SAMHSA, SSATS 2021| Access06 / [Access: Substance Use Treatment](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_SubstanceUseTreatment.md)|Tract, Zip|
+|Access to Opioid Treatment Programs| Distance to nearest Opioid treatment program| SAMHSA, SSATS 2021| Access 07 / [Access: Opioid Treatment Programs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_OpioidUseTreatment.md)|Tract, Zip|
 
 <br>
 
 ### Demographic Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Race & Ethnicity | Percentages of population defined by categories of race and ethnicity | ACS, 2018 5-year | DS01/ [Race & Ethnicity Variables](/data_final/metadata/Race_Ethnicity_2018.md) | State, County, Tract, Zip |
@@ -80,11 +73,12 @@ For more information about the individual variables, please refer to the data di
 | Educational Attainment | Population without a high school degree | ACS, 2018 5-year | DS01 / [Other Demographic Variables](/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
 | Social Vulnerability Index (SVI) | SVI Rankings | CDC, 2018 | DS03 / [SVI](data_final/metadata/SVI_2018.md) | County, Tract | 
-
+| Veteran Population | Population as defined by veteran status | ACS, 2017 5-year | DS04 / [Veteran Population Variables](data_final/metadata/VetPop.md) | State, County, Tract, Zip | 
 
 <br>
 
 ### Economic Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Employment Trends | Percentages of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries | ACS, 2018 5-year | EC01/ [Jobs by Industry](/data_final/metadata/Job_Categories_byIndustry_2018.md) | State, County, Tract, Zip | 
@@ -96,6 +90,7 @@ For more information about the individual variables, please refer to the data di
 <br>
 
 ### Built Environment Variables
+
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
 | Housing Occupancy Rate | Percent occupied units | ACS, 2018 5-year | BE01 / [Housing](/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
@@ -121,3 +116,16 @@ For more information about the individual variables, please refer to the data di
 | Adjusted Case Count per 100K | Daily cumulative adjusted case count per 100K population (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID02 / [COVID Variables](/data_final/metadata/COVID.md) | State, County |
 | 7-day Average Case Count | 7-day average case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID03 / [COVID Variables](/data_final/metadata/COVID.md) | State, County | 
 | Historical 7-day Average Adjusted Case Count per 100K | 7-day average adjusted case count per 100K population (01/21/20 - 03/03/2021)| The New York Times, 2021 | COVID04 / [COVID Variables](/data_final/metadata/COVID.md) | State, County | 
+
+## Citation
+Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
+
+## Team
+
+This toolkit was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. 
+
+The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC),  providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization. JCOIN is part of the NIH HEAL (Helping to End Addiction Long-term<sup>SM</sup>) Initiative. The [NIH HEAL Initiative<sup>SM</sup>](https://heal.nih.gov/) supports a wide range of programs to develop new or improved prevention and treatment strategies for opioid addiction. JCOIN conducts research to address gaps in Opioid Use Disorder (OUD) treatment and related service in a wide range of criminal justice settings, including jails, drug and other problem-solving courts, policing and diversion, re-entry, and probation and parole. 
+
+## Acknowledgements
+
+This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
