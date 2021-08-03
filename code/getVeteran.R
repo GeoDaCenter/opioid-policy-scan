@@ -69,3 +69,8 @@ ds04_t[is.na(ds04_t)] <- -999
 ds04_z[is.na(ds04_z)] <- -999
 ds04_c[is.na(ds04_c)] <- -999
 ds04_s[is.na(ds04_s)] <- -999
+
+write.csv(ds04_t, "data_final/DS04_T.csv")
+write.csv(ds04_z, "data_final/DS04_Z.csv")
+write.csv(ds04_c, "data_final/DS04_C.csv")
+write.csv(ds04_s, "data_final/DS04_S.csv")
