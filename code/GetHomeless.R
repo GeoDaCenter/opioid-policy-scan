@@ -78,3 +78,20 @@ write.csv(GHomelessCensus.Tract, "/MAARC/getHomelessCensusTract.csv")
 write.csv(HomelessCensus.County, "/MAARC/getHomelessCensusCounty.csv")
 write.csv(HomelessCensus.State, "/MAARC/getHomelessCensusState.csv")
 write.csv(HomelessCensus.ZCTA, "/MAARC/getHomelessCensusZCTA.csv")
+
+### Code NAs as -999
+ds05_t <- read.csv("data_final/DS05_T.csv")
+ds05_z <- read.csv("data_final/DS05_Z.csv")
+ds05_c <- read.csv("data_final/DS05_C.csv")
+ds05_s <- read.csv("data_final/DS05_S.csv")
+
+ds05_t[is.na(ds05_t)] <- -999
+ds05_z[is.na(ds05_z)] <- -999
+ds05_c[is.na(ds05_c)] <- -999
+ds05_s[is.na(ds05_s)] <- -999
+
+write.csv(ds05_t, "data_final/DS05_T.csv")
+write.csv(ds05_z, "data_final/DS05_Z.csv")
+write.csv(ds05_c, "data_final/DS05_C.csv")
+write.csv(ds05_s, "data_final/DS05_S.csv")
+
