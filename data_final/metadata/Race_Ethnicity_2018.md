@@ -10,7 +10,7 @@ DS01 at 4 spatial scales. Files can be found [here](/data_final).
 * DS01_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B02001, B03002, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov.
+Variables were obtained from the 2018 5-year average American Community Survey (ACS), table B02001, B03002, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
 B02001 : Provides breakdown by Race of the total population. <br>
@@ -45,7 +45,7 @@ The following variables were included from **B03002**:
 | % Other | otherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) |
 
 ### Data Limitations:
-N/A
+This data represents estimates as of the ACS 2018 5-year average.
 
 ### Comments/Notes:
-N/A
+**Note on missing data:** Missing and/or unavailable data are coded as -999. 

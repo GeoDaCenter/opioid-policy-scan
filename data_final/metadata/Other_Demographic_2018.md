@@ -33,7 +33,7 @@ The following variables were included from **DP02**:
 | % Population Disabled  | disbP | Percentage of civilian non institutionalized population with a disability |
 
 ### Data Limitations:
-n/a
+This data represents estimates as of the ACS 2018 5-year average.
 
 ### Comments/Notes:
-n/a
+**Note on missing data:** Missing and/or unavailable data are coded as -999. 

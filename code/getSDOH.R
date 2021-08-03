@@ -6,7 +6,6 @@ library(readxl)
 library(tidyverse)
 library(sf)
 
-
 library(readr)
 sdoh_2014 <- read_csv("data_raw/us-sdoh-2014-v.csv")
 
@@ -27,4 +26,4 @@ data$tract_fips[!(data$tract_fips %in% tract2018$GEOID)]
 # now all the tracts can be matched in our tracts2018.shp
 names(data) <- c("GEOID", "SDOH")
 
-write.csv(data, "data_final/PS10_2014_T.csv", row.names = F)
+write.csv(data, "data_final/DS02_T.csv", row.names = F)
