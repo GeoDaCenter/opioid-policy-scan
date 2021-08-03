@@ -1,4 +1,4 @@
-**Meta Data Name**: Homeless Population 
+**Meta Data Name**: Homeless Population  
 **Last Modified**: July 30th, 2021  
 **Author**: Ally Muszynski  
 
@@ -42,5 +42,9 @@ These rates were calculated using group dwelling and point in count estimates fo
   | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
   | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds availible to homeless populations in group quarters availible year-round |
   
-  
-  
+
+### Data Limitations:
+This data represents estimates as of the ACS 2019 5-year average.
+
+### Comments/Notes:
+**Note on missing data:** Missing and/or unavailable data are coded as -999. 
