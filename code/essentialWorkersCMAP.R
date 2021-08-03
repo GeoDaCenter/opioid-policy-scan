@@ -142,3 +142,20 @@ varDf$year <- yeartoFetch
 colnames(varDf) <- c('GEOID','essnWrkE','wrkPopE','essnWrkP','year')
 varDf <- varDf[,c('GEOID','year','essnWrkE','wrkPopE','essnWrkP')]
 write.csv(varDf,paste0('EC02_',yeartoFetch,"_T",".csv"), row.names = FALSE)
+
+#### Code NAs as -999 ----
+
+EC02_t <- read.csv("data_final/EC02_2018_T.csv")
+EC02_z <- read.csv("data_final/EC02_2018_Z.csv")
+EC02_c <- read.csv("data_final/EC02_2018_C.csv")
+EC02_s <- read.csv("data_final/EC02_2018_S.csv")
+
+EC02_t[is.na(EC02_t)] <- -999
+EC02_z[is.na(EC02_z)] <- -999
+EC02_c[is.na(EC02_c)] <- -999
+EC02_s[is.na(EC02_s)] <- -999
+
+write.csv(EC02_t, "data_final/EC02_T.csv")
+write.csv(EC02_z, "data_final/EC02_Z.csv")
+write.csv(EC02_c, "data_final/EC02_C.csv")
+write.csv(EC02_s, "data_final/EC02_S.csv")
