@@ -74,7 +74,7 @@ For more information about the individual variables, please refer to the data di
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](data_final/metadata/SDOH_2014.md) | Tract | 
 | Social Vulnerability Index (SVI) | SVI Rankings | CDC, 2018 | DS03 / [SVI](data_final/metadata/SVI_2018.md) | County, Tract | 
 | Veteran Population | Population as defined by veteran status | ACS, 2017 5-year | DS04 / [Veteran Population Variables](data_final/metadata/VetPop.md) | State, County, Tract, Zip |
-| Homeless Population | Population as defined by momeless status | ACS, 2019 5-year, Housing and Urban Development, 2020 | DS04 / [Homeless Population Variables](data_final/metadata/GetHomeless.md) | State, County, Tract, Zip |
+| Homeless Population | Population as defined by momeless status | ACS, 2019 5-year, Housing and Urban Development, 2020 | DS05 / [Homeless Population Variables](/data_final/metadata/GetHomeless.md) | State, County, Tract, Zip |
 
 <br>
 
