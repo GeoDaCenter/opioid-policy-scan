@@ -94,3 +94,45 @@ x <- x %>%
   format('%y%m%d')
 colnames(COVID04_C)[3:ncol(COVID04_C)] <-paste("WkAd", x, sep = "")
 write.csv(COVID04_C, "Policy_Scan/data_final/COVID04_C.csv", row.names = F)
+
+### Code NAs as -999 ----
+
+# COVID01
+covid01_c <- read.csv("data_final/COVID01_C.csv")
+covid01_s <- read.csv("data_final/COVID01_S.csv")
+
+covid01_c[is.na(covid01_c)] <- -999
+covid01_s[is.na(covid01_s)] <- -999
+
+write.csv(covid01_c, "data_final/COVID01_C.csv")
+write.csv(covid01_s, "data_final/COVID01_S.csv")
+
+# COVID02
+COVID02_c <- read.csv("data_final/COVID02_C.csv")
+COVID02_s <- read.csv("data_final/COVID02_S.csv")
+
+COVID02_c[is.na(COVID02_c)] <- -999
+COVID02_s[is.na(COVID02_s)] <- -999
+
+write.csv(COVID02_c, "data_final/COVID02_C.csv")
+write.csv(COVID02_s, "data_final/COVID02_S.csv")
+
+# COVID03
+COVID03_c <- read.csv("data_final/COVID03_C.csv")
+COVID03_s <- read.csv("data_final/COVID03_S.csv")
+
+COVID03_c[is.na(COVID03_c)] <- -999
+COVID03_s[is.na(COVID03_s)] <- -999
+
+write.csv(COVID03_c, "data_final/COVID03_C.csv")
+write.csv(COVID03_s, "data_final/COVID03_S.csv")
+
+# COVID04
+COVID04_c <- read.csv("data_final/COVID04_C.csv")
+COVID04_s <- read.csv("data_final/COVID04_S.csv")
+
+COVID04_c[is.na(COVID04_c)] <- -999
+COVID04_s[is.na(COVID04_s)] <- -999
+
+write.csv(COVID04_c, "data_final/COVID04_C.csv")
+write.csv(COVID04_s, "data_final/COVID04_S.csv")

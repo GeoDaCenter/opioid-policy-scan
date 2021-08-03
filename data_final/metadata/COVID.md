@@ -41,10 +41,12 @@ For the example variable table below, note that all variable ID and descriptions
 | 7-Day Average Adjusted Case Count per 100K | WkAd200121 | 7-Day average adjusted cases per 100K ppl for date |
 
 ### Data Limitations:
-This data may differ slightly than official data reported by the CDC.
+As this dataset is sourced from The New York Times COVID-19 databse, estimates may differ slightly than data reported by the U.S. CDC.
 
 ### Comments/Notes:
-Other soruces for county and state level covid data: 
+**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+
+Other sources for county and state level COVID-19 data: 
 
 1. [USAFacts](https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/?utm_source=MailChimp&utm_campaign=census-covid2). This dataset is provided by a non-profit organization. The data are aggregated from the CDC, state- and local-level public health agencies. County-level data is confirmed by referencing state and local agencies directly.
 
