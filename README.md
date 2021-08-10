@@ -129,4 +129,4 @@ The University of Chicago serves as the JCOIN Methodology and Advanced Analytics
 
 This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
 
-*Updated July 2021*
+*Updated August 2021*
