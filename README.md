@@ -7,11 +7,9 @@
 
 The Opioid Environment Policy Scan (OEPS) is a free, open-source database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. 
 
-We used the [risk environment framework](https://www.sciencedirect.com/science/article/pii/S0955395902000075) (Rhodes, 2002) to guide data selection, stratifying all data across six spheres of influence: **Policy, Health, Demographic, Economic, Physical Environment,** and **COVID-19**. The database includes more than four dozen variable constructs ranging across thematic spheres, relevant to research and analyses of opioid environments across U.S. geographies at different spatial scales, including Census tract, ZIP Code Tract Area (ZCTA), county, and state levels.
+The OEPS was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. Data is also available JCOIN Network through the [JCOIN Data Commons](https://jcoin.datacommons.io/).
 
-This project was developed for the Methodology and Advanced Analytics Resource Center (MAARC) of the Justice Community Opioids Innovation Network (JCOIN), an NIH HEAL Initiative. Data is also available JCOIN Network through the [JCOIN Data Commons](https://jcoin.datacommons.io/).
-
-Contact [Susan Paykin](mailto:spaykin@uchicago.edu) with any questions. 
+The database is guided by the [risk environment framework](https://www.sciencedirect.com/science/article/pii/S0955395902000075) (Rhodes, 2002) to identify more than four dozen datasets and variable constructs across six spheres of influence: **Policy, Health, Demographic, Economic, Physical Environment,** and **COVID-19**. Most OEPS data are also available at multiple spatial scales, including Census tract, ZIP Code Tract Area (ZCTA), county, and state levels.
 
 ## Documentation
 Please refer to the complete [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing) for more information about individual datasets, variables, and data methods. 
@@ -121,7 +119,7 @@ Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, M
 
 ## Team
 
-The OEPS database was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. 
+The OEPS database was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. Contact [Susan Paykin](mailto:spaykin@uchicago.edu) with any questions. 
 
 The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC), providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization. JCOIN is part of the NIH HEAL (Helping to End Addiction Long-term<sup>SM</sup>) Initiative. The [NIH HEAL Initiative<sup>SM</sup>](https://heal.nih.gov/) supports a wide range of programs to develop new or improved prevention and treatment strategies for opioid addiction. JCOIN conducts research to address gaps in Opioid Use Disorder (OUD) treatment and related service in a wide range of criminal justice settings, including jails, drug and other problem-solving courts, policing and diversion, re-entry, and probation and parole. 
 
