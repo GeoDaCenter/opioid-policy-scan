@@ -38,13 +38,16 @@ These rates were calculated using group dwelling and point in count estimates fo
   | Non-related Group Dwelling | Non-relatedGroupDwelling | Number of people under one roof that are unrelated |
   | Group Dwelling | GroupQuarters | Number of people under one roof |
   | Rate of Homelessness | HomelessPercent | Estimate of homelessness over total population |
-  | Bed Count | BED_COUNT | Number of beds availible to homeless populations in group quarters availible at the time of the census |
+  | Bed Count | BED_COUNT | Number of beds available to homeless populations in group quarters available at the time of the census |
   | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
-  | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds availible to homeless populations in group quarters availible year-round |
+  | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds available to homeless populations in group quarters available year-round |
   
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2019 5-year average.
+This data represents estimates as of the ACS 2019 5-year average. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness.
 
 ### Comments/Notes:
+Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
 **Note on missing data:** Missing and/or unavailable data are coded as -999. 
+
+
