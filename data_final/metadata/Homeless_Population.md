@@ -37,7 +37,7 @@ These rates were calculated using group dwelling and point in count estimates fo
   | Total Population: Tract, County, State  | TotalPop | Total population |
   | Non-related Group Dwelling | Non-relatedGroupDwelling | Number of people under one roof that are unrelated |
   | Group Dwelling | GroupQuarters | Number of people under one roof |
-  | Rate of Homelessness | HomelessPercent | estamate of homelessness over total population |
+  | Rate of Homelessness | HomelessPercent | Estimate of homelessness over total population |
   | Bed Count | BED_COUNT | Number of beds availible to homeless populations in group quarters availible at the time of the census |
   | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
   | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds availible to homeless populations in group quarters availible year-round |
