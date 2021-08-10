@@ -3,6 +3,9 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
+## Public Site
+The public site (via GitHub Pages) is available [here](https://geodacenter.github.io/opioid-policy-scan/). 
+
 ## About
 
 The Opioid Environment Policy Scan (OEPS) is a free, open-source database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. 
