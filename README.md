@@ -3,8 +3,6 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-*Updated July 2021*
-
 ## About
 
 The Opioid Environment Policy Scan (OEPS) is a free, open-source database providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. We used a [risk environment framework](https://www.sciencedirect.com/science/article/pii/S0955395902000075) to guide data selection, stratifying all data across six spheres of influence: Policy, Health, Demographic, Economic, Physical Environment, and COVID-19 factors. The database includes more than four dozen variable constructs ranging across thematic spheres, relevant to research and analyses of opioid environments across U.S. geographies at different spatial scales, including Census tract, ZIP Code Tract Area (ZCTA), county, and state levels.
@@ -130,3 +128,5 @@ The University of Chicago serves as the JCOIN Methodology and Advanced Analytics
 ## Acknowledgements
 
 This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
+
+*Updated July 2021*
