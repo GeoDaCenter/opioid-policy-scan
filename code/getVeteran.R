@@ -54,23 +54,7 @@ VetState <- VetState %>%
   dplyr::mutate(VetPercent = TotalVetPop/TotalPop*100)
 
 #save dataset
-write.csv(VetTract, "/MAARC/DS04_T.csv")
-write.csv(VetZip, "/MAARC/DS04_Z.csv")
-write.csv(VetCounty, "/MAARC/DS04_C.csv")
-write.csv(VetState, "/MAARC/DS04_S.csv")
-
-### Code NAs as -999
-ds04_t <- read.csv("data_final/DS04_T.csv")
-ds04_z <- read.csv("data_final/DS04_Z.csv")
-ds04_c <- read.csv("data_final/DS04_C.csv")
-ds04_s <- read.csv("data_final/DS04_S.csv")
-
-ds04_t[is.na(ds04_t)] <- -999
-ds04_z[is.na(ds04_z)] <- -999
-ds04_c[is.na(ds04_c)] <- -999
-ds04_s[is.na(ds04_s)] <- -999
-
-write.csv(ds04_t, "data_final/DS04_T.csv")
-write.csv(ds04_z, "data_final/DS04_Z.csv")
-write.csv(ds04_c, "data_final/DS04_C.csv")
-write.csv(ds04_s, "data_final/DS04_S.csv")
+write.csv(VetTract, "/MAARC/DS04_2017_T.csv")
+write.csv(VetZip, "/MAARC/DS04_2017_Z.csv")
+write.csv(VetCounty, "/MAARC/DS04_2017_C.csv")
+write.csv(VetState, "/MAARC/DS04_2017_S.csv")
