@@ -4,8 +4,8 @@
 
 ### Data Location: 
 Access05 at 2 spatial scales. Files can be found [here](/data_final).
-* Access05_T  
-* Access05_Z  
+* Access04_T  
+* Access04_Z  
 
 ### Data Source(s) Description:  
 Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library.
