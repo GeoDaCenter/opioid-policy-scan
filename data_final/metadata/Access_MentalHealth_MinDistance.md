@@ -4,8 +4,8 @@
 
 ### Data Location: 
 Access04 at 2 spatial scales. Files can be found [here](/data_final).
-* Access04_T  
-* Access04_Z  
+* Access05_T  
+* Access05_Z  
 
 ### Data Source(s) Description:  
 Mental health provider data was sourced from [Substance Abuse and Mental Health Services Administration (SAMSHA)](https://www.samhsa.gov/) through its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator). 
