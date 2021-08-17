@@ -45,10 +45,10 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Essential Workers  | essnWrkP | Percentage of Population Employed in occupations outlined above |
+| % Essential Workers  | essnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) |
 
 ### Data Limitations:
 Please note this dataset uses occupations as a classifier and doesn't include any information about the industry to which the job belongs. This can lead to an overestimation of essential workers category. 
 
 ### Comments/Notes:
-n/a
+**Note on missing data:** Missing and/or unavailable data are coded as -999. 

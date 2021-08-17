@@ -186,3 +186,21 @@ varDf <- varDf[,c('GEOID','year','totPopE','whiteP','blackP','amIndP','asianP','
 varDf$GEOID <- substr(varDf$GEOID, 3, varDf$GEOID)
 
 write.csv(varDf,paste0('data_final/DS01_',yeartoFetch,"_Z",".csv"), row.names = FALSE)
+
+### Code NAs as -999 ----
+
+ds01_t <- read.csv("data_final/DS01_2018_T.csv")
+ds01_z <- read.csv("data_final/DS01_2018_Z.csv")
+ds01_c <- read.csv("data_final/DS01_2018_C.csv")
+ds01_s <- read.csv("data_final/DS01_2018_S.csv")
+
+ds01_t[is.na(ds01_t)] <- -999
+ds01_z[is.na(ds01_z)] <- -999
+ds01_c[is.na(ds01_c)] <- -999
+ds01_s[is.na(ds01_s)] <- -999
+
+# Resave final datasets
+write.csv(ds01_t, "data_final/DS01_T.csv")
+write.csv(ds01_z, "data_final/DS01_Z.csv")
+write.csv(ds01_c, "data_final/DS01_C.csv")
+write.csv(ds01_s, "data_final/DS01_S.csv")

@@ -68,7 +68,7 @@ These rates were calculated using sex by age by veteran status for the civilian 
   | Male Population 75+ |  Male75Plus  | Male population, 75+ |
   | Male Veteran Population 75+  |  MaleVet75Plus  | Male veteran population, 75+ |
   | Female Population 18-34   |  Female18To34  | Female population, 18-34 |
-  | Female Veteran Population 18-34  |  MaleVet18To34  | Female veteran population, 18-34 |
+  | Female Veteran Population 18-34  |  FemaleVet18To34  | Female veteran population, 18-34 |
   | Female Population 35-54  |  Female35To54  | Female population, 35-54 |
   | Female Veteran Population 35-54  |  FemaleVet35To54  | Female veteran population, 35-54 |
   | Female Population 55-64 |  Female55To64  | Female population, 55-64 |
