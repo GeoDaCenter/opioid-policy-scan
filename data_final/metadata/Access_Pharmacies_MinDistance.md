@@ -3,7 +3,7 @@
 **Author**: Susan Paykin    
 
 ### Data Location: 
-Access05 at 2 spatial scales. Files can be found [here](/data_final).
+Access04 at 2 spatial scales. Files can be found [here](/data_final).
 * Access04_T  
 * Access04_Z  
 
