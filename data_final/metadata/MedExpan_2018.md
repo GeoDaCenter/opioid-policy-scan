@@ -22,7 +22,7 @@ The following variables were included from the source data:
 |:---------|:--------------------|:------------|
 | Total medicaid spending | TtlMedExp | Total medicaid spending |
 | Traditional medicaid federal spending | TradFedExp | Traditional medicaid - federal spending |
-| Traditional medicaid state spending | TradSttExpN | Traditional medicaid - state spending |
+| Traditional medicaid state spending | TradSttExp | Traditional medicaid - state spending |
 | Expansion federal spending | ExpnFedExp | Expansion Group - Federal Spending |
 | Expansion state spending | ExpnSttExp | Expansion Group - State Spending |
 
