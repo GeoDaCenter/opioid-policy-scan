@@ -1,5 +1,5 @@
 # # Author : Ally Muszynski
-# Date : June 24, 2021
+# Date : September 1, 2021
 # About: This piece of code will generate Homeless Status variable for EC tables for Policy Scan
 
 #working directory
@@ -12,86 +12,83 @@ library(rgeos)
 library(rgdal)
 
 #read in raw data GroupQuarterVar from IPUMS
-HomelessStatTract <- read.csv("/MAARC/nhgis0008_csv/nhgis0008_ds244_20195_2019_tract.csv")
-HomelessStatZip <- read.csv("/MAARC/nhgis0008_csv/nhgis0008_ds244_20195_2019_zcta.csv")
+HomelessState <- read.csv("/Desktop/nhgis0034_csv/nhgis0034_ds239_20185_2018_state.csv")
+HomelessCounty <- read.csv("/Desktop/nhgis0035_csv/nhgis0035_ds239_20185_2018_county.csv")
+HomelessTract <- read.csv("/Desktop/nhgis0036_csv/nhgis0036_ds239_20185_2018_tract.csv")
+HomelessZCTA <- read.csv("/Desktop/nhgis0037_csv/nhgis0037_ds239_20185_2018_zcta.csv")
 
 #select relevant variables 
-HomelessTract <- HomelessStatTract %>%
-  dplyr::select(GISJOIN, YEAR, TRACTA, ALU6E001, ALU6E025, ALU6E026
-) %>% 
-  filter(YEAR=="2015-2019")
-HomelessCounty <- HomelessStatTract %>%
-  dplyr::select(GISJOIN, YEAR, COUNTY, ALU6E001, ALU6E025, ALU6E026
-  ) %>% 
-  filter(YEAR=="2015-2019")
-HomelessState <- HomelessStatTract %>%
-  dplyr::select(GISJOIN, YEAR, STATE, ALU6E001, ALU6E025, ALU6E026
-  ) %>% 
-  filter(YEAR=="2015-2019")
-HomelessZip<- HomelessStatZip %>%
-  dplyr::select(GISJOIN, YEAR, ZCTA5A, ALU6E001, ALU6E025, ALU6E026
-  ) %>%             
-  filter(YEAR=="2015-2019")
+Homeless_T <- HomelessTract %>%
+  dplyr::select(GISJOIN, YEAR, TRACTA, AJXHE001, AJXHE023, AJXHE037,  AJXHE038
+  ) 
+Homeless_C <- HomelessCounty %>%
+  dplyr::select(GISJOIN, YEAR, COUNTY, AJXHE001, AJXHE023, AJXHE037,  AJXHE038
+  )
+Homeless_S <- HomelessState %>%
+  dplyr::select(GISJOIN, YEAR, STATE, AJXHE001, AJXHE023, AJXHE037,  AJXHE038
+  )
+Homeless_Z <- HomelessZCTA %>%
+  dplyr::select(GISJOIN, YEAR, ZCTA5A, AJXHE001, AJXHE023, AJXHE037,  AJXHE038
+  )             
+
 
 #rename columns
-colnames(HomelessTract) <- c("GISJOIN", "YEAR", "TRACT", "TotalPop", "Non-relatedGroupDwelling", "GroupQuarters")
-colnames(HomelessCounty) <- c("GISJOIN", "YEAR", "COUNTY", "TotalPop", "Non-relatedGroupDwelling", "GroupQuarters")
-colnames(HomelessState) <- c("GISJOIN", "YEAR", "STATE", "TotalPop", "Non-relatedGroupDwelling", "GroupQuarters")
-colnames(HomelessZip) <- c("GISJOIN", "YEAR", "ZCTA", "TotalPop", "Non-relatedGroupDwelling", "GroupQuarters")
+colnames(Homeless_T) <- c("GEOID", "YEAR", "TRACTCE", "TotalPop", "NonrelatedHousehold", "NonrelatedGroupDwelling", "GroupQuarters")
+colnames(Homeless_C) <- c("GISJOIN", "YEAR", "COUNTYFP", "TotalPop", "NonrelatedHousehold", "NonrelatedGroupDwelling", "GroupQuarters")
+colnames(Homeless_S) <- c("GISJOIN", "YEAR", "STATEFP", "TotalPop","NonrelatedHousehold", "NonrelatedGroupDwelling", "GroupQuarters")
+colnames(Homeless_Z) <- c("GISJOIN", "YEAR", "ZCTA", "TotalPop", "NonrelatedHousehold", "NonrelatedGroupDwelling", "GroupQuarters")
 
-#find percent homeless population
-GroupQuarterTract <- HomelessTract %>% mutate(HomelessPercent = GroupQuarters/TotalPop*100)
-GroupQuarterCounty <- HomelessCounty %>% mutate(HomelessPercent = GroupQuarters/TotalPop*100)
-GroupQuarterState <- HomelessState %>% mutate(HomelessPercent = GroupQuarters/TotalPop*100)
-GroupQuarterZCTA <- HomelessZip %>% mutate(HomelessPercent = GroupQuarters/TotalPop*100)
+#find percent homeless population in group quarter compared to total population
+Homeless_T <- Homeless_T %>% 
+  mutate(GroupQuarterPercent = GroupQuarters/TotalPop*100)
+Homeless_C <- Homeless_C %>% 
+ mutate(GroupQuarterPercent = GroupQuarters/TotalPop*100)
+Homeless_S <- Homeless_S %>% 
+  mutate(GroupQuarterPercent = GroupQuarters/TotalPop*100)
+Homeless_Z <- Homeless_Z %>% 
+  mutate(GroupQuarterPercent = GroupQuarters/TotalPop*100)
+
+#find percent homeless population in one household compared to total population
+Homeless_T <- Homeless_T %>% 
+  mutate(NonrelatedHousePercent = NonrelatedHousehold/TotalPop*100)
+Homeless_C <- Homeless_C %>% 
+  mutate(NonrelatedHousePercent = NonrelatedHousehold/TotalPop*100)
+Homeless_S <- Homeless_S %>% 
+  mutate(NonrelatedHousePercent = NonrelatedHousehold/TotalPop*100)
+Homeless_Z <- Homeless_Z %>% 
+  mutate(NonrelatedHousePercent = NonrelatedHousehold/TotalPop*100)
+
 
 #save datasets
-write.csv(GroupQuarterTract, "/MAARC/getHomelessTract.csv")
-write.csv(GroupQuarterCounty, "//MAARC/getHomelessCounty.csv")
-write.csv(GroupQuarterState, "/MAARC/getHomelessState.csv")
-write.csv(GroupQuarterZCTA, "/MAARC/getHomelessZCTA.csv")
+write.csv(Homeless_T, "/Desktop/MAARC/Homeless/DS05_T.csv")
+write.csv(Homeless_C, "/Desktop/MAARC/Homeless/DS05_C.csv")
+write.csv(Homeless_S, "/Desktop/MAARC/Homeless/DS05_S.csv")
+write.csv(Homeless_Z, "/Desktop/MAARC/Homeless/DS05_Z.csv")
 
 #Read in homeless census 
-HomelessCensusTract <- read.csv("/MAARC/Homeless/Homeless/TractHomeless.csv")
-HomelessCensusCounty <- read.csv("/MAARC/Homeless/Homeless/CountyHomeless.csv")
-HomelessCensusState <- read.csv("/MAARC/Homeless/Homeless/StateHomeless.csv")
-HomelessCensusZCTA <- read.csv("/MAARC/Homeless/Homeless/ZCTAHomeless.csv")
+HomelessCensusTract <- read.csv("/Desktop/TractHomeless.csv")
+HomelessCensusCounty <- read.csv("/Desktop/CountyHomeless.csv")
+HomelessCensusState <- read.csv("/Desktop/StateHomeless.csv")
+HomelessCensusZCTA <- read.csv("/Desktop/ZCTAHomeless.csv")
 
 #select relevant variables 
-HomelessCensus.Tract <- HomelessCensusTract %>%
+HomelessCensusTract <- HomelessCensusTract %>%
   dplyr::select(GISJOIN, NAME, totbed, pitct, yrbed) 
-HomelessCensus.County <- HomelessCensusCounty %>%
+HomelessCensusCounty <- HomelessCensusCounty %>%
   dplyr::select(COUNTYFP, GEOID, totbed, pitct, yrbed) 
-HomelessCensus.State <- HomelessCensusState %>%
+HomelessCensusState <- HomelessCensusState %>%
   dplyr::select(STATEFP, GEOID, totbed, pitct, yrbed)
-HomelessCensus.ZCTA<- HomelessCensusZCTA %>%
+HomelessCensusZCTA<- HomelessCensusZCTA %>%
   dplyr::select(ZCTA5CE10, GEOID10, totbed, pitct, yrbed)
 
 #rename columns
-colnames(HomelessCensus.Tract) <- c("GEOID", "TRACT", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
-colnames(HomelessCensus.County) <- c("COUNTY", "GEOID", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
-colnames(HomelessCensus.State) <- c("GEOID", "STATE", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
-colnames(HomelessCensus.ZCTA) <- c("ZCTA", "GEOID", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
+colnames(HomelessCensusTract) <- c("GEOID", "TRACTCE", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
+colnames(HomelessCensusCounty) <- c("COUNTYFP", "GEOID", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
+colnames(HomelessCensusState) <- c("GEOID", "STATEFP", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
+colnames(HomelessCensusZCTA) <- c("ZCTA", "GEOID", "BED_COUNT", "POINT_IN_TIME", "YEARLY_BED_COUNT")
 
 #save datasets
-write.csv(GHomelessCensus.Tract, "/MAARC/getHomelessCensusTract.csv")
-write.csv(HomelessCensus.County, "/MAARC/getHomelessCensusCounty.csv")
-write.csv(HomelessCensus.State, "/MAARC/getHomelessCensusState.csv")
-write.csv(HomelessCensus.ZCTA, "/MAARC/getHomelessCensusZCTA.csv")
-
-### Code NAs as -999
-ds05_t <- read.csv("data_final/DS05_T.csv")
-ds05_z <- read.csv("data_final/DS05_Z.csv")
-ds05_c <- read.csv("data_final/DS05_C.csv")
-ds05_s <- read.csv("data_final/DS05_S.csv")
-
-ds05_t[is.na(ds05_t)] <- -999
-ds05_z[is.na(ds05_z)] <- -999
-ds05_c[is.na(ds05_c)] <- -999
-ds05_s[is.na(ds05_s)] <- -999
-
-write.csv(ds05_t, "data_final/DS05_T.csv")
-write.csv(ds05_z, "data_final/DS05_Z.csv")
-write.csv(ds05_c, "data_final/DS05_C.csv")
-write.csv(ds05_s, "data_final/DS05_S.csv")
-
+write.csv(HomelessCensusTract, "/Desktop/MAARC/Homeless/DS06_T.csv")
+write.csv(HomelessCensusCounty, "/Desktop/MAARC/Homeless/DS06_C.csv")
+write.csv(HomelessCensusState, "/Desktop/MAARC/Homeless/DS06_S.csv")
+write.csv(HomelessCensusZCTA, "/Desktop/MAARC/Homeless/DS06_Z.csv")

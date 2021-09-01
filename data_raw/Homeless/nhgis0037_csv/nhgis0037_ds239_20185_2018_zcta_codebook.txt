@@ -1,0 +1,216 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0037_ds239_20185_2018_zcta'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2014-2018
+Geographic level: 5-Digit ZIP Code Tabulation Area
+Dataset:          2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+   NHGIS code:    2014_2018_ACS5a
+   NHGIS ID:      ds239
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Household Type (Including Living Alone) by Relationship
+   Universe:    Total population
+   Source code: B09019
+   NHGIS code:  AJXH
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATEA:      State Code
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLKGRPA:     Block Group Code
+        CONCITA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AITSCEA:     Tribal Subdivision/Remainder Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2019-2021, 116th Congress) Code
+        SLDUA:       State Legislative District (Upper Chamber) Code
+        SLDLA:       State Legislative District (Lower Chamber) Code
+        ZCTA5A:      5-Digit ZIP Code Tabulation Area Code
+        SUBMCDA:     Subminor Civil Division Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+        BTTRA:       Tribal Census Tract Code
+        BTBGA:       Tribal Block Group Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Household Type (Including Living Alone) by Relationship
+    Universe:    Total population
+    Source code: B09019
+    NHGIS code:  AJXH
+        AJXHE001:    Total
+        AJXHE002:    In households
+        AJXHE003:    In households: In family households
+        AJXHE004:    In households: In family households: Householder
+        AJXHE005:    In households: In family households: Householder: Male
+        AJXHE006:    In households: In family households: Householder: Female
+        AJXHE007:    In households: In family households: Spouse
+        AJXHE008:    In households: In family households: Child
+        AJXHE009:    In households: In family households: Child: Biological child
+        AJXHE010:    In households: In family households: Child: Adopted child
+        AJXHE011:    In households: In family households: Child: Stepchild
+        AJXHE012:    In households: In family households: Grandchild
+        AJXHE013:    In households: In family households: Brother or sister
+        AJXHE014:    In households: In family households: Parent
+        AJXHE015:    In households: In family households: Parent-in-law
+        AJXHE016:    In households: In family households: Son-in-law or daughter-in-law
+        AJXHE017:    In households: In family households: Other relatives
+        AJXHE018:    In households: In family households: Nonrelatives
+        AJXHE019:    In households: In family households: Nonrelatives: Roomer or boarder
+        AJXHE020:    In households: In family households: Nonrelatives: Housemate or roommate
+        AJXHE021:    In households: In family households: Nonrelatives: Unmarried partner
+        AJXHE022:    In households: In family households: Nonrelatives: Foster child
+        AJXHE023:    In households: In family households: Nonrelatives: Other nonrelatives
+        AJXHE024:    In households: In nonfamily households
+        AJXHE025:    In households: In nonfamily households: Householder
+        AJXHE026:    In households: In nonfamily households: Householder: Male
+        AJXHE027:    In households: In nonfamily households: Householder: Male: Living alone
+        AJXHE028:    In households: In nonfamily households: Householder: Male: Not living alone
+        AJXHE029:    In households: In nonfamily households: Householder: Female
+        AJXHE030:    In households: In nonfamily households: Householder: Female: Living alone
+        AJXHE031:    In households: In nonfamily households: Householder: Female: Not living alone
+        AJXHE032:    In households: In nonfamily households: Nonrelatives
+        AJXHE033:    In households: In nonfamily households: Nonrelatives: Roomer or boarder
+        AJXHE034:    In households: In nonfamily households: Nonrelatives: Housemate or roommate
+        AJXHE035:    In households: In nonfamily households: Nonrelatives: Unmarried partner
+        AJXHE036:    In households: In nonfamily households: Nonrelatives: Foster child
+        AJXHE037:    In households: In nonfamily households: Nonrelatives: Other nonrelatives
+        AJXHE038:    In group quarters
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Household Type (Including Living Alone) by Relationship
+    Universe:    Total population
+    Source code: B09019
+    NHGIS code:  AJXH
+        AJXHM001:    Total
+        AJXHM002:    In households
+        AJXHM003:    In households: In family households
+        AJXHM004:    In households: In family households: Householder
+        AJXHM005:    In households: In family households: Householder: Male
+        AJXHM006:    In households: In family households: Householder: Female
+        AJXHM007:    In households: In family households: Spouse
+        AJXHM008:    In households: In family households: Child
+        AJXHM009:    In households: In family households: Child: Biological child
+        AJXHM010:    In households: In family households: Child: Adopted child
+        AJXHM011:    In households: In family households: Child: Stepchild
+        AJXHM012:    In households: In family households: Grandchild
+        AJXHM013:    In households: In family households: Brother or sister
+        AJXHM014:    In households: In family households: Parent
+        AJXHM015:    In households: In family households: Parent-in-law
+        AJXHM016:    In households: In family households: Son-in-law or daughter-in-law
+        AJXHM017:    In households: In family households: Other relatives
+        AJXHM018:    In households: In family households: Nonrelatives
+        AJXHM019:    In households: In family households: Nonrelatives: Roomer or boarder
+        AJXHM020:    In households: In family households: Nonrelatives: Housemate or roommate
+        AJXHM021:    In households: In family households: Nonrelatives: Unmarried partner
+        AJXHM022:    In households: In family households: Nonrelatives: Foster child
+        AJXHM023:    In households: In family households: Nonrelatives: Other nonrelatives
+        AJXHM024:    In households: In nonfamily households
+        AJXHM025:    In households: In nonfamily households: Householder
+        AJXHM026:    In households: In nonfamily households: Householder: Male
+        AJXHM027:    In households: In nonfamily households: Householder: Male: Living alone
+        AJXHM028:    In households: In nonfamily households: Householder: Male: Not living alone
+        AJXHM029:    In households: In nonfamily households: Householder: Female
+        AJXHM030:    In households: In nonfamily households: Householder: Female: Living alone
+        AJXHM031:    In households: In nonfamily households: Householder: Female: Not living alone
+        AJXHM032:    In households: In nonfamily households: Nonrelatives
+        AJXHM033:    In households: In nonfamily households: Nonrelatives: Roomer or boarder
+        AJXHM034:    In households: In nonfamily households: Nonrelatives: Housemate or roommate
+        AJXHM035:    In households: In nonfamily households: Nonrelatives: Unmarried partner
+        AJXHM036:    In households: In nonfamily households: Nonrelatives: Foster child
+        AJXHM037:    In households: In nonfamily households: Nonrelatives: Other nonrelatives
+        AJXHM038:    In group quarters
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 16.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2021. 
+        http://doi.org/10.18128/D050.V16.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

@@ -1,5 +1,5 @@
 # # Author : Ally Muszynski
-# Date : June 24, 2021
+# Date : September 1, 2021
 # About: This piece of code will generate Veteran Status variable for EC tables for Policy Scan
 
 #working directory
@@ -9,52 +9,45 @@ library(dplyr)
 library(raster)
 
 #read in raw data
-VetStatTract <- read.csv("getVeteran/nhgis0007_ds233_20175_2017_tract.csv",)
-VetStatZip <- read.csv("getVeteran/nhgis0007_ds233_20175_2017_zcta.csv")
+VetStatZCTA <- read.csv("/Desktop/nhgis0025_csv/nhgis0025_ds239_20185_2018_zcta.csv")
+VetStatTract <- read.csv("/Desktop/nhgis0032_csv/nhgis0032_ds239_20185_2018_tract.csv")
+VetStatCounty <- read.csv("/Desktop/nhgis0033_csv/nhgis0033_ds239_20185_2018_county.csv")
+VetStatState <- read.csv("/Desktop/nhgis0031_csv/nhgis0031_ds239_20185_2018_state.csv")
 
 #select relevant variables 
-VetTract <- VetStatTract %>%
-  dplyr::select(GISJOIN, YEAR, STATE, COUNTY, TRACTA, AH3FE001, AH3FE002, AH3FE004, AH3FE005, AH3FE007, AH3FE008, AH3FE010, AH3FE011, AH3FE013, AH3FE014, AH3FE016, AH3FE017, AH3FE019, AH3FE020, AH3FE022, AH3FE023, AH3FE025, AH3FE026, AH3FE028, AH3FE029, AH3FE031, AH3FE032, AH3FE034, AH3FE035, AH3FE037, AH3FE038  
-  ) %>% 
-  filter(YEAR=="2013-2017")
+Vet_Z <- VetStatZCTA %>%
+  dplyr::select(GISJOIN, YEAR, ZCTA5A, AJ02E001, AJ02E002, AJ02E004, AJ02E005, AJ02E007, AJ02E008, AJ02E010, AJ02E011, AJ02E013, AJ02E014, AJ02E016, AJ02E017, AJ02E019, AJ02E020, AJ02E022, AJ02E023, AJ02E025, AJ02E026, AJ02E028, AJ02E029, AJ02E031, AJ02E032, AJ02E034, AJ02E035, AJ02E037, AJ02E038  
+  )
+Vet_T <- VetStatTract %>%
+  dplyr::select(GISJOIN, YEAR, TRACTA, AJ02E001, AJ02E002, AJ02E004, AJ02E005, AJ02E007, AJ02E008, AJ02E010, AJ02E011, AJ02E013, AJ02E014, AJ02E016, AJ02E017, AJ02E019, AJ02E020, AJ02E022, AJ02E023, AJ02E025, AJ02E026, AJ02E028, AJ02E029, AJ02E031, AJ02E032, AJ02E034, AJ02E035, AJ02E037, AJ02E038 
+  )
+Vet_C <- VetStatCounty %>%
+  dplyr::select(GISJOIN, YEAR, COUNTY, AJ02E001, AJ02E002, AJ02E004, AJ02E005, AJ02E007, AJ02E008, AJ02E010, AJ02E011, AJ02E013, AJ02E014, AJ02E016, AJ02E017, AJ02E019, AJ02E020, AJ02E022, AJ02E023, AJ02E025, AJ02E026, AJ02E028, AJ02E029, AJ02E031, AJ02E032, AJ02E034, AJ02E035, AJ02E037, AJ02E038 
+  )
+Vet_S <- VetStatState %>%
+  dplyr::select(GISJOIN, YEAR, STATE, AJ02E001, AJ02E002, AJ02E004, AJ02E005, AJ02E007, AJ02E008, AJ02E010, AJ02E011, AJ02E013, AJ02E014, AJ02E016, AJ02E017, AJ02E019, AJ02E020, AJ02E022, AJ02E023, AJ02E025, AJ02E026, AJ02E028, AJ02E029, AJ02E031, AJ02E032, AJ02E034, AJ02E035, AJ02E037, AJ02E038 
+  )
 
-VetZip<- VetStatZip %>%
-  dplyr::select(GISJOIN, YEAR, ZCTA5A, AH3FE001, AH3FE002, AH3FE004, AH3FE005, AH3FE007, AH3FE008, AH3FE010, AH3FE011, AH3FE013, AH3FE014, AH3FE016, AH3FE017, AH3FE019, AH3FE020, AH3FE022, AH3FE023, AH3FE025, AH3FE026, AH3FE028, AH3FE029, AH3FE031, AH3FE032, AH3FE034, AH3FE035, AH3FE037, AH3FE038  
-  ) %>%             
-  filter(YEAR=="2013-2017")
-
-#seperante county, state from tract data
-VetTract <- VetStatTract %>%
-  dplyr::select(GISJOIN, YEAR, TRACTA, AH3FE001, AH3FE002, AH3FE004, AH3FE005, AH3FE007, AH3FE008, AH3FE010, AH3FE011, AH3FE013, AH3FE014, AH3FE016, AH3FE017, AH3FE019, AH3FE020, AH3FE022, AH3FE023, AH3FE025, AH3FE026, AH3FE028, AH3FE029, AH3FE031, AH3FE032, AH3FE034, AH3FE035, AH3FE037, AH3FE038  
-  ) %>% 
-  filter(YEAR=="2013-2017")
-VetCounty <- VetStatTract %>%
-  dplyr::select(GISJOIN, YEAR, COUNTY, AH3FE001, AH3FE002, AH3FE004, AH3FE005, AH3FE007, AH3FE008, AH3FE010, AH3FE011, AH3FE013, AH3FE014, AH3FE016, AH3FE017, AH3FE019, AH3FE020, AH3FE022, AH3FE023, AH3FE025, AH3FE026, AH3FE028, AH3FE029, AH3FE031, AH3FE032, AH3FE034, AH3FE035, AH3FE037, AH3FE038  
-  ) %>% 
-  filter(YEAR=="2013-2017")
-VetState <- VetStatTract %>%
-  dplyr::select(GISJOIN, YEAR, STATE, AH3FE001, AH3FE002, AH3FE004, AH3FE005, AH3FE007, AH3FE008, AH3FE010, AH3FE011, AH3FE013, AH3FE014, AH3FE016, AH3FE017, AH3FE019, AH3FE020, AH3FE022, AH3FE023, AH3FE025, AH3FE026, AH3FE028, AH3FE029, AH3FE031, AH3FE032, AH3FE034, AH3FE035, AH3FE037, AH3FE038  
-  ) %>% 
-  filter(YEAR=="2013-2017")
 
 #rename columns
-colnames(VetTract) <- c("GISJOIN", "YEAR", "TRACT", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
-colnames(VetZip) <- c("GISJOIN", "YEAR", "ZCTA", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
-colnames(VetCounty) <- c("GISJOIN", "YEAR", "COUNTY", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
-colnames(VetState) <- c("GISJOIN", "YEAR", "STATE", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
+colnames(Vet_T) <- c("GEOID", "YEAR", "TRACTCE", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
+colnames(Vet_Z) <- c("GEOID", "YEAR", "ZCTA", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
+colnames(Vet_C) <- c("GEOID", "YEAR", "COUNTYFP", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
+colnames(Vet_S) <- c("GEOID", "YEAR", "STATEFP", "TotalPop", "TotalVetPop", "MalePop", "MaleVetPop", "Male18To34", "MaleVet18To34", "Male35To54", "MaleVet35To54", "Male55To64", "MaleVet55To64", "Male65To74", "MaleVet65To74", "Male75Plus", "MaleVet75Plus", "FemalePop", "FemaleVetPop", "Female18To34", "FemaleVet18To34", "Female35To54", "FemaleVet35To54", "Female55To64", "FemaleVet55To64", "Female65To74", "FemaleVet65To74", "Female75Plus", "FemaleVet75Plus")
 
 #find percent veteran population
-VetTract <- VetTract %>% 
+Vet_T <- Vet_T %>% 
+  dplyr::mutate(PctVet = TotalVetPop/TotalPop*100)
+Vet_Z <- Vet_Z %>% 
   dplyr::mutate(VetPercent = TotalVetPop/TotalPop*100)
-VetZip <- VetZip %>% 
+Vet_C <- Vet_C %>% 
   dplyr::mutate(VetPercent = TotalVetPop/TotalPop*100)
-VetCounty <- VetCounty %>% 
-  dplyr::mutate(VetPercent = TotalVetPop/TotalPop*100)
-VetState <- VetState %>% 
+Vet_S <- Vet_S %>% 
   dplyr::mutate(VetPercent = TotalVetPop/TotalPop*100)
 
 #save dataset
-write.csv(VetTract, "/MAARC/DS04_2017_T.csv")
-write.csv(VetZip, "/MAARC/DS04_2017_Z.csv")
-write.csv(VetCounty, "/MAARC/DS04_2017_C.csv")
-write.csv(VetState, "/MAARC/DS04_2017_S.csv")
+write.csv(Vet_T, "/MAARC/Vet/DS04_T.csv")
+write.csv(Vet_Z, "/MAARC/Vet/DS04_Z.csv")
+write.csv(Vet_C, "/MAARC/Vet/DS04_C.csv")
+write.csv(Vet_S, "/MAARC/Vet/DS04_S.csv")
+
