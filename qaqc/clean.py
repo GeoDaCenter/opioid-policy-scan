@@ -68,6 +68,7 @@ def pad(x, length):
         
         if len(f"{x}") < length:
             return pad(f"0{x}", length)
+    # In case x does not have a length
     except:
         return x
     return x
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     for file in files:
         
         # Use those types and read in to pandas
-        raw = pd.read_csv(file, encoding='latin-1', dtype={
+        raw = pd.read_csv(file, dtype={
             'COUNTYFP':'str',
             'STATEFP':'str',
             'ZCTA':'str',
