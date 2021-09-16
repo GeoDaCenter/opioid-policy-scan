@@ -4,7 +4,7 @@
 # Opioid Environment Policy Scan (OEPS) Database
 
 ## Public Site
-The public site (via GitHub Pages) is available [here](https://geodacenter.github.io/opioid-policy-scan/). 
+The public site is available [here](https://oeps.netlify.app/). 
 
 ## About
 
