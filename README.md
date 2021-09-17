@@ -3,8 +3,8 @@
 
 # Opioid Environment Policy Scan (OEPS) Database
 
-## Public Site
-The public site is available [here](https://oeps.netlify.app/). 
+## Public Site - OEPS Explorer
+Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
 
 ## About
 
