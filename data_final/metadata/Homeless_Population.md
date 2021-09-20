@@ -8,6 +8,8 @@ DS05 - 4 spatial scales. Files can be found [here](/data_final).
 * DS05_Z  
 * DS05_C  
 * DS05_S  
+
+
 DS06 - 4 spatial scales. Files can be found [here](/data_final).
 * DS06_T  
 * DS06_Z  
@@ -53,7 +55,8 @@ This data represents estimates as of the ACS 2019 5-year average. It is difficul
 
 ### Comments/Notes:
 Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
-[here](/https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+[Here](/https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.  
+
+**Note on missing data:** Missing and/or unavailable data are coded as blank cells or _NA_.
 
 
