@@ -1,4 +1,4 @@
-**Meta Data Name**: Veteran Population 
+**Meta Data Name**: Veteran Population  
 **Last Modified**: July 21st, 2021  
 **Author**: Ally Muszynski  
 
