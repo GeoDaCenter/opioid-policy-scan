@@ -44,7 +44,7 @@ For the example variable table below, note that all variable ID and descriptions
 As this dataset is sourced from The New York Times COVID-19 databse, estimates may differ slightly than data reported by the U.S. CDC.
 
 ### Comments/Notes:
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+**Note on missing data:** Missing and/or unavailable data are coded as blank/empty cells or _NA_.
 
 Other sources for county and state level COVID-19 data: 
 
