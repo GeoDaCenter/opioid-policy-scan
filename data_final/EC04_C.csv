@@ -17,13 +17,13 @@ COUNTYFP,county,state,fordq_rate
 18018,Nome Census Area,AK,6.15
 18518,North Slope Borough,AK,4.3
 18818,Northwest Arctic Borough,AK,9.75
-00nan,Prince of Wales-Outer Ketchikan Census A,AK,5.22
+,Prince of Wales-Outer Ketchikan Census A,AK,5.22
 22022,Sitka City and Borough,AK,3.7
-00nan,Skagway-Hoonah-Angoon Census Area,AK,3.97
+,Skagway-Hoonah-Angoon Census Area,AK,3.97
 24024,Southeast Fairbanks Census Area,AK,5.73
 26126,Valdez-Cordova Census Area,AK,4.87
-00nan,Wade Hampton Census Area,AK,6.3
-00nan,Wrangell-Petersburg Census Area,AK,8.33
+,Wade Hampton Census Area,AK,6.3
+,Wrangell-Petersburg Census Area,AK,8.33
 28228,Yakutat City and Borough,AK,5.9
 29029,Yukon-Koyukuk Census Area,AK,8.72
 00100,Autauga County,AL,7.45
@@ -738,7 +738,7 @@ COUNTYFP,county,state,fordq_rate
 09109,Kankakee County,IL,15.6
 09309,Kendall County,IL,12.35
 09509,Knox County,IL,11.81
-00nan,La Salle County,IL,10.89
+,La Salle County,IL,10.89
 09709,Lake County,IL,9.45
 10110,Lawrence County,IL,14.94
 10310,Lee County,IL,10.11
@@ -1136,7 +1136,7 @@ COUNTYFP,county,state,fordq_rate
 04904,Jackson Parish,LA,9.68
 05305,Jefferson Davis Parish,LA,10.64
 05105,Jefferson Parish,LA,9.45
-00nan,La Salle Parish,LA,16.07
+,La Salle Parish,LA,16.07
 05505,Lafayette Parish,LA,6.71
 05705,Lafourche Parish,LA,8.85
 06106,Lincoln Parish,LA,10.11
@@ -1934,7 +1934,7 @@ COUNTYFP,county,state,fordq_rate
 00700,Colfax County,NM,6.27
 00900,Curry County,NM,7.08
 01101,De Baca County,NM,9.3
-00nan,Dona Ana County,NM,8.55
+,Dona Ana County,NM,8.55
 01501,Eddy County,NM,8.81
 01701,Grant County,NM,6.52
 01901,Guadalupe County,NM,10.6
@@ -2312,30 +2312,30 @@ COUNTYFP,county,state,fordq_rate
 00500,Aguadilla Municipio,PR,8.97
 00700,Aguas Buenas Municipio,PR,14.4
 00900,Aibonito Municipio,PR,16.72
-00nan,Anasco Municipio,PR,9.9
+,Anasco Municipio,PR,9.9
 01301,Arecibo Municipio,PR,10.52
 01501,Arroyo Municipio,PR,9.35
 01701,Barceloneta Municipio,PR,10.46
 01901,Barranquitas Municipio,PR,14.9
-00nan,Bayamon Municipio,PR,7.79
+,Bayamon Municipio,PR,7.79
 02302,Cabo Rojo Municipio,PR,7.12
 02502,Caguas Municipio,PR,8.88
 02702,Camuy Municipio,PR,9.61
-00nan,Canovanas Municipio,PR,14.38
+,Canovanas Municipio,PR,14.38
 03103,Carolina Municipio,PR,6.47
-00nan,Catano Municipio,PR,12.83
+,Catano Municipio,PR,12.83
 03503,Cayey Municipio,PR,12.84
 03703,Ceiba Municipio,PR,9.02
 03903,Ciales Municipio,PR,21.82
 04104,Cidra Municipio,PR,11.01
 04304,Coamo Municipio,PR,16.69
-00nan,Comerio Municipio,PR,20.74
+,Comerio Municipio,PR,20.74
 04704,Corozal Municipio,PR,13.9
 04904,Culebra Municipio,PR,4.6
 05105,Dorado Municipio,PR,5.99
 05305,Fajardo Municipio,PR,10.5
 05405,Florida Municipio,PR,8.75
-00nan,Guanica Municipio,PR,10.91
+,Guanica Municipio,PR,10.91
 05705,Guayama Municipio,PR,11.93
 05905,Guayanilla Municipio,PR,10.52
 06106,Guaynabo Municipio,PR,4.49
@@ -2345,35 +2345,35 @@ COUNTYFP,county,state,fordq_rate
 06906,Humacao Municipio,PR,11.94
 07107,Isabela Municipio,PR,9.36
 07307,Jayuya Municipio,PR,14.83
-00nan,Juana Diaz Municipio,PR,11.5
+,Juana Diaz Municipio,PR,11.5
 07707,Juncos Municipio,PR,10.12
 07907,Lajas Municipio,PR,14.37
 08108,Lares Municipio,PR,16.59
-00nan,Las Marias Municipio,PR,14.8
+,Las Marias Municipio,PR,14.8
 08508,Las Piedras Municipio,PR,11.15
-00nan,Loiza Municipio,PR,13.8
+,Loiza Municipio,PR,13.8
 08908,Luquillo Municipio,PR,10.53
-00nan,Manati Municipio,PR,10.49
+,Manati Municipio,PR,10.49
 09309,Maricao Municipio,PR,15.05
 09509,Maunabo Municipio,PR,15.55
-00nan,Mayaguez Municipio,PR,12.26
+,Mayaguez Municipio,PR,12.26
 09909,Moca Municipio,PR,11.62
 10110,Morovis Municipio,PR,15.44
 10310,Naguabo Municipio,PR,9.92
 10510,Naranjito Municipio,PR,14.92
 10710,Orocovis Municipio,PR,19.3
 10910,Patillas Municipio,PR,10.98
-00nan,Penuelas Municipio,PR,15.17
+,Penuelas Municipio,PR,15.17
 11311,Ponce Municipio,PR,11.28
 11511,Quebradillas Municipio,PR,10.68
-00nan,Rincon Municipio,PR,6.88
-00nan,Rio Grande Municipio,PR,11.62
+,Rincon Municipio,PR,6.88
+,Rio Grande Municipio,PR,11.62
 12112,Sabana Grande Municipio,PR,17.47
 12312,Salinas Municipio,PR,14.79
-00nan,San German Municipio,PR,15.94
+,San German Municipio,PR,15.94
 12712,San Juan Municipio,PR,6.69
 12912,San Lorenzo Municipio,PR,10.51
-00nan,San Sebastian Municipio,PR,14.73
+,San Sebastian Municipio,PR,14.73
 13313,Santa Isabel Municipio,PR,8.27
 13513,Toa Alta Municipio,PR,6.56
 13713,Toa Baja Municipio,PR,8.91
@@ -2384,7 +2384,7 @@ COUNTYFP,county,state,fordq_rate
 14714,Vieques Municipio,PR,10.12
 14914,Villalba Municipio,PR,13.38
 15115,Yabucoa Municipio,PR,14.06
-00nan,Yauco Municipio;,PR,13.28
+,Yauco Municipio;,PR,13.28
 00100,Bristol County,RI,7.82
 00300,Kent County,RI,11.11
 00500,Newport County,RI,6.66
@@ -2491,7 +2491,7 @@ COUNTYFP,county,state,fordq_rate
 10710,Potter County,SD,7.3
 10910,Roberts County,SD,4.98
 11111,Sanborn County,SD,8.6
-00nan,Shannon County,SD,21.03
+,Shannon County,SD,21.03
 11511,Spink County,SD,6.0
 11711,Stanley County,SD,2.8
 11911,Sully County,SD,4.8
@@ -2890,7 +2890,7 @@ COUNTYFP,county,state,fordq_rate
 01301,Arlington County,VA,4.12
 01501,Augusta County,VA,5.8
 01701,Bath County,VA,6.5
-00nan,Bedford city,VA,6.1
+,Bedford city,VA,6.1
 01901,Bedford County,VA,4.24
 02102,Bland County,VA,8.15
 02302,Botetourt County,VA,4.96
@@ -2908,7 +2908,7 @@ COUNTYFP,county,state,fordq_rate
 55055,Chesapeake city,VA,7.07
 04104,Chesterfield County,VA,6.58
 04304,Clarke County,VA,7.13
-00nan,Clifton Forge city,VA,0.0
+,Clifton Forge city,VA,0.0
 57057,Colonial Heights city,VA,6.86
 58058,Covington city,VA,9.9
 04504,Craig County,VA,12.6
