@@ -27,17 +27,20 @@ Rates were calculated using group dwelling estimates for homelessness.
 -  *% group dwelling  = non-related group dwelling / Total population* \
 
 ### Key Variable and Definitions:
-  | Bed Count | BED_COUNT | Number of beds available to homeless populations in group quarters available at the time of the census |
-  | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
-  | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds available to homeless populations in group quarters available year-round |
+
+| Variable | Variable ID in .csv | Description |
+|:---------|:--------------------|:------------|
+| Bed Count | BedCt| Number of beds available to homeless individuals in a continuum of care available at the time of the census |
+| Point In Time Count | PITCt| Number of housing-insecure individuals at a shelter on the day of the count |
+| Yearly Bed Count | YrBed |  Number of beds available to homeless populations in group quarters available year-round |
   
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2019 5-year average. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness.
+This data represents estimates as of the ACS 2018 point in time count. This is the taken by a teams of individuals in a continuum of care in one day. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness in this dataset. Data was geocoded then spatially joined at the tract, ZCTA, state and county level to see where continuums of care are located and the availibility of temporary housing solutions.
 
 ### Comments/Notes:
 Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
-[here](/https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+[Here](/https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.
+**Note on missing data:** Missing and/or unavailable data are coded as NA. 
 
 
