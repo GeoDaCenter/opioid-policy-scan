@@ -48,4 +48,4 @@ The following variables were included from **B03002**:
 This data represents estimates as of the ACS 2018 5-year average.
 
 ### Comments/Notes:
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+**Note on missing data:** Missing and/or unavailable data are coded as blank or _NA_.

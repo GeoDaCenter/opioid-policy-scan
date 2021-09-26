@@ -1,9 +1,9 @@
-**Meta Data Name**: Veteran Population 
+**Meta Data Name**: Veteran Population  
 **Last Modified**: July 21st, 2021  
 **Author**: Ally Muszynski  
 
 ### Data Location: 
-DS04 - 4 spatial scales. Files can be found [here](/data_final).
+DS04 availabel at 4 spatial scales. Files can be found [here](/data_final).
 * DS04_T  
 * DS04_Z  
 * DS04_C  
@@ -48,7 +48,7 @@ These rates were calculated using sex by age by veteran status for the civilian 
 
 ----------
   * Percentage for veteran group population was calculated as: *estimate for the group / total population*, e.g.
--  *% Veteran = Veteran / Total population* \
+-  *% Veteran = Veteran population / Total population* 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
@@ -79,5 +79,8 @@ These rates were calculated using sex by age by veteran status for the civilian 
   | Female Veteran Population 75+  |  FemaleVet75Plus  | Female veteran population, 75+ |
   | Percent Veteran  |  VetPercent  | Percent of population that are veterans |
 
+### Data Limitations
+These rates were calculated using sex by age by veteran status for the civilian population 18 years and over.
   
-
+### Comments/Notes
+**Note on missing data:** Missing and/or unavailable data are represented as blank cells or _NA_.

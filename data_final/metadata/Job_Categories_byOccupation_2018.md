@@ -51,4 +51,4 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
 Please note this dataset uses occupations as a classifier and doesn't include any information about the industry to which the job belongs. This can lead to an overestimation of essential workers category. 
 
 ### Comments/Notes:
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+**Note on missing data:** Missing and/or unavailable data are coded as blank/empty cells or _NA_.
