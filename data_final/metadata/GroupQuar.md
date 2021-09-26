@@ -1,5 +1,5 @@
-**Meta Data Name**: Homeless Population  
-**Last Modified**: July 30th, 2021  
+**Meta Data Name**: Group Quarters   
+**Last Modified**: September 24th, 2021  
 **Author**: Ally Muszynski  
 
 ### Data Location: 
@@ -17,7 +17,7 @@ DS06 - 4 spatial scales. Files can be found [here](/data_final).
 * DS06_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table B09019 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov. Additional information was obtained from the Department of Housing and Urban Development Homeless Census, 2018, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
+Variables were obtained from the 2013 - 2018 American Community Survey (ACS), table B09019 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov. Additional information was obtained from the Department of Housing and Urban Development Homeless Census, 2018, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
 
 ### Description of Data Source Table:
 B09019 : Provides breakdown of unhoused individuals living in group quarters.
@@ -41,17 +41,14 @@ These rates were calculated using group dwelling and point in count estimates fo
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
   |:---------|:--------------------|:------------|
-  | Total Population: Tract, County, State  | TotalPop | Total population |
-  | Non-related Group Dwelling | Non-relatedGroupDwelling | Number of people under one roof that are unrelated |
-  | Group Dwelling | GroupQuarters | Number of people under one roof |
-  | Rate of Homelessness | HomelessPercent | Estimate of homelessness over total population |
-  | Bed Count | BED_COUNT | Number of beds available to homeless populations in group quarters available at the time of the census |
-  | Point In Time Count | POINT_IN_TIME | Number of housing-insecure individuals at a shelter on the day of the count |
-  | Yearly Bed Count | YEARLY_BED_COUNT |  Number of beds available to homeless populations in group quarters available year-round |
-  
+  | Total Population  | UnrelHouse | Total population |
+  | Non-related Group Dwelling | GroupDwell | Number of people under one roof that are unrelated |
+  | Group Dwelling | GroupQuar | Number of people under one roof |
+  | Rate of group quarter dwelling | GrpQuarPct | Estimate of people living in group quarters over total population |
+  | Rate of unrelated household dwelling | UnrelPct | Estimate of unrelated individuals living in a private household over total population |
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2019 5-year average. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness.
+This data represents estimates as of the ACS 2018 5-year average. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so group quarters variables were used as a proxy. Group quarters estimates unrelated individuals living under one roof.
 
 ### Comments/Notes:
 Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
