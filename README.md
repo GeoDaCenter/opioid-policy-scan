@@ -128,5 +128,3 @@ The OEPS database was developed for the [Justice Community Opioid Innovation Net
 
 ## Acknowledgements
 This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
-
-*Updated August 2021*
