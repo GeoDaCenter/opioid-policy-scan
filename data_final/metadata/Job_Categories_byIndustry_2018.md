@@ -22,7 +22,7 @@ All variables were included from S2403 (2018):
 * Education jobs - S2403_C01_021 
 * Health care jobs - S2403_C01_022  
 * Retail jobs - S2403_C01_008  
-* 
+
 ----------
 * Percentage of population employed in High Risk of Injury Jobs was calculated as : 
 *Sum of the workers employed in (<br> 
@@ -44,6 +44,7 @@ All variables were included from S2403 (2018):
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
+| Total Count of Workers | totWrkE | Estimated count of working population |
 | % High Risk of Injury Jobs  | hghRskP | Percentage of population employed in following industries: agriculture, rorestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities |
 | % Education Jobs  | eduP | Percentage of population employed in educational services industry |
 | % Health Care Jobs | hltCrP | Percentage of population employed in health care and social assistance industries |
