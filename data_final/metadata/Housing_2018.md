@@ -57,15 +57,16 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Housing Occupancy Rate | occP | Percentage of housing units occupied |
-| Housing Vacancy Rate | vacantP | Percentage of housing units vacant |
+| Total Occupied Units | totUnits | Count of total occupied housing units |
+| Housing Occupancy Rate | occP | Percentage of occupied housing units |
+| Housing Vacancy Rate | vacantP | Percentage of vacant housing units |
 | Long-Term Occupancy | lngTermP | Percentage of population who moved into their current housing more than 20 years ago |
 | Rental Rate | rentalP | Percentage of occupied housing units that are rented |
 | Mobile Homes Rate | mobileP | Percentage of total housing units categorized as mobile housing structures |
 | Housing Unit Density | unitDens | Number of housing units per square mile of land area |
 
 ### Data Limitations:
-n/a
+None at this time.  
 
 ### Comments/Notes:
-n/a
+Note: Data is as of the 2018 5-year average (ACS). 
