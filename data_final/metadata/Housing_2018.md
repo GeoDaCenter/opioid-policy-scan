@@ -1,6 +1,6 @@
 **Meta Data Name**: Housing Variables  
-**Last Modified**: March 20, 2021 
-**Author**: Susan Paykin & Moksha Menghaney
+**Last Modified**: March 20, 2021  
+**Author**: Susan Paykin, Moksha Menghaney
 
 ### Data Location: 
 BE01 at 4 spatial scales. Files can be found [here](/data_final).
