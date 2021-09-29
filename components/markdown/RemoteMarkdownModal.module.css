@@ -1,0 +1,43 @@
+.fullScreenModal {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:var(--transparent-black-background);
+    top:0;
+    left:0;
+    z-index:500;
+    overflow-y:scroll;
+}
+.modalContainer {
+    width:600px;
+    max-width:90vw;
+    position:absolute;
+    left:50%;
+    top:1em;
+    transform:translateX(-50%);
+    background:white;
+    padding:1em;
+    border-radius:1em;
+    margin-bottom:2em;
+}
+
+.reset {
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:none;  
+    cursor:pointer; 
+}
+.reset span {
+    position: fixed;
+    top:1em;
+    right:1em;
+    background:var(--light-gray);
+    border-radius:0.5em;
+    font-size:2rem;
+    line-height:0.6;
+    padding:0.25em;
+    border:none;
+}

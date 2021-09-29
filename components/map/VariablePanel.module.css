@@ -1,0 +1,41 @@
+.panelContainer {
+  background: red;
+  position: absolute;
+  left: 0.5rem;
+  top: calc(0.5rem + 50px);
+  background: hsla(0, 0%, 100%, 0.85);
+  backdrop-filter: blur(5px) brightness(90%) contrast(100%);
+  min-height: 10px;
+  padding: 0.75em;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.panelContainer p {
+  margin:0;
+  padding:0;
+}
+
+.readMoreButton, .pillButton {
+  text-align: left;
+  background:white;
+  border:var(--medium-gray);
+  padding:0.5em;
+  color:var(--selected-color);
+  border-radius:0.25em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
+  cursor:pointer;
+}
+
+.pillButton {
+  margin:0 .5em 0 0;
+  transition:250ms all;
+}
+.pillButton:disabled {
+  color:var(--light-gray);
+}
+
+.activeButton, .activeButton:disabled {
+  background:var(--selected-color);
+  color:white;
+}

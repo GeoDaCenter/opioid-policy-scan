@@ -1,0 +1,137 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.35;
+}
+
+button {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --selected-color: #1816cc;
+  --selected-color-light: #acaccc;
+  --medium-gray: rgb(156, 156, 156);
+  --light-gray: rgb(220, 220, 220);
+  --orange: #e27213;
+  --green: #06cd57;
+  --sky: #0bbedb;
+  --blue: #1816cc;
+  --transparent: rgba(255, 255, 255, 0);
+  --transparent-black-background: rgba(0,0,0,0.5);
+}
+
+a {
+  color: var(--selected-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 200ms all;
+  border-bottom: 1px solid var(--transparent);
+}
+
+* {
+  box-sizing: border-box;
+}
+/** reach UI Styling */
+
+nav [data-reach-menu-button] {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 250ms all;
+  padding: 0 0.25em 0.25em 0.25em;
+  border-radius: 0.125em;
+  border: 1px solid var(--transparent);
+}
+
+nav [data-reach-menu-button]:hover {
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+div [data-reach-menu-list],
+div [data-reach-menu-items] {
+  background: hsla(0, 0%, 100%, 0.6);
+  backdrop-filter: blur(5px) brightness(90%) contrast(100%);
+}
+div [data-reach-menu-list] {
+  padding: 0;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-1px);
+}
+
+div [data-reach-menu-items] {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+div [data-reach-menu-item] {
+  padding: 0.5em 1em;
+}
+div [data-reach-listbox-list] {
+  max-height: 75vh;
+  overflow-y: scroll;
+  
+}
+
+
+div [data-reach-listbox-list]::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+div [data-reach-listbox-list]::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+ 
+/* Handle */
+div [data-reach-listbox-list]::-webkit-scrollbar-thumb {
+  background: url('/icons/grip.png'), var(--medium-gray);
+  background-position: center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50%, 100%; 
+  transition:125ms all;
+}
+
+/* Handle on hover */
+div [data-reach-listbox-list]::-webkit-scrollbar-thumb:hover {
+  background: url('/icons/grip.png'), var(--selected-color-light);
+  background-position: center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50%, 100%; 
+}
+
+div [data-reach-listbox-group-label] {
+  background: var(--light-gray);
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.35;
+
+}
+
+div [data-reach-listbox-option] {
+  white-space: normal;
+  width: 500px;
+  max-width:80vw;
+  border-bottom:1px solid var(--medium-gray);
+
+}
+
+div [data-reach-listbox-option][data-current-selected] {
+  color: var(--selected-color);
+}
+div [data-reach-listbox-option][data-current-selected]:hover {
+  color: white;
+}
+
+div [data-reach-menu-item][data-selected] {
+  background: var(--selected-color);
+}

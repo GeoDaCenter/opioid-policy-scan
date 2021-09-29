@@ -1,0 +1,29 @@
+.masthead {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+  margin: 0 -1rem;
+  border-bottom: 1px solid var(--medium-gray);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
+}
+
+.mainNav {
+  position: absolute;
+  right: 0.5rem;
+}
+
+.hamburger {
+  margin-left: 0.25em;
+}
+.mainNav span {
+  font-weight: bold;
+}
+
+.mastheadTitle {
+  user-select: none;
+}

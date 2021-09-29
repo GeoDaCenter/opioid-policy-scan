@@ -1,0 +1,86 @@
+file,topic,scale
+Access01_C.csv,Health Variables,C
+Access01_T.csv,Health Variables,T
+Access01_Z.csv,Health Variables,Z
+Access02_T.csv,Health Variables,T
+Access02_Z.csv,Health Variables,Z
+Access03_T.csv,Health Variables,T
+Access03_Z.csv,Health Variables,Z
+Access04_T.csv,Health Variables,T
+Access04_Z.csv,Health Variables,Z
+Access05_T.csv,Health Variables,T
+Access05_Z.csv,Health Variables,Z
+Access06_T.csv,Health Variables,T
+Access06_Z.csv,Health Variables,Z
+Access07_T.csv,Health Variables,T
+Access07_Z.csv,Health Variables,Z
+BE01_C.csv,Built Environment Variables,C
+BE01_S.csv,Built Environment Variables,S
+BE01_T.csv,Built Environment Variables,T
+BE01_Z.csv,Built Environment Variables,Z
+BE02_RUCA_C.csv,Built Environment Variables,C
+BE02_RUCA_T.csv,Built Environment Variables,T
+BE02_RUCA_Z.csv,Built Environment Variables,Z
+BE03_C.csv,Built Environment Variables,C
+BE03_S.csv,Built Environment Variables,S
+BE03_T.csv,Built Environment Variables,T
+BE03_Z.csv,Built Environment Variables,Z
+BE04_C.csv,Built Environment Variables,C
+BE05_C.csv,Built Environment Variables,C
+COVID01_C.csv,COVID Variables,C
+COVID01_S.csv,COVID Variables,S
+COVID02_C.csv,COVID Variables,C
+COVID02_S.csv,COVID Variables,S
+COVID03_C.csv,COVID Variables,C
+COVID03_S.csv,COVID Variables,S
+COVID04_C.csv,COVID Variables,C
+COVID04_S.csv,COVID Variables,S
+DS01_C.csv,Demographic Variables,C
+DS01_S.csv,Demographic Variables,S
+DS01_T.csv,Demographic Variables,T
+DS01_Z.csv,Demographic Variables,Z
+DS02_T.csv,Demographic Variables,T
+DS03_C.csv,Demographic Variables,C
+DS03_T.csv,Demographic Variables,T
+DS03_Z.csv,Demographic Variables,Z
+DS04_C.csv,Demographic Variables,C
+DS04_S.csv,Demographic Variables,S
+DS04_T.csv,Demographic Variables,T
+DS04_Z.csv,Demographic Variables,Z
+DS05_C.csv,Demographic Variables,C
+DS05_S.csv,Demographic Variables,S
+DS05_T.csv,Demographic Variables,T
+DS05_Z.csv,Demographic Variables,Z
+EC01_2018_C.csv,Economic Variables,C
+EC01_2018_S.csv,Economic Variables,S
+EC01_2018_T.csv,Economic Variables,T
+EC01_2018_Z.csv,Economic Variables,Z
+EC02_C.csv,Economic Variables,C
+EC02_S.csv,Economic Variables,S
+EC02_T.csv,Economic Variables,T
+EC02_Z.csv,Economic Variables,Z
+EC03_2018_C.csv,Economic Variables,C
+EC03_2018_S.csv,Economic Variables,S
+EC03_2018_T.csv,Economic Variables,T
+EC03_2018_Z.csv,Economic Variables,Z
+EC04_C.csv,Economic Variables,C
+EC04_S.csv,Economic Variables,S
+EC04_T.csv,Economic Variables,T
+Health01_C.csv,Health Variables,C
+Health01_S.csv,Health Variables,S
+Health02_C_Mortality.csv,Health Variables,C
+Health02_S_Mortality.csv,Health Variables,S
+Health02_S_Prevalence.csv,Health Variables,S
+Health03_C.csv,Health Variables,C
+Health03_S.csv,Health Variables,S
+Health03_T.csv,Health Variables,T
+PS01_2016_C.csv,Policy,C
+PS02_2017_C.csv,Policy,C
+PS03_2017_S.csv,Policy,S
+PS04_2018_S.csv,Policy,S
+PS05_2017_S.csv,Policy,S
+PS06_2019_S.csv,Policy,S
+PS07_2018_S.csv,Policy,S
+PS08_2019_S.csv,Policy,S
+PS09_2017_S.csv,Policy,S
+PS11_S.csv,Policy,S

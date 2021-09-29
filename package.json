@@ -1,0 +1,52 @@
+{
+  "name": "webgeoda",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "build:worker": "node _webgeoda/build-scripts/build-sw"
+  },
+  "dependencies": {
+    "@deck.gl/core": "^8.5.8",
+    "@deck.gl/extensions": "^8.5.8",
+    "@deck.gl/geo-layers": "^8.5.8",
+    "@deck.gl/layers": "^8.5.8",
+    "@deck.gl/mapbox": "^8.5.8",
+    "@deck.gl/mesh-layers": "^8.5.8",
+    "@deck.gl/react": "^8.5.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@loaders.gl/core": "^3.0.12",
+    "@loaders.gl/csv": "^3.0.12",
+    "@math.gl/web-mercator": "^3.5.5",
+    "@reach/listbox": "^0.15.0",
+    "@reach/menu-button": "^0.15.1",
+    "@reach/slider": "^0.15.0",
+    "@reach/tabs": "^0.15.0",
+    "@reach/tooltip": "^0.15.0",
+    "axios": "^0.21.1",
+    "comlink": "^4.3.1",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.7.1",
+    "next": "^11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-map-gl": "^6.1.15",
+    "react-markdown": "^7.0.0",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "remark-gfm": "^2.0.0",
+    "simple-statistics": "^7.7.0"
+  },
+  "devDependencies": {
+    "asciify-image": "^0.1.6",
+    "eslint": "^7.28.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "2.3.1",
+    "workbox-build": "^6.1.5"
+  }
+}

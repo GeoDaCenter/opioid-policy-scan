@@ -1,22 +1,41 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-/data/*
-/data-output/*
-/output/*
-.DS_Store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-.ipynb_checkpoints
-MOUD_scraping/metrics/tl_2010_us_zcta510/*
-MOUD_scraping/metrics/tl_2019_us_zcta510/*
-MOUD_scraping/**/*.pdf
-Policy_Scan/code/.Rapp.history
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.cpg
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.dbf
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.prj
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp.ea.iso.xml
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shp.iso.xml
-Vivitrol/cb_2018_us_state_500k/cb_2018_us_state_500k.shx
-MOUD_access/.RDataTmp
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+package-lock.json
+
+/map-test/chromedriver
+/map-test/screenshots
+map-test/geckodriver
+map-test/geckodriver.log
