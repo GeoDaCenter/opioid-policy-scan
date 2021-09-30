@@ -1589,18 +1589,18 @@ const variables = [
 		variable: 'Alcohol Outlets Density',
 		numerator: 'BE03',
 		nProperty: 'alcDens',
-    numberOfBins:5,
+    numberOfBins:6,
     binning:'quantileBreaks',
     colorScale: colors.colorbrewer.BuPu
 	},
-	{
-		variable: 'Alcohol Outlets Per Capita',
-		numerator: 'BE03',
-		nProperty: 'alcPerCap',
-    numberOfBins:5,
-    binning:'quantileBreaks',
-    colorScale: colors.colorbrewer.BuPu
-	},
+	// {
+	// 	variable: 'Alcohol Outlets Per Capita',
+	// 	numerator: 'BE03',
+	// 	nProperty: 'alcPerCap',
+  //   numberOfBins:5,
+  //   binning:'naturalBreaks',
+  //   colorScale: colors.colorbrewer.BuPu
+	// },
 	{
 		variable: 'Segregation: Dissimilarity (Black)',
 		numerator: 'BE05',

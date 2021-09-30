@@ -39,3 +39,5 @@ package-lock.json
 /map-test/screenshots
 map-test/geckodriver
 map-test/geckodriver.log
+.RData
+.Rhistory
