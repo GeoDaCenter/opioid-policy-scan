@@ -168,9 +168,8 @@ export const generateMapData = (state) => {
   }
 
   const idList = state.currentData.includes('tiles') 
-  ? Object.keys(state.storedData[numeratorTable].data)
-  : state.storedGeojson[state.currentData].order
-
+    ? Object.keys(state.storedData[numeratorTable].data)
+    : state.storedGeojson[state.currentData].order
   for (
     let i = 0;
     i < idList.length;
@@ -187,7 +186,7 @@ export const generateMapData = (state) => {
     : getColor(
       tempVal,
       state.mapParams.bins.breaks,
-      state.dataParams.colorScale,
+      state.mapParams.colorScale,
       state.mapParams.mapType,
       tempParams.numerator,
       state.storedLisaData,
