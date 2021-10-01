@@ -80,7 +80,9 @@ export const generateBins = async ({
                 bins: dataParams.fixedLabels || dataParams.fixedScale,
                 breaks: dataParams.fixedScale
             }, 
-            colorScale: dataParams.colorScale.length ? dataParams.colorScale : dataParams.colorScale[dataParams.numberOfBins]
+            colorScale: Array.isArray(dataParams.colorScale) 
+                ? dataParams.colorScale 
+                : dataParams.colorScale[dataParams.fixedScale.length]
         }
     } 
 
