@@ -48,7 +48,18 @@
 
 .docsLink {
   color: var(--selected-color);
+  font-weight: bold;
+  border:1px solid var(--selected-color);
+  border-radius: 0.25em;
+  padding:0.25em 0.5em;
+  margin-bottom:0.5em;
 }
 .docsLink:hover {
-  border-color: var(--selected-color);
+  background-color: var(--selected-color-light);
+}
+
+.threeUpIcon {
+  height:4em;
+  margin:0 auto;
+  display: block;
 }
