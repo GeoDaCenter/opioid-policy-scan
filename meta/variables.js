@@ -279,26 +279,6 @@ export const variables = {
   ],
   'Economic Variables': [
     {
-      'Variable Proxy': 'Rural-Urban Classification for Counties',
-      Source: 'Percentage rural and urban population is sourced from the Census Bureau',
-      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/rural_urban_classifications/Rural_Urban_Classification_County.md">Rural-Urban Classification for Counties</a>',
-      'Spatial Scale': 'County',
-      markdownPrefix: 'BE02',
-      markdownText: 'Rural-Urban Classification for Counties',
-      markdown: 'Rural_Urban_Classification_County',
-      'Variable Construct': 'Rural-Urban Classification for Counties'
-    },
-    {
-      'Variable Proxy': 'Rural-Urban Classification for Tracts & ZCTAs',
-      Source: 'Census Rural-Urban Commuting Area Codes (RUCA codes)',
-      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/rural_urban_classifications/Rural_Urban_Classification_T_Z.md">Rural-Urban Classification for Tracts & ZCTAs</a>',
-      'Spatial Scale': 'Tract, Zip',
-      markdownPrefix: 'BE02',
-      markdownText: 'Jobs by Industry',
-      markdown: 'Rural_Urban_Classification_T_Z',
-      'Variable Construct': 'Rural-Urban Classification for Tracts & ZCTAs'
-    },
-    {
       'Variable Proxy': 'Percentages of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries',
       Source: 'ACS, 2018 5-year',
       Metadata: 'EC01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
