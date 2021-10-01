@@ -20,12 +20,20 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
+  hyphens: manual;
+}
+
+.titleDiagram {
+  width:auto;
+  max-height:35vh;
+  margin:0 auto;
+  display:block;
 }
 
 .description {
