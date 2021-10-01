@@ -40,7 +40,7 @@ This data represents estimates as of the ACS 2018 point in time count. This is t
 
 ### Comments/Notes:
 Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
-[Here](/https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.
+[Here](https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.
 **Note on missing data:** Missing and/or unavailable data are coded as NA. 
 
 
