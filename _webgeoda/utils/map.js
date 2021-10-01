@@ -170,7 +170,7 @@ export const generateMapData = (state) => {
   const idList = state.currentData.includes('tiles') 
   ? Object.keys(state.storedData[numeratorTable].data)
   : state.storedGeojson[state.currentData].order
-  
+
   for (
     let i = 0;
     i < idList.length;
@@ -181,16 +181,13 @@ export const generateMapData = (state) => {
       getTable(idList[i], "denominator", denominatorTable),
       tempParams
     );
-    if (i===0){
-      console.log(tempVal)
-      console.log(state.mapParams.colorScale)
-    }
-    const color = isNaN(tempVal) || tempVal === null || tempVal === undefined
+
+    const color = (isNaN(tempVal) || tempVal === null || tempVal === undefined) && (typeof tempVal !== 'string')
     ? [0,0,0,0]
     : getColor(
       tempVal,
       state.mapParams.bins.breaks,
-      state.mapParams.colorScale,
+      state.dataParams.colorScale,
       state.mapParams.mapType,
       tempParams.numerator,
       state.storedLisaData,
