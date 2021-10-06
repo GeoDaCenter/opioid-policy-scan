@@ -425,7 +425,7 @@ const categoricalPreset = {
 const variables = [
   // Policy Variables
   {
-    variable: "Medical marijuana laws",
+    variable: "Medical Marijuana Laws",
     numerator: "PS09_data",
     nProperty: "MedMarijLaw",
     categorical: true,
@@ -436,7 +436,7 @@ const variables = [
    // ...categoricalPreset
   },
   {
-    variable: "Public health expenditures",
+    variable: "Public Health Expenditures",
     numerator: "PS11_data",
     nProperty: "healthExp_S",
     binning: "naturalBreaks",
@@ -444,7 +444,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Public welfare expenditures",
+    variable: "Public Welfare Expenditures",
     numerator: "PS11_data",
     nProperty: "wlfrExp_S",
     binning: "naturalBreaks",
@@ -452,7 +452,7 @@ const variables = [
     colorScale: colors.colorbrewer.Greens,
   },
   {
-    variable: "Corrections expenditures",
+    variable: "Corrections Expenditures",
     numerator: "PS11_data",
     nProperty: "crrctExp_S",
     binning: "naturalBreaks",
@@ -460,7 +460,7 @@ const variables = [
     colorScale: colors.colorbrewer.Greens,
   },
   {
-    variable: "Police & fire expenditures",
+    variable: "Police & Fire Expenditures",
     numerator: "PS11_data",
     nProperty: "plcFireExp_S",
     binning: "naturalBreaks",
@@ -479,7 +479,7 @@ const variables = [
     // colorScale: colors.colorbrewer.Dark2
   },
   {
-    variable: "Drug paraphernalia laws",
+    variable: "Drug Paraphernalia Laws",
     numerator: "PS08_data",
     nProperty: "noPrphLw",
     categorical: true,
@@ -490,7 +490,7 @@ const variables = [
     //colorScale: colors.colorbrewer.Dark2
   },
   {
-    variable: "Distribution of syringes laws",
+    variable: "Distribution of Syringes Laws",
     numerator: "PS08_data",
     nProperty: "ntPrFrDsSy",
     categorical: true,
@@ -552,7 +552,7 @@ const variables = [
     colorScale: [[252,141,98], [102,194,165]],
   },
   {
-    variable: "Must-access PDMP (fraction of year in 2017)",
+    variable: "Must-Access PDMP (fraction of year in 2017)",
     numerator: "PS03_data",
     nProperty: "MsAcPDMPfr",
     categorical: true,
@@ -582,7 +582,7 @@ const variables = [
     colorScale: [[252,141,98], [102,194,165]],
   },
   {
-    variable: "Total jail population rate",
+    variable: "Total Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "TtlJlPpr",
     binning: "naturalBreaks",
@@ -590,7 +590,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr,
   },
   {
-    variable: "Female jail population rate",
+    variable: "Female Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "FmlJlPpr",
     binning: "naturalBreaks",
@@ -598,7 +598,7 @@ const variables = [
     colorScale: colors.colorbrewer.Reds
   },
   {
-    variable: "Male jail population rate",
+    variable: "Male Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "MlJlPpr",
     binning: "naturalBreaks",
@@ -606,7 +606,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr,
   },
   {
-    variable: "AAPI jail population rate",
+    variable: "AAPI Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "AapiJlPpr",
     binning: "naturalBreaks",
@@ -614,7 +614,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Black jail population rate",
+    variable: "Black Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "BlckJlPpr",
     binning: "naturalBreaks",
@@ -622,7 +622,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Latinx jail population rate",
+    variable: "Latinx Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "LtnxJlPpr",
     binning: "naturalBreaks",
@@ -630,7 +630,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Native American jail population rate",
+    variable: "Native American Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "NtvJlPpr",
     binning: "naturalBreaks",
@@ -638,7 +638,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "White (non-Hispanic) jail population rate",
+    variable: "White (Non-Hispanic) Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "WhtJlPpr",
     binning: "naturalBreaks",
@@ -654,7 +654,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Pretrial jail population rate",
+    variable: "Pretrial Jail Population Rate",
     numerator: "PS02_data",
     nProperty: "TtlJlPrtr",
     binning: "naturalBreaks",
@@ -662,7 +662,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Total prison population rate",
+    variable: "Total Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "TtlPrPpr",
     binning: "naturalBreaks",
@@ -670,7 +670,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Female prison population rate",
+    variable: "Female Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "FmlPrPpr",
     binning: "naturalBreaks",
@@ -678,7 +678,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Male prison population rate",
+    variable: "Male Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "MlPrPpr",
     binning: "naturalBreaks",
@@ -686,7 +686,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "AAPI prison population rate",
+    variable: "AAPI Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "AapiPrPpr",
     binning: "naturalBreaks",
@@ -694,7 +694,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Black prison population rate",
+    variable: "Black Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "BlckPrPpr",
     binning: "naturalBreaks",
@@ -702,7 +702,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Latinx prison population rate",
+    variable: "Latinx Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "LtnxPrPpr",
     binning: "naturalBreaks",
@@ -710,7 +710,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Native American prison population rate",
+    variable: "Native American Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "NtvPrPpr",
     binning: "naturalBreaks",
@@ -718,7 +718,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "White (non-Hispanic) prison population rate",
+    variable: "White (Non-Hispanic) Prison Population Rate",
     numerator: "PS01_data",
     nProperty: "WhtPrPpr",
     binning: "naturalBreaks",
@@ -726,7 +726,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Total prison admission rate",
+    variable: "Total Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "TtlPrAPpr",
     binning: "naturalBreaks",
@@ -734,7 +734,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Female prison admission rate",
+    variable: "Female Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "FmlPrAPpr",
     binning: "naturalBreaks",
@@ -742,7 +742,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Male prison admission rate",
+    variable: "Male Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "MlPrAPpr",
     binning: "naturalBreaks",
@@ -750,7 +750,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "AAPI prison admission rate",
+    variable: "AAPI Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "AapiPrAPpr",
     binning: "naturalBreaks",
@@ -758,7 +758,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Black prison admission rate",
+    variable: "Black Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "BlckPrAPpr",
     binning: "naturalBreaks",
@@ -766,7 +766,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Latinx prison admission rate",
+    variable: "Latinx Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "LtnxPrAPpr",
     binning: "naturalBreaks",
@@ -774,7 +774,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Native American prison admission rate",
+    variable: "Native American Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "NtvPrAPpr",
     binning: "naturalBreaks",
@@ -782,7 +782,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "White (Non-Hispanic) prison admission rate",
+    variable: "White (Non-Hispanic) Prison Admission Rate",
     numerator: "PS01_data",
     nProperty: "WhtPrAPpr",
     binning: "naturalBreaks",
@@ -810,7 +810,7 @@ const variables = [
     reverse: true
   },
   {
-    variable: "Naloxone law in effect (fraction of year in 2017)",
+    variable: "Naloxone Law in Effect (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "NalPrStfr",
     binning: "naturalBreaks",
@@ -818,7 +818,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Naloxone law allowing distribution through a standing or order (fraction of year in 2017)",
+    variable: "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "AnyNalfr",
     binning: "naturalBreaks",
@@ -826,7 +826,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Naloxone law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+    variable: "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "NalPresfr",
     binning: "naturalBreaks",
@@ -834,7 +834,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Total Medicaid spending",
+    variable: "Total Medicaid Spending",
     numerator: "PS06_data",
     nProperty: "TtlMedExpN",
     binning: "quantileBreaks",
@@ -842,7 +842,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Traditional Medicaid federal spending",
+    variable: "Traditional Medicaid Federal Spending",
     numerator: "PS07_data",
     nProperty: "TradFedExp",
     binning: "quantileBreaks",
@@ -850,7 +850,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Traditional Medicaid state spending",
+    variable: "Traditional Medicaid State Spending",
     numerator: "PS07_data",
     nProperty: "TradSttExp",
     binning: "naturalBreaks",
@@ -858,7 +858,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Expansion Medicaid federal spending",
+    variable: "Expansion Medicaid Federal Spending",
     numerator: "PS07_data",
     nProperty: "ExpnFedExp",
     binning: "naturalBreaks",
@@ -866,7 +866,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Expansion Medicaid state spending",
+    variable: "Expansion Medicaid State Spending",
     numerator: "PS07_data",
     nProperty: "ExpnSttExp",
     binning: "naturalBreaks",
@@ -875,7 +875,7 @@ const variables = [
   },
   // Health Variables
   {
-    variable: "Drug-related death rate",
+    variable: "Drug-Related Death Rate",
     numerator: "Health01_data",
     nProperty: "rawDeathRt",
     binning: "naturalBreaks",
