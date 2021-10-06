@@ -1728,11 +1728,11 @@ const mapModes = {
 const variableHeaders = [
   {
     name: 'Policy Variables',
-    startsAt: "Medical marijuana laws"
+    startsAt: "Medical Marijuana Laws"
   },
   {
     name: 'Health Variables',
-    startsAt: "Drug-related death rate"
+    startsAt: "Drug-Related Death Rate"
   },
   {
     name: 'Demographic Variables',
