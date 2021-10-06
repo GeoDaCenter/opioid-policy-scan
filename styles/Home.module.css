@@ -20,12 +20,20 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
+  hyphens: manual;
+}
+
+.titleDiagram {
+  max-width:100%;
+  max-height:35vh;
+  margin:0 auto;
+  display:block;
 }
 
 .description {
@@ -48,7 +56,18 @@
 
 .docsLink {
   color: var(--selected-color);
+  font-weight: bold;
+  border:1px solid var(--selected-color);
+  border-radius: 0.25em;
+  padding:0.25em 0.5em;
+  margin-bottom:0.5em;
 }
 .docsLink:hover {
-  border-color: var(--selected-color);
+  background-color: var(--selected-color-light);
+}
+
+.threeUpIcon {
+  height:4em;
+  margin:0 auto;
+  display: block;
 }

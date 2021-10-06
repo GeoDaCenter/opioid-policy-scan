@@ -197,6 +197,7 @@ export default function useLoadData(dateLists = {}) {
         dataParams,
         bins
       })
+
     dispatch({
       type: "INITIAL_LOAD",
       payload: {
@@ -223,7 +224,10 @@ export default function useLoadData(dateLists = {}) {
           bins,
           colorScale: colorScale || colors.colorbrewer.YlGnBu[5],
         },
-        variableParams: dataParams,
+        variableParams: {
+          ...dataParams,
+          colorScale: colorScale || colors.colorbrewer.YlGnBu[5]
+        },
         initialViewState,
         id: currentDataPreset.id,
       },

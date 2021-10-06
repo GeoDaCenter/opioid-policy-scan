@@ -195,7 +195,7 @@ const data = [
         type:'characteristics',
         join:'COUNTYFP'
       },
-      BE02: {
+      BE02_C: {
         file: 'BE02_RUCA_C.csv',
         type:'characteristics',
         join:'COUNTYFP'
@@ -512,7 +512,7 @@ const variables = [
     //colorScale: colors.colorbrewer.Dark2
   },
   {
-    variable: "Paraphernalia does not refer to objects used For injecting drugs",
+    variable: "Paraphernalia does not refer to objects used for injecting drugs",
     numerator: "PS08_data",
     nProperty: "PrNtRefInj",
     categorical: true,
@@ -528,40 +528,58 @@ const variables = [
     nProperty: "noLwRmUnc",
     categorical: true,
     fixedScale: [0,1],
-    fixedLabels: ['Has Law Removing Barriers or Uncertainty as to SSP Legality', 
-    'No Law Removing Barriers or Uncertainty as to SSP Legality'],
+    fixedLabels: ['No Law Removing Barriers or Uncertainty as to SSP Legality',
+    'Has Law Removing Barriers or Uncertainty as to SSP Legality'],
     colorScale: [[102,194,165], [252,141,98]],
     //colorScale: colors.colorbrewer.Dark2
   },
   {
-    variable: "Any Horowitz PDMP (fraction of year)",
-    numerator: "PS03_data",
-    nProperty: "AnyPDMPHfr",
-    colorScale: colors.colorbrewer.Dark2
-  },
-  {
-    variable: "Must-access PDMP (fraction of year)",
-    numerator: "PS03_data",
-    nProperty: "MsAcPDMPfr",
-    colorScale: colors.colorbrewer.Dark2
-  },
-  {
-    variable: "Operational PDMP (fraction of year)",
-    numerator: "PS03_data",
-    nProperty: "OpPDMPfr",
-    colorScale: colors.colorbrewer.Dark2
-  },
-  {
-    variable: "Electronic PDMP (fraction of year)",
-    numerator: "PS03_data",
-    nProperty: "ElcPDMPfr",
-    colorScale: colors.colorbrewer.Dark2
-  },
-  {
-    variable: "Any PDMP (fraction of year)",
+    variable: "Any PDMP (fraction of year in 2017)",
     numerator: "PS03_data",
     nProperty: "AnyPDMPfr",
-    colorScale: colors.colorbrewer.Dark2
+    categorical: true,
+    fixedScale: [0.5,1],
+    fixedLabels: ['Six months', 'Entire year'],
+    colorScale: [[252,141,98], [102,194,165]],
+  },
+  {
+    variable: "Any Horowitz PDMP (fraction of year in 2017)",
+    numerator: "PS03_data",
+    nProperty: "AnyPDMPHfr",
+    categorical: true,
+    fixedScale: [0.5,1],
+    fixedLabels: ['Six months', 'Entire year'],
+    colorScale: [[252,141,98], [102,194,165]],
+  },
+  {
+    variable: "Must-access PDMP (fraction of year in 2017)",
+    numerator: "PS03_data",
+    nProperty: "MsAcPDMPfr",
+    categorical: true,
+    fixedScale: [0,1],
+    fixedLabels: ['None',
+    'Entire year'],
+    colorScale: [[252,141,98], [102,194,165]],
+  },
+  {
+    variable: "Operational PDMP (fraction of year in 2017)",
+    numerator: "PS03_data",
+    nProperty: "OpPDMPfr",
+    categorical: true,
+    fixedScale: [0,1],
+    fixedLabels: ['None',
+    'Entire year'],
+    colorScale: [[252,141,98], [102,194,165]],
+  },
+  {
+    variable: "Electronic PDMP (fraction of year in 2017)",
+    numerator: "PS03_data",
+    nProperty: "ElcPDMPfr",
+    categorical: true,
+    fixedScale: [0.5,1],
+    fixedLabels: ['Six months',
+    'Entire year'],
+    colorScale: [[252,141,98], [102,194,165]],
   },
   {
     variable: "Total jail population rate",
@@ -772,7 +790,7 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
   },
   {
-    variable: "Any Good Samaritan Law (fraction of year)",
+    variable: "Any Good Samaritan Law (fraction of year in 2018)",
     numerator: "PS04_data",
     nProperty: "AnyGSLfr",
     binning: "naturalBreaks",
@@ -780,7 +798,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Good Samaritan Law Protecting Arrest (fraction of year)",
+    variable: "Good Samaritan Law Protecting Arrest (fraction of year in 2018)",
     numerator: "PS04_data",
     nProperty: "GSLArrfr",
     categorical: true,
@@ -792,7 +810,7 @@ const variables = [
     reverse: true
   },
   {
-    variable: "Naloxone law in effect (fraction of year)",
+    variable: "Naloxone law in effect (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "NalPrStfr",
     binning: "naturalBreaks",
@@ -800,7 +818,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Naloxone law allowing distribution through a standing or order (fraction of year)",
+    variable: "Naloxone law allowing distribution through a standing or order (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "AnyNalfr",
     binning: "naturalBreaks",
@@ -808,7 +826,7 @@ const variables = [
     colorScale: colors.colorbrewer.Blues
   },
   {
-    variable: "Naloxone law allowing pharmacists prescriptive authority (fraction of year)",
+    variable: "Naloxone law allowing pharmacists prescriptive authority (fraction of year in 2017)",
     numerator: "PS05_data",
     nProperty: "NalPresfr",
     binning: "naturalBreaks",
@@ -1418,7 +1436,7 @@ const variables = [
   {
 		variable: 'Count of Working Population',
 		numerator: 'EC01',
-		nProperty: 'unempP',
+		nProperty: 'totWrkE',
     numberOfBins: 5,
     binning:'quantileBreaks',
     colorScale: colors.colorbrewer.YlOrBr
@@ -1491,7 +1509,7 @@ const variables = [
   	},
   	{
   		variable: 'Urban Population Total (2010)',
-  		numerator: 'BE02',
+  		numerator: 'BE02_C',
   		nProperty: 'urbPop10',
       numberOfBins: 5,
       binning:'quantileBreaks',
@@ -1499,7 +1517,7 @@ const variables = [
   	},
   	{
   		variable: 'Rural Population Total (2010)',
-  		numerator: 'BE02',
+  		numerator: 'BE02_C',
   		nProperty: 'rurlPop10',
       numberOfBins: 5,
       binning:'quantileBreaks',
@@ -1507,7 +1525,7 @@ const variables = [
   	},
   	{
   		variable: 'Rural Population % (2010)',
-  		numerator: 'BE02',
+  		numerator: 'BE02_C',
   		nProperty: 'cenRuralP',
       numberOfBins: 5,
       binning:'quantileBreaks',

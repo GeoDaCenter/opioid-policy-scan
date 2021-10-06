@@ -41,3 +41,4 @@ map-test/geckodriver
 map-test/geckodriver.log
 .RData
 .Rhistory
+yarn.lock

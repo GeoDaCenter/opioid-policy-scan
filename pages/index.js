@@ -43,19 +43,25 @@ export default function Home() {
       </Head>
       <MainNav />
       <main className={styles.main}>
-        <Gutter em={2} />
-        <h1 className={styles.title}>
-          Opioid Environment Policy Scan
-        </h1>
-        <p className={styles.description}>
-        Exploring the multi-dimensional risk environment impacting opioid use across the U.S.
-        </p>
-        <img src="images/oeps-diagram-simple.png" width = "700" height = "400" />
-       
+        <div className="row">
+          <div className="col-xs-12 col-md-5 col-lg-4">
+            <img src="images/oeps_diagram_mk2.png" className={styles.titleDiagram} />
+            <Gutter em={3} />
+          </div>
+          <div className="col-xs-12 col-md-7 col-lg-8">
+          <h1 className={styles.title}>
+            Opioid Environ&shy;ment Policy Scan
+          </h1>
+          <p className={styles.description}>
+          Exploring the multi-dimensional risk environment impacting opioid use across the U.S.
+          </p>
+          </div>
+        </div>
 
-        <Gutter em={1.5} />
+        <Gutter em={4} />
         <div className="row rules">
           <div className="col-xs-12 col-md-4 col-lg-4">
+            <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
               Explore and download data by theme or spatial scale. 
@@ -88,6 +94,7 @@ export default function Home() {
           </div>
 
           <div className="col-xs-12 col-md-4 col-lg-4 rules-on">
+            <img src="images/map.svg" alt="Map and explore data." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Map</h1>
             <p>
             View data in an interactive web map. 
@@ -98,6 +105,7 @@ export default function Home() {
           </div>
 
           <div className="col-xs-12 col-md-4 col-lg-4">
+            <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
               Research applications from our lab & partners. 
