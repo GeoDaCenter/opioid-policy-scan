@@ -108,7 +108,7 @@ export default function Home() {
             <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
-              Research applications from our lab & partners. 
+              Research insights from our lab & partners. 
             </p>
             <p>
             <a className={styles.docsLink} href="/insights">Learn more &gt;</a>
@@ -122,20 +122,20 @@ export default function Home() {
           </div>
           <div className="col-xs-12 col-md-12 col-lg-10">
             <p>
-            The <a href="/about">Opioid Environment Policy Scan (OEPS)</a> is an open-source data warehouse, created to
+            The Opioid Environment Policy Scan (<a href="/about">OEPS</a>) is an open-source data warehouse, created to
             help characterize the multi-dimensional risk environment impacting opioid use in justice populations
             across the United States. 
-            It provides access to data at multiple spatial scales to support research and analysis to better understand 
-            the trends impacting and impacted by opioid use in communities nationwide. 
+            The OEPS provides access to data at multiple spatial scales to support research to better capture and understand 
+            the factors impacting and impacted by opioid use in communities nationwide. 
             </p>
             <p>
-            The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, 
+            The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, based at the
             Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
             an NIH HEAL Initiative, as part of its Methodology and Advanced Analytics Resource Center.
             </p>
             <p>
-              We built the OEPS Explorer to make it easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>, 
-              our <a href="/about/#team">team</a>, and our <a href="/methods">methods</a>. 
+              We built the OEPS Explorer to make it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>, 
+              our <a href="/methods">methods</a>, and our <a href="/standards">data standards</a>. 
             </p>
           </div>
         </div>
