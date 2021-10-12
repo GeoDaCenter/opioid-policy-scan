@@ -37,9 +37,12 @@
     "react-map-gl": "^6.1.15",
     "react-markdown": "^7.0.0",
     "react-redux": "^7.2.4",
+    "react-vega": "^7.4.4",
     "redux": "^4.1.0",
     "remark-gfm": "^2.0.0",
-    "simple-statistics": "^7.7.0"
+    "simple-statistics": "^7.7.0",
+    "vega": "^5.21.0",
+    "vega-lite": "^5.1.1"
   },
   "devDependencies": {
     "asciify-image": "^0.1.6",

@@ -18,6 +18,7 @@ import useUpdateMap from "@webgeoda/hooks/useUpdateMap";
 
 import Legend from "./Legend";
 import MapControls from "./MapControls";
+import FixedChart from "./FixedChart";
 
 export default function MainMap() {
   const initialViewState = useSelector((state) => state.initialViewState);

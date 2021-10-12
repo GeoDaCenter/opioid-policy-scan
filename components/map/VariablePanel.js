@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from 'react';
 import styles from "./VariablePanel.module.css";
 import { variables } from '../../meta/variables';
+import FixedChart from '../map/FixedChart'
 
 import {
   Listbox,
@@ -96,6 +97,7 @@ export default function VariablePanel(props) {
           )}
         </Listbox>
 
+        <FixedChart/>
         {dataPresets.data.length > 1 &&
         <> 
           <Gutter em={1}/>
