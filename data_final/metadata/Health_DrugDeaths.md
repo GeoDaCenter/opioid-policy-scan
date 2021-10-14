@@ -40,7 +40,6 @@ Data was wrangled, cleaned and filtered for the 48 contiguous US states & Washin
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| GEOID | GEOID | Unique 5-digit identifier for counties, 2-digit indentifier for states |
 | Deaths | deaths | Total deaths from drug-related causes, 2009-2018 |
 | Population | pop | Total population |
 | Raw death rate | rawDeathRt | Raw death rate |
