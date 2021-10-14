@@ -230,7 +230,7 @@ const data = [
       //   join: 'ZCTA',
       // },
       Access01_subvar_data: {
-        file: 'Access01_sub_Z.csv',
+        file: 'Access01_Z.csv',
         type: 'characteristic',
         join: 'ZCTA',
       },
@@ -917,7 +917,7 @@ const variables = [
   {
     variable: "Distance (mi) to nearest MOUD (all)",
     numerator: "Access01_data",
-    nProperty: "minDisMOUD",
+    nProperty: "moudMinDis",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -926,7 +926,7 @@ const variables = [
   {
     variable: "Distance (mi) to nearest methadone provider",
     numerator: "Access01_data",
-    nProperty: "minDisMeth",
+    nProperty: "metMinDis",
     binning: "naturalBreaks",
     numberOfBins: 7,
     colorScale: colors.colorbrewer.RdBu,
@@ -935,7 +935,7 @@ const variables = [
   {
     variable: "Driving time (min) to nearest methadone provider",
     numerator: "Access01_subvar_data",
-    nProperty: "time_to_nearest_methadone",
+    nProperty: "menTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -944,7 +944,7 @@ const variables = [
   {
     variable: "Count of methadone providers in 30 minutes",
     numerator: "Access01_subvar_data",
-    nProperty: "count_in_range_methadone",
+    nProperty: "metCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -953,7 +953,7 @@ const variables = [
   {
     variable: "Distance (mi) to nearest buprenorphine provider",
     numerator: "Access01_data",
-    nProperty: "minDisBup",
+    nProperty: "bupMinDis",
     binning: "naturalBreaks",
     numberOfBins: 7,
     colorScale: colors.colorbrewer.RdBu,
@@ -962,7 +962,7 @@ const variables = [
   {
     variable: "Driving time (min) to nearest buprenorphine provider",
     numerator: "Access01_subvar_data",
-    nProperty: "time_to_nearest_buprenorphine",
+    nProperty: "bupTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -971,7 +971,7 @@ const variables = [
   {
     variable: "Count of buprenorphine providers in 30 minutes",
     numerator: "Access01_subvar_data",
-    nProperty: "count_in_range_buprenorphine",
+    nProperty: "bupCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu, 
@@ -980,7 +980,7 @@ const variables = [
   {
     variable: "Distance (mi) to nearest naltrexone provider",
     numerator: "Access01_data",
-    nProperty: "minDisNalV",
+    nProperty: "nalMinDis",
     binning: "naturalBreaks",
     numberOfBins: 7,
     colorScale: colors.colorbrewer.RdBu,
@@ -989,7 +989,7 @@ const variables = [
   {
     variable: "Driving time (min) to nearest naltrexone provider",
     numerator: "Access01_subvar_data",
-    nProperty: "time_to_nearest_naltrexone",
+    nProperty: "nalTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -998,7 +998,7 @@ const variables = [
   {
     variable: "Count of naltrexone providers in 30 minutes",
     numerator: "Access01_subvar_data",
-    nProperty: "count_in_range_naltrexone",
+    nProperty: "nalCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
