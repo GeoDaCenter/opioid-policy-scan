@@ -233,7 +233,12 @@ const data = [
       //   file: 'Access01_Z.csv',
       //   type: 'characteristic',
       //   join: 'ZCTA',
-      // },
+      //   },
+      Access01_sub_data: {
+        file: 'Access01_sub_Z.csv',
+        type: 'characteristic',
+        join: 'ZCTA',
+      },
       Access01_data: {
         file: 'Access01_Z.csv',
         type: 'characteristic',
@@ -903,14 +908,14 @@ const variables = [
     numberOfBins: 8,
     colorScale: colors.colorbrewer.Reds,
   },
-  {
-    variable: "HCV Mortality Rate",
-    numerator: "Health02_2_data",
-    nProperty: "County HCV Death Rate_2017",
-    binning: "naturalBreaks",
-    numberOfBins: 8,
-    colorScale: colors.colorbrewer.Reds,
-  },
+  // {
+  //   variable: "HCV Mortality Rate",
+  //   numerator: "Health02_2_data",
+  //   nProperty: "County HCV Death Rate_2017",
+  //   binning: "naturalBreaks",
+  //   numberOfBins: 8,
+  //   colorScale: colors.colorbrewer.Reds,
+  // },
   {
     variable: "Count of Primary Care Physicians (PCPs)",
     numerator: "Health03_data",
@@ -938,7 +943,7 @@ const variables = [
   },
   {
     variable: "Distance (mi) to nearest methadone provider",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "metMinDis",
     binning: "naturalBreaks",
     numberOfBins: 7,
@@ -947,7 +952,7 @@ const variables = [
   },
   {
     variable: "Driving time (min) to nearest methadone provider",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "menTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
@@ -956,7 +961,7 @@ const variables = [
   },
   {
     variable: "Count of methadone providers in 30 minutes",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "metCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
@@ -974,7 +979,7 @@ const variables = [
   },
   {
     variable: "Driving time (min) to nearest buprenorphine provider",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "bupTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
@@ -983,7 +988,7 @@ const variables = [
   },
   {
     variable: "Count of buprenorphine providers in 30 minutes",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "bupCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
@@ -1001,7 +1006,7 @@ const variables = [
   },
   {
     variable: "Driving time (min) to nearest naltrexone provider",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "nalTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
@@ -1010,7 +1015,7 @@ const variables = [
   },
   {
     variable: "Count of naltrexone providers in 30 minutes",
-    numerator: "Access01_data",
+    numerator: "Access01_sub_data",
     nProperty: "nalCount",
     binning: "naturalBreaks",
     numberOfBins: 6,
