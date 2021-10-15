@@ -18,6 +18,7 @@ const renderVega = (
     data={scatterData} 
     signalListeners={signalListeners} 
     onNewView={(view) => setView(view)}
+    actions={false}
     />  
 
 export default function HistogramWidget(props) {
@@ -66,9 +67,10 @@ export default function HistogramWidget(props) {
 
 
     const spec = {
-        "width": 104,
+        "width": 150,
         "height": 75,
-        "padding": 0,      
+        "padding": 0,  
+        "editor": false,    
         "data": [
             {
               "name": "table",
@@ -250,7 +252,7 @@ export default function HistogramWidget(props) {
                         "x2": {"scale": "xscale", "field": "bin1", "offset": -1},
                         "y": {"scale": "yscale", "field": "count"},
                         "y2": {"scale": "yscale", "value": 0},
-                        "fill": {"value": "steelblue"}
+                        "fill": {"value": "#449D8F"}
                     }
                 }
             },
