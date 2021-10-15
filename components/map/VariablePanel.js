@@ -20,6 +20,7 @@ const themeCategories = [
   "Demographic Variables",
   "Economic Variables",
   "Built Environment Variables",
+  "COVID-19 Variables"
 ]
 
 const filterVars = (list, themes, currTheme) => {

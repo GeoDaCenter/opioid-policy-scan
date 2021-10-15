@@ -1492,22 +1492,6 @@ const variables = [
     colorScale: colors.colorbrewer.YlOrBr
 	},
 	{
-		variable: 'Count of Essential Workers',
-		numerator: 'EC02',
-		nProperty: 'essnWrkE',
-    numberOfBins: 5,
-    binning:'quantileBreaks',
-    colorScale: colors.colorbrewer.YlOrBr
-	},
-	{
-		variable: 'Essential Workers %',
-		numerator: 'EC02',
-		nProperty: 'essnWrkP',
-    numberOfBins: 5,
-    binning:'quantileBreaks',
-    colorScale: colors.colorbrewer.YlOrBr
-	},
-	{
 		variable: 'Foreclosure & Delinquency %',
 		numerator: 'EC04',
 		nProperty: 'fordq_rate',
@@ -1733,7 +1717,25 @@ const variables = [
     numberOfBins:5,
     binning:'naturalBreaks',
     colorScale: colors.colorbrewer.Purples
+	},
+  // COVID-19
+  {
+		variable: 'Essential Workers %',
+		numerator: 'EC02',
+		nProperty: 'essnWrkP',
+    numberOfBins: 5,
+    binning:'quantileBreaks',
+    colorScale: colors.colorbrewer.YlOrBr
+	},
+  {
+		variable: 'Count of Essential Workers',
+		numerator: 'EC02',
+		nProperty: 'essnWrkE',
+    numberOfBins: 5,
+    binning:'quantileBreaks',
+    colorScale: colors.colorbrewer.YlOrBr
 	}
+
 
 ];
 
@@ -1763,6 +1765,10 @@ const variableHeaders = [
   {
     name: 'Built Environment Variables',
     startsAt: "Urban-Suburban-Rural"
+  },
+  {
+    name: 'COVID-19 Variables',
+    startsAt: "Essential Workers %"
   }
 ]
 
