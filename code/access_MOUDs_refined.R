@@ -11,31 +11,35 @@ str(all_access)
 
 all_access_zip <- all_access %>%
   select(ZCTA = originGEOID,
-         #metMinDis = minDisMet, #methadone
+         metMinDis = minDisMet, #methadone
          metTime = time_to_nearest_methadone, 
          metCount = count_in_range_methadone, 
          metScore = methadone_score, 
-         #bupMinDis = minDisBup, #buprenorphine
+         bupMinDis = minDisBup, #buprenorphine
          bupTime = time_to_nearest_buprenorphine, 
          bupCount = count_in_range_buprenorphine, 
          bupScore = buprenorphine_score, 
-         #nalMinDis = minDisNalV, #naltrexone
+         nalMinDis = minDisNalV, #naltrexone
          nalTime = time_to_nearest_naltrexone.vivitrol, 
          nalCount = count_in_range_naltrexone.vivitrol, 
          nalScore = naltrexone.vivitrol_score)
 
-access01_z <- read.csv("opioid-policy-scan/data_final/Access01_Z.csv")
+all_access_zip$ZCTA <- sprintf("%05d", all_access_zip$ZCTA)
+all_access_zip$ZCTA <- as.character(all_access_zip$ZCTA)
 
-access01_z_new <- left_join(access01_z, all_access_zip)
-access01_z_new <- access01_z_new %>% 
-  select(2:15)
 
-access01_z_new <- 
-  access01_z_new %>% rename(
-       moudMinDis = minDisMOUD,
-       metMinDis = minDisMeth, 
-       bupMinDis = minDisBup,
-       nalMinDis = minDisNalV)
+#access01_z <- read.csv("opioid-policy-scan/data_final/Access01_Z.csv")
+
+#access01_z_new <- left_join(access01_z, all_access_zip)
+#access01_z_new <- access01_z_new %>% 
+#  select(2:11)
+
+# access01_z_new <- 
+#   access01_z_new %>% rename(
+#        moudMinDis = minDisMOUD,
+#        metMinDis = minDisMeth, 
+#        bupMinDis = minDisBup,
+#        nalMinDis = minDisNalV)
        
 # Save final data
 write.csv(all_access_zip, "opioid-policy-scan/data_final/Access01_Z.csv")
