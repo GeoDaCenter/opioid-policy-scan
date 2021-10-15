@@ -212,3 +212,11 @@ write.csv(minDistCounty_clean, "data_final/Access01_C.csv", row.names = FALSE)
 
 # Save tract file
 write.csv(minDistTracts_clean, "data_final/Access01_T.csv", row.names = FALSE)
+
+# County
+county <- read.csv("opioid-policy-scan/data_final/Access01_C.csv")
+county$COUNTYFP <- sprintf("%05d", county$COUNTYFP)
+county$COUNTYFP <- as.character(county$COUNTYFP)
+write.csv(county, "opioid-policy-scan/data_final/Access01_C.csv")
+
+
