@@ -2,6 +2,7 @@
 **Last Modified**: July 30th, 2021  
 **Author**: Ally Muszynski  
 
+### Data Location: 
 DS06 - 4 spatial scales. Files can be found [here](/data_final).
 * DS06_T  
 * DS06_Z  
