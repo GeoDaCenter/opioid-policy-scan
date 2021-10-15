@@ -953,7 +953,7 @@ const variables = [
   {
     variable: "Driving time (min) to nearest methadone provider",
     numerator: "Access01_sub_data",
-    nProperty: "menTime",
+    nProperty: "metTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
@@ -1718,7 +1718,7 @@ const variables = [
     binning:'naturalBreaks',
     colorScale: colors.colorbrewer.Purples
 	},
-  // COVID-19
+  // COVID-19 Variables
   {
 		variable: 'Essential Workers %',
 		numerator: 'EC02',
