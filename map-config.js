@@ -130,6 +130,11 @@ const data = [
         type: 'characteristic',
         join: 'COUNTYFP',
       },
+      Health01_data: {
+        file: 'Health01_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
       Health03_data: {
         file: 'Health03_C.csv',
         type:'characteristic',
@@ -883,7 +888,7 @@ const variables = [
     colorScale: colors.colorbrewer.Reds,
   },
   {
-    variable: "HCV infection rate",
+    variable: "HCV Infection Rate",
     numerator: "Health02_1_data",
     nProperty: "State Rate",
     binning: "naturalBreaks",
@@ -891,9 +896,17 @@ const variables = [
     colorScale: colors.colorbrewer.Reds,
   },
   {
-    variable: "HCV mortality rate",
+    variable: "HCV Mortality Rate",
     numerator: "Health02_2_data",
     nProperty: "State Death Rate_2017",
+    binning: "naturalBreaks",
+    numberOfBins: 8,
+    colorScale: colors.colorbrewer.Reds,
+  },
+  {
+    variable: "HCV Mortality Rate",
+    numerator: "Health02_2_data",
+    nProperty: "County HCV Death Rate_2017",
     binning: "naturalBreaks",
     numberOfBins: 8,
     colorScale: colors.colorbrewer.Reds,
