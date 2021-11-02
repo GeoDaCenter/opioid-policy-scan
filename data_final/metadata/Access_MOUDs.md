@@ -22,15 +22,15 @@ Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded l
 | GEOID | ID for ZCTA or tract | Unique 5-digit identifier for ZCTAs, unique 11-digit identifier for census tracts | 
 | COUNTYFP | ID for counties | Unique 5-digit identifier for counties, w/ first 2 digits being state FIPS |
 | Mininum distance to nearest MOUD (all types) | minDisMOUD | Euclidean distance (miles) to nearest MOUD (all types) |
-| Mininum distance to methadone | minDisMet | Euclidean distance (miles) to nearest methadone provider |
-| Driving time to nearest methadone | time_to_nearest_methadone | Driving time (minutes) to nearest methadone provider |
-| Count of methadone providers | count_in_range_methadone | Count of methadone providers in 30 minute driving time range |
-| Mininum distance to buprenorphine | minDisBup | Euclidean distance (miles) to nearest buprenorphine provider |
-| Driving time to nearest buprenorphine | time_to_nearest_buprenorphine | Driving time (minutes) to nearest buprenorphine provider |
-| Count of buprenorphine providers | count_in_range_buprenorphine | Count of methadone providers in 30 minute driving time range |
-| Mininum distance to naltrexone | minDisNalV | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider |
-| Driving time to nearest naltrexone |  time_to_nearest_naltrexone | Driving time (minutes) to nearest naltrexone provider |
-| Count of naltrexone providers | count_in_range_naltrexone | Count of naltrexone providers in 30 minute driving time range |
+| Mininum distance to methadone | metMinDis | Euclidean distance (miles) to nearest methadone provider |
+| Driving time to nearest methadone | metTime | Driving time (minutes) to nearest methadone provider |
+| Count of methadone providers | metCount | Count of methadone providers in 30 minute driving time range |
+| Mininum distance to buprenorphine | bupMinDis | Euclidean distance (miles) to nearest buprenorphine provider |
+| Driving time to nearest buprenorphine | bupTime | Driving time (minutes) to nearest buprenorphine provider |
+| Count of buprenorphine providers | bupCount | Count of methadone providers in 30 minute driving time range |
+| Mininum distance to naltrexone | nalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider |
+| Driving time to nearest naltrexone |  nalTime | Driving time (minutes) to nearest naltrexone provider |
+| Count of naltrexone providers | nalCount | Count of naltrexone providers in 30 minute driving time range |
 
 ### Data Limitations:
 Access metrics are calculated for continental U.S., and does not include Hawaii, Alaska, or U.S. territories. 
