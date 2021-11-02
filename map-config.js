@@ -338,6 +338,11 @@ const data = [
         type: 'characteristic',
         join: 'GEOID',
       },
+      Access01_sub_data: {
+        file: 'Access01_sub_T.csv',
+        type: 'characteristic',
+        join: 'GEOID',
+      },
       Access02_data: {
         file: 'Access02_T.csv',
         type: 'characteristic',
