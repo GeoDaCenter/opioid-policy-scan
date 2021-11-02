@@ -19,7 +19,11 @@ The following variable was calculated using minimum distance calculations using 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Minimum distance to substance use treatment facility |minDist_SUT|Minimum Distance to substance use treatment facility in miles|
+| GEOID | ID for ZCTA or tract | Unique 5-digit identifier for ZCTAs, unique 11-digit identifier for census tracts | 
+| COUNTYFP | ID for counties | Unique 5-digit identifier for counties, w/ first 2 digits being state FIPS |
+| Minimum distance to substance use treatment facility | sutMinDis |Minimum Distance to substance use treatment facility in miles|
+| Driving time to nearest substance use treatment facility | sutTime | Driving time (minutes) to nearest substance use treatment provider |
+| Count of substance use treatment providers | sutCount | Count of substance use treatment providers in 30 minute driving time range |
 
 ### Data Limitations:
 It is difficult to verify if all the treatement centers are still operational or offer certified and effective treatment. 
