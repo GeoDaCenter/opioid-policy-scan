@@ -1,39 +1,32 @@
-########### INFO ###########
+#### About ----
 
 # Author : Susan Paykin
 # Date : January 13, 2021
+# Updated : Nov 2, 2021
 # About: This code cleans and prepares data on Alcohol Outlet Density for U.S. states, counties, census tracts, and zip codes. 
 
+#### Code outline ----
+
 # Step 1) Wrangle alcohol outlet location data
-
-# Step 2) Prepare data: Calculate total outlets per geography, prepare total land area variables, prepare total population variables
-
-# Step 3) Calculate outlet density per land area and per capita for each geography. 
-# Note: Alcohol outlet density per land area is calculated as: *Total outlets / Land area in sq mi*,
-#       Alcohol outlet density per capita is calculated as: *Total outlets / total population*
-
+# Step 2) Prepare data: Calculate total outlets per geography, total land area, total population
+# Step 3) Calculate outlet density per land area and per capita for each spatial scale
+# Note: Outlet density per land area is calculated as: *Total outlets / Land area in sq mi*,
+#       Outlet density per capita is calculated as: *Total outlets / total population*
 # Step 4) Save final datasets
 
-########### CODE START ###########
-
-#########
-# Step 1) Wrangle alcohol outlet location data
-#########
+#### Wrangle alcohol outlet location data ----
 
 # Set up 
 library(tidyverse)
 library(sf)
 library(tmap)
 
-setwd("~/git/opioid-policy-scan/Policy_Scan")
+setwd("~/git/opioid-policy-scan/")
 
 ## Original data cleaning - skip to next section, loading alcohol outlet csv ##
 
 # # Load full business dataset
 # biz <- read.table("data_raw/2019_Business_Academic_QCQ.txt", sep = ",", header = TRUE)
-# 
-# names(biz)
-# str(biz) #Variables include: Latitude, Longitude, census tracts (Census.Tract), states (FIPS.Code, State), County (County.Code), zip code (ZipCode)
 # 
 # # Filter for alcohol outlets (NAICS 445310 - Beer, Wine, & Liquor Stores)
 # alc_outlets <- 
@@ -41,45 +34,25 @@ setwd("~/git/opioid-policy-scan/Policy_Scan")
 #   filter(str_detect(Primary.NAICS.Code, "^445310"))
 # sort((unique(alc_outlets$State))) #Note: includes U.S. states, D.C., Puerto Rico, Virgin Islands, Guam, FM, MP
 # 
-# # add leading zeroes to zip code
-# # create function
-# zip <- function(z)formatC(z, width = 5, format = "d", flag = "0") 
-# 
-# # create character variables with zeroes
-# zipcode_chr <- data.frame(zip(alc_outlets$ZipCode))
-# # rename variable
-# colnames(zipcode_chr) <- "ZipCode_chr"
-# 
-# # Add to alc_outlets dataset
-# alc_outlets <- cbind(alc_outlets, zipcode_chr)
-# 
 # # Select relevant variables
 # names(alc_outlets)
 # unique(alc_outlets$Primary.NAICS.Code)
 # 
 # alc_outlets_clean <- alc_outlets %>%
-#   select(Company, Address.Line.1, City, State, FIPS.Code, ZipCode, ZipCode_chr, County.Code, Census.Tract, Primary.NAICS.Code, Latitude, Longitude)
+#   select(Company, Address.Line.1, City, State, FIPS.Code, ZipCode, County.Code, Census.Tract, Primary.NAICS.Code, Latitude, Longitude)
 # 
 # # Save alcohol outlets dataset 
 # #write.csv(alc_outlets_clean, "data_raw/alc_outlets_raw.csv")
 
-## START HERE ## 
 
 # Load  alcohol outlets dataset
 alc_outlets_clean <- read.csv("data_raw/alc_outlets_raw.csv")
 
-# add leading zeroes to zip code
-# create function
-zip <- function(z)formatC(z, width = 5, format = "d", flag = "0")
-# create character variables with zeroes
-zipcode_chr <- data.frame(zip(alc_outlets_clean$ZipCode_chr))
-# rename variable
-colnames(zipcode_chr) <- "ZipCode_chr2"
+# Add leading zeroes to zip code
+alc_outlets_clean$ZipCode <- sprintf("%05d", alc_outlets_clean$ZipCode)
 
-# Add to alc_outlets dataset
-alc_outlets_clean <- cbind(alc_outlets_clean, zipcode_chr)
 alc_outlets_clean <- alc_outlets_clean %>% 
-  select(Company, Address.Line.1, City, State, FIPS.Code, ZipCode, ZipCode_chr2, County.Code, Census.Tract, Primary.NAICS.Code, Latitude, Longitude)
+  select(Company, Address.Line.1, City, State, FIPS.Code, ZipCode, County.Code, Census.Tract, Primary.NAICS.Code, Latitude, Longitude)
 
 # Convert Longitude variable to numeric
 alc_outlets_clean$Longitude <- as.numeric(alc_outlets_clean$Longitude)
@@ -92,296 +65,205 @@ alc_outlets.sf <- st_as_sf(alc_outlets_clean,
                            coords = c("Longitude", "Latitude"),
                            crs = 4326) 
 
-# Test plot
-plot(st_geometry(alc_outlets.sf))
-
-#########
-# Step 2) Prepare data: Calculate total outlets per geography, prepare total land area variables, prepare total population variables
-#########
-
-##### STATE #####
+#### State data ----
 
 # Read in geometry data
 states_geom <- st_read("data_final/geometryFiles/tl_2018_state/states2018.shp")
 
 states <- states_geom %>%
   select(GEOID, STATE = STUSPS, ALAND)
-head(states)
 
 # Divide land area (sq meters) by 2,590,000 to get sq miles
-states$areaSqMi <- states$ALAND/2590000
+states$areaSqMi <- round(states$ALAND/2590000, 2)
 
 # Count number of outlets in states
 state_count <- alc_outlets_clean %>%
   group_by(State) %>%
   count()
 
-# remove FM, GU, MP, PR, VI to match geometry file
-state_count <- state_count %>%
-  filter(!State %in% c("FM", "GU", "MP", "PR", "VI"))
-
 # Merge total number of outlets to state area
-states_merge <- merge(states, state_count, by.x = "STATE", by.y = "State")
+states_merge <- merge(states, state_count, by.x = "STATE", by.y = "State") %>% st_drop_geometry()
 
 # Prepare population data 
-state_pop <- read.csv("data_final/DS01_2018_S.csv")
+state_pop <- read.csv("data_final/DS01_S.csv")
 head(state_pop)
 
-stateF <- function(z)formatC(z, width = 2, format = "d", flag = "0")
-# create character variables with zeroes
-state_chr <- data.frame(stateF(state_pop$GEOID))
-# rename variable
-colnames(state_chr) <- "GEOID2"
-#add back
-state_pop <- cbind(state_pop, state_chr)
-head(state_pop)
+# Add leading 0s
+state_pop$STATEFP <- sprintf("%02d", state_pop$STATEFP)
 
-state_pop <- state_pop %>% select(GEOID2, totPopE)
+# Clean state pop data
+state_pop <- state_pop %>%
+  select(STATEFP, totPopE)
 
 # Merge population data
-states_merge <- merge(states_merge, state_pop, by.x = "GEOID", by.y = "GEOID2")
+states_merge <- merge(states_merge, state_pop, by.x = "GEOID", by.y = "STATEFP")
 
-##### COUNTY #####
+##### County data ---- 
 
 # Read in geometry
 counties_geom <- st_read("data_final/geometryFiles/tl_2018_county/counties2018.shp")
+head(counties_geom)
 
 # Select relevant variables
 counties <- counties_geom %>%
   select(STATEFP, COUNTYFP, NAME, ALAND)
 
 counties <- counties %>% transform(FIPS.Code = paste0(STATEFP, COUNTYFP))
-head(counties)
-str(counties)
 
 # Divide land area (sq meters) by 2,590,000 to get sq miles
 counties$areaSqMi <- counties$ALAND/2590000
+head(counties)
 
-# Mutate county code 
-#countycode <- function(z)formatC(z, width = 3, format = "d", flag = "0")
-#countycode_chr <- data.frame(countycode(alc_outlets_clean$County.Code))
-# rename variable
-#colnames(countycode_chr) <- "CountyCode_chr"
-# add to dataset
-#alc_outlets_clean <- cbind(alc_outlets_clean, countycode_chr)
-
-alc_outlets_clean$FIPS.Code <- as.numeric(alc_outlets_clean$FIPS.Code)
-
-fips <- function(z)formatC(z, width = 5, format = "d", flag = "0")
-
-fipschr <- data.frame(fips(alc_outlets_clean$FIPS.Code))
-# rename variable
-colnames(fipschr) <- "FIPS.Code_chr"
-# add to dataset
-alc_outlets_clean <- cbind(alc_outlets_clean, fipschr)
+# Add leading 0s
+alc_outlets_clean$FIPS.Code <- sprintf("%05d", as.numeric(alc_outlets_clean$FIPS.Code))
 
 # Count number of outlets by county, remove territories
-
 counties_count <- data.frame(alc_outlets_clean %>%
                                filter(!State %in% c("FM", "GU", "MP", "PR", "VI")) %>%
-                                group_by(FIPS.Code_chr) %>%
+                                group_by(FIPS.Code) %>%
                                 count())
+head(counties_count)
                                 
 # Merge total number outlets to counties
-
-counties_merge_count <- merge(counties, counties_count, by.x = "FIPS.Code", by.y = "FIPS.Code_chr", all=TRUE)
-
-head(counties_merge)
-counties_merge[is.na(counties_merge)] <- 0
+counties_merge_count <- merge(counties, counties_count, by = "FIPS.Code", all=TRUE) %>%
+  st_drop_geometry()
+head(counties_merge_count)
 
 # Prepare population data
-county_pop <- read.csv("data_final/DS01_2018_C.csv")
+county_pop <- read.csv("data_final/DS01_C.csv")
 
-countyfips <- data.frame(fips(county_pop$GEOID))
-head(countyfips)
-colnames(countyfips) <- "FIPS.Code_chr"
-county_pop <- cbind(county_pop, countyfips)
-
-county_pop <- county_pop %>% select(FIPS.Code_chr, totPopE)
+# Add leading 0s
+county_pop$COUNTYFP <- sprintf("%05d", county_pop$COUNTYFP)
 
 # Merge population data
-counties_merge <- merge(counties_merge_count, county_pop, by.x = "FIPS.Code", by.y = "FIPS.Code_chr", all = TRUE)
+counties_merge <- merge(counties_merge_count, county_pop, by.x = "FIPS.Code", by.y = "COUNTYFP", all = TRUE) %>%
+  select(FIPS.Code, STATEFP, NAME, areaSqMi, totPopE, alcTotal = n)
 head(counties_merge)
 
-##### TRACT #####
+##### Tract data ----- 
 
 # Read in geometry
-tracts_geom <- st_read("data_final/geometryFiles/tl_2018_tract/tracts2018.shp")
-str(tracts_geom)
+tracts_geom <- st_read("data_final/geometryFiles/tl_2018_tract/tracts2018.shp") %>% st_drop_geometry()
+head(tracts_geom)
 
 # Select relevant variables
 tracts <- tracts_geom %>%
-  select(STATEFP, COUNTYFP, TRACTCE, NAME, ALAND)
+  select(STATEFP, COUNTYFP, TRACTCE, ALAND)
 tracts <- tracts %>% transform(FIPS.Code = paste0(STATEFP, COUNTYFP, TRACTCE))
 head(tracts)
 
 # Divide land area (sq meters) by 2,590,000 to get sq miles
 tracts$areaSqMi <- tracts$ALAND/2590000
 
-# Mutate census code
-censuscode <- function(z)formatC(z, width = 6, format = "d", flag = "0")
-censuscode_chr <- data.frame(censuscode(alc_outlets_clean$Census.Tract))
-# rename variable
-colnames(censuscode_chr) <- "Census.Tract_chr"
-# add to dataset
-alc_outlets_clean <- cbind(alc_outlets_clean, censuscode_chr)
+# Add leading 0s to Alcohol Outlets - Census.Tract
+alc_outlets_clean$Census.Tract <- sprintf("%06d", alc_outlets_clean$Census.Tract)
 
-alc_outlets_clean <- alc_outlets_clean %>% transform(T.FIPS.Code = paste0(FIPS.Code_chr, Census.Tract_chr))
+# Create new variable - full tract GEOID
+alc_outlets_clean <- alc_outlets_clean %>% 
+  transform(GEOID = paste0(FIPS.Code, Census.Tract))
 
 # Count number of outlets by tract, remove territories
 tract_count <- data.frame(alc_outlets_clean %>%
                              filter(!State %in% c("FM", "GU", "MP", "PR", "VI")) %>%
-                             group_by(T.FIPS.Code) %>%
+                             group_by(GEOID) %>%
                              count())
 
 # Merge total number of outlets to tract area
-tract_merge_count <- merge(tracts, tract_count, by.x = "FIPS.Code", by.y = "T.FIPS.Code", all.x = TRUE)
-
-#tract_merge_count <- tract_merge_count %>% st_drop_geometry()
-tract_merge_count[is.na(tract_merge_count)] <- 0
+tract_merge_count <- merge(tracts, tract_count, by.x = "FIPS.Code", by.y = "GEOID", all.x = TRUE)
 head(tract_merge_count)
 
 # Prepare population data 
-tract_pop <- read.csv("data_final/DS01_2018_T.csv")
+tract_pop <- read.csv("data_final/DS01_T.csv") %>% 
+  select(GEOID, totPopE)
 head(tract_pop)
 
-#function to extract the last 6 characters
-# substrRight <- function(x, n){
-#   substr(x, nchar(x)-n+1, nchar(x))
-# }
-# tract_pop$tractGEO <- substrRight(tract_pop$GEOIDchr, 6)
-
-tract_pop <- tract_pop %>% select(GEOID, totPopE)
-head(tract_pop)
-
-tract_pop$GEOID <- as.numeric(tract_pop$GEOID)
-
-tract_pop <- tract_pop %>% mutate(GEOID = str_pad(string = GEOID, width = 11, side = "left", pad = 0))
-
-#mutate(ID = str_pad(string = ID, width = 4, side = 'left', pad = 0))
-#data2 <- data %>%  mutate(ID = ifelse(row_number()<= 95, paste0("0", ID), ID)) 
-#data %>% mutate(ID = sprintf("%03d", ID))
-
-# function for tract pop
-#tractpop <- function(z)formatC(z, width = 11, format = "d", flag = "0") 
-#tract_pop2 <- data.frame(tractpop(tract_pop$GEOID))
-
-
-# Mutate census code
-censuscode <- function(z)formatC(z, width = 6, format = "d", flag = "0")
-censuscode_chr <- data.frame(censuscode(alc_outlets_clean$Census.Tract))
-# rename variable
-colnames(censuscode_chr) <- "Census.Tract_chr"
-# add to dataset
-alc_outlets_clean <- cbind(alc_outlets_clean, censuscode_chr)
+# Add leading 0s
+tract_pop$GEOID <- sprintf("%011s", tract_pop$GEOID)
 
 # Merge population data
 tract_merge <- merge(tract_merge_count, tract_pop, by.x = "FIPS.Code", by.y = "GEOID", all = TRUE)
-tract_merge_nogeom <- tract_merge %>%st_drop_geometry()
-#tract_merge2 <- merge(tract_pop, tract_count, by.x = "GEOID", by.y = "T.FIPS.Code", all.x = TRUE)
-#tract_merge2[is.na(tract_merge2)] <- 0
+head(tract_merge)
 
-
-#tract_merge <- merge(tracts, tract_merge2, by.x = "FIPS.Code", by.y = "GEOID", all.x = TRUE)
-
-##### ZIP CODE #####
+##### Zip Code data ---- 
 
 # Read in geometry file
 zips_geom <- st_read("data_final/geometryFiles/tl_2018_zcta")
-str(zips_geom)
+head(zips_geom)
 
 # Select relevant variables
 zctas <- zips_geom %>%
-  select(ZipCode_chr = ZCTA5CE10, ALAND10)
-str(zctas)
+  select(ZCTA5CE10, ALAND10) %>%
+  st_drop_geometry()
+head(zctas)
 
 # Divide land area (sq meters) by 2,590,000 to get sq miles
 zctas$areaSqMi <- zctas$ALAND10/2590000
+head(zctas)
 
+length(unique(alc_outlets_clean$ZipCode)) # 12,706 unique zip codes in alc outlets dataset
+      
 # Count number of outlets by zip code, remove territories
 zcta_count <- data.frame(alc_outlets_clean %>%
   filter(!State %in% c("FM", "GU", "MP", "PR", "VI")) %>%
-  group_by(ZipCode_chr2) %>%
+  group_by(ZipCode) %>%
   count())
+head(zcta_count)
 
 # Merge total number of outlets to zip area
-zcta_merge <- merge(zctas, zcta_count, by.x = "ZipCode_chr", by.y = "ZipCode_chr2", all = TRUE)
-zcta_merge[is.na(zcta_merge)] <- 0
+zcta_merge <- merge(zctas, zcta_count, by.x = "ZCTA5CE10", by.y = "ZipCode", all.x = TRUE)
+head(zcta_merge)
 
 # Prepare zip code population data
-zip_pop <- read.csv("data_final/DS01_2018_Z.csv")
+zip_pop <- read.csv("data_final/DS01_Z.csv") %>%
+  select(ZCTA, totPopE)
 head(zip_pop)
 
-zip <- function(z)formatC(z, width = 5, format = "d", flag = "0")
-# create character variables with zeroes
-zipcode_chr <- data.frame(zip(zip_pop$GEOID))
-# rename variable
-colnames(zipcode_chr) <- "zipcode"
-#add back
-zip_pop <- cbind(zip_pop, zipcode_chr)
+# Add leading 0s
+zip_pop$ZCTA <- sprintf("%05d", zip_pop$ZCTA)
 
-# get total population
-zip_pop <- zip_pop %>% select(zipcode, totPopE)
-head(zip_pop)
+# Merge pop data with count data
+zcta_merge <- merge(zcta_merge, zip_pop, by.x = "ZCTA5CE10", by.y = "ZCTA", all.x = TRUE)
 
-# merge pop data with count dat
-zcta_merge <- merge(zcta_merge, zip_pop, by.x = "ZipCode_chr", by.y = "zipcode", all.x = TRUE)
+##### Calculate outlet density per land area and per capita ----
 
-###########
-# Part 3) Calculate outlet density per land area and per capita, for each geography
-###########
-
-##### STATE #####
+##### State density ---- 
 states_dens <- states_merge %>%
-  select(GEOID, State = STATE, areaSqMi, totPopE, alcTotal = n) %>%
-  mutate(alcDens = alcTotal / areaSqMi, alcPerCap = alcTotal / totPopE)
+  select(STATEFP = GEOID, state = STATE, areaSqMi, totPopE, alcTotal = n) %>%
+  mutate(alcDens = round(alcTotal / areaSqMi, 4),  alcPerCap = round(alcTotal / totPopE, 4)) %>%
+  format(scientific = FALSE)
+
 head(states_dens)
 
-# state_map <- 
-#   tm_shape(states_dens) +
-#   tm_borders() +
-#   tm_fill(col = "alcDens", alpha = 0.7, style = "quantile")
-# state_map
-
-##### COUNTY #####
+##### County density ----
 counties_dens <- counties_merge %>%
-  select(GEOID = FIPS.Code, STATEFP, COUNTYFP, NAME, areaSqMi, totPopE, alcTotal = n) %>%
-  mutate(alcDens = alcTotal / areaSqMi, alcPerCap = alcTotal / totPopE)
-head(counties_dens)
-# plot to check
-# tmap_mode("view")
-# county_map <- 
-#   tm_shape(counties_dens) +
-#   tm_borders() +
-#   tm_fill(col = "alcDens", alpha = 0.7, style = "quantile", id = "NAME")
-# county_map  
+  select(COUNTYFP = FIPS.Code, STATEFP, county = NAME, areaSqMi, totPopE, alcTotal) %>%
+  mutate(alcDens = round(alcTotal / areaSqMi, 4), alcPerCap = round(alcTotal / totPopE, 4)) %>%
+  format(scientific = FALSE)
 
-##### TRACT #####
+head(counties_dens)
+
+#### Tract density ---- 
 tract_dens <- tract_merge %>%
   select(GEOID = FIPS.Code, STATEFP, COUNTYFP, TRACTCE, areaSqMi, totPopE, alcTotal = n) %>%
-  mutate(alcDens = alcTotal / areaSqMi, alcPerCap = alcTotal / totPopE)
+  mutate(alcDens = round(alcTotal / areaSqMi, 2), alcPerCap = round(alcTotal / totPopE, 2)) %>%
+  format(scientific = FALSE)
 
-tract_dens_nogm <- tract_dens %>% st_drop_geometry()
+head(tract_dens)
 
-# plot to check
-# tract_map <- 
-#   tm_shape(tract_dens) +
-#   tm_borders() +
-#   tm_fill(col = "alcDens", alpha = 0.7, style = "quantile")
-# tract_map
-
-##### ZIP #####
+##### Zip code density ----- 
 zcta_dens <- zcta_merge %>%
-  select(GEOID = ZipCode_chr, ZIPCODE = ZipCode_chr, areaSqMi, totPopE, alcTotal = n) %>%
-  mutate(alcDens = alcTotal / areaSqMi, alcPerCap = alcTotal / totPopE)
+  select(ZCTA = ZCTA5CE10, areaSqMi, totPopE, alcTotal = n) %>%
+  mutate(alcDens = round(alcTotal / areaSqMi, 2), alcPerCap = round(alcTotal / totPopE, 2)) %>%
+  format(scientific = FALSE)
 
-# Part 4) Save final datasets
+head(zcta_dens)
 
-st_write(states_dens, "data_final/HS03_S.csv")
-st_write(counties_dens, "data_final/HS03_C.csv")
-st_write(tract_dens, "data_final/HS03_T.csv")
-st_write(zcta_dens, "data_final/HS03_Z.csv")
+#### Save final datasets ----
+
+write.csv(states_dens, "data_final/BE03_S.csv", row.names = FALSE)
+write.csv(counties_dens, "data_final/BE03_C.csv", row.names = FALSE)
+write.csv(tract_dens, "data_final/BE03_T.csv", row.names = FALSE)
+write.csv(zcta_dens, "data_final/BE03_Z.csv", row.names = FALSE)
 
 
 ######## FIN #########
-
