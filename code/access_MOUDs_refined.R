@@ -15,7 +15,6 @@ all_access_zip <- all_access %>%
          metTime = time_to_nearest_methadone, 
          metCount = count_in_range_methadone, 
          metScore = methadone_score, 
-         bupMinDis = minDisBup, #buprenorphine
          bupTime = time_to_nearest_buprenorphine, 
          bupCount = count_in_range_buprenorphine, 
          bupScore = buprenorphine_score, 
