@@ -1607,15 +1607,15 @@ const variables = [
 		numerator: 'BE03',
 		nProperty: 'alcTotal',
     numberOfBins:5,
-    binning:'quantileBreaks',
+    binning:'naturalBreaks',
     colorScale: colors.colorbrewer.BuPu
 	},
 	{
 		variable: 'Alcohol Outlets Density',
 		numerator: 'BE03',
 		nProperty: 'alcDens',
-    numberOfBins:6,
-    binning:'quantileBreaks',
+    numberOfBins:5,
+    binning:'naturalBreaks',
     colorScale: colors.colorbrewer.BuPu
 	},
 	// {
