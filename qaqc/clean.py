@@ -2,6 +2,11 @@ import pandas as pd
 from glob import glob
 import csv
 
+def readTxt(file):
+    a_file = open(file)
+    file_contents = a_file.read()
+    return file_contents.splitlines(True)
+
 def checkIndexValues(dataSlice):
     """
         Checks if a slice of a pandas data series is simply the row numbers, exported previously
@@ -74,10 +79,16 @@ def pad(x, length):
     return x
 
 if __name__ == '__main__':
-    files = glob('../data_final/*.csv')
-    # Start by looping through each fie
+    ignore_files = readTxt('./qaqc/.ignore')
+    round_ignore_files = readTxt('./qaqc/.roundignore')
+    files = glob('data_final/*.csv')
+    # Start by looping through each file
     for file in files:
+        if file.split('/')[-1] in ignore_files:
+            continue
         
+        print(f"Processing {file}")
+        # Read the file
         # Use those types and read in to pandas
         raw = pd.read_csv(file, dtype={
             'COUNTYFP':'str',
@@ -120,6 +131,8 @@ if __name__ == '__main__':
         raw = raw.replace(-999, '')
 
         # round to 2 decimal places
-        raw = raw.round(2)
+
+        if file.split('/')[-1] not in round_ignore_files:
+            raw = raw.round(2)
 
         raw.round(2).to_csv(file, index=False)
