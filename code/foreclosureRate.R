@@ -1,4 +1,4 @@
-##### INTRO ----
+##### About ----
 
 # Author : Susan Paykin
 # Date Created : January 26, 2021
@@ -11,61 +11,78 @@
 library(sf)
 library(tmap)
 library(tidyverse)
-library(tigris)
+library(stringr)
 
 setwd("~/git/opioid-policy-scan/")
 
 #### Load and clean data ----
 
-# Load foreclosure data
+# Load tract-level foreclosure data
 foreclosure1 <- read.csv("data_raw/NSP2 - US Total.csv")
 foreclosure2 <- read.csv("data_raw/NSP2 - US Total2.csv")
 
 foreclosure <- rbind(foreclosure1, foreclosure2)
-str(foreclosure)
+foreclosure$geoid <- as.numeric(foreclosure$geoid)
+
+# Add leading 0s to tract GEOID
+foreclosure$geoid <- str_pad(foreclosure$geoid, 11, pad = "0")
+foreclosure$geoid <- as.character(foreclosure$geoid)
+
+# Extract the first 5 digits to create ctyGEOID
+foreclosure$ctyGEOID <- substr(foreclosure$geoid, 1, 5)
 
 # Relevant variables: 
+# fordq_num = Estimated number of mortages to start foreclosure process or be seriously delinquent in past 2 years
 # fordq_rate = Estimated percent of mortgages to start foreclosure process or be seriously delinquent in past 2 years
 
 #### Tract variables ----
-foreclosure_tract <- foreclosure %>% select(GEOID = geoid, state = sta, county = cntyname, fordq_rate)
-foreclosure_tract$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
 
-foreclosure_tract_clean <- left_join(foreclosure_tract, counties, by = c("county" = "NAMELSAD")) %>%
-  select(GEOID = GEOID.x, COUNTYFP, county, STATEFP, state, fordq_rate)
+foreclosureT <- foreclosure %>% 
+  select(GEOID = geoid, state = sta, county = cntyname, ctyGEOID, fordq_rate, fordq_num)
+
+foreclosureT$fordq_rate <- as.numeric(sub("%", "", foreclosure$fordq_rate))
+foreclosureT$fordq_num <- as.numeric(foreclosure$fordq_num)
+
+foreclosureT <- foreclosureT %>% 
+  group_by(GEOID, state, county, ctyGEOID) %>%
+  summarise(across(c("fordq_rate", "fordq_num"), ~ mean(.x)))
+
+tracts <- st_read("data_final/geometryFiles/tl_2018_tract/tracts2018.shp") %>% st_drop_geometry()
+
+foreclosure_tract <- merge(tracts, foreclosureT, by = "GEOID", all.x = TRUE) %>%
+  select(GEOID, STATEFP, COUNTYID = COUNTYFP, TRACTCE, ST = state, COUNTY = county, fordq_rate, fordq_num)
 
 #### County variables ----
-foreclosure_county <- foreclosure_tract %>% 
-  group_by(state, county) %>%
-  summarise(fordq_rate = mean(fordq_rate))
 
-counties <- counties()
-str(counties)
+# Load county geography
+counties <- st_read("data_final/geometryFiles/tl_2018_county/counties2018.shp") %>% st_drop_geometry()
+head(counties)
 
-foreclosure_co_clean <- left_join(foreclosure_county, states, by = c("state" = "STUSPS")) %>%
-  select(county, STATEFP, state, fordq_rate)
+counties <- counties %>% transform(ctyGEOID = paste0(STATEFP, COUNTYFP))
 
-foreclosure_co_clean2 <- left_join(foreclosure_co_clean, counties, by = c("county" = "NAMELSAD", 
-                                                                       "STATEFP" = "STATEFP")) %>%
-  select(COUNTYFP, county, STATEFP, state, fordq_rate)
+foreclosureC <- foreclosureT %>% 
+  group_by(ctyGEOID, state, county) %>%
+  summarise(across(c("fordq_rate", "fordq_num"), ~ round(mean(.x, na.rm = TRUE), 2)))
+
+foreclosure_county <- merge(counties, foreclosureC, by = "ctyGEOID", all.x = TRUE) %>%
+  select(COUNTYFP = ctyGEOID, STATEFP, COUNTYID = COUNTYFP, ST = state, COUNTY = county, fordq_rate, fordq_num)
 
 #### State variables ----
-foreclosure_state <- foreclosure_tract %>% 
+foreclosureS <- foreclosureT %>% 
   group_by(state) %>%
-  summarise(fordq_rate = mean(fordq_rate))
+  summarise(across(c("fordq_rate", "fordq_num"), ~ round(mean(.x, na.rm = TRUE), 2)))
 
-states <- states()
-str(states)
+states <- st_read("data_final/geometryFiles/tl_2018_state/states2018.shp") %>% st_drop_geometry()
 
 # State variables
-foreclosure_st_clean <- left_join(foreclosure_state, states, by = c("state" = "STUSPS")) %>%
-  select(STATEFP, state, fordq_rate)
+foreclosure_state <- merge(states, foreclosureS, by.x = "STUSPS", by.y = "state", all.x = TRUE) %>%
+  select(STATEFP, ST = STUSPS, STATE = NAME, fordq_rate, fordq_num)
 
 #### Save final datasets ---- 
 
-write.csv(foreclosure_tract_clean, "data_final/EC04_T.csv")
-write.csv(foreclosure_co_clean2, "data_final/EC04_C.csv")
-write.csv(foreclosure_st_clean, "data_final/EC04_S.csv")
+write.csv(foreclosure_tract, "data_final/EC04_T.csv", row.names = FALSE)
+write.csv(foreclosure_county, "data_final/EC04_C.csv", row.names = FALSE)
+write.csv(foreclosure_state, "data_final/EC04_S.csv", row.names = FALSE)
 
 
 # Additional data source, not included in final datasets as of 4/9/21:
