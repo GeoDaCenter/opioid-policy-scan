@@ -14,7 +14,7 @@ Foreclosure rate data was sourced from: [Neighborhood Stabilization Program (NSP
 
 The [Neighborhood Stabilization Program (NSP)](https://www.huduser.gov/portal/datasets/NSP.html) was established for the purpose of providing emergency assistance to stabilize communities with high rates of abandoned and foreclosed homes, and to assist households whose annual incomes are up to 120 percent of the area median income (AMI). NSP2 was authorized under the American Recovery and Reinvestment Act of 2009. This data reflects 2007-2008 estimates. 
 
-[NSP2 Data & Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. HUD has developed these foreclosure estimates and foreclosure risk scores for Census tracts based on: 
+From [NSP2 Data and Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. HUD has developed these foreclosure estimates and foreclosure risk scores for Census tracts based on: 
 
 * whether or not loans are high cost or highly leveraged in the census tract (see [here](https://www.huduser.gov/periodicals/ushmc/summer08/summary.pdf)),
 * change in home values in the metropolitan area (or non-metropolitan portion of the state,
@@ -35,10 +35,11 @@ Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Foreclosure rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
+| Foreclosure or delinquency rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
+| Foreclosure or delinquency count | fordq_num | Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
 
 ### Data Limitations:
-The data reflects 2007-2008 estimates, before the Great Recession, but the data is correlated with 2018 trends. 
+The data reflects 2007-2008 estimates. Note again, via [NSP2 Data and Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. 
 
 ### Comments/Notes:
-N/A
+For more recent county, state, and metro area data on mortgage delinquencies, see [Mortgage Performance Trends](https://www.consumerfinance.gov/data-research/mortgage-performance-trends/) data from the U.S. Consumer Financial Protection Bureau. 
