@@ -34,19 +34,18 @@ These rates were calculated using group dwelling and point in count estimates fo
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
   |:---------|:--------------------|:------------|
-  | Total Population  | UnrelHouse | Total population |
+  | Total Population  | TotalPop | Total population |
+  | Non-related Household  | UnrelHouse | Number of people under one roof that are not related to the primary resident |
   | Non-related Group Dwelling | GroupDwell | Number of people under one roof that are unrelated |
   | Group Dwelling | GroupQuar | Number of people under one roof |
   | Rate of group quarter dwelling | GrpQuarPct | Estimate of people living in group quarters over total population |
   | Rate of unrelated household dwelling | UnrelPct | Estimate of unrelated individuals living in a private household over total population |
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2018 5-year average. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so group quarters variables were used as a proxy. Group quarters estimates unrelated individuals living under one roof.
+This data represents estimates as of the ACS 2018 5-year average.
 
 ### Comments/Notes:
-Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
-[Here](https://docs.google.com/presentation/d/1rD77sVr92OaUWKWavb6j5cs0XLdReiKXEEG6fOPShYs/edit?usp=sharing) is the methodology for the proxy for homelessness and how data collection is performed.  
-
+For more information about how group dwelling rates have been used in homelessness and housing stability, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.
 **Note on missing data:** Missing and/or unavailable data are coded as blank cells or _NA_.
 
 
