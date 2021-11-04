@@ -1496,12 +1496,20 @@ const variables = [
     binning:'quantileBreaks',
     colorScale: colors.colorbrewer.YlOrBr
 	},
+  {
+		variable: 'Foreclosure & Delinquency Count',
+		numerator: 'EC04',
+		nProperty: 'fordq_num',
+    numberOfBins: 5,
+    binning:'naturalBreaks',
+    colorScale: colors.colorbrewer.YlOrBr
+	},
 	{
 		variable: 'Foreclosure & Delinquency %',
 		numerator: 'EC04',
 		nProperty: 'fordq_rate',
     numberOfBins: 5,
-    binning:'quantileBreaks',
+    binning:'naturalBreaks',
     colorScale: colors.colorbrewer.YlOrBr
 	},
 //   // BE Built Environment
