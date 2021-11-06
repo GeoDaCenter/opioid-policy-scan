@@ -1,4 +1,6 @@
 import * as Papa from 'papaparse';
+import stateInfo from '../../../meta/stateInfo'
+import zipRange from '../../../meta/zipRange'
 
 const dataConversion = {
     county: "C",
@@ -14,37 +16,63 @@ const idCol = {
     "Z":"ZCTA"
 }
 
-// const filterData = (data, agg, idList, stateList) => idList
-//     ? data.filter(row => idList.includes(row[idCol[agg]]))
-//     : data
-
-// const formatData = (data, format) => format === 'csv'
-//     ? Papa.unparse(data)
-//     : data
-
-
-// spec oeps.ssd.uchicago.edu/api/data/{aggregation}/{dataset}?id={id}&state={state}&format={format<csv|json>}
-// ALT endpoints: oeps.ssd.uchicago.edu/api/docs
-// ALT endpoints: oeps.ssd.uchicago.edu/api/geometry
-// ALT endpoints: oeps.ssd.uchciago.edu/api/variables
+const getStateFilterFn = (agg, stateList, stateIdList) => {
+    switch (agg) {
+        case 'C':
+            return (f) => stateIdList.includes(Math.floor(f[idCol[agg]]/1000))
+        case 'S':
+            return (f) => stateIdList.includes(+f[idCol[agg]])
+        case 'T':
+            return (f) => stateIdList.includes(Math.floor(f[idCol[agg]]/1000000000))
+        case 'Z':
+            const zipMinMax =  zipRange.filter(z => stateList.includes(z.STUSPS))
+            return (f) => zipMinMax.some(({MIN, MAX}) => f[idCol[agg]] >= MIN && f[idCol[agg]] <= MAX);
+        default:
+            return () => true
+    }
+}
 
 export default async function handler(req, res) {
-    const baseUrl = req.rawHeaders.includes(localhost)
+    const { id, param, state, format='json' } = req.query;
+
+    const baseUrl = req.rawHeaders.includes('localhost')
         ? `http://${req.rawHeaders.slice(-1)[0]}`
         : `https://oeps.ssd.uchicago.edu`
         
-    const { id, param, format='json' } = req.query; //state
-    const idList = id ? id.split(',') : false;
-    // const stateList = state ? state.split(',') : false;
+    if (param[0] === 'index.html') res.status(500).json({ error: 'Please add a dataset to your query.' })
+    if (!param[1]) res.status(500).json({ error: 'Please add a spatial scale to your query.' })
+    
     const agg = dataConversion[param[1]]
+
     const dataset = `${param[0]}_${agg}.csv`
+
+    const idList = id 
+        ? id.split(',') 
+        : false;
+
+    const stateList = state 
+        ? state.split(',')
+        : false;
+
+    const stateIdList = state 
+        ? state.split(',').map(state => +stateInfo.find(stateInfo => stateInfo.STUSAB === state).STATE)
+        : false;
+
+    const stateFilter = !state 
+        ? () => true
+        : getStateFilterFn(agg, stateList, stateIdList)
+
     const data = await fetch(`${baseUrl}/csv/${dataset}`)
         .then(r => r.text())
         .then(data => Papa.parse(data, { header: true }))
         .then(table => table.data)
-
-    const result = id
-        ? data.filter(row => idList.includes(row[idCol[agg]]))
+    
+    const result = !!idList || !!stateList
+        ? data.filter(row => 
+            ((!!idList ? idList.includes(row[idCol[agg]]) : true)
+            && 
+            (!!stateList ? stateFilter(row) : true))
+        )
         : data
     
     const formattedData = format === 'csv'
