@@ -29,14 +29,15 @@ const idCol = {
 // ALT endpoints: oeps.ssd.uchciago.edu/api/variables
 
 export default async function handler(req, res) {
-    const baseUrl = `http://${req.rawHeaders.slice(-1)[0]}`
+    const baseUrl = req.rawHeaders.includes(localhost)
+        ? `http://${req.rawHeaders.slice(-1)[0]}`
+        : `https://oeps.ssd.uchicago.edu`
+        
     const { id, param, format='json' } = req.query; //state
     const idList = id ? id.split(',') : false;
     // const stateList = state ? state.split(',') : false;
-    
     const agg = dataConversion[param[1]]
     const dataset = `${param[0]}_${agg}.csv`
-
     const data = await fetch(`${baseUrl}/csv/${dataset}`)
         .then(r => r.text())
         .then(data => Papa.parse(data, { header: true }))
