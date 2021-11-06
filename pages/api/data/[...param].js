@@ -17,6 +17,7 @@ const idCol = {
 }
 
 const getStateFilterFn = (agg, stateList, stateIdList) => {
+    const zipMinMax = zipRange.filter(z => stateList.includes(z.STUSPS))
     switch (agg) {
         case 'C':
             return (f) => stateIdList.includes(Math.floor(f[idCol[agg]]/1000))
@@ -25,7 +26,6 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
         case 'T':
             return (f) => stateIdList.includes(Math.floor(f[idCol[agg]]/1000000000))
         case 'Z':
-            const zipMinMax =  zipRange.filter(z => stateList.includes(z.STUSPS))
             return (f) => zipMinMax.some(({MIN, MAX}) => f[idCol[agg]] >= MIN && f[idCol[agg]] <= MAX);
         default:
             return () => true
@@ -69,9 +69,9 @@ export default async function handler(req, res) {
     
     const result = !!idList || !!stateList
         ? data.filter(row => 
-            ((!!idList ? idList.includes(row[idCol[agg]]) : true)
+            ((idList ? idList.includes(row[idCol[agg]]) : true)
             && 
-            (!!stateList ? stateFilter(row) : true))
+            (stateList ? stateFilter(row) : true))
         )
         : data
     
