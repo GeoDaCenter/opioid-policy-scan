@@ -1,4 +1,4 @@
-const Papa = require('papaparse')
+import * as Papa from 'papaparse';
 
 const dataConversion = {
     county: "C",
@@ -14,13 +14,13 @@ const idCol = {
     "Z":"ZCTA"
 }
 
-const filterData = (data, agg, idList, stateList) => idList
-    ? data.filter(row => idList.includes(row[idCol[agg]]))
-    : data
+// const filterData = (data, agg, idList, stateList) => idList
+//     ? data.filter(row => idList.includes(row[idCol[agg]]))
+//     : data
 
-const formatData = (data, format) => format === 'csv'
-    ? Papa.unparse(data)
-    : data
+// const formatData = (data, format) => format === 'csv'
+//     ? Papa.unparse(data)
+//     : data
 
 
 // spec oeps.ssd.uchicago.edu/api/data/{aggregation}/{dataset}?id={id}&state={state}&format={format<csv|json>}
@@ -30,9 +30,9 @@ const formatData = (data, format) => format === 'csv'
 
 export default async function handler(req, res) {
     const baseUrl = `http://${req.rawHeaders.slice(-1)[0]}`
-    const { id, state, param, format='json' } = req.query;
+    const { id, param, format='json' } = req.query; //state
     const idList = id ? id.split(',') : false;
-    const stateList = state ? state.split(',') : false;
+    // const stateList = state ? state.split(',') : false;
     
     const agg = dataConversion[param[1]]
     const dataset = `${param[0]}_${agg}.csv`
