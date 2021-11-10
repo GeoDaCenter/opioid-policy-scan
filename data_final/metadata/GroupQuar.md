@@ -14,18 +14,17 @@ Variables were obtained from the 2013 - 2018 American Community Survey (ACS), ta
 
 ### Description of Data Source Table:
 B09019 : Provides breakdown of unhoused individuals living in group quarters.
-DP03: Annual homeless census point in time and bed count.fields
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
 1. Total population
-2. Total group non-related group dwelling population
-3. Total group dwelling population
-4. Homeless shelter bed count
-5. Homeless shelter point in time count
-6. Homeless shelter yearly bed count
+2. Total unrelated group dwelling population under household with one primary owner
+3. Total group dwelling population in household with more than one unrelated owner
+4. Total group dwelling in publicly owned quarters
+5. Rate of unrelated group dwelling under one roof with one primary home owner
+6. Rate of group dwelling in publicly owned quarters
 
-These rates were calculated using group dwelling and point in count estimates for homelessness. 
+These rates were calculated using the group dwelling variable in the ACS.
 
 ----------
   * Percentage for homeless rate was calculated as: *estimate for the group / total population*, e.g.
@@ -37,10 +36,10 @@ These rates were calculated using group dwelling and point in count estimates fo
   | Total Population  | TotalPop | Total population |
   | Non-related Household  | UnrelHouse | Number of people under one roof that are not related to the primary resident |
   | Non-related Group Dwelling | GroupDwell | Number of people under one roof that are unrelated |
-  | Group Dwelling | GroupQuar | Number of people under one roof |
+  | Group Dwelling | GroupQuar | Number of people in publicly owned group quarters|
+  | Rate of  non-related household | UnrelPct | Estimate of people living in non-related households over total population |
   | Rate of group quarter dwelling | GrpQuarPct | Estimate of people living in group quarters over total population |
-  | Rate of unrelated household dwelling | UnrelPct | Estimate of unrelated individuals living in a private household over total population |
-
+  
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.
 
