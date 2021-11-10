@@ -4,8 +4,6 @@ import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../lib/init-middleware'
 
-const API_KEYS = process.env.api_keys
-
 const dataConversion = {
     county: "C",
     zip: "Z",
@@ -47,6 +45,7 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
 
 export default async function handler(req, res) {
     // Run cors
+    const API_KEYS = process.env.api_keys
     await cors(req, res)
     const { key, id, param, state, format='json' } = req.query;
     if (!API_KEYS.includes(key)) {
