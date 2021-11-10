@@ -46,6 +46,7 @@ This data represents estimates as of the ACS 2018 5-year average.
 
 ### Comments/Notes:
 For more information about how group dwelling rates have been used in homelessness and housing stability, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.
+
 **Note on missing data:** Missing and/or unavailable data are coded as blank cells or _NA_.
 
 
