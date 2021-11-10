@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "build:worker": "node _webgeoda/build-scripts/build-sw"
+    "build:worker": "node _webgeoda/build-scripts/build-sw",
+    "build:netlify": "node ./lib/create-env.js next build"
   },
   "dependencies": {
     "@deck.gl/core": "^8.5.8",
@@ -47,7 +48,6 @@
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.1",
     "eslint-plugin-react": "^7.24.0",
-    "netlify-plugin-inline-functions-env": "^1.0.9",
     "papaparse": "^5.3.1",
     "prettier": "2.3.1",
     "workbox-build": "^6.1.5"

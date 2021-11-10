@@ -3,6 +3,7 @@ import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../lib/init-middleware'
+import { keys } from '../../lib/keys.js';
 
 const dataConversion = {
     county: "C",
@@ -45,10 +46,9 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
 
 export default async function handler(req, res) {
     // Run cors
-    const API_KEYS = process.env.api_keys
     await cors(req, res)
     const { key, id, param, state, format='json' } = req.query;
-    if (!API_KEYS.includes(key)) {
+    if (!keys.includes(key)) {
         res.status(401).send('Unauthorized')
         return
     }
