@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "asciify-image": "^0.1.6",
+    "cors": "^2.8.5",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.1",
     "eslint-plugin-react": "^7.24.0",

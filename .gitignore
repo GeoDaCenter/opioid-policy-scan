@@ -42,3 +42,5 @@ map-test/geckodriver.log
 .RData
 .Rhistory
 yarn.lock
+/.yarn/cache
+.yarn/install-state.gz

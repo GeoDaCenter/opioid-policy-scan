@@ -1,6 +1,10 @@
 import * as Papa from 'papaparse';
 import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
+import Cors from 'cors'
+import initMiddleware from '../../lib/init-middleware'
+
+const API_KEYS = process.env.api_keys
 
 const dataConversion = {
     county: "C",
@@ -15,6 +19,15 @@ const idCol = {
     "T":"GEOID",
     "Z":"ZCTA"
 }
+
+// Initialize the cors middleware
+const cors = initMiddleware(
+    // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+    Cors({
+      // Only allow requests with GET, POST and OPTIONS
+      methods: ['GET', 'POST', 'OPTIONS'],
+    })
+)
 
 const getStateFilterFn = (agg, stateList, stateIdList) => {
     const zipMinMax = zipRange.filter(z => stateList.includes(z.STUSPS))
@@ -33,8 +46,13 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
 }
 
 export default async function handler(req, res) {
-    const { id, param, state, format='json' } = req.query;
-
+    // Run cors
+    await cors(req, res)
+    const { key, id, param, state, format='json' } = req.query;
+    if (!API_KEYS.includes(key)) {
+        res.status(401).send('Unauthorized')
+        return
+    }
     const baseUrl = req.rawHeaders.includes('localhost')
         ? `http://${req.rawHeaders.slice(-1)[0]}`
         : `https://oeps.ssd.uchicago.edu`
