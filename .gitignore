@@ -25,3 +25,10 @@ node_modules/*
 .env.local
 yarn.lock
 package-lock.json
+.env
+.netlify/*
+.yarn/*
+out/*
+lib/*
+public/context.json
+pages/api/data/keys.js
