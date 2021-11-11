@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "build:worker": "node _webgeoda/build-scripts/build-sw",
-    "build:netlify": "echo export default '$api_keys' > ./lib/keys.js && next build"
+    "build:netlify": "next build"
   },
   "dependencies": {
     "@deck.gl/core": "^8.5.8",

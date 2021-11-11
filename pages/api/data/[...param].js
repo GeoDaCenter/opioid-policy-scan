@@ -3,7 +3,6 @@ import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../../lib/init-middleware'
-import keys from '../../../lib/keys.js';
 
 const dataConversion = {
     county: "C",
@@ -48,10 +47,10 @@ export default async function handler(req, res) {
     // Run cors
     await cors(req, res)
     const { key, id, param, state, format='json' } = req.query;
-    if (!keys.includes(key)) {
-        res.status(401).send('Unauthorized')
-        return
-    }
+    // if (!keys.includes(key)) {
+    //     res.status(401).send('Unauthorized')
+    //     return
+    // }
     const baseUrl = req.rawHeaders.includes('localhost')
         ? `http://${req.rawHeaders.slice(-1)[0]}`
         : `https://oeps.ssd.uchicago.edu`
