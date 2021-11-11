@@ -2,22 +2,25 @@
 # Date : September 24, 2021
 # About: This piece of code will generate Homeless Status variable for EC tables for Policy Scan
 
-#working directory
+# Load libraries
 library(tidyverse)
 library(sf)
 library(dplyr)
-library(raster)
-library(rgeos)
-library(rgeos)
-library(rgdal)
 
 #read in raw data GroupQuarterVar from IPUMS
-GroupQuarterState <- read.csv("/Homeless/nhgis0034_csv/nhgis0034_ds239_20185_2018_state.csv")
-GroupQuarterCounty <- read.csv("/Homeless/nhgis0035_csv/nhgis0035_ds239_20185_2018_county.csv")
-GroupQuarterTract <- read.csv("/Homeless/nhgis0036_csv/nhgis0036_ds239_20185_2018_tract.csv")
-GroupQuarterZCTA <- read.csv("/Homeless/nhgis0037_csv/nhgis0037_ds239_20185_2018_zcta.csv")
+GroupQuarterState <- read.csv("data_raw/GroupQuar/nhgis0034_csv/nhgis0034_ds239_20185_2018_state.csv")
+GroupQuarterCounty <- read.csv("data_raw/GroupQuar/nhgis0035_csv/nhgis0035_ds239_20185_2018_county.csv")
+GroupQuarterTract <- read.csv("data_raw/GroupQuar/nhgis0036_csv/nhgis0036_ds239_20185_2018_tract.csv")
+GroupQuarterZCTA <- read.csv("data_raw/GroupQuar/nhgis0037_csv/nhgis0037_ds239_20185_2018_zcta.csv")
 
-#select relevant variables 
+# Variables of interest:
+# AJXHE001 - 
+# AJXHE023 - 
+# AJXHE037 - 
+# AJXHE038
+
+
+# Select relevant variables 
 GroupQuarterTract <- GroupQuarterTract %>%
   dplyr::select(GISJOIN, YEAR, TRACTA, AJXHE001, AJXHE023, AJXHE037,  AJXHE038
   ) 
@@ -64,7 +67,7 @@ GroupQuarterState = GroupQuarterState %>% mutate(GEOID = sub(".", "", GEOID))
 GroupQuarterZCTA = GroupQuarterZCTA %>% mutate(GEOID = sub(".", "", GEOID))
 
 #save datasets
-write.csv(GroupQuarterTract, "/Homeless/DS05_T.csv")
-write.csv(GroupQuarterCounty, "/Homeless/DS05_C.csv")
-write.csv(GroupQuarterState, "/Homeless/DS05_S.csv")
-write.csv(GroupQuarterZCTA, "/Homeless/DS05_Z.csv")
+write.csv(GroupQuarterTract, "data_final/DS05_T.csv")
+write.csv(GroupQuarterCounty, "data_final/DS05_C.csv")
+write.csv(GroupQuarterState, "data_final/DS05_S.csv")
+write.csv(GroupQuarterZCTA, "data_final/DS05_Z.csv")
