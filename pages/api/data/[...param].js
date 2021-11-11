@@ -2,8 +2,8 @@ import * as Papa from 'papaparse';
 import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
-import initMiddleware from '../../lib/init-middleware'
-import { keys } from '../../lib/keys.js';
+import initMiddleware from '../../../lib/init-middleware'
+import keys from '../../../lib/keys.js';
 
 const dataConversion = {
     county: "C",

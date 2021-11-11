@@ -44,3 +44,8 @@ map-test/geckodriver.log
 yarn.lock
 /.yarn/cache
 .yarn/install-state.gz
+
+# Local Netlify folder
+.netlify
+.env
+lib/keys.js
