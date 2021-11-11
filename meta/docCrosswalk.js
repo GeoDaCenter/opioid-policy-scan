@@ -1,0 +1,121 @@
+export default [{
+	"dataset": "PS01",
+	"markdown": "Prison%20variables_2016"
+}, {
+	"dataset": "PS02",
+	"markdown": "Jail%20variables_2017"
+}, {
+	"dataset": "PS03",
+	"markdown": "PDMP_2017"
+}, {
+	"dataset": "PS04",
+	"markdown": "GSL_2018"
+}, {
+	"dataset": "PS05",
+	"markdown": "NAL_2017"
+}, {
+	"dataset": "PS06",
+	"markdown": "MedExp_2019"
+}, {
+	"dataset": "PS07",
+	"markdown": "MedExpan_2018"
+}, {
+	"dataset": "PS08",
+	"markdown": "Syringe"
+}, {
+	"dataset": "PS09",
+	"markdown": "MedMarijLaw"
+}, {
+	"dataset": "PS11",
+	"markdown": "PublicExpenditures"
+}, {
+	"dataset": "Health01",
+	"markdown": "Health_DrugDeaths"
+}, {
+	"dataset": "Health02",
+	"markdown": "HepC_rate"
+}, {
+	"dataset": "Health03",
+	"markdown": "Health_PCPs"
+}, {
+	"dataset": "Access01",
+	"markdown": "Access_MOUDs"
+}, {
+	"dataset": "Access02",
+	"markdown": "Access_FQHCs_MinDistance"
+}, {
+	"dataset": "Access03",
+	"markdown": "Acesss_Hospitals_MinDistance"
+}, {
+	"dataset": "Access04",
+	"markdown": "Access_MentalHealth_MinDistance"
+}, {
+	"dataset": "Access05",
+	"markdown": "Access_Pharmacies_MinDistance"
+}, {
+	"dataset": "DS01",
+	"markdown": "Race_Ethnicity_2018"
+}, {
+	"dataset": "DS01",
+	"markdown": "Age_2018"
+}, {
+	"dataset": "DS01",
+	"markdown": "Other_Demographic_2018"
+}, {
+	"dataset": "DS01",
+	"markdown": "Other_Demographic_2018"
+}, {
+	"dataset": "DS02",
+	"markdown": "SDOH_2014"
+}, {
+	"dataset": "DS03",
+	"markdown": "SVI_2018"
+}, {
+	"dataset": "DS04",
+	"markdown": "VetPop"
+}, {
+	"dataset": "EC01",
+	"markdown": "Job_Categories_byIndustry_2018"
+}, {
+	"dataset": "EC03",
+	"markdown": "Economic_2018"
+}, {
+	"dataset": "EC03",
+	"markdown": "Economic_2018"
+}, {
+	"dataset": "EC03",
+	"markdown": "Economic_2018"
+}, {
+	"dataset": "EC04",
+	"markdown": "ForeclosureRate"
+}, {
+	"dataset": "BE01",
+	"markdown": "Housing_2018"
+},{
+	"dataset": "BE02",
+	"markdown": "rural_urban_classifications"
+}, {
+	"dataset": "BE03",
+	"markdown": "AlcoholOutlets_2018"
+}, {
+	"dataset": "BE04",
+	"markdown": "Overlay"
+}, {
+	"dataset": "BE05",
+	"markdown": "Residential_Seg_Indices"
+}, {
+	"dataset": "EC02",
+	"markdown": "Job_Categories_byOccupation_2018"
+}, {
+	"dataset": "COVID01",
+	"markdown": "COVID"
+}, {
+	"dataset": "COVID02",
+	"markdown": "COVID"
+}, {
+	"dataset": "COVID03",
+	"markdown": "COVID"
+}, {
+	"dataset": "COVID04",
+	"markdown": "COVID"
+}]

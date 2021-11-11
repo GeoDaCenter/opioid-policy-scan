@@ -3,7 +3,7 @@ import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../../lib/init-middleware'
-import keys from './keys';
+import keys from '../keys';
 
 const dataConversion = {
     county: "C",
@@ -48,11 +48,11 @@ export default async function handler(req, res) {
     await cors(req, res) // Run cors
     const { key, id, param, state, format='json' } = req.query;
     if (!key) {
-        res.status(400).send('Missing key')
+        res.status(400).send('Please include an api key in your query as "key=abc123". If you need an API key, please register at {url coming soon...}')
         return;
     }
     if (!keys.includes(key)) {
-        res.status(401).send('Unauthorized - please contact the UChicago HEROP lab if you are receiving this message in error.')
+        res.status(401).send('Unauthorized API Key. Please contact the UChicago HEROP lab if you are receiving this message in error. If you need an API key, please register at {url coming soon...}')
         return;
     }
         

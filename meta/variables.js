@@ -58,7 +58,7 @@ export const variables = {
       Metadata: 'PS04 / <a href="data_final/metadata/GSL_2018.md">GSL</a>',
       'Spatial Scale': 'State',
       markdownPrefix: 'PS04 / ',
-      markdownText: 'GSL',
+      markdownText: 'GSL_2018',
       markdown: '',
       'Variable Construct': 'Good Samaritan Laws'
     },
