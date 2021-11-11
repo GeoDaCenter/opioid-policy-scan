@@ -3,17 +3,8 @@ import initMiddleware from '../../../lib/init-middleware'
 import keys from '../keys';
 import docs from '../../../meta/docCrosswalk.js';
 
-// Initialize the cors middleware
-const cors = initMiddleware(
-    // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-    Cors({
-      // Only allow requests with GET, POST and OPTIONS
-      methods: ['GET', 'POST', 'OPTIONS'],
-    })
-)
-function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-}
+const cors = initMiddleware(Cors({methods: ['GET', 'POST', 'OPTIONS'],}))
+function onlyUnique(value, index, self) {return self.indexOf(value) === index;}
   
 const baseUrl = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/'
 
@@ -30,7 +21,7 @@ export default async function handler(req, res) {
     const { key, dataset } = req.query;
     
     if (!key) {
-        res.status(400).send('Please include an api key in your query as "key=abc123". If you need an API key, please register at {url coming soon...}')
+        res.status(400).send('Please include an api key in your query as "?key=abc123". If you need an API key, please register at {url coming soon...}')
         return;
     }
     if (!keys.includes(key)) {

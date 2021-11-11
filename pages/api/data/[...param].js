@@ -4,6 +4,7 @@ import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../../lib/init-middleware'
 import keys from '../keys';
+import gzipResponse from '../../../lib/gzip-response';
 
 const dataConversion = {
     county: "C",
@@ -48,7 +49,7 @@ export default async function handler(req, res) {
     await cors(req, res) // Run cors
     const { key, id, param, state, format='json' } = req.query;
     if (!key) {
-        res.status(400).send('Please include an api key in your query as "key=abc123". If you need an API key, please register at {url coming soon...}')
+        res.status(400).send('Please include an api key in your query as "?key=abc123". If you need an API key, please register at {url coming soon...}')
         return;
     }
     if (!keys.includes(key)) {
@@ -102,7 +103,11 @@ export default async function handler(req, res) {
         : result
 
     if (result.length) {
-        res.status(200).json(formattedData)
+        if (format === 'csv') {
+            res.status(200).send(gzipResponse(formattedData),true)
+        } else {
+            res.status(200).json(gzipResponse(JSON.stringify(formattedData)))
+        }        
     } else {
         res.status(500).json({ error: 'No data found' })
     }
