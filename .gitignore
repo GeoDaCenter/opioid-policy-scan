@@ -49,3 +49,4 @@ yarn.lock
 .netlify
 .env
 lib/keys.js
+public/context.json
