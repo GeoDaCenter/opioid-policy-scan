@@ -25,6 +25,6 @@ export default async (req, res) => {
             .filter(onlyUnique)
         res.status(200).json({ datasets })      
     } catch (error){
-        res.status(400).json({ err })
+        res.status(400).json({ error })
     }
 }
