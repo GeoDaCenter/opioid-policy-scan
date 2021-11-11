@@ -1,10 +1,10 @@
 import * as Papa from 'papaparse';
-import stateInfo from '../../../meta/stateInfo'
-import zipRange from '../../../meta/zipRange'
-import Cors from 'cors'
-import initMiddleware from '../../../lib/init-middleware'
+import stateInfo from '../../../meta/stateInfo';
+import zipRange from '../../../meta/zipRange';
+import Cors from 'cors';
+import initMiddleware from '../../../lib/init-middleware';
 import keys from '../keys';
-import gzipResponse from '../../../lib/gzip-response';
+import gzipResponse from '../../../lib/gzip';
 
 const dataConversion = {
     county: "C",
