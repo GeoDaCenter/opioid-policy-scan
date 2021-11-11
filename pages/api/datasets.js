@@ -1,5 +1,5 @@
 import Cors from 'cors'
-import initMiddleware from '../../../lib/init-middleware'
+import initMiddleware from '../../../lib/middleware'
 import keys from './keys';
 const cors = initMiddleware(Cors({methods: ['GET', 'POST', 'OPTIONS'],}))
 function onlyUnique(value, index, self) {return self.indexOf(value) === index;}
