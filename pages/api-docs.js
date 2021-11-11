@@ -50,7 +50,7 @@ export default function About() {
               the API directly. 
             </p>
             <p>
-              For a general introduction to RESTful APIs, please see <a href="https://towardsdatascience.com/introduction-to-rest-apis-90b5d9676004" target="_blank" rel="noopener noreferrer">Towards Data Science's Intro Article</a>.
+              For a general introduction to RESTful APIs, please see <a href="https://towardsdatascience.com/introduction-to-rest-apis-90b5d9676004" target="_blank" rel="noopener noreferrer">Towards Data Science Intro to REST APIs</a>.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function About() {
             <p>
               API keys are available upon request for interested developers and researchers. To request access, fill out this form [coming soon].
             </p>
-            <p>If you'd prefer to not use an API key, you can use 
+            <p>If you would prefer to not use an API key, you can use 
               the <a href="/download" target="blank" rel="noopener noreferrer">data downloader page</a> or access 
               the <a href="https://github.com/GeoDaCenter/opioid-policy-scan" target="blank" rel="noopener noreferrer">repository directly</a>.
             </p>
