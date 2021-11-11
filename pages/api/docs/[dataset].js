@@ -1,5 +1,5 @@
 import Cors from 'cors'
-import initMiddleware from '../../../lib/init-middleware'
+import initMiddleware from '../../../lib/middleware'
 import keys from '../keys';
 import docs from '../../../meta/docCrosswalk.js';
 

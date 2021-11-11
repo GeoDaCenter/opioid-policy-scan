@@ -2,7 +2,7 @@ import * as Papa from 'papaparse';
 import stateInfo from '../../../meta/stateInfo';
 import zipRange from '../../../meta/zipRange';
 import Cors from 'cors';
-import initMiddleware from '../../../lib/init-middleware';
+import initMiddleware from '../../../lib/middleware';
 import keys from '../keys';
 import gzipResponse from '../../../lib/gzip';
 
