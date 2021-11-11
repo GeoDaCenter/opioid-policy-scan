@@ -3,6 +3,7 @@ import stateInfo from '../../../meta/stateInfo'
 import zipRange from '../../../meta/zipRange'
 import Cors from 'cors'
 import initMiddleware from '../../../lib/init-middleware'
+import keys from './keys';
 
 const dataConversion = {
     county: "C",
@@ -44,20 +45,25 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
 }
 
 export default async function handler(req, res) {
-    // Run cors
-    await cors(req, res)
-    const { id, param, state, format='json' } = req.query;
-    // if (!keys.includes(key)) {
-    //     res.status(401).send('Unauthorized')
-    //     return
-    // }
-    const baseUrl = req.rawHeaders.includes('localhost')
-        ? `http://${req.rawHeaders.slice(-1)[0]}`
-        : `https://oeps.ssd.uchicago.edu`
+    await cors(req, res) // Run cors
+    const { key, id, param, state, format='json' } = req.query;
+    if (!key) {
+        res.status(400).send('Missing key')
+        return;
+    }
+    if (!keys.includes(key)) {
+        res.status(401).send('Unauthorized - please contact the UChicago HEROP lab if you are receiving this message in error.')
+        return;
+    }
         
     if (param[0] === 'index.html') res.status(500).json({ error: 'Please add a dataset to your query.' })
     if (!param[1]) res.status(500).json({ error: 'Please add a spatial scale to your query.' })
+    if (!(Object.keys(dataConversion).includes(param[1]))) res.status(500).json({ error: 'Please add a valid spatial scale to your query. (county, state, zip, tract)' })
     
+    const baseUrl = req.rawHeaders.includes('localhost')
+        ? `http://${req.rawHeaders.slice(-1)[0]}`
+        : `https://oeps.ssd.uchicago.edu`
+
     const agg = dataConversion[param[1]]
 
     const dataset = `${param[0]}_${agg}.csv`
