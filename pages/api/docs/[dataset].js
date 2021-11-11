@@ -42,10 +42,12 @@ export default async function handler(req, res) {
 
     const mdToFetch = docs.filter(d => d.dataset === dataset).map(f => f.markdown).filter(onlyUnique)
     
-    if (mdToFetch.length === 0) res.status(500).json({ error: 'Could not find documentation.' })
+    if (mdToFetch.length === 0) {
+        res.status(500).json({ error: 'Could not find documentation.' })
+        return;
+    }
 
     const urlsToFetch = mdToFetch.map(f => `${baseUrl}${f}.md`)
-    
     const mdFiles = await Promise.all(urlsToFetch.map(md => fetchMd(md)))      
     const mdText = mdFiles.map((md, idx) => `## ${mdToFetch[idx]}: \n\n ${md}`).join('\n\n')
     
