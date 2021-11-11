@@ -46,7 +46,7 @@ const getStateFilterFn = (agg, stateList, stateIdList) => {
 export default async function handler(req, res) {
     // Run cors
     await cors(req, res)
-    const { key, id, param, state, format='json' } = req.query;
+    const { id, param, state, format='json' } = req.query;
     // if (!keys.includes(key)) {
     //     res.status(401).send('Unauthorized')
     //     return
