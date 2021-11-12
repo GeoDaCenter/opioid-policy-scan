@@ -14,6 +14,10 @@ button {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+code {
+  overflow-wrap: anywhere;
+}
+
 :root {
   --selected-color: #449D8F;
   --selected-color-light: #99D6D0;
