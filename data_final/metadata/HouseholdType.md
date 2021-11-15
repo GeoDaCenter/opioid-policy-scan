@@ -1,4 +1,4 @@
-**Meta Data Name**: Household Type
+**Meta Data Name**: Household Type  
 **Last Modified**: November 2021  
 **Author**: Susan Paykin  
 
