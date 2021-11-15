@@ -363,7 +363,7 @@ const data = [
         type: 'characteristic',
         join: 'GEOID',
       },
-      DS05_subdata: {
+      DS05_data: {
         file: 'DS05_T.csv',
         type: 'characteristic',
         join: 'GEOID',
@@ -1378,31 +1378,55 @@ const variables = [
     numberOfBins: 6,
     colorScale: colors.colorbrewer.GnBu
   },
-  //{
-  //  variable: "Number of non-related group dwellings",
-  //  numerator: "DS05_subdata",
-  //  nProperty: "NonrelatedGroupDwelling",
-  //  binning: "naturalBreaks",
-  //  numberOfBins: 7,
-  //  colorScale: colors.colorbrewer.YlOrBr
-  //},
-  //{
-  //  variable: "Number of People under one roof",
-  //  numerator: "DS05_subdata",
-  //  nProperty: "GroupQuarters",
-  //  binning: "naturalBreaks",
-  //  numberOfBins: 7,
-  //  colorScale: colors.colorbrewer.YlOrBr
-  //},
-  // No data has this column
-  // {
-  //   variable: "% Homeless Population",
-  //   numerator: "DS05_subdata",
-  //   nProperty: "HomelessPercent",
-  //   binning: "quantileBreaks",
-  //   numberOfBins: 7,
-  //   colorScale: colors.colorbrewer.YlOrBr
-  // },
+  {
+   variable: "Total nonrelatives in family households",
+   numerator: "DS05_data",
+   nProperty: "nonRel_fhh",
+   binning: "naturalBreaks",
+   numberOfBins: 5,
+   colorScale: colors.colorbrewer.YlOrBr
+  },
+  {
+    variable: "% Nonrelatives in family households",
+    numerator: "DS05_data",
+    nProperty: "nonRel_fhhR",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.YlOrBr
+   },
+   {
+    variable: "Total nonrelatives in non-family households",
+    numerator: "DS05_data",
+    nProperty: "nonRel_nfhh",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.YlOrBr
+   },
+   {
+    variable: "% Nonrelatives in non-family households",
+    numerator: "DS05_data",
+    nProperty: "nonRel_nfhhR",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.YlOrBr
+   },
+   {
+    variable: "Total in group quarters",
+    numerator: "DS05_data",
+    nProperty: "groupQuar",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.YlOrBr
+   },
+   {
+    variable: "% in group quarters",
+    numerator: "DS05_data",
+    nProperty: "groupQuarR",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.YlOrBr
+   },
+  
   //{
   //  variable: "Number of beds available to Homeless Population (during census time)",
   //  numerator: "DS06_data",
