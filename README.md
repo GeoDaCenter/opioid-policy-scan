@@ -72,7 +72,7 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/SDOH_2014.md) | Tract | 
 | Social Vulnerability Index (SVI) | SVI Rankings | CDC, 2018 | DS03 / [SVI](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/SVI_2018.md) | County, Tract, Zip | 
 | Veteran Population | Population as defined by veteran status | ACS, 2017 5-year | DS04 / [Veteran Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/VetPop.md) | State, County, Tract, Zip |
-| Group Quarter | Population living in group quarters | ACS, 2018 5-year | DS05 / [Group Quarter Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/GroupQuar.md) | State, County, Tract, Zip |
+| Household Type | Household Types and Group Quarters Populations | ACS, 2018 5-year | DS05 / [Household Type Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HouseholdType.md) | State, County, Tract, Zip |
 | Homeless Population | Population as defined by veteran status | HUD Point in Time Count, 2018  | DS06 / [Homeless Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HomelessPop.md) | State, County, Tract, Zip |
 
 <br>
