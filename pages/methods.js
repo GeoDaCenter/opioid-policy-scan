@@ -47,7 +47,7 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-                Organization and data selection for the OEPS is guided by a risk environment framework (Rhodes 2002). 
+                Organization and data selection for the OEPS is guided by a risk environment framework (<a href= "https://www.sciencedirect.com/science/article/pii/S0955395902000075">Rhodes 2002</a>). 
                 The “risk environment” as a framework for understanding and reducing drug-related harms emphasizes the broader contextual domains 
                 in which opioid use occurs. 
             </p>
@@ -101,7 +101,8 @@ export default function About() {
         <li> <b>Built Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
         <li> <b>COVID-19:</b> Essential workers, daily infection rates and confirmed cases through March 2020.*</li>
         
-        <p> <i>*For more COVID-19 data, please visit our sister project,</i>  <a href="www.USCovidAtlas.org">The US COVID Atlas</a>. </p>
+        <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="www.USCovidAtlas.org">US COVID Atlas</a> -- 
+        a free and open source pandemic data archive and visualization tool, also led by the Healthy Regions and Policies Lab.</i>  </p>
         
         <p> The OEPS also includes <b>geography boundary</b> shapefiles from the US Census Bureau’s TIGER/Line (2018) for Census tracts, ZCTAs, counties, and states.</p>
 
@@ -118,7 +119,7 @@ export default function About() {
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
         <p>
-        Please see <a href= "/standards">Data Standards</a> for more on our file naming conventions, geographic identifiers, data formatting, and guidelines for contributors. 
+        Please see the <a href= "/standards">Data Standards</a> page for more on our file naming conventions, geographic identifiers, data formatting, and guidelines for contributors. 
         </p>
   
     </div>

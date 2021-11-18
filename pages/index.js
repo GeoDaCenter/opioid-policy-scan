@@ -53,7 +53,7 @@ export default function Home() {
             Opioid Environ&shy;ment Policy Scan
           </h1>
           <p className={styles.description}>
-          Exploring the multi-dimensional risk environment impacting opioid use across the U.S.
+          Exploring the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
           </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
             <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
-              Explore and download data by theme or spatial scale. 
+              Access data by theme or spatial scale, view documentation, and explore our methdology. 
             </p>
             <p>
             <a
@@ -97,7 +97,7 @@ export default function Home() {
             <img src="images/map.svg" alt="Map and explore data." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Map</h1>
             <p>
-            View data in an interactive web map. 
+            Visualize data with our interactive web map. 
             </p>
             <p>
             <a className={styles.docsLink} href="/map" > Start mapping &gt;</a>
@@ -108,7 +108,7 @@ export default function Home() {
             <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
-              Research insights from our lab & partners. 
+              Learn about research insights from our lab & partners. 
             </p>
             <p>
             <a className={styles.docsLink} href="/insights">Learn more &gt;</a>
@@ -131,11 +131,11 @@ export default function Home() {
             <p>
             The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, based at the
             Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
-            an NIH HEAL Initiative, as part of its Methodology and Advanced Analytics Resource Center.
+            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center.
             </p>
             <p>
-              We built the OEPS Explorer to make it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>, 
-              our <a href="/methods">methods</a>, and our <a href="/standards">data standards</a>. 
+              We built the OEPS Explorer to make it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,  
+              <a href="/methods"> methodology</a>, and <a href="/standards">data standards</a>. 
             </p>
           </div>
         </div>
