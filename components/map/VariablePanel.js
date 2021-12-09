@@ -53,6 +53,10 @@ export default function VariablePanel(props) {
     dispatch({ type: "CHANGE_VARIABLE", payload: vars[0].variable })
   },[activeTheme])
 
+  useMemo(() => {
+    alert('The current variable is: '+dataParams.variable)
+  }, [dataParams.variable])
+
   return (
     <>
       <div
