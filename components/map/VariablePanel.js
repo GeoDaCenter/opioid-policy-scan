@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import styles from "./VariablePanel.module.css";
 import { variables } from '../../meta/variables';
 
@@ -45,20 +45,13 @@ export default function VariablePanel(props) {
   const dataPresets = useSelector((state) => state.dataPresets);
   const [activeDocs, setActiveDocs] = useState('')
   const [activeTheme, setActiveTheme] = useState(Object.keys(variables)[1])
-  const [filteredVars, setFilteredVars] = useState(filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme))
-  const [currentVariable, setCurrVar] = useState(filteredVars[0])
-  
+  const filteredVars = useMemo(() => filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme),[activeTheme])
   const dispatch = useDispatch();
 
   useEffect(() => {
     const vars = filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme)
-    setFilteredVars(vars)
     dispatch({ type: "CHANGE_VARIABLE", payload: vars[0].variable })
   },[activeTheme])
-
-  useEffect(() => {
-    setCurrVar(dataParams.variable)
-  },[dataParams.variable])
 
   return (
     <>
@@ -84,7 +77,7 @@ export default function VariablePanel(props) {
         <Gutter em={1}/>
         <p>Variable Select</p>
         <Listbox
-          value={currentVariable}
+          value={dataParams.variable}
           onChange={(value) =>
             dispatch({ type: "CHANGE_VARIABLE", payload: value })
           }
