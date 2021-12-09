@@ -3,11 +3,12 @@ import { useState, useEffect, useMemo } from 'react';
 import styles from "./VariablePanel.module.css";
 import { variables } from '../../meta/variables';
 
-import {
-  Listbox,
-  ListboxOption
-} from "@reach/listbox";
+// import {
+//   Listbox,
+//   ListboxOption
+// } from "@reach/listbox";
 import "@reach/listbox/styles.css";
+import { Select } from "grommet";
 
 import {
   Gutter
@@ -67,7 +68,13 @@ export default function VariablePanel(props) {
         }
       >
         <p>Theme Select</p>
-        <Listbox
+        
+        <Select
+          options={themeCategories}
+          value={activeTheme}
+          onChange={({ option }) => setActiveTheme(option)}
+        />
+        {/* <Listbox
           value={activeTheme}
           onChange={(value) => setActiveTheme(value)}
           id="themeSelect"
@@ -77,10 +84,15 @@ export default function VariablePanel(props) {
               {entry}
             </ListboxOption>)
           }
-        </Listbox>
+        </Listbox> */}
         <Gutter em={1}/>
         <p>Variable Select</p>
-        <Listbox
+        <Select
+          options={filteredVars.map(f => f.variable)}
+          value={dataParams.variable}
+          onChange={({ option }) => dispatch({ type: "CHANGE_VARIABLE", payload: option })}
+        />
+        {/* <Listbox
           value={dataParams.variable}
           onChange={(value) =>
             dispatch({ type: "CHANGE_VARIABLE", payload: value })
@@ -92,7 +104,7 @@ export default function VariablePanel(props) {
               {entry.variable}
             </ListboxOption>
           )}
-        </Listbox>
+        </Listbox> */}
 
         {dataPresets.data.length > 1 &&
         <> 
