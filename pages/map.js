@@ -15,6 +15,18 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { useEffect, useState } from "react";
 import * as Comlink from "comlink";
+import { Grommet } from 'grommet';
+
+const oepsTheme = {
+  global: {
+    font: {
+      family: '"Lato", Verdana, Geneva, Tahoma, sans-serif'
+    },
+    colors: {
+      brand: '#449D8F'
+    }
+  },
+};
 
 const store = createStore(
   rootReducer,
@@ -76,17 +88,19 @@ export default function Map() {
       <MainNav />
       {/* {!geodaReady && <div className={styles.preLoader}><Loader globe={true} /></div>} */}
       
-      <ViewportProvider>
-      <Provider store={store}>
-        {geodaReady && (
-          <GeodaContext.Provider value={geoda}>
-            <MainMap geoda={geoda} />
-            <VariablePanel />
-            <MapTooltip />
-          </GeodaContext.Provider>
-        )}
-      </Provider>
-      </ViewportProvider>
+        <ViewportProvider>
+          <Provider store={store}>
+            {geodaReady && (
+              <GeodaContext.Provider value={geoda}>
+                <Grommet theme={oepsTheme}>
+                  <MainMap geoda={geoda} />
+                  <VariablePanel />
+                  <MapTooltip />
+                </Grommet>
+              </GeodaContext.Provider>
+            )}
+          </Provider>
+        </ViewportProvider>
     </div>
   );
 }

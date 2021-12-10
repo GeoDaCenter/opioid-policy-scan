@@ -12,8 +12,16 @@
 }
 
 .panelContainer p {
-  margin:0;
+  margin:0 0 .25em 0;
   padding:0;
+  font-size:.875rem;
+}
+
+.panelContainer input[type=text] {
+  font-weight: normal;
+  width:300px;
+  padding:.5em .5em;
+  font-size:.875rem;
 }
 
 .readMoreButton, .pillButton {
@@ -25,6 +33,7 @@
   border-radius:0.25em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
   cursor:pointer;
+  font-size:.875rem;
 }
 
 .pillButton {
