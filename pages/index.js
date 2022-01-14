@@ -138,7 +138,6 @@ export default function Home() {
             <p>
               The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,  
               our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>. 
-              You can also access data, scripts, and documentation from our GitHub. 
             </p>
             <p>
             The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, based at the
