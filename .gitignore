@@ -32,3 +32,4 @@ out/*
 lib/*
 public/context.json
 pages/api/data/keys.js
+pages/api/keys.js
