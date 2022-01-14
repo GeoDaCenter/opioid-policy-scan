@@ -53,7 +53,7 @@ export default function Home() {
             Opioid Environment Policy Scan
           </h1>
           <p className={styles.description}>
-          An open data warehouse exploring the multi-dimensional risk environment, ranging from neighborhoods to states,
+          An open data warehouse exploring the multi-dimensional risk environment, from neighborhoods to states,
           impacting opioid use and health outcomes across the United States.
           </p>
           </div>
