@@ -150,9 +150,9 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
             Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, 
-            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021).
-            GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. 
-            http://doi.org/10.5281/zenodo.4747876
+            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2022). 
+            GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan (OEPS) Data Warehouse (v1.0). Zenodo.  
+            <a href= "https://zenodo.org/record/5842465#.YeHj8H3MKHF">https://doi.org/10.5281/zenodo.5842465</a>
             </p>
             <p>
             <i>This research was supported by the National Institute on Drug Abuse, National Institutes of Health, 
