@@ -50,21 +50,22 @@ export default function Home() {
           </div>
           <div className="col-xs-12 col-md-7 col-lg-8">
           <h1 className={styles.title}>
-            Opioid Environ&shy;ment Policy Scan
+            Opioid Environment Policy Scan
           </h1>
           <p className={styles.description}>
-          Exploring the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
+          An open data warehouse exploring the multi-dimensional risk environment, ranging from neighborhoods to states,
+          impacting opioid use and health outcomes across the United States.
           </p>
           </div>
         </div>
 
-        <Gutter em={4} />
+        <Gutter em={2} />
         <div className="row rules">
           <div className="col-xs-12 col-md-4 col-lg-4">
             <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
-              Access data by theme or spatial scale, view documentation, and explore our methdology. 
+              Access data by theme or spatial scale and explore our methdology. 
             </p>
             <p>
             <a
@@ -79,7 +80,7 @@ export default function Home() {
                 className={styles.docsLink}
                 href="/docs "
               >
-              Docs &gt;
+              Documentation &gt;
               </a> 
               </p>
               <p>
@@ -87,7 +88,7 @@ export default function Home() {
                 className={styles.docsLink}
                 href="/methods "
               >
-              Methods &gt;  
+              Methodology &gt;  
               </a> 
               </p>
               
@@ -108,34 +109,41 @@ export default function Home() {
             <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
-              Learn about research insights from our lab & partners. 
+              Learn about research insights from our lab and partners. 
             </p>
             <p>
-            <a className={styles.docsLink} href="/insights">Learn more &gt;</a>
+            <a className={styles.docsLink} href="/insights">Insights &gt;</a>
             </p>
+            <p>
+            <a className={styles.docsLink} href="/about ">About &gt;</a> 
+            </p>
+              <p></p>
           </div>
         </div>
         <Gutter em={2} />
         <div className="row rules center-xs">
           <div className="col-xs-12">
-            <h1>About</h1>
+            <h1>What is the OEPS?</h1>
           </div>
           <div className="col-xs-12 col-md-12 col-lg-10">
             <p>
-            The Opioid Environment Policy Scan (<a href="/about">OEPS</a>) is an open-source data warehouse, created to
-            help characterize the multi-dimensional risk environment impacting opioid use in justice populations
-            across the United States. 
-            The OEPS provides access to data at multiple spatial scales to support research to better capture and understand 
-            the factors impacting and impacted by opioid use in communities nationwide. 
+            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse focused on the 
+            multi-dimensional risk environment impacting opioid use and health outcomes across the United States. 
+            </p>
+            <p>
+            The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts, and is designed 
+            to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), 
+            inform public policy, and reduce harm in communities nationwide. 
+            </p>
+            <p>
+              The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,  
+              our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>. 
+              You can also access data, scripts, and documentation from our GitHub. 
             </p>
             <p>
             The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, based at the
             Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
             an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center.
-            </p>
-            <p>
-              We built the OEPS Explorer to make it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,  
-              <a href="/methods"> methodology</a>, and <a href="/standards">data standards</a>. 
             </p>
           </div>
         </div>
