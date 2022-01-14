@@ -60,41 +60,47 @@ export default function About() {
       <MainNav />
       <main className={styles.main}>
         <h1 className={styles.title}>About OEPS</h1>
-        <Gutter em={3} />
+        <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>About</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            The Opioid Environment Policy Scan (OEPS) is an open-source data platform providing access to data at 
-            multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use 
-            in justice populations across the United States.
+            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize 
+            the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
             <p>
-            The OEPS is led and maintained by the team at the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a> (HEROP), 
-            Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
-            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC). 
-            Data and additional resources are also available to the JCOIN Network through the 
-            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>.
+             The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts, and is designed 
+            to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), 
+            inform public policy, and reduce harm in communities nationwide. 
             </p>
             <p>
             We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels. 
             Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization.
             <a href="/download"> Download</a> the entire data repository, or you can filter and download by theme or spatial scale. 
-            All datasets are accompanied by <a href="/docs">metadata docs</a>, detailing their source data, year, and more. 
-            Learn more about our methods and approaches, including the risk environment framework, in <a href="/methods">Methodology</a>.
+            All datasets are accompanied by <a href="/docs">documentation</a> detailing their source data, year, and more. 
+            Learn more about our methods and approaches, including the risk environment framework, on the <a href="/methods">Methodology</a> page.
             </p>
-            <p>
-            All data, metadata descriptions, and code is available on <a href="https://github.com/GeoDaCenter/opioid-policy-scan">GitHub</a>. 
+            </div>
+        </div>
+        <Gutter em={2} />
+            <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2>Open Source</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+          <p>
+            All data, metadata descriptions, and code is available on our <a href="https://github.com/GeoDaCenter/opioid-policy-scan">GitHub</a>. 
             As an open source project, we encourage users to 
-            <a href="https://docs.github.com/en/issues/organizing-your-work-with-project-boards/tracking-work-with-project-boards/adding-issues-and-pull-requests-to-a-project-board"> add an Issue </a> 
-            on our GitHub for questions, bugs, or data requests, or <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork the repo </a> 
+            <a href="https://docs.github.com/en/issues/organizing-your-work-with-project-boards/tracking-work-with-project-boards/adding-issues-and-pull-requests-to-a-project-board"> add an issue </a> 
+            on GitHub for questions, bugs, or data requests, or <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork the repo </a> 
             to access locally. 
             </p>
           </div>
         </div>
-        <Gutter em={3} />
+    
+        <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>Team</h2> <a id="team"></a>
@@ -109,15 +115,22 @@ export default function About() {
                 </div>)}
             </div>
             <p>
+            The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a> (HEROP) at the 
+            Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
+            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC). 
+            Data and additional resources are also available to the JCOIN Network through the 
+            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>.
+            </p>
+            <p>
               Contributors include Moksha Menghaney and Angela Li, as well as Research Assistants (RAs) 
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil. 
             </p>
             <p>
-              <b><a href="https://voices.uchicago.edu/herop/team/">Learn more</a></b> about the HEROP team.
+              <a href="https://voices.uchicago.edu/herop/team/">Learn more</a> about the HEROP team.
             </p>
           </div>
         </div>
-        <Gutter em={3} />
+        <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>Contact</h2>
@@ -129,15 +142,16 @@ export default function About() {
             </p>
           </div>
         </div>
-        <Gutter em={3} />
+        <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>Citation</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, Angela Li. (2021, May 11). 
-            GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (Version v0.1-beta). Zenodo. 
+            Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, 
+            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021).
+            GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. 
             http://doi.org/10.5281/zenodo.4747876
             </p>
             <p>
