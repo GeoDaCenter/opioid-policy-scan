@@ -67,11 +67,11 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize 
+            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse to help characterize 
             the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
             <p>
-             The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts, and is designed 
+             The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed 
             to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), 
             inform public policy, and reduce harm in communities nationwide. 
             </p>
