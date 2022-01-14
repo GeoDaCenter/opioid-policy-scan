@@ -131,7 +131,7 @@ export default function Home() {
             multi-dimensional risk environment impacting opioid use and health outcomes across the United States. 
             </p>
             <p>
-            The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed 
+            The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts, and is designed 
             to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), 
             inform public policy, and reduce harm in communities nationwide. 
             </p>
