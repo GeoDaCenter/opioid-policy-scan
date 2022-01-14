@@ -8,11 +8,16 @@ Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify
 
 ## About
 
-The Opioid Environment Policy Scan (OEPS) is a free, open-source data warehouse providing access to data at multiple spatial scales to help characterize the multi-dimensional risk environment impacting opioid use in justice populations across the United States. 
+The Opioid Environment Policy Scan (OEPS) is a free, open-source data warehouse to help characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
 
-The OEPS developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by the team at the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/team), [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago Data is also available to the JCOIN Network through the [JCOIN Data Commons](https://jcoin.datacommons.io/).
+The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), inform public policy, and reduce harm in communities nationwide. 
 
-We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels. Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization. Download the entire data repository, or you can filter and download by theme or spatial scale with the [OEPS Explorer](https://oeps.netlify.app/). All datasets are accompanied by metadata docs, detailing their source data, year, and more. Learn more about our methods and approaches, including the risk environment framework, in [Methodology](https://oeps.netlify.app/methods).
+We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels. Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization. Download the entire data repository, or you can filter and download by theme or spatial scale with the [OEPS Explorer](https://oeps.netlify.app/). All datasets are accompanied by documentation, detailing their source data, year, and more. Learn more about our methods and approaches, including the risk environment framework, on our [Methodology](https://oeps.netlify.app/methods) page.
+
+The OEPS is led by the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/team) at the [Center for Spatial Data Science](https://spatial.uchicago.edu/), University of Chicago. It was developed for the NIH's JCOIN Methdology and Advanced Analaytic Resource Center (MAARC). See [Team](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#team) and [Acknolwedgements](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#acknowledgements) below for more. 
+
+### Citation
+Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. http://doi.org/10.5281/zenodo.4747876
 
 ## Data Overview
 
@@ -119,14 +124,13 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | 7-day Average Case Count | 7-day average case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID03 / [COVID Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/COVID.md) | State, County | 
 | Historical 7-day Average Adjusted Case Count per 100K | 7-day average adjusted case count per 100K population (01/21/20 - 03/03/2021)| The New York Times, 2021 | COVID04 / [COVID Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/COVID.md) | State, County | 
 
-## Documentation
+## Full Documentation
 Please refer to the complete [Data Documentation](https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing) for more information about individual datasets, variables, and data methods.  Contact [Susan Paykin](mailto:spaykin@uchicago.edu) with any questions. 
 
-## Citation
-Marynia Kolak, Qinyun Lin, Susan Paykin, Moksha Menghaney, & Angela Li. (2021, May 11). GeoDaCenter/opioid-policy-scan: *Opioid Environment Policy Scan Data Warehouse* (Version v0.1-beta). Zenodo. http://doi.org/10.5281/zenodo.4747876
-
 ## Team
-The OEPS database was developed for the [Justice Community Opioid Innovation Network (JCOIN)](https://heal.nih.gov/research/research-to-practice/jcoin) by [Marynia Kolak](https://github.com/Makosak), [Qinyun Lin](https://github.com/linqinyu), [Susan Paykin](https://github.com/spaykin), Moksha Menghaney, and Angela Li of the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/) and [Center for Spatial Data Science](https://spatial.uchicago.edu/) at the University of Chicago. The University of Chicago serves as the JCOIN Methodology and Advanced Analytics Resource Center (MAARC), providing data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization.
+The OEPS is led by the [Healthy Regions & Policies Lab](herop.ssd.uchicago.edu) team including [Susan Paykin](https://github.com/spaykin), [Qinyun Lin](https://github.com/linqinyu), [Dylan Halpern](https://github.com/nofurtherinformation), and [Marynia Kolak](https://github.com/Makosak), along with Moksha Menghaney and Angela Li.
 
 ## Acknowledgements
-This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.
+The OEPS was developed for the Methodology and Advanced Analytics Resource Center (MAARC), part of the NIH-HEAL Initiative Justice Community Opioid Innovation Network (JCOIN). The Healthy Regions & Policies Lab leads spatial analytics for the MAARC, which provides data infrastructure and statistical and analytic expertise to support individual JCOIN studies and cross-site data synchronization.
+
+*This research was supported by the National Institute on Drug Abuse, National Institutes of Health, through the NIH HEAL Initiative under award number UG3DA123456. The contents of this publication are solely the responsibility of the authors and do not necessarily represent the official views of the NIH, the Initiative, or the participating sites.*
