@@ -1,4 +1,2 @@
-spatial_access
 geopandas
-altair
 pandas
