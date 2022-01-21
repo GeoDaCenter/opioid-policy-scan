@@ -59,7 +59,7 @@ export const variables = {
       'Spatial Scale': 'State',
       markdownPrefix: 'PS04 / ',
       markdownText: 'GSL_2018',
-      markdown: '',
+      markdown: 'GSL_2018',
       'Variable Construct': 'Good Samaritan Laws'
     },
     {
