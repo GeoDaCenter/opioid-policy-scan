@@ -12,7 +12,7 @@ export const variables = {
     },
     {
       'Variable Proxy': 'County, Census Tract, Zip Code Tract Area (ZCTA)',
-      Source: 'HUD’s Office of Policy Development and Research (PD&amp;R)',
+      Source: 'HUD’s Office of Policy Development and Research (PD&R)',
       Metadata: '<a href="https://github.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/crosswalk.md">Crosswalk Files</a>',
       'Spatial Scale': 'County, Tract, Zip',
       markdownPrefix: '',
@@ -55,7 +55,7 @@ export const variables = {
     {
       'Variable Proxy': 'Any Good Samaritan Law; Good Samaritan Law protecting arrest',
       Source: 'OPTIC, 2017',
-      Metadata: 'PS04 / <a href="data_final/metadata/GSL_2018.md">GSL</a>',
+      Metadata: 'PS04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/GSL_2018.md">GSL</a>',
       'Spatial Scale': 'State',
       markdownPrefix: 'PS04 / ',
       markdownText: 'GSL_2018',
@@ -120,7 +120,7 @@ export const variables = {
       markdownPrefix: 'PS11 / ',
       markdownText: 'Government Expenditures',
       markdown: 'PublicExpenditures',
-      'Variable Construct': 'State &amp; Local Government Expenditures'
+      'Variable Construct': 'State & Local Government Expenditures'
     }
   ],
   'Health Variables': [
@@ -209,12 +209,12 @@ export const variables = {
     {
       'Variable Proxy': 'Percentages of population defined by categories of race and ethnicity',
       Source: 'ACS, 2018 5-year',
-      Metadata: 'DS01/ <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Race_Ethnicity_2018.md">Race &amp; Ethnicity Variables</a>',
+      Metadata: 'DS01/ <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Race_Ethnicity_2018.md">Race & Ethnicity Variables</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
       markdownPrefix: '',
-      markdownText: 'Race &amp; Ethnicity Variables',
+      markdownText: 'Race & Ethnicity Variables',
       markdown: 'Race_Ethnicity_2018',
-      'Variable Construct': 'Race &amp; Ethnicity'
+      'Variable Construct': 'Race & Ethnicity'
     },
     {
       'Variable Proxy': 'Age group estimates and percentages of population',
@@ -283,7 +283,7 @@ export const variables = {
       Source: 'ACS, 2018 5-year',
       Metadata: 'EC01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC01',
+      markdownPrefix: 'EC01 / ',
       markdownText: 'Jobs by Industry',
       markdown: 'Job_Categories_byIndustry_2018',
       'Variable Construct': 'Employment Trends'
@@ -293,7 +293,7 @@ export const variables = {
       Source: 'ACS, 2014-2018',
       Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Economic_2018.md">Economic Variables</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03',
+      markdownPrefix: 'EC03 / ',
       markdownText: 'Economic Variables',
       markdown: 'Economic_2018',
       'Variable Construct': 'Unemployment Rate'
@@ -303,7 +303,7 @@ export const variables = {
       Source: 'ACS, 2018 5-year',
       Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Economic_2018.md">Economic Variables</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03',
+      markdownPrefix: 'EC03 / ',
       markdownText: 'Economic Variables',
       markdown: 'Economic_2018',
       'Variable Construct': 'Poverty Rate'
@@ -313,7 +313,7 @@ export const variables = {
       Source: 'ACS, 2018 5-year',
       Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Economic_2018.md">Economic Variables</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03',
+      markdownPrefix: 'EC03 / ',
       markdownText: 'Economic Variables',
       markdown: 'Economic_2018',
       'Variable Construct': 'Per Capita Income'
@@ -392,12 +392,12 @@ export const variables = {
     },
     {
       'Variable Proxy': 'Classification of areas as rural, urban or suburban using percent rurality (County) or RUCA Codes (Tract, Zip)',
-      Source: 'USDA &amp; ACS, 2014-2018',
-      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/rural_urban_classifications">Rural-Urban Classifications</a>',
+      Source: 'USDA & ACS, 2014-2018',
+      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Rural_Urban_Classification_County.md">Rural-Urban Classifications (County)</a> /  <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Rural_Urban_Classification_T_Z.md">Rural-Urban Classifications (Tract/ZIP)</a>',
       'Spatial Scale': 'County, Tract, Zip',
       markdownPrefix: 'BE02 / ',
       markdownText: 'Rural-Urban Classifications',
-      markdown: 'rural_urban_classifications',
+      markdown: 'Rural_Urban_Classification_County',
       'Variable Construct': 'Urban/Suburban/Rural Classification'
     },
     {
