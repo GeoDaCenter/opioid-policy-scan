@@ -29,8 +29,8 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | :------------- | :----- | :------- | :------------ | 
-| Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census, 2018 | [Geographic Boundaries](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip |
-| Crosswalk files | County, Census Tract, Zip Code Tract Area (ZCTA) | HUD’s Office of Policy Development and Research (PD&R) | [Crosswalk Files](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/crosswalk.md) | County, Tract, Zip |
+| Geographic Boundaries | State, County, Census Tract, Zip Code Tract Area (ZCTA) | US Census TIGER/Line, 2018 | [Geographic Boundaries](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/GeographicBoundaries_2018.md) | State, County, Tract, Zip |
+| Crosswalk files | County, Census Tract, Zip Code Tract Area (ZCTA) | HUD Office of Policy Development and Research | [Crosswalk Files](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/crosswalk.md) | County, Tract, Zip |
 
 ### Policy Variables
 
@@ -53,16 +53,16 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
-| Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year ave. | Health01 / [Drug-Related Death Rate](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_DrugDeaths.md) | State, County | 
-| Hepatitis C rates | HepC prevalence and mortality | HepVu | Health02 / [Hepatitis C](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HepC_rate.md) | State, County | 
+| Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year | Health01 / [Drug-Related Death Rate](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_DrugDeaths.md) | State, County | 
+| Hepatitis C rates | HepC prevalence, mortality | HepVu, 2017 | Health02 / [Hepatitis C](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HepC_rate.md) | State, County | 
 | Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_PCPs.md) | Tract, County, State | 
-| Access to MOUDs | Distance to nearest MOUD | US Census, SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
-| Access to Health Centers | Distance to nearest FQHC | US Census, US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | 
-| Access to Hospitals | Distance to nearest hospital | US Census, CovidCareMap, 2020 |  Access03 / [Access: Hospitals](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip |
-| Access to Pharmacies | Distance to nearest pharmacy | US Census, InfoGroup 2018 | Access04 / [Access: Pharmacies](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip |
-| Access to Mental Health Providers |  Distance to nearest mental health provider | US Census, SAMSHA 2020 |  Access05 / [Access: Mental Health Providers](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip |
-|Access to Substance Use Treatment Facilities| Distance to nearest substance use treatment facility| SAMHSA, SSATS 2021| Access06 / [Access: Substance Use Treatment](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_SubstanceUseTreatment.md)|Tract, Zip|
-|Access to Opioid Treatment Programs| Distance to nearest Opioid treatment program| SAMHSA, SSATS 2021| Access 07 / [Access: Opioid Treatment Programs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_OpioidUseTreatment.md)|Tract, Zip|
+| Access to MOUDs | Distance to nearest MOUD | SAMHSA, Vivitrol, 2020 | Access01 / [Access: MOUDs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
+| Access to Health Centers | Distance to nearest FQHC | US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | 
+| Access to Hospitals | Distance to nearest hospital | CovidCareMap, 2020 |  Access03 / [Access: Hospitals](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip |
+| Access to Pharmacies | Distance to nearest pharmacy | InfoGroup, 2018 | Access04 / [Access: Pharmacies](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_Pharmacies_MinDistance.md) | Tract, Zip |
+| Access to Mental Health Providers |  Distance to nearest mental health provider | SAMSHA, 2020 |  Access05 / [Access: Mental Health Providers](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_MentalHealth_MinDistance.md) | Tract, Zip |
+|Access to Substance Use Treatment Facilities| Distance to nearest substance use treatment facility| SAMHSA, 2021| Access06 / [Access: Substance Use Treatment](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_SubstanceUseTreatment.md)|Tract, Zip|
+|Access to Opioid Treatment Programs| Distance to nearest Opioid treatment program| SAMHSA, 2021| Access 07 / [Access: Opioid Treatment Programs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_OpioidUseTreatment.md)|Tract, Zip|
 
 <br>
 
@@ -76,9 +76,9 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | Educational Attainment | Population without a high school degree | ACS, 2018 5-year | DS01 / [Other Demographic Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Other_Demographic_2018.md) | State, County, Tract, Zip | 
 | Social Determinants of Health (SDOH) | SDOH Neighborhood Typologies | Kolak et al, 2020 | DS02 / [SDOH Typology](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/SDOH_2014.md) | Tract | 
 | Social Vulnerability Index (SVI) | SVI Rankings | CDC, 2018 | DS03 / [SVI](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/SVI_2018.md) | County, Tract, Zip | 
-| Veteran Population | Population as defined by veteran status | ACS, 2017 5-year | DS04 / [Veteran Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/VetPop.md) | State, County, Tract, Zip |
+| Veteran Population | Population as defined by veteran status | ACS, 2018 5-year | DS04 / [Veteran Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/VetPop.md) | State, County, Tract, Zip |
 | Household Type | Household Types and Group Quarters Populations | ACS, 2018 5-year | DS05 / [Household Type Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HouseholdType.md) | State, County, Tract, Zip |
-| Homeless Population | Population as defined by veteran status | HUD Point in Time Count, 2018  | DS06 / [Homeless Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HomelessPop.md) | State, County, Tract, Zip |
+| Homeless Population | Population as defined by veteran status | HUD, 2018  | DS06 / [Homeless Population Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HomelessPop.md) | State, County, Tract, Zip |
 
 <br>
 
@@ -86,8 +86,9 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
-| Employment Trends | Percentages of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries | ACS, 2018 5-year | EC01/ [Jobs by Industry](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Job_Categories_byIndustry_2018.md) | State, County, Tract, Zip | 
-| Unemployment Rate | Unemployment rate | ACS, 2014-2018 | EC03/ [Economic Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | 
+| Employment Trends | Percentages of population employed across industries | ACS, 2018 5-year | EC01/ [Jobs by Industry](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Job_Categories_byIndustry_2018.md) | State, County, Tract, Zip | 
+| Essential Worker Jobs | *See  COVID-19 Variables* | | EC02 / [Jobs by Occupation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Job_Categories_byOccupation_2018.md) |
+| Unemployment Rate | Unemployment rate | ACS, 2018 5-year | EC03/ [Economic Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Economic_2018.md)| State, County, Tract, Zip | 
 | Poverty Rate | Percent classified as below poverty level, based on income | ACS, 2018 5-year | EC03/ [Economic Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | 
 | Per Capita Income | Per capita income in the past 12 months | ACS, 2018 5-year |  EC03/ [Economic Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Economic_2018.md) | State, County, Tract, Zip | 
 | Foreclosure Rate | Mortgage foreclosure and severe delinquency rate | HUD, 2009 | EC04 / [Foreclosure Rate](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/ForeclosureRate.md) | State, County, Tract | 
@@ -104,21 +105,20 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | Mobile Homes | Percent of housing units classified as mobile homes | ACS, 2018 5-year | BE01 / [Housing](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
 | Rental Rates | Percent of housing units occupied by renters  | ACS, 2018 5-year | BE01 / [Housing](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip | 
 | Housing Unit Density | Housing units per square mile | ACS, 2018 5-year | BE01 / [Housing](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Housing_2018.md) | State, County, Tract, Zip |
-| Urban/Suburban/Rural Classification | Classification of areas as rural, urban or suburban | USDA-ERS | BE02 / [Rural-Urban Classifications](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/rural_urban_classifications) | County, Tract, Zip | 
-| Urban/Suburban/Rural Classification | County Classification of areas as rural, urban or suburban | USDA-ERS | BE02 / [Rural-Urban Classifications](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Rural_Urban_Classification_County.md) | County | 
-| Urban/Suburban/Rural Classification | Zip Code and Tract Classification of areas as rural, urban or suburban | USDA-ERS | BE02 / [Rural-Urban Classifications](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Rural_Urban_Classification_T_Z.md) | Tract, Zip | 
+| Urban/Suburban/Rural Classification | County classification | USDA-ERS | BE02 / [Rural-Urban Classifications](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Rural_Urban_Classification_County.md) | County | 
+| Urban/Suburban/Rural Classification | Zip code and Census tract classification | USDA-ERS | BE02 / [Rural-Urban Classifications](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Rural_Urban_Classification_T_Z.md) | Tract, Zip | 
 | Alcohol Outlet Density | Alcohol outlets per square mile, alcohol outlets per capita | InfoGroup, 2018 | BE03 / [Alcohol Outlets](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/AlcoholOutlets_2018.md)  | State, County, Tract, Zip | 
 | Hypersegregated Cities | US metropolitan areas where black residents experience hypersegregation | Massey et al, 2015 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
 | Southern Black Belt | US counties where 30% of the population identified as Black or African American | US Census, 2000 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
-| Native American Reservations | Percent area of total land in Native American Reservations | US Census, TIGER, 2018 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
+| Native American Reservations | Percent area of total land in Native American Reservations | US Census TIGER/Line, 2018 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
 | Residential Segregation Indices | Three index measures of segregation: dissimilarity, interaction, isolation | ACS, 2018 5-year | BE05 / [Residential Segregation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Residential_Seg_Indices.md) | County |
 
 <br>
 
-### COVID Variables
+### COVID-19 Variables
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
-| Essential Worker Jobs | Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic | ACS, 2014-2018 | EC02 / [Jobs by Occupation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | 
+| Essential Worker Jobs | Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic | ACS, 2018 5-year | EC02 / [Jobs by Occupation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Job_Categories_byOccupation_2018.md) | State, County, Tract, Zip | 
 | Cumulative Case Count | Daily cumulative raw case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID01 / [COVID Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/COVID.md) | State, County | 
 | Adjusted Case Count per 100K | Daily cumulative adjusted case count per 100K population (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID02 / [COVID Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/COVID.md) | State, County |
 | 7-day Average Case Count | 7-day average case count (01/21/20 - 03/03/2021) | The New York Times, 2021 | COVID03 / [COVID Variables](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/COVID.md) | State, County | 
