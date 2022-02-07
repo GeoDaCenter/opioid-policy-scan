@@ -17,7 +17,7 @@ We developed the OEPS as a free, open-source platform to aggregate and share pub
 The OEPS is led by the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/team) at the [Center for Spatial Data Science](https://spatial.uchicago.edu/), University of Chicago. It was developed for the NIH's JCOIN Methdology and Advanced Analaytic Resource Center (MAARC). See [Team](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#team) and [Acknolwedgements](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#acknowledgements) below for more. 
 
 ### Citation
-Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. http://doi.org/10.5281/zenodo.4747876
+Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
 
 ## Data Overview
 
