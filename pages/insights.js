@@ -64,9 +64,9 @@ export default function About() {
             <a href= "https://www.sciencedirect.com/science/article/abs/pii/S0955395920300682?via%3Dihub"> https://doi.org/10.1016/j.drugpo.2020.102727</a>
             </p>
             <p>
-            Halpern, D., Lin, Q., Wang, R., Yang, S., Goldstein, S., and Kolak, M. (forthcoming). 
+            Halpern, D., Lin, Q., Wang, R., Yang, S., Goldstein, S., and Kolak, M. 
             Dimensions of uncertainty: A spatialtemporal review of five COVID-19 datasets. Cartography and Geographic Information Science. 
-            https://doi.org/10.1080/15230406.2021.1975311
+            <a href= "https://www.tandfonline.com/doi/full/10.1080/15230406.2021.1975311">https://doi.org/10.1080/15230406.2021.1975311</a>
             </p>
         </div>
             
