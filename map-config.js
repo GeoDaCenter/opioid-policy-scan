@@ -333,6 +333,11 @@ const data = [
     id: 'GEOID',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
+      MethAccess: {
+        file: 'histmethaccess.csv',
+        type: 'characteristic',
+        join: 'origin',
+      },
       Access01_data: {
         file: 'Access01_T.csv',
         type: 'characteristic',
@@ -961,6 +966,132 @@ const variables = [
     nProperty: "metTime",
     binning: "naturalBreaks",
     numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2017)",
+    numerator: "MethAccess",
+    nProperty: "minutes2017",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2015)",
+    numerator: "MethAccess",
+    nProperty: "minutes2015",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2012)",
+    numerator: "MethAccess",
+    nProperty: "minutes2012",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2011)",
+    numerator: "MethAccess",
+    nProperty: "minutes2011",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2010)",
+    numerator: "MethAccess",
+    nProperty: "minutes2010",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2009)",
+    numerator: "MethAccess",
+    nProperty: "minutes2009",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2008)",
+    numerator: "MethAccess",
+    nProperty: "minutes2008",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2007)",
+    numerator: "MethAccess",
+    nProperty: "minutes2007",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2006)",
+    numerator: "MethAccess",
+    nProperty: "minutes2006",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2005)",
+    numerator: "MethAccess",
+    nProperty: "minutes2005",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2003)",
+    numerator: "MethAccess",
+    nProperty: "minutes2003",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (2000)",
+    numerator: "MethAccess",
+    nProperty: "minutes2000",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (1998)",
+    numerator: "MethAccess",
+    nProperty: "minutes1998",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Driving time (min) to nearest methadone provider (1990)",
+    numerator: "MethAccess",
+    nProperty: "minutes1990",
+    fixedScale: [14,29,59,89,119],
+    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
