@@ -89,6 +89,14 @@ const lisaColors = [
   ]
 ]
 
+const reverse = (arr) => {
+  const newArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+      newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
 export default function useLoadData(dateLists = {}) {
   const geoda = useContext(GeodaContext);
   const currentData = useSelector((state) => state.currentData);
@@ -190,7 +198,7 @@ export default function useLoadData(dateLists = {}) {
       })    
       
     const colorScale = dataParams.fixedScale && dataParams.colorScale.length
-      ? dataParams.colorScale
+      ? dataParams.reverse ? reverse(dataParams.colorScale) : dataParams.colorScale
       : dataParams.lisa 
       ? lisaColors
       : getColorScale({

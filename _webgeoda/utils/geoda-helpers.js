@@ -46,6 +46,14 @@ export const getBins = async ({
     return bins
 }
 
+const reverse = (arr) => {
+    const newArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+
 export const getColorScale = ({
     dataParams,
     bins
@@ -62,8 +70,7 @@ export const getColorScale = ({
         : dataParams.colorScale[colorScaleLength];
         
     if (dataParams.categorical && colorScaleLength !== bins.breaks.length) colorScale = colorScale.slice(0,bins.breaks.length);
-    
-    return dataParams.reverse ? [...colorScale].reverse() : colorScale
+    return dataParams.reverse ? reverse(colorScale) : colorScale
 }
 
 export const generateBins = async ({
@@ -81,8 +88,8 @@ export const generateBins = async ({
                 breaks: dataParams.fixedScale
             }, 
             colorScale: Array.isArray(dataParams.colorScale) 
-                ? dataParams.colorScale 
-                : dataParams.colorScale[dataParams.fixedScale.length]
+                ? dataParams.reverse ? reverse(dataParams.colorScale) : dataParams.colorScale 
+                : dataParams.reverse ? reverse(dataParams.colorScale[dataParams.fixedScale.length]) : dataParams.colorScale[dataParams.fixedScale.length]
         }
     } 
 
