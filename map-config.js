@@ -442,12 +442,19 @@ const categoricalPreset = {
   colorScale: colors.colorbrewer.Dark2,
 };
 
-const methadoneAccessPreset = {
+const methadoneAccessTimePreset = {
     fixedScale: [14,29,59,89,119],
-    fixedLabels: ['0 to 14','15 to 29','30 to 59','60 to 89','90 to 119','120 or more'],
-    colorScale: colors.colorbrewer.RdBu[7],
+    fixedLabels: ['14','29','59','89','119'],
+    colorScale: colors.colorbrewer.RdBu[6],
     reverse:true
 }
+
+const methadoneAccessCountPreset = {
+  fixedScale: [0.1,1.1,2.1,5.1,10.1],
+  fixedLabels: ['0','1','2','5','10'],
+  colorScale: colors.colorbrewer.RdBu[6],
+}
+
 
 const variables = [
   // Policy Variables
@@ -968,106 +975,185 @@ const variables = [
     reverse:true
   },
   {
-    variable: "Driving time (min) to nearest methadone provider",
+    variable: "Driving time (min) to nearest methadone provider (2020)",
     numerator: "Access01_sub_data",
     nProperty: "metTime",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
+    ...methadoneAccessTimePreset
+
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2017)",
     numerator: "MethAccess",
     nProperty: "minutes2017",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2015)",
     numerator: "MethAccess",
     nProperty: "minutes2015",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2012)",
     numerator: "MethAccess",
     nProperty: "minutes2012",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2011)",
     numerator: "MethAccess",
     nProperty: "minutes2011",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2010)",
     numerator: "MethAccess",
     nProperty: "minutes2010",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2009)",
     numerator: "MethAccess",
     nProperty: "minutes2009",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2008)",
     numerator: "MethAccess",
     nProperty: "minutes2008",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2007)",
     numerator: "MethAccess",
     nProperty: "minutes2007",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2006)",
     numerator: "MethAccess",
     nProperty: "minutes2006",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2005)",
     numerator: "MethAccess",
     nProperty: "minutes2005",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2003)",
     numerator: "MethAccess",
     nProperty: "minutes2003",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2000)",
     numerator: "MethAccess",
     nProperty: "minutes2000",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (1998)",
     numerator: "MethAccess",
     nProperty: "minutes1998",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
     variable: "Driving time (min) to nearest methadone provider (1990)",
     numerator: "MethAccess",
     nProperty: "minutes1990",
-    ...methadoneAccessPreset
+    ...methadoneAccessTimePreset
   },
   {
-    variable: "Count of methadone providers in 30 minutes",
+    variable: "Count of methadone providers in 30 minutes (2020)",
     numerator: "Access01_sub_data",
     nProperty: "metCount",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2017)",
+    numerator: "MethAccess",
+    nProperty: "count2017",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2015)",
+    numerator: "MethAccess",
+    nProperty: "count2015",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2012)",
+    numerator: "MethAccess",
+    nProperty: "count2012",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2011)",
+    numerator: "MethAccess",
+    nProperty: "count2011",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2010)",
+    numerator: "MethAccess",
+    nProperty: "count2010",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2009)",
+    numerator: "MethAccess",
+    nProperty: "count2009",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2008)",
+    numerator: "MethAccess",
+    nProperty: "count2008",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2007)",
+    numerator: "MethAccess",
+    nProperty: "count2007",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2006)",
+    numerator: "MethAccess",
+    nProperty: "count2006",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2005)",
+    numerator: "MethAccess",
+    nProperty: "count2005",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2003)",
+    numerator: "MethAccess",
+    nProperty: "count2003",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (2000)",
+    numerator: "MethAccess",
+    nProperty: "count2000",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (1998)",
+    numerator: "MethAccess",
+    nProperty: "count1998",
+    ...methadoneAccessCountPreset
+  },
+  {
+    variable: "Count of methadone providers in 30 minutes (1990)",
+    numerator: "MethAccess",
+    nProperty: "count1990",
+    ...methadoneAccessCountPreset
   },
   {
     variable: "Distance (mi) to nearest buprenorphine provider",
