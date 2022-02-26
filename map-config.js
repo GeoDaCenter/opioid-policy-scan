@@ -975,7 +975,7 @@ const variables = [
     reverse:true
   },
   {
-    variable: "Driving time (min) to nearest methadone provider (2020)",
+    variable: "Driving time (min) to nearest methadone provider (2019)",
     numerator: "Access01_sub_data",
     nProperty: "metTime",
     ...methadoneAccessTimePreset
@@ -1066,7 +1066,7 @@ const variables = [
     ...methadoneAccessTimePreset
   },
   {
-    variable: "Count of methadone providers in 30 minutes (2020)",
+    variable: "Count of methadone providers in 30 minutes (2019)",
     numerator: "Access01_sub_data",
     nProperty: "metCount",
     ...methadoneAccessCountPreset
