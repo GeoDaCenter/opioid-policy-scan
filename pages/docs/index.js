@@ -113,20 +113,20 @@ export default function DataDocs() {
           </div>
         </div>
         <Gutter em={2} />        
-        {tableNames.map(table => 
+        {tableNames.map(header => 
           (
-            (!activeFilters.topic.length || activeFilters.topic.includes(table)) 
+            (!activeFilters.topic.length || activeFilters.topic.includes(header)) 
             && 
-            (!activeFilters.scale.length || variables[table].some(row => activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))))
+            (!activeFilters.scale.length || variables[header].some(row => activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))))
           ) 
           &&
-          <div className={styles.rowContainer} key={table}>
+          <div className={styles.rowContainer} key={header}>
             <div className="row">
               <div className="col-xs-12 col-lg-3">
-                <h2>{table}</h2>
+                <h2>{header}</h2>
               </div>
               <div className="col-xs-12 col-lg-9">
-                <VariableTable table={variables[table]} setActive={setActiveMd} filters={activeFilters} />
+                <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
               </div>
             </div>  
             <Gutter em={2} />
