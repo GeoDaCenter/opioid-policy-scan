@@ -120,17 +120,37 @@ export default function DataDocs() {
             (!activeFilters.scale.length || variables[header].some(row => activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))))
           ) 
           &&
-          <div className={styles.rowContainer} key={header}>
+          <><div className={styles.rowContainer} key={header}>
             <div className="row">
               <div className="col-xs-12 col-lg-3">
-                <h2>{header}</h2>
+                <h2>Geocoded Data Resources</h2>
               </div>
               <div className="col-xs-12 col-lg-9">
-                <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
+                <ul>
+                  <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
+                  <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">FQHC Locations (HRSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">Hospital Locations (CovidCareMap, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">FQHC Locations (HRSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
+                </ul>
               </div>
-            </div>  
+            </div>
             <Gutter em={2} />
           </div>
+          <Gutter em={2} />
+          <div className={styles.rowContainer} key={header}>
+              <div className="row">
+                <div className="col-xs-12 col-lg-3">
+                  <h2>{header}</h2>
+                </div>
+                <div className="col-xs-12 col-lg-9">
+                  <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
+                </div>
+              </div>
+              <Gutter em={2} />
+            </div></>
         )}
       {/* {activeMd && <RemoteMarkdownModal url={activeMd} reset={() => setActiveMd(false)} />} */}
       </main>
