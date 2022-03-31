@@ -120,25 +120,7 @@ export default function DataDocs() {
             (!activeFilters.scale.length || variables[header].some(row => activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))))
           ) 
           &&
-          <><div className={styles.rowContainer} key={header}>
-            <div className="row">
-              <div className="col-xs-12 col-lg-3">
-                <h2>Geocoded Data Resources</h2>
-              </div>
-              <div className="col-xs-12 col-lg-9">
-                <ul>
-                  <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
-                  <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
-                </ul>
-              </div>
-            </div>
-            <Gutter em={2} />
-          </div>
-          <Gutter em={2} />
+          <>
           <div className={styles.rowContainer} key={header}>
               <div className="row">
                 <div className="col-xs-12 col-lg-3">
@@ -147,10 +129,27 @@ export default function DataDocs() {
                 <div className="col-xs-12 col-lg-9">
                   <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
                 </div>
+                <Gutter em={2} />
+              </div>
+          </div>
+          <div className={styles.rowContainer} key={header}>
+              <div className="row"></div>
+              <div className="col-xs-12 col-lg-3">
+                <h2>Geocoded Data Resources</h2>
+              </div>
+              <div className="col-xs-12 col-lg-9">
+                <ul>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
+                </ul>
               </div>
               <Gutter em={2} />
             </div>
-            </>
+          </>
         )}
       {/* {activeMd && <RemoteMarkdownModal url={activeMd} reset={() => setActiveMd(false)} />} */}
       </main>
