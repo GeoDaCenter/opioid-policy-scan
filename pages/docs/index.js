@@ -71,7 +71,7 @@ const ResourceSection=() => {
               <div className="col-xs-12 col-lg-3">
                 <h2>Travel Time Matrices</h2>
               </div>
-              <div className="col-xs-12 col-lg-3">
+              <div className="col-xs-12 col-lg-9">
                 <p>National travel time matrices calculated for origin-destination (O:D) pairs of Census tract and ZCTA centroids for 
                   multiple modes of transit: driving, biking, and walking. Matrices calculated using Open Source Routing Machine (<a href= "http://project-osrm.org/">OSRM</a>) in 2020. Download matrices at the links below. </p>
               </div>
@@ -190,6 +190,7 @@ export default function DataDocs() {
           </div>
           </>
         )}
+        <Gutter em={2} />
       <ResourceSection />
       </main>
       <Footer />
