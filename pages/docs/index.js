@@ -46,6 +46,61 @@ const uniqueScales = [
   'Zip'
 ]
 
+const ResourceSection=() => {
+  return <div>
+    <div className={styles.rowContainer}>
+              <div className="row">
+              <div className="col-xs-12 col-lg-3">
+                <h2>Geocoded Data Resources</h2>
+              </div>
+              <div className="col-xs-12 col-lg-9">
+                <ul>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
+                </ul>
+              </div>
+              </div>
+              <Gutter em={2} />
+            </div>
+            <div className={styles.rowContainer}>
+              <div className="row">
+              <div className="col-xs-12 col-lg-3">
+                <h2>Travel Time Matrices</h2>
+              </div>
+              <div className="col-xs-12 col-lg-3">
+                <p>National travel time matrices calculated for origin-destination (O:D) pairs of Census tract and ZCTA centroids for 
+                  multiple modes of transit: driving, biking, and walking. Matrices calculated using Open Source Routing Machine (<a href= "http://project-osrm.org/">OSRM</a>) in 2020. Download matrices at the links below. </p>
+              </div>
+              <div className="col-xs-12 col-lg-3">
+                <h4>Census Tract </h4>
+              </div>
+              <div className="col-xs-12 col-lg-9">
+                <ul>
+                  <li> <a href="https://uchicago.box.com/s/t5h8l5efq4sjixnfj213tmrwdl3c53wu">Tract Driving</a></li>
+                  <li> <a href="https://uchicago.box.com/s/tizxrph0t35khzqzzd6tkzbxtumu0qaa">Tract Biking</a> </li>
+                  <li> <a href="https://uchicago.box.com/s/1ago3se2zjqul8ip59whg7x1z7fcfoui">Tract Walking</a> </li>
+                </ul>
+              </div>
+              <div className="col-xs-12 col-lg-3">
+                <h4>Zip Code Tract Areas (ZCTA) </h4>
+              </div>
+              <div className="col-xs-12 col-lg-9">
+                <ul>
+                  <li> <a href="https://uchicago.box.com/s/03yxfypbou26vpb47ktwetd6cb6kmm3h">ZCTA Driving</a></li>
+                  <li> <a href="https://uchicago.box.com/s/f5nwqts2bjl6ks9ljdvss0yhdfwqrzqd">ZCTA Biking</a> </li>
+                  <li> <a href="https://uchicago.box.com/s/coig0oyjz7py532nhzkt8cp3jkd2xx8n">ZCTA Walking</a> </li>
+                </ul>
+              </div>
+              <Gutter em={2} />
+              </div>
+            </div>  
+  </div>
+}
+
 export default function DataDocs() {
   const [activeMd, setActiveMd] = useState(false)
   const [activeFilters, setActiveFilters] = useState({
@@ -112,7 +167,8 @@ export default function DataDocs() {
             {uniqueScales.map(scale => <button key={scale} onClick={() => handlefilter(scale, 'scale')} className={`${styles.filterButton} ${activeFilters.scale.includes(scale) ? styles.active : ' '}`}>{scale}</button>)}
           </div>
         </div>
-        <Gutter em={2} />        
+        <Gutter em={2} />  
+            
         {tableNames.map(header => 
           (
             (!activeFilters.topic.length || activeFilters.topic.includes(header)) 
@@ -132,57 +188,9 @@ export default function DataDocs() {
                 <Gutter em={2} />
               </div>
           </div>
-          <div className={styles.rowContainer} key={header}>
-              <div className="row"></div>
-              <div className="col-xs-12 col-lg-3">
-                <h2>Geocoded Data Resources</h2>
-              </div>
-              <div className="col-xs-12 col-lg-9">
-                <ul>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
-                </ul>
-              </div>
-              <Gutter em={2} />
-            </div>
-            <div className={styles.rowContainer} key={header}>
-              <div className="row"></div>
-              <div className="col-xs-12 col-lg-3">
-                <h2>Travel Time Matrices</h2>
-              </div>
-              <div className="col-xs-12 col-lg-3">
-                <p>National travel time matrices calculated for origin-destination (O:D) pairs of Census tract and ZCTA centroids for 
-                  multiple modes of transit: driving, biking, and walking. Matrices calculated using Open Source Routing Machine (<a href= "http://project-osrm.org/">OSRM</a>) in 2020. Download matrices at the links below. </p>
-              </div>
-              <div className="col-xs-12 col-lg-3">
-                <h4>Census Tract </h4>
-              </div>
-              <div className="col-xs-12 col-lg-9">
-                <ul>
-                  <li> <a href="https://uchicago.box.com/s/t5h8l5efq4sjixnfj213tmrwdl3c53wu">Tract Driving</a></li>
-                  <li> <a href="https://uchicago.box.com/s/tizxrph0t35khzqzzd6tkzbxtumu0qaa">Tract Biking</a> </li>
-                  <li> <a href="https://uchicago.box.com/s/1ago3se2zjqul8ip59whg7x1z7fcfoui">Tract Walking</a> </li>
-                </ul>
-              </div>
-              <div className="col-xs-12 col-lg-3">
-                <h4>Zip Code Tract Areas (ZCTA) </h4>
-              </div>
-              <div className="col-xs-12 col-lg-9">
-                <ul>
-                  <li> <a href="https://uchicago.box.com/s/03yxfypbou26vpb47ktwetd6cb6kmm3h">ZCTA Driving</a></li>
-                  <li> <a href="https://uchicago.box.com/s/f5nwqts2bjl6ks9ljdvss0yhdfwqrzqd">ZCTA Biking</a> </li>
-                  <li> <a href="https://uchicago.box.com/s/coig0oyjz7py532nhzkt8cp3jkd2xx8n">ZCTA Walking</a> </li>
-                </ul>
-              </div>
-              <Gutter em={2} />
-            </div>
           </>
         )}
-      {/* {activeMd && <RemoteMarkdownModal url={activeMd} reset={() => setActiveMd(false)} />} */}
+      <ResourceSection />
       </main>
       <Footer />
     </div>
