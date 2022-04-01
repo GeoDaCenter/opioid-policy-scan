@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Opioid Environment Policy Scan (OEPS) Database
+# Opioid Environment Policy Scan (OEPS) Data Warehouse
 
 ## Public Site - OEPS Explorer
 Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
