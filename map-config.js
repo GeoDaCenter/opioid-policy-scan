@@ -428,6 +428,11 @@ const data = [
         type:'characteristics',
         join:'GEOID'
       },
+      BE06: {
+        file: 'BE06_NDVI_T.csv',
+        type:'characteristics',
+        join:'tract_fips'
+      },
     }
   }
 ];
@@ -1754,6 +1759,14 @@ const variables = [
     numberOfBins:5,
     binning:'naturalBreaks',
     colorScale: colors.colorbrewer.Purples
+	},
+  {
+		variable: 'NDVI',
+		numerator: 'BE06',
+		nProperty: 'ndvi',
+    numberOfBins:5,
+    binning:'naturalBreaks',
+    colorScale: colors.colorbrewer.Greens
 	},
   // COVID-19 Variables
   {
