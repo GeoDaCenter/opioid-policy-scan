@@ -140,6 +140,11 @@ export const csvFiles = [
       "scale": "C"
     },
     {
+      "file": "BE06_NDVI_T",
+      "topic": "Built Environment Variables",
+      "scale": "T"
+    },
+    {
       "file": "COVID01_C",
       "topic": "COVID Variables",
       "scale": "C"

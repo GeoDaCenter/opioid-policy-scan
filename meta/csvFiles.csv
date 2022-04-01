@@ -27,6 +27,7 @@ BE03_T.csv,Built Environment Variables,T
 BE03_Z.csv,Built Environment Variables,Z
 BE04_C.csv,Built Environment Variables,C
 BE05_C.csv,Built Environment Variables,C
+BE06_NDVI_T.csv,Built Environment Variables,T
 COVID01_C.csv,COVID Variables,C
 COVID01_S.csv,COVID Variables,S
 COVID02_C.csv,COVID Variables,C
