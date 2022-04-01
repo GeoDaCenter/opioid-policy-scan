@@ -95,7 +95,7 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 <br>
 
-### Physical Environment Variables
+### Built Environment Variables
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
@@ -112,6 +112,8 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | Southern Black Belt | US counties where 30% of the population identified as Black or African American | US Census, 2000 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
 | Native American Reservations | Percent area of total land in Native American Reservations | US Census TIGER/Line, 2018 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
 | Residential Segregation Indices | Three index measures of segregation: dissimilarity, interaction, isolation | ACS, 2018 5-year | BE05 / [Residential Segregation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Residential_Seg_Indices.md) | County |
+| NDVI |  Normalized Difference Vegetation Index (NDVI) average value | Sentinel-2 MSI, 2018 | BE06 / [NDVI](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/NDVI.md) | Tract |
+
 
 <br>
 
