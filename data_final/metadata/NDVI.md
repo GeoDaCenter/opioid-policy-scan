@@ -4,7 +4,7 @@
 **Author**: Michelle Stuhlmacher, DePaul University, Department of Geography  
 
 ### Data Location: 
-BE05 - Residential Segregation Indicies calculated at the county level. File can be found [here](/data_final).
+BE06 - Normalized Difference Vegetation Index (NDVI) for US-wide at the Census tract scale. File can be found [here](/data_final).
 * BE06_NDVI_T 
 
 ### Data Source(s) Description:  
@@ -23,10 +23,10 @@ The original spatial scale was 10m pixels, which was translated to US Census tra
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-|:Normalized Difference Vegetation Index (NDVI) |: ndvi |: Average NDVI value from all pixel values in each Census tract |
+|Normalized Difference Vegetation Index (NDVI) | ndvi | Average NDVI value from all pixel values in each Census tract |
 
 ### Data Limitations:
 Despite removing identified influences of cloud interferences, there may still be clouds or other atmospheric conditions that alter pixel values used in calculations. See the original source for greater documentation of these effects. Furthermore, summarizing NDVI to the census tract simplifies inter-census tract variability.
 
 ### Comments/Notes:
-None at this time. 
+No additional comments at this time. 
