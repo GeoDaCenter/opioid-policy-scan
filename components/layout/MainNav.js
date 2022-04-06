@@ -38,6 +38,10 @@ export default function MainNav() {
             <MenuLink as="a" href="/insights">
               Insights
             </MenuLink>
+            <MenuLink as="a" href="/codeResources">
+              Code Resources
+            </MenuLink>
+            
             
           </MenuList>
         </Menu>

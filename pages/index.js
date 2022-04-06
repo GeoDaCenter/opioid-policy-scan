@@ -101,7 +101,7 @@ export default function Home() {
             Visualize data with our interactive web map. 
             </p>
             <p>
-            <a className={styles.docsLink} href="/map" > Start mapping &gt;</a>
+            <a className={styles.docsLink} href="/map" > Start Mapping &gt;</a>
             </p>
           </div>
 
@@ -109,13 +109,16 @@ export default function Home() {
             <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
-              Learn about research insights from our lab and partners. 
-            </p>
-            <p>
-            <a className={styles.docsLink} href="/insights">Insights &gt;</a>
+              Learn about the OEPS, code resources, and research insights . 
             </p>
             <p>
             <a className={styles.docsLink} href="/about ">About &gt;</a> 
+            </p>
+            <p>
+            <a className={styles.docsLink} href="/codeResources ">Code Resources &gt;</a> 
+            </p>
+            <p>
+            <a className={styles.docsLink} href="/insights">Insights &gt;</a>
             </p>
               <p></p>
           </div>
