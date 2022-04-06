@@ -38,7 +38,7 @@ export default function About() {
       <main className={styles.main}>
         <h1 className={styles.title}>Code and Analysis Resources</h1>
         <p className={styles.description}>
-        Code notebooks and tutorials for analysis and research applications  
+        Code notebooks and spatial analysis tutorials for research applications  
         </p>
 
         <Gutter em={3} />
@@ -54,29 +54,25 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <h3><a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit</a></h3>
               <p>
-              The Opioid Environment Toolkit provides an introduction to GIS and spatial analysis for opioid environment applications. 
+              The Opioid Environment Toolkit provides an <b>introduction to GIS and spatial analysis</b> for opioid environment applications. 
               This code toolkit supports researchers, analysts, and practitioners with learning open source spatial analytic and visualization services 
-              in the R software environment. It covers topics such as geocoding MOUD resource locations, generating thematic maps, 
-              linking community contextual data, and conducting a nearest distance analysis by calculating straight line/Euclidean distance metrics by zip codes. 
+              in the R software environment. It includes geocoding MOUD resource locations, linking community contextual data, 
+              conducting a nearest distance analysis calculating <b>straight line (Euclidean) distance metrics</b>, and more. 
             </p>
             <h3><a href="https://colab.research.google.com/drive/1KXdKgKnXiRlKOuiSDVaBzplr7nrKy64B?usp=sharing#scrollTo=WbFT_hJQvdMP">Calculating Advanced Spatial Access Metrics</a></h3>
             <p>
-            This Python notebook provides an overview of how to calculate two spatial access metrics, travel time to the nearest resource 
-            (i.e. MOUD provider location), and count of resources within a specific driving time range. Using this beginner-friendly script 
-            available as a Google Colab notebook (no Jupyter required), calculate metrics for specific states, regions, or spatial scales 
-            using pre-computed travel cost matrices. We provide <a href="https://uchicago.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as">pre-computed travel time matrices</a>
-            via Open Source Routing Machine for driving, walking, and biking travel networks, for all US Census tracts and zip codes (ZCTA).
+            This Python notebook provides an overview of how to calculate two spatial access metrics, <b>travel time to the nearest resource </b> 
+            (i.e. MOUD provider location), and <b>count of resources</b> within a customizable driving time range. Using this beginner-friendly script 
+            available as a Google Colab notebook, calculate travel time access metrics for different modes of transit and spatial scales. We provide <a href="https://uchicago.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as">pre-computed travel time matrices </a> 
+            for driving, walking, and biking travel networks, for all Census tracts and zip codes (ZCTA).
             </p>
-            <h3><a href="https://access.readthedocs.io/en/latest/index.html">Spatial Access for PySALs</a></h3>
+            <h3><a href="https://access.readthedocs.io/en/latest/index.html">Spatial Access for PySAL</a></h3>
             <p>
-            Spatial accessibility measures help identify potential spatial mismatches between the supply and demand of services. 
-            Developed by CSDS researchers and colleagues, this PySAL (Python Spatial Analysis Library) package and accompanying notebooks 
-            implements a new measure that simultaneously accounts for travel time and congestion at the destination: Rational Agent Access Model (RAAM). 
-            This package also calculates five classic spatial access models within the same class as RAAM for easy comparison, including 
-            Floating Catchment Areas (FCA), Two-Step FCAs, and Access Score.
+            Developed by CSDS researchers and colleagues, this Python Spatial Analysis Library (PySAL) package
+            implements a new spatial access measure, Rational Agent Access Model (RAAM), that simultaneously <b>accounts for travel time and congestion at the destination</b>. 
+            This package also calculates <b>five classic spatial access models</b> for easy comparison, including Floating Catchment Areas (FCA), Two-Step FCAs, and Access Score.
             </p>
         </div>
-            
           </div>
         </div>
 
@@ -87,16 +83,17 @@ export default function About() {
             <h2> Workshops and Trainings</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-          <h3><a href= "https://www.jcoinctc.org/maarc-virtual-workshop-series-summer-2021/">Spatial Dimensions of Opioid Risk Environments: Virtual Workshops</a></h3>
+          <h3>Spatial Dimensions of Opioid Risk Environments: Virtual Workshops</h3>
             <p>
-            This three-part workshop series is designed to help researchers, analysts, and practitioners develop stronger spatial 
+            This <a href= "https://www.jcoinctc.org/maarc-virtual-workshop-series-summer-2021/">three-part workshop series </a> hosted by the MAARC is designed to help researchers, analysts, and practitioners develop stronger spatial 
             data analytic and visualization skills. Led by the Healthy Regions/CSDS MAARC team, these workshops introduce basic spatial 
             analytic functionalities using open source tools, mainly in R and GeoDa, using applied examples. The workshops were 
-            originally offered in Summer 2021 to the JCOIN and MAARC networks. The complete recordings are available below. 
+            originally hosted live and recorded in Summer 2021 for JCOIN partners. The complete recordings are available below. 
             </p>
             <h4> Workshop 1: Introduction to Spatial Analysis for Opioid Risk Environments <a href="https://www.youtube.com/watch?v=8JLm_sF7gaA&t=2940s">[Recording]</a></h4>
             <p>
-              This workshop introduces participants to the Opioid Environment Policy Scan (OEPS), key concepts in spatial data analysis, and how to generate simple maps using the free spatial software GeoDa.
+              This workshop introduces participants to the Opioid Environment Policy Scan (OEPS data warehouse, key concepts in spatial data analysis, and generating simple maps using the free spatial software
+              <a href="https://geodacenter.github.io/"> GeoDa</a>.
             </p>
             <h4> Workshop 2: Geocoding and Linking Community Data <a href="https://www.youtube.com/watch?v=dHfQAhXXwh0&t=14s">[Recording]</a></h4>
             <p>
