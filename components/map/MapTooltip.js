@@ -20,8 +20,8 @@ const TooltipTitle = ({currentData, stateDict, countyDict, id}) => {
     : currentData.includes('Zip')
     ? 'Zip Code: ' + pad(id, 5, 0)
     : findTractStateAndCounty({countyDict, id})
-  
-  if (text === undefined) return null
+    
+  if (text === undefined || (typeof text === 'string' && text.includes('undefined'))) return null
   return <span>
     <h2 className="tooltip-header">{text}</h2>
     {currentData.includes('Tract') && <h4>Tract# {pad(id, 11, 0)}</h4>}
@@ -65,11 +65,11 @@ export default function MapTooltip() {
     bottomSide ? 'bottom' : 'top',
     bottomSide ? window.innerHeight - currentHoverTarget.y - 50: currentHoverTarget.y + 50,
   ]
-
+  
   return (
     <div
       className={styles.tooltipContainer}
-      style={{ [xProp]: x, [yProp]: y}}
+      style={{ [xProp]: x === null ? -50 : x, [yProp]: y}}
     >
       <TooltipTitle   
         currentData={currentData}
