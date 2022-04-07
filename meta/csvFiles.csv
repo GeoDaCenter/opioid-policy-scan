@@ -14,20 +14,20 @@ Access06_T.csv,Health Variables,T
 Access06_Z.csv,Health Variables,Z
 Access07_T.csv,Health Variables,T
 Access07_Z.csv,Health Variables,Z
-BE01_C.csv,Built Environment Variables,C
-BE01_S.csv,Built Environment Variables,S
-BE01_T.csv,Built Environment Variables,T
-BE01_Z.csv,Built Environment Variables,Z
-BE02_RUCA_C.csv,Built Environment Variables,C
-BE02_RUCA_T.csv,Built Environment Variables,T
-BE02_RUCA_Z.csv,Built Environment Variables,Z
-BE03_C.csv,Built Environment Variables,C
-BE03_S.csv,Built Environment Variables,S
-BE03_T.csv,Built Environment Variables,T
-BE03_Z.csv,Built Environment Variables,Z
-BE04_C.csv,Built Environment Variables,C
-BE05_C.csv,Built Environment Variables,C
-BE06_NDVI_T.csv,Built Environment Variables,T
+BE01_C.csv,Physical Environment Variables,C
+BE01_S.csv,Physical Environment Variables,S
+BE01_T.csv,Physical Environment Variables,T
+BE01_Z.csv,Physical Environment Variables,Z
+BE02_RUCA_C.csv,Physical Environment Variables,C
+BE02_RUCA_T.csv,Physical Environment Variables,T
+BE02_RUCA_Z.csv,Physical Environment Variables,Z
+BE03_C.csv,Physical Environment Variables,C
+BE03_S.csv,Physical Environment Variables,S
+BE03_T.csv,Physical Environment Variables,T
+BE03_Z.csv,Physical Environment Variables,Z
+BE04_C.csv,Physical Environment Variables,C
+BE05_C.csv,Physical Environment Variables,C
+BE06_NDVI_T.csv,Physical Environment Variables,T
 COVID01_C.csv,COVID Variables,C
 COVID01_S.csv,COVID Variables,S
 COVID02_C.csv,COVID Variables,C

@@ -1817,7 +1817,7 @@ const variableHeaders = [
     startsAt: "Poverty %"
   },
   {
-    name: 'Built Environment Variables',
+    name: 'Physical Environment Variables',
     startsAt: "Urban-Suburban-Rural"
   },
   {

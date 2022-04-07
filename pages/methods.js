@@ -98,7 +98,7 @@ export default function About() {
         <li> <b>Health:</b> Health outcomes, physicians, access to MOUDs and healthcare resources, and more </li>
         <li> <b>Demographic:</b> Age, gender, race/ethnicity, social vulnerability, social determinants of health, and more</li>
         <li> <b>Economic:</b> Employment trends, income, poverty, foreclosure rates, and more</li>
-        <li> <b>Built Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
+        <li> <b>Physical Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
         <li> <b>COVID-19:</b> Essential workers, daily infection rates and confirmed cases through March 2020.*</li>
         
         <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="www.USCovidAtlas.org">US COVID Atlas</a> -- 

@@ -382,7 +382,7 @@ export const variables = {
       'Variable Construct': 'Foreclosure Rate'
     }
   ],
-  'Built Environment Variables': [
+  'Physical Environment Variables': [
     {
       'Variable Proxy': 'Percent occupied units',
       Source: 'ACS, 2018 5-year',

@@ -76,72 +76,72 @@ export const csvFiles = [
     },
     {
       "file": "BE01_C",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "C"
     },
     {
       "file": "BE01_S",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "S"
     },
     {
       "file": "BE01_T",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "T"
     },
     {
       "file": "BE01_Z",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "Z"
     },
     {
       "file": "BE02_RUCA_C",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "C"
     },
     {
       "file": "BE02_RUCA_T",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "T"
     },
     {
       "file": "BE02_RUCA_Z",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "Z"
     },
     {
       "file": "BE03_C",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "C"
     },
     {
       "file": "BE03_S",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "S"
     },
     {
       "file": "BE03_T",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "T"
     },
     {
       "file": "BE03_Z",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "Z"
     },
     {
       "file": "BE04_C",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "C"
     },
     {
       "file": "BE05_C",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "C"
     },
     {
       "file": "BE06_NDVI_T",
-      "topic": "Built Environment Variables",
+      "topic": "Physical Environment Variables",
       "scale": "T"
     },
     {

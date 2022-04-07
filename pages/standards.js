@@ -64,7 +64,7 @@ export default function About() {
                    <li>Health: Health*, Access*</li>
                    <li>Demographic: DS</li>
                    <li>Economic: EC</li>
-                   <li>Built Environment: BE</li>
+                   <li>Physical Environment: BE</li>
                    <li>COVID-19: COVID</li>
                </ul>  
             </p>

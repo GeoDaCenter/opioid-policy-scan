@@ -1,5 +1,5 @@
 const workboxBuild = require("workbox-build");
-// NOTE: This should be run *AFTER* all your assets are built
+// NOTE: This should be run *AFTER* all your assets are Physical
 const buildSW = () => {
   // This will return a Promise
   return workboxBuild

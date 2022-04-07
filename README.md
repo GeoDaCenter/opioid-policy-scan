@@ -42,7 +42,7 @@ WebGeoDa capabilities have four areas of complexity. It's easy to learn, but wit
 
 ‍💻 Add your geospatial data (GeoJSON), join it to your tabular data (CSV) right in the browser. Specify your variables with a simple JSON specification, and your map is ready to be published!
 
-📑 Customize and add static pages to describe your data and the context of your dashboard. WebGeoDa provides some built-in styling tools using Plain CSS and a reasonably approachable JSX, similar to HTML.
+📑 Customize and add static pages to describe your data and the context of your dashboard. WebGeoDa provides some Physical-in styling tools using Plain CSS and a reasonably approachable JSX, similar to HTML.
 
 🗺 Add additional map features using Mapbox and Deck.gl, or explore additional data insights through interactive tooltip and sidebar functions.
 

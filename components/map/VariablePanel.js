@@ -20,7 +20,7 @@ const themeCategories = [
   "Health Variables",
   "Demographic Variables",
   "Economic Variables",
-  "Built Environment Variables",
+  "Physical Environment Variables",
   "COVID-19 Variables"
 ]
 

@@ -91,7 +91,7 @@ export default function About() {
               <code>https://oeps.ssd.uchicago.edu/api/data/<b>dataset</b>/<b>spatial scale</b></code>
               <br/><br/>
               Here, dataset should be one of the available tabular datasets, such as <code>Access01</code> or <code>BE02</code> for access metrics, and 
-              built environment stats, respectively. Spatial scale represents the geographic unit you want to request, and currently we have available county, state, zip, and tract
+              Physical environment stats, respectively. Spatial scale represents the geographic unit you want to request, and currently we have available county, state, zip, and tract
               level datasets. Please note - not every spatial scale is available for every dataset.
               <br/><br/>
               Each parameter should be included in the URL without any quotation marks or other special characters.
@@ -141,7 +141,7 @@ export default function About() {
               <code>https://oeps.ssd.uchicago.edu/api/data/<b>dataset</b></code>
               <br/><br/>
               Here, dataset should be one of the available tabular datasets, such as <code>Access01</code> or <code>BE02</code> for access metrics, and 
-              built environment stats, respectively. 
+              Physical environment stats, respectively. 
               <br/><br/>
               Additionally, a key parameters must be included in the URL (<code>...docs/BE01?key=abc123</code>).
               Here are some example queries:
