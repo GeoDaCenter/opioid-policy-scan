@@ -36,6 +36,7 @@ export default function reducer(state = INITIAL_STATE, action) {
         ...state.storedGeojson,
         ...action.payload.storedGeojson,
       };
+      
       return {
         ...state,
         currentTiles: action.payload.currentTiles,
@@ -180,7 +181,7 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
     case "ADD_TABLES": {
       const storedData = {
-        ...state.storedData,
+        // ...state.storedData,
         ...action.payload,
       };
 
