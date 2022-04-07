@@ -69,7 +69,7 @@ export default function MapTooltip() {
   return (
     <div
       className={styles.tooltipContainer}
-      style={{ [xProp]: x === null ? -50 : x, [yProp]: y}}
+      style={{ [xProp]: x, [yProp]: y, display: x === null ? 'none' : 'block' }}
     >
       <TooltipTitle   
         currentData={currentData}
