@@ -368,6 +368,11 @@ const data = [
         type: 'characteristic',
         join: 'GEOID',
       },
+      DS06_data: {
+        file: 'DS06_T.csv',
+        type: 'characteristic',
+        join: 'GEOID',
+      },
       Access03_data: {
         file: 'Access03_T.csv',
         type: 'characteristic',
@@ -1431,33 +1436,32 @@ const variables = [
     numberOfBins: 5,
     colorScale: colors.colorbrewer.YlOrBr
    },
-  
-  //{
-  //  variable: "Number of beds available to Homeless Population (during census time)",
-  //  numerator: "DS06_data",
-  //  nProperty: "BED_COUNT",
-  //  binning: "quantileBreaks",
-  //  numberOfBins: 7,
-  //  colorScale: colors.colorbrewer.YlOrBr, 
-  //  reverse:true
-  //},
-  //{
-  //  variable: "Number of beds available to Homeless Population (year-round)",
-  //  numerator: "DS06_data",
-  //  nProperty: "YEARLY_BED_COUNT",
-  //  binning: "quantileBreaks",
-  //  numberOfBins: 7,
-  //  colorScale: colors.colorbrewer.YlOrBr
-  //},
-  //{
-  //  variable: "Number of housing-insecure individuals at a shelter",
-  //  numerator: "DS06_data",
-  //  nProperty: "POINT_IN_TIME",
-  //  binning: "quantileBreaks",
-  //  numberOfBins: 7,
-  //  colorScale: colors.colorbrewer.YlOrBr,
-  //  reverse: true
-  //},
+  {
+    variable: "Homeless Shelter Available Bed Count",
+    numerator: "DS06_data",
+    nProperty: "BED_COUNT",
+    binning: "naturalBreaks",
+    numberOfBins: 7,
+    colorScale: colors.colorbrewer.YlOrBr, 
+    reverse:true
+  },
+  {
+    variable: "Homeless Shelter Total Beds Available Annually",
+    numerator: "DS06_data",
+    nProperty: "YEARLY_BED_COUNT",
+    binning: "naturalBreaks",
+    numberOfBins: 7,
+    colorScale: colors.colorbrewer.YlOrBr
+  },
+  {
+    variable: "Total Individuals at a Shelter",
+    numerator: "DS06_data",
+    nProperty: "POINT_IN_TIME",
+    binning: "naturalBreaks",
+    numberOfBins: 7,
+    colorScale: colors.colorbrewer.YlOrBr,
+    reverse: true
+  },
   
   // EC Economic Variables
   
@@ -1541,7 +1545,7 @@ const variables = [
     binning:'naturalBreaks',
     colorScale: colors.colorbrewer.YlOrBr
 	},
-//   // BE Built Environment
+//   // BE Physical Environment
 
   	{
   		variable: 'Urban-Suburban-Rural',
