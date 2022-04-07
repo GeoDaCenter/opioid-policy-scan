@@ -95,7 +95,7 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 <br>
 
-### Built Environment Variables
+### Physical Environment Variables
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale | 
 |:------------------ | -------------- | ------ | -------- | ------------- | 
