@@ -80,7 +80,6 @@ export default function MainMap() {
           },
         })
       } catch {
-        console.log('FAILED TO QUERY TOOLTIP DATA')
         dispatch({
           type: 'SET_HOVER_OBJECT',
           payload: {

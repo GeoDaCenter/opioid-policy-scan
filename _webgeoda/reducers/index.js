@@ -493,7 +493,6 @@ export default function reducer(state = INITIAL_STATE, action) {
     case "SET_HOVER_OBJECT": {
       let tooltipData = [];
       if (action.payload.data && action.payload.data.length) {
-        console.log('DIRECTLY LOADED DATA')
         tooltipData = action.payload.data;
       } else if (
         typeof action.payload.id === "number" ||
