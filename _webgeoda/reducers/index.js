@@ -335,12 +335,10 @@ export default function reducer(state = INITIAL_STATE, action) {
         isLoading: false,
         currentTable,
         tooltipContent: {
-          x: state.tooltipContent.x,
-          y: state.tooltipContent.y,
-          data: state.tooltipContent.geoid
-            ? parseTooltipData(state.tooltipContent.geoid, state)
-            : state.tooltipContent.data,
-          geoid: state.tooltipContent.geoid,
+          x: null,
+          y: null,
+          data: null,
+          geoid: null,
         },
         sidebarData: state.selectionKeys.length
           ? generateReport(
@@ -493,16 +491,16 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
 
     case "SET_HOVER_OBJECT": {
-      let tooltipData;
-
-      if (
+      let tooltipData = [];
+      if (action.payload.data && action.payload.data.length) {
+        console.log('DIRECTLY LOADED DATA')
+        tooltipData = action.payload.data;
+      } else if (
         typeof action.payload.id === "number" ||
         typeof action.payload.id === "string"
       ) {
         tooltipData = parseTooltipData(+action.payload.id, state, dataPresets);
-      } else {
-        tooltipData = action.payload.data;
-      }
+      } 
 
       const currentHoverTarget = {
         x: action.payload.x,

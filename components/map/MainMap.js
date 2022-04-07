@@ -63,15 +63,33 @@ export default function MainMap() {
 
   const handleMapHover = (e) => {
     if (e.object) {
-      dispatch({
-        type: "SET_HOVER_OBJECT",
-        payload: {
-          id: e.object?.properties[currentId],
-          layer: e.layer.id,
-          x: e.x,
-          y: e.y,
-        },
-      })
+      try {
+        const value = mapData.data[e.object.properties[currentId]].value
+        const label = dataParams.variable
+        dispatch({
+          type: "SET_HOVER_OBJECT",
+          payload: {
+            id: e.object?.properties[currentId],
+            layer: e.layer.id,
+            x: e.x,
+            y: e.y,
+            data: [{
+              name: label,
+              value: value
+            }]
+          },
+        })
+      } catch {
+        console.log('FAILED TO QUERY TOOLTIP DATA')
+        dispatch({
+          type: 'SET_HOVER_OBJECT',
+          payload: {
+            id: null,
+            x: null,
+            y: null
+          }
+        })
+      }
     } else {
       dispatch({
         type: 'SET_HOVER_OBJECT',

@@ -202,7 +202,7 @@ export const generateMapData = (state) => {
       returnObj[idList[i]] = { color: [0, 0, 0, 0], height: 0 };
       continue;
     }
-    returnObj[idList[i]] = { color, height };
+    returnObj[idList[i]] = { color, height, value: tempVal };
   }
   return {
     params: getVarId(state.currentData, tempParams, state.mapParams),
