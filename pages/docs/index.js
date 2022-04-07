@@ -60,7 +60,6 @@ const ResourceSection=() => {
                   <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
                   <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
                   <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Pharmacy Locations (InfoGroup, 2018)</a></li>
                 </ul>
               </div>
               </div>
