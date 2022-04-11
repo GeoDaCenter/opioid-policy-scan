@@ -57,6 +57,12 @@ for (i in 1:length(shapetoFetch)){
   write.csv(varDf,paste0('EC05_',yeartoFetch,"_",filename[i],".csv"), row.names = FALSE)
 }
 
+## for zcta, need to change the ID to zcta5
+library(stringr)
+str_sub(varDf$GEOID, start = 3)
+varDf$ZCTA <- str_sub(varDf$GEOID, start = 3)
+write.csv(varDf, "EC05_2019_Z.csv", row.names = FALSE)
+
 ## for tracts
 states <- tigris::states(year = yeartoFetch)
 territoriesToBeExcluded <- c('60','72','66','69','78') # american territories
