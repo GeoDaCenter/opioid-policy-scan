@@ -380,6 +380,16 @@ export const variables = {
       markdownText: 'Foreclosure Rate',
       markdown: 'ForeclosureRate',
       'Variable Construct': 'Foreclosure Rate'
+    },
+    {
+      'Variable Proxy': 'Percent of households without internet access',
+      Source: 'ACS, 2019 5-year',
+      Metadata: 'EC05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Internet_2019.md">Internet Access</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC05 / ',
+      markdownText: 'Internet Access',
+      markdown: 'Internet_2019',
+      'Variable Construct': 'Internet Access'
     }
   ],
   'Physical Environment Variables': [
