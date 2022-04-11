@@ -78,7 +78,7 @@ export default function MapTooltip() {
         id={currentHoverTarget.id}
       />
       {currentHoverTarget.data.map((entry, idx) => (
-        <p key={`tooltip-entry-${idx}`}>
+        <p key={`tooltip-${entry.value}-${idx}`}>
 
           <b>{entry.name}</b>: {
             +entry.value
