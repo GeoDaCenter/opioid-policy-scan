@@ -107,6 +107,11 @@ const data = [
         type:'characteristics',
         join:'STATEFP'
       },
+      EC05: {
+        file: 'EC05_2019_S.csv',
+        type:'characteristics',
+        join:'STATEFP'
+      },
       BE01: {
         file: 'BE01_S.csv',
         type:'characteristics',
@@ -192,6 +197,11 @@ const data = [
       },
       EC04: {
         file: 'EC04_C.csv',
+        type:'characteristics',
+        join:'COUNTYFP'
+      },
+      EC05: {
+        file: 'EC05_2019_C.csv',
         type:'characteristics',
         join:'COUNTYFP'
       },
@@ -309,6 +319,11 @@ const data = [
         type:'characteristics',
         join:'ZCTA'
       },
+      EC05: {
+        file: 'EC05_2019_Z.csv',
+        type:'characteristics',
+        join:'ZCTA'
+      },
       BE01: {
         file: 'BE01_Z.csv',
         type:'characteristics',
@@ -415,6 +430,11 @@ const data = [
       },
       EC04: {
         file: 'EC04_T.csv',
+        type:'characteristics',
+        join:'GEOID'
+      },
+      EC05: {
+        file: 'EC05_2019_T.csv',
         type:'characteristics',
         join:'GEOID'
       },
@@ -1543,6 +1563,14 @@ const variables = [
 		nProperty: 'fordq_rate',
     numberOfBins: 5,
     binning:'naturalBreaks',
+    colorScale: colors.colorbrewer.YlOrBr
+	},
+  {
+		variable: 'Households without Internet Access %',
+		numerator: 'EC05',
+		nProperty: 'NoIntPct',
+    numberOfBins: 5,
+    binning:'quantileBreaks',
     colorScale: colors.colorbrewer.YlOrBr
 	},
 //   // BE Physical Environment
