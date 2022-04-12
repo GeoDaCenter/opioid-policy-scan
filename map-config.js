@@ -122,6 +122,11 @@ const data = [
         type:'characteristics',
         join:'STATEFP'
       },
+      BE06: {
+        file: 'BE06_NDVI_S.csv',
+        type:'characteristics',
+        join:'state_fips'
+      },
     },
   },
   {
@@ -229,6 +234,11 @@ const data = [
         file: 'BE05_C.csv',
         type:'characteristics',
         join:'COUNTYFP'
+      },
+      BE06: {
+        file: 'BE06_NDVI_C.csv',
+        type:'characteristics',
+        join:'cnty_geoid'
       },
     },
   },
@@ -338,6 +348,11 @@ const data = [
         file: 'BE03_Z.csv',
         type:'characteristics',
         join:'ZCTA'
+      },
+      BE06: {
+        file: 'BE06_NDVI_Z.csv',
+        type:'characteristics',
+        join:'ZIP'
       },
     }
   },  

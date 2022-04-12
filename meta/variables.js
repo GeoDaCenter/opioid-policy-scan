@@ -527,7 +527,7 @@ export const variables = {
       'Variable Proxy': 'Normalized Difference Vegetation Index (NDVI) average value',
       Source: 'Sentinel-2 MSI, 2018',
       Metadata: 'BE06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/NDVI.md">NDVI</a>',
-      'Spatial Scale': 'Tract',
+      'Spatial Scale': 'State, County, Tract, Zip',
       markdownPrefix: 'BE06 / ',
       markdownText: 'NDVI',
       markdown: 'NDVI',
