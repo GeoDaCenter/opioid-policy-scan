@@ -517,7 +517,7 @@ export const variables = {
       'Variable Proxy': 'Three index measures of segregation: dissimilarity, interaction, isolation',
       Source: 'ACS, 2018 5-year',
       Metadata: 'BE05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Residential_Seg_Indices.md">Residential Segregation</a>',
-      'Spatial Scale': 'County',
+      'Spatial Scale': 'State, County, Zip',
       markdownPrefix: 'BE05 / ',
       markdownText: 'Residential Segregation',
       markdown: 'Residential_Seg_Indices',

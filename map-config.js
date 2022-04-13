@@ -354,6 +354,11 @@ const data = [
         type:'characteristics',
         join:'ZCTA'
       },
+      BE05: {
+        file: 'BE05_Z.csv',
+        type:'characteristics',
+        join:'ZIP'
+      },
       BE06: {
         file: 'BE06_NDVI_Z.csv',
         type:'characteristics',
@@ -1766,7 +1771,10 @@ const variables = [
 	{
 		variable: 'Segregation: Dissimilarity (Asian)',
 		numerator: 'BE05',
-		nProperty: 'dissim.a'
+		nProperty: 'dissim.a',
+    numberOfBins:5,
+    binning:'quantileBreaks',
+    colorScale: colors.colorbrewer.RdPu
 	},
 	{
 		variable: 'Segregation: Interaction (Asian)',
