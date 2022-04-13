@@ -7,6 +7,7 @@
 BE05 - Residential Segregation Indicies calculated at the county level. File can be found [here](/data_final).
 * BE05_C
 * BE05_S
+* BE05_Z
 
 ### Data Source(s) Description:  
 All data was sourced from the American Community Survey (ACS) 2018 5-year estimates. Population demographic data was sourced at the tract level for all U.S. states and then aggregated up to the county-level for calculations. 
@@ -15,6 +16,8 @@ All data was sourced from the American Community Survey (ACS) 2018 5-year estima
 All calculations were performed in R. We obtained U.S. Census data from the American Community Survey using the `tidycensus` package, pulling from [Table B03002](https://censusreporter.org/tables/B03002/) (Race and Hispanic Origin) at the Census tract level for all states. We then aggregated tract-level population totals to the county level and merged the county population with the tract data for the measures of residential segregation calculations. We used index formulas from the U.S. Census, Housing Patterns, [Appendix B: Measures of Residential Segregation](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), developed by Massey and Denton (1998) for these calculations. 
 
 State-level measures are mean values aggregated from county-level index measures by FIPS codes. 
+
+Zip code-level measures were calculated by crosswalking Census tract to zip code populations, using the [HUD USPS ZIP Code Crosswalk File (Tract - Zip)](https://www.huduser.gov/portal/datasets/usps_crosswalk.html). 
 
 The group segregation measures were calculated as follows: 
 
