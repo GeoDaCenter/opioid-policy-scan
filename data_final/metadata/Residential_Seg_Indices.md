@@ -1,6 +1,6 @@
 **Meta Data Name**: Residential Segregation Indices  
 **Created**: July 8, 2021  
-**Modified**: April 12, 2022 
+**Modified**: April 12, 2022  
 **Author**: Susan Paykin  
 
 ### Data Location: 
