@@ -1,9 +1,10 @@
-#### About ----
+##### About ----
 
 # Description: This script calculates three Racial Segregation Indices (Dissimilarity Index, Interaction Index, and Isolation Index) 
 # for three racial minority groups (Black, Hispanic, and Asian) based on ACS 2018 5-year tract-level population estimates in the United States. 
 # By: Susan Paykin, adapted from code by Fanmei Xia, UChicago
 # Date: July 8, 2021
+# Date Updated: April 2022
 
 # Load libraries
 library(tidycensus)
@@ -17,18 +18,18 @@ library(sf)
 # Set API key
 #census_api_key()
 
-#### Loading ACS data ---- 
+##### Loading ACS data ---- 
 
 # The below ACS table gives population estimates by race and Hispanic ethnicity.
 # Getting data from the 2018 5-year ACS
 ACS18var <- load_variables(2018, "acs5", cache = TRUE)
-view(ACS18var)
 
 # Load fips codes for all states
  us <- unique(fips_codes$state)[1:51]
 
 ## Load ACS5 variables for 2018 from table B03002 and caching the dataset for faster future access
-race_table <-  get_acs(geography = "tract", year=2018, geometry = F, output="wide", table = "B03002", cache_table = T, state = us)
+race_table <-  get_acs(geography = "tract", year=2018, geometry = F, output="wide", 
+                       table = "B03002", cache_table = T, state = us)
 
 trdat <- race_table %>%
   mutate(nhwhite=B03002_003E,
@@ -45,19 +46,21 @@ trdat <- race_table %>%
 head(trdat)
 
 # Get county-level totals for the total population and each race group
-codat<-trdat%>%
+codat <- trdat%>%
   group_by(cofips)%>%
   summarise(co_total=sum(total), co_wht=sum(nhwhite), co_blk=sum(nhblack), co_asian=sum(nhasian), co_oth=sum(nhother), co_hisp=sum(hisp))
 
 # Merge the county data back to the tract data by the county FIPS code
-merged<-left_join(x=trdat,y=codat, by="cofips")
+merged <- left_join(x=trdat,y=codat, by="cofips")
 head(merged)
+
+##### COUNTY -----
 
 ##### Black segregation calculations ----
 
 # Dissimilarity Index 
 # First we calculate the tract-specific contribution to the county dissimilarity index, then we use the tapply() function to sum the tract-specific contributions within counties. 
-# The Dissimilarity index formula for blacks and whites is: D=.5∗∑i ∣(bi/B) − (wi/W)∣,
+# The Dissimilarity index formula for Blacks and whites is: D=.5∗∑i ∣(bi/B) − (wi/W)∣,
 # where bi is the number of blacks in each tract, B is the number of blacks in the county, wi is the number of whites in the tract, and W is the number of whites in the county.
 
 co.dis.b <- merged %>%
@@ -66,7 +69,7 @@ co.dis.b <- merged %>%
   summarise(dissim.b= .5*sum(d.wb, na.rm=T))
 
 # Interaction Index
-# Next is the interaction index for blacks and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
+# Next is the interaction index for Blacks and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
 # Interaction = ∑i bi/B ∗ wi/ti
 
 co.int.b <- merged %>%
@@ -75,7 +78,7 @@ co.int.b <- merged %>%
   summarise(inter.bw= sum(int.bw, na.rm=T))
 
 # Isolation Index
-# Next is is the isolation index for blacks. The formula is:
+# Next is is the isolation index for Blacks. The formula is:
 # Isolation = ∑i bi/B ∗ bi/ti
 
 co.iso.b <- merged %>%
@@ -132,7 +135,7 @@ co.dis.a <- merged %>%
   summarise(dissim.a = .5*sum(d.wa, na.rm=T))
 
 # Interaction Index - Asian
-# Next is the interaction index for Hispanics and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
+# Next is the interaction index for Asians and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
 # Interaction = ∑i hi/H ∗ wi/ti
 
 co.int.a <- merged %>%
@@ -141,7 +144,7 @@ co.int.a <- merged %>%
   summarise(inter.aw = sum(int.aw, na.rm=T))
 
 # Isolation Index - Asian
-# Next is is the isolation index for Hispanics. The formula is:
+# Next is is the isolation index for Asians The formula is:
 # Isolation=∑i hi/H ∗ hi/ti
 
 co.iso.a <- merged %>%
@@ -172,15 +175,36 @@ tm_shape(seg_indices.sf) +
 tm_shape(seg_indices.sf) +
   tm_fill("iso.a", palette = "Greens")
 
+# Rename county variable
+colnames(seg_indices_county)[1] <- "COUNTYFP"
 
-#### Prepare final dataset ----
-
-seg_indices <- list(seg_b, seg_h, seg_a) %>%
+# Final dataset
+seg_indices_county <- list(seg_b, seg_h, seg_a) %>%
   reduce(left_join, by = "cofips")
 
-# rename county variable
-colnames(seg_indices)[1] <- "COUNTYFP"
+##### STATE -----
 
-# Save final dataset
-write.csv(seg_indices, "data_final/BE05_C.csv")
+# Create state fips code variable
+seg_indices_state <- seg_indices_county
+seg_indices_state$STATEFP <- substr(seg_indices_state$COUNTYFP, start=1, stop=2)
+
+seg_indices_state <- seg_indices_state %>%
+  group_by(STATEFP) %>%
+  summarise(dissim.b = mean(dissim.b),
+            inter.bw = mean(inter.bw),
+            iso.b = mean(iso.b),
+            dissim.h = mean(dissim.h),
+            inter.hw = mean(inter.hw),
+            iso.h = mean(iso.h),
+            dissim.a = mean(dissim.a),
+            inter.aw = mean(inter.aw),
+            iso.a = mean(iso.a)
+            )
+  
+
+
+#### Save final datasets ----
+
+write.csv(seg_indices_county, "data_final/BE05_C.csv", row.names = FALSE)
+write.csv(seg_indices_state, "data_final/BE05_S.csv", row.names = FALSE)
 
