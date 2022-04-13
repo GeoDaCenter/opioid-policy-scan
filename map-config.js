@@ -67,6 +67,11 @@ const data = [
         type: 'characteristic',
         join: 'STATEFP',
       },
+      Health04_data: {
+        file: 'Health04_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
       DS01_data: {
         file: 'DS01_S.csv',
         type: 'characteristic',
@@ -152,6 +157,11 @@ const data = [
       },
       Health03_data: {
         file: 'Health03_C.csv',
+        type:'characteristic',
+        join: 'COUNTYFP',
+      },
+      Health04_data: {
+        file: 'Health04_C.csv',
         type:'characteristic',
         join: 'COUNTYFP',
       },
@@ -951,6 +961,22 @@ const variables = [
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.Reds,
+  },
+  {
+    variable: "Opioid Mortality Rate",
+    numerator: "Health04_data",
+    nProperty: "odMortRtAv",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.PuRd,
+  },
+  {
+    variable: "Opioid Prescription Rate",
+    numerator: "Health04_data",
+    nProperty: "opPrscRt",
+    binning: "naturalBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.PuRd,
   },
   {
     variable: "HCV Infection Rate",

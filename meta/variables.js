@@ -156,6 +156,26 @@ export const variables = {
       'Variable Construct': 'Physicians'
     },
     {
+      'Variable Proxy': 'Opioid Prescription Rates',
+      Source: 'HepVu, CDC, 2018-2019',
+      Metadata: 'Health04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/OpioidIndicators.md">Opioid Indicators</a>',
+      'Spatial Scale': 'County, State',
+      markdownPrefix: 'Health04 / ',
+      markdownText: 'Opioid Prescription Rates',
+      markdown: 'OpioidIndicators',
+      'Variable Construct': 'Opioid Prescription Rates'
+    },
+    {
+      'Variable Proxy': 'Opioid Mortality Rates',
+      Source: 'HepVu, NVSS, 2014-2019',
+      Metadata: 'Health04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/OpioidIndicators.md">Opioid Indicators</a>',
+      'Spatial Scale': 'County, State',
+      markdownPrefix: 'Health04 / ',
+      markdownText: 'Opioid Mortality Rates',
+      markdown: 'OpioidIndicators',
+      'Variable Construct': 'Opioid Mortality Rates'
+    },
+    {
       'Variable Proxy': 'Geographic access to MOUDs',
       Source: 'SAMHSA, 2019; Vivitrol, 2020',
       Metadata: 'Access01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/Access_MOUDs.md">Access: MOUDs</a>',
