@@ -122,6 +122,11 @@ const data = [
         type:'characteristics',
         join:'STATEFP'
       },
+      BE05: {
+        file: 'BE05_S.csv',
+        type:'characteristics',
+        join:'STATEFP'
+      },
       BE06: {
         file: 'BE06_NDVI_S.csv',
         type:'characteristics',
