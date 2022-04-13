@@ -53,9 +53,11 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 
 | Variable Construct | Variable Proxy | Source | Metadata | Spatial Scale |
 |:------------------ | :------------- | :----- | :------- | :------------ |
-| Drug-related death rate | Death rate from drug-related causes | CDC WONDER, 2019 10-year | Health01 / [Drug-Related Death Rate](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_DrugDeaths.md) | State, County | 
-| Hepatitis C rates | HepC prevalence, mortality | HepVu, 2017 | Health02 / [Hepatitis C](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HepC_rate.md) | State, County | 
+| Drug-Related Death Rates | Death rate from drug-related causes | CDC WONDER, 2019 10-year | Health01 / [Drug-Related Death Rate](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_DrugDeaths.md) | State, County | 
+| Hepatitis C Rates | HepC prevalence, mortality | HepVu, 2017 | Health02 / [Hepatitis C](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/HepC_rate.md) | State, County | 
 | Physicians | Number of Primary Care and Specialist Physicians | Dartmouth Atlas, 2010 | Health03 / [Physicians](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Health_PCPs.md) | Tract, County, State | 
+| Opioid Prescription Rates | Opioid prescription rate | HepVu, CDC 2018-2019 | Health04 / [Opioid Indicators](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/OpioidIndicators.md)| State, County |
+| Opioid Mortality Rates | Rates of death from narcotic drug overdoses | HepVu, NVSS, 2014-2019 | Health 04 / [Opioid Indicators](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/OpioidIndicators.md) | State, County |
 | Access to MOUDs | Distance to nearest MOUD | SAMHSA 2019, Vivitrol 2020 | Access01 / [Access: MOUDs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_MOUDs.md) | County, Tract, Zip | 
 | Access to Health Centers | Distance to nearest FQHC | US COVID Atlas, HRSA, 2020  | Access02 / [Access: FQHCs](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Access_FQHCs_MinDistance.md) | Tract, Zip | 
 | Access to Hospitals | Distance to nearest hospital | CovidCareMap, 2020 |  Access03 / [Access: Hospitals](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Acesss_Hospitals_MinDistance.md) | Tract, Zip |
