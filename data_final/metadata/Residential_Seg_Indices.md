@@ -1,16 +1,20 @@
 **Meta Data Name**: Residential Segregation Indices  
-**Last Modified**: July 8, 2021  
+**Created**: July 8, 2021  
+**Modified**: April 12, 2022 
 **Author**: Susan Paykin  
 
 ### Data Location: 
 BE05 - Residential Segregation Indicies calculated at the county level. File can be found [here](/data_final).
 * BE05_C
+* BE05_S
 
 ### Data Source(s) Description:  
 All data was sourced from the American Community Survey (ACS) 2018 5-year estimates. Population demographic data was sourced at the tract level for all U.S. states and then aggregated up to the county-level for calculations. 
 
 ### Description of Data Processing: 
 All calculations were performed in R. We obtained U.S. Census data from the American Community Survey using the `tidycensus` package, pulling from [Table B03002](https://censusreporter.org/tables/B03002/) (Race and Hispanic Origin) at the Census tract level for all states. We then aggregated tract-level population totals to the county level and merged the county population with the tract data for the measures of residential segregation calculations. We used index formulas from the U.S. Census, Housing Patterns, [Appendix B: Measures of Residential Segregation](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), developed by Massey and Denton (1998) for these calculations. 
+
+State-level measures are mean values aggregated from county-level index measures by FIPS codes. 
 
 The group segregation measures were calculated as follows: 
 
@@ -31,7 +35,8 @@ The isolation index reflects the probabilities that a person in a minority group
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| County ID | COUNTYFP | Unique 5-digit identifier for counties, w/ first 2 digits being state FIPS |
+| State ID | STATEFP | Unique 2-digit identifier for states |
+| County ID | COUNTYFP | Unique 5-digit identifier for counties, w/ first 2 digits state FIPS |
 | Dissimilarity index - Black | dissim.b | Dissimilarity index for Black and non-Hispanic White residents |
 | Interaction index - Black | inter.bw | Interaction index for Black and non-Hispanic White residents |
 | Isolation index - Black | iso.b | Isolation index for Black and non-Hispanic White residents |
@@ -44,7 +49,6 @@ The isolation index reflects the probabilities that a person in a minority group
 
 ### Data Limitations:
 The three indices measuring  residential segregation included here represent two categories of measures of residential segregation: measures of evenness (dissimiliarity) and measures of exposure (interaction and isolation). Three additional categories of residential segregation measurements described by Massey and Denton (1998) include measures of concentration, centralization, and clustering. Read more on the indices and their expressions from the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html). 
-
 
 
 ### Comments/Notes:
