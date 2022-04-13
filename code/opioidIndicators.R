@@ -21,7 +21,7 @@ county <- rename(county_raw,
        COUNTYFP = 'GEO ID',
        st_abb = 'State Abbreviation',
        cnty_name = 'County Name',
-       opPrscRt18 = 'Opioid Prescription Rate',
+       opPrscRt = 'Opioid Prescription Rate',
        odMortRt14 = 'Narcotic Overdose Mortality Rate 2014',
        odMortRt15 = 'Narcotic Overdose Mortality Rate 2015',
        odMortRt16 = 'Narcotic Overdose Mortality Rate 2016',
@@ -43,7 +43,7 @@ state <- rename(state_raw,
                 STATEFP = 'GEO ID',
                 st_abb = 'State Abbreviation',
                 st_name = 'State',
-                opPrscRt19 = 'Opioid Prescription Rate',
+                opPrscRt = 'Opioid Prescription Rate',
                 prMisuse19 = 'Pain Reliever Misuse Percent',
                 odMortRt14 = 'Narcotic Overdose Mortality Rate 2014',
                 odMortRt15 = 'Narcotic Overdose Mortality Rate 2015',
@@ -61,5 +61,5 @@ state$odMortRtAv <- round(state$odMortRtAv, 2)
 
 ##### Save final datasets #####
 
-write.csv(county, "data_final/Health04_C.csv")
-write.csv(state, "data_final/Health04_S.csv")
+write.csv(county, "data_final/Health04_C.csv", row.names = FALSE)
+write.csv(state, "data_final/Health04_S.csv", row.names = FALSE)
