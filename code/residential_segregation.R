@@ -14,6 +14,7 @@ library(purrr)
 library(USAboundaries)
 library(tmap)
 library(sf)
+library(readxl)
 
 # Set API key
 #census_api_key()
@@ -48,11 +49,17 @@ head(trdat)
 # Get county-level totals for the total population and each race group
 codat <- trdat%>%
   group_by(cofips)%>%
-  summarise(co_total=sum(total), co_wht=sum(nhwhite), co_blk=sum(nhblack), co_asian=sum(nhasian), co_oth=sum(nhother), co_hisp=sum(hisp))
+  summarise(co_total=sum(total), 
+            co_wht=sum(nhwhite), 
+            co_blk=sum(nhblack), 
+            co_asian=sum(nhasian), 
+            co_oth=sum(nhother), 
+            co_hisp=sum(hisp))
 
 # Merge the county data back to the tract data by the county FIPS code
 merged <- left_join(x=trdat,y=codat, by="cofips")
 head(merged)
+
 
 ##### COUNTY -----
 
@@ -201,10 +208,137 @@ seg_indices_state <- seg_indices_state %>%
             iso.a = mean(iso.a)
             )
   
+----------------------------
+##### ZIP -----
+
+# Read in tract-zip crosswalk
+crosswalk <- read_xlsx("data_final/geometryFiles/crosswalk/TRACT_ZIP.xlsx")
+
+zip <- left_join(trdat, crosswalk, by = c("GEOID" = "TRACT"))
+
+# Get zip code population
+
+zipdat <- zip %>%
+  group_by(ZIP) %>%
+  summarise(zip_total = sum(total),
+            zip_white = sum(nhwhite),
+            zip_blk = sum(nhblack),
+            zip_asian = sum(nhasian),
+            zip_hisp = sum(hisp)
+  )
+
+# Merge zip data back to tract data by zip code
+merge_zip <- left_join(zip, zipdat, by="ZIP")
+
+
+# Black segregation calculations
+
+# Dissimilarity Index 
+# First we calculate the tract-specific contribution to the county dissimilarity index, then we use the tapply() function to sum the tract-specific contributions within counties. 
+# The Dissimilarity index formula for Blacks and whites is: D=.5∗∑i ∣(bi/B) − (wi/W)∣,
+# where bi is the number of blacks in each tract, B is the number of blacks in the county, wi is the number of whites in the tract, and W is the number of whites in the county.
+
+co.dis.b_zip <- merge_zip %>%
+  mutate(d.wb=abs(nhwhite/zip_white - nhblack/zip_blk)) %>%
+  group_by(ZIP)%>%
+  summarise(dissim.b= .5*sum(d.wb, na.rm=T))
+
+# Interaction Index
+# Next is the interaction index for Blacks and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
+# Interaction = ∑i bi/B ∗ wi/ti
+
+co.int.b_zip <- merge_zip %>%
+  mutate(int.bw=(nhblack/zip_blk * nhwhite/total)) %>%
+  group_by(ZIP)%>%
+  summarise(inter.bw= sum(int.bw, na.rm=T))
+
+# Isolation Index
+# Next is is the isolation index for Blacks. The formula is:
+# Isolation = ∑i bi/B ∗ bi/ti
+
+co.iso.b_zip <- merge_zip %>%
+  mutate(isob=(nhblack/zip_blk * nhblack/total)) %>%
+  group_by(ZIP) %>%
+  summarise(iso.b= sum(isob, na.rm=T))
+
+seg_b_zip <- list(co.dis.b_zip, co.int.b_zip, co.iso.b_zip) %>% 
+  reduce(left_join, by="ZIP")
+
+# Hispanic segregation calculations 
+
+# Dissimilarity Index - Hispanic
+# First we calculate the tract-specific contribution to the county dissimilarity index, then we use the tapply() function to sum the tract-specific contributions within counties. 
+# The Dissimilarity index formula for Hispanics and whites is: D=.5∗∑i ∣(hi/H) − (wi/W)∣ 
+# where hi is the number of Hispanics in each tract, H is the number of Hispanics in the county, wi is the number of whites in the tract, and W is the number of whites in the county.
+
+co.dis.h_zip <- merge_zip %>%
+  mutate(d.wh=abs(nhwhite/zip_white - hisp/zip_hisp))%>%
+  group_by(ZIP)%>%
+  summarise(dissim.h = .5*sum(d.wh, na.rm=T))
+
+# Interaction Index - Hispanic
+# Next is the interaction index for Hispanics and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
+# Interaction = ∑i hi/H ∗ wi/ti
+
+co.int.h_zip <- merge_zip %>%
+  mutate(int.hw = (hisp/zip_hisp * nhwhite/total)) %>%
+  group_by(ZIP)%>%
+  summarise(inter.hw = sum(int.hw, na.rm=T))
+
+# Isolation Index
+# Next is is the isolation index for Hispanics. The formula is:
+# Isolation=∑i hi/H ∗ hi/ti
+
+co.iso.h_zip <- merge_zip %>%
+  mutate(isoh = (hisp/zip_hisp * hisp/total))%>%
+  group_by(ZIP)%>%
+  summarise(iso.h= sum(isoh, na.rm=T))
+
+seg_h_zip <- list(co.dis.h_zip, co.int.h_zip, co.iso.h_zip) %>% 
+  reduce(left_join, by="ZIP")
+
+# Asian segregation calculations 
+
+# Dissimilarity Index -- Asian
+# First we calculate the tract-specific contribution to the county dissimilarity index, then we use the tapply() function to sum the tract-specific contributions within counties. 
+# The Dissimilarity index formula for Asians and whites is: D=.5∗∑i ∣(ai/A) − (wi/W)∣ 
+# where ai is the number of Asians in each tract, A is the number of Asians in the county, wi is the number of whites in the tract, and W is the number of whites in the county.
+
+co.dis.a_zip <- merge_zip %>%
+  mutate(d.wa=abs(nhwhite/zip_white - nhasian/zip_asian))%>%
+  group_by(ZIP)%>%
+  summarise(dissim.a = .5*sum(d.wa, na.rm=T))
+
+# Interaction Index - Asian
+# Next is the interaction index for Asians and whites. In the calculation first population is minority population, second is non-minority population. The formula is: 
+# Interaction = ∑i hi/H ∗ wi/ti
+
+co.int.a_zip <- merge_zip %>%
+  mutate(int.aw = (nhasian/zip_asian * nhwhite/total)) %>%
+  group_by(ZIP)%>%
+  summarise(inter.aw = sum(int.aw, na.rm=T))
+
+# Isolation Index - Asian
+# Next is is the isolation index for Asians The formula is:
+# Isolation=∑i hi/H ∗ hi/ti
+
+co.iso.a_zip <- merge_zip %>%
+  mutate(iso.a = (nhasian/zip_asian * nhasian/total))%>%
+  group_by(ZIP)%>%
+  summarise(iso.a = sum(iso.a, na.rm=T))
+
+seg_a_zip <- list(co.dis.a_zip, co.int.a_zip, co.iso.a_zip) %>% 
+  reduce(left_join, by="ZIP")
+
+
+# Final zip code data
+seg_indices_zip <- list(seg_b_zip, seg_h_zip, seg_a_zip) %>%
+  reduce(left_join, by = "ZIP")
 
 
 #### Save final datasets ----
 
 write.csv(seg_indices_county, "data_final/BE05_C.csv", row.names = FALSE)
 write.csv(seg_indices_state, "data_final/BE05_S.csv", row.names = FALSE)
+write.csv(seg_indices_zip, "data_final/BE05_Z.csv", row.names = FALSE)
 
