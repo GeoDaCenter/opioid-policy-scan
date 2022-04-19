@@ -264,11 +264,6 @@ const data = [
     id: 'ZCTA',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
-      // Access01_data: {
-      //   file: 'Access01_Z.csv',
-      //   type: 'characteristic',
-      //   join: 'ZCTA',
-      //   },
       Access01_sub_data: {
         file: 'Access01_sub_Z.csv',
         type: 'characteristic',
@@ -1041,7 +1036,7 @@ const variables = [
   },
   {
     variable: "Distance (mi) to nearest methadone provider",
-    numerator: "Access01_sub_data",
+    numerator: "Access01_data",
     nProperty: "metMinDis",
     binning: "naturalBreaks",
     numberOfBins: 7,
