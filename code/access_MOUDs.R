@@ -29,7 +29,7 @@ mouds <- st_read("data_raw/us-wide-moudsCleaned.gpkg") %>%
 # Subset MOUD by category
 bup <- mouds %>% filter(category == "buprenorphine")
 meth <- mouds %>% filter(category == "methadone")
-nalViv <- mouds %>% filter(category == "naltrexone/vivitrol")
+nal <- mouds %>% filter(category == "naltrexone/vivitrol")
 
 # Read in location data
 zips <- read_sf("data_final/geometryFiles/tl_2018_zcta/zctas2018.shp") %>%
@@ -96,7 +96,7 @@ minDistCounty_clean <- minDistCounty_clean %>% select(STATEFP,
 
 head(minDistCounty_clean)
 
------------
+
 
 
 #### Nearest MOUD, ZCTA ----
@@ -132,8 +132,8 @@ minDistMeth <- set_units(minDistMeth, "mi")
 head(minDistMeth)
 
 #### NalViv - ZCTA
-nearestnalViv_index <- st_nearest_feature(zipCentroids, nalViv)
-nearestnalViv <- nalViv[nearestnalViv_index, ]
+nearestnalViv_index <- st_nearest_feature(zipCentroids, nal)
+nearestnalViv <- nal[nearestnalViv_index, ]
 minDistnalViv <- st_distance(zipCentroids, nearestnalViv, by_element = TRUE)
 minDistnalViv <- set_units(minDistnalViv, "mi")
 head(minDistnalViv)
@@ -144,10 +144,10 @@ head(minDistZips_clean)
 
 # Clean up data
 minDistZips_clean <- minDistZips_clean %>% select(ZCTA = GEOID10, 
-                                                  minDisMOUD = minDistZips_mi, 
-                                                  minDisBup = minDistBup, 
-                                                  minDisMeth = minDistMeth, 
-                                                  minDisNalV = minDistnalViv) %>%
+                                                  moudMinDis = minDistZips_mi, 
+                                                  bupMinDis = minDistBup, 
+                                                  metMinDis = minDistMeth, 
+                                                  nalMinDis = minDistnalViv) %>%
   filter(!str_detect(ZCTA, "^995|^996|^997|^998|^967|^968")) %>% # remove AK, HI
   st_drop_geometry()
 
@@ -180,9 +180,9 @@ minDistMeth <- st_distance(tractCentroids, nearestMeth, by_element = TRUE)
 minDistMeth <- set_units(minDistMeth, "mi")
 head(minDistMeth)
 
-#### NalViv - Tracts
-nearestnalViv_index <- st_nearest_feature(tractCentroids, nalViv)
-nearestnalViv <- nalViv[nearestnalViv_index, ]
+#### Naltrexone - Tracts
+nearestnalViv_index <- st_nearest_feature(tractCentroids, nal)
+nearestnalViv <- nal[nearestnalViv_index, ]
 minDistnalViv <- st_distance(tractCentroids, nearestnalViv, by_element = TRUE)
 minDistnalViv <- set_units(minDistnalViv, "mi")
 head(minDistnalViv)
@@ -193,10 +193,10 @@ head(minDistTracts_clean)
 
 # Clean up data
 minDistTracts_clean <- minDistTracts_clean %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, 
-                                                      minDisMOUD = minDistTracts_mi, 
-                                                      minDisBup = minDistBup, 
-                                                      minDisMeth = minDistMeth, 
-                                                      minDisNalV = minDistnalViv) %>%
+                                                      moudMinDis = minDistTracts_mi, 
+                                                      bupMinDis = minDistBup, 
+                                                      metMinDis = minDistMeth, 
+                                                      nalMinDis = minDistnalViv) %>%
   filter(!STATEFP %in% c("15", "02", "66", "60", "72", "78")) %>%  # remove HI, AK, GU, AS MP, PR, VI
   st_drop_geometry()
 
@@ -204,19 +204,18 @@ head(minDistTracts_clean)
 
 #### Part 3) Save final datasets ----
 
-# Save county file
-write.csv(minDistCounty_clean, "data_final/Access01_C.csv", row.names = FALSE)
+# Zip code
+write.csv(minDistZips_clean, "data_raw/MOUDMinDis_Z.csv", row.names = FALSE)
 
-# Save zip code file
-#write.csv(minDistZips_clean, "data_final/Access01_Z.csv")
+# Tract
+write.csv(minDistTracts_clean, "data_raw/MOUDMinDis_T.csv", row.names = FALSE)
 
-# Save tract file
-write.csv(minDistTracts_clean, "data_final/Access01_T.csv", row.names = FALSE)
-
-# County
-county <- read.csv("opioid-policy-scan/data_final/Access01_C.csv")
-county$COUNTYFP <- sprintf("%05d", county$COUNTYFP)
-county$COUNTYFP <- as.character(county$COUNTYFP)
-write.csv(county, "opioid-policy-scan/data_final/Access01_C.csv")
-
+# # Save county file
+# write.csv(minDistCounty_clean, "data_final/Access01_C.csv", row.names = FALSE)
+# 
+# # Save zip code file
+# write.csv(minDistZips_clean, "data_final/Access01_Z.csv", row.names = FALSE)
+# 
+# # Save tract file
+# write.csv(minDistTracts_clean, "data_final/Access01_T.csv", row.names = FALSE)
 
