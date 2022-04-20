@@ -1049,7 +1049,16 @@ const variables = [
     colorScale: colors.colorbrewer.YlGnBu,
   },
   // TEST - MOUD Walking Access
-   {
+  {
+    variable: "Walking time (min) to nearest buprenorphine provider",
+    numerator: "MOUDWalkAccess_data",
+    nProperty: "bupTimeWalk",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
     variable: "Walking time (min) to nearest methadone provider",
     numerator: "MOUDWalkAccess_data",
     nProperty: "metTimeWalk",
@@ -1067,16 +1076,16 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+  // TEST - MOUD Biking Access
   {
-    variable: "Walking time (min) to nearest buprenorphine provider",
-    numerator: "MOUDWalkAccess_data",
-    nProperty: "bupTimeWalk",
+    variable: "Biking time (min) to nearest buprenorphine provider",
+    numerator: "MOUDBikeAccess_data",
+    nProperty: "bupTimeBike",
     binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
-  // TEST - MOUD Biking Access
   {
     variable: "Biking time (min) to nearest methadone provider",
     numerator: "MOUDBikeAccess_data",
@@ -1095,15 +1104,7 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
-  {
-    variable: "Biking time (min) to nearest buprenorphine provider",
-    numerator: "MOUDBikeAccess_data",
-    nProperty: "bupTimeBike",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  },
+// MOUD Driving Access
   {
     variable: "Driving time (min) to nearest buprenorphine provider",
     numerator: "Access01_sub_data",
@@ -1131,6 +1132,7 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+// MOUD Count in Range Access
   {
     variable: "Count of buprenorphine providers in 30 minutes drive",
     numerator: "Access01_sub_data",
@@ -1158,6 +1160,7 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+  // MOUD Straight Line Distance
   {
     variable: "Distance (mi) to nearest buprenorphine provider",
     numerator: "Access01_data",
@@ -1194,6 +1197,7 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+  // Access Metrics: Other Resources
   {
     variable: "Distance (mi) to nearest FQHC",
     numerator: "Access02_data",
