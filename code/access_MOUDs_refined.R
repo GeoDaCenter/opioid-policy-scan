@@ -1,6 +1,10 @@
 #### ABOUT
 # This script adds travel spatial access metrics at the tract and ZIP code levels level to the existing minimum distance access metrics.
 
+# Set directory
+setwd("~/git/opioid-policy-scan")
+
+# Load libraries
 library(tidyverse)
 library(sf)
 
@@ -16,14 +20,24 @@ tract_old <- read.csv("data_final/Access01_T.csv")
 minDistTracts_clean <- read.csv("data_raw/MOUDMinDis_T.csv") 
 
 # Merge tract travel with min. distance 
-tract_all <- left_join(tract_travel, minDistTracts_clean, by="GEOID")
+tract_drive <- left_join(tract_travel, minDistTracts_clean, by="GEOID")
 
 # Select variables
-tract_all_final <- tract_all %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, 
+tract_drive <- tract_drive %>% select(GEOID, STATEFP, COUNTYFP, TRACTCE, 
                                         moudMinDis,
-                                        bupMinDis, bupTime, bupCount,
-                                        metMinDis, metTime, metCount,
-                                        nalMinDis, nalTime, nalCount)
+                                        bupMinDis, bupTimeDrive = bupTime, bupCountDrive30 = bupCount,
+                                        metMinDis, metTimeDrive = metTime, metCountDrive30 = metCount,
+                                        nalMinDis, nalTimeDrive = nalTime, nalCountDrive30 = nalCount)
+
+# Load in walking and biking metrics
+tract_walk <- read.csv("code/Access Metrics/Tract/Walking/moud_tract_walkAccess.csv")
+tract_bike <- read.csv("code/Access Metrics/Tract/Biking/moud_tract_bikeAccess.csv")
+
+# Merge driving and distance metrics, with walking and biking
+tract_all <- left_join(tract_drive, tract_walk, by = "GEOID") %>%
+  left_join(., tract_bike, by="GEOID")
+
+str(tract_all)
 
 ##### ZIP Code Access #####
 
@@ -34,22 +48,32 @@ zip_old <- read.csv("data_final/Access01_Z.csv")
 minDistZips_clean <- read.csv("data_raw/MOUDMinDis_Z.csv")
 
 # Merge zip with new min dis
-zip_all <- left_join(zip_old, minDistZips_clean, by="ZCTA")
-str(zip_all)
+zip_drive <- left_join(zip_old, minDistZips_clean, by="ZCTA")
+str(zip_drive)
 
-zip_all_final <- zip_all %>% select(ZCTA, 
+zip_drive <- zip_drive %>% select(ZCTA, 
                                     moudMinDis = moudMinDis.y,
-                                    bupMinDis = bupMinDis.y, bupTime, bupCount,
-                                    metMinDis = metMinDis.y, metTime, metCount,
-                                    nalMinDis = nalMinDis.y, nalTime, nalCount)
+                                    bupMinDis = bupMinDis.y, bupTimeDrive = bupTime, bupCountDrive30 = bupCount,
+                                    metMinDis = metMinDis.y, metTimeDrive = metTime, metCountDrive30 = metCount,
+                                    nalMinDis = nalMinDis.y, nalTimeDrive = nalTime, nalCountDrive30 = nalCount)
+
+# Load in walking and biking metrics
+zip_walk <- read.csv("code/Access Metrics/Zip Code/Walking/moud_zip_walkAccess.csv")
+zip_bike <- read.csv("code/Access Metrics/Zip Code/Biking/moud_zip_bikeAccess.csv")
+
+# Merge driving and distance metrics, with walking and biking
+zip_all <- left_join(zip_drive, zip_walk, by = "ZCTA") %>%
+  left_join(., zip_bike, by="ZCTA")
+
+str(zip_all)
 
 ##### Save final files
 
 # Tract
-write.csv(tract_all_final, "data_final/Access01_T.csv", row.names = FALSE)
+write.csv(tract_all, "data_final/Access01_T.csv", row.names = FALSE)
 
 # Zip
-write.csv(zip_all_final, "data_final/Access01_Z.csv", row.names = FALSE)
+write.csv(zip_all, "data_final/Access01_Z.csv", row.names = FALSE)
 
 
 # # Load full refined access metrics dataset
