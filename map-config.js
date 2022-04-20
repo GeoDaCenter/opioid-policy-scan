@@ -264,6 +264,12 @@ const data = [
     id: 'ZCTA',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
+      // Test - MOUD Tract Walk Access
+      MOUDWalkAccess_data: {
+        file: 'moud_zip_walkAccess.csv',
+        type: 'characteristic',
+        join: 'GEOID',
+      },
       Access01_sub_data: {
         file: 'Access01_sub_Z.csv',
         type: 'characteristic',
@@ -379,7 +385,7 @@ const data = [
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
       // Test - MOUD Tract Walk Access
-      MOUDTractWalkAccess_data: {
+      MOUDWalkAccess_data: {
         file: 'moud_tract_walkAccess.csv',
         type: 'characteristic',
         join: 'GEOID',
@@ -1030,34 +1036,34 @@ const variables = [
     numberOfBins: 8,
     colorScale: colors.colorbrewer.YlGnBu,
   },
-   // TEST - Tract Walk Access
-  //  {
-  //   variable: "Walking time (min) to nearest methadone provider",
-  //   numerator: "MOUDTractWalkAccess_data",
-  //   nProperty: "metTimeWalk",
-  //   binning: "naturalBreaks",
-  //   numberOfBins: 6,
-  //   colorScale: colors.colorbrewer.RdBu,
-  //   reverse:true
-  // },
-  // {
-  //   variable: "Walking time (min) to nearest naltrexone provider",
-  //   numerator: "MOUDTractWalkAccess_data",
-  //   nProperty: "nalTimeWalk",
-  //   binning: "naturalBreaks",
-  //   numberOfBins: 6,
-  //   colorScale: colors.colorbrewer.RdBu,
-  //   reverse:true
-  // },
-  // {
-  //   variable: "Walking time (min) to nearest buprenorphine provider",
-  //   numerator: "MOUDTractWalkAccess_data",
-  //   nProperty: "bupTimeWalk",
-  //   binning: "naturalBreaks",
-  //   numberOfBins: 6,
-  //   colorScale: colors.colorbrewer.RdBu,
-  //   reverse:true
-  // },
+  // TEST - MOUD Walking Access
+   {
+    variable: "Walking time (min) to nearest methadone provider",
+    numerator: "MOUDWalkAccess_data",
+    nProperty: "metTimeWalk",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Walking time (min) to nearest naltrexone provider",
+    numerator: "MOUDWalkAccess_data",
+    nProperty: "nalTimeWalk",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Walking time (min) to nearest buprenorphine provider",
+    numerator: "MOUDWalkAccess_data",
+    nProperty: "bupTimeWalk",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
   {
     variable: "Distance (mi) to nearest MOUD (all)",
     numerator: "Access01_data",
