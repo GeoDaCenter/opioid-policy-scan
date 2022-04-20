@@ -378,7 +378,12 @@ const data = [
     id: 'GEOID',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
-
+      // Test - MOUD Tract Walk Access
+      MOUDTractWalkAccess_data: {
+        file: 'moud_tract_walkAccess.csv',
+        type: 'characteristic',
+        join: 'GEOID',
+      },
       MOUDAccess_data: {
         file: 'Access01_T2.csv',
         type: 'characteristic',
@@ -1025,6 +1030,34 @@ const variables = [
     numberOfBins: 8,
     colorScale: colors.colorbrewer.YlGnBu,
   },
+   // TEST - Tract Walk Access
+  //  {
+  //   variable: "Walking time (min) to nearest methadone provider",
+  //   numerator: "MOUDTractWalkAccess_data",
+  //   nProperty: "metTimeWalk",
+  //   binning: "naturalBreaks",
+  //   numberOfBins: 6,
+  //   colorScale: colors.colorbrewer.RdBu,
+  //   reverse:true
+  // },
+  // {
+  //   variable: "Walking time (min) to nearest naltrexone provider",
+  //   numerator: "MOUDTractWalkAccess_data",
+  //   nProperty: "nalTimeWalk",
+  //   binning: "naturalBreaks",
+  //   numberOfBins: 6,
+  //   colorScale: colors.colorbrewer.RdBu,
+  //   reverse:true
+  // },
+  // {
+  //   variable: "Walking time (min) to nearest buprenorphine provider",
+  //   numerator: "MOUDTractWalkAccess_data",
+  //   nProperty: "bupTimeWalk",
+  //   binning: "naturalBreaks",
+  //   numberOfBins: 6,
+  //   colorScale: colors.colorbrewer.RdBu,
+  //   reverse:true
+  // },
   {
     variable: "Distance (mi) to nearest MOUD (all)",
     numerator: "Access01_data",
@@ -1052,15 +1085,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
- /*  {
-    variable: "NEW Driving time (min) to nearest methadone provider",
-    numerator: "MOUDAccess_data",
-    nProperty: "metTime",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  }, */
   {
     variable: "Count of methadone providers in 30 minutes",
     numerator: "Access01_sub_data",
@@ -1070,15 +1094,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
-  /* {
-    variable: "NEW Count of methadone providers in 30 minutes",
-    numerator: "MOUDAccess_data",
-    nProperty: "metCount",
-    binning: "quantileBreaks",
-    numberOfBins: 4,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  }, */
   {
     variable: "Distance (mi) to nearest buprenorphine provider",
     numerator: "Access01_data",
@@ -1097,15 +1112,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
-  /* {
-    variable: "NEW Driving time (min) to nearest buprenorphine provider",
-    numerator: "MOUDAccess_data",
-    nProperty: "bupTime",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  }, */
   {
     variable: "Count of buprenorphine providers in 30 minutes",
     numerator: "Access01_sub_data",
@@ -1115,15 +1121,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu, 
     reverse:true
   },
- /*  {
-    variable: "NEW Count of buprenorphine providers in 30 minutes",
-    numerator: "MOUDAccess_data",
-    nProperty: "bupCount",
-    binning: "quantileBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu, 
-    reverse:true
-  }, */
   {
     variable: "Distance (mi) to nearest naltrexone provider",
     numerator: "Access01_data",
@@ -1142,15 +1139,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
- /*  {
-    variable: "NEW Driving time (min) to nearest naltrexone provider",
-    numerator: "MOUDAccess_data",
-    nProperty: "nalTime",
-    binning: "naturalBreaks",
-    numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  }, */
   {
     variable: "Count of naltrexone providers in 30 minutes",
     numerator: "Access01_sub_data",
@@ -1160,15 +1148,6 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
-  /* {
-    variable: "NEW Count of naltrexone providers in 30 minutes",
-    numerator: "MOUDAccess_data",
-    nProperty: "nalCount",
-    binning: "quantileBreaks",
-    numberOfBins: 4,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
-  }, */
   {
     variable: "Distance (mi) to nearest FQHC",
     numerator: "Access02_data",
