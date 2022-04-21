@@ -176,10 +176,10 @@ export const variables = {
       'Variable Construct': 'Opioid Mortality Rates'
     },
     {
-      'Variable Proxy': 'Geographic access to MOUDs',
-      Source: 'SAMHSA, 2019; Vivitrol, 2020',
+      'Variable Proxy': 'Geographic & travel time access to MOUDs',
+      Source: 'SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020',
       Metadata: 'Access01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/Access_MOUDs.md">Access: MOUDs</a>',
-      'Spatial Scale': 'County, Tract, Zip',
+      'Spatial Scale': 'Tract, Zip',
       markdownPrefix: 'Access01 / ',
       markdownText: 'Access: MOUDs',
       markdown: 'Access_MOUDs',
