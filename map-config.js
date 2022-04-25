@@ -72,6 +72,36 @@ const data = [
         type: 'characteristic',
         join: 'STATEFP',
       },
+      Access01_CS_data: {
+        file: 'Access01_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
+      Access02_CS_data: {
+        file: 'Access02_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
+      Access03_CS_data: {
+        file: 'Access03_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
+      Access04_CS_data: {
+        file: 'Access04_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
+      Access05_CS_data: {
+        file: 'Access05_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
+      Access06_CS_data: {
+        file: 'Access06_S.csv',
+        type: 'characteristic',
+        join: 'STATEFP',
+      },
       DS01_data: {
         file: 'DS01_S.csv',
         type: 'characteristic',
@@ -145,11 +175,6 @@ const data = [
     id: 'GEOID', // fid / geoid join column
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
-      Access01_data: {
-        file: 'Access01_C.csv',
-        type: 'characteristic',
-        join: 'COUNTYFP',
-      },
       Health01_data: {
         file: 'Health01_C.csv',
         type: 'characteristic',
@@ -163,6 +188,36 @@ const data = [
       Health04_data: {
         file: 'Health04_C.csv',
         type:'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access01_CS_data: {
+        file: 'Access01_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access02_CS_data: {
+        file: 'Access02_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access03_CS_data: {
+        file: 'Access03_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access04_CS_data: {
+        file: 'Access04_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access05_CS_data: {
+        file: 'Access05_C.csv',
+        type: 'characteristic',
+        join: 'COUNTYFP',
+      },
+      Access06_CS_data: {
+        file: 'Access06_C.csv',
+        type: 'characteristic',
         join: 'COUNTYFP',
       },
       DS01_data: {
@@ -1194,6 +1249,31 @@ const variables = [
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+   // MOUD Access - COUNTY | STATE
+   {
+    variable: "County, State: % tracts within 30-min drive of buprenorphine provider",
+    numerator: "Access01_CS_data",
+    nProperty: "pctBupT",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  {
+    variable: "County, State: % tracts within 30-min drive of methadone provider",
+    numerator: "Access01_CS_data",
+    nProperty: "pctMetT",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  {
+    variable: "County, State: % tracts within 30-min drive of naltrexone provider",
+    numerator: "Access01_CS_data",
+    nProperty: "pctNalT",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
   // Access Metrics: Other Resources
   {
     variable: "Distance (mi) to nearest FQHC",
@@ -1221,7 +1301,15 @@ const variables = [
     numberOfBins: 5,
     colorScale: colors.colorbrewer.RdBu
   },
-
+  // FQHC Metrics - COUNTY | STATE
+  {
+    variable: "County, State: % tracts within 30-min drive of FQHC",
+    numerator: "Access02_CS_data",
+    nProperty: "pctTimeDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
   {
     variable: "Distance (mi) to nearest hospital",
     numerator: "Access03_data",
@@ -1246,6 +1334,15 @@ const variables = [
     nProperty: "countDrive",
     binning: "quantileBreaks",
     numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  // Hospital Metrics - COUNTY | STATE
+  {
+    variable: "County, State: % tracts within 30-min drive of hospital",
+    numerator: "Access03_CS_data",
+    nProperty: "pctTimeDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
   {
@@ -1274,6 +1371,15 @@ const variables = [
     numberOfBins: 5,
     colorScale: colors.colorbrewer.RdBu
   },
+  // Pharmacies Metrics - COUNTY | STATE
+  {
+    variable: "County, State: % tracts within 30-min drive of pharmacy",
+    numerator: "Access04_CS_data",
+    nProperty: "pctTimeDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
   {
     variable: "Distance (mi) to nearest mental health provider",
     numerator: "Access05_data",
@@ -1300,6 +1406,15 @@ const variables = [
     numberOfBins: 5,
     colorScale: colors.colorbrewer.RdBu
   },
+   // Mental Heath Metrics - COUNTY | STATE
+   {
+    variable: "County, State: % tracts within 30-min drive of mental health provider",
+    numerator: "Access05_CS_data",
+    nProperty: "pctTimeDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
+    colorScale: colors.colorbrewer.RdBu
+  },
   {
     variable: "Distance (mi) to substance use treatment (SUT) facility",
     numerator: "Access06_data",
@@ -1324,6 +1439,15 @@ const variables = [
     nProperty: "countDrive",
     binning: "quantileBreaks",
     numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  // SUT Metrics - COUNTY | STATE
+   {
+    variable: "County, State: % tracts within 30-min drive of SUT service",
+    numerator: "Access06_CS_data",
+    nProperty: "pctTimeDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
   {
