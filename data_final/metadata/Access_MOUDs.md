@@ -4,9 +4,11 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Access01 - Access to MOUDs at 2 spatial scales: census tract and zip code. Files can be found [here](/data_final).
+Access01 - Access to MOUDs at 4 spatial scales: Census tract, Zip code, County, State. Files can be found [here](/data_final).
 * Access01_T  
 * Access01_Z  
+* Access01_C
+* Access01_S
 
 ### Data Source(s) Description:  
 Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) and their locations were sourced from the [U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) Treatment Locator](https://findtreatment.samhsa.gov/locator) in September 2020. Naltrexone provider data from SAMHSA was supplemented by provider data from *Vivitrol.com*, with duplicates removed. 
@@ -14,14 +16,21 @@ Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) an
 ### Description of Data Processing: 
 Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded locations locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. We calculated population-weighted centroids for each Census tract and ZCTA in the continental US (lower 48 states).
 
-#### Distance
+#### Tract and ZIP Code
+
+##### Distance
 We conducted a nearest resource analysis from geography centroid to MOUD provider location by type (buprenophine, methadone, naltrexone) to calculate the nearest Euclidean distance (i.e. straight line distance) for each MOUD. This analysis was conducted in R. The scripts are available in [code/access_MOUDs.R](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/code/access_MOUDs.R).
 
-#### Travel Time and Count Within Threshold
+##### Travel Time and Count Within Threshold
 
 We calculated travel-network access metrics using the [spatial_access Python package](https://github.com/GeoDaCenter/spatial_access) to calculate travel time to nearest provider type and count of providers within a travel threshold (30 minutes and/or 60 minutes) for three modes of transit: driving, walking, and biking. The transit matrices were sourced from [Project OSRM](http://project-osrm.org/) and are available at the Tract or ZCTA scales for mulitple transit modes [via Box folder](https://uchicago.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as). This analysis was conducted in Python. The scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/code/Access%20Metrics%20-%20MOUD)
 
+#### County and State 
+County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
+
 ### Key Variable and Definitions:
+
+#### Tract and ZIP Code
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | GEOID | ID for census tracts | Unique 11-digit identifier for census tracts | 
@@ -55,6 +64,16 @@ We calculated travel-network access metrics using the [spatial_access Python pac
 | Mininum distance to methadone | metMinDis | Euclidean distance (miles) to nearest methadone provider |
 | Mininum distance to buprenorphine | bupMinDis | Euclidean distance (miles) to nearest buprenorphine provider |
 | Mininum distance to naltrexone | nalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider |
+
+#### County and State
+| Variable | Variable ID in .csv | Description |
+|:---------|:--------------------|:------------|
+| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
+| STATEFP | ID for states | Unique 2-digit identifier for states| 
+| Count of tracts | cntT | Total number of tracts in county/state | 
+| Count of tracts within 30-min buprenorphine driving range | cntBupT | Number of tracts with buprenorphine provider within a 30-min driving range |
+| Count of tracts within 30-min methadone driving range | cntMetT | Number of tracts with methadone provider within a 30-min driving range |
+| Count of tracts within 30-min naltrexone driving range | cntNalT | Number of tracts with naltrexone provider within a 30-min driving range |
 
 ### Data Limitations:
 Access metrics are calculated for continental U.S., and does not include Hawaii, Alaska, or U.S. territories. 
