@@ -176,7 +176,7 @@ export const variables = {
       'Variable Construct': 'Opioid Mortality Rates'
     },
     {
-      'Variable Proxy': 'Geographic & travel time access to MOUDs',
+      'Variable Proxy': 'Access to MOUDs',
       Source: 'SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020',
       Metadata: 'Access01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/Access_MOUDs.md">Access: MOUDs</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -186,7 +186,7 @@ export const variables = {
       'Variable Construct': 'Access to MOUDs'
     },
     {
-      'Variable Proxy': 'Geographic access to FQHCs',
+      'Variable Proxy': 'Access to FQHCs',
       Source: 'US Covid Atlas via HRSA, 2020',
       Metadata: 'Access02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Access_FQHCs_MinDistance.md">Access: FQHCs</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -196,7 +196,7 @@ export const variables = {
       'Variable Construct': 'Access to Health Centers'
     },
     {
-      'Variable Proxy': 'Geographic access to hospitals',
+      'Variable Proxy': 'Access to hospitals',
       Source: 'CovidCareMap, 2020',
       Metadata: 'Access03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Acesss_Hospitals_MinDistance.md">Access: Hospitals</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -206,7 +206,7 @@ export const variables = {
       'Variable Construct': 'Access to Hospitals'
     },
     {
-      'Variable Proxy': 'Geographic access to pharmacies',
+      'Variable Proxy': 'Access to pharmacies',
       Source: 'InfoGroup, 2019',
       Metadata: 'Access04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Access_Pharmacies_MinDistance.md">Access: Pharmacies</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -216,7 +216,7 @@ export const variables = {
       'Variable Construct': 'Access to Pharmacies'
     },
     {
-      'Variable Proxy': 'Geographic access to mental health providers',
+      'Variable Proxy': 'Access to mental health providers',
       Source: 'SAMHSA, 2020',
       Metadata: 'Access05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Access_MentalHealth_MinDistance.md">Access: Mental Health Providers</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -226,7 +226,7 @@ export const variables = {
       'Variable Construct': 'Access to Mental Health Providers'
     },
     {
-      'Variable Proxy': 'Geographic access substance use treatment (SUT) programs',
+      'Variable Proxy': 'Access substance use treatment (SUT) programs',
       Source: 'SAMHSA, 2020',
       Metadata: 'Access06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Access_SubstanceUseTreatment.md">Access: SUT</a>',
       'Spatial Scale': 'Tract, Zip',
@@ -236,7 +236,7 @@ export const variables = {
       'Variable Construct': 'Access to Substance Use Treatment Programs'
     },
     {
-      'Variable Proxy': 'Geographic access to opioid treatment programs (OTP)',
+      'Variable Proxy': 'Access to opioid treatment programs (OTP)',
       Source: 'SAMHSA, 2021',
       Metadata: 'Access07 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/data_final/metadata/Access_OpioidUseTreatment.md">Access: OTP</a>',
       'Spatial Scale': 'Tract, Zip',
