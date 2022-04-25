@@ -77,9 +77,9 @@ County and state-level variables include the **count** of Census tracts and the 
 | Percent of tracts within 30-min buprenorphine driving range | pctBupT | Percent of tracts with buprenorphine provider within a 30-min driving range |
 | Percent of tracts within 30-min methadone driving range | pctMetT | Percent of tracts with methadone provider within a 30-min driving range |
 | Percent of tracts within 30-min naltrexone driving range | pctNalT | Percent of tracts with naltrexone provider within a 30-min driving range |
-| Average driving time to nearest buprenorphine provider | avBupTime | Average driving time across tracts in county/state to nearest buprenorphine provider |
-| Average driving time to nearest methadone provider | avMetTime | Average driving time across tracts in county/state to nearest methadone provider |
-| Average driving time to nearest naltrexone provider | avNalTime | Average driving time across tracts in county/state to nearest naltrexone provider |
+| Average driving time to nearest buprenorphine provider | avBupTime | Average driving time (minutes) across tracts in county/state to nearest buprenorphine provider |
+| Average driving time to nearest methadone provider | avMetTime | Average driving time (minutes) across tracts in county/state to nearest methadone provider |
+| Average driving time to nearest naltrexone provider | avNalTime | Average driving time (minutes) across tracts in county/state to nearest naltrexone provider |
 
 ### Data Limitations:
 Access metrics are calculated for continental U.S., and does not include Hawaii, Alaska, or U.S. territories. 
