@@ -1139,8 +1139,7 @@ const variables = [
     nProperty: "bupCount",
     binning: "quantileBreaks",
     numberOfBins: 6,
-    colorScale: colors.colorbrewer.RdBu, 
-    reverse:true
+    colorScale: colors.colorbrewer.RdBu
   },
   {
     variable: "Count of methadone providers in 30 minutes drive",
@@ -1148,8 +1147,7 @@ const variables = [
     nProperty: "metCount",
     binning: "quantileBreaks",
     numberOfBins: 4,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
+    colorScale: colors.colorbrewer.RdBu
   },
   {
     variable: "Count of naltrexone providers in 30 minutes drive",
@@ -1157,8 +1155,7 @@ const variables = [
     nProperty: "nalCount",
     binning: "quantileBreaks",
     numberOfBins: 4,
-    colorScale: colors.colorbrewer.RdBu,
-    reverse:true
+    colorScale: colors.colorbrewer.RdBu
   },
   // MOUD Straight Line Distance
   {
@@ -1202,11 +1199,29 @@ const variables = [
     variable: "Distance (mi) to nearest FQHC",
     numerator: "Access02_data",
     nProperty: "minDisFQHC",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 6,
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
   },
+  {
+    variable: "Driving time (mins) to nearest FQHC",
+    numerator: "Access02_data",
+    nProperty: "timeDrive",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Count of FQHCs in 30-minute drive",
+    numerator: "Access02_data",
+    nProperty: "countDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
+  },
+
   {
     variable: "Distance (mi) to nearest hospital",
     numerator: "Access03_data",
@@ -1215,6 +1230,23 @@ const variables = [
     numberOfBins: 7,
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
+  },
+  {
+    variable: "Driving time (mins) to nearest hospital",
+    numerator: "Access03_data",
+    nProperty: "timeDrive",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Count of hospitals in 30-minute drive",
+    numerator: "Access03_data",
+    nProperty: "countDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
   },
   {
     variable: "Distance (mi) to nearest pharmacy",
@@ -1226,6 +1258,23 @@ const variables = [
     reverse:true
   },
   {
+    variable: "Driving time (mins) to nearest pharmacy",
+    numerator: "Access04_data",
+    nProperty: "timeDrive",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Count of pharmacies in 30-minute drive",
+    numerator: "Access04_data",
+    nProperty: "countDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  {
     variable: "Distance (mi) to nearest mental health provider",
     numerator: "Access05_data",
     nProperty: "minDisMH",
@@ -1235,13 +1284,47 @@ const variables = [
     reverse:true
   },
   {
+    variable: "Driving time (mins) to nearest mental health provider",
+    numerator: "Access05_data",
+    nProperty: "timeDrive",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Count of mental health providers in 30-minute drive",
+    numerator: "Access05_data",
+    nProperty: "countDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
+  },
+  {
     variable: "Distance (mi) to substance use treatment (SUT) facility",
     numerator: "Access06_data",
-    nProperty: "minDist_SUT",
+    nProperty: "minDisSUT",
     binning: "naturalBreaks",
     numberOfBins: 7,
     colorScale: colors.colorbrewer.RdBu,
     reverse:true
+  },
+  {
+    variable: "Driving time (mins) to nearest SUT",
+    numerator: "Access06_data",
+    nProperty: "timeDrive",
+    binning: "naturalBreaks",
+    numberOfBins: 6,
+    colorScale: colors.colorbrewer.RdBu,
+    reverse:true
+  },
+  {
+    variable: "Count of SUTs in 30-minute drive",
+    numerator: "Access06_data",
+    nProperty: "countDrive",
+    binning: "quantileBreaks",
+    numberOfBins: 5,
+    colorScale: colors.colorbrewer.RdBu
   },
   {
     variable: "Distance (mi) to opioid use treatment facility",
