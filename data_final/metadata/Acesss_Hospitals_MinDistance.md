@@ -4,9 +4,11 @@
 **Author**: Susan Paykin  
 
 ### Data Location: 
-Access03 at 2 spatial scales. Files can be found [here](/data_final).
+Access03 at 4 spatial scales. Files can be found [here](/data_final).
 * Access03_T  
 * Access03_Z  
+* Access04_C
+* Access04_S
 
 ### Data Source(s) Description:  
 Hospital locations were sourced from [CovidCareMap Healthcare System Capacity data](https://github.com/covidcaremap/covid19-healthsystemcapacity/tree/master/data), an aggregated dataset which sources data from the [Healthcare Cost Report Information System (HCRIS)](https://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/Cost-Reports/Hospital-2010-form) and [Definitive Healthcare](https://coronavirus-resources.esri.com/datasets/definitivehc::definitive-healthcare-usa-hospital-beds?geometry=125.859%2C-16.820%2C-150.821%2C72.123). 
