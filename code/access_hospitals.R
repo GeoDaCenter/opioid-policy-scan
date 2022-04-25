@@ -168,6 +168,53 @@ hospitals_accessZ <- hospitals_accessZ %>% select(ZCTA, minDisHosp, timeDrive, c
 
 head(hospitals_accessZ)
 
-# Save file
+# Save zip file
 write.csv(hospitals_accessZ, "data_final/Access03_Z.csv", row.names = FALSE)
+
+##### County Access #####
+
+# Read in tract access
+tract_hosp <- read.csv("data_final/Access03_T.csv")
+
+# Add the leading 0 to GEOID
+tract_hosp$GEOID <- sprintf("%011s", tract_hosp$GEOID)
+
+# Pull out full county FIPS codes 
+tract_hosp$COUNTYFP <- substr(tract_hosp$GEOID, 1, 5)
+head(tract_hosp)
+
+# Count the number of tracts that are driving time < 30, and average driving time for each county
+county_hosp <- tract_hosp %>%
+  group_by(COUNTYFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = mean(timeDrive)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(county_hosp)
+
+
+##### State Access #####
+
+# Group by state-level
+
+# Full out State FIPS code
+tract_hosp$STATEFP <- substr(tract_hosp$GEOID, 1, 2)
+
+state_hosp <- tract_hosp %>%
+  group_by(STATEFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm = TRUE), 2)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(state_hosp)
+
+##### Save state and county files #####
+
+# County
+write.csv(county_hosp, "data_final/Access03_C.csv", row.names = FALSE)
+
+# State
+write.csv(state_hosp, "data_final/Access03_S.csv", row.names = FALSE)
 

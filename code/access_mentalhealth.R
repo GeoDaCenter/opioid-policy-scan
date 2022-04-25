@@ -83,7 +83,7 @@ mh.sf <- st_transform(mh.sf, 3857)
 zipCentroids <- st_centroid(zips)
 zipCentroids
 
-# Identify pharmacy that is closest to zip centroid. 
+# Identify mhacy that is closest to zip centroid. 
 # This will return index, so then subset MH providers by the index to get the nearest to each centroid. 
 nearestMH_index <- st_nearest_feature(zipCentroids, mh.sf)
 nearestMH <- mh.sf[nearestMH_index,]
@@ -188,4 +188,52 @@ head(mentalhealth_accessZ)
 
 # Save file
 write.csv(mentalhealth_accessZ, "data_final/Access05_Z.csv", row.names = FALSE)
+
+##### County Access #####
+
+# Read in tract access
+tract_mh <- read.csv("data_final/Access05_T.csv")
+
+# Add the leading 0 to GEOID
+tract_mh$GEOID <- sprintf("%011s", tract_mh$GEOID)
+
+# Pull out full county FIPS codes 
+tract_mh$COUNTYFP <- substr(tract_mh$GEOID, 1, 5)
+head(tract_mh)
+
+# Count the number of tracts that are driving time < 30, and average driving time for each county
+county_mh <- tract_mh %>%
+  group_by(COUNTYFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = mean(timeDrive)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(county_mh)
+
+
+##### State Access #####
+
+# Group by state-level
+
+# Full out State FIPS code
+tract_mh$STATEFP <- substr(tract_mh$GEOID, 1, 2)
+
+state_mh <- tract_mh %>%
+  group_by(STATEFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm = TRUE), 2)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(state_mh)
+
+##### Save state and county files #####
+
+# County
+write.csv(county_mh, "data_final/Access05_C.csv", row.names = FALSE)
+
+# State
+write.csv(state_mh, "data_final/Access05_S.csv", row.names = FALSE)
+
 

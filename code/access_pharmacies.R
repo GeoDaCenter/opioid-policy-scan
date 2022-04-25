@@ -192,3 +192,50 @@ head(pharmacies_accessZ)
 # Save file
 write.csv(pharmacies_accessZ, "data_final/Access04_Z.csv", row.names = FALSE)
 
+##### County Access #####
+
+# Read in tract access
+tract_pharm <- read.csv("data_final/Access04_T.csv")
+
+# Add the leading 0 to GEOID
+tract_pharm$GEOID <- sprintf("%011s", tract_pharm$GEOID)
+
+# Pull out full county FIPS codes 
+tract_pharm$COUNTYFP <- substr(tract_pharm$GEOID, 1, 5)
+head(tract_pharm)
+
+# Count the number of tracts that are driving time < 30, and average driving time for each county
+county_pharm <- tract_pharm %>%
+  group_by(COUNTYFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = mean(timeDrive)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(county_pharm)
+
+
+##### State Access #####
+
+# Group by state-level
+
+# Full out State FIPS code
+tract_pharm$STATEFP <- substr(tract_pharm$GEOID, 1, 2)
+
+state_pharm <- tract_pharm %>%
+  group_by(STATEFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm = TRUE), 2)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(state_pharm)
+
+##### Save state and county files #####
+
+# County
+write.csv(county_pharm, "data_final/Access04_C.csv", row.names = FALSE)
+
+# State
+write.csv(state_pharm, "data_final/Access04_S.csv", row.names = FALSE)
+

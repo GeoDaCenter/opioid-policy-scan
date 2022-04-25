@@ -46,7 +46,7 @@ zips <- st_transform(zips, 3857)
 tracts <- st_transform(tracts, 3857)
 fqhc_sf <- st_transform(fqhc_sf, 3857)
 
-#### Nearest FQHC - ZCTA ----
+#### Nearest FQHC - ZCTA #####
 
 # Create centroids for zip codes
 zipCentroids <- st_centroid(zips)
@@ -73,7 +73,7 @@ head(HCminDistZips_sf)
 HCminDistZips_sf <- HCminDistZips_sf %>% select(ZCTA = ZCTA5CE10, minDisFQHC = HCminDistZips_mi)
 head(HCminDistZips_sf)
 
-#### Nearest FQHC - Tract ----
+#### Nearest FQHC - Tract #####
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
@@ -153,7 +153,51 @@ fqhc_accessZIP <- fqhc_accessZIP %>% select(ZCTA, minDisFQHC, timeDrive, countDr
 
 head(fqhc_accessZIP)
 
-# Save file
+# Save zip file
 write.csv(fqhc_accessZIP, "data_final/Access02_Z.csv", row.names = FALSE)
+
+##### County Access #####
+
+# Read in tract access
+tract_fqhc <- read.csv("data_final/Access02_T.csv")
+
+# Add the leading 0 to GEOID
+tract_fqhc$GEOID <- sprintf("%011s", tract_fqhc$GEOID)
+
+# Pull out full county FIPS codes 
+tract_fqhc$COUNTYFP <- substr(tract_fqhc$GEOID, 1, 5)
+
+# Count the number of tracts that are driving time < 30, and average driving time for each county
+county_fqhc <- tract_fqhc %>%
+  group_by(COUNTYFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = mean(timeDrive)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+
+##### State Access #####
+
+# Group by state-level
+
+# Full out State FIPS code
+tract_fqhc$STATEFP <- substr(tract_fqhc$GEOID, 1, 2)
+
+state_fqhc <- tract_fqhc %>%
+  group_by(STATEFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm = TRUE), 2)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+##### Save state and county files #####
+
+# County
+write.csv(county_fqhc, "data_final/Access02_C.csv", row.names = FALSE)
+
+# State
+write.csv(state_fqhc, "data_final/Access02_S.csv", row.names = FALSE)
+
+
 
 

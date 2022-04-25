@@ -52,5 +52,57 @@ SUT_accessZ <- SUT_accessZ %>% select(ZCTA,
 
 head(SUT_accessZ)
 
-# Save file
+# Save zip file
 write.csv(SUT_accessZ, "data_final/Access06_Z.csv", row.names = FALSE)
+
+
+##### County Access #####
+
+# Read in tract access
+tract_SUT <- read.csv("data_final/Access06_T.csv")
+
+# Add the leading 0 to GEOID
+tract_SUT$GEOID <- sprintf("%011s", tract_SUT$GEOID)
+
+# Pull out full county FIPS codes 
+tract_SUT$COUNTYFP <- substr(tract_SUT$GEOID, 1, 5)
+head(tract_SUT)
+
+# Count the number of tracts that are driving time < 30, and average driving time for each county
+county_SUT <- tract_SUT %>%
+  group_by(COUNTYFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = mean(timeDrive)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(county_SUT)
+
+
+##### State Access #####
+
+# Group by state-level
+
+# Full out State FIPS code
+tract_SUT$STATEFP <- substr(tract_SUT$GEOID, 1, 2)
+
+state_SUT <- tract_SUT %>%
+  group_by(STATEFP) %>%
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm = TRUE), 2)) %>%
+  mutate(pctTimeDrive = round(cntTimeDrive/cntT, 2))
+
+head(state_SUT)
+
+##### Save state and county files #####
+
+# County
+write.csv(county_SUT, "data_final/Access06_C.csv", row.names = FALSE)
+
+# State
+write.csv(state_SUT, "data_final/Access06_S.csv", row.names = FALSE)
+
+
+
+
