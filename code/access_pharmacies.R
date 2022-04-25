@@ -141,3 +141,54 @@ write_sf(minDistZPharma_sf, "Policy_Scan/data_final/Access04_Z.csv")
 
 # Save tracts
 write_sf(minDistPharmaT_sf, "Policy_Scan/data_final/Access04_T.csv")
+
+
+##### Merge travel access metrics - Tract #####
+
+setwd("~/git/opioid-policy-scan")
+
+# Read in minimum distance access
+pharmacies_minDis_T <- read.csv("data_final/Access04_T.csv")
+head(pharmacies_minDis_T)
+
+# Read in driving metrics, rename variables
+pharmacies_drive <- read.csv("code/Access Metrics - Health Resources/Tract/Driving/pharmacies_drive_tract.csv") %>%
+  rename(GEOID = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(pharmacies_drive)
+
+# Merge
+pharmacies_accessT <- left_join(pharmacies_drive, pharmacies_minDis_T, by = "GEOID")
+head(pharmacies_accessT)
+
+pharmacies_accessT <- pharmacies_accessT %>% select(GEOID, minDisRx, timeDrive, countDrive)
+head(pharmacies_accessT)
+
+# Save file
+write.csv(pharmacies_accessT, "data_final/Access04_T.csv", row.names = FALSE)
+
+##### Merge travel access metrics - Zip Code #####
+
+# Read in minimum distance access
+pharmacies_minDis_Z <- read.csv("data_final/Access04_Z.csv")
+head(pharmacies_minDis_Z)
+
+# Read in driving metrics, rename variables
+pharmacies_drive <- read.csv("code/Access Metrics - Health Resources/Zip Code/Driving/pharmacies_drive_zip.csv") %>%
+  rename(ZCTA = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(pharmacies_drive)
+
+# Merge
+pharmacies_accessZ <- left_join(pharmacies_drive, pharmacies_minDis_Z, by = "ZCTA")
+head(pharmacies_accessZ)
+
+pharmacies_accessZ <- pharmacies_accessZ %>% select(ZCTA, minDisRx, timeDrive, countDrive)
+
+head(pharmacies_accessZ)
+
+# Save file
+write.csv(pharmacies_accessZ, "data_final/Access04_Z.csv", row.names = FALSE)
+

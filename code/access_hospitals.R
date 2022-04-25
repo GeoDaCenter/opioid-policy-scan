@@ -92,7 +92,7 @@ tractCentroids <- st_centroid(tracts)
 head(tractCentroids)
 
 # Identify health center that is closest to tract centroid.  
-# Will return index, so then subset the fqhcs by the index to get the nearest hc. 
+# Will return index, so then subset the hospitalss by the index to get the nearest hc. 
 nearestHospital_index_tract <- st_nearest_feature(tractCentroids, hospitals.sf)
 nearestHospital_tract <- hospitals.sf[nearestHospital_index_tract, ]
 head(nearestHospital_tract)
@@ -122,5 +122,52 @@ write_sf(minDistZipsHosp_sf, "Policy_Scan/data_final/Access03_Z.csv")
 # Save tract file
 write_sf(minDistTractsHosp_sf, "Policy_Scan/data_final/Access03_T.csv")
 
+##### Merge travel access metrics - Tract #####
 
+setwd("~/git/opioid-policy-scan")
+
+# Read in minimum distance access
+hospitals_minDis_T <- read.csv("data_final/Access03_T.csv")
+head(hospitals_minDis_T)
+
+# Read in driving metrics, rename variables
+hospitals_drive <- read.csv("code/Access Metrics - Health Resources/Tract/Driving/hospitals_drive_tract.csv") %>%
+  rename(GEOID = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(hospitals_drive)
+
+# Merge
+hospitals_accessT <- left_join(hospitals_minDis_T, hospitals_drive, by = "GEOID")
+head(hospitals_accessT)
+
+hospitals_accessT <- hospitals_accessT %>% select(GEOID, minDisHosp, timeDrive, countDrive)
+head(hospitals_accessT)
+
+# Save file
+write.csv(hospitals_accessT, "data_final/Access03_T.csv", row.names = FALSE)
+
+##### Merge travel access metrics - Zip Code #####
+
+# Read in minimum distance access
+hospitals_minDis_Z <- read.csv("data_final/Access03_Z.csv")
+head(hospitals_minDis_Z)
+
+# Read in driving metrics, rename variables
+hospitals_drive <- read.csv("code/Access Metrics - Health Resources/Zip Code/Driving/hospitals_drive_zip.csv") %>%
+  rename(ZCTA = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(hospitals_drive)
+
+# Merge
+hospitals_accessZ <- left_join(hospitals_drive, hospitals_minDis_Z, by = "ZCTA")
+head(hospitals_accessZ)
+
+hospitals_accessZ <- hospitals_accessZ %>% select(ZCTA, minDisHosp, timeDrive, countDrive)
+
+head(hospitals_accessZ)
+
+# Save file
+write.csv(hospitals_accessZ, "data_final/Access03_Z.csv", row.names = FALSE)
 

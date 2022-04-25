@@ -140,4 +140,52 @@ write_sf(minDistZipsMH_sf, "Policy_Scan/data_final/Access05_Z.csv")
 # Save tract file
 write_sf(minDistTractsMH_sf, "Policy_Scan/data_final/Access05_T.csv")
 
+##### Merge travel access metrics - Tract #####
+
+setwd("~/git/opioid-policy-scan")
+
+# Read in minimum distance access
+mentalhealth_minDis_T <- read.csv("data_final/Access05_T.csv")
+head(mentalhealth_minDis_T)
+
+# Read in driving metrics, rename variables
+mentalhealth_drive <- read.csv("code/Access Metrics - Health Resources/Tract/Driving/mentalhealth_drive_tract.csv") %>%
+  rename(GEOID = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(mentalhealth_drive)
+
+# Merge
+mentalhealth_accessT <- left_join(mentalhealth_drive, mentalhealth_minDis_T, by = "GEOID")
+head(mentalhealth_accessT)
+
+mentalhealth_accessT <- mentalhealth_accessT %>% select(GEOID, minDisMH, timeDrive, countDrive)
+head(mentalhealth_accessT)
+
+# Save file
+write.csv(mentalhealth_accessT, "data_final/Access05_T.csv", row.names = FALSE)
+
+##### Merge travel access metrics - Zip Code #####
+
+# Read in minimum distance access
+mentalhealth_minDis_Z <- read.csv("data_final/Access05_Z.csv")
+head(mentalhealth_minDis_Z)
+
+# Read in driving metrics, rename variables
+mentalhealth_drive <- read.csv("code/Access Metrics - Health Resources/Zip Code/Driving/mentalhealth_drive_zip.csv") %>%
+  rename(ZCTA = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(mentalhealth_drive)
+
+# Merge
+mentalhealth_accessZ <- left_join(mentalhealth_drive, mentalhealth_minDis_Z, by = "ZCTA")
+head(mentalhealth_accessZ)
+
+mentalhealth_accessZ <- mentalhealth_accessZ %>% select(ZCTA, minDisMH, timeDrive, countDrive)
+
+head(mentalhealth_accessZ)
+
+# Save file
+write.csv(mentalhealth_accessZ, "data_final/Access05_Z.csv", row.names = FALSE)
 

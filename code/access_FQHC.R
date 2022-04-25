@@ -109,3 +109,51 @@ write_sf(HCminDistZips_sf, "Policy_Scan/data_final/Access02_Z.csv")
 
 # Save tracts
 write_sf(HCminDistTracts_sf, "Policy_Scan/data_final/Access02_T.csv")
+
+
+##### Merge travel access metrics - Tract #####
+
+setwd("~/git/opioid-policy-scan")
+
+# Read in minimum distance access
+fqhc_minDis_T <- read.csv("data_final/Access02_T.csv")
+
+# Read in driving metrics, rename variables
+fqhc_drive <- read.csv("code/Access Metrics - Health Resources/Tract/Driving/FQHC_drive_tract.csv") %>%
+  rename(GEOID = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+
+# Merge
+fqhc_accessT <- left_join(fqhc_drive, fqhc_minDis, by = "GEOID")
+
+fqhc_accessT <- fqhc_access %>% select(GEOID, minDisFQHC, timeDrive, countDrive)
+
+# Save file
+write.csv(fqhc_accessT, "data_final/Access02_T.csv", row.names = FALSE)
+
+##### Merge travel access metrics - Zip Code #####
+
+# Read in minimum distance access
+fqhc_minDis_Zip <- read.csv("data_final/Access02_Z.csv")
+head(fqhc_minDis_Zip)
+
+# Read in driving metrics, rename variables
+fqhc_drive <- read.csv("code/Access Metrics - Health Resources/Zip Code/Driving/FQHC_drive_zip.csv") %>%
+  rename(ZCTA = origin,
+         countDrive = count.within.30,
+         timeDrive = minutes)
+head(fqhc_drive)
+
+# Merge
+fqhc_accessZIP <- left_join(fqhc_drive, fqhc_minDis_Zip, by = "ZCTA")
+head(fqhc_accessZIP)
+
+fqhc_accessZIP <- fqhc_accessZIP %>% select(ZCTA, minDisFQHC, timeDrive, countDrive)
+
+head(fqhc_accessZIP)
+
+# Save file
+write.csv(fqhc_accessZIP, "data_final/Access02_Z.csv", row.names = FALSE)
+
+
