@@ -1,7 +1,7 @@
 **Meta Data Name**: Nearest Distance for Substance Use Treatment   
 **Added**: July 23, 2021  
 **Author**: Rachel Vigil  
-**Last Modified:** April 25, 2022, Susan Paykin
+**Last Modified:** April 25, 2022, by Susan Paykin
 
 ### Data Location: 
 Access06 - Access to Substance Use Treatment (SUT) Services at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
