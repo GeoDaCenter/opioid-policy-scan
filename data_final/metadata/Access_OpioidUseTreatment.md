@@ -1,25 +1,38 @@
-**Meta Data Name**: Nearest Distance for Opioid Use Treatment Providers  
-**Last Modified**: July 23, 2021  
+**Meta Data Name**: Access to Opioid Treatment Programs (OTP)  
+**Added**: July 23, 2021  
 **Author**: Rachel Vigil  
+**Last Modified**: April 25, 2022, Susan Paykin
 
 ### Data Location: 
-Access07 - Nearest euclidean distance from Opioid Use Treatment facilities to centroids of ZCTA areas. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
-* Access07_Z: Access at ZCTA level for contiguous US
-* Access07_T: Access at census tract level for contiguous US
+Access07 - Access to Opioid Treatment Programs (OTP) at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final).
+* Access07_Z
+* Access07_T
 
 
 ### Data Source(s) Description:  
-Variables were obtained from the SAMHSA service locator. The Opioid Treatment Programs (OTPs) represented in this set are those certified, either fully or provisionally by SAMHSA. Cetification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
-
+Variables were obtained from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). The OTPs represented in this set are those certified, either fully or provisionally by SAMHSA. Cetification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
 
 ### Description of Data Processing: 
-The following variable was calculated using minimum distance calculations using ZCTA and census tract centroids and locations of the substance use treatment centers.
-* Minimum distance from ZCTA or Census Tract centroid to a substance use treatement facility.
+
+#### Distance
+Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA and Census Tract geometries. For the nearest resource analysis, Euclidean distance* was calculated from the centroid of each tract/ZCTA to the nearest OTP location. 
+
+#### Travel Time and Count Within Threshold
+We calculated travel-network access metrics for the driving travel time to the nearest OTP location and count of OTPs within a 30 minute driving threshold. The driving travel cost matrices were sourced from [Project OSRM](http://project-osrm.org/) and are available at the Tract or ZCTA scales for mulitple transit modes via [this Box folder](https://uchicago.app.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as). This analysis was conducted in Python. The script is available in [code/Access Metrics - Health Resources](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/code/Access%20Metrics%20-%20Health%20Resources).
 
 ### Key Variable and Definitions:
+
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Minimum distance to opioid use treatment facility |minDist_OTP|Minimum Distance to Opioid use treatment facility in miles|
+| GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
+| ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
+| Distance to nearest OTP | minDisOTP | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles |
+| Driving time to nearest OTP | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes |
+| Count of OTPs | driveCount | Count of OTPs within a 30-minute driving threshold |
 
 ### Data Limitations:
-It is difficult to verify if all the treatement centers are still operational or offer certified and effective treatment. 
+*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+
+### Comments/Notes:
+This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
+
