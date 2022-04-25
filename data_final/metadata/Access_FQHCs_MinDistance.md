@@ -44,8 +44,6 @@ County and state-level variables include the **count** of Census tracts and the 
 | Count of FQHCs | driveCount | Count of FQHCs within a 30-minute driving threshold |
 
 #### County and State
-
-#### County and State
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
