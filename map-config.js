@@ -1254,7 +1254,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of buprenorphine provider",
     numerator: "Access01_CS_data",
     nProperty: "pctBupT",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1262,7 +1262,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of methadone provider",
     numerator: "Access01_CS_data",
     nProperty: "pctMetT",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1270,7 +1270,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of naltrexone provider",
     numerator: "Access01_CS_data",
     nProperty: "pctNalT",
-    binning: "quantileBreaks",
+    binning: "naturaleBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1306,7 +1306,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of FQHC",
     numerator: "Access02_CS_data",
     nProperty: "pctTimeDrive",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1341,7 +1341,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of hospital",
     numerator: "Access03_CS_data",
     nProperty: "pctTimeDrive",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1376,7 +1376,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of pharmacy",
     numerator: "Access04_CS_data",
     nProperty: "pctTimeDrive",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1411,7 +1411,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of mental health provider",
     numerator: "Access05_CS_data",
     nProperty: "pctTimeDrive",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
@@ -1446,7 +1446,7 @@ const variables = [
     variable: "County, State: % tracts within 30-min drive of SUT service",
     numerator: "Access06_CS_data",
     nProperty: "pctTimeDrive",
-    binning: "quantileBreaks",
+    binning: "naturalBreaks",
     numberOfBins: 4,
     colorScale: colors.colorbrewer.RdBu
   },
