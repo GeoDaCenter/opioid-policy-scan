@@ -3,6 +3,9 @@ import { useState, useEffect, useMemo } from 'react';
 import styles from "./VariablePanel.module.css";
 import { variables } from '../../meta/variables';
 
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+
 // import {
 //   Listbox,
 //   ListboxOption
@@ -48,6 +51,7 @@ export default function VariablePanel(props) {
   const [activeTheme, setActiveTheme] = useState(Object.keys(variables)[1])
   const filteredVars = useMemo(() => filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme),[activeTheme])
   const dispatch = useDispatch();
+  console.log(dataPresets.variables)
 
   useEffect(() => {
     const vars = filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme)
@@ -63,13 +67,13 @@ export default function VariablePanel(props) {
             : styles.hidden)
         }
       >
-        <p>Theme Select</p>
+        {/* <p>Theme Select</p>
         
         <Select
           options={themeCategories}
           value={activeTheme}
           onChange={({ option }) => setActiveTheme(option)}
-        />
+        /> */}
         {/* <Listbox
           value={activeTheme}
           onChange={(value) => setActiveTheme(value)}
@@ -82,12 +86,23 @@ export default function VariablePanel(props) {
           }
         </Listbox> */}
         <Gutter em={1}/>
-        <p>Variable Select</p>
+
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={dataPresets.variables}
+          getOptionLabel={(option) => option.variable}
+          groupBy={(option) => option.numerator}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Variable" />}
+          onChange={(_event, option) => dispatch({ type: "CHANGE_VARIABLE", payload: option.variable })}
+        />
+        {/* <p>Variable Select</p>
         <Select
           options={filteredVars.map(f => f.variable)}
           value={dataParams.variable}
           onChange={({ option }) => dispatch({ type: "CHANGE_VARIABLE", payload: option })}
-        />
+        /> */}
         {/* <Listbox
           value={dataParams.variable}
           onChange={(value) =>
