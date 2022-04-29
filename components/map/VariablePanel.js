@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 import styles from "./VariablePanel.module.css";
-import { variables } from '../../meta/variables';
+import { variables } from "../../meta/variables";
 
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 
 // import {
 //   Listbox,
@@ -13,9 +13,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import "@reach/listbox/styles.css";
 import { Select } from "grommet";
 
-import {
-  Gutter
-} from "../layout/Gutter";
+import { Gutter } from "../layout/Gutter";
 import RemoteMarkdownModal from "@components/markdown/RemoteMarkdownModal";
 
 const themeCategories = [
@@ -24,47 +22,59 @@ const themeCategories = [
   "Demographic Variables",
   "Economic Variables",
   "Physical Environment Variables",
-  "COVID-19 Variables"
-]
+  "COVID-19 Variables",
+];
 
 const filterVars = (list, themes, currTheme) => {
-  const keys = Object.values(themes)
-  const indices = Object.keys(themes)
-  const startIndex = +indices[keys.indexOf(currTheme)]
-  if (keys.indexOf(currTheme) === keys.length -1) {
-    return list.slice(startIndex,)
+  const keys = Object.values(themes);
+  const indices = Object.keys(themes);
+  const startIndex = +indices[keys.indexOf(currTheme)];
+  if (keys.indexOf(currTheme) === keys.length - 1) {
+    return list.slice(startIndex);
   } else {
     try {
-      const endIndex = +indices[keys.indexOf(currTheme)+1]
-      return list.slice(startIndex, endIndex)
+      const endIndex = +indices[keys.indexOf(currTheme) + 1];
+      return list.slice(startIndex, endIndex);
     } catch {
-      return list.slice(startIndex,)
+      return list.slice(startIndex);
     }
   }
-}
+};
 
 export default function VariablePanel(props) {
-  const dataParams = useSelector((state => state.dataParams));
+  const dataParams = useSelector((state) => state.dataParams);
   const currentData = useSelector((state) => state.currentData);
   const dataPresets = useSelector((state) => state.dataPresets);
-  const [activeDocs, setActiveDocs] = useState('')
-  const [activeTheme, setActiveTheme] = useState(Object.keys(variables)[1])
-  const filteredVars = useMemo(() => filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme),[activeTheme])
+  const [activeDocs, setActiveDocs] = useState("");
+  const [activeTheme, setActiveTheme] = useState(Object.keys(variables)[1]);
+  const filteredVars = useMemo(
+    () =>
+      filterVars(
+        dataPresets.variables,
+        dataPresets.style.variableHeaders,
+        activeTheme
+      ),
+    [activeTheme]
+  );
   const dispatch = useDispatch();
-  console.log(dataPresets.variables)
+  console.log(dataPresets.variables);
 
   useEffect(() => {
-    const vars = filterVars(dataPresets.variables, dataPresets.style.variableHeaders, activeTheme)
-    dispatch({ type: "CHANGE_VARIABLE", payload: vars[0].variable })
-  },[activeTheme])
+    const vars = filterVars(
+      dataPresets.variables,
+      dataPresets.style.variableHeaders,
+      activeTheme
+    );
+    dispatch({ type: "CHANGE_VARIABLE", payload: vars[0].variable });
+  }, [activeTheme]);
 
   return (
     <>
       <div
         className={
-          styles.panelContainer + " " + (props.open 
-            ? styles.open 
-            : styles.hidden)
+          styles.panelContainer +
+          " " +
+          (props.open ? styles.open : styles.hidden)
         }
       >
         {/* <p>Theme Select</p>
@@ -85,7 +95,7 @@ export default function VariablePanel(props) {
             </ListboxOption>)
           }
         </Listbox> */}
-        <Gutter em={1}/>
+        <Gutter em={1} />
 
         <Autocomplete
           disablePortal
@@ -95,7 +105,11 @@ export default function VariablePanel(props) {
           groupBy={(option) => option.numerator}
           sx={{ width: 300 }}
           renderInput={(params) => <TextField {...params} label="Variable" />}
-          onChange={(_event, option) => dispatch({ type: "CHANGE_VARIABLE", payload: option.variable })}
+          onChange={(_event, option) => {
+            if (option != undefined && option.variable != undefined) {
+              dispatch({ type: "CHANGE_VARIABLE", payload: option.variable });
+            }
+          }}
         />
         {/* <p>Variable Select</p>
         <Select
@@ -117,43 +131,83 @@ export default function VariablePanel(props) {
           )}
         </Listbox> */}
 
-        {dataPresets.data.length > 1 &&
-        <> 
-          <Gutter em={1}/>
-          <p>Geography Select</p>
-          {dataPresets.data.map(entry => 
-            <button onClick={() => dispatch({ type: "CHANGE_DATASET", payload: entry.geodata})} 
-              key={`geography-list-${entry.geodata}`} 
-              disabled={
-                !((dataParams.numerator in entry.tables)||dataParams.numerator==="properties")||currentData===entry.geodata
-              }
-              className={`${styles.pillButton} ${currentData===entry.geodata&&styles.activeButton}`}
-            >
-              {entry.name}
-            </button>
-          )}
-        </>}
+        {dataPresets.data.length > 1 && (
+          <>
+            <Gutter em={1} />
+            <p>Geography Select</p>
+            {dataPresets.data.map((entry) => (
+              <button
+                onClick={() =>
+                  dispatch({ type: "CHANGE_DATASET", payload: entry.geodata })
+                }
+                key={`geography-list-${entry.geodata}`}
+                disabled={
+                  !(
+                    dataParams.numerator in entry.tables ||
+                    dataParams.numerator === "properties"
+                  ) || currentData === entry.geodata
+                }
+                className={`${styles.pillButton} ${
+                  currentData === entry.geodata && styles.activeButton
+                }`}
+              >
+                {entry.name}
+              </button>
+            ))}
+          </>
+        )}
         <Gutter em={1} />
-        {dataParams.numerator ? <button 
-          className={styles.readMoreButton}
-          onClick={() => setActiveDocs(`https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${variables[activeTheme].find(f => f.markdownPrefix.includes(dataParams.numerator.split('_')[0])).markdown}.md`)}
+        {dataParams.numerator ? (
+          <button
+            className={styles.readMoreButton}
+            onClick={() =>
+              setActiveDocs(
+                `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${
+                  variables[activeTheme].find((f) =>
+                    f.markdownPrefix.includes(
+                      dataParams.numerator.split("_")[0]
+                    )
+                  ).markdown
+                }.md`
+              )
+            }
           >
-          Read more about this data 
-          <br/>
-          Dataset: <code>{dataParams.numerator.split('_')[0]}</code><br/>
-          Column: <code>{dataParams.nProperty}</code>
-        </button> : null}
-        {dataParams.denominator ? <button 
-          className={styles.readMoreButton}
-          onClick={() => setActiveDocs(`https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${variables[activeTheme].find(f => f.markdownPrefix.includes(dataParams.numerator.split('_')[0])).markdown}.md`)}
+            Read more about this data
+            <br />
+            Dataset: <code>{dataParams.numerator.split("_")[0]}</code>
+            <br />
+            Column: <code>{dataParams.nProperty}</code>
+          </button>
+        ) : null}
+        {dataParams.denominator ? (
+          <button
+            className={styles.readMoreButton}
+            onClick={() =>
+              setActiveDocs(
+                `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${
+                  variables[activeTheme].find((f) =>
+                    f.markdownPrefix.includes(
+                      dataParams.numerator.split("_")[0]
+                    )
+                  ).markdown
+                }.md`
+              )
+            }
           >
-          Read more about this data 
-          <br/>
-          Dataset: <code>{dataParams.denominator.split('_')[0]}</code><br/>
-          Column: <code>{dataParams.dProperty}</code>
-        </button> : null}
+            Read more about this data
+            <br />
+            Dataset: <code>{dataParams.denominator.split("_")[0]}</code>
+            <br />
+            Column: <code>{dataParams.dProperty}</code>
+          </button>
+        ) : null}
       </div>
-      {activeDocs.length ? <RemoteMarkdownModal url={activeDocs} reset={() => setActiveDocs(false)}/> : null}
+      {activeDocs.length ? (
+        <RemoteMarkdownModal
+          url={activeDocs}
+          reset={() => setActiveDocs(false)}
+        />
+      ) : null}
     </>
   );
 }
