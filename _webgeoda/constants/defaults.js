@@ -1,4 +1,9 @@
 import { dataPresets } from "../../map-config";
+import * as colors from "@webgeoda/utils/colors";
+
+const colorScale = typeof dataPresets?.variables[0]?.colorScale === "string"
+  ? colors.colorbrewer[dataPresets.variables[0].colorScale][dataPresets.variables[0].numberOfBins || 5]
+  : dataPresets.variables[0].colorScale;
 
 export const INITIAL_STATE = {
   storedGeojson: {},
@@ -20,12 +25,7 @@ export const INITIAL_STATE = {
   initialViewState: {},
   dataParams: {
     ...dataPresets.variables[0],
-    colorScale:
-    dataPresets.variables[0].colorScale?.length
-      ? dataPresets.variables[0].colorScale
-      : dataPresets.variables[0].colorScale[
-          dataPresets.variables[0].numberOfBins || 5
-        ]
+    colorScale
   },
   dataPresets: dataPresets,
   mapParams: {

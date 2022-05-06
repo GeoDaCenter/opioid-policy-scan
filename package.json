@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"node lib/watchSpec\" \"next dev\"",
     "build": "next build",
     "export": "next export",
+    "watch:spec": "node lib/watchSpec",
+    "build:spec": "node lib/buildSpec",
     "build:worker": "node _webgeoda/build-scripts/build-sw",
     "build:netlify": "node context && npm run build"
   },
@@ -49,14 +51,17 @@
   },
   "devDependencies": {
     "asciify-image": "^0.1.6",
+    "chokidar": "^3.5.3",
+    "concurrently": "^7.1.0",
     "cors": "^2.8.5",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.1",
     "eslint-plugin-react": "^7.24.0",
-    "papaparse": "^5.3.1",
+    "papaparse": "^5.3.2",
     "prettier": "2.3.1",
     "util": "^0.12.4",
     "workbox-build": "^6.1.5",
     "zlib": "^1.0.5"
-  }
+  },
+  "eslintIgnore": ["lib/*"]
 }
