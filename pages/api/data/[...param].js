@@ -3,9 +3,9 @@ import stateInfo from '../../../meta/stateInfo';
 import zipRange from '../../../meta/zipRange';
 import Cors from 'cors';
 import initMiddleware from '../../../lib/middleware';
-import keys from '../keys';
+// import keys from '../keys';
 // import gzipResponse from '../../../lib/gzip';
-
+const keys = ''
 const dataConversion = {
     county: "C",
     zip: "Z",
