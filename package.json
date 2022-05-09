@@ -63,5 +63,7 @@
     "workbox-build": "^6.1.5",
     "zlib": "^1.0.5"
   },
-  "eslintIgnore": ["lib/*"]
+  "eslintIgnore": [
+    "lib/*"
+  ]
 }

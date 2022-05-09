@@ -9,6 +9,8 @@ import {MapboxLayer} from '@deck.gl/mapbox';
 import MapboxGLMap from "react-map-gl";
 import { useDispatch, useSelector } from "react-redux";
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import Loader from "../layout/Loader";
 
 import { useViewport, useSetViewport } from '@webgeoda/contexts';
@@ -203,6 +205,11 @@ export default function MainMap() {
       <MapControls
         deck={deckRef}
       />
+      <div className={styles.attribution}>
+        <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener noreferrer">© Mapbox</a>
+        <a href="https://www.openstreetmap.org/about/" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>
+        <a href="https://www.mapbox.com/contribute/#/?owner=csds-hiplab&id=ckmuv80qn2b6o17ltels6z7ub&access_token=pk.eyJ1IjoiY3Nkcy1oaXBsYWIiLCJhIjoiY2tkcTdlYXNsMGRhNDJybXl1MWdpejdidSJ9.mgK9yXDfhFCLh5YQuz6r_g&utm_source=https%3A%2F%2Fchichives.com%2F&utm_medium=attribution_link&utm_campaign=referrer" target="_blank" rel="noopener noreferrer">Improve this Map</a>
+      </div>
     </div>
   );
 }

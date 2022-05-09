@@ -161,6 +161,14 @@ p.variableName {
   top: 0.5em;
   right: 0.5em;
 }
+@media (max-width:1199px){
+  .mapButtonContainer{
+    left:0.5em;
+    bottom:0.5em;
+    top:initial;
+    right:initial;
+  }
+}
 
 .mapButton {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -211,4 +219,14 @@ p.variableName {
   background:none;
   backdrop-filter: blur(2px);
   z-index:5;
+}
+.attribution {
+  position: fixed;
+  bottom:0;
+  right:.5em;
+  font-size:10px;
+}
+.attribution a {
+  color:rgba(0,0,0,0.5);
+  margin-left:5px;
 }
