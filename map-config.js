@@ -1,5 +1,8 @@
 import variables from './config/variables.json';
 
+const defaultVariable = "Opioid Mortality Rate";
+const defaultData = "US Counties";
+
 const data = [
   {
     name: 'US States', // Plain english name for dataset
@@ -629,5 +632,7 @@ let style = {
 export const dataPresets = {
   data,
   variables,
-  style
+  style,
+  defaultVariable,
+  defaultData
 };

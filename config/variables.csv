@@ -51,13 +51,13 @@ Traditional Medicaid Federal Spending,Policy,,PS07_data,TradFedExp,,,,quantileBr
 Traditional Medicaid State Spending,Policy,,PS07_data,TradSttExp,,,,naturalBreaks,8,Blues,
 Expansion Medicaid Federal Spending,Policy,,PS07_data,ExpnFedExp,,,,naturalBreaks,8,Blues,
 Expansion Medicaid State Spending,Policy,,PS07_data,ExpnSttExp,,,,naturalBreaks,8,Blues,
-Drug-Related Death Rate,Health,,Health01_data,rawDeathRt,,,,naturalBreaks,6,"Reds,",
-Opioid Mortality Rate,Health,,Health04_data,odMortRtAv,,,,naturalBreaks,5,"PuRd,",
-Opioid Prescription Rate,Health,,Health04_data,opPrscRt,,,,naturalBreaks,5,"PuRd,",
-HCV Infection Rate,Health,,Health02_1_data,State Rate,,,,naturalBreaks,8,"Reds,",
-HCV Mortality Rate,Health,,Health02_2_data,State Death Rate_2017,,,,naturalBreaks,8,"Reds,",
-Count of Primary Care Physicians (PCPs),Health,,Health03_data,pcp_total,,,,naturalBreaks,8,"Blues,",
-Count of Specialty Physicians,Health,,Health03_data,sp_total,,,,naturalBreaks,8,"YlGnBu,",
+Drug-Related Death Rate,Health,,Health01_data,rawDeathRt,,,,naturalBreaks,6,Reds,
+Opioid Mortality Rate,Health,,Health04_data,odMortRtAv,,,,naturalBreaks,5,PuRd,
+Opioid Prescription Rate,Health,,Health04_data,opPrscRt,,,,naturalBreaks,5,PuRd,
+HCV Infection Rate,Health,,Health02_1_data,State Rate,,,,naturalBreaks,8,Reds,
+HCV Mortality Rate,Health,,Health02_2_data,State Death Rate_2017,,,,naturalBreaks,8,Reds,
+Count of Primary Care Physicians (PCPs),Health,,Health03_data,pcp_total,,,,naturalBreaks,8,Blues,
+Count of Specialty Physicians,Health,,Health03_data,sp_total,,,,naturalBreaks,8,YlGnBu,
 Walking time (min) to nearest buprenorphine provider,Health,,MOUDWalkAccess_data,bupTimeWalk,,,,naturalBreaks,6,RdBu,true
 Walking time (min) to nearest methadone provider,Health,,MOUDWalkAccess_data,metTimeWalk,,,,naturalBreaks,6,RdBu,true
 Walking time (min) to nearest naltrexone provider,Health,,MOUDWalkAccess_data,nalTimeWalk,,,,naturalBreaks,6,RdBu,true

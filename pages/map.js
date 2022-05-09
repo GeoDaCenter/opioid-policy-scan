@@ -30,13 +30,13 @@ const oepsTheme = {
 
 const store = createStore(
   rootReducer,
-  // (
-  //   typeof window === 'object' 
-  //   && window.__REDUX_DEVTOOLS_EXTENSION__ 
-  //   && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-  // ) && window.__REDUX_DEVTOOLS_EXTENSION__({
-  //   stateSanitizer: (state) => state.storedGeojson ? { ...state, storedData: '<<EXCLUDED>>', storedGeojson: '<<EXCLUDED>>' } : state
-  // })
+  (
+    typeof window === 'object' 
+    && window.__REDUX_DEVTOOLS_EXTENSION__ 
+    && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ) && window.__REDUX_DEVTOOLS_EXTENSION__({
+    stateSanitizer: (state) => state.storedGeojson ? { ...state, storedData: '<<EXCLUDED>>', storedGeojson: '<<EXCLUDED>>' } : state
+  })
 );
 
 var geoda;

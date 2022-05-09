@@ -24,13 +24,14 @@ export default function reducer(state = INITIAL_STATE, action) {
         ...state.dataParams,
         ...action.payload.variableParams,
       };
-      if (typeof dataParams?.colorScale === "string") {
-        dataParams.colorScale = colors.colorbrewer[dataParams.colorScale]
-      }
-      const mapParams = {
+      let mapParams = {
         ...state.mapParams,
         ...action.payload.mapParams,
       };
+      if (typeof dataParams?.colorScale === "string") {
+        dataParams.colorScale = colors.colorbrewer[dataParams.colorScale]
+        mapParams.colorScale = colors.colorbrewer[dataParams.colorScale]
+      }
       const storedData = {
         ...state.storedData,
         ...action.payload.storedData,
@@ -140,6 +141,7 @@ export default function reducer(state = INITIAL_STATE, action) {
       const mapParams = {
         ...state.mapParams,
         ...action.payload,
+        colorScale: action.payload.colorScale || state.dataParams.colorScale
       };
       return {
         ...state,
