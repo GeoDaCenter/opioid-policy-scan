@@ -116,6 +116,7 @@ Variable constructs are grouped thematically below to highlight the multi-dimens
 | Native American Reservations | Percent area of total land in Native American Reservations | US Census TIGER/Line, 2018 | BE04 / [Community Overlays](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Overlay.md) | County | 
 | Residential Segregation Indices | Three index measures of segregation: dissimilarity, interaction, isolation | ACS, 2018 5-year | BE05 / [Residential Segregation](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Residential_Seg_Indices.md) | County, State, Zip |
 | NDVI |  Normalized Difference Vegetation Index (NDVI) average value | Sentinel-2 MSI, 2018 | BE06 / [NDVI](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/NDVI.md) | State, County, Tract, Zip |
+| Parks Coverage | Percent of land area covered by parks and green space | OSM, 2022 | BE07 / [Parks](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/data_final/metadata/Park_Cover.md) | State, County |
 
 
 <br>
