@@ -1,7 +1,7 @@
-**Meta Data Name**: Access to Pharmacies  
-**Added**: January 6, 2021  
-**Last Modified**: April 25, 2022  
-**Author**: Susan Paykin    
+**Meta Data Name**: Parks and Green Space Coverage
+**Added**: May 30, 2022
+**Last Modified**: May 30, 2022
+**Author**: Christian Villanueva  
 
 ### Data Location: 
 BE07 at 4 spatial scales. Files can be found [here](/data_final).
@@ -32,16 +32,7 @@ Data was collected from OpenStreetMap. The queries resulted in a series of polyg
 | Park Area | parkArea | Area (in square meters) of park or green space in a county |
 | Park Cover | cover | Percent of county covered by park or green space|
 
-#### State
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
-| STATEFP | ID for states | Unique 2-digit identifier for states| 
-| Count of tracts | cntT | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | cntTimeDrive | Number of tracts with pharmacy within a 30-min driving range |
-| Percent of tracts within 30-min driving range | pctTimeDrive | Percent of tracts with pharmacy within a 30-min driving range |
-| Average time drive to nearest pharmacy | avTimeDrive | Average driving time (minutes) across tracts in county/state to nearest pharmacy |
-
 ### Data Limitations:
 *Due to differences in geometry between OSM and census tigerlines, there are 2 counties with over 100% parks cover, both of which
+
 ### Comments/Notes:
