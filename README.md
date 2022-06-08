@@ -4,7 +4,7 @@
 # Opioid Environment Policy Scan (OEPS) Data Warehouse
 
 ## Public Site - OEPS Explorer
-Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
+Visualize, download, and explore OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
 
 ## About
 
