@@ -19,9 +19,10 @@ The OEPS is led by the [Healthy Regions and Policies Lab](https://voices.uchicag
 ### Citation
 Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
 
-## Data Overview
+### Wiki 
+We welcome open source contributions and feedback, including suggesting or contributing relevant data, application development, or sharing applied research. To learn more, visit the [OEPS Wiki](https://github.com/GeoDaCenter/opioid-policy-scan/wiki). 
 
-![](/images/oeps-diagram.png)
+## Data Overview
 
 Variable constructs are grouped thematically below to highlight the multi-dimensional risk environment of opioid use in justice populations. In the **Metadata** column, linked pages provide more detail about the data source, descriptions of data cleaning or processing, and individual variables included.
 
