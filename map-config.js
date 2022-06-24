@@ -338,6 +338,11 @@ const data = [
         type: 'characteristic',
         join: 'origin',
       },
+      MethAccess2022: {
+        file: 'meth_access_samhsa.csv',
+        type: 'characteristic',
+        join: 'origin',
+      },
       Access01_data: {
         file: 'Access01_T.csv',
         type: 'characteristic',
@@ -975,11 +980,16 @@ const variables = [
     reverse:true
   },
   {
+    variable: "Driving time (min) to nearest methadone provider (2022)",
+    numerator: "MethAccess2022",
+    nProperty: "minutes",
+    ...methadoneAccessTimePreset
+  },
+  {
     variable: "Driving time (min) to nearest methadone provider (2019)",
     numerator: "Access01_sub_data",
     nProperty: "metTime",
     ...methadoneAccessTimePreset
-
   },
   {
     variable: "Driving time (min) to nearest methadone provider (2017)",
