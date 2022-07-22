@@ -51,6 +51,9 @@ library(tigris)
 ## Variables from DP02
 # 1. disbP       DP02_0071P   Disability Status of the Civilian 
 #                             Noninstitutionalized Population (Percent Estimate)
+## This information is not available. 
+
+
 
 ### Educational Attainment 
 
