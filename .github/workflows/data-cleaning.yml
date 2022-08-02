@@ -1,4 +1,4 @@
-name: Data QA/QC
+name: Data Cleaning
 
 on:
   pull_request:
