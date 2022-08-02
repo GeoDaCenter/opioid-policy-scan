@@ -67,6 +67,10 @@ expectedColumnLengths = [
 
 
 def pad(x, length):
+    # For padding null string values represented as NA or NAN
+    if type(x) == str and ('na' in x or 'nan' in x):
+        return None
+
     try:
         if len(f"{x}") == length:
             return x
@@ -87,7 +91,7 @@ if __name__ == '__main__':
         if file.split('/')[-1] in ignore_files:
             continue
         
-        print(f"Processing {file}")
+        # print(f"Processing {file}")
         # Read the file
         # Use those types and read in to pandas
         raw = pd.read_csv(file, dtype={
@@ -97,6 +101,10 @@ if __name__ == '__main__':
             'GEOID':'str',
             'TRACTCE':'str'
         })
+        # remove white space leading values
+        raw = raw.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+        # replace all 'NA' string values
+        raw = raw.apply(lambda x: None if (x.dtype == "string" and x.str == 'NA') else x)
         
         # Find the join column based on the last character before the file extension
         try:
