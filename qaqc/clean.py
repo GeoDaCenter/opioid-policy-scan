@@ -144,3 +144,4 @@ if __name__ == '__main__':
             raw = raw.round(2)
 
         raw.round(2).to_csv(file, index=False)
+        print('Data cleaned - view warnings for skipped data.')
