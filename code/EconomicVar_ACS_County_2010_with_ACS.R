@@ -35,12 +35,18 @@ head(countyEcon10)
 countyEcon10$year <- c(2010)
 
 countyEcon10 <- countyEcon10 %>%
-  select(GEOID, variable, estimate) %>%
+  select(GEOID, NAME, variable, estimate) %>%
   spread(variable, estimate) %>%
   mutate(year = 2010) %>%
-  select('GEOID', 'year', 'Unemp')
+  select('GEOID', 'NAME', 'year', 'Unemp')
+
+# Change the column names
+
+colnames(countyEcon10) <- c('FIPS', 'NAME', 'year', 'Unemp')
+
+head(countyEcon10)
 
 
-## Saving the data
+# Save the data
 
 write.csv(countyEcon10, "~/Desktop/EC03_C_2010_DC_ACS.csv")
