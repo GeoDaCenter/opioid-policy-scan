@@ -20,12 +20,12 @@ library(tidyverse)
 ## Economic Variables
 
 ## Variables from DP03_0001P: Selected Economic Characteristics
-# 1. Unemp   DP03_0005P   Unemployment Rate in Civilian Labor Force (Percent)
+# 1. UnempP   DP03_0005P   Unemployment Rate in Civilian Labor Force (Percent)
 
 
 # Download the Economic Variable
 
-countyEcon10 <- get_acs(geography = 'county', variables = c(Unemp = "DP03_0005P"), 
+countyEcon10 <- get_acs(geography = 'county', variables = c(UnempP = "DP03_0005P"), 
                    year = 2010, geometry = FALSE)
 
 head(countyEcon10)
@@ -38,11 +38,11 @@ countyEcon10 <- countyEcon10 %>%
   select(GEOID, NAME, variable, estimate) %>%
   spread(variable, estimate) %>%
   mutate(year = 2010) %>%
-  select('GEOID', 'NAME', 'year', 'Unemp')
+  select('GEOID', 'NAME', 'year', 'UnempP')
 
 # Change the column names
 
-colnames(countyEcon10) <- c('FIPS', 'NAME', 'year', 'Unemp')
+colnames(countyEcon10) <- c('FIPS', 'NAME', 'year', 'UnempP')
 
 head(countyEcon10)
 
