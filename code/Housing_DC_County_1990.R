@@ -20,7 +20,7 @@ library(dplyr)
 
 # Read the data
 
-countyHouse90 <- read_csv("~/Desktop/Task 2/1990/Housing_1990_County.csv") %>%
+countyHouse90 <- read_csv("~/Desktop/Task 2/1990/Housing_DC_1990_County.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T054_001, SE_T054_002, SE_T054_003)
 
 # Rename the columns

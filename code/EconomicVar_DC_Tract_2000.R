@@ -34,7 +34,7 @@ library(dplyr)
 
 # Read the data
 
-tractEcon2000 <- read_csv("~/Desktop/Task 2/2000/EconomicVar_2000_Tract.csv") %>%
+tractEcon2000 <- read_csv("~/Desktop/Task 2/2000/EconomicVar_DC_2000_Tract.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T071_001, SE_T071_003, SE_T145_001,
                 RC2000SF3_RC2000SF3_008_P087001, RC2000SF3_RC2000SF3_008_P087002)
                 

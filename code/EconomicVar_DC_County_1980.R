@@ -28,7 +28,7 @@ library(dplyr)
 
 # Read the data
 
-countyEcon80 <- read_csv("~/Desktop/Task 2/1980/EconomicVar_1980_County.csv") %>%
+countyEcon80 <- read_csv("~/Desktop/Task 2/1980/EconomicVar_DC_1980_County.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T041_001, SE_T041_003, SE_T082_001,
                 SE_T082_003)
                 

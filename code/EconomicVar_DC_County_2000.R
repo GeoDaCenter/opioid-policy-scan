@@ -19,11 +19,6 @@ library(dplyr)
 #                          (Estimate)
 # 2. Unemp   SE_T071_003   Unemployed (Estimate)
 
-## Per Capita Income
-
-## Variables from SE:T145: Per Capita Income in 1999 Dollars
-# 1. pciE    SE_T145_001   Per Capita Income in 1999 Dollars (Estimate)
-
 ## Poverty Status
 
 ## Variables from RC2000SF3:P87: Poverty Status in 1999 by Age
@@ -34,15 +29,14 @@ library(dplyr)
 
 # Read the data
 
-countyEcon2000 <- read_csv("~/Desktop/Task 2/2000/EconomicVar_2000_County.csv") %>%
-  dplyr::select(Geo_QName, Geo_FIPS, SE_T071_001, SE_T071_003, SE_T145_001,
+countyEcon2000 <- read_csv("~/Desktop/Task 2/2000/EconomicVar_DC_2000_County.csv") %>%
+  dplyr::select(Geo_QName, Geo_FIPS, SE_T071_001, SE_T071_003,
                 RC2000SF3_RC2000SF3_008_P087001, RC2000SF3_RC2000SF3_008_P087002)
                 
 
 # Rename the columns
 
-colnames(countyEcon2000) = c("NAME", "FIPS", "labor", "Unemp", "pciE", "totPopE",
-                          "pov")
+colnames(countyEcon2000) = c("NAME", "FIPS", "labor", "Unemp", "totPopE", "pov")
                           
 
 # Create a column for year
@@ -56,7 +50,7 @@ head(countyEcon2000)
 
 countyEcon2000P <- countyEcon2000 %>%
   dplyr::mutate(UnempP = round(Unemp/labor*100, 2), povP = round(pov/totPopE*100, 2)) %>%
-                  select('NAME', 'FIPS', 'year', 'povP', 'UnempP', 'pciE') 
+                  select('NAME', 'FIPS', 'year', 'povP', 'UnempP') 
  
 head(countyEcon2000P)
 

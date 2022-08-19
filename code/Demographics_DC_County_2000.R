@@ -62,7 +62,7 @@ library(dplyr)
 
 # Read the data
 
-countyDem2000 <- read_csv("~/Desktop/Task 2/2000/Demographics_2000_County.csv") %>%
+countyDem2000 <- read_csv("~/Desktop/Task 2/2000/Demographics_DC_2000_County.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T013_001, SE_T013_003, SE_T013_004, 
                 SE_T013_010, SE_T009_002, SE_T009_003, SE_T009_004, SE_T009_005,
                 SE_T009_012, SE_T009_013, SE_T009_014, SE_T009_015, SE_T009_016, 
@@ -97,10 +97,13 @@ countyDem2000P <- countyDem2000 %>%
                 age50_64P = round((age50_54 + age55_59 + age60_61 + age62_64)/totPopE*100, 2),
                 ovr65P = round((age65_66 + age67_69 + age70_74 + age75_79 +
                                   age80_84 + ageOv85)/totPopE*100, 2),
-                noHSP = round(eduNoHS/popOver25*100, 2)) %>%
+                noHSP = round(eduNoHS/popOver25*100, 2),
+                disbP = round(disb/totPopE*100, 2),
+                VetPercent = round(TotVetPop/totPopE*100, 2)) %>%
                   select('NAME', 'FIPS', 'year', 'totPopE', 'whiteP', 'blackP', 'hispanicP',
-                         'und18P', 'age35_49P', 'age50_64P', 'ovr65P', 'TotVetPop', 'noHSP', 'disb') 
- 
+                         'und18P', 'age35_49P', 'age50_64P', 'ovr65P', 'VetPercent', 'noHSP', 'disbP') 
+
+
 head(countyDem2000P)
 
 # Save the data

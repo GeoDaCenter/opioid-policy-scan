@@ -76,7 +76,7 @@ library(dplyr)
 
 # Read the data
 
-tractDem90 <- read_csv("~/Desktop/Task 2/1990/Demographics_1990_Tract.csv") %>%
+tractDem90 <- read_csv("~/Desktop/Task 2/1990/Demographics_DC_1990_Tract.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T012_001, SE_T012_003, SE_T012_004,
                 SE_T012_008, RC1990SF1_RC1990SF1_001_P011_002,
                 RC1990SF1_RC1990SF1_001_P011_003, RC1990SF1_RC1990SF1_001_P011_004, 
@@ -126,9 +126,11 @@ tractDem90P <- tractDem90 %>%
                 age35_49P = round((age35_39 + age40_44 + age45_49)/totPopE*100, 2),
                 age50_64P = round((age50_54 + age55_59 + age60_61 + age62_64)/totPopE*100, 2),
                 ovr65P = round((age65_69 + age70_74 + age75_79 + age80_84 + ageOv85)/totPopE*100, 2),
-                noHSP = round(eduNoHS/popOver25*100, 2), disb = (disbMale + disbFem)) %>%
+                noHSP = round(eduNoHS/popOver25*100, 2),
+                disbP = round((disbMale + disbFem)/totPopE*100, 2),
+                VetPercent = round(TotVetPop/totPopE*100, 2)) %>%
                   select('NAME', 'FIPS', 'year', 'totPopE', 'whiteP', 'blackP', 'hispanicP',
-                         'und18P', 'age35_49P', 'age50_64P', 'ovr65P', 'TotVetPop', 'noHSP', 'disb') 
+                         'und18P', 'age35_49P', 'age50_64P', 'ovr65P', 'VetPercent', 'noHSP', 'disbP') 
  
 head(tractDem90P)
 

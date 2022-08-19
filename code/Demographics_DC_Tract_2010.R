@@ -59,7 +59,7 @@ library(dplyr)
 
 # Read the data
 
-tractDem10 <- read_csv("~/Desktop/Task 2/2010/Demographics_2010_Tract.csv") %>%
+tractDem10 <- read_csv("~/Desktop/Task 2/2010/Demographics_DC_2010_Tract.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SF1_P0050001, SF1_P0050003, SF1_P0050004,
                 SF1_P0050010, SF1_P0120003, SF1_P0120004, SF1_P0120005,
                 SF1_P0120006, SF1_P0120013, SF1_P0120014, SF1_P0120015, 

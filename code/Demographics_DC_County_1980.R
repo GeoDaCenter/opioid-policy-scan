@@ -43,7 +43,7 @@ library(dplyr)
 
 # Read the data
 
-countyDem80 <- read_csv("~/Desktop/Task 2/1980/Demographics_1980_County.csv") %>%
+countyDem80 <- read_csv("~/Desktop/Task 2/1980/Demographics_DC_1980_County.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SE_T013_001, SE_T013_003, SE_T013_004, 
                 SE_T013_007, SE_T007_002, SE_T007_003, SE_T007_004, SE_T007_005,
                 SE_T007_011, SE_T007_012, SE_T007_013, SE_T029_001, SE_T029_002,
@@ -70,9 +70,10 @@ countyDem80P <- countyDem80 %>%
                 hispanicP = round(hispanic/totPopE*100, 2), 
                 und18P = round((age0_4 + age5_9 + age10_14 + age15_17)/totPopE*100, 2), 
                 ovr65P = round((age65_74 + age75_84 + ageOv85)/totPopE*100, 2),
-                noHSP = round(eduNoHS/popOver25*100, 2)) %>%
+                noHSP = round(eduNoHS/popOver25*100, 2),
+                vetPercent = round(TotVetPop/totPopE*100, 2)) %>%
                   select('NAME', 'FIPS', 'year', 'totPopE', 'whiteP', 'blackP', 'hispanicP',
-                         'und18P', 'ovr65P', 'TotVetPop', 'noHSP') 
+                         'und18P', 'ovr65P', 'vetPercent', 'noHSP') 
  
 head(countyDem80P)
 

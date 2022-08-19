@@ -8,6 +8,7 @@ library(sf)
 library(tidyverse)
 library(dplyr)
 
+
 # Demographic Variables from Summary File 1 (SF)
 
 ## Race and Ethnicity
@@ -59,7 +60,7 @@ library(dplyr)
 
 # Read the data
 
-countyDem10 <- read_csv("~/Desktop/Task 2/2010/Demographics_2010_County.csv") %>%
+countyDem10 <- read_csv("~/Desktop/Task 2/2010/Demographics_DC_2010_County.csv") %>%
   dplyr::select(Geo_QName, Geo_FIPS, SF1_P0050001, SF1_P0050003, SF1_P0050004,
                 SF1_P0050010, SF1_P0120003, SF1_P0120004, SF1_P0120005,
                 SF1_P0120006, SF1_P0120013, SF1_P0120014, SF1_P0120015, 
@@ -113,6 +114,7 @@ countyDem10P <- countyDem10 %>%
                          'und18P', 'age35_49P', 'age50_64P', 'ovr65P') 
  
 head(countyDem10P)
+
 
 # Save the data
 
