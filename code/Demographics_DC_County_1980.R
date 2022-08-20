@@ -71,9 +71,9 @@ countyDem80P <- countyDem80 %>%
                 und18P = round((age0_4 + age5_9 + age10_14 + age15_17)/totPopE*100, 2), 
                 ovr65P = round((age65_74 + age75_84 + ageOv85)/totPopE*100, 2),
                 noHSP = round(eduNoHS/popOver25*100, 2),
-                vetPercent = round(TotVetPop/totPopE*100, 2)) %>%
+                VetPercent = round(TotVetPop/totPopE*100, 2)) %>%
                   select('NAME', 'FIPS', 'year', 'totPopE', 'whiteP', 'blackP', 'hispanicP',
-                         'und18P', 'ovr65P', 'vetPercent', 'noHSP') 
+                         'und18P', 'ovr65P', 'VetPercent', 'noHSP') 
  
 head(countyDem80P)
 
