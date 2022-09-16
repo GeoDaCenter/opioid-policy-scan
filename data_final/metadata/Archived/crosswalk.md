@@ -3,7 +3,7 @@
 **Author**: Qinyun Lin  
 
 ### Data Location: 
-Four crosswalk files can be found [here](/data_final/crosswalk).
+Four crosswalk files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/main/data_final/geometryFiles/crosswalk).
 
 * ZIP_COUNTY
 * ZIP_TRACT
