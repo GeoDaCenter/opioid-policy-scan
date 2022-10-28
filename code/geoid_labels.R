@@ -1,3 +1,9 @@
+##### Set up #####
+
+# Code by: Susan Paykin
+# Date: October 2022
+
+# Libraries
 library(tidyverse)
 library(data.table)
 library(purrr)
@@ -7,9 +13,12 @@ library(sf)
 # Set WD
 setwd("~/git/opioid-policy-scan/data_final")
 
+# Note: We need to edit the var IDs by spatial scale, because they are differently labeled for each.
+# We'll start with state-level data, then move to county, then zip code, then tract.  
+
 ##### States ##### 
 
-# Read in all CSVs 
+# Read in all state CSVs.
 state_files <- 
   list.files(pattern = "*_S.csv", full.names = FALSE)
 statesDf <- lapply(state_files, read.csv)
@@ -17,10 +26,6 @@ statesDf <- lapply(state_files, read.csv)
 #Rename dataframes 
 names(statesDf) <- gsub(".csv","", state_files)
 
-# names(statesDf) <- gsub(".csv","",
-#                         list.files("data_final/", pattern = "*_S.csv",
-#                                    full.names = FALSE),
-#                                    fixed = TRUE)
 # Add leading zero to FIPS
 statesdf2 <- 
   Map(function(i, y) {
