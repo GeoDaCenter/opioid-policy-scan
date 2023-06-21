@@ -10,7 +10,7 @@ library(sf)
 library(tidyverse)
 
 
-#census_api_key("9cd7bfa4819ef1c36ca81f52c8a0796dfd2ce2bf", install = TRUE)
+#census_api_key([API_KEY_HERE], install = TRUE)
 
 ## initialize variables
 
