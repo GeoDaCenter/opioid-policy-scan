@@ -1,3 +1,9 @@
+# Author: Ashlynn Wimer
+# Date: July 11th, 2023
+# About: This R Script takes in 1980 county level census data and runs a population
+# weighted interpolation using tidycensus::interpolate_pw to transform them to
+# 2010 county shapes. The population weights used are at the 1980 county
+# subdivision level. 
 
 # Libraries
 library(dplyr)
@@ -6,7 +12,7 @@ library(tidycensus)
 library(sf)
 
 # If running in RStudio, uncomment this
-setwd(getSrcDirectory(function(){})[1])
+# setwd(getSrcDirectory(function(){})[1])
 
 
 # Import Data
@@ -84,9 +90,7 @@ cnty1980 <- cnty1980 |>
   merge(cnty_data, by="GISJOIN") |>
   st_transform(st_crs(cnty2010))
 
-# Create GEOID column
 print("Final preparation before interpolating..")
-
 cnty2010$GEOID <- paste(
   str_pad(cnty2010$STATEFP10, width=2, side='left', pad='0'),
   str_pad(cnty2010$COUNTYFP10, width=3, side='left', pad='0'),
@@ -97,7 +101,6 @@ cnty2010 <- cnty2010 |>
   select(GISJOIN, GEOID, NAME10)
 
 # Create population weights
-
 pop_weights <- cntySbdv1980 |>
   merge(cntySbdv_pop_data, by='GISJOIN') |>
   st_transform(st_crs(cnty2010)) |>
@@ -105,7 +108,6 @@ pop_weights <- cntySbdv1980 |>
 
 # Run the interpolation algorithm
 print("Interpolating!")
-
 cnty1980_on_2010 <- interpolate_pw(
   from = cnty1980,
   to = cnty2010,
@@ -116,8 +118,11 @@ cnty1980_on_2010 <- interpolate_pw(
   weight_placement = 'surface'
 )
 
+# Filter out PR data
+# Alaska NAs are left in for posterity.
 cnty1980_on_2010 <- cnty1980_on_2010 |> 
   filter(substr(GEOID, start=1, stop=2) != "72") |>
   st_drop_geometry()
 
+# Save
 write.csv(cnty1980_on_2010, "../data_raw/nhgis/1980InterpolatedDataCounty.csv")

@@ -1,8 +1,18 @@
+# Author: Ashlynn Wimer
+# Date: July 12, 2023
+# About: This R script takes in interpolated county level data generated in prior
+# scripts and transforms them into the final DS01 tables.
+
+# Libraries
 library(dplyr)
 library(stringr)
 
+### 1980 Data ###
+
+# Load data
 cnty1980_on_2010 <- read.csv('../data_raw/nhgis/1980InterpolatedDataCounty.csv')
 
+# Transform
 cnty1980_on_2010 <- cnty1980_on_2010 |>
   mutate(
     Age15_24P = round(100 * (age15_19 + age20_24) / totPop, 2),
@@ -36,10 +46,15 @@ cnty1980_on_2010 <- cnty1980_on_2010 |>
     OtherP,   NoHSP
   )
 
-write.csv(cnty1980_on_2010, "../data_final/DS01_C_1980_NHGIS.csv")
+# Save
+write.csv(cnty1980_on_2010, "../data_final/DS01_C_1980_NHGIS.csv", row.names = FALSE)
 
+### 1990 Data ###
+
+# Load data
 cnty1990_on_2010 <- read.csv("../data_raw/nhgis/1990InterpolatedCounties.csv")
 
+# Transform
 cnty1990_on_2010 <- cnty1990_on_2010 |>
   mutate(
     Age15_24P = round(100 * (age15_19 + age20_24) / totPop, 2), 
@@ -75,12 +90,15 @@ cnty1990_on_2010 <- cnty1990_on_2010 |>
     AsianP,    PacIsP,    OtherP,   NoHSP
   )
 
-write.csv(cnty1990_on_2010, "../data_final/DS01_C_1990_NHGIS.csv")
+# Save
+write.csv(cnty1990_on_2010, "../data_final/DS01_C_1990_NHGIS.csv", row.names = FALSE)
 
+### 2000 Data ###
 
+# Load data
 county_2000_2010 <- read.csv("../data_raw/nhgis/2000DataInterpolatedCounty.csv")
-names(county_2000_2010)
-# Transform into DS01 variables
+
+# Transform
 county_2000_2010 <- county_2000_2010 |>
   mutate(
     Age15_24P = round(100 * (age15_19 + age20_24) / totPop, 2), 
@@ -118,4 +136,5 @@ county_2000_2010 <- county_2000_2010 |>
     DisbP
   )
 
-write.csv(county_2000_2010, "../data_final/DS01_C_2000_NHGIS.csv")
+# Save
+write.csv(county_2000_2010, "../data_final/DS01_C_2000_NHGIS.csv", row.names = FALSE)

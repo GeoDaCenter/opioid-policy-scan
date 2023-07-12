@@ -1,3 +1,8 @@
+# Author: Ashlynn Wimer
+# Date: July 5th, 2023
+# About: This R Script takes in 2000 county level census data and runs a population
+# weighted interpolation using tidycensus::interpolate_pw to transform them to
+# 2010 county shapes. The population weights originate from the 2000 census tracts.
 
 # Libraries
 library(dplyr)
@@ -6,7 +11,7 @@ library(tidycensus)
 library(sf)
 
 # If running in RStudio, uncomment this
-setwd(getSrcDirectory(function(){})[1])
+# setwd(getSrcDirectory(function(){})[1])
 
 
 # Import Data
@@ -93,12 +98,14 @@ cnty2000 <- cnty2000 |>
   merge(cnty_data, by='GISJOIN') |>
   st_transform(st_crs(cnty2010))
 
+# Make population weights.
 pop_weights <- trct2000 |>
   merge(trct_demos, by="GISJOIN") |>
   select(GISJOIN, FL5001) |>
   rename(totPop = FL5001) |>
   st_transform(st_crs(cnty2010))
 
+# Interpolate
 cnty2000_on_2010 <- interpolate_pw(
   from = cnty2000,
   to = cnty2010,
@@ -109,11 +116,13 @@ cnty2000_on_2010 <- interpolate_pw(
   weight_placement = 'surface'
 )
 
+# Clean result
 cnty2000_on_2010 <- cnty2000_on_2010 |>
   rename(GEOID = GEOID10) |>
   filter(substr(GEOID, start=1, stop=2) !="72") |>
   st_drop_geometry()
 
+# Save
 write.csv(
   cnty2000_on_2010, 
   "../data_raw/nhgis/2000DataInterpolatedCounty.csv", row.names=FALSE

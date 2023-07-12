@@ -1,3 +1,9 @@
+# Author: Ashlynn Wimer
+# Date: July 5th, 2023
+# About: This R Script takes in 1990 county level census data and runs a population
+# weighted interpolation using tidycensus::interpolate_pw to transform them to
+# 2010 county shapes. The population weights originate from the 1990 census tracts.
+
 
 # Libraries
 library(dplyr)
@@ -6,7 +12,7 @@ library(tidycensus)
 library(sf)
 
 # If running in RStudio, uncomment this
-setwd(getSrcDirectory(function(){})[1])
+# setwd(getSrcDirectory(function(){})[1])
 
 
 # Import Data
