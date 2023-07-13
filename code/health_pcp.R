@@ -39,8 +39,8 @@ pcp_county <- pcp_raw %>%
 
 # Tract
 pcp_tract <- pcp_raw %>%
-  mutate(geoid = paste0(pcp_raw$STATE, pcp_raw$COUNTY, pcp_raw$TRACT)) %>%
-  select(geoid, state = STATE, county = COUNTY, tract = TRACT, pcp_total = TG_DOC, sp_total = TS_DOC)
+  mutate(GEOID = paste0(pcp_raw$COUNTY, pcp_raw$TRACT, sep="")) %>%
+  select(GEOID, state = STATE, county = COUNTY, tract = TRACT, pcp_total = TG_DOC, sp_total = TS_DOC)
 
 #### SAVE DATA ----
 
