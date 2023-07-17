@@ -1,0 +1,221 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0020_ds151_2000_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: Census Tract (by State--County)
+Dataset:          2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+   NHGIS code:    2000_SF3a
+   NHGIS ID:      ds151
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Population 25 Years and Over by Sex by Educational Attainment
+   Universe:    Persons 25 Years and Over
+   Source code: NP037C
+   NHGIS code:  GKT
+ 
+2. Total Disabilities Tallied
+   Universe:    Total Disabilities Tallied for Civilian Noninstitutionalized Persons 5 Years and Over with Disabilities
+   Source code: NP041A
+   NHGIS code:  GLD
+ 
+3. Population 16 Years and Over by Sex by Employment Status
+   Universe:    Civilian Persons 16 Years and Over in Labor Force
+   Source code: NP043E
+   NHGIS code:  GLR
+ 
+4. Per Capita Income in 1999
+   Universe:    Persons
+   Source code: NP082A
+   NHGIS code:  GNW
+ 
+5. Poverty Status in 1999
+   Universe:    Persons for Whom Poverty Status Is Determined
+   Source code: NP087B
+   NHGIS code:  GN6
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      File Identification
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    FIPS County Subdivion Class Code
+        PLACEA:      Place Code
+        PLACECC:     FIPS Place Class Code
+        PLACEDC:     Place Description Code
+        TRACTA:      Census Tract Code
+        TRBL_CTA:    Tribal Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        TRBL_BGA:    Tribal Block Group Code
+        C_CITYA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIANHHCC:    FIPS American Indian Area/Alaska Native Area/Hawaiian Home Land Class Code
+        AITSCE:      American Indian Tribal Subdivision (Census)
+        TRBL_SUBA:   Tribal Subdivision Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        MACCI:       Metropolitan Area Central City Indicator
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        NECMAA:      New England County Metropolitan Area Code
+        NECMACCI:    New England County Metropolitan Area Central City Indicator
+        URB_AREAA:   Urban Area Code
+        UATYPE:      Urban Area Type
+        URBRURALA:   Urban/Rural Code
+        CD106A:      Congressional District (106th) Code
+        CD108A:      Congressional District (108th) Code
+        CD109A:      Congressional District (109th) Code
+        ZIP3A:       3-Digit ZIP Code Tabulation Area Code
+        ZCTAA:       5-Digit ZIP Code Tabulation Area Code
+        AREALAND:    Area (Land)
+        AREAWATR:    Area (Water)
+        NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (Latitude)
+        INTPLON:     Internal Point (Longitude)
+        LSADC:       Legal/Statistical Area Description Code
+        MACC:        Metropolitan Area Central City
+        UACP:        Urban Area Central Place
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Population 25 Years and Over by Sex by Educational Attainment
+    Universe:    Persons 25 Years and Over
+    Source code: NP037C
+    NHGIS code:  GKT
+        GKT001:      Male >> No schooling completed
+        GKT002:      Male >> Nursery to 4th grade
+        GKT003:      Male >> 5th and 6th grade
+        GKT004:      Male >> 7th and 8th grade
+        GKT005:      Male >> 9th grade
+        GKT006:      Male >> 10th grade
+        GKT007:      Male >> 11th grade
+        GKT008:      Male >> 12th grade, no diploma
+        GKT009:      Male >> High school graduate (includes equivalency)
+        GKT010:      Male >> Some college, less than 1 year
+        GKT011:      Male >> Some college, 1 or more years, no degree
+        GKT012:      Male >> Associate degree
+        GKT013:      Male >> Bachelor's degree
+        GKT014:      Male >> Master's degree
+        GKT015:      Male >> Professional school degree
+        GKT016:      Male >> Doctorate degree
+        GKT017:      Female >> No schooling completed
+        GKT018:      Female >> Nursery to 4th grade
+        GKT019:      Female >> 5th and 6th grade
+        GKT020:      Female >> 7th and 8th grade
+        GKT021:      Female >> 9th grade
+        GKT022:      Female >> 10th grade
+        GKT023:      Female >> 11th grade
+        GKT024:      Female >> 12th grade, no diploma
+        GKT025:      Female >> High school graduate (includes equivalency)
+        GKT026:      Female >> Some college, less than 1 year
+        GKT027:      Female >> Some college, 1 or more years, no degree
+        GKT028:      Female >> Associate degree
+        GKT029:      Female >> Bachelor's degree
+        GKT030:      Female >> Master's degree
+        GKT031:      Female >> Professional school degree
+        GKT032:      Female >> Doctorate degree
+ 
+    Table 2:     Total Disabilities Tallied
+    Universe:    Total Disabilities Tallied for Civilian Noninstitutionalized Persons 5 Years and Over with Disabilities
+    Source code: NP041A
+    NHGIS code:  GLD
+        GLD001:      Total
+ 
+    Table 3:     Population 16 Years and Over by Sex by Employment Status
+    Universe:    Civilian Persons 16 Years and Over in Labor Force
+    Source code: NP043E
+    NHGIS code:  GLR
+        GLR001:      Male >> Employed
+        GLR002:      Male >> Unemployed
+        GLR003:      Female >> Employed
+        GLR004:      Female >> Unemployed
+ 
+    Table 4:     Per Capita Income in 1999
+    Universe:    Persons
+    Source code: NP082A
+    NHGIS code:  GNW
+        GNW001:      Per capita income in 1999
+ 
+    Table 5:     Poverty Status in 1999
+    Universe:    Persons for Whom Poverty Status Is Determined
+    Source code: NP087B
+    NHGIS code:  GN6
+        GN6001:      Income in 1999 below poverty level
+        GN6002:      Income in 1999 at or above poverty level
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 17.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2022. 
+        http://doi.org/10.18128/D050.V17.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

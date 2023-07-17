@@ -85,7 +85,7 @@ head(stateVet10P)
 
 ## Saving the data
 
-write.csv(stateDem10P, "~/Desktop/DS04_S_2010.csv")
+write.csv(stateVet10P, "~/Desktop/DS04_S_2010.csv")
 
 
 # County level
