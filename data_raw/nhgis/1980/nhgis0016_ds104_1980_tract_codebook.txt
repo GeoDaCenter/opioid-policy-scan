@@ -1,0 +1,221 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0016_ds104_1980_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1980
+Geographic level: Census Tract (by State--County)
+Dataset:          1980 Census: STF 1 - 100% Data
+   NHGIS code:    1980_STF1
+   NHGIS ID:      ds104
+Breakdown(s):     Geographic Subarea:
+                     Total area (0000)
+ 
+Tables:
+ 
+1. Persons
+   Universe:    Persons
+   Source code: NT1A
+   NHGIS code:  C7L
+ 
+2. Race
+   Universe:    Persons
+   Source code: NT7
+   NHGIS code:  C9D
+ 
+3. Spanish Origin
+   Universe:    Persons
+   Source code: NT8
+   NHGIS code:  C9E
+ 
+4. Age
+   Universe:    Persons
+   Source code: NT10A
+   NHGIS code:  C67
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        FSTATUS:     Functional Status Code
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        SMSAA:       Standard Metropolitan Statistical Area Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        BLOCKA:      Block Code
+        EDINDA:      Enumeration District Indicator Code
+        ENUMDISTA:   Enumeration District Code
+        SCSAA:       Standard Consolidated Statistical Area Code
+        URB_AREAA:   Urban Area Code
+        CDA:         Congressional District Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        MCDSEQNO:    MCD Sequence Number
+        SEA:         State Economic Area (SEA)
+        UATYPE:      Urbanized Area (UA) Type
+        PLACDESC:    Place Description
+        CBD:         Central Business District (CBD)
+        INDSUBR:     Indian Subreservation
+        LONGITUD:    Longitude
+        LATITUDE:    Latitude
+        LANDAREA:    Land Area (square kilometers to the nearest tenth)
+        AREANAME:    Area Name
+        SUPFLG01:    Total Population Suppression Flag
+        SUPFLG02:    White Population Suppression Flag
+        SUPFLG03:    Black Population Suppression Flag
+        SUPFLG04:    American Indian, Eskimo, and Aleut Suppression Flag
+        SUPFLG05:    Asian and Pacific Islander Suppression Flag
+        SUPFLG06:    Spanish Population Suppression Flag
+        SUPFLG07:    Spanish-White Population Suppression Flag
+        SUPFLG08:    Spanish-Black Population Suppression Flag
+        SUPFLG09:    Year-Round Housing Unit Suppression Flag
+        SUPFLG10:    Occupied Housing Unit Suppression Flag
+        SUPFLG11:    White Householder Suppression Flag
+        SUPFLG12:    Black Householder Suppression Flag
+        SUPFLG13:    American Indian, Eskimo, and Aleut Householder Suppression Flag
+        SUPFLG14:    Asian and Pacific Islander Householder Suppression Flag
+        SUPFLG15:    Other Race Householder Suppression Flag
+        SUPFLG16:    Owner/Renter Housing Unit Suppression Flag
+        SUPFLG17:    Owner Occupied Housing Unit Suppression Flag
+        SUPFLG18:    Renter Occupied Housing Unit Suppression Flag
+        SUPFLG19:    Spanish Origin Householder Suppression Flag
+        SUPFLG20:    Spanish-White Householder Suppression Flag
+        SUPFLG21:    Spanish-Black Householder Suppression Flag
+ 
+Breakdown:
+    Geographic Subarea: Total area (0000)
+ 
+    Table 1:     Persons
+    Universe:    Persons
+    Source code: NT1A
+    NHGIS code:  C7L
+        C7L001:      Total
+ 
+    Table 2:     Race
+    Universe:    Persons
+    Source code: NT7
+    NHGIS code:  C9D
+        C9D001:      White
+        C9D002:      Black
+        C9D003:      American Indian, Eskimo, and Aleut: American Indian
+        C9D004:      American Indian, Eskimo, and Aleut: Eskimo
+        C9D005:      American Indian, Eskimo, and Aleut: Aleut
+        C9D006:      Asian and Pacific Islander: Japanese
+        C9D007:      Asian and Pacific Islander: Chinese
+        C9D008:      Asian and Pacific Islander: Filipino
+        C9D009:      Asian and Pacific Islander: Korean
+        C9D010:      Asian and Pacific Islander: Asian Indian
+        C9D011:      Asian and Pacific Islander: Vietnamese
+        C9D012:      Asian and Pacific Islander: Hawaiian
+        C9D013:      Asian and Pacific Islander: Guamanian
+        C9D014:      Asian and Pacific Islander: Samoan
+        C9D015:      Other
+ 
+    Table 3:     Spanish Origin
+    Universe:    Persons
+    Source code: NT8
+    NHGIS code:  C9E
+        C9E001:      Not of Spanish origin
+        C9E002:      Mexican
+        C9E003:      Puerto Rican
+        C9E004:      Cuban
+        C9E005:      Other Spanish
+ 
+    Table 4:     Age
+    Universe:    Persons
+    Source code: NT10A
+    NHGIS code:  C67
+        C67001:      Under 1 year
+        C67002:      1-2 years
+        C67003:      3-4 years
+        C67004:      5 years
+        C67005:      6 years
+        C67006:      7-9 years
+        C67007:      10-13 years
+        C67008:      14 years
+        C67009:      15 years
+        C67010:      16 years
+        C67011:      17 years
+        C67012:      18 years
+        C67013:      19 years
+        C67014:      20 years
+        C67015:      21 years
+        C67016:      22-24 years
+        C67017:      25-29 years
+        C67018:      30-34 years
+        C67019:      35-44 years
+        C67020:      45-54 years
+        C67021:      55-59 years
+        C67022:      60-61 years
+        C67023:      62-64 years
+        C67024:      65-74 years
+        C67025:      75-84 years
+        C67026:      85 years and over
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 17.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2022. 
+        http://doi.org/10.18128/D050.V17.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

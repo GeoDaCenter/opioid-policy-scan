@@ -1,5 +1,5 @@
-# Author : Caglayan Bal
-# Date : July 19, 2022
+# Author : Caglayan Bal (Ashlynn Wimer revised to grab 2012 DisbP estimates)
+# Date : July 19, 2022 (revised July 12, 2023)
 # About : This piece of code will download the 2010 demography data 
 # for policy scan based on the ACS 5-year estimates.
 
@@ -77,9 +77,12 @@ stateDem10 <- get_acs(geography = 'state', variables = c(totPopE = "B02001_001",
                    age45_49 = "S0101_C01_011", age50_54 = "S0101_C01_012", 
                    age55_59 = "S0101_C01_013", age60_64 = "S0101_C01_014", 
                    ageOv65 = "S0101_C01_028", ageOv18 = "S0101_C01_025", 
-                   disbP = "DP02_0071P", popOver25 = "B06009_001", 
-                   eduNoHS = "B06009_002"), 
+                   popOver25 = "B06009_001", eduNoHS = "B06009_002"), 
                    year = 2010, geometry = FALSE)
+
+stateDisb12 <- get_acs(geography = 'state', variables = c(disbP = "DP02_0071P"), year=2012)
+
+stateDem10 <- rbind(stateDem10, stateDisb12)
 
 head(stateDem10)
 
@@ -105,7 +108,7 @@ head(stateDem10P)
 
 ## Saving the data
 
-write.csv(stateDem10P, "~/Desktop/DS01_S_2010.csv")
+write.csv(stateDem10P, "../data_final/DS01_S_2010.csv")
 
 
 # County Level
@@ -120,9 +123,12 @@ countyDem10 <- get_acs(geography = 'county', variables = c(totPopE = "B02001_001
                    age45_49 = "S0101_C01_011", age50_54 = "S0101_C01_012",
                    age55_59 = "S0101_C01_013", age60_64 = "S0101_C01_014", 
                    ageOv65 = "S0101_C01_028", ageOv18 = "S0101_C01_025", 
-                   disbP = "DP02_0071P", popOver25 = "B06009_001", 
-                   eduNoHS = "B06009_002"), 
+                   popOver25 = "B06009_001", eduNoHS = "B06009_002"), 
                    year = 2010, geometry = FALSE)
+
+countyDisb12 <- get_acs(geography = 'county', variables = c(disbP = "DP02_0071P"), year=2012)
+
+countyDem10 <- rbind(countyDem10, countyDisb12)
 
 head(countyDem10)
 
@@ -148,7 +154,7 @@ head(countyDem10P)
 
 ## Saving the data
 
-write.csv(countyDem10P, "~/Desktop/DS01_C_2010.csv")
+write.csv(countyDem10P, "../data_final/DS01_C_2010.csv")
 
 
 # Census Tract Level
@@ -169,9 +175,16 @@ tractDem10 <- map_df(.x = as.numeric(states$STATEFP),
                     age45_49 = "S0101_C01_011", age50_54 = "S0101_C01_012", 
                     age55_59 = "S0101_C01_013", age60_64 = "S0101_C01_014", 
                     ageOv65 = "S0101_C01_028", ageOv18 = "S0101_C01_025", 
-                    disbP = "DP02_0071P", popOver25 = "B06009_001", 
-                    eduNoHS = "B06009_002"), 
+                    popOver25 = "B06009_001", eduNoHS = "B06009_002"), 
                     year = 2010, geometry = FALSE))
+
+tractDisb12 <- map_df(.x = as.numeric(states$STATEFP),
+                      ~ get_acs(geography = 'tract', state = .x, 
+                                variables = c(disbP = "DP02_0071P"), 
+                                year=2012, geometry=FALSE)) %>%
+  dplyr::filter(! substr(GEOID, start=1, stop=2) %in% territoriesToBeExcluded )
+
+tractDem10 <- rbind(tractDem10, tractDisb12)
 
 head(tractDem10)
 
@@ -197,8 +210,7 @@ head(tractDem10P)
 
 ## Saving the data
 
-write.csv(tractDem10P, "~/Desktop/DS01_T_2010.csv")
-
+write.csv(tractDem10P, "../data_final/DS01_T_2010.csv")
 
 # Zipcode Level
 
