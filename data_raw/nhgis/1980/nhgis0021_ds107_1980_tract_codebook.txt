@@ -1,0 +1,151 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0021_ds107_1980_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1980
+Geographic level: Census Tract (by State--County)
+Dataset:          1980 Census: STF 3 - Sample-Based Data
+   NHGIS code:    1980_STF3
+   NHGIS ID:      ds107
+Breakdown(s):     Geographic Subarea:
+                     Total area (0000)
+ 
+Tables:
+ 
+1. Years of School Completed
+   Universe:    Persons 25 Years and Over
+   Source code: NT48A
+   NHGIS code:  DHM
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        FSTATUS:     Functional Status Code
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        SMSAA:       Standard Metropolitan Statistical Area Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        PLACEA:      Place Code
+        TRACTA:      Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        ENUMDISTA:   Enumeration District Code
+        SCSAA:       Standard Consolidated Statistical Area Code
+        URB_AREAA:   Urban Area Code
+        CDA:         Congressional District Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        MCDSEQNO:    MCD Sequence Number
+        ZIPA:        5-Digit ZIP Code Code
+        SEA:         State Economic Area (SEA)
+        UATYPE:      Urbanized Area (UA) Type
+        PLACDESC:    Place Description
+        CBD:         Central Business District (CBD)
+        INDSUBR:     Indian Subreservation
+        AREANAME:    Area Name
+        SUPFLG01:    Total Population Suppression Flag
+        SUPFLG02:    White Population Suppression Flag
+        SUPFLG03:    Black Population Suppression Flag
+        SUPFLG04:    American Indian, Eskimo, and Aleut Suppression Flag
+        SUPFLG05:    Asian and Pacific Islander Suppression Flag
+        SUPFLG06:    Spanish Population Suppression Flag
+        SUPFLG07:    Year-Round Housing Unit Suppression Flag
+        SUPFLG08:    Occupied Housing Unit Suppression Flag
+        SUPFLG09:    Occupied Housing Unit with White Householder Suppression Flag
+        SUPFLG10:    Occupied Housing Unit with Black Householder Suppression Flag
+        SUPFLG11:    Occupied Housing Unit with American Indian, Eskimo, and Aleut Householder Suppression Flag
+        SUPFLG12:    Occupied Housing Unit with Asian and Pacific Islander Householder Suppression Flag
+        SUPFLG13:    Occupied Housing Unit with Other Race Householder Suppression Flag
+        SUPFLG14:    Occupied Housing Unit with Spanish Origin Householder Suppression Flag
+        SUPFLG15:    Owner-Occupied Housing Unit Suppression Flag
+        SUPFLG16:    Owner-Occupied Housing Unit with White Householder Suppression Flag
+        SUPFLG17:    Owner-Occupied Housing Unit with Black Householder Suppression Flag
+        SUPFLG18:    Owner-Occupied Housing Unit with American Indian, Eskimo, and Aleut Householder Suppression Flag
+        SUPFLG19:    Owner-Occupied Housing Unit with Asian and Pacific Islander Householders Suppression Flag
+        SUPFLG20:    Owner-Occupied Housing Unit with Spanish Householder Suppression Flag
+        SUPFLG21:    Renter-Occupied Housing Unit Suppression Flag
+        SUPFLG22:    Renter-Occupied Housing Unit with White Householder Suppression Flag
+        SUPFLG23:    Renter-Occupied Housing Unit with Black Householder Suppression Flag
+        SUPFLG24:    Renter-Occupied Housing Unit with American Indian, Eskimo, and Aleut Householder Suppression Flag
+        SUPFLG25:    Renter-Occupied Housing Unit with Asian and Pacific Islander Householder Suppression Flag
+        SUPFLG26:    Renter-Occupied Housing Unit with Spanish Householder Suppression Flag
+        SUPFLG27:    Owner/Renter Occupied Housing Unit Suppression Flag
+ 
+Breakdown:
+    Geographic Subarea: Total area (0000)
+ 
+    Table 1:     Years of School Completed
+    Universe:    Persons 25 Years and Over
+    Source code: NT48A
+    NHGIS code:  DHM
+        DHM001:      Elementary (0-8 years)
+        DHM002:      High school: 1-3 years
+        DHM003:      High school: 4 years
+        DHM004:      College: 1-3 years
+        DHM005:      College: 4 or more years
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 17.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2022. 
+        http://doi.org/10.18128/D050.V17.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
