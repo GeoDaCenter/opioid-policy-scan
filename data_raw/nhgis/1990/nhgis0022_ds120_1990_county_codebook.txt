@@ -1,0 +1,222 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0022_ds120_1990_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1990
+Geographic level: County (by State)
+Dataset:          1990 Census: STF 1 - 100% Data
+   NHGIS code:    1990_STF1
+   NHGIS ID:      ds120
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Persons
+   Universe:    Persons
+   Source code: NP1
+   NHGIS code:  ET1
+ 
+2. Race
+   Universe:    Persons
+   Source code: NP7
+   NHGIS code:  EUZ
+ 
+3. Hispanic Origin
+   Universe:    Persons
+   Source code: NP9
+   NHGIS code:  EU1
+ 
+4. Age
+   Universe:    Persons
+   Source code: NP11
+   NHGIS code:  ET3
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State/US Abbreviation
+        ANRCA:       Alaska Native Regional Corporation Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Reservation [excluding trust lands] Code
+        TRUSTA:      American Indian Reservation [trust lands only] Code
+        AIANCC:      American Indian/Alaska Native Area Class Code
+        RES_TRSTA:   Reservation/Trust Lands Code
+        BLOCKA:      Block Code
+        BLCK_GRPA:   Block Group Code
+        TRACTA:      Census Tract Code
+        CD101A:      Congressional District (101st) Code
+        C_CITYA:     Consolidated City Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    County Subdivision Class Code
+        DIVISIONA:   Division Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        PLACEA:      Place Code
+        PLACECC:     Place Class Code
+        PLACEDC:     Place Description Code
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        REGIONA:     Region Code
+        STATE:       State Name
+        STATEA:      State Code
+        URBRURALA:   Urban/Rural Code
+        URB_AREAA:   Urban Area Code
+        CD103A:      Congressional District (103rd) Code
+        AREALAND:    Area (land)
+        AREAWAT:     Area (Water)
+        ANPSADPI:    Area Name/PSAD Term/Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (latitude)
+        INTPTLNG:    Internal Point (longitude)
+        PSADC:       Political/Statistical Area Description Code
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Persons
+    Universe:    Persons
+    Source code: NP1
+    NHGIS code:  ET1
+        ET1001:      Total
+ 
+    Table 2:     Race
+    Universe:    Persons
+    Source code: NP7
+    NHGIS code:  EUZ
+        EUZ001:      White (800-869, 971)
+        EUZ002:      Black (870-934, 972)
+        EUZ003:      American Indian, Eskimo, or Aleut (000-599, 935-970, 973-975): American Indian (000-599, 973)
+        EUZ004:      American Indian, Eskimo, or Aleut (000-599, 935-970, 973-975): Eskimo (935-940, 974)
+        EUZ005:      American Indian, Eskimo, or Aleut (000-599, 935-970, 973-975): Aleut (941-970, 975)
+        EUZ006:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Chinese (605-607, 976)
+        EUZ007:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Filipino (608, 977)
+        EUZ008:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Japanese (611, 981)
+        EUZ009:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Asian Indian (600, 982)
+        EUZ010:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Korean (612, 979)
+        EUZ011:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Vietnamese (619, 980)
+        EUZ012:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Cambodian (604)
+        EUZ013:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Hmong (609)
+        EUZ014:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Laotian (613)
+        EUZ015:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Thai (618)
+        EUZ016:      Asian or Pacific Islander (600-699, 976-985): Asian (600-652, 976, 977, 979-982, 985): Other Asian (601-603, 610, 614-617, 620-652, 985)
+        EUZ017:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Polynesian (653-659, 978, 983): Hawaiian (653, 654, 978)
+        EUZ018:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Polynesian (653-659, 978, 983): Samoan (655, 983)
+        EUZ019:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Polynesian (653-659, 978, 983): Tongan (657)
+        EUZ020:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Polynesian (653-659, 978, 983): Other Polynesian (656, 658, 659)
+        EUZ021:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Micronesian (660-675, 984): Guamanian (660, 984)
+        EUZ022:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Micronesian (660-675, 984): Other Micronesian (661-675)
+        EUZ023:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Micronesian (660-675, 984): Melanesian (676-680)
+        EUZ024:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Micronesian (660-675, 984): Pacific Islander, not specified (681-699)
+        EUZ025:      Asian or Pacific Islander (600-699, 976-985): Pacific Islander (653-699, 978, 983, 984): Micronesian (660-675, 984): Other race (700-799, 986-999)
+ 
+    Table 3:     Hispanic Origin
+    Universe:    Persons
+    Source code: NP9
+    NHGIS code:  EU1
+        EU1001:      Not of Hispanic origin
+        EU1002:      Hispanic origin: Mexican
+        EU1003:      Hispanic origin: Puerto Rican
+        EU1004:      Hispanic origin: Cuban
+        EU1005:      Hispanic origin: Other Hispanic
+ 
+    Table 4:     Age
+    Universe:    Persons
+    Source code: NP11
+    NHGIS code:  ET3
+        ET3001:      Under 1 year
+        ET3002:      1 and 2 years
+        ET3003:      3 and 4 years
+        ET3004:      5 years
+        ET3005:      6 years
+        ET3006:      7 to 9 years
+        ET3007:      10 and 11 years
+        ET3008:      12 and 13 years
+        ET3009:      14 years
+        ET3010:      15 years
+        ET3011:      16 years
+        ET3012:      17 years
+        ET3013:      18 years
+        ET3014:      19 years
+        ET3015:      20 years
+        ET3016:      21 years
+        ET3017:      22 to 24 years
+        ET3018:      25 to 29 years
+        ET3019:      30 to 34 years
+        ET3020:      35 to 39 years
+        ET3021:      40 to 44 years
+        ET3022:      45 to 49 years
+        ET3023:      50 to 54 years
+        ET3024:      55 to 59 years
+        ET3025:      60 and 61 years
+        ET3026:      62 to 64 years
+        ET3027:      65 to 69 years
+        ET3028:      70 to 74 years
+        ET3029:      75 to 79 years
+        ET3030:      80 to 84 years
+        ET3031:      85 years and over
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 17.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2022. 
+        http://doi.org/10.18128/D050.V17.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
