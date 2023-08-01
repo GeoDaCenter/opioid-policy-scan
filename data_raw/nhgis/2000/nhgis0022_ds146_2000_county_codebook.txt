@@ -1,0 +1,226 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0022_ds146_2000_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: County (by State)
+Dataset:          2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+   NHGIS code:    2000_SF1a
+   NHGIS ID:      ds146
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Total Population
+   Universe:    Persons
+   Source code: NP001A
+   NHGIS code:  FL5
+ 
+2. Population by Hispanic or Latino and Not Hispanic or Latino
+   Universe:    Persons
+   Source code: NP004A
+   NHGIS code:  FMC
+ 
+3. Population by Race
+   Universe:    Persons
+   Source code: NP007A
+   NHGIS code:  FMR
+ 
+4. Population by Sex by Age
+   Universe:    Persons
+   Source code: NP012B
+   NHGIS code:  FMZ
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      File Identification
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    FIPS County Subdivion Class Code
+        PLACEA:      Place Code
+        PLACECC:     FIPS Place Class Code
+        PLACEDC:     Place Description Code
+        TRACTA:      Census Tract Code
+        TRBL_CTA:    Tribal Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        TRBL_BGA:    Tribal Block Group Code
+        C_CITYA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIANHHCC:    FIPS American Indian Area/Alaska Native Area/Hawaiian Home Land Class Code
+        AITSCE:      American Indian Tribal Subdivision (Census)
+        TRBL_SUBA:   Tribal Subdivision Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        MACCI:       Metropolitan Area Central City Indicator
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        NECMAA:      New England County Metropolitan Area Code
+        NECMACCI:    New England County Metropolitan Area Central City Indicator
+        URB_AREAA:   Urban Area Code
+        UATYPE:      Urban Area Type
+        CD106A:      Congressional District (106th) Code
+        CD108A:      Congressional District (108th) Code
+        CD109A:      Congressional District (109th) Code
+        ZIP3A:       3-Digit ZIP Code Tabulation Area Code
+        ZCTAA:       5-Digit ZIP Code Tabulation Area Code
+        AREALAND:    Area (Land)
+        AREAWATR:    Area (Water)
+        NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (Latitude)
+        INTPLON:     Internal Point (Longitude)
+        LSADC:       Legal/Statistical Area Description Code
+        MACC:        Metropolitan Area Central City
+        UACP:        Urban Area Central Place
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Total Population
+    Universe:    Persons
+    Source code: NP001A
+    NHGIS code:  FL5
+        FL5001:      Total
+ 
+    Table 2:     Population by Hispanic or Latino and Not Hispanic or Latino
+    Universe:    Persons
+    Source code: NP004A
+    NHGIS code:  FMC
+        FMC001:      Hispanic or Latino
+        FMC002:      Not Hispanic or Latino
+ 
+    Table 3:     Population by Race
+    Universe:    Persons
+    Source code: NP007A
+    NHGIS code:  FMR
+        FMR001:      White alone
+        FMR002:      Black or African American alone
+        FMR003:      American Indian and Alaska Native alone
+        FMR004:      Asian alone
+        FMR005:      Native Hawaiian and Other Pacific Islander alone
+        FMR006:      Some other race alone
+        FMR007:      Two or more races
+ 
+    Table 4:     Population by Sex by Age
+    Universe:    Persons
+    Source code: NP012B
+    NHGIS code:  FMZ
+        FMZ001:      Male >> Under 5 years
+        FMZ002:      Male >> 5 to 9 years
+        FMZ003:      Male >> 10 to 14 years
+        FMZ004:      Male >> 15 to 17 years
+        FMZ005:      Male >> 18 and 19 years
+        FMZ006:      Male >> 20 years
+        FMZ007:      Male >> 21 years
+        FMZ008:      Male >> 22 to 24 years
+        FMZ009:      Male >> 25 to 29 years
+        FMZ010:      Male >> 30 to 34 years
+        FMZ011:      Male >> 35 to 39 years
+        FMZ012:      Male >> 40 to 44 years
+        FMZ013:      Male >> 45 to 49 years
+        FMZ014:      Male >> 50 to 54 years
+        FMZ015:      Male >> 55 to 59 years
+        FMZ016:      Male >> 60 and 61 years
+        FMZ017:      Male >> 62 to 64 years
+        FMZ018:      Male >> 65 and 66 years
+        FMZ019:      Male >> 67 to 69 years
+        FMZ020:      Male >> 70 to 74 years
+        FMZ021:      Male >> 75 to 79 years
+        FMZ022:      Male >> 80 to 84 years
+        FMZ023:      Male >> 85 years and over
+        FMZ024:      Female >> Under 5 years
+        FMZ025:      Female >> 5 to 9 years
+        FMZ026:      Female >> 10 to 14 years
+        FMZ027:      Female >> 15 to 17 years
+        FMZ028:      Female >> 18 and 19 years
+        FMZ029:      Female >> 20 years
+        FMZ030:      Female >> 21 years
+        FMZ031:      Female >> 22 to 24 years
+        FMZ032:      Female >> 25 to 29 years
+        FMZ033:      Female >> 30 to 34 years
+        FMZ034:      Female >> 35 to 39 years
+        FMZ035:      Female >> 40 to 44 years
+        FMZ036:      Female >> 45 to 49 years
+        FMZ037:      Female >> 50 to 54 years
+        FMZ038:      Female >> 55 to 59 years
+        FMZ039:      Female >> 60 and 61 years
+        FMZ040:      Female >> 62 to 64 years
+        FMZ041:      Female >> 65 and 66 years
+        FMZ042:      Female >> 67 to 69 years
+        FMZ043:      Female >> 70 to 74 years
+        FMZ044:      Female >> 75 to 79 years
+        FMZ045:      Female >> 80 to 84 years
+        FMZ046:      Female >> 85 years and over
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 17.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2022. 
+        http://doi.org/10.18128/D050.V17.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
