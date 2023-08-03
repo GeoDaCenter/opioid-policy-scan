@@ -58,7 +58,7 @@ minDistZipsOTP_sf <- minDistZipsOTP_sf |>
   mutate(ZCTA = str_pad(ZCTA, width=5, side='left', pad='0')) |>
   st_drop_geometry()
 
-### Neareset OTP - Tracts ----
+### Nearest OTP - Tracts ----
 
 # Create centroids for tracts
 tractCentroids <- st_centroid(tracts)
@@ -127,4 +127,45 @@ otp_accessZ <- otp_accessZ |>
 head(otp_accessZ)
 
 # Save file
+
 write.csv(otp_accessZ, "../data_final/Access07_Z.csv", row.names=FALSE)
+
+##### County Access #####
+
+tract_OTP <- read.csv("../data_final/Access07_T.csv")
+
+tract_OTP$GEOID <- str_pad(tract_OTP$GEOID, width=11, side='left', pad = '0')
+
+tract_OTP$COUNTYFP <- substr(tract_OTP$GEOID, 1, 5)
+
+county_OTP <- tract_OTP |>
+  group_by(COUNTYFP) |>
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30),
+            avTimeDrive = round(mean(timeDrive), 2)
+            ) |>
+  mutate(pctTimeDrive = round(cntTimeDrive / cntT, 2))
+
+head(county_OTP)
+
+##### State Access #####
+
+tract_OTP$STATEFP <- substr(tract_OTP$GEOID, 1, 2)
+
+state_OTP <- tract_OTP |>
+  group_by(STATEFP) |>
+  summarise(cntT = n(),
+            cntTimeDrive = sum(timeDrive <= 30, na.rm = TRUE),
+            avTimeDrive = round(mean(timeDrive, na.rm=TRUE), 2)
+            ) |>
+  mutate(pctTimeDrive = round(cntTimeDrive / cntT, 2))
+
+head(state_OTP)
+
+### Save state and county files
+
+# County
+write.csv(county_OTP, "../data_final/Access07_C.csv", row.names=FALSE)
+
+# State
+write.csv(state_OTP, '../data_final/Access07_S.csv', row.names=FALSE)
