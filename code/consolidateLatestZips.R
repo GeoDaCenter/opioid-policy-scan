@@ -61,7 +61,7 @@ rm(ds03)
 # including Pennsylvania.
 ds04 <- read.csv('../data_final/DS04_Z.csv') |>
   mutate(GEOID = str_pad(ZCTA, width=5, side='left', pad='0')) |>
-  select(VetPercent, GEOID)
+  select(totVetPop = TotalVetPop, VetPercent, GEOID)
 
 zipDf <- zipDf |> merge(ds04, by='GEOID', all.x = TRUE)
 
@@ -292,7 +292,7 @@ rm(access07)
 ## Reorder
 
 zipDf <- zipDf |>
-  select(GEOID, totPopE, totalP_hh, totUnits, totWrkE, whiteP, 
+  select(GEOID, totPopE, totalP_hh, totVetPop, totUnits, totWrkE, whiteP, 
          blackP, amIndP, asianP, pacIsP, otherP, hispP, childP, 
          a15_24P, und45P, ovr65P, age0_4, age5_14, age15_19, age20_24, 
          age15_44, age45_49, age50_54, age55_59, age60_64, ageOv65, ageOv18, 
