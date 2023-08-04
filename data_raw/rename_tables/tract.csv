@@ -6,6 +6,7 @@ COUNTYFP,COUNTYFP
 STATEFP,STATEFP
 totPopE,TotPopE
 totalP_hh,TotPopHh
+totVetPop,TotVetPop
 totUnits,TotUnits
 totWrkE,TotWrkE
 whiteP,WhiteP
