@@ -1,10 +1,7 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # Opioid Environment Policy Scan (OEPS) Data Warehouse
 
 ## Public Site - OEPS Explorer
-Visualize, download, and explore OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
+Visualize, download, and explore OEPS data on the [OEPS Explorer](https://oeps.healthyregions.org). 
 
 ## About
 
@@ -12,7 +9,7 @@ The Opioid Environment Policy Scan (OEPS) is a free, open-source data warehouse 
 
 The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), inform public policy, and reduce harm in communities nationwide. 
 
-We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels. Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization. Download the entire data repository, or you can filter and download by theme or spatial scale with the [OEPS Explorer](https://oeps.netlify.app/). All datasets are accompanied by documentation, detailing their source data, year, and more. Learn more about our methods and approaches, including the risk environment framework, on our [Methodology](https://oeps.netlify.app/methods) page.
+We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels. Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization. Download the entire data repository, or you can filter and download by theme or spatial scale with the [OEPS Explorer](https://oeps.healthyregions.org). All datasets are accompanied by documentation, detailing their source data, year, and more. Learn more about our methods and approaches, including the risk environment framework, on our [Methodology](https://oeps.healthyregions.org/methods) page.
 
 The OEPS is led by the [Healthy Regions and Policies Lab](https://voices.uchicago.edu/herop/team) at the [Center for Spatial Data Science](https://spatial.uchicago.edu/), University of Chicago. It was developed for the NIH's JCOIN Methdology and Advanced Analaytic Resource Center (MAARC). See [Team](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#team) and [Acknolwedgements](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master#acknowledgements) below for more. 
 
