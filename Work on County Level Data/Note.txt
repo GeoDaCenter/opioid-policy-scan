@@ -1,9 +1,37 @@
-1.The table key is GEOID and COUNTYFP, which is combined by STATEFP (2 digits) + COUNTYFP (3 digits) 
+1.The table key is GEOID and GEOID_C repectively for county Level data and tract level data, which is combined by STATEFP (2 digits) + COUNTYFP (3 digits) 
 
-2."GetVeteran_CountyLevel" is a R script to read local veteran file, calculating correct GEOID(table key) and do related calculation
+2."GetVeteran_CountyLevel" is a R script to read local veteran file, calculating correct GEOID(table key) and do related calculation, which has been uploaded to GitHub
 
-3."Merged_C&T_Code.py" is a Python script to make county level data more comprehensive by adding variables which tract level data has while county level one does not have
+3."GetMergedTable_County_Tract_level.py" file can get the table on county level after merging tract level & calculating the percentage for some of Access variables. 
 
-4."original_county_level_data" and "Original Data Dictionary for County Level Data" is merged table only including county level data from OEPS without data from tract level data
+4.Remove several variables, including: 'NalTmBk', 'SutMinDis', 'OtpMinDis', 'MoudMinDis', 'MetTmWk', 'RxMinDis', 'HospMinDis', 'NalMinDis', 'MetTmBk', 'BupMinDis', 'FqhcMinDis', 
+'MhMinDis', 'MetMinDis', 'BupTmBk', 'NalTmWk', 'BupTmWk', 'TRACTCE', 'OtpCntDr', 'HospCntDr', 'MetCntBk60', 'BupCntDr30', 'MetCntBk30', 'MetCntWk60', 'NalCntBk30', 'BupCntWk60', 
+'MetCntDr30', 'BupCntBk60', 'NalCntWk30', 'BupCntWk30', 'BupCntBk30', 'FqhcCntDr', 'NalCntDr30', 'RxCntDr', 'MetCntWk30', 'MhCntDr', 'NalCntWk60', 'NalCntBk60', 'SutCntDr'
 
-5."T&C_Merged_Table" is the result of "Merged_C&T_Code.py"
+However, create variables including 'MetCntWk30P', 'BupCntWk30P', 'OtpCntDrP', 'NalCntBk30P', 'RxCntDrP', 'MhCntDrP', 'BupCntWk60P', 'NalCntWk60P', 'NalCntWk30P', 'BupCntBk30P', 
+'MetCntBk60P', 'HospCntDrP', 'SutCntDrP', 'BupCntDr30P', 'FqhcCntDrP', 'BupCntBk60P', 'NalCntBk60P', 'MetCntWk60P', 'NalCntDr30P', 'MetCntDr30P', 'MetCntBk30P'
+
+5."C_Latest" is the result of "GetMergedTable_County_Tract_level.py"
+
+6. Some other new variables are below: 
+	SpPerCap = TotSp/100,000
+  	PcpPerCap = TotPcp/100,000
+  	ChildrenP = TotPop - AgeOv18
+	CNT_T: the total number of tracts in each county
+    all "percentage" variables for access variables = the count of tracts which valuabel is not 0/Total count of tracts in one county
+
+7. "original_county_level_data.csv" is merged table only including county level data from metadata without data from tract level data
+
+8. What is changed on Tuesday:
+    a. TRACTCE was removed
+    b. SpPerCap, PcpPerCap was recalculated(beased on "PerCap" means per 100,000 persons according to tract level data)
+    c. the Python script was rename as "GetMergedTable_County_Tract_level.py"
+    d. The name for final merged table was changed to "C_Latest"
+    e. Percentage variables for TmWk, TmBk, and MinDis were removed
+    f. update dictionary named "DataDictionary_CountyLevel" including all variables in merged table nows
+
+Tips: MedInc data has been merged into original_county_level_data.csv
+      if the source is empty, that means that the variabels is calculated based on tract level data
+      note variable is red for reminding
+      Totpop10 etc did not be removed waiting for checking with Dr. Kolak
+      All refined files are still in "Work on County Level Data" dictionary for future checking
