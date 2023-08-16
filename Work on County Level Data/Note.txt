@@ -30,6 +30,8 @@ However, create variables including 'MetCntWk30P', 'BupCntWk30P', 'OtpCntDrP', '
     e. Percentage variables for TmWk, TmBk, and MinDis were removed
     f. update dictionary named "DataDictionary_CountyLevel" including all variables in merged table nows
 
+9. More information for created variables should be added after checking with Dr. Kolak
+
 Tips: MedInc data has been merged into original_county_level_data.csv
       if the source is empty, that means that the variabels is calculated based on tract level data
       note variable is red for reminding
