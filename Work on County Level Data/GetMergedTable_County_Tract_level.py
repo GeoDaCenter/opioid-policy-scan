@@ -11,8 +11,8 @@ import re
 
 # print("Character at position", position, ":", character)
 
-tract_file = pd.read_csv("tarct level data path")
-county_file = pd.read_csv("county level data path")
+tract_file = pd.read_csv("tarct file path")
+county_file = pd.read_csv("county file path")
 #the type of GEOID for both county data and tract data is numpy.int.64 
 
 #create set to store variables respectively
@@ -104,4 +104,4 @@ for item in columns_recall:
 
 #drop original access variables
 final_table = final_table_with_access.drop(columns_recall, axis = 1)
-final_table.to_csv("path to store file/C_Latest.csv", index = False)
+final_table.to_csv("ppsition to store the file/C_Latest.csv", index = False)
