@@ -78,29 +78,47 @@ write.csv(zip_all, "data_final/Access01_Z.csv", row.names = FALSE)
 ##### County Access #####
 
 # Read in tract access
-tract_moud <- read.csv("data_final/Access01_T.csv")
+tract_moud <- read.csv("../data_final/Access01_T.csv")
 
 # Add the leading 0 to GEOID
-tract_moud$GEOID <- sprintf("%011s", tract_moud$GEOID)
+tract_moud$GEOID <- str_pad(tract_moud$GEOID, 11, 'left', '0')
 
 # Pull out full county FIPS codes 
 tract_moud$COUNTYFP <- substr(tract_moud$GEOID, 1, 5)
 
-# Count the number of tracts that are driving time < 30, and average driving time for each county
+# Count the number of tracts that are travel time < 30 by all three modalities, and average trave time for each county
 county_moud <- tract_moud %>%
   group_by(COUNTYFP) %>%
   summarise(cntT = n(),
-            cntBupT = sum(bupTimeDrive <= 30),
-            cntMetT = sum(metTimeDrive <= 30),
-            cntNalT = sum(nalTimeDrive <= 30),
-            avBupTime = mean(bupTimeDrive),
-            avMetTime = mean(metTimeDrive),
-            avNalTime = mean(nalTimeDrive)
+            BupCtTmDr = sum(bupTimeDrive <= 30),
+            MetCtTmDr = sum(metTimeDrive <= 30),
+            NalCtTmDr = sum(nalTimeDrive <= 30),
+            BupCtTmBk = sum(bupTimeBike  <= 30),
+            MetCtTmBk = sum(metTimeBike  <= 30),
+            NalCtTmBk = sum(nalTimeBike  <= 30),
+            BupCtTmWk = sum(bupTimeWalk  <= 30),
+            MetCtTmWk = sum(metTimeWalk  <= 30),
+            NalCtTmWk = sum(nalTimeWalk  <= 30),
+            BupAvTmDr = mean(bupTimeDrive),
+            MetAvTmDr = mean(metTimeDrive),
+            NalAvTmDr = mean(nalTimeDrive),
+            BupAvTmBk = mean(bupTimeBike),
+            MetAvTmBk = mean(metTimeBike),
+            NalAvTmBk = mean(nalTimeBike),
+            BupAvTmWk = mean(bupTimeWalk),
+            MetAvTmWk = mean(metTimeWalk),
+            NalAvTmWk = mean(nalTimeWalk)
   ) %>%
-  mutate(pctBupT = round(cntBupT/cntT, 2),
-         pctMetT = round(cntMetT/cntT, 2),
-         pctNalT = round(cntNalT/cntT, 2))
-
+  mutate(BupTmDrP = round(BupCtTmDr / cntT, 2),
+         MetTmDrP = round(MetCtTmDr / cntT, 2),
+         NalTmDrP = round(NalCtTmDr / cntT, 2),
+         BupTmBkP = round(BupCtTmBk / cntT, 2),
+         MetTmBkP = round(MetCtTmBk / cntT, 2),
+         NalTmBkP = round(NalCtTmBk / cntT, 2),
+         BupTmWkP = round(BupCtTmWk / cntT, 2),
+         MetTmWkP = round(MetCtTmWk / cntT, 2),
+         NalTmWkP = round(NalCtTmWk / cntT, 2)
+  )
 
 ##### State Access #####
 

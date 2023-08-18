@@ -115,8 +115,8 @@ TmDrOTP,OtpTmDr
 CntDrOTP,OtpCntDr
 pcp_total,TotPcp
 sp_total,TotSp
-PcpPerPop,PcpPerCap
-SpPerPop,SpPerCap
+PcpPerPop,PcpPer100k
+SpPerPop,SpPer100k
 SocEcAdvIn,SocEcAdvIn
 LimMobInd,LimMobInd
 UrbCoreInd,UrbCoreInd
