@@ -1,0 +1,52 @@
+G_STATEFP,STATEFP,STUSPS,NAME,expSSP,noPrphLw,ntPrFrDsSy,PrExcInj,PrNtRefInj,noLwRmUnc
+G28,28,MS,Mississippi,0,0,0,0,0,1
+G37,37,NC,North Carolina,1,0,0,0,0,0
+G40,40,OK,Oklahoma,0,0,0,0,0,1
+G51,51,VA,Virginia,1,0,0,0,0,0
+G54,54,WV,West Virginia,0,0,1,0,0,0
+G22,22,LA,Louisiana,1,0,0,0,0,0
+G26,26,MI,Michigan,0,0,1,0,0,0
+G25,25,MA,Massachusetts,1,0,1,0,1,0
+G16,16,ID,Idaho,1,0,0,0,0,0
+G12,12,FL,Florida,1,0,0,0,0,0
+G31,31,NE,Nebraska,0,0,0,0,0,1
+G53,53,WA,Washington,1,0,0,0,0,0
+G35,35,NM,New Mexico,1,0,0,0,0,0
+G46,46,SD,South Dakota,0,0,0,0,0,1
+G48,48,TX,Texas,0,0,0,0,0,1
+G06,06,CA,California,1,0,0,0,0,0
+G01,01,AL,Alabama,0,0,0,0,0,1
+G13,13,GA,Georgia,1,0,0,0,0,0
+G42,42,PA,Pennsylvania,0,0,0,0,0,1
+G29,29,MO,Missouri,0,0,0,0,0,1
+G08,08,CO,Colorado,1,0,0,0,0,0
+G49,49,UT,Utah,1,0,0,0,0,0
+G47,47,TN,Tennessee,1,0,0,0,0,0
+G56,56,WY,Wyoming,0,0,0,0,0,1
+G36,36,NY,New York,1,0,0,0,0,0
+G20,20,KS,Kansas,0,0,0,0,0,1
+G02,02,AK,Alaska,0,1,0,0,0,0
+G32,32,NV,Nevada,1,0,0,1,0,0
+G17,17,IL,Illinois,1,0,0,0,0,0
+G50,50,VT,Vermont,1,0,1,0,0,0
+G30,30,MT,Montana,1,0,0,0,0,0
+G19,19,IA,Iowa,0,0,0,0,0,1
+G45,45,SC,South Carolina,0,0,0,0,1,0
+G33,33,NH,New Hampshire,1,0,0,0,1,0
+G04,04,AZ,Arizona,0,0,0,0,0,1
+G11,11,DC,District of Columbia,1,0,0,0,0,0
+G34,34,NJ,New Jersey,1,0,0,0,0,0
+G24,24,MD,Maryland,1,0,0,0,0,0
+G23,23,ME,Maine,1,0,0,0,0,0
+G15,15,HI,Hawaii,1,0,0,0,0,0
+G10,10,DE,Delaware,1,0,0,0,0,0
+G44,44,RI,Rhode Island,1,0,0,0,1,0
+G21,21,KY,Kentucky,1,0,0,0,0,0
+G39,39,OH,Ohio,1,0,0,0,0,0
+G55,55,WI,Wisconsin,0,0,0,1,0,0
+G41,41,OR,Oregon,0,0,0,1,0,0
+G38,38,ND,North Dakota,1,0,0,0,0,0
+G05,05,AR,Arkansas,0,0,1,0,0,0
+G18,18,IN,Indiana,1,0,0,0,1,0
+G27,27,MN,Minnesota,1,0,0,0,0,0
+G09,09,CT,Connecticut,1,0,0,0,1,0

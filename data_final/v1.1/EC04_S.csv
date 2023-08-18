@@ -1,0 +1,52 @@
+G_STATEFP,STATEFP,ST,STATE,fordq_rate,fordq_num
+G02,02,AK,Alaska,4.67,24.11
+G01,01,AL,Alabama,10.68,54.4
+G05,05,AR,Arkansas,9.39,46.92
+G04,04,AZ,Arizona,14.24,148.17
+G06,06,CA,California,13.7,126
+G08,08,CO,Colorado,9.84,80.8
+G09,09,CT,Connecticut,8.46,55.12
+G11,11,DC,District of Columbia,7.09,37.66
+G10,10,DE,Delaware,7.35,56.28
+G12,12,FL,Florida,18.45,200.21
+G13,13,GA,Georgia,12.97,110.09
+G15,15,HI,Hawaii,5.53,41.27
+G19,19,IA,Iowa,7.86,39.23
+G16,16,ID,Idaho,6.28,62.24
+G17,17,IL,Illinois,11.71,78.12
+G18,18,IN,Indiana,14.76,95.37
+G20,20,KS,Kansas,8.33,41.11
+G21,21,KY,Kentucky,10.88,53.37
+G22,22,LA,Louisiana,10.84,50.2
+G25,25,MA,Massachusetts,9.57,68.72
+G24,24,MD,Maryland,8.94,85.45
+G23,23,ME,Maine,9.54,49.56
+G26,26,MI,Michigan,15.31,87.62
+G27,27,MN,Minnesota,9.29,63.59
+G29,29,MO,Missouri,9.58,61.91
+G28,28,MS,Mississippi,13.98,74.98
+G30,30,MT,Montana,4.79,20.11
+G37,37,NC,North Carolina,8.54,64.7
+G38,38,ND,North Dakota,4.17,11.68
+G31,31,NE,Nebraska,8.02,36.59
+G33,33,NH,New Hampshire,7.69,58.34
+G34,34,NJ,New Jersey,9.83,66.75
+G35,35,NM,New Mexico,7.39,39.08
+G32,32,NV,Nevada,19.26,201.96
+G36,36,NY,New York,8.35,35.12
+G39,39,OH,Ohio,14.76,82.39
+G40,40,OK,Oklahoma,9.49,39.61
+G41,41,OR,Oregon,5.21,43.23
+G42,42,PA,Pennsylvania,8.16,44.8
+G44,44,RI,Rhode Island,12.24,92.47
+G45,45,SC,South Carolina,10.58,69.99
+G46,46,SD,South Dakota,6.84,18.91
+G47,47,TN,Tennessee,10.85,69.9
+G48,48,TX,Texas,9.65,56.57
+G49,49,UT,Utah,6.16,60.09
+G51,51,VA,Virginia,7.83,72.74
+G50,50,VT,Vermont,5.51,24.1
+G53,53,WA,Washington,5.53,48.09
+G55,55,WI,Wisconsin,9.73,57.3
+G54,54,WV,West Virginia,9.28,43.21
+G56,56,WY,Wyoming,4.08,23.06
