@@ -43,13 +43,12 @@ f_lookup = {
     "tl_2010_state/states2010.shp": "STATEFP",
     "tl_2010_county/counties2010.shp": "GEOID",
     "tl_2010_tract/tracts2010.shp": "GEOID",
-    "tl_2010_zcta/tl_2010_us_zcta510-wgs84-generalized100ft.shp": "GEOID10",
 }
 
 new_suffix = "bq"
 
 in_dir = Path(__file__).resolve().parent.parent.parent / 'data_final' / 'geometryFiles'
-out_dir = Path(__file__).resolve().parent.parent.parent / 'data_final' / 'v2.0' / 'spatial_data'
+out_dir = Path(__file__).resolve().parent.parent.parent / '.temp'
 out_dir.mkdir(exist_ok=True)
 
 for path in f_lookup.keys():

@@ -23,7 +23,7 @@ The NDVI calculation produces an index from -1 to 1, with values at the higher e
 
 The original spatial scale was 10m pixels, which was translated to US Census tracts. 
 
-Tract-level estimates were then aggregated to the county-level average and state-level average using their FIPS Codes. Zip code-level estimates were calculated using the [HUD USPS ZIP Code Crosswalk File](https://www.huduser.gov/portal/datasets/usps_crosswalk.html) (Tract-Zip), also provided in the OEPS under [geometryFiles/crosswalk](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/geometryFiles/crosswalk). Data processing was done by the CSDS team. 
+Tract-level estimates were then aggregated to the county-level average and state-level average using their FIPS Codes. Zip code-level estimates were calculated using the [HUD USPS ZIP Code Crosswalk File](https://www.huduser.gov/portal/datasets/usps_crosswalk.html) (Tract-Zip), also provided in the OEPS under [geometryFiles/crosswalk](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/geometryFiles/crosswalk). Data processing was done by the CSDS team. 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |

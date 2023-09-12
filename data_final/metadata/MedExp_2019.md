@@ -7,7 +7,7 @@ PS06 - at the state level. Files can be found [here](/data_final).
 * PS06_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/total-medicaid-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), accessed January 10, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_raw), named as *raw_data_medicaid_exp.csv*. The sources are from Urban Institute estimates based on data from CMS (Form 64) from August 2020.
+Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/total-medicaid-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), accessed January 10, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw), named as *raw_data_medicaid_exp.csv*. The sources are from Urban Institute estimates based on data from CMS (Form 64) from August 2020.
 
 ### Description of Data Processing: 
 The following variables were included from the source data:

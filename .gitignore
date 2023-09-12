@@ -1,6 +1,4 @@
-# for now, ignore the new spatial_data folder (shapefiles will be zipped and
-# attached directly to the release)
-data_final/v2.0/spatial_data
+.temp
 
 .Rproj.user
 .Rhistory

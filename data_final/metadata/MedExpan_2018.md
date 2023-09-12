@@ -7,7 +7,7 @@ PS07 - at the state level. Files can be found [here](/data_final).
 * PS07_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/medicaid-expansion-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Total%20Medicaid%20Spending%22,%22sort%22:%22desc%22%7D), accessed January 11, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/Policy_Scan/data_raw), named as *raw_data_medi_expan.csv*. Kaiser Family Foundation uses data in its analysis from the Centers for Medicare and Medicaid Services (CMS) [Medicaid Budget and Expenditure System (MBES)](https://www.medicaid.gov/medicaid/financing-and-reimbursement/state-expenditure-reporting/expenditure-reports/index.html).
+Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/medicaid-expansion-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Total%20Medicaid%20Spending%22,%22sort%22:%22desc%22%7D), accessed January 11, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw), named as *raw_data_medi_expan.csv*. Kaiser Family Foundation uses data in its analysis from the Centers for Medicare and Medicaid Services (CMS) [Medicaid Budget and Expenditure System (MBES)](https://www.medicaid.gov/medicaid/financing-and-reimbursement/state-expenditure-reporting/expenditure-reports/index.html).
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
