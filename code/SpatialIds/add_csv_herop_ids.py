@@ -59,7 +59,7 @@ drop_fields = ["STATEFP", "G_STATEFP", "STUSPS", "TRACTCE", "ZIP", "COUNTYFP", "
 
 new_suffix = "bq"
 
-csv_dir = Path(__file__).resolve().parent.parent.parent / 'data_final' / 'v2.0' / 'tables'
+csv_dir = Path(__file__).resolve().parent.parent.parent / 'data_final' / 'full_tables'
 paths = [i for i in csv_dir.glob("*.csv") if not str(i).endswith(f"{new_suffix}.csv")]
 
 for path in paths:
@@ -71,13 +71,18 @@ for path in paths:
 
     rows = []
     new_geoid_field = 'HEROP_ID'
+    # for the "latest" CSVs the year is 2018, for all older ones it's 2010
+    year_suffix = "2018" if "Latest" in str(path) else "2010"
     with open(path, "r") as r:
         reader = csv.DictReader(r)
-        fieldnames = [new_geoid_field] + [i for i in reader.fieldnames]
+
+        fieldnames = reader.fieldnames
+        if not new_geoid_field in fieldnames:
+            fieldnames = [new_geoid_field] + [i for i in reader.fieldnames]
 
         for r in reader:
             str_geoid = str(r[f_lookup[path.name]]).zfill(sl_lookup[geo]['id_length'])
-            new_geoid = f"{sl_lookup[geo]['code']}US{str_geoid}"
+            new_geoid = f"{sl_lookup[geo]['code']}US{str_geoid}-{year_suffix}"
             r[new_geoid_field] = new_geoid
             rows.append(r)
 

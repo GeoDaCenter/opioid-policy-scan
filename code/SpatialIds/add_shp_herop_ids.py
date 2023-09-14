@@ -68,6 +68,11 @@ for path in f_lookup.keys():
         raise Exception("unexpected input shapefile")
 
     out_path = out_dir / Path(path).name
+    year = ''
+    if '2010' in str(out_path):
+        year = '2010'
+    if '2018' in str(out_path):
+        year = '2018'
     with fiona.open(shp_path) as src:
         dst_schema = src.schema
         dst_schema['properties']['HEROP_ID'] = 'str'
@@ -81,7 +86,7 @@ for path in f_lookup.keys():
         ) as dst:
             for feat in src:
                 geo_id = str(feat.properties[f_lookup[path]]).zfill(sl['id_length'])
-                herop_id =  f"{sl['code']}US{geo_id}"
+                herop_id =  f"{sl['code']}US{geo_id}-{year}"
                 props = Properties.from_dict(
                     **feat.properties,
                     HEROP_ID=herop_id,
