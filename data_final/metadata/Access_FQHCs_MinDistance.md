@@ -1,7 +1,9 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
-**Added**: January 5, 2021  
-**Last Modified**: April 25, 2022  
-**Author**: Susan Paykin 
+**Added**: January 5, 2021
+**Author**: Susan Paykin
+**Last Modified**: October 12, 2023  
+**Last Modified By**: Wataru Morioka
+
 
 ### Data Location: 
 Access02 at 4 spatial scales. Files can be found [here](/data_final).
@@ -39,19 +41,19 @@ County and state-level variables include the **count** of Census tracts and the 
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
-| Distance to nearest FQHC | minDisFQHC | Euclidean distance* from tract/zip centroid to nearest FQHC, in miles |
-| Driving time to nearest FQHC | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes |
-| Count of FQHCs | driveCount | Count of FQHCs within a 30-minute driving threshold |
+| Distance to nearest FQHC | FqhcMinDis | Euclidean distance* from tract/zip centroid to nearest FQHC, in miles |
+| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes |
+| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold |
 
 #### County and State
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
-| STATEFP | ID for states | Unique 2-digit identifier for states| 
-| Count of tracts | cntT | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | cntTimeDrive | Number of tracts with FQHC within a 30-min driving range |
-| Percent of tracts within 30-min driving range | pctTimeDrive | Percent of tracts with FQHC within a 30-min driving range |
-| Average time drive to nearest FQHC | avTimeDrive | Average driving time (minutes) across tracts in county/state to nearest FQHC |
+| ID for counties | COUNTYFP | Unique 5-digit identifier for counties| 
+| ID for states | STATEFP | Unique 2-digit identifier for states| 
+| Count of tracts | TotTracts | Total number of tracts in county/state | 
+| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range |
+| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range |
+| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
