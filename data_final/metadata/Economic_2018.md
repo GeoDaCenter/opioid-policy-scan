@@ -1,6 +1,7 @@
-**Meta Data Name**: Economic Variables  
-**Last Modified**: April 9, 2021  
+**Meta Data Name**: Economic Variables
 **Authors**: Moksha Menghaney & Susan Paykin
+**Last Modified**: October 17, 2023  
+**Last Modified By**: Wataru Morika
 
 ### Data Location: 
 EC03 at 4 spatial scales. Files can be found [here](/data_final).
@@ -41,9 +42,9 @@ For more on variable definitions, see [ACS 2018 Subject Definitions](https://www
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Unemployment Rate | unempP | The number of unemployed individuals as a percentage of the civilian labor force|
-| Poverty Rate | povP | Number of individuals earning below the poverty income threshold as a percentage of the total population |
-| Per Capita Income | pciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) |
+| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force|
+| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population |
+| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) |
 
 ### Data Limitations:
 The ACS does not gather information in the U.S. territories American Samoa, Guam, Northern Mariana Islands and U.S. Virgin Islands. It does include information for Puerto Rico & Washington, D.C. 
