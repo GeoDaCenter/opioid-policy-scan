@@ -1,6 +1,8 @@
-**Meta Data Name**: COVID-19 Variables  
-**Last Modified**: March 12, 2021  
-**Author**: Qinyun Lin  
+**Meta Data Name**: COVID-19 Variables
+**Author**: Qinyun Lin 
+**Last Modified**: October 17, 2023
+**Last Modified By**: Wataru Morioka
+ 
 
 ### Data Location: 
 COVID01-04 - COVID case counts and rates at state and county spatial scales. Files can be found [here](/data_final/).
@@ -21,9 +23,9 @@ COVID01-04 - COVID case counts and rates at state and county spatial scales. Fil
 
 ### Data Source(s) Description:  
 
-Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The Times has made data available aggregated from dozens of journalists working to collect and monitor data. Their jouralists communicate with public officials to clarify and categorize cases.
+Variables were obtained from [The New York Times](https://github.com/nytimes/covid-19-data). The Times has made data available aggregated from dozens of journalists working to collect and monitor data. Their journalists communicate with public officials to clarify and categorize cases.
 
-Population data used to compute population-adjusted rates were obtained from the [2018 American Comnmunity Survey](https://data.census.gov/). 
+Population data used to compute population-adjusted rates were obtained from the [2018 American Community Survey](https://data.census.gov/). 
 
 ### Description of Data Processing: 
 
