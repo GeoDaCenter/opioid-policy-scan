@@ -1,7 +1,8 @@
 **Meta Data Name**: Nearest Distance for Substance Use Treatment   
 **Added**: July 23, 2021  
 **Author**: Rachel Vigil  
-**Last Modified:** April 25, 2022, Susan Paykin
+**Last Modified:** October 17, 2023
+**Last Modified By:** Wataru Morioka
 
 ### Data Location: 
 Access06 - Access to Substance Use Treatment (SUT) Services at 4 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final).
@@ -34,19 +35,19 @@ County and state-level variables include the **count** of Census tracts and the 
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
-| Distance to nearest SUT | minDisSUT | Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles |
-| Driving time to nearest SUT | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes |
-| Count of SUTs | driveCount | Count of SUT services within a 30-minute driving threshold |
+| Distance to nearest SUT | SutMinDis | Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles |
+| Driving time to nearest SUT | SutTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes |
+| Count of SUTs | SutCntDr | Count of SUT services within a 30-minute driving threshold |
 
 #### County and State
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
-| STATEFP | ID for states | Unique 2-digit identifier for states| 
-| Count of tracts | cntT | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | cntTimeDrive | Number of tracts with SUT within a 30-min driving range |
-| Percent of tracts within 30-min driving range | pctTimeDrive | Percent of tracts with SUT within a 30-min driving range |
-| Average time drive to nearest SUT | avTimeDrive | Average driving time (minutes) across tracts in county/state to nearest SUT |
+| ID for counties | COUNTYFP | Unique 5-digit identifier for counties| 
+| ID for states | STATEFP | Unique 2-digit identifier for states| 
+| Count of tracts | TotTracts | Total number of tracts in county/state | 
+| Count of tracts within 30-min driving range | SutpCtTmDr | Number of tracts with SUT within a 30-min driving range |
+| Percent of tracts within 30-min driving range | SutpTmDrP | Percent of tracts with SUT within a 30-min driving range |
+| Average time drive to nearest SUT | SutpAvTmDr | Average driving time (minutes) across tracts in county/state to nearest SUT |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
