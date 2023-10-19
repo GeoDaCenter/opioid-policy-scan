@@ -1,6 +1,7 @@
-**Meta Data Name**: Jobs by Industries  
-**Last Modified**: October 22, 2020  
-**Author**: Moksha Menghaney  
+**Meta Data Name**: Jobs by Industries
+**Author**: Moksha Menghaney
+**Last Modified**: October 18, 2023  
+**Last Modified By** Wataru Morioka  
 
 ### Data Location: 
 EC01 at 4 spatial scales. Files can be found [here](/data_final).
@@ -44,11 +45,11 @@ All variables were included from S2403 (2018):
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total Count of Workers | totWrkE | Estimated count of working population |
-| % High Risk of Injury Jobs  | hghRskP | Percentage of population employed in following industries: agriculture, rorestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities |
-| % Education Jobs  | eduP | Percentage of population employed in educational services industry |
-| % Health Care Jobs | hltCrP | Percentage of population employed in health care and social assistance industries |
-| % Retail Jobs  | retailP | Percentage of population employed in retail trade industry |
+| Total Count of Workers | TotWrkE | Estimated count of working population |
+| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities |
+| % Education Jobs  | EduP | Percentage of population employed in educational services industry |
+| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries |
+| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry |
 
 ### Data Limitations:
 Please note this dataset uses industry as a classifier and does not include any information about the specific occupation in that industry. This could lead to an overestimation of High Risk to Injury workers category.
