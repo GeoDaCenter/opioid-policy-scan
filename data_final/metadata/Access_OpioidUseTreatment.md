@@ -1,7 +1,8 @@
 **Meta Data Name**: Access to Opioid Treatment Programs (OTP)  
 **Added**: July 23, 2021  
 **Author**: Rachel Vigil  
-**Last Modified**: April 25, 2022, Susan Paykin
+**Last Modified**: October 12, 2023
+**Last Modified By**: Wataru Morioka
 
 ### Data Location: 
 Access07 - Access to Opioid Treatment Programs (OTP) at 2 spatial scales. Files can be found [here](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final).
@@ -26,9 +27,9 @@ We calculated travel-network access metrics for the driving travel time to the n
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
-| Distance to nearest OTP | minDisOTP | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles |
-| Driving time to nearest OTP | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes |
-| Count of OTPs | driveCount | Count of OTPs within a 30-minute driving threshold |
+| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles |
+| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes |
+| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
