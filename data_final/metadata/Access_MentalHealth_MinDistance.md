@@ -1,7 +1,9 @@
 **Meta Data Name**: Access to Mental Health Providers  
-**Added**: January 9, 2021  
-**Last Modified**: April 25, 2022  
+**Added**: January 9, 2021
 **Author**: Susan Paykin  
+**Last Modified**: October 12, 2023
+**Last Modified By**: Wataru Morioka
+
 
 ### Data Location: 
 Access05 at 4 spatial scales. Files can be found [here](/data_final).
@@ -40,19 +42,19 @@ County and state-level variables include the **count** of Census tracts and the 
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
-| Distance to nearest MH Provider | minDisMH | Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles |
-| Driving time to nearest MH Provider | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes |
-| Count of MH Providers | driveCount | Count of MH providers within a 30-minute driving threshold |
+| Distance to nearest MH Provider | MhMinDis | Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles |
+| Driving time to nearest MH Provider | MhTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes |
+| Count of MH Providers | MhCntDr | Count of MH providers within a 30-minute driving threshold |
 
 #### County and State
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
-| STATEFP | ID for states | Unique 2-digit identifier for states| 
-| Count of tracts | cntT | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | cntTimeDrive | Number of tracts with a MH provider within a 30-min driving range |
-| Percent of tracts within 30-min driving range | pctTimeDrive | Percent of tracts with a MH provider within a 30-min driving range |
-| Average time drive to nearest MH provider | avTimeDrive | Average driving time (minutes) across tracts in county/state to nearest MH provider |
+| ID for counties | COUNTYFP | Unique 5-digit identifier for counties| 
+| ID for states | STATEFP | Unique 2-digit identifier for states| 
+| Count of tracts | TotTracts | Total number of tracts in county/state | 
+| Count of tracts within 30-min driving range | MhCtTmDr | Number of tracts with a MH provider within a 30-min driving range |
+| Percent of tracts within 30-min driving range | MhTmDrP | Percent of tracts with a MH provider within a 30-min driving range |
+| Average time drive to nearest MH provider | MhAvTmDr | Average driving time (minutes) across tracts in county/state to nearest MH provider |
 
 ### Data Limitations:
 *Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.  
