@@ -1,7 +1,8 @@
 **Meta Data Name**: Access to Pharmacies  
-**Added**: January 6, 2021  
-**Last Modified**: April 25, 2022  
-**Author**: Susan Paykin    
+**Added**: January 6, 2021
+**Author**: Susan Paykin 
+**Last Modified**: October 12, 2023
+**Last Modified By**: Wataru Morioka    
 
 ### Data Location: 
 Access04 at 4 spatial scales. Files can be found [here](/data_final).
@@ -41,19 +42,19 @@ County and state-level variables include the **count** of Census tracts and the 
 |:---------|:--------------------|:------------|
 | GEOID | GEOID | Unique 11-digit GEOID for census tracts (state + county + tract) |
 | ZIP Code Tract Area (ZCTA) | ZCTA5CE10 | Unique 5-digit assigned ZCTA, usually same as ZIP Code  |
-| Distance to nearest pharmacy | minDisRx | Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles |
-| Driving time to nearest pharmacy | driveTime | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes |
-| Count of pharmacies | driveCount | Count of pharmacies within a 30-minute driving threshold |
+| Distance to nearest pharmacy | RxMinDis | Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles |
+| Driving time to nearest pharmacy | RxTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes |
+| Count of pharmacies | RxCntDr | Count of pharmacies within a 30-minute driving threshold |
 
 #### County and State
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| COUNTYFP | ID for counties | Unique 5-digit identifier for counties| 
-| STATEFP | ID for states | Unique 2-digit identifier for states| 
-| Count of tracts | cntT | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | cntTimeDrive | Number of tracts with pharmacy within a 30-min driving range |
-| Percent of tracts within 30-min driving range | pctTimeDrive | Percent of tracts with pharmacy within a 30-min driving range |
-| Average time drive to nearest pharmacy | avTimeDrive | Average driving time (minutes) across tracts in county/state to nearest pharmacy |
+| ID for counties | COUNTYFP | Unique 5-digit identifier for counties| 
+| ID for states | STATEFP | Unique 2-digit identifier for states| 
+| Count of tracts | TotTracts | Total number of tracts in county/state | 
+| Count of tracts within 30-min driving range | RxCtTmDr | Number of tracts with pharmacy within a 30-min driving range |
+| Percent of tracts within 30-min driving range | RxTmDrP | Percent of tracts with pharmacy within a 30-min driving range |
+| Average time drive to nearest pharmacy | RxAvTmDr | Average driving time (minutes) across tracts in county/state to nearest pharmacy |
 
 ### Data Limitations:
 *Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.
