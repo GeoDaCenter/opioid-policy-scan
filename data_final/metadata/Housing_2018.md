@@ -1,6 +1,7 @@
-**Meta Data Name**: Housing Variables  
-**Last Modified**: March 20, 2021  
+**Meta Data Name**: Housing Variables
 **Author**: Susan Paykin, Moksha Menghaney
+**Last Modified**: October 18, 2023  
+**Last Modified By**: Wataru Morioka
 
 ### Data Location: 
 BE01 at 4 spatial scales. Files can be found [here](/data_final).
@@ -57,13 +58,13 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total Occupied Units | totUnits | Count of total occupied housing units |
-| Housing Occupancy Rate | occP | Percentage of occupied housing units |
-| Housing Vacancy Rate | vacantP | Percentage of vacant housing units |
-| Long-Term Occupancy | lngTermP | Percentage of population who moved into their current housing more than 20 years ago |
-| Rental Rate | rentalP | Percentage of occupied housing units that are rented |
-| Mobile Homes Rate | mobileP | Percentage of total housing units categorized as mobile housing structures |
-| Housing Unit Density | unitDens | Number of housing units per square mile of land area |
+| Total Occupied Units | TotUnits | Count of total occupied housing units |
+| Housing Occupancy Rate | OccP | Percentage of occupied housing units |
+| Housing Vacancy Rate | VacantP | Percentage of vacant housing units |
+| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago |
+| Rental Rate | RentalP | Percentage of occupied housing units that are rented |
+| Mobile Homes Rate | MobileP | Percentage of total housing units categorized as mobile housing structures |
+| Housing Unit Density | UnitDens | Number of housing units per square mile of land area |
 
 ### Data Limitations:
 None at this time.  
