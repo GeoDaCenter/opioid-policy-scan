@@ -1,6 +1,7 @@
-**Meta Data Name**: Essential Jobs  
-**Last Modified**: March 2, 2021  
-**Author**: Moksha Menghaney & Qinyun Lin  
+**Meta Data Name**: Essential Jobs
+**Author**: Moksha Menghaney & Qinyun Lin
+**Last Modified**: October 18, 2023
+**Last Modified By**: Wataru Morioka
 
 ### Data Location: 
 EC02 at 4 spatial scales. Files can be found [here](/data_final).
@@ -45,7 +46,7 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Essential Workers  | essnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) |
+| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) |
 
 ### Data Limitations:
 Please note this dataset uses occupations as a classifier and doesn't include any information about the industry to which the job belongs. This can lead to an overestimation of essential workers category. 
