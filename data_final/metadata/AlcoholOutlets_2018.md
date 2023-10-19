@@ -1,6 +1,7 @@
-**Meta Data Name**: Alcohol Outlet Density  
-**Last Modified**: January 12, 2021   
-**Author**: Susan Paykin    
+**Meta Data Name**: Alcohol Outlet Density
+**Author**: Susan Paykin
+**Last Modified**: October 17, 2023
+**Last Modified By**: Wataru Morioka
 
 ### Data Location: 
 BE03 at 4 spatial scales. Files can be found [here](/data_final).
@@ -14,7 +15,7 @@ Alcohol outlet locations are from Infogroup's 2018 Business and Consumer Histori
 
 ### Description of Data Source Tables: 
 
-From Infgroup, key variables include point location data and *Primary.NAICS.Code*, which was filtered for the the following NAICS codes for BEER, WINE, & LIQUOR STORES:
+From Infgroup, key variables include point location data and *Primary.NAICS.Code*, which was filtered for the following NAICS codes for BEER, WINE, & LIQUOR STORES:
 * 44531001
 * 44531002 
 * 44531004 
@@ -39,16 +40,16 @@ Alcohol outlet density was then calculated as:
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Alcohol outlet density per land area | alcDens | Number of alcohol outlets per square mile |
-| Alcohol outlet density per capita | alcPerCap | Number of alcohol outlets per capita |
-| Total alcohol outlets | alcTotal | Total number of alcohol outlets |
-| Total area | areaSqMi | Land area of geography in sq miles |
-| Total population | totPopE | Total population estimate |
+| Alcohol outlet density per land area | AlcDens | Number of alcohol outlets per square mile |
+| Alcohol outlet density per capita | AlcPerCap | Number of alcohol outlets per capita |
+| Total alcohol outlets | AlcTot | Total number of alcohol outlets |
+| Total area | AreaSqMi | Land area of geography in sq miles |
+| Total population | TotPopE | Total population estimate |
 
 ### Data Limitations: 
-Alcohol outlet density is one approximation for accessibility or demand, though a limited one for describing or understanding the complex relationship between alcohol consumption and the surrounding area or communithy. 
+Alcohol outlet density is one approximation for accessibility or demand, though a limited one for describing or understanding the complex relationship between alcohol consumption and the surrounding area or community. 
 
-The category of 'alcohol outlets' included in this dataset does not include supermarkets and/or drug stores that may carry beer, wine, or liquor. The laws governing these sales varies from state to state, permitting alcohol sales in different kind of sales outlets. Outlets that are permitted to make these sales may not always fall under the same NAICS code for *Beer, Wine, and Liquor Stores*. 
+The category of 'alcohol outlets' included in this dataset does not include supermarkets and/or drug stores that may carry beer, wine, or liquor. The laws governing these sales vary from state to state, permitting alcohol sales in different kinds of sales outlets. Outlets that are permitted to make these sales may not always fall under the same NAICS code for *Beer, Wine, and Liquor Stores*. 
 
 ### Comments/Notes:
 
