@@ -1,9 +1,8 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
-**Added**: January 5, 2021
-**Author**: Susan Paykin
+**Added**: January 5, 2021  
+**Author**: Susan Paykin  
 **Last Modified**: October 12, 2023  
-**Last Modified By**: Wataru Morioka
-
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 Access02 at 4 spatial scales. Files can be found [here](/data_final).
