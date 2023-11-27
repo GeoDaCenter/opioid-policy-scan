@@ -1,5 +1,5 @@
 **Meta Data Name**: Access to Hospitals  
-**Added**: January 6, 2021
+**Added**: January 6, 2021  
 **Author**: Susan Paykin  
 **Last Modified:** October 17, 2023  
 **Last Modified By:** Wataru Morioka
