@@ -1,6 +1,7 @@
 **Meta Data Name**: Drug-Related Death Rate  
-**Last Modified**: February 5, 2021  
 **Author**: Susan Paykin  
+**Last Modified**: November 27, 2023  
+**Last Modified By **: Wataru Morioka  
 
 ### Data Location: 
 Health01 at 2 spatial scales. Files can be found [here](/data_final).
@@ -40,8 +41,8 @@ Data was wrangled, cleaned and filtered for the 48 contiguous US states & Washin
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Deaths | deaths | Total deaths from drug-related causes, 2009-2018 |
-| Population | pop | Total population |
+| Deaths | DrgRlDth | Total deaths from drug-related causes, 2009-2018 |
+| Population | TotPop | Total population |
 | Raw death rate | rawDeathRt | Raw death rate |
 | Adjusted death rate per 100K | adjDeathRt | Adjusted death rate per 100K population |
 
