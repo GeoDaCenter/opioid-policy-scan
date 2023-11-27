@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Pharmacies  
-**Added**: January 6, 2021
-**Author**: Susan Paykin 
-**Last Modified**: October 12, 2023
-**Last Modified By**: Wataru Morioka    
+**Added**: January 6, 2021  
+**Author**: Susan Paykin  
+**Last Modified**: October 12, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 Access04 at 4 spatial scales. Files can be found [here](/data_final).
