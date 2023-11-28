@@ -1,6 +1,7 @@
 **Meta Data Name**: Homeless Population  
-**Last Modified**: July 30th, 2021  
 **Author**: Ally Muszynski  
+**Last Modified**: November 27, 2023  
+**Last Modified By**: Wataru Morioka  
 
 DS06 - 4 spatial scales. Files can be found [here](/data_final).
 * DS06_T  
@@ -30,13 +31,13 @@ Rates were calculated using group dwelling estimates for homelessness.
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Bed Count | BedCt| Number of beds available to homeless individuals in a continuum of care available at the time of the census |
-| Point In Time Count | PITCt| Number of housing-insecure individuals at a shelter on the day of the count |
-| Yearly Bed Count | YrBed |  Number of beds available to homeless populations in group quarters available year-round |
+| Bed Count | BedCnt | Number of beds available to homeless individuals in a continuum of care available at the time of the census |
+| Point In Time Count | PntInTm | Number of housing-insecure individuals at a shelter on the day of the count |
+| Yearly Bed Count | YrlyBedCnt |  Number of beds available to homeless populations in group quarters available year-round |
   
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2018 point in time count. This is the taken by a teams of individuals in a continuum of care in one day. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness in this dataset. Data was geocoded then spatially joined at the tract, ZCTA, state and county level to see where continuums of care are located and the availibility of temporary housing solutions.
+This data represents estimates as of the ACS 2018 point in time count. This is the taken by a team of individuals in a continuum of care in one day. It is difficult to measure homelessness at a local and Federal level as the population is relatively mobile, homelessness can be cyclical and there are visibility issues for the homeless community, so the annual point in time count was used as a proxy for homelessness in this dataset. Data was geocoded then spatially joined at the tract, ZCTA, state and county level to see where continuums of care are located and the availability of temporary housing solutions.
 
 ### Comments/Notes:
 Point in time counts were geocoded from addresses provided then spatially joined with different levels of information to give a proxy for homelessness. 
