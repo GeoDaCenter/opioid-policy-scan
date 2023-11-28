@@ -1,5 +1,5 @@
-**Meta Data Name**: Housing Variables
-**Author**: Susan Paykin, Moksha Menghaney
+**Meta Data Name**: Housing Variables  
+**Author**: Susan Paykin, Moksha Menghaney  
 **Last Modified**: October 18, 2023  
 **Last Modified By**: Wataru Morioka
 
