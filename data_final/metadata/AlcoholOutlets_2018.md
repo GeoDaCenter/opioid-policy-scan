@@ -1,7 +1,7 @@
-**Meta Data Name**: Alcohol Outlet Density
-**Author**: Susan Paykin
-**Last Modified**: October 17, 2023
-**Last Modified By**: Wataru Morioka
+**Meta Data Name**: Alcohol Outlet Density  
+**Author**: Susan Paykin  
+**Last Modified**: October 17, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE03 at 4 spatial scales. Files can be found [here](/data_final).
