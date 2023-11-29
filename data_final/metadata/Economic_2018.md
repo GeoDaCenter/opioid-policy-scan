@@ -1,5 +1,5 @@
-**Meta Data Name**: Economic Variables
-**Authors**: Moksha Menghaney & Susan Paykin
+**Meta Data Name**: Economic Variables  
+**Authors**: Moksha Menghaney & Susan Paykin  
 **Last Modified**: October 17, 2023  
 **Last Modified By**: Wataru Morika
 
