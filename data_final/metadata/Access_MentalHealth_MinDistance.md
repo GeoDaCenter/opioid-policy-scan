@@ -1,9 +1,8 @@
 **Meta Data Name**: Access to Mental Health Providers  
-**Added**: January 9, 2021
+**Added**: January 9, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: October 12, 2023
-**Last Modified By**: Wataru Morioka
-
+**Last Modified**: October 12, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 Access05 at 4 spatial scales. Files can be found [here](/data_final).
