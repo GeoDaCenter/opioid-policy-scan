@@ -1,6 +1,7 @@
 **Meta Data Name**: Primary Care Physicians and Specialist Physicians  
-**Last Modified**: March 3, 2021  
 **Author**: Susan Paykin  
+**Last Modified**: November 27, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 Health03 at 3 spatial scales. Files can be found [here](/data_final).
@@ -21,9 +22,9 @@ Data was wrangled, cleaned and processed for creation of tract, county and state
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Primary care physicians | pcp_total | Number of PCPs in area |
-| Specialty physicians | sp_total | Number of specialty physicians in area |
-| GEOID | geoid | Unique 11-digit identifier for census tracts |
+| Primary care physicians | TotPcp | Number of PCPs in area |
+| Specialty physicians | TotSp | Number of specialty physicians in area |
+| GEOID | GEOID | Unique 11-digit ID for Census Tracts (state + county + tract) |
 | State FIPS | state | Unique 2-digit identifier for states |
 | County FIPS | county | Unique 5-digit identifier for counties (state + county) |
 | Census tract | tract | 6-digit identifier for census tracts |
