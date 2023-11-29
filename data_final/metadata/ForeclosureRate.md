@@ -1,6 +1,7 @@
 **Meta Data Name**: Foreclosure Rates & Mortgage Delinquencies  
-**Last Modified**: April 9, 2021  
 **Author**: Susan Paykin  
+**Last Modified**: November 27, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 EC04 at 3 spatial scales. Final data can be found [here](/data_final).  
@@ -35,8 +36,8 @@ Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Foreclosure or delinquency rate | fordq_rate | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
-| Foreclosure or delinquency count | fordq_num | Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
+| Foreclosure or delinquency rate | ForDqP | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
+| Foreclosure or delinquency count | ForDqTot | Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession |
 
 ### Data Limitations:
 The data reflects 2007-2008 estimates. Note again, via [NSP2 Data and Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. 
