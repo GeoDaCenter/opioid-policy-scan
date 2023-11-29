@@ -1,6 +1,7 @@
 **Meta Data Name**: Internet Variables  
-**Last Modified**: April 10, 2022  
-**Author**: Qinyun Lin 
+**Author**: Qinyun Lin  
+**Last Modified**: November 27, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 EC05 at 4 spatial scales. Files can be found [here](/data_final).
@@ -32,7 +33,7 @@ The following variables were included from **B28002**:
 | Households without Internet access | noInt | Households without Internet access |
 | % Households with an Internet subscription  | IntSubPct | Percentage of Households with an Internet subscription |
 | % Households with Internet but without subscription | IntNoSubPct | Percentage of Households with Internet but without subscription |
-| % Households without Internet access | noIntPct | Percentage of Households without Internet access |
+| % Households without Internet access | NoIntP | Percentage of Households without Internet access |
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2019 5-year average.
