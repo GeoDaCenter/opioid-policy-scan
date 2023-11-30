@@ -1,5 +1,5 @@
-**Meta Data Name**: Jobs by Industries
-**Author**: Moksha Menghaney
+**Meta Data Name**: Jobs by Industries  
+**Author**: Moksha Menghaney  
 **Last Modified**: October 18, 2023  
 **Last Modified By** Wataru Morioka  
 
@@ -11,10 +11,10 @@ EC01 at 4 spatial scales. Files can be found [here](/data_final).
 * EC01_S  
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S2403, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
+Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S2403, at State, County, Tract, and ZIP Code Tabulation Area levels. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
-S2403 : Industry by sex for the civilian employed population 16 years and over 
+S2403: Industry by sex for the civilian employed population 16 years and over 
 
 ### Description of Data Processing: 
 All variables were included from S2403 (2018):
