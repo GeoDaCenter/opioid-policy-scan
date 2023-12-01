@@ -1,7 +1,8 @@
 **Meta Data Name**: Parks and Green Space Coverage  
-**Added**: May 30, 2022  
-**Last Modified**: June 8, 2022  
 **Author**: Christian Villanueva   
+**Added**: May 30, 2022  
+**Last Modified**: November 30, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE07 at 4 spatial scales. Files can be found [here](/data_final).
@@ -29,8 +30,8 @@ Data was collected from OpenStreetMap. The queries resulted in a series of polyg
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | COUNTYFP | COUNTYFP | Unique 5-digit GEOID for census tracts |
-| Park Area | parkArea | Area (in square meters) of park or green space in a county |
-| Park Cover | cover | Percent of county covered by park or green space|
+| Park Area | ParkArea | Area (in square meters) of park or green space in a county |
+| Park Cover | Cover | Percent of county covered by park or green space|
 
 ### Data Limitations:
 
