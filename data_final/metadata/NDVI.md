@@ -1,7 +1,8 @@
 **Meta Data Name**: Normalized Difference Vegetation Index (NDVI)  
-**Last Modified**: Dec 3, 2021  
-**Added to OEPS**: April 1, 2022  
 **Author**: Michelle Stuhlmacher, DePaul University, Department of Geography; Susan Paykin, University of Chicago, Center for Spatial Data Science
+**Added to OEPS**: April 1, 2022  
+**Last Modified**: November 30, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE06 - Normalized Difference Vegetation Index (NDVI) for US-wide at the Census tract, zip code, county, and state scales. File can be found [here](/data_final).
@@ -18,7 +19,7 @@ The tract-level data processing was done by the Depaul University team. Sentinel
 
 Analysis was completed using [Google Earth Engine](https://earthengine.google.com/). The code is publicly accessible to those with an Earth Engine account here: https://code.earthengine.google.com/4c997cd30d088e97d24171d528e4749b   
 
-The key variable in this dataset is **ndvi**: the average Normalized Difference Vegetation Index (ndvi) value from all pixel values in each census tract. NDVI is a remotely sensed measure of relative vegetation abundance and health using the difference in red (RED) and near-infrared (NIR) measurements. It is calculated: *NDVI = (NIR-RED)/(NIR+RED)*  
+The key variable in this dataset is **Ndvi**: the average Normalized Difference Vegetation Index (ndvi) value from all pixel values in each census tract. NDVI is a remotely sensed measure of relative vegetation abundance and health using the difference in red (RED) and near-infrared (NIR) measurements. It is calculated: *NDVI = (NIR-RED)/(NIR+RED)*  
 The NDVI calculation produces an index from -1 to 1, with values at the higher end of the range corresponding to greater vegetation abundance.  
 
 The original spatial scale was 10m pixels, which was translated to US Census tracts. 
@@ -28,7 +29,7 @@ Tract-level estimates were then aggregated to the county-level average and state
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-|Normalized Difference Vegetation Index (NDVI) | ndvi | Average NDVI value from all pixel values in each Census tract |
+|Normalized Difference Vegetation Index (NDVI) | Ndvi | Average NDVI value from all pixel values in each Census tract |
 
 ### Data Limitations:
 Despite removing identified influences of cloud interferences, there may still be clouds or other atmospheric conditions that alter pixel values used in calculations. See the original source for greater documentation of these effects. Furthermore, summarizing NDVI to the census tract simplifies inter-census tract variability.
