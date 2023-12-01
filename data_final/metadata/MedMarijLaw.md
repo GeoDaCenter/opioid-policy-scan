@@ -1,6 +1,7 @@
 **Meta Data Name**: Medical Marijuana Policies  
-**Last Modified**: March 2, 2021  
 **Author**: Qinyun Lin  
+**Last Modified**: November 30, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 PS09 - at the state level. Files can be found [here](/data_final).
@@ -18,7 +19,7 @@ The following variables were included from the source data:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Law authorizing adults to use medical marijuana | MedMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0 = no, 1 = yes) |
+| Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0 = no, 1 = yes) |
 
 ### Data Limitations:
 N/A
