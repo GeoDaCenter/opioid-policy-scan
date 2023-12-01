@@ -1,6 +1,7 @@
 **Meta Data Name**: Medicaid Expansion  
-**Last Modified**: January 11, 2021  
 **Author**: Qinyun Lin  
+**Last Modified**: November 30, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 PS07 - at the state level. Files can be found [here](/data_final).
@@ -20,9 +21,9 @@ The following variables were included from the source data:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total medicaid spending | TtlMedExp | Total medicaid spending |
+| Total medicaid spending | MedcdExp18 | Total medicaid spending |
 | Traditional medicaid federal spending | TradFedExp | Traditional medicaid - federal spending |
-| Traditional medicaid state spending | TradSttExpN | Traditional medicaid - state spending |
+| Traditional medicaid state spending | TradSttExp | Traditional medicaid - state spending |
 | Expansion federal spending | ExpnFedExp | Expansion Group - Federal Spending |
 | Expansion state spending | ExpnSttExp | Expansion Group - State Spending |
 
