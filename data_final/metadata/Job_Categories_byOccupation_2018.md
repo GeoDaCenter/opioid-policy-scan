@@ -1,7 +1,7 @@
-**Meta Data Name**: Essential Jobs
-**Author**: Moksha Menghaney & Qinyun Lin
-**Last Modified**: October 18, 2023
-**Last Modified By**: Wataru Morioka
+**Meta Data Name**: Essential Jobs  
+**Author**: Moksha Menghaney & Qinyun Lin  
+**Last Modified**: October 18, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 EC02 at 4 spatial scales. Files can be found [here](/data_final).
