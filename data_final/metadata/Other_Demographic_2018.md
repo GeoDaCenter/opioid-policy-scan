@@ -1,6 +1,7 @@
 **Meta Data Name**: Demographic Variables  
-**Last Modified**: October 22, 2020  
 **Author**: Moksha Menghaney  
+**Last Modified**: November 30, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 DS01 at 4 spatial scales. Files can be found [here](/data_final).
@@ -29,8 +30,8 @@ The following variables were included from **DP02**:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Less than High School degree  | noHSP | Percentage of population 25 years and over, less than a high school degree |
-| % Population Disabled  | disbP | Percentage of civilian non institutionalized population with a disability |
+| % Less than High School degree  | NoHsP | Percentage of population 25 years and over, less than a high school degree |
+| % Population Disabled  | DisbP | Percentage of civilian non institutionalized population with a disability |
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.
