@@ -1,6 +1,7 @@
 **Meta Data Name**: Medicaid Expenditure 2019  
-**Last Modified**: Jan 10th, 2021  
 **Author**: Qinyun Lin  
+**Last Modified**: November 29, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 PS06 - at the state level. Files can be found [here](/data_final).
@@ -18,7 +19,7 @@ The following variables were included from the source data:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Total medicaid spending (Character) | TtlMedExpC | Total medicaid spending in character format |
-| Total medicaid spendinge (Numeric) | TtlMedExpN | Total medicaid spending in numeric format |
+| Total medicaid spendinge (Numeric) | MedcdExp19 | Total medicaid spending in numeric format |
 
 
 ### Data Limitations:
@@ -27,4 +28,4 @@ N/A
 ### Comments/Notes:
 1. Medicaid expenditures do not include administrative costs, accounting adjustments, or the U.S. Territories. Total Medicaid spending including these additional items was $626 billion in FY 2019.
 2. Federal Fiscal Year: Unless otherwise noted, years preceded by "FY" refer to the Federal Fiscal Year, which runs from October 1 through September 30. FY 2019 refers to the period from October 1, 2018 through September 30, 2019.
-3. New York data may reflect anomalous spending due to adjustments, change in expenditures, and lags in state claims. 
+3. New York data may reflect anomalous spending due to adjustments, changes in expenditures, and lags in state claims. 
