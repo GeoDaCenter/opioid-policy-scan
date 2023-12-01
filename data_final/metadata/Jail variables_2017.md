@@ -1,13 +1,14 @@
 **Meta Data Name**: Jail Incarceration Variables  
-**Last Modified**: August 26th, 2020  
 **Author**: Qinyun Lin  
+**Last Modified**: November 29, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 PS02 - Jail variables at the county level. Files can be found [here](/data_final).
 * PS02_C  
 
 ### Data Source(s) Description:  
-Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named as "incarceration_trends.xlsx". 
+Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
 
 
 ### Description of Data Processing: 
@@ -33,7 +34,7 @@ The following variables were included from the source data:
 19. Total jail admission count;
 20. Pretrial jail population count. 
  
-These rates were calculated using base rate of county population aged 15-64 and the unit is per 100K people. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." Also note that these rates are jail population relative to the total county population. For example, the female jail population rate is calcualted as the jail female population divided by the female population (aged 15–64) in that county (multiply by 100,000). 
+These rates were calculated using base rate of county population aged 15-64 and the unit is per 100K people. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." Also, note that these rates are jail population relative to the total county population. For example, the female jail population rate is calculated as the jail female population divided by the female population (aged 15–64) in that county (multiplied by 100,000). 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
@@ -60,7 +61,7 @@ These rates were calculated using base rate of county population aged 15-64 and 
 | Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count |
 
 ### Data Limitations:
-There are missing data in many counties. 
+There is missing data in many counties. 
 
 ### Comments/Notes:
 No data for four counties in New York (Queen, King, Bronx, and Richmond). 
