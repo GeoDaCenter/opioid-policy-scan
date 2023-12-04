@@ -1,6 +1,7 @@
 **Meta Data Name**: State & Local Government Expenditures  
-**Last Modified**: March 10, 2021    
 **Author**: Susan Paykin  
+**Last Modified**: December 1, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 PS11 at the state level, with aggregate local-level spending indicators. Files can be found [here](/data_final).
@@ -34,16 +35,16 @@ The data source table included the following variables for state and local gover
 
 ### Description of Data Processing: 
 
-Data was downloaded, cleaned and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for state-level spending, local-level spending, and combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C. 
+Data was downloaded, cleaned, and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for state-level spending, local-level spending, and combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C. 
 
 ### Key Variable and Definitions:
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Police & fire expenditures | plcFireExp_X | Total expenditures on police and fire protection|
-| Corrections expenditures | crrctExp_X | Total expenditures on corrections system and operations |
-| Public health expenditures | healthExp_X | Total expenditures on public health and hospitals |
-| Public welfare expenditures | wlfrExp_X | Total expenditures on public welfare programs |
+| Police & fire expenditures | PlcFyrExpT | Total expenditures on police and fire protection|
+| Corrections expenditures | CrrctExpT | Total expenditures on corrections system and operations |
+| Public health expenditures | HlthExpT | Total expenditures on public health and hospitals |
+| Public welfare expenditures | WlfrExpT | Total expenditures on public welfare programs |
 
 For the expenditure variables, the last characters indicate the following levels:  
 
