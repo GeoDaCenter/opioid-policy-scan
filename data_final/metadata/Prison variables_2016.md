@@ -1,6 +1,7 @@
 **Meta Data Name**: Prison Incarceration Rates  
-**Last Modified**: August 26th, 2020  
 **Author**: Qinyun Lin  
+**Last Modified**: August 26th, 2020  
+**Last Modified By**: Qinyun Lin  
 
 ### Data Location: 
 PS01 - Prison variables at the county level. Files can be found [here](/data_final).
