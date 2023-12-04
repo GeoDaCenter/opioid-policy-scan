@@ -1,6 +1,7 @@
 **Meta Data Name**: Race and Ethnicity Variables  
-**Last Modified**: March 15, 2021  
-**Author**: Moksha Menghaney & Susan Paykin 
+**Author**: Moksha Menghaney & Susan Paykin  
+**Last Modified**: December, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 DS01 at 4 spatial scales. Files can be found [here](/data_final).
@@ -36,13 +37,13 @@ The following variables were included from **B03002**:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % White  | whiteP | Percentage of population with race identified as white alone |
-| % Black  | blackP | Percentage of population with race identified as Black or African American alone |
-| % Hispanic | hispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin |
-| % American Indian | amIndP | Percentage of population with race identified as Native American or Alaska Native alone |
-| % Asian  | asianP | Percentage of population with race identified as Asian alone |
-| % Native Hawaiian | pacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone |
-| % Other | otherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) |
+| % White  | WhiteP | Percentage of population with race identified as white alone |
+| % Black  | BlackP | Percentage of population with race identified as Black or African American alone |
+| % Hispanic | HispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin |
+| % American Indian | AmIndP | Percentage of population with race identified as Native American or Alaska Native alone |
+| % Asian  | AsianP | Percentage of population with race identified as Asian alone |
+| % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone |
+| % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) |
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.
