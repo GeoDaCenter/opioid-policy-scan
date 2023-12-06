@@ -1,13 +1,14 @@
 **Meta Data Name**: Rural-Urban Classification for Counties  
-**Last Modified**: March 20, 2020  
 **Author**: Moksha Menghaney & Susan Paykin  
+**Last Modified**: December 5, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE02 at the County scale. File can be found [here](/data_final).
 * BE02_RUCA_C  
 
 ### Data Source(s) Description:  
-Percentage rural and urban population is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
+Percentage of rural and urban population is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
 
 ### Description of Data Source Tables:
 After each decennial census, the bureau identifies Urban Areas under two categories :
@@ -25,12 +26,12 @@ For each county, the percentage of tracts classified as urban/suburban/rural, us
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| % Urban | rcaUrbP | Percent census tracts in the county classified as Urban using RUCA codes |
-| % Suburban | rcaSubrbP | Percent census tracts in the county classified as Suburban using RUCA codes |
-| % Rural  | rcaRuralP | Percent census tracts in the county classified as Rural using RUCA codes |
-| Urban Population| urbPop10 | 2010 Population living in urban areas, as defined by Census Bureau |
-| Rural Population| rurlPop10 | 2010 Population living in non urban areas, as defined by Census Bureau |
-| % Rurality | cenRuralP | % of 2010 Population living in non urban areas, as defined by Census Bureau |
+| % Urban | RcaUrbanP | Percent census tracts in the county classified as Urban using RUCA codes |
+| % Suburban | RcaSubrbP | Percent census tracts in the county classified as Suburban using RUCA codes |
+| % Rural  | RcaRuralP | Percent census tracts in the county classified as Rural using RUCA codes |
+| Urban Population| UrbPop10 | 2010 Population living in urban areas, as defined by Census Bureau |
+| Rural Population| RuralPop10 | 2010 Population living in non urban areas, as defined by Census Bureau |
+| % Rurality | CenRuralP | % of 2010 Population living in non urban areas, as defined by Census Bureau |
 
 ### Data Limitations:
 n/a
