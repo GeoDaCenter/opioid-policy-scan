@@ -1,7 +1,8 @@
 **Meta Data Name**: Residential Segregation Indices  
-**Created**: July 8, 2021  
-**Modified**: April 12, 2022  
 **Author**: Susan Paykin  
+**Added**: July 8, 2021  
+**Last Modified**: December 4, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE05 - Residential Segregation Indicies calculated at the county level. File can be found [here](/data_final).
@@ -40,21 +41,21 @@ The isolation index reflects the probabilities that a person in a minority group
 |:---------|:--------------------|:------------|
 | State ID | STATEFP | Unique 2-digit identifier for states |
 | County ID | COUNTYFP | Unique 5-digit identifier for counties, w/ first 2 digits state FIPS |
-| Dissimilarity index - Black | dissim.b | Dissimilarity index for Black and non-Hispanic White residents |
-| Interaction index - Black | inter.bw | Interaction index for Black and non-Hispanic White residents |
-| Isolation index - Black | iso.b | Isolation index for Black and non-Hispanic White residents |
-| Dissimilarity index - Hispanic | dissim.h | Dissimilarity index for Hispanic and non-Hispanic White residents |
-| Interaction index - Hispanic | inter.hw | Interaction index for Hispanic and non-Hispanic White residents |
-| Isolation index - Hispanic | iso.h | Isolation index for Hispanic and non-Hispanic White residents |
-| Dissimilarity index - Asian | dissim.a | Dissimilarity index for Asian and non-Hispanic White residents |
-| Interaction index - Asian | inter.a | Interaction index for Asian and non-Hispanic White residents |
-| Isolation index - Asian | iso.a | Isolation index for Asian and non-Hispanic White residents |
+| Dissimilarity index - Black | DsmBlk | Dissimilarity index for Black and non-Hispanic White residents |
+| Interaction index - Black | IntrBlkWht | Interaction index for Black and non-Hispanic White residents |
+| Isolation index - Black | IsoBlk | Isolation index for Black and non-Hispanic White residents |
+| Dissimilarity index - Hispanic | DsmHsp | Dissimilarity index for Hispanic and non-Hispanic White residents |
+| Interaction index - Hispanic | IntrHspWht | Interaction index for Hispanic and non-Hispanic White residents |
+| Isolation index - Hispanic | IsoHsp | Isolation index for Hispanic and non-Hispanic White residents |
+| Dissimilarity index - Asian | DsmAs | Dissimilarity index for Asian and non-Hispanic White residents |
+| Interaction index - Asian | IntrAsWht | Interaction index for Asian and non-Hispanic White residents |
+| Isolation index - Asian | IsoAs | Isolation index for Asian and non-Hispanic White residents |
 
 ### Data Limitations:
-The three indices measuring  residential segregation included here represent two categories of measures of residential segregation: measures of evenness (dissimiliarity) and measures of exposure (interaction and isolation). Three additional categories of residential segregation measurements described by Massey and Denton (1998) include measures of concentration, centralization, and clustering. Read more on the indices and their expressions from the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html). 
+The three indices measuring  residential segregation included here represent two categories of measures of residential segregation: measures of evenness (dissimilarity) and measures of exposure (interaction and isolation). Three additional categories of residential segregation measurements described by Massey and Denton (1998) include measures of concentration, centralization, and clustering. Read more on the indices and their expressions from the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html). 
 
 
 ### Comments/Notes:
-From the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), on Measures of Residential Segregation: "Massey and Denton (1988) used an extensive literature search and cluster analysis to identify 20 different indexes of segregation and classify them into five key dimensions of segregation. Basically, evenness involves the differential distribution of the subject population, exposure measures potential contact, concentration refers to the relative amount of physical space occupied, centralization indicates the degree to which a group is located near the center of an urban area, and clustering measures the degree to which minority group members live disproportionately in contiguous areas.""
+From the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), on Measures of Residential Segregation: "Massey and Denton (1988) used an extensive literature search and cluster analysis to identify 20 different indexes of segregation and classify them into five key dimensions of segregation. Basically, evenness involves the differential distribution of the subject population, exposure measures potential contact, concentration refers to the relative amount of physical space occupied, centralization indicates the degree to which a group is located near the center of an urban area, and clustering measures the degree to which minority group members live disproportionately in contiguous areas."
 
 Note: In all of the calculations, non-Hispanic whites are considered the "majority" (reference) population. 
