@@ -1,6 +1,7 @@
 **Meta Data Name**: Rural-Urban Classification for Tracts & ZCTAs  
-**Last Modified**: October 27, 2020  
 **Author**: Moksha Menghaney  
+**Last Modified**: December 5, 2023  
+**Last Modified By**: Wataru Morioka  
 
 ### Data Location: 
 BE02 at 2 spatial scales. Files can be found [here](/data_final).
@@ -36,9 +37,9 @@ tractFIPS and ZIP_CODE are the respective identifiers for census tract and zipco
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| RUCA Codes | RUCA1 | Primary RUCA Code |
-| RUCA Codes | RUCA2 | Secondary RUCA Code |
-| Classification | rurality | Urban/Suburban/Rural |
+| RUCA Codes | Ruca1 | Primary RUCA Code |
+| RUCA Codes | Ruca2 | Secondary RUCA Code |
+| Classification | Rurality | Urban/Suburban/Rural |
 
 
 ### Data Limitations:
