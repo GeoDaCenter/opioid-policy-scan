@@ -1,13 +1,16 @@
 **Meta Data Name**: Foreclosure Rates & Mortgage Delinquencies  
 **Author**: Susan Paykin  
-**Last Modified**: November 27, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Economic  
+
 ### Data Location: 
-EC04 at 3 spatial scales. Final data can be found [here](/data_final).  
-* EC04_T
-* EC04_C
-* EC04_S
+Latest - the data is available at 3 spatial scales: census tract, county, and state. Files can be found [here](../full_tables).
+* T_Latest.csv  
+* C_Latest.csv  
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 
@@ -30,7 +33,7 @@ The NSP2 dataset includes variables used to estimate census tract-level foreclos
 
 ### Description of Data Processing: 
 
-Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates were aggregated (mean) up to county-level and state-level, and appropriate gegraphic boundary labels were selected for inclusion in final datasets. 
+Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates were aggregated (mean) up to county-level and state-level, and appropriate geographic boundary labels were selected for inclusion in final datasets. 
 
 ### Key Variable and Definitions:
 
