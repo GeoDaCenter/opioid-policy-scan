@@ -1,14 +1,17 @@
 **Meta Data Name**: Essential Jobs  
 **Author**: Moksha Menghaney & Qinyun Lin  
-**Last Modified**: October 18, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Economic  
+
 ### Data Location: 
-EC02 at 4 spatial scales. Files can be found [here](/data_final).
-* EC02_T  
-* EC02_Z  
-* EC02_C  
-* EC02_S  
+Latest - the data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
+* T_Latest.csv  
+* Z_Latest.csv  
+* C_Latest.csv  
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 Variables were obtained from the [2014 - 2018 American Community Survey (ACS)](https://data.census.gov), table S2401, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.  
