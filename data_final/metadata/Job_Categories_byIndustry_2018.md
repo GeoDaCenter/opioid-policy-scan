@@ -1,14 +1,17 @@
 **Meta Data Name**: Jobs by Industries  
 **Author**: Moksha Menghaney  
-**Last Modified**: October 18, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By** Wataru Morioka  
 
+### Theme: 
+Economic  
+
 ### Data Location: 
-EC01 at 4 spatial scales. Files can be found [here](/data_final).
-* EC01_T  
-* EC01_Z  
-* EC01_C  
-* EC01_S  
+Latest - the access data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
+* T_Latest.csv  
+* Z_Latest.csv  
+* C_Latest.csv  
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S2403, at State, County, Tract, and ZIP Code Tabulation Area levels. Raw data and more details can be found at https://data.census.gov.
