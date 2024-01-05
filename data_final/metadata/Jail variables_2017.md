@@ -1,11 +1,14 @@
 **Meta Data Name**: Jail Incarceration Variables  
 **Author**: Qinyun Lin  
-**Last Modified**: November 29, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Policy  
+
 ### Data Location: 
-PS02 - Jail variables at the county level. Files can be found [here](/data_final).
-* PS02_C  
+Latest - the data is available at county scale. Files can be found [here](../full_tables).
+* C_Latest.csv  
 
 ### Data Source(s) Description:  
 Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
