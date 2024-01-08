@@ -1,11 +1,14 @@
 **Meta Data Name**: Medicaid Expenditure 2019  
 **Author**: Qinyun Lin  
-**Last Modified**: November 29, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Policy  
+
 ### Data Location: 
-PS06 - at the state level. Files can be found [here](/data_final).
-* PS06_S  
+Latest - the access data is available at state scale. The file can be found [here](../full_tables).
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/total-medicaid-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), accessed January 10, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw), named as *raw_data_medicaid_exp.csv*. The sources are from Urban Institute estimates based on data from CMS (Form 64) from August 2020.
