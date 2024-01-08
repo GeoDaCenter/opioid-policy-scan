@@ -1,15 +1,13 @@
 **Metadata Name**:   
 **Date Added**:   
 **Date Last Modified**:   
-**Author**:   
+**Author**:
+**Last Modified By**:
+**Last Modified Date**:
 
 ### Data Location
-[File name] at [#] spatial scales. Files can be found [here](/data_final).
 
-* [File name]_T -- *tract*
-* [File name]_Z -- *zip code*
-* [File name]_C -- *county*
-* [File name]_S -- *state*
+You can find the variables described in this document in the CSV files [here](/data_final/full_tables). CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv. Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description
 
@@ -19,13 +17,18 @@
 
 ### Key Variables and Definitions
 
-| Variable | Variable ID | Description |
-|:---------|:--------------------|:------------|
-| variable name | exact naming of variable in the final data file  | short description of variable |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID | Description | Years Available | Spatial Scale |
+|:--|:--|:--|:--|:--|
+| Example Name | ExampleID | This is a variable description | 2000, 2010, 2018 | State, County, Zip, Tract |
+| | | | | |
+| | | | | |
+| | | | | |
 
 
 ### Data Limitations
