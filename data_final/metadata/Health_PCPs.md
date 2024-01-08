@@ -1,13 +1,16 @@
 **Meta Data Name**: Primary Care Physicians and Specialist Physicians  
 **Author**: Susan Paykin  
-**Last Modified**: November 27, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Environment  
+
 ### Data Location: 
-Health03 at 3 spatial scales. Files can be found [here](/data_final).
-* Health03_T  
-* Health03_C
-* Health03_S
+Latest - the data is available at 3 spatial scales: census tract, county, and state. Files can be found [here](../full_tables).
+* T_Latest.csv  
+* C_Latest.csv  
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 
@@ -17,17 +20,13 @@ Data was sourced from [Dartmouth Atlas' Primary Care Service Area (PCSA) Project
 The source table was Census Tract layer attributes CSV. The data date is 2010. Source variables selected for inclusion and further processing included state, county, and tract FIPS codes, as well as *TG_DOC* for the number of clinically active primary care physicians in the tract and *TS_DOC* for the number of clinically active specialist physicians in the tract. 
 
 ### Description of Data Processing: 
-Data was wrangled, cleaned and processed for creation of tract, county and state level datasets. For the tract dataset (Health03_T.csv), we created a *geoid* variable merging state, county, and tract digits for a unique 11-digit census tract ID. For the county (Health03_C.csv) and state (Health03_S.csv) respectively, we aggregated the tract totals to the appropriate level. 
+Data was wrangled, cleaned and processed for creation of tract, county and state level datasets. For the tract dataset (T_Latest.csv), we created a *GEOID* variable merging state, county, and tract digits for a unique 11-digit census tract ID. For the county (C_Latest.csv) and state (S_Latest.csv) respectively, we aggregated the tract totals to the appropriate level. 
 
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
 | Primary care physicians | TotPcp | Number of PCPs in area |
 | Specialty physicians | TotSp | Number of specialty physicians in area |
-| GEOID | GEOID | Unique 11-digit ID for Census Tracts (state + county + tract) |
-| State FIPS | state | Unique 2-digit identifier for states |
-| County FIPS | county | Unique 5-digit identifier for counties (state + county) |
-| Census tract | tract | 6-digit identifier for census tracts |
 
 ### Data Limitations:
 Does not include U.S. territories Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Virgin Islands, or Washington, D.C. 
