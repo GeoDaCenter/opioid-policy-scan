@@ -5,7 +5,7 @@
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
-Environment  
+Environment
 
 ### Data Location: 
 Latest - the access data is available at 4 spatial scales. Files can be found [here](../full_tables).
