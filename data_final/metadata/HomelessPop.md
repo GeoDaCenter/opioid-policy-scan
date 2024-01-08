@@ -1,13 +1,17 @@
 **Meta Data Name**: Homeless Population  
 **Author**: Ally Muszynski  
-**Last Modified**: November 27, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
-DS06 - 4 spatial scales. Files can be found [here](/data_final).
-* DS06_T  
-* DS06_Z  
-* DS06_C  
-* DS06_S  
+### Theme: 
+Social  
+
+### Data Location: 
+Latest - the data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
+* T_Latest.csv  
+* Z_Latest.csv  
+* C_Latest.csv  
+* S_Latest.csv   
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2018 Department of Housing and Urban Development Homeless Census, 2018, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
