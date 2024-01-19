@@ -1,18 +1,17 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
-**Added**: January 5, 2021  
+**Date Added**: January 5, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Environment
 
 ### Data Location: 
-Latest - the access data is available at 4 spatial scales. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Locations of Federal Qualified Health Centers (FQHCs) were sourced from the [Health Resources and Services Administration](https://bphc.hrsa.gov/datareporting/index.html) which were cleaned and geocoded for the [US COVID Atlas](https://theuscovidatlas.org/). 
@@ -37,20 +36,26 @@ County and state-level variables include the **count** of Census tracts and the 
 
 ### Key Variable and Definitions:
 
-#### Tract and Zip Code
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Distance to nearest FQHC | FqhcMinDis | Euclidean distance* from tract/zip centroid to nearest FQHC, in miles |
-| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes |
-| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold |
+#### Tract and Zip Code
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------| 
+| Distance to nearest FQHC | FqhcMinDis | Euclidean distance *from tract/zip centroid to nearest FQHC, in miles* | Latest | Tract, Zip |
+| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes | Latest | Tract, Zip |
+| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold | Latest | Tract, Zip |
 
 #### County and State
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range |
-| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range |
-| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC |
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
+| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range | Latest | County, State |
+| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range | Latest | County, State |
+| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC | Latest | County, State |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 

@@ -1,12 +1,17 @@
 **Meta Data Name**: Drug-Related Death Rate  
+**Date Added**: February 5, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: November 27, 2023  
-**Last Modified By **: Wataru Morioka  
+**Date Last Modified**: January 3, 2024  
+**Last Modified By**: Wataru Morioka
+
+### Theme: 
+Outcome
 
 ### Data Location: 
-Health01 at 2 spatial scales. Files can be found [here](/data_final).
-* Health01_C
-* Health01_S
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
@@ -39,12 +44,15 @@ Data was wrangled, cleaned and filtered for the 48 contiguous US states & Washin
 
 ### Key Variable and Definitions:
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Deaths | DrgRlDth | Total deaths from drug-related causes, 2009-2018 |
-| Population | TotPop | Total population |
-| Raw death rate | rawDeathRt | Raw death rate |
-| Adjusted death rate per 100K | adjDeathRt | Adjusted death rate per 100K population |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Deaths | DrgRlDth | Total deaths from drug-related causes, 2009-2018 | Latest | County, State |
 
 ### Data Limitations: 
 

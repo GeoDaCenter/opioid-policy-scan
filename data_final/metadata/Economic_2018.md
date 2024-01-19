@@ -1,14 +1,17 @@
 **Meta Data Name**: Economic Variables  
+**Date Added**: October 22, 2020  
 **Authors**: Moksha Menghaney & Susan Paykin  
-**Last Modified**: October 17, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morika
 
+### Theme: 
+Economic
+
 ### Data Location: 
-EC03 at 4 spatial scales. Files can be found [here](/data_final).
-* EC03_T  
-* EC03_Z  
-* EC03_C  
-* EC03_S  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
@@ -40,11 +43,19 @@ For more on variable definitions, see [ACS 2018 Subject Definitions](https://www
   
 ### Key Variable and Definitions:
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force|
-| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population |
-| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip, County, State |
+| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip, County, State |
+| Gini Coefficient | GiniCoeff | Income Inequality (Gini Coefficient) | 2010, Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 The ACS does not gather information in the U.S. territories American Samoa, Guam, Northern Mariana Islands and U.S. Virgin Islands. It does include information for Puerto Rico & Washington, D.C. 

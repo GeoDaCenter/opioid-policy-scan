@@ -1,6 +1,7 @@
 **Meta Data Name**: COVID-19 Variables  
+**Date Added**: March 12, 2021  
 **Author**: Qinyun Lin  
-**Last Modified**: October 17, 2023  
+**Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka
  
 

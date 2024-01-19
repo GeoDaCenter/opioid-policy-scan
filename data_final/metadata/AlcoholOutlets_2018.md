@@ -1,17 +1,17 @@
 **Meta Data Name**: Alcohol Outlet Density  
+**Date Added**: January 13, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-Latest - the data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Alcohol outlet locations are from Infogroup's 2018 Business and Consumer Historical Datafile. State, county, census tract, and ZIP Code Tract Area (ZCTA) geometry files are from the U.S. Census TIGER/Line Shapefiles 2018. 
@@ -41,13 +41,17 @@ Alcohol outlet density was then calculated as:
 
 ### Key Variable and Definitions:
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Total alcohol outlets | AlcTot | Total number of alcohol outlets |
-| Alcohol outlet density per land area | AlcDens | Number of alcohol outlets per square mile |
-| Alcohol outlet density per capita | AlcPerCap | Number of alcohol outlets per capita |
-| Total area | AreaSqMi | Land area of geography in sq miles |
-| Total population | TotPop | Estimated total population |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Total alcohol outlets | AlcTot | Total number of alcohol outlets | Latest | Tract, Zip, County, State |
+| Alcohol outlet density per land area | AlcDens | Number of alcohol outlets per square mile | Latest | Tract, Zip, County, State |
+| Alcohol outlet density per capita | AlcPerCap | Number of alcohol outlets per capita | Latest | Tract, Zip, County, State |
 
 ### Data Limitations: 
 Alcohol outlet density is one approximation for accessibility or demand, though a limited one for describing or understanding the complex relationship between alcohol consumption and the surrounding area or community. 

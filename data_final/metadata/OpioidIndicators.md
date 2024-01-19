@@ -1,15 +1,17 @@
 **Meta Data Name**: Opioid Indicators: Prescription and Mortality Rates  
+**Date Added**: February 1, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: December 22, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
-Outcome  
+Outcome
 
 ### Data Location: 
-Latest - Opioid indicators, including opioid prescription rates and drug overdose mortality rates, available at state and county scales. Files can be found [here](../full_tables).
-* S_Latest.csv
-* T_Latest.csv
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
@@ -36,12 +38,19 @@ For more information, see [HepVu's Data Methods](https://hepvu.org/data-methods/
 Data was cleaned and variables were renamed to shorter, abbreviated labels. The average drug overdose mortality rate variable (*OdMortRtAv*) was calculated by taking the 5-year average from 2015 to 2019).
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Opioid prescription rate | OpRxRt20 | Opioid prescription rate in 2020 |
-| Pain reliever misuse percent | PrMsuse20P | Percent of persons who self-report misusing prescription pain relief medication in 2020 |
-| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2020 |
-| Average overdose mortality rate | OdMortRtAv | Average overdose mortality rates from 2015-2019 |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Opioid prescription rate | OpRxRt20 | Opioid prescription rate in 2020 | Latest | County, State |
+| Overdose mortality rate | OdMortRtYY | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2020 | Latest | County, State |
+| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates from 2015-2019 | Latest | County, State |
+| Pain reliever misuse percent | PrMsuse20P | Percent of persons who self-report misusing prescription pain relief medication in 2020 | Latest | State |
 
 ### Data Limitations:
 Note that pain reliever misuse data is only available for State-level data. 

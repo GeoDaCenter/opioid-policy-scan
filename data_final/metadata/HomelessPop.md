@@ -1,17 +1,17 @@
 **Meta Data Name**: Homeless Population  
+**Date Added**: September 26, 2021  
 **Author**: Ally Muszynski  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Social  
 
 ### Data Location: 
-Latest - the data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2018 Department of Housing and Urban Development Homeless Census, 2018, table DP03 at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://www.huduser.gov.
@@ -33,11 +33,17 @@ Rates were calculated using group dwelling estimates for homelessness.
 
 ### Key Variable and Definitions:
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Bed Count | BedCnt | Number of beds available to homeless individuals in a continuum of care available at the time of the census |
-| Point In Time Count | PntInTm | Number of housing-insecure individuals at a shelter on the day of the count |
-| Yearly Bed Count | YrlyBedCnt |  Number of beds available to homeless populations in group quarters available year-round |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Bed Count | BedCnt | Number of beds available to homeless individuals in a continuum of care available at the time of the census | Latest | Tract, Zip, County, State |
+| Point In Time Count | PntInTm | Number of housing-insecure individuals at a shelter on the day of the count | Latest | Tract, Zip, County, State |
+| Yearly Bed Count | YrlyBedCnt |  Number of beds available to homeless populations in group quarters available year-round | Latest | Tract, Zip, County, State |
   
 
 ### Data Limitations:

@@ -1,11 +1,17 @@
 **Meta Data Name**: Medical Marijuana Policies  
+**Date Added**: March 23, 2021  
 **Author**: Qinyun Lin  
-**Last Modified**: November 30, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Policy
+
 ### Data Location: 
-PS09 - at the state level. Files can be found [here](/data_final).
-* PS09_2017_S  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variable was obtained from Prescription Drug Abuse Policy System, [Medical Marijuana Caregiver Rules](http://pdaps.org/datasets/rules-of-caregivers-medical-marijuana-1501610940). This is a longitudinal dataset, displaying medical marijuana caregiver laws in effect as of January 1, 2014 through February 1, 2017.
@@ -17,9 +23,16 @@ The following variables were included from the source data:
 1. Dummy variable; State has a law authorizing adults to use medical marijuana
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0 = no, 1 = yes) |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0 = no, 1 = yes) | Latest | State |
 
 ### Data Limitations:
 N/A

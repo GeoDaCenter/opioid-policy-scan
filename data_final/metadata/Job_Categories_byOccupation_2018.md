@@ -1,17 +1,17 @@
 **Meta Data Name**: Essential Jobs  
+**Date Added**: October 22, 2020  
 **Author**: Moksha Menghaney & Qinyun Lin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Economic  
 
 ### Data Location: 
-Latest - the data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the [2014 - 2018 American Community Survey (ACS)](https://data.census.gov), table S2401, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.  
@@ -47,9 +47,17 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
 
         
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Count of Essential Workers | EssnWrkE | Estimated count of Population Employed in Essential Occupations (outlined above) | Latest | Tract, Zip, County, State |
+| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) | Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 Please note this dataset uses occupations as a classifier and doesn't include any information about the industry to which the job belongs. This can lead to an overestimation of essential workers category. 

@@ -1,16 +1,17 @@
 **Meta Data Name**: Primary Care Physicians and Specialist Physicians  
+**Date Added**: March 3, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-Latest - the data is available at 3 spatial scales: census tract, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
@@ -23,10 +24,17 @@ The source table was Census Tract layer attributes CSV. The data date is 2010. S
 Data was wrangled, cleaned and processed for creation of tract, county and state level datasets. For the tract dataset (T_Latest.csv), we created a *GEOID* variable merging state, county, and tract digits for a unique 11-digit census tract ID. For the county (C_Latest.csv) and state (S_Latest.csv) respectively, we aggregated the tract totals to the appropriate level. 
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Primary care physicians | TotPcp | Number of PCPs in area |
-| Specialty physicians | TotSp | Number of specialty physicians in area |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Primary care physicians | TotPcp | Number of PCPs in area | Latest | Tract, County, State |
+| Specialty physicians | TotSp | Number of specialty physicians in area | Latest | Tract, County, State |
 
 ### Data Limitations:
 Does not include U.S. territories Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Virgin Islands, or Washington, D.C. 

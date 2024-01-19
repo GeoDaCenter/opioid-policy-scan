@@ -1,15 +1,17 @@
 **Meta Data Name**: Normalized Difference Vegetation Index (NDVI)  
-**Author**: Michelle Stuhlmacher, DePaul University, Department of Geography; Susan Paykin, University of Chicago, Center for Spatial Data Science
-**Added to OEPS**: April 1, 2022  
-**Last Modified**: November 30, 2023  
-**Last Modified By**: Wataru Morioka  
+**Date Added**: April 1, 2022  
+**Author**: Michelle Stuhlmacher & Susan Paykin  
+**Date Last Modified**: January 3, 2024  
+**Last Modified By**: Wataru Morioka
+
+### Theme: 
+Environment
 
 ### Data Location: 
-BE06 - Normalized Difference Vegetation Index (NDVI) for US-wide at the Census tract, zip code, county, and state scales. File can be found [here](/data_final).
-* BE06_NDVI_T 
-* BE06_NDVI_Z
-* BE06_NDVI_C
-* BE06_NDVI_S
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Tract-level data was sourced from Sentinel 2 MSI: MultiSpectral Instrument, Level-1 C. It was calculated using imagery from the summer of 2018. Summer is defined as 03/20/2018 to 09/22/2018 (spring to fall solstice). The tract-level dataset was provided by Dr. Michelle Stuhmacher, Assistant Professor, DePaul University Department of Geography. 
@@ -27,9 +29,16 @@ The original spatial scale was 10m pixels, which was translated to US Census tra
 Tract-level estimates were then aggregated to the county-level average and state-level average using their FIPS Codes. Zip code-level estimates were calculated using the [HUD USPS ZIP Code Crosswalk File](https://www.huduser.gov/portal/datasets/usps_crosswalk.html) (Tract-Zip), also provided in the OEPS under [geometryFiles/crosswalk](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/geometryFiles/crosswalk). Data processing was done by the CSDS team. 
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-|Normalized Difference Vegetation Index (NDVI) | Ndvi | Average NDVI value from all pixel values in each Census tract |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+|Normalized Difference Vegetation Index (NDVI) | Ndvi | Average NDVI value from all pixel values in each Census tract | Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 Despite removing identified influences of cloud interferences, there may still be clouds or other atmospheric conditions that alter pixel values used in calculations. See the original source for greater documentation of these effects. Furthermore, summarizing NDVI to the census tract simplifies inter-census tract variability.

@@ -1,14 +1,17 @@
 **Meta Data Name**: Race and Ethnicity Variables  
+**Date Added**: July 8, 2021  
 **Author**: Moksha Menghaney & Susan Paykin  
-**Last Modified**: December, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Social
+
 ### Data Location: 
-DS01 at 4 spatial scales. Files can be found [here](/data_final).
-* DS01_T  
-* DS01_Z  
-* DS01_C  
-* DS01_S  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2018 5-year average American Community Survey (ACS), table B02001, B03002, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) level. Raw data and more details can be found at https://data.census.gov.
@@ -35,15 +38,22 @@ The following variables were included from **B03002**:
   -  *% Other  = 1 - (% White alone + % Black alone + % American Indian alone + % Asian alone + % Native Hawaiian alone)*
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| % White  | WhiteP | Percentage of population with race identified as white alone |
-| % Black  | BlackP | Percentage of population with race identified as Black or African American alone |
-| % Hispanic | HispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin |
-| % American Indian | AmIndP | Percentage of population with race identified as Native American or Alaska Native alone |
-| % Asian  | AsianP | Percentage of population with race identified as Asian alone |
-| % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone |
-| % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| % White  | WhiteP | Percentage of population with race identified as white alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % Black  | BlackP | Percentage of population with race identified as Black or African American alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % Hispanic | HispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % American Indian | AmIndP | Percentage of population with race identified as Native American or Alaska Native alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % Asian  | AsianP | Percentage of population with race identified as Asian alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.

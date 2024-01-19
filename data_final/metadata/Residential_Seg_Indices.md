@@ -1,14 +1,17 @@
 **Meta Data Name**: Residential Segregation Indices  
+**Date Added**: July 8, 2021  
 **Author**: Susan Paykin  
-**Added**: July 8, 2021  
-**Last Modified**: December 4, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Social
+
 ### Data Location: 
-BE05 - Residential Segregation Indicies calculated at the county level. File can be found [here](/data_final).
-* BE05_C
-* BE05_S
-* BE05_Z
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 All data was sourced from the American Community Survey (ACS) 2018 5-year estimates. Population demographic data was sourced at the tract level for all U.S. states and then aggregated up to the county-level for calculations. 
@@ -37,19 +40,24 @@ The interaction index reflect the probabilities that a person in a minority grou
 The isolation index reflects the probabilities that a person in a minority group shares an area with another minority person. To calculate the isolation index for each racial/ethnic minority group, we used the following formula: $$Isolation=∑i (xi/X) ∗ (bi/ti)$$  where xi is the number of minority group residents (Black, Hispanic, Asian) in each tract, X is the number of minority group residents in the county, wi is the number of non-Hispanic white residents in the tract, and ti is the total population of the area. 
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| State ID | STATEFP | Unique 2-digit identifier for states |
-| County ID | COUNTYFP | Unique 5-digit identifier for counties, w/ first 2 digits state FIPS |
-| Dissimilarity index - Black | DsmBlk | Dissimilarity index for Black and non-Hispanic White residents |
-| Interaction index - Black | IntrBlkWht | Interaction index for Black and non-Hispanic White residents |
-| Isolation index - Black | IsoBlk | Isolation index for Black and non-Hispanic White residents |
-| Dissimilarity index - Hispanic | DsmHsp | Dissimilarity index for Hispanic and non-Hispanic White residents |
-| Interaction index - Hispanic | IntrHspWht | Interaction index for Hispanic and non-Hispanic White residents |
-| Isolation index - Hispanic | IsoHsp | Isolation index for Hispanic and non-Hispanic White residents |
-| Dissimilarity index - Asian | DsmAs | Dissimilarity index for Asian and non-Hispanic White residents |
-| Interaction index - Asian | IntrAsWht | Interaction index for Asian and non-Hispanic White residents |
-| Isolation index - Asian | IsoAs | Isolation index for Asian and non-Hispanic White residents |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Dissimilarity index - Black | DsmBlk | Dissimilarity index for Black and non-Hispanic White residents | Latest | Zip, County, State |
+| Interaction index - Black | IntrBlkWht | Interaction index for Black and non-Hispanic White residents | Latest | Zip, County, State |
+| Isolation index - Black | IsoBlk | Isolation index for Black and non-Hispanic White residents | Latest | Zip, County, State |
+| Dissimilarity index - Hispanic | DsmHsp | Dissimilarity index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
+| Interaction index - Hispanic | IntrHspWht | Interaction index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
+| Isolation index - Hispanic | IsoHsp | Isolation index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
+| Dissimilarity index - Asian | DsmAs | Dissimilarity index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
+| Interaction index - Asian | IntrAsWht | Interaction index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
+| Isolation index - Asian | IsoAs | Isolation index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
 
 ### Data Limitations:
 The three indices measuring  residential segregation included here represent two categories of measures of residential segregation: measures of evenness (dissimilarity) and measures of exposure (interaction and isolation). Three additional categories of residential segregation measurements described by Massey and Denton (1998) include measures of concentration, centralization, and clustering. Read more on the indices and their expressions from the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html). 

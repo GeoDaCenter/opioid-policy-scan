@@ -1,15 +1,16 @@
 **Meta Data Name**: Internet Variables  
+**Date Added**: Apr 10, 2022  
 **Author**: Qinyun Lin  
-**Last Modified**: November 27, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
-### Data Location: 
-EC05 at 4 spatial scales. Files can be found [here](/data_final).
+### Theme: 
+Economic
 
-* EC05_2019_T  
-* EC05_2019_Z  
-* EC05_2019_C  
-* EC05_2019_S  
+### Data Location: 
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2015 - 2019 American Community Survey (ACS), table B28002, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
@@ -26,14 +27,16 @@ The following variables were included from **B28002**:
 * B28002_013: Estimate!!Total:!!No Internet access
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Households with an Internet subscription  | IntSub | Households with an Internet subscription |
-| Households with Internet but without subscription | IntNoSub | Households with Internet but without subscription |
-| Households without Internet access | noInt | Households without Internet access |
-| % Households with an Internet subscription  | IntSubPct | Percentage of Households with an Internet subscription |
-| % Households with Internet but without subscription | IntNoSubPct | Percentage of Households with Internet but without subscription |
-| % Households without Internet access | NoIntP | Percentage of Households without Internet access |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| % Households without Internet access | NoIntP | Percentage of Households without Internet access | Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2019 5-year average.
