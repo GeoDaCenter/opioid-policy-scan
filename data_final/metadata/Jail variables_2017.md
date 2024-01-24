@@ -1,14 +1,17 @@
 **Meta Data Name**: Jail Incarceration Variables  
+**Date Added**: September 11, 2020  
 **Author**: Qinyun Lin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Policy  
 
 ### Data Location: 
-Latest - the data is available at county scale. Files can be found [here](../full_tables).
-* C_Latest.csv  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
@@ -40,28 +43,35 @@ The following variables were included from the source data:
 These rates were calculated using base rate of county population aged 15-64 and the unit is per 100K people. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." Also, note that these rates are jail population relative to the total county population. For example, the female jail population rate is calculated as the jail female population divided by the female population (aged 15–64) in that county (multiplied by 100,000). 
 
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data |
-| Female jail population rate | FmlJlPpr | Jail Population Rate, Female |
-| Male jail population rate | MlJlPpr | Jail Population Rate, Male |
-| Asian American/Pacific Islander jail population rate | AapiJlPpr | Jail Population Rate, Asian American / Pacific Islander |
-| Black jail population rate | BlckJlPpr | Jail Population Rate, Black |
-| Latinx jail population rate | LtnxJlPpr | Jail Population Rate, Latinx |
-| Native American jail population rate | NtvJlPpr | Jail Population Rate, Native American |
-| White jail population rate | WhtJlPpr | Jail Population Rate, White |
-| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data |
-| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate |
-| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data |
-| Female jail population count | FmlJlPp | Jail Population Count, Female |
-| Male jail population count | MlJlPp | Jail Population Count, Male |
-| Asian American/Pacific Islander jail population count | AapiJlPp | Jail Population Count, Asian American / Pacific Islander |
-| Black jail population count | BlckJlPp | Jail Population Count, Black |
-| Latinx jail population count | LtnxJlPp | Jail Population Count, Latinx |
-| Native American jail population count | NtvJlPp | Jail Population Count, Native American |
-| White jail population count | WhtJlPp | Jail Population Count, White |
-| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | Latest | County |
+| Female jail population rate | FmlJlPpr | Jail Population Rate, Female | Latest | County |
+| Male jail population rate | MlJlPpr | Jail Population Rate, Male | Latest | County |
+| Asian American/Pacific Islander jail population rate | AapiJlPpr | Jail Population Rate, Asian American / Pacific Islander | Latest | County |
+| Black jail population rate | BlckJlPpr | Jail Population Rate, Black | Latest | County |
+| Latinx jail population rate | LtnxJlPpr | Jail Population Rate, Latinx | Latest | County |
+| Native American jail population rate | NtvJlPpr | Jail Population Rate, Native American | Latest | County |
+| White jail population rate | WhtJlPpr | Jail Population Rate, White | Latest | County |
+| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | Latest | County |
+| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | Latest | County |
+| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | Latest | County |
+| Female jail population count | FmlJlPp | Jail Population Count, Female | Latest | County |
+| Male jail population count | MlJlPp | Jail Population Count, Male | Latest | County |
+| Asian American/Pacific Islander jail population count | AapiJlPp | Jail Population Count, Asian American / Pacific Islander | Latest | County |
+| Black jail population count | BlckJlPp | Jail Population Count, Black | Latest | County |
+| Latinx jail population count | LtnxJlPp | Jail Population Count, Latinx | Latest | County |
+| Native American jail population count | NtvJlPp | Jail Population Count, Native American | Latest | County |
+| White jail population count | WhtJlPp | Jail Population Count, White | Latest | County |
+| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | Latest | County |
+| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | Latest | County |
 
 ### Data Limitations:
 There is missing data in many counties. 

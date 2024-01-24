@@ -1,12 +1,17 @@
 **Meta Data Name**: State & Local Government Expenditures  
+**Date Added**: March 11, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: December 1, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
-### Data Location: 
-PS11 at the state level, with aggregate local-level spending indicators. Files can be found [here](/data_final).
-* PS11_S
+### Theme: 
+Policy  
 
+### Data Location: 
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 ### Data Source(s) Description:  
 
 This data was sourced from the 2018 [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) and accessed via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm). 
@@ -39,12 +44,18 @@ Data was downloaded, cleaned, and prepared for analysis. The expenditure variabl
 
 ### Key Variable and Definitions:
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Police & fire expenditures | PlcFyrExpT | Total expenditures on police and fire protection|
-| Corrections expenditures | CrrctExpT | Total expenditures on corrections system and operations |
-| Public health expenditures | HlthExpT | Total expenditures on public health and hospitals |
-| Public welfare expenditures | WlfrExpT | Total expenditures on public welfare programs |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| Latest | State |
+| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | Latest | State |
+| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | Latest | State |
+| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | Latest | State |
 
 For the expenditure variables, the last characters indicate the following levels:  
 

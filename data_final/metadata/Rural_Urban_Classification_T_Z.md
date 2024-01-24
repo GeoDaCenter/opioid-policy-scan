@@ -1,12 +1,17 @@
 **Meta Data Name**: Rural-Urban Classification for Tracts & ZCTAs  
+**Date Added**: October 27, 2020  
 **Author**: Moksha Menghaney  
-**Last Modified**: December 5, 2023  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
+### Theme: 
+Environment
+
 ### Data Location: 
-BE02 at 2 spatial scales. Files can be found [here](/data_final).
-* BE02_RUCA_T  
-* BE02_RUCA_Z  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Tract and ZCTA level classifications were calculated using the [Rural-Urban Commuting Area Codes (RUCA codes)](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them.
@@ -35,11 +40,17 @@ Census Tracts & Zipcodes were classified as :
 ### Key Variable and Definitions:
 tractFIPS and ZIP_CODE are the respective identifiers for census tract and zipcode level files.
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| RUCA Codes | Ruca1 | Primary RUCA Code |
-| RUCA Codes | Ruca2 | Secondary RUCA Code |
-| Classification | Rurality | Urban/Suburban/Rural |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| RUCA Codes | Ruca1 | Primary RUCA Code | Latest | Tract, Zip |
+| RUCA Codes | Ruca2 | Secondary RUCA Code | Latest | Tract, Zip |
+| Classification | Rurality | Urban/Suburban/Rural | Latest | Tract, Zip |
 
 
 ### Data Limitations:

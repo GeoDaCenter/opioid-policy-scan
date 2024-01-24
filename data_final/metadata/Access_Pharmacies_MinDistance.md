@@ -1,18 +1,17 @@
 **Meta Data Name**: Access to Pharmacies  
-**Added**: January 6, 2021  
+**Date Added**: January 6, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-Latest - the access data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.  
 
 ### Data Source(s) Description:  
 Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library.
@@ -39,21 +38,26 @@ County and state-level variables include the **count** of Census tracts and the 
 
 ### Key Variable and Definitions:
 
-#### Tract and Zip Code
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
 
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Distance to nearest pharmacy | RxMinDis | Euclidean distance* from tract/zip centroid to the nearest pharmacy, in miles |
-| Driving time to nearest pharmacy | RxTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes |
-| Count of pharmacies | RxCntDr | Count of pharmacies within a 30-minute driving threshold |
+#### Tract and Zip Code
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Distance to nearest pharmacy | RxMinDis | Euclidean distance* from tract/zip centroid to the nearest pharmacy, in miles | Latest | Tract, Zip |
+| Driving time to nearest pharmacy | RxTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes | Latest | Tract, Zip |
+| Count of pharmacies | RxCntDr | Count of pharmacies within a 30-minute driving threshold | Latest | Tract, Zip |
 
 #### County and State
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | 
-| Count of tracts within 30-min driving range | RxCtTmDr | Number of tracts with pharmacy within a 30-min driving range |
-| Average time drive to nearest pharmacy | RxAvTmDr | Average driving time (minutes) across tracts in county/state to nearest pharmacy |
-| Percent of tracts within 30-min driving range | RxTmDrP | Percent of tracts with pharmacy within a 30-min driving range |
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
+| Count of tracts within 30-min driving range | RxCtTmDr | Number of tracts with pharmacy within a 30-min driving range | Latest | County, State |
+| Average time drive to nearest pharmacy | RxAvTmDr | Average driving time (minutes) across tracts in county/state to nearest pharmacy | Latest | County, State |
+| Percent of tracts within 30-min driving range | RxTmDrP | Percent of tracts with pharmacy within a 30-min driving range | Latest | County, State |
 
 ### Data Limitations:
 *Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.

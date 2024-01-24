@@ -1,17 +1,17 @@
 **Meta Data Name**: Jobs by Industries  
+**Date Added**: October 22, 2020  
 **Author**: Moksha Menghaney  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By** Wataru Morioka  
 
 ### Theme: 
 Economic  
 
 ### Data Location: 
-Latest - the access data is available at 4 spatial scales: census tract, zip code, county, and state. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv   
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S2403, at State, County, Tract, and ZIP Code Tabulation Area levels. Raw data and more details can be found at https://data.census.gov.
@@ -46,13 +46,20 @@ All variables were included from S2403 (2018):
 *Sum of the workers employed in Retail trade / (Total Civilian employed population 16 years and over)* 
         
 ### Key Variable and Definitions:
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Total Count of Workers | TotWrkE | Estimated count of working population |
-| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities |
-| % Education Jobs  | EduP | Percentage of population employed in educational services industry |
-| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries |
-| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry |
+
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Total Count of Workers | TotWrkE | Estimated count of working population | Latest | Tract, Zip, County, State |
+| % Education Jobs  | EduP | Percentage of population employed in educational services industry | Latest | Tract, Zip, County, State |
+| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities | Latest | Tract, Zip, County, State |
+| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries | Latest | Tract, Zip, County, State |
+| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry | Latest | Tract, Zip, County, State |
 
 ### Data Limitations:
 Please note this dataset uses industry as a classifier and does not include any information about the specific occupation in that industry. This could lead to an overestimation of High Risk to Injury workers category.

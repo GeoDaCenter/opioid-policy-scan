@@ -1,18 +1,17 @@
 **Meta Data Name**: Access to MOUDs  
-**Created**: February 1, 2021  
+**Date Added**: February 1, 2021  
 **Author**: Susan Paykin  
-**Last Modified**: January 3, 2024  
+**Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-Latest - Access to MOUDs at 4 spatial scales: Census tract, Zip code, County, and State. Files can be found [here](../full_tables).
-* T_Latest.csv  
-* Z_Latest.csv  
-* C_Latest.csv  
-* S_Latest.csv  
+You can find the variables described in this document in the CSV files [here](../full_tables).  
+
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
+Note: Every variable can be found in the **Latest** files. 
 
 ### Data Source(s) Description:  
 Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) and their locations were sourced from the [U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) Treatment Locator](https://findtreatment.samhsa.gov/locator) in September 2020. Naltrexone provider data from SAMHSA was supplemented by provider data from *Vivitrol.com*, with duplicates removed. 
@@ -34,69 +33,75 @@ County and state-level variables include the **count** of Census tracts and the 
 
 ### Key Variable and Definitions:
 
-#### Tract and ZIP Code
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Minimum distance to nearest MOUD (all types) | MoudMinDis | Euclidean distance (miles) to nearest MOUD (all types) |
-| Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider |
-| Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider |
-| Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold |
-| Minimum distance to methadone | MetMinDis | Euclidean distance (miles) to nearest methadone provider |
-| Driving time to nearest methadone | MetTmDr | Driving time (minutes) to nearest methadone provider |
-| Count of methadone providers (drive) | MetCntDr30 | Count of methadone providers in 30 minute drive time threshold |
-| Minimum distance to naltrexone | NalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider |
-| Driving time to nearest naltrexone |  NalTmDr | Driving time (minutes) to nearest naltrexone provider |
-| Count of naltrexone providers (drive) | NalCntDr30 | Count of naltrexone providers in 30 minute drive time threshold |
-| Walking time to nearest buprenorphine | BupTmWk | Driving time (minutes) to nearest buprenorphine provider |
-| Count of buprenorphine providers (walk) | BupCntWk60 | Count of buprenorphine providers in 60 minute walking time threshold |
-| Count of buprenorphine providers (walk) | BupCntWk30 | Count of buprenorphine providers in 30 minute walking time threshold |
-| Walking time to nearest methadone | MetTmWk | Driving time (minutes) to nearest methadone provider |
-| Count of methadone providers (walk) | MetCntWk60 | Count of methadone providers in 60 minute walking time threshold |
-| Count of methadone providers (walk) | MetCntWk30 | Count of methadone providers in 30 minute walking time threshold |
-| Walking time to nearest naltrexone |  NalTmWk | Driving time (minutes) to nearest naltrexone provider |
-| Count of naltrexone providers (walk) | NalCntWk60 | Count of naltrexone providers in 60 minute walking time threshold |
-| Count of naltrexone providers (walk) | NalCntWk30 | Count of naltrexone providers in 30 minute walking time threshold |
-| Biking time to nearest buprenorphine | BupTmBk | Biking time (minutes) to nearest buprenorphine provider |
-| Count of buprenorphine providers (bike) | BupCntBk60 | Count of buprenorphine providers in 60 minute biking time threshold |
-| Count of buprenorphine providers (bike) | BupCntBk30 | Count of buprenorphine providers in 30 minute biking time threshold |
-| Biking time to nearest methadone | MetTmBk | Biking time (minutes) to nearest methadone provider |
-| Count of methadone providers (bike) | MetCntBk60 | Count of methadone providers in 60 minute biking time threshold |
-| Count of methadone providers (bike) | MetCntBk30 | Count of methadone providers in 30 minute biking time threshold |
-| Biking time to nearest naltrexone | NalTmBk | Biking time (minutes) to nearest naltrexone provider |
-| Count of naltrexone providers (bike) | NalCntBk60 | Count of naltrexone providers in 60 minute biking time threshold |
-| Count of naltrexone providers (bike) | NalCntBk30 | Count of naltrexone providers in 30 minute biking time threshold |
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
+#### Tract, ZIP Code
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Minimum distance to nearest MOUD (all types) | MoudMinDis | Euclidean distance (miles) to nearest MOUD (all types) | Latest | Tract, Zip |
+| Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider | Latest | Tract, Zip |
+| Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider | Latest | Tract, Zip |
+| Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold | Latest | Tract, Zip |
+| Minimum distance to methadone | MetMinDis | Euclidean distance (miles) to nearest methadone provider | Latest | Tract, Zip |
+| Driving time to nearest methadone | MetTmDr | Driving time (minutes) to nearest methadone provider | Latest | Tract, Zip |
+| Count of methadone providers (drive) | MetCntDr30 | Count of methadone providers in 30 minute drive time threshold | Latest | Tract, Zip |
+| Minimum distance to naltrexone | NalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider | Latest | Tract, Zip |
+| Driving time to nearest naltrexone |  NalTmDr | Driving time (minutes) to nearest naltrexone provider | Latest | Tract, Zip |
+| Count of naltrexone providers (drive) | NalCntDr30 | Count of naltrexone providers in 30 minute drive time threshold | Latest | Tract, Zip |
+| Walking time to nearest buprenorphine | BupTmWk | Driving time (minutes) to nearest buprenorphine provider | Latest | Tract, Zip |
+| Count of buprenorphine providers (walk) | BupCntWk60 | Count of buprenorphine providers in 60 minute walking time threshold | Latest | Tract, Zip |
+| Count of buprenorphine providers (walk) | BupCntWk30 | Count of buprenorphine providers in 30 minute walking time threshold | Latest | Tract, Zip |
+| Walking time to nearest methadone | MetTmWk | Driving time (minutes) to nearest methadone provider | Latest | Tract, Zip |
+| Count of methadone providers (walk) | MetCntWk60 | Count of methadone providers in 60 minute walking time threshold | Latest | Tract, Zip |
+| Count of methadone providers (walk) | MetCntWk30 | Count of methadone providers in 30 minute walking time threshold | Latest | Tract, Zip |
+| Walking time to nearest naltrexone |  NalTmWk | Driving time (minutes) to nearest naltrexone provider | Latest | Tract, Zip |
+| Count of naltrexone providers (walk) | NalCntWk60 | Count of naltrexone providers in 60 minute walking time threshold | Latest | Tract, Zip |
+| Count of naltrexone providers (walk) | NalCntWk30 | Count of naltrexone providers in 30 minute walking time threshold | Latest | Tract, Zip |
+| Biking time to nearest buprenorphine | BupTmBk | Biking time (minutes) to nearest buprenorphine provider | Latest | Tract, Zip |
+| Count of buprenorphine providers (bike) | BupCntBk60 | Count of buprenorphine providers in 60 minute biking time threshold | Latest | Tract, Zip |
+| Count of buprenorphine providers (bike) | BupCntBk30 | Count of buprenorphine providers in 30 minute biking time threshold | Latest | Tract, Zip |
+| Biking time to nearest methadone | MetTmBk | Biking time (minutes) to nearest methadone provider | Latest | Tract, Zip |
+| Count of methadone providers (bike) | MetCntBk60 | Count of methadone providers in 60 minute biking time threshold | Latest | Tract, Zip |
+| Count of methadone providers (bike) | MetCntBk30 | Count of methadone providers in 30 minute biking time threshold | Latest | Tract, Zip |
+| Biking time to nearest naltrexone | NalTmBk | Biking time (minutes) to nearest naltrexone provider | Latest | Tract, Zip |
+| Count of naltrexone providers (bike) | NalCntBk60 | Count of naltrexone providers in 60 minute biking time threshold | Latest | Tract, Zip |
+| Count of naltrexone providers (bike) | NalCntBk30 | Count of naltrexone providers in 30 minute biking time threshold | Latest | Tract, Zip |
 
 #### County and State
-| Variable | Variable ID in .csv | Description |
-|:---------|:--------------------|:------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state |
-| Count of tracts within 30-min buprenorphine driving range | BupCtTmDr | Number of tracts with buprenorphine provider within a 30-min driving range |
-| Count of tracts within 30-min buprenorphine biking range | BupCtTmBk | Number of tracts with buprenorphine provider within a 30-min biking range |
-| Count of tracts within 30-min buprenorphine walking range | BupCtTmWk | Number of tracts with buprenorphine provider within a 30-min walking range |
-| Count of tracts within 30-min methadone driving range | MetCtTmDr | Number of tracts with methadone provider within a 30-min driving range |
-| Count of tracts within 30-min methadone biking range | MetCtTmBk | Number of tracts with methadone provider within a 30-min biking range |
-| Count of tracts within 30-min methadone walking range | MetCtTmWk | Number of tracts with methadone provider within a 30-min walking range |
-| Count of tracts within 30-min naltrexone driving range | NalCtTmDr | Number of tracts with naltrexone provider within a 30-min driving range |
-| Count of tracts within 30-min naltrexone biking range | NalCtTmBk | Number of tracts with naltrexone provider within a 30-min biking range |
-| Count of tracts within 30-min naltrexone walking range | NalCtTmWk | Number of tracts with naltrexone provider within a 30-min walking range |
-| Average driving time to nearest buprenorphine provider | BupAvTmDr | Average driving time (minutes) across tracts in county/state to nearest buprenorphine provider |
-| Average biking time to nearest buprenorphine provider | BupAvTmBk | Average biking time (minutes) across tracts in county/state to nearest buprenorphine provider |
-| Average walking time to nearest buprenorphine provider | BupAvTmWk | Average walking time (minutes) across tracts in county/state to nearest buprenorphine provider |
-| Average driving time to nearest methadone provider | MetAvTmDr | Average driving time (minutes) across tracts in county/state to nearest methadone provider |
-| Average biking time to nearest methadone provider | MetAvTmBk | Average biking time (minutes) across tracts in county/state to nearest methadone provider |
-| Average walking time to nearest methadone provider | MetAvTmWk | Average walking time (minutes) across tracts in county/state to nearest methadone provider |
-| Average driving time to nearest naltrexone provider | NalAvTmDr | Average driving time (minutes) across tracts in county/state to nearest naltrexone provider |
-| Average biking time to nearest naltrexone provider | NalAvTmBk | Average biking time (minutes) across tracts in county/state to nearest naltrexone provider |
-| Average walking time to nearest naltrexone provider | NalAvTmWk | Average walking time (minutes) across tracts in county/state to nearest naltrexone provider |
-| Percent of tracts within 30-min buprenorphine driving range | BupTmDrP | Percent of tracts with buprenorphine provider within a 30-min driving range |
-| Percent of tracts within 30-min buprenorphine biking range | BupTmBkP | Percent of tracts with buprenorphine provider within a 30-min biking range |
-| Percent of tracts within 30-min buprenorphine walking range | BupTmWkP | Percent of tracts with buprenorphine provider within a 30-min walking range |
-| Percent of tracts within 30-min methadone driving range | MetTmDrP | Percent of tracts with methadone provider within a 30-min driving range |
-| Percent of tracts within 30-min methadone biking range | MetTmBkP | Percent of tracts with methadone provider within a 30-min biking range |
-| Percent of tracts within 30-min methadone walking range | MetTmWkP | Percent of tracts with methadone provider within a 30-min walking range |
-| Percent of tracts within 30-min naltrexone driving range | NalTmDrP | Percent of tracts with naltrexone provider within a 30-min driving range |
-| Percent of tracts within 30-min naltrexone biking range | NalTmBkP | Percent of tracts with naltrexone provider within a 30-min biking range |
-| Percent of tracts within 30-min naltrexone walking range | NalTmWkP | Percent of tracts with naltrexone provider within a 30-min walking range |
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
+| Count of tracts within 30-min buprenorphine driving range | BupCtTmDr | Number of tracts with buprenorphine provider within a 30-min driving range | Latest | County, State |
+| Count of tracts within 30-min buprenorphine biking range | BupCtTmBk | Number of tracts with buprenorphine provider within a 30-min biking range | Latest | County, State |
+| Count of tracts within 30-min buprenorphine walking range | BupCtTmWk | Number of tracts with buprenorphine provider within a 30-min walking range | Latest | County, State |
+| Count of tracts within 30-min methadone driving range | MetCtTmDr | Number of tracts with methadone provider within a 30-min driving range | Latest | County, State |
+| Count of tracts within 30-min methadone biking range | MetCtTmBk | Number of tracts with methadone provider within a 30-min biking range | Latest | County, State |
+| Count of tracts within 30-min methadone walking range | MetCtTmWk | Number of tracts with methadone provider within a 30-min walking range | Latest | County, State |
+| Count of tracts within 30-min naltrexone driving range | NalCtTmDr | Number of tracts with naltrexone provider within a 30-min driving range | Latest | County, State |
+| Count of tracts within 30-min naltrexone biking range | NalCtTmBk | Number of tracts with naltrexone provider within a 30-min biking range | Latest | County, State |
+| Count of tracts within 30-min naltrexone walking range | NalCtTmWk | Number of tracts with naltrexone provider within a 30-min walking range | Latest | County, State |
+| Average driving time to nearest buprenorphine provider | BupAvTmDr | Average driving time (minutes) across tracts in county/state to nearest buprenorphine provider | Latest | County, State |
+| Average biking time to nearest buprenorphine provider | BupAvTmBk | Average biking time (minutes) across tracts in county/state to nearest buprenorphine provider | Latest | County, State |
+| Average walking time to nearest buprenorphine provider | BupAvTmWk | Average walking time (minutes) across tracts in county/state to nearest buprenorphine provider | Latest | County, State |
+| Average driving time to nearest methadone provider | MetAvTmDr | Average driving time (minutes) across tracts in county/state to nearest methadone provider | Latest | County, State |
+| Average biking time to nearest methadone provider | MetAvTmBk | Average biking time (minutes) across tracts in county/state to nearest methadone provider | Latest | County, State |
+| Average walking time to nearest methadone provider | MetAvTmWk | Average walking time (minutes) across tracts in county/state to nearest methadone provider | Latest | County, State |
+| Average driving time to nearest naltrexone provider | NalAvTmDr | Average driving time (minutes) across tracts in county/state to nearest naltrexone provider | Latest | County, State |
+| Average biking time to nearest naltrexone provider | NalAvTmBk | Average biking time (minutes) across tracts in county/state to nearest naltrexone provider | Latest | County, State |
+| Average walking time to nearest naltrexone provider | NalAvTmWk | Average walking time (minutes) across tracts in county/state to nearest naltrexone provider | Latest | County, State |
+| Percent of tracts within 30-min buprenorphine driving range | BupTmDrP | Percent of tracts with buprenorphine provider within a 30-min driving range | Latest | County, State |
+| Percent of tracts within 30-min buprenorphine biking range | BupTmBkP | Percent of tracts with buprenorphine provider within a 30-min biking range | Latest | County, State |
+| Percent of tracts within 30-min buprenorphine walking range | BupTmWkP | Percent of tracts with buprenorphine provider within a 30-min walking range | Latest | County, State |
+| Percent of tracts within 30-min methadone driving range | MetTmDrP | Percent of tracts with methadone provider within a 30-min driving range | Latest | County, State |
+| Percent of tracts within 30-min methadone biking range | MetTmBkP | Percent of tracts with methadone provider within a 30-min biking range | Latest | County, State |
+| Percent of tracts within 30-min methadone walking range | MetTmWkP | Percent of tracts with methadone provider within a 30-min walking range | Latest | County, State |
+| Percent of tracts within 30-min naltrexone driving range | NalTmDrP | Percent of tracts with naltrexone provider within a 30-min driving range | Latest | County, State |
+| Percent of tracts within 30-min naltrexone biking range | NalTmBkP | Percent of tracts with naltrexone provider within a 30-min biking range | Latest | County, State |
+| Percent of tracts within 30-min naltrexone walking range | NalTmWkP | Percent of tracts with naltrexone provider within a 30-min walking range | Latest | County, State |
 
 ### Data Limitations:
 Access metrics are calculated for the continental U.S., and do not include Hawaii, Alaska, or U.S. territories. 
