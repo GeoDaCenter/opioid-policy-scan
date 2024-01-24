@@ -40,11 +40,11 @@ The following variables were included from **DP02**:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| % Less than High School degree  | NoHsP | Percentage of population 25 years and over, less than a high school degree | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
-| % Population Disabled  | DisbP | Percentage of civilian non institutionalized population with a disability | 2000, 2010, Latest | Tract, Zip, County, State |
+| % Less than High School degree  | NoHsP | Percentage of population 25 years and over, less than a high school degree | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+| % Population Disabled  | DisbP | Percentage of civilian non institutionalized population with a disability | 2000, 2010, Latest | Tract, Zip*, County, State |
 
 ### Data Limitations:
-This data represents estimates as of the ACS 2018 5-year average.
-
+This data represents estimates as of the ACS 2018 5-year average.  
+*Note that the Zip code scale data is only available for the "latest" file.
 ### Comments/Notes:
 **Note on missing data:** Missing and/or unavailable data are coded as -999. 

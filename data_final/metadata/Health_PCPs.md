@@ -35,6 +35,8 @@ Data was wrangled, cleaned and processed for creation of tract, county and state
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Primary care physicians | TotPcp | Number of PCPs in area | Latest | Tract, County, State |
 | Specialty physicians | TotSp | Number of specialty physicians in area | Latest | Tract, County, State |
+| PCPs per 100,000 | PcpPer100k | PCPs per total Population X 100,000 | Latest | Tract, County, State |
+| SPs per 100,000 | SpPer100k | Specialty Physicians per total Population X 100,000 | Latest | Tract, County, State |
 
 ### Data Limitations:
 Does not include U.S. territories Puerto Rico, Guam, Northern Mariana Islands, American Samoa, Virgin Islands, or Washington, D.C. 

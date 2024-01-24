@@ -51,14 +51,15 @@ For more on variable definitions, see [ACS 2018 Subject Definitions](https://www
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
-| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
-| Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip, County, State |
-| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip, County, State |
-| Gini Coefficient | GiniCoeff | Income Inequality (Gini Coefficient) | 2010, Latest | Tract, Zip, County, State |
+| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+| Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
+| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
+| Gini Coefficient | GiniCoeff | Income Inequality (Gini Coefficient) | 2010, Latest | Tract, Zip*, County, State |
 
 ### Data Limitations:
-The ACS does not gather information in the U.S. territories American Samoa, Guam, Northern Mariana Islands and U.S. Virgin Islands. It does include information for Puerto Rico & Washington, D.C. 
+The ACS does not gather information in the U.S. territories American Samoa, Guam, Northern Mariana Islands and U.S. Virgin Islands. It does include information for Puerto Rico & Washington, D.C.  
+*Note that the Zip code scale data is only available for the "latest" file.
 
 ### Comments/Notes:
 For complete definitions of ACS variables described above, please refer to the [American Community Survey & Puerto Rico Community Survey 2018 Subject Definitions](https://www2.census.gov/programs-surveys/acs/tech_docs/subject_definitions/2018_ACSSubjectDefinitions.pdf). 

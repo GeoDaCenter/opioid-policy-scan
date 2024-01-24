@@ -32,11 +32,20 @@ We calculated travel-network access metrics for the driving travel time to the n
 - **Years Available** -- years for which data exists for this variable
 - **Spatial Scale** -- the variable exists for these levels of spatial scale
 
+#### Tract, ZIP Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | Latest | Tract, Zip |
 | Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | Latest | Tract, Zip |
 | Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | Latest | Tract, Zip |
+
+#### County and State
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
+| Count of tracts within 30-min OTP driving range | OtpCtTmDr | Number of tracts with OTP within a 30-min driving range | Latest | County, State |
+| Average driving time to nearest OTP | OtpAvTmDr | Average driving time (minutes) across tracts in county to nearest OTP | Latest | County, State |
+| Percent of tracts within 30-min OTP driving range | OtpTmDrP | Percent of tracts with an OTP within a 30-min driving range | Latest | County, State |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 

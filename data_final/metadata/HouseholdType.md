@@ -48,13 +48,14 @@ The following rates were calculated from the variables:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total population | TotPop | Estimated total population in the geographic area | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
+| Total population | TotPop | Estimated total population in the geographic area | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
 | Total population in household | TotPopHh | Total number of people in households | Latest | Tract, Zip, County, State |
 | Percent of nonrelatives in family households | NonRelFhhP | Percent of people living in family households that are not related to family | Latest | Tract, Zip, County, State |
 | Percent of nonrelatives in non-family households | NonRelNfhhP | Percent of people living in non-family households that are not related | Latest | Tract, Zip, County, State |
  
 ### Data Limitations:
-This data represents estimates as of the ACS 2018 5-year average. Additional variables in this table include householder gender, types of family members represented in households, and types of nonrelatives in household (i.e. roomer/baorder, housemate, foster child, other). 
+This data represents estimates as of the ACS 2018 5-year average. Additional variables in this table include householder gender, types of family members represented in households, and types of nonrelatives in household (i.e. roomer/baorder, housemate, foster child, other).  
+*Note that the Zip code scale data is only available for the "latest" file.
 
 ### Comments/Notes:
 For more information about how these data have been used in homelessness and housing stability research, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.

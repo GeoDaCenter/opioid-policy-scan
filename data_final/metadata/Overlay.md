@@ -25,6 +25,12 @@ The following variables were included from the source data:
  
 ### Key Variable and Definitions:
 
+- **Variable** -- title of variable
+- **Variable ID** -- exact name of variable in datasets
+- **Description** -- Short description of variable
+- **Years Available** -- years for which data exists for this variable
+- **Spatial Scale** -- the variable exists for these levels of spatial scale
+
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Hypersegregated City | DmySgrg | Dummy variable for whether county is part of a hypersegregated city or its metropolitan area | Latest | County |

@@ -39,11 +39,12 @@ These rates were calculated using sex by age by veteran status for the civilian 
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total Veteran Population  | TotVetPop | Total veteran population | 2010, Latest | Tract, Zip, County, State |
-| Percent Veteran  |  VetP  | Percent of population that are veterans | 2010, Latest | Tract, Zip, County, State |
+| Total Veteran Population  | TotVetPop | Total veteran population | 2010, Latest | Tract, Zip*, County, State |
+| Percent Veteran  |  VetP  | Percent of population that are veterans | 2010, Latest | Tract, Zip*, County, State |
 
 ### Data Limitations
-These rates were calculated using sex by age by veteran status for the civilian population 18 years and over.
+These rates were calculated using sex by age by veteran status for the civilian population 18 years and over.  
+*Note that the Zip code scale data is only available for the "latest" file.
   
 ### Comments/Notes
 **Note on missing data:** Missing and/or unavailable data are represented as blank cells or _NA_.

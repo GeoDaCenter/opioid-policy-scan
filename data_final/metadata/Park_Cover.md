@@ -37,7 +37,8 @@ Data was collected from OpenStreetMap. The queries resulted in a series of polyg
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Park Area | ParkArea | Area (in square meters) of park or green space in a county | Latest |  State |
+| Park Area | ParkArea | Area (in square meters) of park or green space in a state | Latest | State |
+| State Area | StateArea | Area (in square meters) of state | Latest | State |
 | Park Cover | Cover | Percent of county covered by park or green space| Latest | State |
 
 ### Data Limitations:

@@ -52,6 +52,7 @@ Alcohol outlet density was then calculated as:
 | Total alcohol outlets | AlcTot | Total number of alcohol outlets | Latest | Tract, Zip, County, State |
 | Alcohol outlet density per land area | AlcDens | Number of alcohol outlets per square mile | Latest | Tract, Zip, County, State |
 | Alcohol outlet density per capita | AlcPerCap | Number of alcohol outlets per capita | Latest | Tract, Zip, County, State |
+| Area Square Miles | AreaSqMi | Land area of geography in sq miles | Latest | Tract, Zip, County, State |
 
 ### Data Limitations: 
 Alcohol outlet density is one approximation for accessibility or demand, though a limited one for describing or understanding the complex relationship between alcohol consumption and the surrounding area or community. 

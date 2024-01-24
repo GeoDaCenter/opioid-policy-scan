@@ -5,7 +5,7 @@
 **Last Modified By**: Wataru Morioka  
 
 ### Theme: 
-Economic
+Environment
 
 ### Data Location: 
 You can find the variables described in this document in the CSV files [here](../full_tables).  
