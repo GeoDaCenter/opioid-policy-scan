@@ -8,6 +8,7 @@
 * County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.pmtiles)
 * Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.pmtiles)
 * ZIP Code (ZCTA): [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.pmtiles)
+* Block Group: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018.pmtiles)
 
 ### Data Source(s) Description:
 
