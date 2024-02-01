@@ -1,17 +1,17 @@
-**Meta Data Name**: Geographic Boundaries - 2018
+**Meta Data Name**: Geographic Boundaries - 2010
 **Last Added**: February 1, 2024  
 **Author**: Adam Cox
 
 ### Data Location: 
 
-* State: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018.pmtiles)
-* County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.pmtiles)
-* Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.pmtiles)
-* ZIP Code (ZCTA): [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.pmtiles)
+* State: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2010.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2010-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2010.pmtiles)
+* County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2010.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2010-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2010.pmtiles)
+* Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2010.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2010-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2010.pmtiles)
+* ZIP Code (ZCTA): [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2010.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2010-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2010.pmtiles)
 
 ### Data Source(s) Description:
 
-These geographic boundary files have been generated from the U.S. Census Bureau [Cartographic Boundary Files](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html), using the 500k scale variants for all geographies. All legal boundaries and names are as of January 1, 2018. The files were originally released September 18, 2018.
+These geographic boundary files have been generated from the U.S. Census Bureau [Cartographic Boundary Files](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html), using the 500k scale variants for all geographies. All legal boundaries and names are as of January 1, 2010.
 
 ### Description of Data Source Tables: 
 
