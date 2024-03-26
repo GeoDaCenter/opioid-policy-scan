@@ -1,25 +1,35 @@
-**Meta Data Name**: Geographic Boundaries  
-**Last Modified**: March 20, 2021    
-**Author**: Susan Paykin  
+**Meta Data Name**: Geographic Boundaries - 2018
+**Last Added**: February 1, 2024  
+**Author**: Adam Cox
 
 ### Data Location: 
-Four geographic boundary files can be found [here](/data_final/geometryFiles).
-* State 
-* County
-* Tract
-* ZIP Code (ZCTA) 
 
-### Data Source(s) Description:  
-Geographic boundary data are sourced from the U.S. Census [2018 TIGER/Line Shapefiles](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.2018.html). All legal boundaries and names are as of January 1, 2018. The files were originally released September 18, 2018.
+* State: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/state-2018.pmtiles)
+* County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/county-2018.pmtiles)
+* Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/tract-2018.pmtiles)
+* ZIP Code (ZCTA): [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/zcta-2018.pmtiles)
+* Block Group: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/bg-2018.pmtiles)
+
+### Data Source(s) Description:
+
+These geographic boundary files have been generated from the U.S. Census Bureau [Cartographic Boundary Files](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html), using the 500k scale variants for all geographies. All legal boundaries and names are as of January 1, 2018. The files were originally released September 18, 2018.
 
 ### Description of Data Source Tables: 
+
+_section in progress_
+
 The source state, county, tract, and ZCTA shapefiles include variables for the the area's geographic ID code, ID code of other relevant areas (i.e. state ID for each county ID), total land area, total water area, and geometry variables. The Census Bureau provides [full technical documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.2018.html) for these files, including information on how to use shapefiles for GIS and spatial analysis, as well as information about the use of [geographic identifiers](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html).
 
 ### Description of Data Processing: 
+
+_section in progress_
+
 Geographic boundary files were merged with descriptive data included in the Opioid Environment Data Warehouse for use in geocomputational research, GIS activities, and spatial data analysis and visualization. 
 
 
 ### Key Variable and Definitions:
+
+_section in progress_
 
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
