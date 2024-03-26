@@ -40,9 +40,9 @@ f_lookup = {
     "county/counties2018.shp": "GEOID",
     "tract/tracts2018.shp": "GEOID",
     "zcta/zctas2018.shp": "GEOID10",
-    "tl_2010_state/states2010.shp": "STATEFP",
-    "tl_2010_county/counties2010.shp": "GEOID",
-    "tl_2010_tract/tracts2010.shp": "GEOID",
+    "state/states2010.shp": "STATEFP",
+    "county/counties2010.shp": "GEOID",
+    "tract/tracts2010.shp": "GEOID",
 }
 
 new_suffix = "bq"
@@ -68,11 +68,6 @@ for path in f_lookup.keys():
         raise Exception("unexpected input shapefile")
 
     out_path = out_dir / Path(path).name
-    year = ''
-    if '2010' in str(out_path):
-        year = '2010'
-    if '2018' in str(out_path):
-        year = '2018'
     with fiona.open(shp_path) as src:
         dst_schema = src.schema
         dst_schema['properties']['HEROP_ID'] = 'str'
@@ -86,9 +81,13 @@ for path in f_lookup.keys():
         ) as dst:
             for feat in src:
                 geo_id = str(feat.properties[f_lookup[path]]).zfill(sl['id_length'])
-                herop_id =  f"{sl['code']}US{geo_id}-{year}"
-                props = Properties.from_dict(
-                    **feat.properties,
-                    HEROP_ID=herop_id,
-                )
+                herop_id =  f"{sl['code']}US{geo_id}"
+                if "HEROP_ID" in feat.properties:
+                    feat.properties['HEROP_ID'] = herop_id
+                    props = feat.properties
+                else:
+                    props = Properties.from_dict(
+                        **feat.properties,
+                        HEROP_ID=herop_id,
+                    )
                 dst.write(Feature(geometry=feat.geometry, properties=props))

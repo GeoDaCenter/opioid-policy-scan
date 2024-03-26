@@ -71,8 +71,6 @@ for path in paths:
 
     rows = []
     new_geoid_field = 'HEROP_ID'
-    # for the "latest" CSVs the year is 2018, for all older ones it's 2010
-    year_suffix = "2018" if "Latest" in str(path) else "2010"
     with open(path, "r") as r:
         reader = csv.DictReader(r)
 
@@ -82,7 +80,7 @@ for path in paths:
 
         for r in reader:
             str_geoid = str(r[f_lookup[path.name]]).zfill(sl_lookup[geo]['id_length'])
-            new_geoid = f"{sl_lookup[geo]['code']}US{str_geoid}-{year_suffix}"
+            new_geoid = f"{sl_lookup[geo]['code']}US{str_geoid}"
             r[new_geoid_field] = new_geoid
             rows.append(r)
 
