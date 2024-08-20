@@ -185,8 +185,12 @@ rm(be02)
 ## BE03
 
 # 32990 found, 32990 expected
+# BE03_Z had an issue where it's entries were saved as characters, not numerics.
 be03 <- read.csv('../data_final/BE03_Z.csv') |>
-  mutate(GEOID = str_pad(ZCTA, width=5, side='left', pad='0')) |>
+  mutate(GEOID = str_pad(ZCTA, width=5, side='left', pad='0'),
+         alcDens = as.numeric(alcDens),
+         alPerCap = as.numeric(alcPerCap),
+         alcTotal = as.numeric(alcTotal)) |>
   select(-G_ZCTA, -ZCTA, -totPopE)
 
 zipDf <- zipDf |> merge(be03, by='GEOID', all.x = TRUE)
