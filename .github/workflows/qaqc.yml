@@ -32,8 +32,13 @@ jobs:
           pip install -r qaqc/requirements.txt
       - name: qaqc data
         run: python qaqc/clean.py
-      - name: Commit
-        uses: zwaldowski/git-commit-action@v1
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Data Cleaner"
+          git add -A
+          git commit -m "Clean Data" -a
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          # Commit message
-          commit_message: QAQC Data cleaning
+          github_token: ${{ secrets.GITHUB_TOKEN }}
