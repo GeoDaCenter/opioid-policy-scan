@@ -114,8 +114,8 @@ minDisSUT,SutMinDis
 timeDriveSUT,SutTmDr
 countDriveSUT,SutCntDr
 minDisOTP,OtpMinDis
-countDriveOTP,OtpTmDr
-timeDriveOTP,OtpCntDr
+timeDriveOTP,OtpTmDr
+countDriveOTP,OtpCntDr
 SVIS,SviTh1
 SVI_THEME1,SviTh2
 SVI_THEME2,SviTh3
