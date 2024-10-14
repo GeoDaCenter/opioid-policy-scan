@@ -18,6 +18,7 @@
 * meth-2000
 * meth-1998
 * meth-1990
+* meth-1984
 
 ### Data Source(s) Description:  
 Historical data on providers prescribing Methadone and their locations were scraped from the National Directory of Drug and Alcohol Abuse Treatment Facilities in the spring of 2020. 
