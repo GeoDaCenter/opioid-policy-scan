@@ -84,8 +84,8 @@ bupTimeWalk,BupTmWk
 bupCountWalk60,BupCntWk60
 bupCountWalk30,BupCntWk30
 metTimeWalk,MetTmWk
-metCountWalk60,MetCntWk30
-metCountWalk30,MetCntWk60
+metCountWalk30,MetCntWk30
+metCountWalk60,MetCntWk60
 nalTimeWalk,NalTmWk
 nalCountWalk60,NalCntWk60
 nalCountWalk30,NalCntWk30
