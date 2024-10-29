@@ -29,71 +29,24 @@ View(otherVarNames)
   
 
 
-  
-  + Limited_English_p
 
-B16005A_001
-v\Estimate!!Total:
-
-B16005_007
-Estimate!!Total:!!Native:!!Speak Spanish:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_012
-Estimate!!Total:!!Native:!!Speak other Indo-European languages:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_017
-Estimate!!Total:!!Native:!!Speak Asian and Pacific Island languages:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_022
-Estimate!!Total:!!Native:!!Speak other languages:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_029
-Estimate!!Total:!!Foreign born:!!Speak Spanish:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_034
-Estimate!!Total:!!Foreign born:!!Speak other Indo-European languages:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_039
-Estimate!!Total:!!Foreign born:!!Speak Asian and Pacific Island languages:!!Speak English "not well"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_044
-Estimate!!Total:!!Foreign born:!!Speak other languages:!!Speak English "not well"
-
-B16005_013 Estimate!!Total:!!Native:!!Speak other Indo-European languages:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_018 Estimate!!Total:!!Native:!!Speak Asian and Pacific Island languages:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_023 Estimate!!Total:!!Native:!!Speak other languages:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_030 Estimate!!Total:!!Foreign born:!!Speak Spanish:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_035 Estimate!!Total:!!Foreign born:!!Speak other Indo-European languages:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
-
-B16005_040 Estimate!!Total:!!Foreign born:!!Speak Asian and Pacific Island languages:!!Speak English "not at all"
-NATIVITY BY LANGUAGE SPOKEN AT HOME BY ABILITY TO SPEAK ENGLISH FOR THE POPULATION 5 YEARS AND OVER
-tract
+### ENGLISH PROFICIENCY
+### Matched CDC SVI Guidelines from 2018 for "Limited English Proficiency"
+# B16005A_001 Estimate!!Total:
+# B16005_007 Estimate!!Total:!!Native:!!Speak Spanish:!!Speak English "not well"
+# B16005_012 Estimate!!Total:!!Native:!!Speak other Indo-European languages:!!Speak English "not well"
+# B16005_017 Estimate!!Total:!!Native:!!Speak Asian and Pacific Island languages:!!Speak English "not well"
+# B16005_022 Estimate!!Total:!!Native:!!Speak other languages:!!Speak English "not well"
+# B16005_029 Estimate!!Total:!!Foreign born:!!Speak Spanish:!!Speak English "not well"
+# B16005_034 Estimate!!Total:!!Foreign born:!!Speak other Indo-European languages:!!Speak English "not well"
+# B16005_039 Estimate!!Total:!!Foreign born:!!Speak Asian and Pacific Island languages:!!Speak English "not well"
+# B16005_044 Estimate!!Total:!!Foreign born:!!Speak other languages:!!Speak English "not well"
+# B16005_018 Estimate!!Total:!!Native:!!Speak Spanish:!!Speak English "not at all"
+# B16005_013 Estimate!!Total:!!Native:!!Speak other Indo-European languages:!!Speak English "not at all"
+# B16005_018 Estimate!!Total:!!Native:!!Speak Asian and Pacific Island languages:!!Speak English "not at all"
+# B16005_023 Estimate!!Total:!!Native:!!Speak other languages:!!Speak English "not at all"
+# B16005_030 Estimate!!Total:!!Foreign born:!!Speak Spanish:!!Speak English "not at all"
+# B16005_035 Estimate!!Total:!!Foreign born:!!Speak other Indo-European languages:!!Speak English "not at all"
+# B16005_040 Estimate!!Total:!!Foreign born:!!Speak Asian and Pacific Island languages:!!Speak English "not at all"
+# B16005_045 Estimate!!Total:!!Foreign born:!!Speak other languages:!!Speak English "not at all"
 
