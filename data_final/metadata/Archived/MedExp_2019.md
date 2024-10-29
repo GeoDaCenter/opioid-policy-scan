@@ -21,7 +21,6 @@ The following variables were included from the source data:
 ### Key Variable and Definitions:
 | Variable | Variable ID in .csv | Description |
 |:---------|:--------------------|:------------|
-| Total medicaid spending (Character) | TtlMedExpC | Total medicaid spending in character format |
 | Total medicaid spendinge (Numeric) | MedcdExp19 | Total medicaid spending in numeric format |
 
 

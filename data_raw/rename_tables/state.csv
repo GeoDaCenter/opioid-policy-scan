@@ -109,8 +109,8 @@ FmHcv,FmHcv
 Un50Hcv,Un50Hcv
 A50_74Hcv,A50_74Hcv
 Ov75Hcv,Ov75Hcv
-blkHcv,blkHcv
-nonBlkHcv,nonBlkHcv
+blkHcv,BlkHcv
+nonBlkHcv,NonBlkHcv
 HcvD13,HcvD13
 MlHcvD13,MlHcvD13
 FlHcvD13,FlHcvD13
@@ -186,7 +186,7 @@ odMortRtAv,OdMortRtAv
 AnyPDMPfr,AnyPdmpFr
 AnyPDMPHfr,AnyPdmphFr
 OpPDMPfr,OpPdmpFr
-MsAcPDMPfr,MsAsPdmpFr
+MsAcPDMPfr,MsAcPdmpFr
 ElcPDMPfr,ElcPdmpFr
 AnyPDMPdt,AnyPdmpDt
 AnyPDMPHdt,AnyPdmphDt
