@@ -9,22 +9,38 @@ Sys.getenv("CENSUS_API_KEY")
 #pVarNames <- load_variables(2019, "acs5/profile", cache = TRUE)
 #otherVarNames <- load_variables(2019, "acs5", cache = TRUE)
 
-#S2603_C01_001 Estimate!!Total population!!Total population
-#S2603_C02_001 Estimate!!Total group quarters population!!Total population
-#S2603_C03_001 Estimate!!Adult correctional facilities!!Total population
-#S2603_C04_001 Estimate!!Nursing facilities/skilled nursing facilities!!Total population
-#S2603_C06_001 Estimate!!College/university housing!!Total population
-#S2603_C07_001 Estimate!!Military quarters/military ships!!Total population
+### GROUP QUARTERS ## 
+#B26216_001 Estimate!!Total:
+#B26216_002 Estimate!!Total:!!Group quarters population:
+#B26216_004 Estimate!!Total:!!Group quarters population:!!Institutionalized group quarters population:!!Adult correctional facilities
+#B26216_005 Estimate!!Total:!!Group quarters population:!!Institutionalized group quarters population:!!Nursing facilities/skilled nursing facilities
+#B26216_008 Estimate!!Total:!!Group quarters population:!!Noninstitutionalized group quarters population:!!College/university student housing
+#B26216_009 Estimate!!Total:!!Group quarters population:!!Noninstitutionalized group quarters population:!!Military quarters/military ships
 
+# B26001_001 works for total group quarters population
 
-county19 <- get_acs(geography = 'county', variables = (totPop19 = "S2603_C01_001"),
+county19 <- get_acs(geography = 'county', variables = (totPop19 = "B26001_001"),
                     year = 2019, geometry = FALSE)
-head(county19)
+head(county19) #matched us census website
+
+
+county19 <- get_acs(geography = 'county', variables = c(totPop19 = "B01003_001", 
+                                                        groupQt19 ="B26001_001"), 
+                    year = 2019, geometry = FALSE) %>%
+  select(GEOID, NAME, variable, estimate) %>% 
+  spread(variable, estimate) %>% 
+  mutate(groupQt19r  = groupQt19/totPop19) %>%
+  select(GEOID,totPop19,groupQt19r)
+
+head(county19) #matched us census website
+hist(county19$groupQt19r)
+
 
 
 #Using 2019 ACS 5-Year Data
-county19 <- get_acs(geography = 'county', variables = c(totPop19 = "S2603_C01_001", 
-                                                      groupQt19 ="S2603_C02_001", 
+#BELOW DOES NOT WORK -- PULLS NA. ONLY AVAILABLE AT US-LEVEL NOW
+county19 <- get_acs(geography = 'county', variables = c(totPop19 = "B26216_001", 
+                                                      groupQt19 ="B26216_002", 
                                                       corrct19 = "S2603_C03_001",
                                                       nursing19 = "S2603_C04_001", 
                                                       univ19 = "S2603_C06_001",

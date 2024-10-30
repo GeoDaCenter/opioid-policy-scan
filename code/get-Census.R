@@ -8,6 +8,9 @@ Sys.getenv("CENSUS_API_KEY")
 sVarNames <- load_variables(2019, "acs5/subject", cache = TRUE)
 pVarNames <- load_variables(2019, "acs5/profile", cache = TRUE)
 otherVarNames <- load_variables(2019, "acs5", cache = TRUE)
+otherVarNames18 <- load_variables(2018, "acs5", cache = TRUE)
+
+
 
 View(pVarNames)
 View(sVarNames)
@@ -15,7 +18,7 @@ View(otherVarNames)
 
 
 
-### GROUP QUARTERS
+### GROUP QUARTERS ## Below didn't work, unclear why
 #S2603_C01_001 Estimate!!Total population!!Total population
 #S2603_C02_001 Estimate!!Total group quarters population!!Total population
 #S2603_C03_001 Estimate!!Adult correctional facilities!!Total population
@@ -23,11 +26,25 @@ View(otherVarNames)
 #S2603_C06_001 Estimate!!College/university housing!!Total population
 #S2603_C07_001 Estimate!!Military quarters/military ships!!Total population
 
+### GROUP QUARTERS ## 
+#B26216_001 Estimate!!Total:
+#B26216_002 Estimate!!Total:!!Group quarters population:
+#B26216_004 Estimate!!Total:!!Group quarters population:!!Institutionalized group quarters population:!!Adult correctional facilities
+#B26216_005 Estimate!!Total:!!Group quarters population:!!Institutionalized group quarters population:!!Nursing facilities/skilled nursing facilities
+#B26216_008 Estimate!!Total:!!Group quarters population:!!Noninstitutionalized group quarters population:!!College/university student housing
+#B26216_009 Estimate!!Total:!!Group quarters population:!!Noninstitutionalized group quarters population:!!Military quarters/military ships
 
-+ Crowed_household: 
-  
-  
 
+### CROWDED HOUSING
+### Matched CDC SVI Guidelines from 2018 for "Crowded Housing as >1 occupant per room"
+
+#B25014_001 Estimate!!Total:
+#B25014_005 Estimate!!Total:!!Owner occupied:!!1.01 to 1.50 occupants per room
+#B25014_006 Estimate!!Total:!!Owner occupied:!!1.51 to 2.00 occupants per room
+#B25014_007 Estimate!!Total:!!Owner occupied:!!2.01 or more occupants per room
+#B25014_011 Estimate!!Total:!!Renter occupied:!!1.01 to 1.50 occupants per room
+#B25014_012 Estimate!!Total:!!Renter occupied:!!1.51 to 2.00 occupants per room
+#B25014_013 Estimate!!Total:!!Renter occupied:!!2.01 or more occupants per room
 
 
 ### ENGLISH PROFICIENCY
