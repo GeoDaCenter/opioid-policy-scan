@@ -2,7 +2,9 @@
 **Date Added**: September 26, 2021  
 **Author**: Ally Muszynski  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Last Modified By**: Wataru Morioka
+
+**Note: These variables have been removed from OEPS prior to the v2.0 release. Retaining this metadata file just for posterity. -AC**
 
 ### Theme: 
 Social  
