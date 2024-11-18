@@ -37,7 +37,7 @@ head(county19)
 
 
 #Using 2019 ACS 5-Year Data
-county19 <- get_acs(geography = 'county', variables = c(totPop19 = "B16005_001", 
+county18 <- get_acs(geography = 'county', variables = c(totPop18 = "B16005_001", 
                                                         B16005_007 ="B16005_007", 
                                                         B16005_012 = "B16005_012",
                                                         B16005_017 = "B16005_017", 
@@ -54,18 +54,18 @@ county19 <- get_acs(geography = 'county', variables = c(totPop19 = "B16005_001",
                                                         B16005_035 = "B16005_035",
                                                         B16005_040 = "B16005_040",
                                                         B16005_045 = "B16005_045"), 
-                    year = 2019, geometry = FALSE) %>%
+                    year = 2018, geometry = FALSE) %>%
   select(GEOID, NAME, variable, estimate) %>% 
   spread(variable, estimate) %>% 
-  mutate(engProf19  = (B16005_007+B16005_012+B16005_017+B16005_022+
+  mutate(engProf18  = (B16005_007+B16005_012+B16005_017+B16005_022+
                          B16005_029+ B16005_034+B16005_039+ B16005_044+
                          B16005_008+B16005_013+B16005_018+B16005_023+
-                         B16005_030+B16005_035+B16005_040+B16005_045)/totPop19) %>%
-  select(GEOID,totPop19,engProf19)
+                         B16005_030+B16005_035+B16005_040+B16005_045)/totPop18) %>%
+  select(GEOID,totPop18,engProf18)
 
-head(county19)
-summary(county19) 
+head(county18)
+summary(county18) 
 
-hist(county19$engProf19)
+hist(county18$engProf18)
 
-#write.csv(county19, "../data_final/temp/limEng_county19.csv")
+write.csv(county18, "../data_final/temp/limEng_county18.csv")

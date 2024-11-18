@@ -1,3 +1,4 @@
+#setwd("~/Code/opioid-policy-scan/code")
 
 library(sf)
 library(tidyverse)
@@ -18,29 +19,29 @@ Sys.getenv("CENSUS_API_KEY")
 #B25014_013 Estimate!!Total:!!Renter occupied:!!2.01 or more occupants per room
 
 
-county19 <- get_acs(geography = 'county', variables = (totPop19 = "B25014_001"),
+county19 <- get_acs(geography = 'county', variables = (Occupants = "B25014_001"),
                     year = 2019, geometry = FALSE)
 head(county19)
 
 
-#Using 2019 ACS 5-Year Data
-county19 <- get_acs(geography = 'county', variables = c(totPop19 = "B25014_001", 
+#Using 2018 ACS 5-Year Data
+county18 <- get_acs(geography = 'county', variables = c(Occupants = "B25014_001", 
                                                         B25014_005 ="B25014_005", 
                                                         B25014_006 = "B25014_006",
                                                         B25014_007 = "B25014_007", 
                                                         B25014_011 = "B25014_011",
                                                         B25014_012 = "B25014_012",
                                                         B25014_013 = "B25014_013"), 
-                    year = 2019, geometry = FALSE) %>%
+                    year = 2018, geometry = FALSE) %>%
   select(GEOID, NAME, variable, estimate) %>% 
   spread(variable, estimate) %>% 
-  mutate(crowdHsng19  = (B25014_005+B25014_006+B25014_007+
-                           B25014_011+B25014_012+B25014_013)/totPop19) %>%
-  select(GEOID,totPop19,crowdHsng19)
+  mutate(crowdHsng18  = ((B25014_005+B25014_006+B25014_007+
+                           B25014_011+B25014_012+B25014_013)/Occupants)) %>%
+  select(GEOID,Occupants,crowdHsng18)
 
-head(county19)
-summary(county19) 
+head(county18)
+summary(county18) 
 
-hist(county19$crowdHsng19)
+hist(county18$crowdHsng18)
 
-write.csv(county19, "../data_final/temp/crwdHsng_county19.csv")
+write.csv(county18, "../data_final/temp/crwdHsng_county18.csv")
