@@ -6,7 +6,7 @@
 
 *In brief, this repository still holds the v2 CSV files, metadata Markdown files, and R scripts, while a new repo, [healthyregions/oeps](https://github.com/healthyregions/oeps), now holds the OEPS Explorer front-end code, and a new Flask-based backend application that manages all data ETL operations.*
 
-*We expect future releases to continue moving content from this repository to the new one. Here is a link to this repository at the [v1 release](https://github.com/GeoDaCenter/opioid-policy-scan/tree/115989bd1f6706e2b225da9a88c27c5e34e42692).*
+*We expect future releases to continue moving content from this repository to the new one. Here is a link to this repository at the [v1 release](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0).*
 
 ## Links
 
