@@ -2,7 +2,7 @@
 **Date Added**: April 1, 2021  
 **Author**: Susan Paykin, Moksha Menghaney  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Environment
