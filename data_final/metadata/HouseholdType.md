@@ -2,7 +2,7 @@
 **Date Added**  November 15, 2021  
 **Author**: Susan Paykin  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Social
@@ -52,6 +52,15 @@ The following rates were calculated from the variables:
 | Total population in household | TotPopHh | Total number of people in households | Latest | Tract, Zip, County, State |
 | Percent of nonrelatives in family households | NonRelFhhP | Percent of people living in family households that are not related to family | Latest | Tract, Zip, County, State |
 | Percent of nonrelatives in non-family households | NonRelNfhhP | Percent of people living in non-family households that are not related | Latest | Tract, Zip, County, State |
+| Average family size              | FamSize             | Average number of persons per family                       | 2020, 2023           | Tract, ZCTA, County    |
+| Average household size           | HHSize              | Average number of persons per household                    | 2020, 2023           | Tract, ZCTA, County    |
+| Female-headed family households  | HhldFA              | Percent of family households headed by females             | 2020, 2023           | Tract, ZCTA, County    |
+| Couple-headed family households  | HhldFC              | Percent of family households headed by couples             | 2020, 2023           | Tract, ZCTA, County    |
+| Single-parent family households  | HhldFS              | Percent of single-parent family households                 | 2020, 2023           | Tract, ZCTA, County    |
+| Male-headed adult households     | HhldMA              | Percent of households headed by males with other adults    | 2020, 2023           | Tract, ZCTA, County    |
+| Couple-headed male households    | HhldMC              | Percent of male-male couple-headed households              | 2020, 2023           | Tract, ZCTA, County    |
+| Single-male households           | HhldMS              | Percent of male-headed single households                   | 2020, 2023           | Tract, ZCTA, County    |
+
  
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average. Additional variables in this table include householder gender, types of family members represented in households, and types of nonrelatives in household (i.e. roomer/baorder, housemate, foster child, other).  
