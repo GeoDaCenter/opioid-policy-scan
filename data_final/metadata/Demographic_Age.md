@@ -1,6 +1,6 @@
 **Meta Data Name**: Demegraphic and Age Variables  
 **Date Added**: October 16, 2020  
-**Author**: Moksha Menghaney & Susan Paykin  
+**Author**: Moksha Menghaney & Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita 
 **Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
@@ -53,17 +53,7 @@ All three variables were then converted to percentages using total population as
 | Percent male population           | MaleP               | Percent of population identifying as male               | 2020, 2023           | Tract, ZCTA, County    |
 | Median age                        | MedAge              | Median age of the population                            | 2020, 2023           | Tract, ZCTA, County    |
 | Percent identifying as 2+ races   | TwoRaceP            | Percent of population identifying as two or more races  | 2020, 2023           | Tract, ZCTA, County    |
-| Total population between age 18-64 | Age18_64 | Total adult population under age 65 | 1980, 1990, 2000, Latest | Tract, Zip*, County, State |
-| Total population between age 0-4 | Age0_4 | Total population between age 0-4 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 5-14 | Age5_14 | Total population between age 5-14 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 15-19 | Age15_19 | Total population between age 15-19 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 20-24 | Age20_24 | Total population between age 20-24 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 15-44 | Age15_44 | Total population between age 15-44 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 45-49 | Age40_49 | Total population between age 45-49 | 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 50-54 | Age50_54 | Total population between age 50-54 | 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 45-54 | Age45_54 | Total population between age 45-54 | 1980 | Tract, County, State |
-| Total population between age 55-59 | Age55_59 | Total population between age 55-59 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Total population between age 60-64 | Age60_64 | Total population between age 60-64 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+
 | Total population at or over age 65 | AgeOv65 | Total population at or over age 65 | 2010, Latest | Tract, Zip*, County, State |
 | Total population at or over age 18 | AgeOv18 | Total population at or over age 18 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
 | % Population Children | ChildrenP | Percentage of population under age 18 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
@@ -76,7 +66,6 @@ All three variables were then converted to percentages using total population as
 | Percent over age 62     | Ovr62P              | Percent of population over age 62                         | 2023, 2020       | Tract, ZCTA, County    |
 | Percent under age 18    | Und18P              | Percent of population under age 18                        | 2023, 2020       | Tract, ZCTA, County    |
 | Percent under age 5     | Und5P               | Percent of population under age 5                         | 2023, 2020       | Tract, ZCTA, County    |
-| English Proficiency (18+) | engProf18   | Percent of population age 18+ proficient in English             | 2020, 2023       | Tract, County, ZCTA     |
 | Divorced Individuals    | DivrcdP       | Percent of divorced individuals                                 | 2020, 2023       | Tract, County, ZCTA     |
 | Married Individuals     | MrrdP         | Percent of married individuals                                  | 2020, 2023       | Tract, County, ZCTA     |
 | Never Married Individuals | NvMrrdP     | Percent never married                                           | 2020, 2023       | Tract, County, ZCTA     |
