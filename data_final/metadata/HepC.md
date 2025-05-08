@@ -1,8 +1,8 @@
 **Meta Data Name**: Hepatitis C Mortality & Prevalence  
 **Date Added**: February 8, 2021  
-**Author**: Susan Paykin  
-**Date Last Modified**: January 23, 2023  
-**Last Modified By**: Wataru Morioka
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 7, 2025 
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Theme: 
 Outcome
@@ -50,7 +50,7 @@ Data was cleaned and prepared for analysis by aggregating multiple single year d
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total Hepitatis C virus cases | TotHcv | Mean total yearly Hepitatis C cases from 2013-2016 | Latest | State |
+| Total Hepitatis C virus cases | TotHcv | Mean total yearly Hepitatis C cases from 2013-2016 | 2016 | State |
 | Male Hepitatis C virus cases | MlHcv | Mean yearly Hepatitis C cases in men from 2013-2016 | Latest | State |
 | Female Hepitatis C virus cases | FmHcv | Mean yearly Hepatitis C cases in women from 2013-2016 | Latest | State |
 | Under 50 Hepitatis C virus cases | Un50Hcv | Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016 | Latest | State |
@@ -64,7 +64,7 @@ Data was cleaned and prepared for analysis by aggregating multiple single year d
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Hepitatis C virus Deaths in 20YY | HcvDYY | Total Hepatitis C deaths in 20YY | Latest | State |
+| Hepitatis C virus Deaths in 20YY | HcvDYY | Total Hepatitis C deaths in 20YY | 2017, 2022 | State, County |
 | Male Hepitatis C virus Deaths in 20YY | MlHcvDYY | Hepatitis C deaths among men in 20YY | Latest | State |
 | Female Hepitatis C virus Deaths in 20YY | FlHcvDYY | Hepatitis C deaths among women in 20YY | Latest | State |
 | American Indian Hepitatis C virus Deaths in 20YY | AmInHcvDYY | Hepatitis C deaths among American Indian populations in 20YY | Latest | State |
@@ -91,4 +91,4 @@ N/A
 
 ### Comments/Notes:
 
-Data included for Hepatitis C State Mortality is for 2013-2017, while Hepatitis C State Prevalence data are available for 2013-2016
+Data included for Hepatitis C State Mortality is for 2013-2017, while Hepatitis C State Prevalence data are available for 2013-2016- Only the mortality data have been updated as of 2025.
