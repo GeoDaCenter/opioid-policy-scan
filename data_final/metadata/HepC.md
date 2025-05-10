@@ -75,7 +75,6 @@ Data was cleaned and prepared for analysis by aggregating multiple single year d
 | Black Hepitatis C virus Deaths in 20YY | BlkHcvD | Hepatitis C deaths among Black population in 20YY | 2017, 2022 | State |
 | Hispanic Hepitatis C virus Deaths in 20YY | HspHcvD | Hepatitis C deaths among Hispanic populations in 20YY | 2017, 2022 | State |
 | Multiple Races Death Cases Hepitatis C virus Deaths in 20YY | MulHcvD | Hepatitis C deaths among Multiple Race populations in 20YY | 2022 | State |
-| Under 40 Hepitatis C virus Deaths in 20YY | U40HcvD | Hepatitis C deaths in populations under 40 years of age in 20YY | 2020 | County |
 | Under 50 Hepitatis C virus Deaths in 20YY | U50HcvD | Hepatitis C deaths in populations under 50 years of age in 20YY | 2017, 2022 | State |
 | Ages between 50 to 74 Hepitatis C virus Deaths in 20YY | A50_74HcvD | Hepatitis C deaths among populations between 50 and 74 years of age in 20YY | 2017, 2022 | State |
 | Over 75 Hepitatis C virus Deaths in 20YY | O75HcvD | Hepatitis C deaths among populations over 75 years of age in 20YY | 2017, 2022 | State |
@@ -90,7 +89,6 @@ Data was cleaned and prepared for analysis by aggregating multiple single year d
 | Average Black Hepitatis C virus Deaths | AvBlkHcvD | Mean yearly Hepatitis C deaths among Black populations from 2013-2017, 2018-2022 | 2017, 2022 | State |
 | Average Hispanic Hepitatis C virus Deaths | AvHspHcvD | Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017, 2018-2022 | 2017, 2022 | State |
 | Average Multiple Races Hepitatis C virus Deaths | AvMulHcvD | Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022 | 2022 | State |
-| Average Under 40 Hepitatis C virus Deaths| AvU40HcvD | Mean yearly Hepatitis C deaths among people under 40 years of age from 2018-2022 | 2020 | County |
 | Average Under 50 Hepitatis C virus Deaths| AvU50HcvD | Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
 | Average Ages between 50 to 74 Hepitatis C virus Deaths | AvA50_74HcvD | Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
 | Average Over 75 Hepitatis C virus Deaths | AvO75HcvD | Mean yearly Hepatitis C deaths among people over 75 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
