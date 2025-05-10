@@ -51,39 +51,49 @@ Data was cleaned and prepared for analysis by aggregating multiple single year d
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Total Hepitatis C virus cases | TotHcv | Mean total yearly Hepitatis C cases from 2013-2016 | 2016 | State |
-| Male Hepitatis C virus cases | MlHcv | Mean yearly Hepatitis C cases in men from 2013-2016 | Latest | State |
-| Female Hepitatis C virus cases | FmHcv | Mean yearly Hepatitis C cases in women from 2013-2016 | Latest | State |
-| Under 50 Hepitatis C virus cases | Un50Hcv | Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016 | Latest | State |
-| Ages between 50 to 74 Hepitatis C virus cases | A50_74Hcv | Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016 | Latest | State |
-| Over 75 Hepitatis C virus cases | Ov75Hcv | Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016 | Latest | State |
-| Black Hepitatis C virus cases | BlkHcv | Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016 | Latest | State |
-| Non Black Hepitatis C virus cases | NonBlkHcv | Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016 | Latest | State |
+| Male Hepitatis C virus cases | MlHcv | Mean yearly Hepatitis C cases in men from 2013-2016 | 2016 | State |
+| Female Hepitatis C virus cases | FmHcv | Mean yearly Hepatitis C cases in women from 2013-2016 | 2016 | State |
+| Under 50 Hepitatis C virus cases | Un50Hcv | Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016 | 2016 | State |
+| Ages between 50 to 74 Hepitatis C virus cases | A50_74Hcv | Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016 | 2016 | State |
+| Over 75 Hepitatis C virus cases | Ov75Hcv | Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016 | 2016 | State |
+| Black Hepitatis C virus cases | BlkHcv | Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016 | 2016 | State |
+| Non Black Hepitatis C virus cases | NonBlkHcv | Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016 | 2016 | State |
 
 
 #### Mortality
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Hepitatis C virus Deaths in 20YY | HcvDYY | Total Hepatitis C deaths in 20YY | 2017, 2022 | State, County |
-| Male Hepitatis C virus Deaths in 20YY | MlHcvDYY | Hepatitis C deaths among men in 20YY | Latest | State |
-| Female Hepitatis C virus Deaths in 20YY | FlHcvDYY | Hepatitis C deaths among women in 20YY | Latest | State |
-| American Indian Hepitatis C virus Deaths in 20YY | AmInHcvDYY | Hepatitis C deaths among American Indian populations in 20YY | Latest | State |
-| Asian and Pacific Islander Hepitatis C virus Deaths in 20YY | AsPiHcvDYY | Hepatitis C deaths among Asian and Pacific Islander populations in 20YY | Latest | State |     
-| Black Hepitatis C virus Deaths in 20YY | BlkHcvDYY | Hepatitis C deaths among Black population in 20YY | Latest | State |
-| Hispanic Hepitatis C virus Deaths in 20YY | HspHcvDYY | Hepatitis C deaths among Hispanic populations in 20YY | Latest | State |
-| Under 50 Hepitatis C virus Deaths in 20YY | U50HcvDYY | Hepatitis C deaths in populations under 50 years of age in 20YY | Latest | State |
-| Ages between 50 to 74 Hepitatis C virus Deaths in 20YY | A50_74HcvDYY | Hepatitis C deaths among populations between 50 and 74 years of age in 20YY | Latest | State |
-| Over 75 Hepitatis C virus Deaths in 20YY | O75HcvDYY | Hepatitis C deaths among populations over 75 years of age in 20YY | Latest | State |
-| Average Hepitatis C virus Deaths | AvHcvD | Mean total yearly Hepatitis C deaths from 2013-2017 | Latest | State |
-| Average Male Hepitatis C virus Deaths| AvMlHcvD | Mean yearly Hepatitis C deaths among men from 2013-2017 | Latest | State |
-| Average Female Hepitatis C virus Deaths | AvFlHcvD | Mean yearly Hepatitis C deaths among women from 2013-2017 | Latest | State |
-| Average American Indian Hepitatis C virus Deaths | AvAmInHcvD | Mean yearly Hepatitis C deaths among American Indian population from 2013-2017 | Latest | State |
-| Average Asian and Pacific Islander Hepitatis C virus Deaths | AvAsPiHcvD | Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017 | Latest | State |
-| Average Black Hepitatis C virus Deaths | AvBlkHcvD | Mean yearly Hepatitis C deaths among Black populations from 2013-2017 | Latest | State |
-| Average Hispanic Hepitatis C virus Deaths | AvHspHcvD | Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017 | Latest | State |
-| Average Under 50 Hepitatis C virus Deaths| AvU50HcvD | Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017 | Latest | State |
-| Average Ages between 50 to 74 Hepitatis C virus Deaths | AvA50_74HcvD | Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017 | Latest | State |
-| Average Over 75 Hepitatis C virus Deaths | AvO75HcvD | Mean yearly Hepatitis C deaths among people over 75 years of age | Latest | State |
+| Hepitatis C virus Deaths in 20YY | HcvD | Total Hepatitis C deaths in 20YY | 2017, 2022 | State, County |
+| Male Hepitatis C virus Deaths in 20YY | MlHcvD | Hepatitis C deaths among men in 20YY | 2017, 2022 | State |
+| Female Hepitatis C virus Deaths in 20YY | FlHcvD | Hepatitis C deaths among women in 20YY | 2017, 2022 | State |
+| American Indian Hepitatis C virus Deaths in 20YY | AmInHcvD | Hepatitis C deaths among American Indian populations in 20YY | 2017, 2022 | State |
+| Asian and Pacific Islander Hepitatis C virus Deaths in 20YY | AsPiHcvD | Hepatitis C deaths among Asian and Pacific Islander populations in 20YY | 2017 | State |   
+| Asian Hepitatis C virus Deaths in 20YY | AsHcvD | Hepatitis C deaths among Asian populations in 20YY | 2022 | State |
+| Native Hawaiian and Pacific Islander Hepitatis C virus Deaths in 20YY | NhPiHcvD | Hepatitis C deaths among Native Hawaiian and Pacific Islander populations in 20YY | 2022 | State | 
+| White Hepitatis C virus Deaths in 20YY | WhtHcvD | Hepatitis C deaths among White populations in 20YY | 2022 | State | 
+| Black Hepitatis C virus Deaths in 20YY | BlkHcvD | Hepatitis C deaths among Black population in 20YY | 2017, 2022 | State |
+| Hispanic Hepitatis C virus Deaths in 20YY | HspHcvD | Hepatitis C deaths among Hispanic populations in 20YY | 2017, 2022 | State |
+| Multiple Races Death Cases Hepitatis C virus Deaths in 20YY | MulHcvD | Hepatitis C deaths among Multiple Race populations in 20YY | 2022 | State |
+| Under 40 Hepitatis C virus Deaths in 20YY | U40HcvD | Hepatitis C deaths in populations under 40 years of age in 20YY | 2020 | County |
+| Under 50 Hepitatis C virus Deaths in 20YY | U50HcvD | Hepatitis C deaths in populations under 50 years of age in 20YY | 2017, 2022 | State |
+| Ages between 50 to 74 Hepitatis C virus Deaths in 20YY | A50_74HcvD | Hepatitis C deaths among populations between 50 and 74 years of age in 20YY | 2017, 2022 | State |
+| Over 75 Hepitatis C virus Deaths in 20YY | O75HcvD | Hepatitis C deaths among populations over 75 years of age in 20YY | 2017, 2022 | State |
+| Average Hepitatis C virus Deaths | AvHcvD | Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Male Hepitatis C virus Deaths| AvMlHcvD | Mean yearly Hepatitis C deaths among men from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Female Hepitatis C virus Deaths | AvFlHcvD | Mean yearly Hepatitis C deaths among women from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average American Indian Hepitatis C virus Deaths | AvAmInHcvD | Mean yearly Hepatitis C deaths among American Indian population from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Asian and Pacific Islander Hepitatis C virus Deaths | AvAsPiHcvD | Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017 | 2017 | State |
+| Average Asian Hepitatis C virus Deaths | AvAsHcvD | Mean yearly Hepatitis C deaths among Asian population from 2018-2022 | 2022 | State |
+| Native Hawaiian and Pacific Islander Hepitatis C virus Deaths | AvNhPiHcvD | Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022 | 2022 | State |
+| Average White Hepitatis C virus Deaths | AvWhtHcvD | Mean yearly Hepatitis C deaths among White populations from 2018-2022 | 2022 | State |
+| Average Black Hepitatis C virus Deaths | AvBlkHcvD | Mean yearly Hepatitis C deaths among Black populations from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Hispanic Hepitatis C virus Deaths | AvHspHcvD | Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Multiple Races Hepitatis C virus Deaths | AvMulHcvD | Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022 | 2022 | State |
+| Average Under 40 Hepitatis C virus Deaths| AvU40HcvD | Mean yearly Hepatitis C deaths among people under 40 years of age from 2018-2022 | 2020 | County |
+| Average Under 50 Hepitatis C virus Deaths| AvU50HcvD | Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Ages between 50 to 74 Hepitatis C virus Deaths | AvA50_74HcvD | Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
+| Average Over 75 Hepitatis C virus Deaths | AvO75HcvD | Mean yearly Hepatitis C deaths among people over 75 years of age from 2013-2017, 2018-2022 | 2017, 2022 | State |
 
 ### Data Limitations: 
 
@@ -91,4 +101,4 @@ N/A
 
 ### Comments/Notes:
 
-Data included for Hepatitis C State Mortality is for 2013-2017, while Hepatitis C State Prevalence data are available for 2013-2016- Only the mortality data have been updated as of 2025.
+Data included for Hepatitis C State Mortality is for 2013-2017 and 2018-2022, while Hepatitis C State Prevalence data are available for 2013-2016- Only the mortality data have been updated as of 2025. Hepatitis C deaths for county level is available only for 2018-2020.
