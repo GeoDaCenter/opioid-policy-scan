@@ -1,8 +1,8 @@
 **Meta Data Name**: Opioid Indicators: Prescription and Mortality Rates  
 **Date Added**: February 1, 2021  
-**Author**: Susan Paykin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Susan Paykin, Wataru Morioka. Mahjabin Kabir Adrita   
+**Date Last Modified**: May 12, 2025  
+**Last Modified By**: Wataru Morioka. Mahjabin Kabir Adrita  
 
 ### Theme: 
 Outcome
@@ -47,13 +47,13 @@ Data was cleaned and variables were renamed to shorter, abbreviated labels. The 
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Opioid prescription rate | OpRxRt20 | Opioid prescription rate in 2020 | Latest | County, State |
-| Overdose mortality rate | OdMortRtYY | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2020 | Latest | County, State |
-| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates from 2015-2019 | Latest | County, State |
-| Pain reliever misuse percent | PrMsuse20P | Percent of persons who self-report misusing prescription pain relief medication in 2020 | Latest | State |
+| Opioid prescription rate | OpRxRt | Opioid prescription rate in a specific year | 2020, 2022 | County, State |
+| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2022 | 2020, 2022 | County, State |
+| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates from 2015-2019 | 2015-2019 | County, State |
+| Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
 
 ### Data Limitations:
-Note that pain reliever misuse data is only available for State-level data. 
+Note that pain reliever misuse data is only available for State-level data. Overdose mortality data for county level is vailable for 2021.
 
 ### Comments/Notes:
 No additional comments at this time. 
