@@ -60,21 +60,7 @@ All three variables were then converted to percentages using total population as
 | % Population between 15-24 years | A15_24P | Percentage of population between ages of 15 & 24 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
 | % Population under 45  | Und45P | Percentage of population below 45 years of age | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
 | % Population over 65 | Ovr65P | Percentage of population over 65 | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Percent over age 16     | Ovr16P              | Percent of population over age 16                         | 2023, 2020       | Tract, ZCTA, County    |
-| Percent over age 18     | Ovr18P              | Percent of population over age 18                         | 2023, 2020       | Tract, ZCTA, County    |
-| Percent over age 21     | Ovr21P              | Percent of population over age 21                         | 2023, 2020       | Tract, ZCTA, County    |
-| Percent over age 62     | Ovr62P              | Percent of population over age 62                         | 2023, 2020       | Tract, ZCTA, County    |
-| Percent under age 18    | Und18P              | Percent of population under age 18                        | 2023, 2020       | Tract, ZCTA, County    |
-| Percent under age 5     | Und5P               | Percent of population under age 5                         | 2023, 2020       | Tract, ZCTA, County    |
-| Divorced Individuals    | DivrcdP       | Percent of divorced individuals                                 | 2020, 2023       | Tract, County, ZCTA     |
-| Married Individuals     | MrrdP         | Percent of married individuals                                  | 2020, 2023       | Tract, County, ZCTA     |
-| Never Married Individuals | NvMrrdP     | Percent never married                                           | 2020, 2023       | Tract, County, ZCTA     |
-| Separated Individuals   | SepartedP     | Percent of separated individuals                                | 2020, 2023       | Tract, County, ZCTA     |
-| Widowed Individuals     | WidwdP        | Percent widowed                                                 | 2020, 2023       | Tract, County, ZCTA     |
-| Total Pop. Age 18+      | TotPop18      | Total population age 18 and over                                | 2020, 2023       | Tract, County, ZCTA     |
-| Sex Ratio (All Ages)    | SRatio        | Male to female ratio (all ages)                                 | 2020, 2023       | Tract, County, ZCTA     |
-| Sex Ratio (18+)         | SRatio18      | Male to female ratio (age 18 and older)                         | 2020, 2023       | Tract, County, ZCTA     |
-| Sex Ratio (65+)         | SRatio65      | Male to female ratio (age 65 and older)                         | 2020, 2023       | Tract, County, ZCTA     |
+
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.  
