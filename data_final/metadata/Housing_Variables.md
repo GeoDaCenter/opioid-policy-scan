@@ -1,7 +1,7 @@
 **Meta Data Name**: Housing Variables  
 **Date Added**: April 1, 2021  
-**Author**: Susan Paykin, Moksha Menghaney  
-**Date Last Modified**: January 3, 2024  
+**Author**: Susan Paykin, Moksha Menghaney, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 12, 2025 
 **Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
@@ -77,7 +77,7 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 | Condominium Housing               | HsdTypCo            | Percent of housing classified as condominium                               | 2020, 2023       | Tract, County, ZCTA   |
 | Multifamily Housing               | HsdTypM             | Percent of housing classified as multifamily                               | 2020, 2023       | Tract, County, ZCTA   |
 | Mixed-Use Housing                 | HsdTypMC            | Percent of housing classified as mixed-use                                 | 2020, 2023       | Tract, County, ZCTA   |
-| Occupied Housing Units            | occupantP           | Percent of housing units that are occupied    
+| Occupied Housing Units            | occupantP           | Percent of housing units that are occupied | 2023 | Tract, County, ZCTA |   
 
 
 ### Data Limitations:
