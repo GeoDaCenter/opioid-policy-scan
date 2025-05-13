@@ -1,8 +1,8 @@
 **Meta Data Name**: Prescription Drug Monitoring Program (PDMP) Policy Variables  
 **Date Added**: January 7, 2021  
-**Author**: Qinyun Lin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 12. 2025   
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy  
@@ -41,16 +41,16 @@ Fractions are calculated based on the number of months out of 12 that a law is e
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Any PDMP fraction | AnyPdmpFr | Fraction of year that state has any PDMP operating | Latest | State |
-| Any Horowitz PDMP fraction | AnyPdmphFr | Fraction of year that state has PDMP enabling legislation for any type of PDMP in effect, including paper-based systems, (as determined by Horowitz et al., 2018) enacted. | Latest | State |
-| Operational PDMP fraction | OpPdmpFr | Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018). | Latest | State |
-| Must-access PDMP fraction | MsAcPdmpFr | Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted. | Latest | State |
-| Electronic PDMP fraction | ElcPdmpFr | Fraction of year that state has an electronic PDMP system operating. | Latest | State |
-| Any PDMP starting date | AnyPdmpDt | Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source:  PDAPS for first PDMP laws passed after January 1, 1998;  Info on laws prior to 1998 came from Brandeis TTAC.| Latest | State |
-| Any Horowitz PDMP starting date | AnyPdmphDt | Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source:  Horowitz et al., 2018, Table 2, column 1. | Latest | State |
-| Operational PDMP starting date | OpPdmpDt | Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes. | Latest | State |
-| Must-access PDMP starting date | MsAcPdmpDt | Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS. | Latest | State |
-| Electronic PDMP starting date | ElcPdmpDt | Date state began operating an electronic PDMP system. | Latest | State |
+| Any PDMP fraction | AnyPdmpFr | Fraction of year that state has any PDMP operating | 2017, 2023 | State |
+| Any Horowitz PDMP fraction | AnyPdmphFr | Fraction of year that state has PDMP enabling legislation for any type of PDMP in effect, including paper-based systems, (as determined by Horowitz et al., 2018) enacted. | 2017, 2023 | State |
+| Operational PDMP fraction | OpPdmpFr | Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018). | 2017, 2023 | State |
+| Must-access PDMP fraction | MsAcPdmpFr | Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted. | 2017, 2023 | State |
+| Electronic PDMP fraction | ElcPdmpFr | Fraction of year that state has an electronic PDMP system operating. | 2017, 2023 | State |
+| Any PDMP starting date | AnyPdmpDt | Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source:  PDAPS for first PDMP laws passed after January 1, 1998;  Info on laws prior to 1998 came from Brandeis TTAC.| 2017, 2023 | State |
+| Any Horowitz PDMP starting date | AnyPdmphDt | Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source:  Horowitz et al., 2018, Table 2, column 1. | 2017, 2023 | State |
+| Operational PDMP starting date | OpPdmpDt | Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes. | 2017, 2023 | State |
+| Must-access PDMP starting date | MsAcPdmpDt | Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS. | 2017, 2023 | State |
+| Electronic PDMP starting date | ElcPdmpDt | Date state began operating an electronic PDMP system. | 2017, 2023 | State |
 
 ### Data Limitations:
 There currently does not exist a standard definition about what counts as Electronic PDMP. 
