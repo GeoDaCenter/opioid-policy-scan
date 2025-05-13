@@ -32,7 +32,7 @@ The following variables were included from the source data:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (Fraction of the year in which a state has medical MJ law in effect- 0 = no, 1 = yes) | Latest | State |
+| Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (Fraction of the year in which a state has medical MJ law in effect- 0 = no, 1 = yes) | 2017- 2023 | State |
 
 ### Data Limitations:
 N/A
