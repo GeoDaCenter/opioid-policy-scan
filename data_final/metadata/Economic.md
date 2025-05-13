@@ -1,7 +1,7 @@
 **Meta Data Name**: Economic Variables  
 **Date Added**: October 22, 2020  
-**Authors**: Moksha Menghaney & Susan Paykin  
-**Date Last Modified**: January 3, 2024  
+**Authors**: Moksha Menghaney, Susan Paykin, Wataru Morika, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 12, 2025  
 **Last Modified By**: Wataru Morika, Mahjabin Kabir Adrita
 
 ### Theme: 
