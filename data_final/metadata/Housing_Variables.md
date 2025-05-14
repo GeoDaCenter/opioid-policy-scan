@@ -67,16 +67,17 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total Occupied Units | TotUnits | Count of total occupied housing units | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
-| Housing Vacancy Rate | VacantP | Percentage of vacant housing units | 1980, 1990, 2000, 2010, Latest | Tract, Zip, County, State |
-| Mobile Homes Rate | MobileP | Percentage of total housing units categorized as mobile housing structures | Latest | Tract, Zip, County, State |
-| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | Latest | Tract, Zip, County, State |
-| Rental Rate | RentalP | Percentage of occupied housing units that are rented | Latest | Tract, Zip, County, State |
-| Housing Unit Density | UnitDens | Number of housing units per square mile of land area | Latest | Tract, Zip, County, State |
-| Crowded Housing (18+)             | crowdHsng18         | Percent of households with crowding (1.01+ persons/room, age 18+)           | 2020, 2023       | Tract, County, ZCTA   |
-| Condominium Housing               | HsdTypCo            | Percent of housing classified as condominium                               | 2020, 2023       | Tract, County, ZCTA   |
-| Multifamily Housing               | HsdTypM             | Percent of housing classified as multifamily                               | 2020, 2023       | Tract, County, ZCTA   |
-| Mixed-Use Housing                 | HsdTypMC            | Percent of housing classified as mixed-use                                 | 2020, 2023       | Tract, County, ZCTA   |
+| Total Occupied Units | TotUnits | Count of total occupied housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
+| Housing Vacancy Rate | VacantP | Percentage of vacant housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
+| Mobile Homes Rate | MobileP | Percentage of total housing units categorized as mobile housing structures | 2018 | Tract, Zip, County, State |
+| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago |  | Tract, Zip, County, State |
+| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
+| Rental Rate | RentalP | Percentage of occupied housing units that are rented | 2018 | Tract, Zip, County, State |
+| Housing Unit Density | UnitDens | Number of housing units per square mile of land area | 2018 | Tract, Zip, County, State |
+| Crowded Housing (18+)             | crowdHsng18         | Percent of households with crowding (1.01+ persons/room, age 18+)           | 2018, 2023       | Tract, County, ZCTA   |
+| Condominium Housing               | HsdTypCo            | Percent of housing classified as condominium                               | 2018, 2023       | Tract, County, ZCTA   |
+| Multifamily Housing               | HsdTypM             | Percent of housing classified as multifamily                               | 2018, 2023       | Tract, County, ZCTA   |
+| Mixed-Use Housing                 | HsdTypMC            | Percent of housing classified as mixed-use                                 | 2018, 2023       | Tract, County, ZCTA   |
 | Occupied Housing Units            | occupantP           | Percent of housing units that are occupied | 2023 | Tract, County, ZCTA |   
 
 
