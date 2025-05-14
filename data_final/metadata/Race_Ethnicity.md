@@ -1,8 +1,8 @@
 **Meta Data Name**: Race and Ethnicity Variables  
 **Date Added**: July 8, 2021  
-**Author**: Moksha Menghaney & Susan Paykin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Moksha Menghaney, Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 14, 2025  
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Social
@@ -47,13 +47,15 @@ The following variables were included from **B03002**:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| % White  | WhiteP | Percentage of population with race identified as white alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % Black  | BlackP | Percentage of population with race identified as Black or African American alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % Hispanic | HispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % American Indian | AmIndP | Percentage of population with race identified as Native American or Alaska Native alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % Asian  | AsianP | Percentage of population with race identified as Asian alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+| % White  | WhiteP | Percentage of population with race identified as white alone | 1980, 1990, 2000, 2010, 2020| Tract, Zip*, County, State |
+| % Black  | BlackP | Percentage of population with race identified as Black or African American alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| % Hispanic | HispP | Percentage of population with ethnicity identified as of Hispanic or Latinx origin | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| % American Indian | AmIndP | Percentage of population with race identified as Native American or Alaska Native alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| % Asian  | AsianP | Percentage of population with race identified as Asian alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
+| Percent identifying as 2+ races   | TwoRaceP            | Percent of population identifying as two or more races  | 2020, 2023           | Tract, ZCTA, County    |
+
 
 ### Data Limitations:
 This data represents estimates as of the ACS 2018 5-year average.  
