@@ -62,6 +62,10 @@ All three variables were then converted to percentages using total population as
 | Percent male         | MaleP               | Percent of population identifying as male           | 2020, 2023                        | Tract, ZCTA, County            |
 | Percent  Children          | ChildrenP           | Percentage of population under age 18               | 1980, 1990, 2000, 2010, Latest    | Tract, Zip*, County, State     |
 | Median age                     | MedAge              | Median age of the population                        | 2020, 2023                        | Tract, ZCTA, County            |
+| Sex Ratio (All Ages)    | SRatio        | Male to female ratio (all ages)                                 | 2020, 2023       | Tract, County, ZCTA     |
+| Sex Ratio (18+)         | SRatio18      | Male to female ratio (age 18 and older)                         | 2020, 2023       | Tract, County, ZCTA     |
+| Sex Ratio (65+)         | SRatio65      | Male to female ratio (age 65 and older)                         | 2020, 2023       | Tract, County, ZCTA     |
+
 
 
 
