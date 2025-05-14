@@ -54,7 +54,7 @@ The following variables were included from **B03002**:
 | % Asian  | AsianP | Percentage of population with race identified as Asian alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
 | % Native Hawaiian | PacIsP | Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
 | % Other | OtherP | Percentage of Population with race not mentioned in any of the options above (includes two race or more races) | 1980, 1990, 2000, 2010, 2020 | Tract, Zip*, County, State |
-| Percent identifying as 2+ races   | TwoRaceP            | Percent of population identifying as two or more races  | 2020, 2023           | Tract, ZCTA, County    |
+| % 2+ races   | TwoRaceP            | Percent of population identifying as two or more races  | 2020, 2023           | Tract, ZCTA, County    |
 
 
 ### Data Limitations:
