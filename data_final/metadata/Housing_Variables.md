@@ -70,7 +70,7 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 | Total Occupied Units | TotUnits | Count of total occupied housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
 | Housing Vacancy Rate | VacantP | Percentage of vacant housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
 | Mobile Homes Rate | MobileP | Percentage of total housing units categorized as mobile housing structures | 2018 | Tract, Zip, County, State |
-| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago |  | Tract, Zip, County, State |
+| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
 | Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
 | Rental Rate | RentalP | Percentage of occupied housing units that are rented | 2018 | Tract, Zip, County, State |
 | Housing Unit Density | UnitDens | Number of housing units per square mile of land area | 2018 | Tract, Zip, County, State |
