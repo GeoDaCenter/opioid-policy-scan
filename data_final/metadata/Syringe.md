@@ -1,8 +1,8 @@
 **Meta Data Name**: Syringe Services Laws  
 **Date Added**: Febrary 23, 2021  
-**Author**: Qinyun Lin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 14, 2025  
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy
@@ -15,6 +15,7 @@ Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from Table 1 (August 1, 2019) in [Fernández-Viña MH, Prood NE, Herpolsheimer A, Waimberg J, Burris S. State Laws Governing Syringe Services Programs and Participant Syringe Possession](https://journals.sagepub.com/doi/full/10.1177/0033354920921817), 2014-2019. Public Health Reports. 2020;135:128S-137S. doi:10.1177/0033354920921817
+The Variables were then updated as of August 1, 2021 from  the Prescription Drug Abuse Policy System Website (https://pdaps.org/datasets/syringe-services-programs-laws)
 
 See **Comments/Notes** section below for where to find more detailed variables regarding syringe related policies. 
 
@@ -37,12 +38,12 @@ The following variables were included from the source data:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Law explicitly authorzies SSPs | ExpSsp | Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes) | Latest | State |
-| No state drug paraphernalia law | NoPrphLw | Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes) | Latest | State |
-| State law does not prohibit free distribution of syringes | NtPrFrDsSy | Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes) | Latest | State |
-| Paraphernalia definition explicitly exludes objects used for injecting drugs | PrExcInj | Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes) | Latest | State |
-| Paraphernalia definition does not refer to objects used for injecting drugs | PrNtRefInj | Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes) | Latest | State |
-|  No state law removing barriers or uncertainty as to SSP legality | NoLwRmUnc | Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes) | Latest | State |
+| Law explicitly authorzies SSPs | ExpSsp | Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes) | 2019, 2021 | State |
+| No state drug paraphernalia law | NoPrphLw | Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes) | 2019, 2021 | State |
+| State law does not prohibit free distribution of syringes | NtPrFrDsSy | Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes) | 2019, 2021 | State |
+| Paraphernalia definition explicitly exludes objects used for injecting drugs | PrExcInj | Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
+| Paraphernalia definition does not refer to objects used for injecting drugs | PrNtRefInj | Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
+|  No state law removing barriers or uncertainty as to SSP legality | NoLwRmUnc | Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes) | 2019, 2021 | State |
 
 ### Data Limitations:
 N/A
