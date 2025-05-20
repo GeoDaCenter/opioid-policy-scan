@@ -1,6 +1,6 @@
 Meta Data Name: Educational Attainment Variables  
 Date Added: May 5, 2025    
-Authors: Mahjabin Kabir Adrita   
+Authors: Mandela Gadri, Mahjabin Kabir Adrita   
 Date Last Modified: May 5, 2025    
 Last Modified By: Mahjabin Kabir Adrita
 
@@ -34,7 +34,7 @@ This table includes the number and percent of people aged 25 years and older who
 
 | Variable                           | Variable ID in .csv | Description                                                       | Years Available | Spatial Scale        |
 |------------------------------------|---------------------|-------------------------------------------------------------------|------------------|-----------------------|
-| Bachelor's degree or higher        | BachelorsP          | Percent of population with a Bachelor’s degree                    | 2020, 2023       | Tract, County, ZCTA   |
+| Bachelor's degree or higher        | BachelorsP          | Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education                    | 2020, 2023       | Tract, County, ZCTA   |
 | High school graduate               | EduHsP              | Percent with high school diploma or equivalent                    | 2020, 2023       | Tract, County, ZCTA   |
 | Less than 9th grade               | Eduless9P           | Percent with less than a 9th grade education                      | 2020, 2023       | County only           |
 | No high school diploma             | EduNoHsP            | Percent without a high school diploma                            | 2020, 2023       | Tract, County, ZCTA   |
