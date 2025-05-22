@@ -52,7 +52,7 @@ For more on variable definitions, see [ACS 2018 Subject Definitions](https://www
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Alt. Unemployment Rate | UnempP2         | Alternative unemployment rate (specific subgroup)               | 2020, 2023       | Tract, County, ZCTA     |
+| Alt. Unemployment Rate | UnempP2         | The number of unemployed individuals as a percentage of the civilian labor force (Alternative measurement)               | 2020, 2023       | Tract, County, ZCTA     |
 | Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
 | Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
 | Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
