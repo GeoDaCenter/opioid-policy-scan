@@ -51,12 +51,12 @@ For more on variable definitions, see [ACS 2018 Subject Definitions](https://www
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
+| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, 2023 | Tract, Zip*, County, State |
 | Alt. Unemployment Rate | UnempP2         | The number of unemployed individuals as a percentage of the civilian labor force (Alternative measurement)               | 2020, 2023       | Tract, County, ZCTA     |
-| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, Latest | Tract, Zip*, County, State |
-| Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
-| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, Latest | Tract, Zip*, County, State |
-| Gini Coefficient | GiniCoeff | Income Inequality (Gini Coefficient) | 2010, Latest | Tract, Zip*, County, State |
+| Poverty Rate | PovP | Number of individuals earning below the poverty income threshold as a percentage of the total population | 1980, 1990, 2000, 2010, 2023 | Tract, Zip*, County, State |
+| Median Income | MedInc | Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, 2023 | Tract, Zip*, County, State |
+| Per Capita Income | PciE | Mean income for individuals in the past 12 months (in 2018 inflation-adjusted dollars) | 2010, 2023 | Tract, Zip*, County, State |
+| Gini Coefficient | GiniCoeff | Income Inequality (Gini Coefficient) | 2010, 2023 | Tract, Zip*, County, State |
 
 ### Data Limitations:
 The ACS does not gather information in the U.S. territories American Samoa, Guam, Northern Mariana Islands and U.S. Virgin Islands. It does include information for Puerto Rico & Washington, D.C.  
