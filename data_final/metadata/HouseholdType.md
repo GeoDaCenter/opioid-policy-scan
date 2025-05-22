@@ -48,12 +48,13 @@ The following rates were calculated from the variables:
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total population | TotPop | Estimated total population in the geographic area | 1980, 1990, 2000, 2010, 2018 | Tract, Zip*, County, State |
+| Total population | TotPop | Estimated total population in the geographic area | 1980, 1990, 2000, 2010, 2018, 2023 | Tract, Zip*, County, State |
 | Total population in household | TotPopHh | Total number of people in households | 2018 | Tract, Zip, County, State |
 | Percent of nonrelatives in family households | NonRelFhhP | Percent of people living in family households that are not related to family | 2018 | Tract, Zip, County, State |
 | Percent of nonrelatives in non-family households | NonRelNfhhP | Percent of people living in non-family households that are not related | 2018 | Tract, Zip, County, State |
 | Average family size              | FamSize             | Average number of persons per family                       | 2018, 2023           | Tract, ZCTA, County    |
 | Average household size           | HHSize              | Average number of persons per household                    | 2018, 2023           | Tract, ZCTA, County    |
+| Total households            | HsdTot              | Total households                 | 2020, 2023       | Tract, County, ZCTA   |
 | Female-headed family households  | HhldFA              | Percent of family households headed by females             | 2018, 2023           | Tract, ZCTA, County    |
 | Couple-headed family households  | HhldFC              | Percent of family households headed by couples             | 2018, 2023           | Tract, ZCTA, County    |
 | Single-parent family households  | HhldFS              | Percent of single-parent family households                 | 2018, 2023           | Tract, ZCTA, County    |
