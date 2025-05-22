@@ -74,11 +74,7 @@ Note: Total land area for each spatial scale was sourced from geometry files and
 | Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
 | Rental Rate | RentalP | Percentage of occupied housing units that are rented | 2018 | Tract, Zip, County, State |
 | Housing Unit Density | UnitDens | Number of housing units per square mile of land area | 2018 | Tract, Zip, County, State |
-| Crowded Housing (18+)             | crowdHsng18         | Percent of households with crowding (1.01+ persons/room, age 18+)           | 2018, 2023       | Tract, County, ZCTA   |
-| Condominium Housing               | HsdTypCo            | Percent of housing classified as condominium                               | 2018, 2023       | Tract, County, ZCTA   |
-| Multifamily Housing               | HsdTypM             | Percent of housing classified as multifamily                               | 2018, 2023       | Tract, County, ZCTA   |
-| Mixed-Use Housing                 | HsdTypMC            | Percent of housing classified as mixed-use                                 | 2018, 2023       | Tract, County, ZCTA   |
-| Occupied Housing Units            | occupantP           | Percent of housing units that are occupied | 2023 | Tract, County, ZCTA |   
+  
 
 
 ### Data Limitations:
