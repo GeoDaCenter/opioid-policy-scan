@@ -35,12 +35,12 @@ This table includes the number and percent of people aged 25 years and older who
 | Variable                           | Variable ID in .csv | Description                                                       | Years Available | Spatial Scale        |
 |------------------------------------|---------------------|-------------------------------------------------------------------|------------------|-----------------------|
 | Bachelor's degree or higher        | BachelorsP          | Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education                    | 2020, 2023       | Tract, County, ZCTA   |
-| High school graduate               | EduHsP              | Percent with high school diploma or equivalent                    | 2020, 2023       | Tract, County, ZCTA   |
+| High school graduate               | EduHsP              | Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)                    | 2020, 2023       | Tract, County, ZCTA   |
 | Less than 9th grade               | Eduless9P           | Percent with less than a 9th grade education                      | 2020, 2023       | County only           |
-| No high school diploma             | EduNoHsP            | Percent without a high school diploma                            | 2020, 2023       | Tract, County, ZCTA   |
-| Graduate or professional degree    | GradSclP            | Percent with graduate or professional degree                      | 2020, 2023       | Tract, County, ZCTA   |
-| Total with HS or higher            | HsdTot              | Total number with high school or higher education                 | 2020, 2023       | Tract, County, ZCTA   |
-| Some college, no degree            | SomeCollegeP        | Percent with some college education but no degree                 | 2020, 2023       | Tract, County, ZCTA   |
+| No high school diploma             | EduNoHsP            | Percent population aged 25 years and over with less than a high school diploma                            | 2020, 2023       | Tract, County, ZCTA   |
+| Graduate or professional degree    | GradSclP            | Percent population aged 25 years and over with a graduate or professional degree                      | 2020, 2023       | Tract, County, ZCTA   |
+| Some college, no degree            | SomeCollegeP        | Percent population 25 years and over with some college, but no degree                 | 2020, 2023       | Tract, County, ZCTA   |
+| English Proficiency (18+) | engProf18   | Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English             | 2020, 2023       | Tract, County, ZCTA     |
 
 ### Data Limitations:  
 - Only individuals aged 25 years or older are included in these statistics.  
