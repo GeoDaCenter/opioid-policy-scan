@@ -29,11 +29,11 @@ The data tables used to construct these variables are drawn from detailed ACS su
 
 | Variable                 | Variable ID   | Description                                       | Years Available | Spatial Scale          |
 |--------------------------|----------------|---------------------------------------------------|------------------|-------------------------|
-| Divorced Individuals     | DivrcdP        | Percent of divorced individuals                   | 2020, 2023       | Tract, County, ZCTA     |
-| Married Individuals      | MrrdP          | Percent of married individuals                    | 2020, 2023       | Tract, County, ZCTA     |
-| Never Married Individuals| NvMrrdP        | Percent never married                             | 2020, 2023       | Tract, County, ZCTA     |
-| Separated Individuals    | SepartedP      | Percent of separated individuals                  | 2020, 2023       | Tract, County, ZCTA     |
-| Widowed Individuals      | WidwdP         | Percent widowed                                   | 2020, 2023       | Tract, County, ZCTA     |
+| Divorced Individuals     | DivrcdP        | Percent Males 15 years and over  Who are Divorced                   | 2020, 2023       | Tract, County, ZCTA     |
+| Married Individuals      | MrrdP          | Percent males aged 15 or older who are married and living with their spouse                    | 2020, 2023       | Tract, County, ZCTA     |
+| Never Married Individuals| NvMrrdP        | Percent males aged 15 or older who never got married                             | 2020, 2023       | Tract, County, ZCTA     |
+| Separated Individuals    | SepartedP      | Percent males aged 15 years and over who are separated from their spouse                  | 2020, 2023       | Tract, County, ZCTA     |
+| Widowed Individuals      | WidwdP         | Percent male population aged 15 and over who are widowed                                   | 2020, 2023       | Tract, County, ZCTA     |
 
 ### Data Limitations  
 - ACS estimates are subject to sampling error; margins of error should be considered when interpreting values, especially at smaller spatial scales such as tracts.  
