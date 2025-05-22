@@ -1,4 +1,4 @@
-**Meta Data Name**: Nalaxone Policy Variables  
+**Meta Data Name**: Naloxone Policy Variables  
 **Date Added**: January 8, 2021  
 **Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
 **Date Last Modified**: May 12, 2025  
