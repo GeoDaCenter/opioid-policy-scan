@@ -56,9 +56,9 @@ The following rates were calculated from the variables:
 | Average household size           | HHSize              | Average number of persons per household                    | 2018, 2023           | Tract, ZCTA, County    |
 | Total households            | HsdTot              | Total households                 | 2020, 2023       | Tract, County, ZCTA   |
 | Crowded Housing             | CrowdHsng         | Proportion of occupied housing units that are considered crowded (more than 1 person per room)           | 2018, 2023       | Tract, County, ZCTA   |
-| Condominium Housing               | HsdTypCo            | Percent of housing classified as condominium                               | 2018, 2023       | Tract, County, ZCTA   |
-| Multifamily Housing               | HsdTypM             | Percent of housing classified as multifamily                               | 2018, 2023       | Tract, County, ZCTA   |
-| Mixed-Use Housing                 | HsdTypMC            | Percent of housing classified as mixed-use                                 | 2018, 2023       | Tract, County, ZCTA   |
+| Condominium Housing               | HsdTypCo            | Percent cohabiting couple household                               | 2018, 2023       | Tract, County, ZCTA   |
+| Multifamily Housing               | HsdTypM             | Percent married-couple household                                | 2018, 2023       | Tract, County, ZCTA   |
+| Mixed-Use Housing                 | HsdTypMC            | Percent married-couple household With children under 18 years                                 | 2018, 2023       | Tract, County, ZCTA   |
 | Occupied Housing Units            | OccupantP           | Percent occupied housing units | 2023 | Tract, County, ZCTA | 
 | Female-headed family households  | HhldFA              | Percent female householder with no spouse/partner living alone             | 2018, 2023           | Tract, ZCTA, County    |
 | Female-headed family households with children  | HhldFC              | Percent female householder with no spouse/partner living with children under 18 years             | 2018, 2023           | Tract, ZCTA, County    |
