@@ -57,7 +57,7 @@ All three variables were then converted to percentages using total population as
 | Percent under age 18           | Und18P              | Percent of population under age 18                  | 2020, 2023                        | Tract, ZCTA, County            |
 | Percent under age 5            | Und5P               | Percent of population under age 5                   | 2020, 2023                        | Tract, ZCTA, County            |
 | Percent  under 45          | Und45P              | Percentage of population below 45 years of age      | 1980, 1990, 2000, 2010, 2020, 2023    | Tract, Zip*, County, State     |
-| Percent  over 65           | Ovr65P              | Percentage of population over 65                    | 1980, 1990, 2000, 2010, 2020, 2023    | Tract, Zip*, County, State     |
+| Percent  over 65           | Ov65P              | Percentage of population over 65                    | 1980, 1990, 2000, 2010, 2020, 2023    | Tract, Zip*, County, State     |
 | Percent female       | FemP                | Percent of population that is female         | 2020, 2023                        | Tract, ZCTA, County            |
 | Percent male         | MaleP               | Percent of population identifying that is male           | 2020, 2023                        | Tract, ZCTA, County            |
 | Percent  Children          | ChildrenP           | Percentage of population under age 18               | 1980, 1990, 2000, 2010, 2020, 2023    | Tract, Zip*, County, State     |
