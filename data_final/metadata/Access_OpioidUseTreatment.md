@@ -35,21 +35,21 @@ We calculated travel-network access metrics for the driving travel time to the n
 #### Tract, ZIP Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | Latest | Tract, Zip |
-| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | Latest | Tract, Zip |
-| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2025 | Tract, Zip |
+| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2025 | Tract, Zip |
+| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | 2025 | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
-| Count of tracts within 30-min OTP driving range | OtpCtTmDr | Number of tracts with OTP within a 30-min driving range | Latest | County, State |
-| Average driving time to nearest OTP | OtpAvTmDr | Average driving time (minutes) across tracts in county to nearest OTP | Latest | County, State |
-| Percent of tracts within 30-min OTP driving range | OtpTmDrP | Percent of tracts with an OTP within a 30-min driving range | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2025 | County, State |
+| Count of tracts within 30-min OTP driving range | OtpCtTmDr | Number of tracts with OTP within a 30-min driving range | 2025 | County, State |
+| Average driving time to nearest OTP | OtpAvTmDr | Average driving time (minutes) across tracts in county to nearest OTP | 2025 | County, State |
+| Percent of tracts within 30-min OTP driving range | OtpTmDrP | Percent of tracts with an OTP within a 30-min driving range | 2025 | County, State |
 
 ### Data Limitations:
 *Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
 
 ### Comments/Notes:
-This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories of Guam, Northern Mariana Islands, American Samoa, and Palau. Zip code and tract centroids are not population-weighted.
+This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories of Guam, Northern Mariana Islands, American Samoa, and Palau. Zip code and tract centroids are not population-weighted. The access metrics for 2025 have been calculated using vintage travel metrics and geographic data.
 
