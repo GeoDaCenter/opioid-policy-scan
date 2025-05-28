@@ -67,9 +67,12 @@ County and state-level variables include the **count** of Census tracts and the 
 | Biking time to nearest methadone | MetTmBk | Biking time (minutes) to nearest methadone provider | 2025 | Tract, Zip |
 | Count of methadone providers (bike) | MetCntBk60 | Count of methadone providers in 60 minute biking time threshold | 2025 | Tract, Zip |
 | Count of methadone providers (bike) | MetCntBk30 | Count of methadone providers in 30 minute biking time threshold | 2025 | Tract, Zip |
-| Biking time to nearest naltrexone | NalTmBk | Biking time (minutes) to nearest naltrexone provider | Latest | Tract, Zip |
+| Biking time to nearest naltrexone | NalTmBk | Biking time (minutes) to nearest naltrexone provider | 2025 | Tract, Zip |
 | Count of naltrexone providers (bike) | NalCntBk60 | Count of naltrexone providers in 60 minute biking time threshold | 2025 | Tract, Zip |
 | Count of naltrexone providers (bike) | NalCntBk30 | Count of naltrexone providers in 30 minute biking time threshold | 2025 | Tract, Zip |
+| Count of buprenorphine providers (drive) | BupCntDr60           | Count of buprenorphine providers within a 60-minute drive time threshold                            | 2025            | Tract, Zip  |
+| Count of naltrexone providers (drive)   | NalCntDr60           | Count of naltrexone providers within a 60-minute drive time threshold                               | 2025            | Tract, Zip  |
+| Count of methadone providers (drive)    | MetCntDr60           | Count of methadone providers within a 60-minute drive time threshold                                | 2024            | Tract, Zip  |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
