@@ -1,8 +1,8 @@
-**Meta Data Name**: State & Local Government Expenditures  
-**Date Added**: March 11, 2021  
-**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
-**Date Last Modified**: May 14, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Meta Data Name**: State & Local Government Expenditures
+**Date Added**: March 11, 2021
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita
+**Date Last Modified**: May 14, 2025
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Policy  
