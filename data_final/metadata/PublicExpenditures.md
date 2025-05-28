@@ -1,8 +1,8 @@
-**Meta Data Name**: State & Local Government Expenditures  
-**Date Added**: March 11, 2021  
-**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
-**Date Last Modified**: May 12, 2025
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Meta Data Name**: State & Local Government Expenditures
+**Date Added**: March 11, 2021
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita
+**Date Last Modified**: May 14, 2025
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Policy  
@@ -52,10 +52,10 @@ Data was downloaded, cleaned, and prepared for analysis. The expenditure variabl
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| 2022 | State |
-| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | 2022 | State |
-| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | 2022 | State |
-| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | 2022 | State |
+| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| 2018, 2022 | State |
+| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | 2018, 2022 | State |
+| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | 2018, 2022 | State |
+| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | 2018, 2022 | State |
 
 For the expenditure variables, the last characters indicate the following levels:  
 
@@ -67,7 +67,7 @@ For the expenditure variables, the last characters indicate the following levels
 
 ### Data Limitations: 
 
-Local data outside of police and fire expenditures was not available for Washington, D.C. 
+Local data outside of police and fire expenditures was not available for Washington, D.C. the county level data was not available for the variables.
 
 ### Comments/Notes:
 

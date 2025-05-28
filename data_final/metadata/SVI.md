@@ -1,8 +1,8 @@
 **Meta Data Name**: SVI Variables  
 **Date Added**: April 12, 2021  
-**Author**: Qinyun Lin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 12, 2025   
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Composite
@@ -41,11 +41,11 @@ For ZIP code-level estimates, because Census tracts do not map neatly onto ZCTA 
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Socioeconomic – RPL_THEME1 | SviTh1 | SVI Ranking, Theme 1: Socioeconomic | Latest | Tract, Zip, County |
-| Household Composition & Disability – RPL_THEME2 | SviTh2 | SVI Ranking, Theme 2: Household Composition & Disability | Latest | Tract, Zip, County |
-| Minority Status & Language – RPL_THEME3 | SviTh3 | SVI Ranking, Theme 3: Minority Status & Language | Latest | Tract, Zip, County |
-| Housing Type & Transportation – RPL_THEME4 | SviTh4 | SVI Ranking, Theme 4: Housing Type & Transportation | Latest | Tract, Zip, County |
-| Overall summary ranking - RPL_THEMES | SviSmryRnk | Overall summary ranking | Latest | Tract, Zip, County |
+| Socioeconomic – RPL_THEME1 | SviTh1 | SVI Ranking, Theme 1: Socioeconomic | 2018, 2022 | Tract, Zip, County |
+| Household Composition & Disability – RPL_THEME2 | SviTh2 | SVI Ranking, Theme 2: Household Composition & Disability | 2018, 2022 | Tract, Zip, County |
+| Minority Status & Language – RPL_THEME3 | SviTh3 | SVI Ranking, Theme 3: Minority Status & Language | 2018, 2022 | Tract, Zip, County |
+| Housing Type & Transportation – RPL_THEME4 | SviTh4 | SVI Ranking, Theme 4: Housing Type & Transportation | 2018, 2022 | Tract, Zip, County |
+| Overall summary ranking - RPL_THEMES | SviSmryRnk | Overall summary ranking | 2018, 2022 | Tract, Zip, County |
 
 ### Data Limitations:
 

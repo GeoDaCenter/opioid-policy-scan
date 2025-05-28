@@ -1,8 +1,8 @@
 **Meta Data Name**: Good Samaritan Laws  
 **Date Added**: January 7, 2021  
-**Author**: Qinyun Lin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: May 12, 2025  
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy 
@@ -35,10 +35,10 @@ Fractions are calculated based on the number of months that a law is effective o
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Any Good Samaritan Law start date | AnyGslDt | Date (DMY) any type of Good Samaritan Law is effective | Latest | State |
-| Good Samaritan Law Protecting Arrest starting date | GslArrDt | Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | Latest | State |
-| Any Good Samaritan Law fraction | AnyGslFr | Fraction of year any type of Good Samaritan Law is effective | Latest | State |
-| Good Samaritan Law Protecting Arrest fraction | GslArrFr | Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | Latest | State |
+| Any Good Samaritan Law start date | AnyGslDt | Date (DMY) any type of Good Samaritan Law is effective | 2018, 2021 | State |
+| Good Samaritan Law Protecting Arrest starting date | GslArrDt | Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2018, 2021 | State |
+| Any Good Samaritan Law fraction | AnyGslFr | Fraction of year any type of Good Samaritan Law is effective | 2018, 2021 | State |
+| Good Samaritan Law Protecting Arrest fraction | GslArrFr | Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2018, 2021 | State |
 
 ### Data Limitations:
 N/A
