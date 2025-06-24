@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
 **Date Added**: January 5, 2021  
-**Author**: Susan Paykin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: June 23, 2025   
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Environment
