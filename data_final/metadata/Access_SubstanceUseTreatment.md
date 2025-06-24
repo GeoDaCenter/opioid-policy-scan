@@ -1,8 +1,8 @@
 **Meta Data Name**: Nearest Distance for Substance Use Treatment   
 **Date Added**: July 23, 2021  
-**Author**: Rachel Vigil  
-**Date Last Modified:** January 3, 2024  
-**Last Modified By:** Wataru Morioka
+**Author**: Rachel Vigil,  Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified:** June 23, 2025  
+**Last Modified By:** Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Environment  
@@ -40,20 +40,19 @@ County and state-level variables include the **count** of Census tracts and the 
 #### Tract and Zip Code 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest SUT | SutMinDis | Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles | Latest | Tract, Zip |
-| Driving time to nearest SUT | SutTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes | Latest | Tract, Zip |
-| Count of SUTs | SutCntDr | Count of SUT services within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest SUT | SutMinDis | Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles | 2019, 2025 | Tract, Zip |
+| Driving time to nearest SUT | SutTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes | 2019, 2025 | Tract, Zip |
+| Count of SUTs | SutCntDr | Count of SUT services within a 30-minute driving threshold | 2019, 2025t | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
-| Count of tracts within 30-min driving range | SutpCtTmDr | Number of tracts with SUT within a 30-min driving range | Latest | County, State |
-| Average time drive to nearest SUT | SutpAvTmDr | Average driving time (minutes) across tracts in county/state to nearest SUT | Latest | County, State |
-| Percent of tracts within 30-min driving range | SutpTmDrP | Percent of tracts with SUT within a 30-min driving range | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2019, 2025 | County, State |
+| Count of tracts within 30-min driving range | SutpCtTmDr | Number of tracts with SUT within a 30-min driving range | 2019, 2025 | County, State |
+| Average time drive to nearest SUT | SutpAvTmDr | Average driving time (minutes) across tracts in county/state to nearest SUT | 2019, 2025 | County, State |
+| Percent of tracts within 30-min driving range | SutpTmDrP | Percent of tracts with SUT within a 30-min driving range | 2019, 2025 | County, State |
 
 ### Data Limitations:
-*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances.
-
+*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank.
 ### Comments/Notes:
 This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.
