@@ -31,13 +31,13 @@ The SAMHSA HIV Testing dataset includes:
 ##### Distance  
 Nearest resource analysis was conducted using minimum Euclidean distance as a proxy for access. This involved:  
 - Calculating centroids for all census tracts and ZCTAs  
-- Identifying the nearest mental health (MH) provider to each centroid  
+- Identifying the nearest HIV testing provider to each centroid  
 - Calculating the straight-line distance in miles  
 
 ##### Travel Time and Count Within Threshold  
 Driving-network access metrics were computed, including:  
-- Travel time to the nearest MH provider  
-- Count of MH providers within a 30-minute driving threshold  
+- Travel time to the nearest HIV testing provider  
+- Count of HIV testing providers within a 30-minute driving threshold  
 
 Travel cost matrices were sourced from [Project OSRM](http://project-osrm.org/) and are available for multiple transit modes via [this Box folder](https://uchicago.app.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as).  
 
