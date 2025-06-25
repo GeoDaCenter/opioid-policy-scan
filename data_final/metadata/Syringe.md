@@ -44,6 +44,8 @@ The following variables were included from the source data:
 | Paraphernalia definition explicitly exludes objects used for injecting drugs | PrExcInj | Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
 | Paraphernalia definition does not refer to objects used for injecting drugs | PrNtRefInj | Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
 |  No state law removing barriers or uncertainty as to SSP legality | NoLwRmUnc | Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes) | 2019, 2021 | State |
+| Date SSPs become effective         | SspEffDt            | The date on which state laws or policies authorizing Syringe Services Programs (SSPs) officially go into effect              | 2021            | State         |
+| Date SSPs are valid through        | SspValDt            | The date until which the authorization for Syringe Services Programs remains valid, as defined by state law or policy        | 2021            | State         |
 
 ### Data Limitations:
 N/A

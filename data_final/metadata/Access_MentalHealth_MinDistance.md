@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Mental Health Providers  
 **Date Added**: January 9, 2021  
-**Author**: Susan Paykin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: June 23, 2025    
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Environment  
@@ -46,20 +46,20 @@ County and state-level variables include the **count** of Census tracts and the 
 #### Tract and Zip Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest MH Provider | MhMinDis | Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles | Latest | Tract, Zip |
-| Driving time to nearest MH Provider | MhTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes | Latest | Tract, Zip |
-| Count of MH Providers | MhCntDr | Count of MH providers within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest MH Provider | MhMinDis | Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles | 2019, 2025 | Tract, Zip |
+| Driving time to nearest MH Provider | MhTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes | 2019, 2025 | Tract, Zip |
+| Count of MH Providers | MhCntDr | Count of MH providers within a 30-minute driving threshold | 2019, 2025 | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State  
-| Count of tracts within 30-min driving range | MhCtTmDr | Number of tracts with an MH provider within a 30-min driving range | Latest | County, State |
-| Average time drive to nearest MH provider | MhAvTmDr | Average driving time (minutes) across tracts in county/state to nearest MH provider | Latest | County, State |
-| Percent of tracts within 30-min driving range | MhTmDrP | Percent of tracts with an MH provider within a 30-min driving range | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2019, 2025 | County, State  
+| Count of tracts within 30-min driving range | MhCtTmDr | Number of tracts with an MH provider within a 30-min driving range | 2019, 2025 | County, State |
+| Average time drive to nearest MH provider | MhAvTmDr | Average driving time (minutes) across tracts in county/state to nearest MH provider | 2019, 2025 | County, State |
+| Percent of tracts within 30-min driving range | MhTmDrP | Percent of tracts with an MH provider within a 30-min driving range | 2019, 2025 | County, State |
 
 ### Data Limitations:
-*Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.  
+*Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank. 
 
 ### Comments/Notes:
 The final dataset includes US states, Washington, D.C., and Puerto Rico, but does not include other territories (Guam, Northern Mariana Islands, American Samoa, Palau). ZCTA and tract centroids are not population-weighted.

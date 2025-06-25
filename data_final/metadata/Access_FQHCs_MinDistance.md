@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
 **Date Added**: January 5, 2021  
-**Author**: Susan Paykin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Date Last Modified**: June 23, 2025   
+**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
 
 ### Theme: 
 Environment
@@ -45,20 +45,20 @@ County and state-level variables include the **count** of Census tracts and the 
 #### Tract and Zip Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------| 
-| Distance to nearest FQHC | FqhcMinDis | Euclidean distance *from tract/zip centroid to nearest FQHC, in miles* | Latest | Tract, Zip |
-| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes | Latest | Tract, Zip |
-| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest FQHC | FqhcMinDis | Euclidean distance *from tract/zip centroid to nearest FQHC, in miles* | 2021, 2025 | Tract, Zip |
+| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes | 2021, 2025 | Tract, Zip |
+| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold | 2021, 2025 | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
-| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range | Latest | County, State |
-| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range | Latest | County, State |
-| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2021, 2025 | County, State |
+| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range | 2021, 2025 | County, State |
+| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range | 2021, 2025 | County, State |
+| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC | 2021, 2025 | County, State |
 
 ### Data Limitations:
-*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank.  
 
 ### Comments/Notes:
 This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories of Guam, Northern Mariana Islands, American Samoa, and Palau. Zip code and tract centroids are not population-weighted.

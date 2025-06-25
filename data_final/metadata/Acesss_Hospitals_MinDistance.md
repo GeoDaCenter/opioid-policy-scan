@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Hospitals  
 **Date Added**: January 6, 2021  
-**Author**: Susan Paykin  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
 **Date Last Modified:** January 3, 2024  
-**Last Modified By:** Wataru Morioka
+**Last Modified By:** Wataru Morioka, Mahjabin Kabir Adrita
 
 ### Theme: 
 Environment
@@ -14,7 +14,7 @@ CSV files are organized by **year** and **spatial scale**. For example, county-l
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Hospital locations were sourced from [CovidCareMap Healthcare System Capacity data](https://github.com/covidcaremap/covid19-healthsystemcapacity/tree/master/data), an aggregated dataset which sources data from the [Healthcare Cost Report Information System (HCRIS)](https://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/Cost-Reports/Hospital-2010-form) and [Definitive Healthcare](https://coronavirus-resources.esri.com/datasets/definitivehc::definitive-healthcare-usa-hospital-beds?geometry=125.859%2C-16.820%2C-150.821%2C72.123). 
+In 2021, hospital locations were sourced from [CovidCareMap Healthcare System Capacity data](https://github.com/covidcaremap/covid19-healthsystemcapacity/tree/master/data), an aggregated dataset which sources data from the [Healthcare Cost Report Information System (HCRIS)](https://www.cms.gov/Research-Statistics-Data-and-Systems/Downloadable-Public-Use-Files/Cost-Reports/Hospital-2010-form) and [Definitive Healthcare](https://coronavirus-resources.esri.com/datasets/definitivehc::definitive-healthcare-usa-hospital-beds?geometry=125.859%2C-16.820%2C-150.821%2C72.123). In 2025, Hospital locations were sourced from https://data.cms.gov/provider-data/topics/hospitals. These are the official datasets used on Medicare.gov provided by the Centers for Medicare & Medicaid Services.
 
 Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 
@@ -45,20 +45,20 @@ County and state-level variables include the **count** of Census tracts and the 
 #### Tract and Zip Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest hospital | HospMinDis | Euclidean distance* from tract/zip centroid to the nearest hospital, in miles | Latest | Tract, Zip |
-| Driving time to nearest hospital | HospTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes | Latest | Tract, Zip |
-| Count of hospitals | HospCntDr | Count of hospitals within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest hospital | HospMinDis | Euclidean distance* from tract/zip centroid to the nearest hospital, in miles | 2019, 2025 | Tract, Zip |
+| Driving time to nearest hospital | HospTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes | 2019, 2025 | Tract, Zip |
+| Count of hospitals | HospCntDr | Count of hospitals within a 30-minute driving threshold | 2019, 2025 | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
-| Count of tracts within 30-min driving range | HospCtTmDr | Number of tracts with hospital within a 30-min driving range | Latest | County, State |
-| Average time drive to nearest hospital | HospAvTmDr | Average driving time (minutes) across tracts in county/state to nearest hospital | Latest | County, State |
-| Percent of tracts within 30-min driving range | HospTmDrP | Percent of tracts with hospital within a 30-min driving range | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2019, 2025t | County, State |
+| Count of tracts within 30-min driving range | HospCtTmDr | Number of tracts with hospital within a 30-min driving range | 2019, 2025 | County, State |
+| Average time drive to nearest hospital | HospAvTmDr | Average driving time (minutes) across tracts in county/state to nearest hospital | 2019, 2025 | County, State |
+| Percent of tracts within 30-min driving range | HospTmDrP | Percent of tracts with hospital within a 30-min driving range | 2019, 2025 | County, State |
 
 ### Data Limitations:
-*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank.
 
 ### Comments/Notes:
 This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories of Guam, Northern Mariana Islands, American Samoa, and Palau. Zip code and tract centroids are not population-weighted.
